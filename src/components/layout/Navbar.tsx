@@ -6,12 +6,13 @@ import { useAppStore } from '@/lib/store';
 import { BookOpen, Newspaper, Trophy, LogIn, LogOut, Menu, X, Sun, Moon } from 'lucide-react';
 import { Language } from '@/types';
 import { useTheme } from '@/components/layout/ThemeProvider';
+import { t } from '@/lib/i18n';
 
 const NAV_LINKS = [
-    { href: '/', label: 'Home', icon: BookOpen },
-    { href: '/exams', label: 'Exams', icon: BookOpen },
-    { href: '/current-affairs', label: 'Current Affairs', icon: Newspaper },
-    { href: '/leaderboard', label: 'Leaderboard', icon: Trophy },
+    { href: '/', labelKey: 'home', icon: BookOpen },
+    { href: '/exams', labelKey: 'exams', icon: BookOpen },
+    { href: '/current-affairs', labelKey: 'currentAffairs', icon: Newspaper },
+    { href: '/leaderboard', labelKey: 'leaderboard', icon: Trophy },
 ];
 
 const LANGS: { code: Language; label: string }[] = [
@@ -62,7 +63,7 @@ export default function Navbar() {
                             background: active ? 'rgba(99, 102, 241, 0.15)' : 'transparent',
                             transition: 'all 0.2s',
                         }}>
-                            {link.label}
+                            {t(link.labelKey, language as Language)}
                         </Link>
                     );
                 })}
@@ -116,12 +117,12 @@ export default function Navbar() {
                             </div>
                         </Link>
                         <button onClick={handleLogout} className="btn btn-secondary" style={{ padding: '8px 12px', fontSize: '13px' }}>
-                            <LogOut size={14} /> <span className="hidden-mobile">Logout</span>
+                            <LogOut size={14} /> <span className="hidden-mobile">{t('logout', language as Language)}</span>
                         </button>
                     </>
                 ) : (
                     <Link href="/login" className="btn btn-primary" style={{ padding: '8px 16px', fontSize: '13px' }}>
-                        <LogIn size={14} /> Login
+                        <LogIn size={14} /> {t('login', language as Language)}
                     </Link>
                 )}
 
@@ -144,7 +145,7 @@ export default function Navbar() {
                             color: 'var(--text-primary)', fontWeight: 500, fontSize: '15px',
                             background: pathname === link.href ? 'rgba(99, 102, 241, 0.15)' : 'transparent',
                         }}>
-                            {link.label}
+                            {t(link.labelKey, language as Language)}
                         </Link>
                     ))}
                 </div>
