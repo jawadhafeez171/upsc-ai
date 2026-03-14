@@ -74,7 +74,7 @@ export const useAppStore = create<AppState>()(
                 // 2. Local badge evaluation
                 const earnedBadges = get().checkAndAwardBadges(session);
                 
-                // 3. Update local state
+                // 3. Update local state in one go to avoid race conditions
                 const updatedUser = { 
                     ...user, 
                     xp: result.newXP, 
@@ -94,7 +94,8 @@ export const useAppStore = create<AppState>()(
             },
 
             checkAndAwardBadges: (session) => {
-                const user = get().user;
+                const state = get();
+                const user = state.user;
                 if (!user) return [];
                 const earned: Badge[] = [];
                 const existingTypes = new Set(user.badges.map((b) => b.type));
@@ -106,8 +107,8 @@ export const useAppStore = create<AppState>()(
                     }
                 };
 
-                // First test
-                if (get().completedSessions.length === 0) addBadge('first-test');
+                // First test (check <= 1 because handleSubmit adds it before syncProgress)
+                if (state.completedSessions.length <= 1) addBadge('first-test');
                 // Perfect score
                 const pct = session.score! / session.total_marks! * 100;
                 if (pct === 100) addBadge('perfect-score');
@@ -117,9 +118,6 @@ export const useAppStore = create<AppState>()(
                 // Kannada test
                 if (session.config.language === 'kn') addBadge('multilingual');
 
-                if (earned.length > 0) {
-                    set({ user: { ...user, badges: [...user.badges, ...earned] } });
-                }
                 return earned;
             },
         }),

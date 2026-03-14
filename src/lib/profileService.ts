@@ -55,7 +55,7 @@ export const profileService = {
         
         let newStreak = currentStreak;
         
-        if (!lastDate) {
+        if (!lastDate || currentStreak === 0) {
             newStreak = 1;
         } else {
             const isToday = now.toDateString() === lastDate.toDateString();
