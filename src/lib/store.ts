@@ -21,9 +21,8 @@ interface AppState {
     completedSessions: TestSession[];
     addCompletedSession: (session: TestSession) => void;
     // XP / Gamification
-    addXP: (amount: number) => void;
+    syncProgress: (xpEarned: number, session: TestSession) => Promise<Badge[]>;
     checkAndAwardBadges: (session: TestSession) => Badge[];
-    updateStreak: () => void;
 }
 
 function computeLevel(xp: number): User['level'] {
@@ -59,33 +58,39 @@ export const useAppStore = create<AppState>()(
             addCompletedSession: (session) =>
                 set((state) => ({ completedSessions: [session, ...state.completedSessions] })),
 
-            addXP: (amount) => {
+            syncProgress: async (xpEarned, session) => {
                 const user = get().user;
-                if (!user) return;
-                const newXP = user.xp + amount;
-                set({ user: { ...user, xp: newXP, level: computeLevel(newXP) } });
+                if (!user) return [];
                 
-                // Fire and forget update to cloud
-                profileService.updateXP(user.id, newXP);
-            },
-
-            updateStreak: () => {
-                const user = get().user;
-                if (!user) return;
-                const lastActive = new Date(user.last_active);
-                const today = new Date();
-                const diffDays = Math.floor(
-                    (today.setHours(0, 0, 0, 0) - lastActive.setHours(0, 0, 0, 0)) / 86400000
+                // 1. Update core stats in Supabase
+                const result = await profileService.updateProgress(
+                    user.id, 
+                    xpEarned, 
+                    user.xp, 
+                    user.streak, 
+                    user.last_active
                 );
-                let newStreak = user.streak;
-                if (diffDays === 1) newStreak += 1;
-                else if (diffDays > 1) newStreak = 1;
-
-                if (newStreak !== user.streak) {
-                    profileService.updateStreak(user.id, newStreak);
-                }
                 
-                set({ user: { ...user, streak: newStreak, last_active: new Date().toISOString() } });
+                // 2. Local badge evaluation
+                const earnedBadges = get().checkAndAwardBadges(session);
+                
+                // 3. Update local state
+                const updatedUser = { 
+                    ...user, 
+                    xp: result.newXP, 
+                    streak: result.newStreak, 
+                    level: result.newLevel, 
+                    last_active: new Date().toISOString(),
+                    badges: [...user.badges, ...earnedBadges]
+                };
+                
+                // 4. If badges were earned, update cloud again
+                if (earnedBadges.length > 0) {
+                    await supabase.from('profiles').update({ badges: updatedUser.badges }).eq('id', user.id);
+                }
+
+                set({ user: updatedUser });
+                return earnedBadges;
             },
 
             checkAndAwardBadges: (session) => {

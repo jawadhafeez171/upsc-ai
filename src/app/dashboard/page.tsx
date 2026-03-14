@@ -95,7 +95,12 @@ export default function DashboardPage() {
                     <XPBar xp={user.xp} level={user.level} />
                 </div>
                 {[
-                    { icon: <Flame size={20} color="#F59E0B" />, label: 'Day Streak', value: `${user.streak} 🔥` },
+                    { 
+                        icon: <Flame size={20} color="#F59E0B" />, 
+                        label: 'Day Streak', 
+                        value: `${user.streak} 🔥`,
+                        sub: user.last_active ? `Last active: ${new Date(user.last_active).toLocaleDateString()}` : 'No activity yet'
+                    },
                     { icon: <BookOpen size={20} color="#6366F1" />, label: 'Tests Taken', value: totalTests },
                     { icon: <Star size={20} color="#10B981" />, label: 'Avg Score', value: totalTests > 0 ? `${avgScore}%` : '—' },
                     { icon: <Trophy size={20} color="#06B6D4" />, label: 'Badges', value: user.badges.length },
@@ -106,6 +111,7 @@ export default function DashboardPage() {
                             {s.icon}
                         </div>
                         <div style={{ fontSize: '28px', fontWeight: 800 }}>{s.value}</div>
+                        {s.sub && <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '4px' }}>{s.sub}</div>}
                     </div>
                 ))}
             </div>

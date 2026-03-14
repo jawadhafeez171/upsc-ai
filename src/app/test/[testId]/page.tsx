@@ -15,7 +15,13 @@ function formatTime(s: number) {
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
     const router = useRouter();
-    const { activeSession, setActiveSession, addCompletedSession, user, addXP, updateStreak, checkAndAwardBadges, completedSessions, language } = useAppStore();
+    const { 
+        activeSession, 
+        setActiveSession, 
+        addCompletedSession, 
+        syncProgress,
+        user 
+    } = useAppStore();
 
     const [currentIdx, setCurrentIdx] = useState(0);
     const [answers, setAnswers] = useState<Record<string, TestAnswer>>({});
@@ -161,12 +167,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
 
         addCompletedSession(completedSession);
         const xp = Math.round((score / totalMarks) * 100);
-        addXP(xp);
-        updateStreak();
-        checkAndAwardBadges(completedSession);
+        syncProgress(xp, completedSession);
         setActiveSession(null);
         router.push(`/results/${testId}`);
-    }, [submitted, activeSession, answers, addCompletedSession, addXP, updateStreak, checkAndAwardBadges, setActiveSession, testId, router]);
+    }, [submitted, activeSession, answers, addCompletedSession, syncProgress, setActiveSession, testId, router]);
 
     if (!activeSession) return null;
     if (loadingQuestions || !activeSession.questions || activeSession.questions.length === 0) {
