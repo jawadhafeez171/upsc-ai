@@ -32,12 +32,52 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                 setExam(examData);
                 
                 // Get question count for this specific config
-                let query = supabase.from('questions').select('id', { count: 'exact', head: true }).eq('exam_id', examId);
-                if (mode === 'subject' && subject) query = query.eq('subject', subject);
-                if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                let qCount = 0;
+                if (examId === 'upsc-cse') {
+                    const SubjectTableMap: Record<string, string> = {
+                        'Ancient History': 'PYQ Ancient History',
+                        'Art and Culture': 'PYQ Art and Culture',
+                        'Modern History': 'PYQ Modern History',
+                        'Polity': 'PYQ Polity',
+                        'Economics': 'PYQ Economics',
+                        'Geography': 'PYQ Geography',
+                        'Environment': 'PYQ Environement',
+                        'IR and Current Affairs': 'PYQ IR and Current Affairs',
+                        'General Awareness': 'PYQ General Awareness'
+                    };
 
-                const { count: qCount } = await query;
-                setAvailableQs(qCount || 0);
+                    if (mode === 'subject' && subject) {
+                        const tableName = SubjectTableMap[subject];
+                        if (tableName) {
+                            let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
+                            if (difficulty !== 'mixed') {
+                                query = query.ilike('difficulty', difficulty);
+                            }
+                            const { count } = await query;
+                            qCount = count || 0;
+                        }
+                    } else {
+                        // Full test mode - sum count from all tables
+                        const promises = Object.values(SubjectTableMap).map(async (tableName) => {
+                            let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
+                            if (difficulty !== 'mixed') {
+                                query = query.ilike('difficulty', difficulty);
+                            }
+                            const { count } = await query;
+                            return count || 0;
+                        });
+                        const counts = await Promise.all(promises);
+                        qCount = counts.reduce((acc, c) => acc + c, 0);
+                    }
+                } else {
+                    let query = supabase.from('questions').select('id', { count: 'exact', head: true }).eq('exam_id', examId);
+                    if (mode === 'subject' && subject) query = query.eq('subject', subject);
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+
+                    const { count } = await query;
+                    qCount = count || 0;
+                }
+                setAvailableQs(qCount);
             }
             setLoading(false);
         }

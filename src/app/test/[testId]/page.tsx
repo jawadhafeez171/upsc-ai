@@ -46,51 +46,159 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
 
             // Need to fetch questions based on config
             const config = activeSession!.config;
-            let query = supabase.from('questions').select('*').eq('exam_id', config.exam_id);
-            
-            if (config.mode === 'subject' && config.subject) {
-                query = query.eq('subject', config.subject);
-            }
-            if (config.difficulty !== 'mixed') {
-                query = query.eq('difficulty', config.difficulty);
+            let selectedRawQuestions: any[] = [];
+
+            if (config.exam_id === 'upsc-cse') {
+                const SubjectTableMap: Record<string, string> = {
+                    'Ancient History': 'PYQ Ancient History',
+                    'Art and Culture': 'PYQ Art and Culture',
+                    'Modern History': 'PYQ Modern History',
+                    'Polity': 'PYQ Polity',
+                    'Economics': 'PYQ Economics',
+                    'Geography': 'PYQ Geography',
+                    'Environment': 'PYQ Environement',
+                    'IR and Current Affairs': 'PYQ IR and Current Affairs',
+                    'General Awareness': 'PYQ General Awareness'
+                };
+
+                // Helper to get candidate keys & difficulties
+                const fetchCandidateIds = async (tableName: string) => {
+                    let query = supabase.from(tableName).select('content_key, difficulty');
+                    if (config.difficulty !== 'mixed') {
+                        query = query.ilike('difficulty', config.difficulty);
+                    }
+                    const { data } = await query;
+                    return (data || []).map(r => ({
+                        content_key: r.content_key,
+                        difficulty: r.difficulty || 'medium',
+                        tableName
+                    }));
+                };
+
+                let candidates: { content_key: string; difficulty: string; tableName: string }[] = [];
+
+                if (config.mode === 'subject' && config.subject) {
+                    const tableName = SubjectTableMap[config.subject];
+                    if (tableName) {
+                        candidates = await fetchCandidateIds(tableName);
+                    }
+                } else {
+                    // Full test mode - fetch from all tables
+                    const tables = Object.values(SubjectTableMap);
+                    const results = await Promise.all(tables.map(t => fetchCandidateIds(t)));
+                    candidates = results.flat();
+                }
+
+                if (candidates.length === 0) {
+                    console.error("No questions found for the selected UPSC CSE config");
+                    router.push('/exams');
+                    return;
+                }
+
+                // Shuffle candidate IDs and select the count
+                const shuffledCandidates = [...candidates].sort(() => Math.random() - 0.5);
+                const selectedCandidates = shuffledCandidates.slice(0, Math.min(config.question_count, candidates.length));
+
+                // Group selected keys by table to batch query
+                const groupedByTable: Record<string, string[]> = {};
+                selectedCandidates.forEach(c => {
+                    if (!groupedByTable[c.tableName]) groupedByTable[c.tableName] = [];
+                    groupedByTable[c.tableName].push(c.content_key);
+                });
+
+                // Batch fetch rows in parallel
+                const fetchFullRows = Object.entries(groupedByTable).map(async ([tableName, keys]) => {
+                    const { data } = await supabase.from(tableName).select('*').in('content_key', keys);
+                    return (data || []).map(row => ({ ...row, _source_table: tableName }));
+                });
+
+                const fullRowsResult = await Promise.all(fetchFullRows);
+                selectedRawQuestions = fullRowsResult.flat();
+            } else {
+                // Fallback for other exams
+                let query = supabase.from('questions').select('*').eq('exam_id', config.exam_id);
+                if (config.mode === 'subject' && config.subject) {
+                    query = query.eq('subject', config.subject);
+                }
+                if (config.difficulty !== 'mixed') {
+                    query = query.eq('difficulty', config.difficulty);
+                }
+
+                const { data, error } = await query;
+                if (error || !data || data.length === 0) {
+                    console.error("Failed to load questions", error);
+                    router.push('/exams');
+                    return;
+                }
+
+                // Shuffle and cap at question_count
+                const shuffled = [...data].sort(() => Math.random() - 0.5);
+                selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count, shuffled.length));
             }
 
-            const { data, error } = await query;
-            
-            if (error || !data || data.length === 0) {
-                console.error("Failed to load questions", error);
-                router.push('/exams');
-                return;
-            }
-
-            // Shuffle and cap at question_count
-            const shuffled = [...data].sort(() => Math.random() - 0.5);
-            const selected = shuffled.slice(0, Math.min(config.question_count, shuffled.length));
+            // Shuffle all selected raw questions to mix subjects/difficulties
+            const shuffledFinal = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
 
             // Sort logically (by subject then difficulty)
             const diffOrder: Record<string, number> = { easy: 0, medium: 1, hard: 2 };
-            selected.sort((a, b) => {
-                if (a.subject !== b.subject) return a.subject.localeCompare(b.subject);
-                return diffOrder[a.difficulty] - diffOrder[b.difficulty];
+            shuffledFinal.sort((a, b) => {
+                const subA = a.subject_name || a.subject || '';
+                const subB = b.subject_name || b.subject || '';
+                const diffA = (a.difficulty || 'medium').toLowerCase();
+                const diffB = (b.difficulty || 'medium').toLowerCase();
+                if (subA !== subB) return subA.localeCompare(subB);
+                return (diffOrder[diffA] ?? 1) - (diffOrder[diffB] ?? 1);
             });
 
-            // Map DB format to UI format
-            const formattedQs: Question[] = selected.map(dbq => ({
-                id: dbq.id,
-                exam_id: dbq.exam_id,
-                subject: dbq.subject,
-                difficulty: dbq.difficulty,
-                text: dbq.text_en,
-                text_kn: dbq.text_kn,
-                options: dbq.options_en.map((optId: string, idx: number) => ({
-                    id: String.fromCharCode(97 + idx), // a, b, c, d
-                    text: optId,
-                    text_kn: dbq.options_kn?.[idx] || undefined
-                })),
-                correct: String.fromCharCode(97 + dbq.correct_index),
-                explanation: dbq.explanation_en,
-                explanation_kn: dbq.explanation_kn
-            }));
+            // Map DB format to UI format (handling both schemas)
+            const formattedQs: Question[] = shuffledFinal.map(dbq => {
+                const isPyqSchema = !!dbq.content_key;
+
+                if (isPyqSchema) {
+                    // Mapping for the new 38-column PYQ schema
+                    const rawAns = (dbq['Correct Answer'] || 'a').toLowerCase().trim();
+                    const correctChar = ['a', 'b', 'c', 'd'].includes(rawAns) ? rawAns : 'a';
+
+                    // Prepare options list
+                    const optionsList = [
+                        { id: 'a', text: dbq.option_a_en, text_hi: dbq.option_a_hi !== 'None' ? dbq.option_a_hi : undefined },
+                        { id: 'b', text: dbq.option_b_en, text_hi: dbq.option_b_hi !== 'None' ? dbq.option_b_hi : undefined },
+                        { id: 'c', text: dbq.option_c_en, text_hi: dbq.option_c_hi !== 'None' ? dbq.option_c_hi : undefined },
+                        { id: 'd', text: dbq.option_d_en, text_hi: dbq.option_d_hi !== 'None' ? dbq.option_d_hi : undefined }
+                    ];
+
+                    return {
+                        id: dbq.content_key,
+                        exam_id: 'upsc-cse',
+                        subject: dbq.subject_name || 'General Awareness',
+                        difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
+                        text: dbq.question_en,
+                        text_hi: dbq.question_hi !== 'None' ? dbq.question_hi : undefined,
+                        options: optionsList,
+                        correct: correctChar,
+                        explanation: dbq.Explanation || dbq.explanation_correct || 'No explanation available.',
+                        explanation_hi: dbq.explanation_hi !== 'None' ? dbq.explanation_hi : undefined
+                    };
+                } else {
+                    // Mapping for the old questions schema
+                    return {
+                        id: dbq.id,
+                        exam_id: dbq.exam_id,
+                        subject: dbq.subject,
+                        difficulty: dbq.difficulty,
+                        text: dbq.text_en,
+                        text_kn: dbq.text_kn,
+                        options: dbq.options_en.map((optId: string, idx: number) => ({
+                            id: String.fromCharCode(97 + idx), // a, b, c, d
+                            text: optId,
+                            text_kn: dbq.options_kn?.[idx] || undefined
+                        })),
+                        correct: String.fromCharCode(97 + dbq.correct_index),
+                        explanation: dbq.explanation_en,
+                        explanation_kn: dbq.explanation_kn
+                    };
+                }
+            });
 
             // Save back to Zustand
             setActiveSession({ ...activeSession!, questions: formattedQs });
@@ -185,7 +293,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const { questions } = activeSession;
     const question = questions[currentIdx];
     const lang = activeSession.config.language;
-    const qText = lang === 'kn' && question.text_kn ? question.text_kn : question.text;
+    const qText = lang === 'kn' && question.text_kn ? question.text_kn : (lang === 'hi' && question.text_hi ? question.text_hi : question.text);
     const currentAnswer = answers[question.id];
     const isTimeLow = timeLeft < 60;
 
@@ -246,7 +354,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     {/* Options */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                         {question.options.map((opt) => {
-                            const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : opt.text;
+                            const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
                             const isSelected = currentAnswer?.selected === opt.id;
                             return (
                                 <button

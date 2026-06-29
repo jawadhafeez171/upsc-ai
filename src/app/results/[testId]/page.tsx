@@ -166,10 +166,10 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         const isCorrect = a?.is_correct;
                         const wasSkipped = !a?.selected;
                         const isOpen = expanded === q.id;
-                        const qText = lang === 'kn' && q.text_kn ? q.text_kn : q.text;
+                        const qText = lang === 'kn' && q.text_kn ? q.text_kn : (lang === 'hi' && q.text_hi ? q.text_hi : q.text);
                         const correctOpt = q.options.find((o) => o.id === q.correct);
                         const selectedOpt = a?.selected ? q.options.find((o) => o.id === a.selected) : null;
-                        const expText = lang === 'kn' && q.explanation_kn ? q.explanation_kn : q.explanation;
+                        const expText = lang === 'kn' && q.explanation_kn ? q.explanation_kn : (lang === 'hi' && q.explanation_hi ? q.explanation_hi : q.explanation);
 
                         return (
                             <div key={q.id} style={{ background: 'var(--bg-secondary)', borderRadius: '10px', overflow: 'hidden', border: `1px solid ${isCorrect ? 'rgba(16,185,129,0.2)' : wasSkipped ? 'var(--border)' : 'rgba(244,63,94,0.2)'}` }}>
@@ -193,7 +193,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                     <div style={{ padding: '0 16px 16px 46px' }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '12px' }}>
                                             {q.options.map((opt) => {
-                                                const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : opt.text;
+                                                const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
                                                 const isCorrectOpt = opt.id === q.correct;
                                                 const isSelectedOpt = opt.id === a?.selected;
                                                 return (

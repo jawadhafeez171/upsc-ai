@@ -7,6 +7,7 @@ export interface Option {
     id: string;
     text: string;
     text_kn?: string;
+    text_hi?: string;
 }
 
 export interface Question {
@@ -16,10 +17,12 @@ export interface Question {
     difficulty: Difficulty;
     text: string;
     text_kn?: string;
+    text_hi?: string;
     options: Option[];
     correct: string; // option id
     explanation: string;
     explanation_kn?: string;
+    explanation_hi?: string;
 }
 
 export interface Exam {
