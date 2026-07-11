@@ -9,7 +9,7 @@ import { Question } from '@/types';
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
     const router = useRouter();
-    const { activeSession, addCompletedSession } = useAppStore();
+    const { activeSession, addCompletedSession, setActiveSession } = useAppStore();
 
     const [questions, setQuestions] = useState<Question[]>([]);
     const [answers, setAnswers] = useState<Record<string, { question_id: string; selected?: string; marked_for_review: boolean; is_correct?: boolean; time_spent: number }>>({});
@@ -28,21 +28,61 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             const { data } = await query;
             if (data && data.length > 0) {
                 const shuffled = [...data].sort(() => 0.5 - Math.random());
-                const picked = shuffled.slice(0, config.question_count).map((q) => ({
-                    id: q.id, exam_id: q.exam_id, subject: q.subject, difficulty: q.difficulty,
-                    text: q.text, text_kn: q.text_kn, text_hi: q.text_hi,
-                    options: typeof q.options === 'string' ? JSON.parse(q.options) : q.options,
-                    correct: q.correct, explanation: q.explanation, explanation_kn: q.explanation_kn, explanation_hi: q.explanation_hi,
-                }));
-                setQuestions(picked);
-                setTimeLeft(picked.length * 72);
+                const picked = shuffled.slice(0, config.question_count);
+                const formattedQs: Question[] = picked.map((dbq) => {
+                    const isPyqSchema = !!dbq.content_key;
+                    if (isPyqSchema) {
+                        const rawAns = (dbq['Correct Answer'] || 'a').toLowerCase().trim();
+                        const correctChar = ['a', 'b', 'c', 'd'].includes(rawAns) ? rawAns : 'a';
+                        const optionsList = [
+                            { id: 'a', text: dbq.option_a_en, text_hi: dbq.option_a_hi !== 'None' ? dbq.option_a_hi : undefined },
+                            { id: 'b', text: dbq.option_b_en, text_hi: dbq.option_b_hi !== 'None' ? dbq.option_b_hi : undefined },
+                            { id: 'c', text: dbq.option_c_en, text_hi: dbq.option_c_hi !== 'None' ? dbq.option_c_hi : undefined },
+                            { id: 'd', text: dbq.option_d_en, text_hi: dbq.option_d_hi !== 'None' ? dbq.option_d_hi : undefined }
+                        ];
+                        return {
+                            id: dbq.content_key,
+                            exam_id: 'upsc-cse',
+                            subject: dbq.subject_name || 'General Awareness',
+                            difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
+                            text: dbq.question_en,
+                            text_hi: dbq.question_hi !== 'None' ? dbq.question_hi : undefined,
+                            options: optionsList,
+                            correct: correctChar,
+                            explanation: dbq.Explanation || dbq.explanation_correct || 'No explanation available.',
+                            explanation_hi: dbq.explanation_hi !== 'None' ? dbq.explanation_hi : undefined
+                        };
+                    } else {
+                        return {
+                            id: dbq.id,
+                            exam_id: dbq.exam_id,
+                            subject: dbq.subject,
+                            difficulty: dbq.difficulty,
+                            text: dbq.text_en,
+                            text_kn: dbq.text_kn,
+                            options: (dbq.options_en || []).map((optId: string, idx: number) => ({
+                                id: String.fromCharCode(97 + idx), // a, b, c, d
+                                text: optId,
+                                text_kn: dbq.options_kn?.[idx] || undefined,
+                                text_hi: dbq.options_hi?.[idx] || undefined
+                            })),
+                            correct: String.fromCharCode(97 + dbq.correct_index),
+                            explanation: dbq.explanation_en,
+                            explanation_kn: dbq.explanation_kn,
+                            explanation_hi: dbq.explanation_hi
+                        };
+                    }
+                });
+                setQuestions(formattedQs);
+                setTimeLeft(formattedQs.length * 72);
+                setActiveSession({ ...activeSession!, questions: formattedQs });
             }
             setLoading(false);
         }
         if (activeSession.questions && activeSession.questions.length > 0) {
             setQuestions(activeSession.questions); setAnswers(activeSession.answers || {}); setTimeLeft(activeSession.questions.length * 72); setLoading(false);
         } else { fetchQuestions(); }
-    }, [testId, activeSession, router]);
+    }, [testId, activeSession?.id, router]);
 
     useEffect(() => {
         if (loading || timeLeft <= 0) return;
