@@ -22,14 +22,86 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         async function fetchQuestions() {
             setLoading(true);
             const { config } = activeSession!;
-            let query = supabase.from('questions').select('*').eq('exam_id', config.exam_id);
-            if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
-            if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
-            const { data } = await query;
-            if (data && data.length > 0) {
-                const shuffled = [...data].sort(() => 0.5 - Math.random());
-                const picked = shuffled.slice(0, config.question_count);
-                const formattedQs: Question[] = picked.map((dbq) => {
+            let selectedRawQuestions: any[] = [];
+
+            if (config.exam_id === 'upsc-cse') {
+                const SubjectTableMap: Record<string, string> = {
+                    'Ancient History': 'PYQ Ancient History',
+                    'Art and Culture': 'PYQ Art and Culture',
+                    'Modern History': 'PYQ Modern History',
+                    'Polity': 'PYQ Polity',
+                    'Economics': 'PYQ Economics',
+                    'Geography': 'PYQ Geography',
+                    'Environment': 'PYQ Environement',
+                    'IR and Current Affairs': 'PYQ IR and Current Affairs',
+                    'General Awareness': 'PYQ General Awareness'
+                };
+
+                const fetchCandidateIds = async (tableName: string) => {
+                    let query = supabase.from(tableName).select('content_key, difficulty');
+                    if (config.difficulty !== 'mixed') {
+                        query = query.ilike('difficulty', config.difficulty);
+                    }
+                    const { data } = await query;
+                    return (data || []).map(r => ({
+                        content_key: r.content_key,
+                        difficulty: r.difficulty || 'medium',
+                        tableName
+                    }));
+                };
+
+                let candidates: { content_key: string; difficulty: string; tableName: string }[] = [];
+
+                if (config.mode === 'subject' && config.subject) {
+                    const tableName = SubjectTableMap[config.subject];
+                    if (tableName) {
+                        candidates = await fetchCandidateIds(tableName);
+                    }
+                } else {
+                    const tables = Object.values(SubjectTableMap);
+                    const results = await Promise.all(tables.map(t => fetchCandidateIds(t)));
+                    candidates = results.flat();
+                }
+
+                if (candidates.length > 0) {
+                    const shuffledCandidates = [...candidates].sort(() => Math.random() - 0.5);
+                    const selectedCandidates = shuffledCandidates.slice(0, Math.min(config.question_count, candidates.length));
+
+                    const groupedByTable: Record<string, string[]> = {};
+                    selectedCandidates.forEach(c => {
+                        if (!groupedByTable[c.tableName]) groupedByTable[c.tableName] = [];
+                        groupedByTable[c.tableName].push(c.content_key);
+                    });
+
+                    const fetchFullRows = Object.entries(groupedByTable).map(async ([tableName, keys]) => {
+                        const { data } = await supabase.from(tableName).select('*').in('content_key', keys);
+                        return (data || []).map(row => ({ ...row, _source_table: tableName }));
+                    });
+
+                    const fullRowsResult = await Promise.all(fetchFullRows);
+                    selectedRawQuestions = fullRowsResult.flat();
+                }
+            } else {
+                let query = supabase.from('questions').select('*').eq('exam_id', config.exam_id);
+                if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
+                if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                const { data } = await query;
+                if (data) selectedRawQuestions = data;
+            }
+
+            if (selectedRawQuestions.length > 0) {
+                const shuffledFinal = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
+                const diffOrder: Record<string, number> = { easy: 0, medium: 1, hard: 2 };
+                shuffledFinal.sort((a, b) => {
+                    const subA = a.subject_name || a.subject || '';
+                    const subB = b.subject_name || b.subject || '';
+                    const diffA = (a.difficulty || 'medium').toLowerCase();
+                    const diffB = (b.difficulty || 'medium').toLowerCase();
+                    if (subA !== subB) return subA.localeCompare(subB);
+                    return (diffOrder[diffA] ?? 1) - (diffOrder[diffB] ?? 1);
+                });
+
+                const formattedQs: Question[] = shuffledFinal.map((dbq) => {
                     const isPyqSchema = !!dbq.content_key;
                     if (isPyqSchema) {
                         const rawAns = (dbq['Correct Answer'] || 'a').toLowerCase().trim();
@@ -61,7 +133,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             text: dbq.text_en,
                             text_kn: dbq.text_kn,
                             options: (dbq.options_en || []).map((optId: string, idx: number) => ({
-                                id: String.fromCharCode(97 + idx), // a, b, c, d
+                                id: String.fromCharCode(97 + idx),
                                 text: optId,
                                 text_kn: dbq.options_kn?.[idx] || undefined,
                                 text_hi: dbq.options_hi?.[idx] || undefined
