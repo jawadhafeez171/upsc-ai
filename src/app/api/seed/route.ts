@@ -24,7 +24,8 @@ export async function GET() {
             return NextResponse.json({ error: 'Failed to seed exams', details: examsError }, { status: 500 });
         }
 
-        // 2. Insert Questions
+        // 2. Clear existing questions and Insert Questions
+        await supabase.from('questions').delete().neq('id', 'dummy_id');
         const { error: questionsError } = await supabase
             .from('questions')
             .upsert(QUESTIONS.map(q => ({
