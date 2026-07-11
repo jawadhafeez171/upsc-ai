@@ -29,6 +29,19 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             setLoading(true);
             const { data: examData } = await supabase.from('exams').select('*').eq('id', examId).single();
             if (examData) {
+                if (examId === 'upsc-cse') {
+                    examData.topics = [
+                        'Ancient History',
+                        'Art and Culture',
+                        'Modern History',
+                        'Polity',
+                        'Economics',
+                        'Geography',
+                        'Environment',
+                        'IR and Current Affairs',
+                        'General Awareness'
+                    ];
+                }
                 setExam(examData);
                 
                 // Get question count for this specific config
@@ -138,8 +151,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
                         {([['full', '📋 Full Mock Test', 'Random questions from all subjects'], ['subject', '🎯 Subject-wise', 'Focus on one subject']] as const).map(([m, label, desc]) => (
                             <button key={m} onClick={() => setMode(m)} style={{
-                                padding: '14px', borderRadius: '10px', border: `2px solid ${mode === m ? 'var(--accent-indigo)' : 'var(--border)'}`,
-                                background: mode === m ? 'rgba(99,102,241,0.1)' : 'transparent',
+                                padding: '14px', borderRadius: '12px', border: `2px solid ${mode === m ? 'var(--accent-indigo)' : 'var(--border)'}`,
+                                background: mode === m ? 'rgba(184, 62, 17, 0.08)' : 'transparent',
                                 cursor: 'pointer', textAlign: 'left', transition: 'all 0.2s',
                             }}>
                                 <div style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '4px' }}>{label}</div>
@@ -157,8 +170,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             {(exam.topics || []).map((s: string) => (
                                 <button key={s} onClick={() => setSubject(s)} style={{
                                     padding: '8px 14px', borderRadius: '8px', border: `2px solid ${subject === s ? 'var(--accent-indigo)' : 'var(--border)'}`,
-                                    background: subject === s ? 'rgba(99,102,241,0.1)' : 'transparent',
-                                    cursor: 'pointer', color: 'var(--text-primary)', fontWeight: 500, fontSize: '13px', transition: 'all 0.2s',
+                                    background: subject === s ? 'rgba(184, 62, 17, 0.08)' : 'transparent',
+                                    cursor: 'pointer', color: 'var(--text-primary)', fontWeight: 550, fontSize: '13px', transition: 'all 0.2s',
                                 }}>{s}</button>
                             ))}
                         </div>
@@ -173,9 +186,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             const cls = d === 'easy' ? 'badge-easy' : d === 'medium' ? 'badge-medium' : d === 'hard' ? 'badge-hard' : '';
                             return (
                                 <button key={d} onClick={() => setDifficulty(d)} style={{
-                                    padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '13px',
+                                    padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 650, fontSize: '13px',
                                     border: difficulty === d ? '2px solid var(--accent-indigo)' : '2px solid transparent',
-                                    background: difficulty === d ? 'rgba(99,102,241,0.1)' : 'var(--bg-secondary)',
+                                    background: difficulty === d ? 'rgba(184, 62, 17, 0.08)' : 'var(--bg-secondary)',
                                     color: 'var(--text-primary)', textTransform: 'capitalize', transition: 'all 0.2s',
                                 }}>{d === 'mixed' ? '🎲 Mixed' : d === 'easy' ? '🟢 Easy' : d === 'medium' ? '🟡 Medium' : '🔴 Hard'}</button>
                             );
@@ -191,9 +204,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '10px' }}>
                         {QUESTION_COUNTS.map((c) => (
                             <button key={c} onClick={() => { setCount(c); setCustomCount(''); }} style={{
-                                padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '13px',
+                                padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 650, fontSize: '13px',
                                 border: count === c && !customCount ? '2px solid var(--accent-indigo)' : '2px solid var(--border)',
-                                background: count === c && !customCount ? 'rgba(99,102,241,0.1)' : 'transparent',
+                                background: count === c && !customCount ? 'rgba(184, 62, 17, 0.08)' : 'transparent',
                                 color: 'var(--text-primary)', transition: 'all 0.2s',
                                 opacity: c > availableQs ? 0.4 : 1,
                             }}>{c}</button>
@@ -218,9 +231,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         <div style={{ display: 'flex', gap: '8px' }}>
                             {['en', 'kn'].map((l) => (
                                 <button key={l} onClick={() => setTestLang(l as Language)} style={{
-                                    padding: '8px 18px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '13px',
+                                    padding: '8px 18px', borderRadius: '8px', cursor: 'pointer', fontWeight: 650, fontSize: '13px',
                                     border: testLang === l ? '2px solid var(--accent-indigo)' : '2px solid var(--border)',
-                                    background: testLang === l ? 'rgba(99,102,241,0.1)' : 'transparent',
+                                    background: testLang === l ? 'rgba(184, 62, 17, 0.08)' : 'transparent',
                                     color: 'var(--text-primary)', transition: 'all 0.2s',
                                 }}>{l === 'en' ? '🇬🇧 English' : l === 'kn' ? '🇮🇳 ಕನ್ನಡ' : '🇮🇳 हिन्दी'}</button>
                             ))}

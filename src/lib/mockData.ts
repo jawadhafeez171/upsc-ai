@@ -10,7 +10,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0.33,
         subjects: ['Ancient History', 'Art and Culture', 'Modern History', 'Polity', 'Economics', 'Geography', 'Environment', 'IR and Current Affairs', 'General Awareness'],
         icon: '🏛️',
-        color: '#4F46E5',
+        color: '#082C54',
     },
     {
         id: 'upsc-capf',
@@ -21,7 +21,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0.33,
         subjects: ['General Knowledge', 'Current Affairs', 'Reasoning', 'English'],
         icon: '🎖️',
-        color: '#7C3AED',
+        color: '#0D5D56',
     },
     {
         id: 'upsc-cds',
@@ -32,7 +32,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0.33,
         subjects: ['History', 'Geography', 'Polity', 'Science', 'Defence'],
         icon: '⚔️',
-        color: '#1D4ED8',
+        color: '#B83E11',
     },
     {
         id: 'rbi-grade-b',
@@ -43,7 +43,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0.25,
         subjects: ['Economy', 'Banking', 'Current Affairs', 'Polity'],
         icon: '🏦',
-        color: '#065F46',
+        color: '#E67E22',
     },
     {
         id: 'kpsc-kas',
@@ -56,7 +56,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0.25,
         subjects: ['Karnataka History', 'Indian Polity', 'Economy', 'Kannada', 'Science'],
         icon: '🅺',
-        color: '#B45309',
+        color: '#B83E11',
     },
     {
         id: 'kpsc-psi',
@@ -69,7 +69,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0,
         subjects: ['General Knowledge', 'Kannada', 'Reasoning', 'Law'],
         icon: '👮',
-        color: '#DC2626',
+        color: '#0D5D56',
     },
     {
         id: 'kpsc-pc',
@@ -82,7 +82,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0,
         subjects: ['General Knowledge', 'Kannada', 'Reasoning'],
         icon: '🚔',
-        color: '#7C2D12',
+        color: '#082C54',
     },
     {
         id: 'kea-group-c',
@@ -95,7 +95,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0,
         subjects: ['General Knowledge', 'Kannada', 'Maths', 'Reasoning'],
         icon: '📋',
-        color: '#0369A1',
+        color: '#E67E22',
     },
 ];
 

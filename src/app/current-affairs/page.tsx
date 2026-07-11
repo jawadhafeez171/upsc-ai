@@ -28,7 +28,7 @@ export default function CurrentAffairsPage() {
                     <button key={l} onClick={() => setTabLang(l)} style={{
                         padding: '8px 18px', borderRadius: '8px', border: 'none', cursor: 'pointer',
                         fontWeight: 600, fontSize: '13px', transition: 'all 0.2s',
-                        background: tabLang === l ? 'linear-gradient(135deg, #6366F1, #8B5CF6)' : 'transparent',
+                        background: tabLang === l ? 'linear-gradient(135deg, var(--accent-indigo), var(--accent-purple))' : 'transparent',
                         color: tabLang === l ? 'white' : 'var(--text-secondary)',
                     }}>{LANG_LABELS[l]}</button>
                 ))}
@@ -39,7 +39,7 @@ export default function CurrentAffairsPage() {
                 {CATEGORIES.map((c) => (
                     <button key={c} onClick={() => setCategory(c)} style={{
                         padding: '6px 14px', borderRadius: '20px', border: `1px solid ${category === c ? 'var(--accent-indigo)' : 'var(--border)'}`,
-                        background: category === c ? 'rgba(99,102,241,0.1)' : 'transparent',
+                        background: category === c ? 'rgba(184, 62, 17, 0.1)' : 'transparent',
                         cursor: 'pointer', fontWeight: 500, fontSize: '12px',
                         color: category === c ? 'var(--accent-indigo)' : 'var(--text-muted)', transition: 'all 0.2s',
                     }}>{c}</button>
@@ -52,7 +52,7 @@ export default function CurrentAffairsPage() {
                     const title = tabLang === 'hi' ? article.title_hi : tabLang === 'kn' ? article.title_kn : article.title_en;
                     const body = tabLang === 'hi' ? article.body_hi : tabLang === 'kn' ? article.body_kn : article.body_en;
                     const categoryColors: Record<string, string> = {
-                        Economy: '#10B981', Polity: '#6366F1', 'Science & Tech': '#06B6D4', Environment: '#84CC16', International: '#F59E0B'
+                        Economy: '#10B981', Polity: '#0D5D56', 'Science & Tech': '#06B6D4', Environment: '#84CC16', International: '#F59E0B'
                     };
                     return (
                         <div key={article.id} className="card" style={{ padding: '24px', borderLeft: `3px solid ${categoryColors[article.category] || 'var(--accent-indigo)'}` }}>

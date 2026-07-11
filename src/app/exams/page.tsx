@@ -15,5 +15,26 @@ export default async function ExamsPage() {
     // Fetch initial exams on the server
     const { data: examsData } = await supabase.from('exams').select('*').order('created_at', { ascending: true });
 
-    return <ExamsClient initialExams={examsData || []} />;
+    const sanitizedExams = (examsData || []).map(exam => {
+        if (exam.id === 'upsc-cse') {
+            return {
+                ...exam,
+                topics: [
+                    'Ancient History',
+                    'Art and Culture',
+                    'Modern History',
+                    'Polity',
+                    'Economics',
+                    'Geography',
+                    'Environment',
+                    'IR and Current Affairs',
+                    'General Awareness'
+                ]
+            };
+        }
+        return exam;
+    });
+
+    return <ExamsClient initialExams={sanitizedExams} />;
 }
+
