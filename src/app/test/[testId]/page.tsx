@@ -121,6 +121,23 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         </div>
     );
 
+    if (questions.length === 0) {
+        return (
+            <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '80px 24px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                <div style={{ maxWidth: '400px', margin: '0 auto', background: 'var(--bg-secondary)', padding: '32px', borderRadius: '16px', boxShadow: 'var(--shadow-card)' }}>
+                    <div style={{ fontSize: '40px', marginBottom: '16px' }}>⚠️</div>
+                    <h3 style={{ color: 'var(--text-primary)', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>No Questions Found</h3>
+                    <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '24px' }}>
+                        No questions match this configuration. Make sure you run the seed script!
+                    </p>
+                    <button onClick={() => router.push('/exams')} className="btn btn-primary" style={{ width: '100%' }}>
+                        Back to Catalog
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
     const question = questions[currentIdx];
     const lang = activeSession!.config.language;
     const qText = lang === 'kn' && question.text_kn ? question.text_kn : (lang === 'hi' && question.text_hi ? question.text_hi : question.text);
