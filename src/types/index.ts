@@ -46,6 +46,7 @@ export interface TestConfig {
     difficulty: Difficulty | 'mixed';
     question_count: number;
     language: Language;
+    year?: number | 'all';
 }
 
 export interface TestAnswer {

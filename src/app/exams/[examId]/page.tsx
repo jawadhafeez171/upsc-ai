@@ -8,6 +8,15 @@ import { ArrowRight, AlertTriangle } from 'lucide-react';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 const DIFFICULTIES = ['mixed', 'easy', 'medium', 'hard'] as const;
+const YEARS = [
+    'all',
+    2024, 2023, 2022, 2021, 2020,
+    2019, 2018, 2017, 2016, 2015,
+    2014, 2013, 2012, 2011, 2010,
+    2009, 2008, 2007, 2006, 2005,
+    2004, 2003, 2002, 2001, 2000,
+    1999, 1998, 1997, 1996, 1995
+] as const;
 
 export default function ExamDetailPage({ params }: { params: Promise<{ examId: string }> }) {
     const { examId } = use(params);
@@ -20,6 +29,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [mode, setMode] = useState<'subject' | 'full'>('full');
     const [subject, setSubject] = useState('');
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
+    const [year, setYear] = useState<number | 'all'>('all');
     const [count, setCount] = useState(25);
     const [customCount, setCustomCount] = useState('');
     const [testLang, setTestLang] = useState<Language>(language);
@@ -66,6 +76,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             if (difficulty !== 'mixed') {
                                 query = query.ilike('difficulty', difficulty);
                             }
+                            if (year !== 'all') {
+                                query = query.eq('Year', year);
+                            }
                             const { count } = await query;
                             qCount = count || 0;
                         }
@@ -75,6 +88,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
                             if (difficulty !== 'mixed') {
                                 query = query.ilike('difficulty', difficulty);
+                            }
+                            if (year !== 'all') {
+                                query = query.eq('Year', year);
                             }
                             const { count } = await query;
                             return count || 0;
@@ -95,7 +111,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             setLoading(false);
         }
         loadExamData();
-    }, [examId, mode, subject, difficulty]);
+    }, [examId, mode, subject, difficulty, year]);
 
     if (loading) return <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)' }}>Loading exam...</div>;
     if (!exam) return <div style={{ padding: '80px', textAlign: 'center' }}>Exam not found</div>;
@@ -106,7 +122,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         if (!user) { router.push('/login'); return; }
         if (finalCount === 0) return;
 
-        const config: TestConfig = { exam_id: examId, mode, subject: mode === 'subject' ? subject : undefined, difficulty, question_count: finalCount, language: testLang };
+        const config: TestConfig = {
+            exam_id: examId,
+            mode,
+            subject: mode === 'subject' ? subject : undefined,
+            difficulty,
+            question_count: finalCount,
+            language: testLang,
+            year: examId === 'upsc-cse' ? year : undefined
+        };
 
         // Instead of fetching questions here and passing them via Zustand, we will let the
         // TestEngine component fetch its own questions from Supabase based on this config
@@ -196,6 +220,27 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     </div>
                 </div>
 
+                {/* Year Selector (for UPSC CSE only since subject tables have Year) */}
+                {examId === 'upsc-cse' && (
+                    <div style={{ marginBottom: '24px' }}>
+                        <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>PYQ Year</div>
+                        <select
+                            className="input"
+                            value={year}
+                            onChange={(e) => {
+                                const val = e.target.value;
+                                setYear(val === 'all' ? 'all' : Number(val));
+                            }}
+                            style={{ maxWidth: '240px', height: '42px' }}
+                        >
+                            <option value="all">🌐 All Years (1995 - 2024)</option>
+                            {YEARS.filter(y => y !== 'all').map((y) => (
+                                <option key={y} value={y}>📅 {y} Prelims</option>
+                            ))}
+                        </select>
+                    </div>
+                )}
+
                 {/* Question count */}
                 <div style={{ marginBottom: '24px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>
@@ -209,7 +254,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 background: count === c && !customCount ? 'rgba(184, 62, 17, 0.08)' : 'transparent',
                                 color: 'var(--text-primary)', transition: 'all 0.2s',
                                 opacity: c > availableQs ? 0.4 : 1,
-                            }}>{c}</button>
+                            }} disabled={c > availableQs}>{c}</button>
                         ))}
                     </div>
                     <input
@@ -247,6 +292,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{finalCount} questions</span>
                         {' · '}{mode === 'subject' ? `${subject || 'pick a subject'}` : 'All subjects'}
                         {' · '}{difficulty === 'mixed' ? 'Mixed difficulty' : difficulty}
+                        {examId === 'upsc-cse' && ` · ${year === 'all' ? 'All years' : `${year} paper`}`}
                     </div>
                     <button
                         onClick={handleStart}

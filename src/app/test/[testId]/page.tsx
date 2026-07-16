@@ -42,6 +42,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     if (config.difficulty !== 'mixed') {
                         query = query.ilike('difficulty', config.difficulty);
                     }
+                    if (config.year && config.year !== 'all') {
+                        query = query.eq('Year', config.year);
+                    }
                     const { data } = await query;
                     return (data || []).map(r => ({
                         content_key: r.content_key,

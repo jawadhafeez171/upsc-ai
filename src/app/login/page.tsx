@@ -25,23 +25,16 @@ export default function LoginPage() {
     const { user } = useAppStore();
 
     useEffect(() => {
-        if (user) {
-            router.replace('/dashboard');
-        }
+        if (user) router.replace('/dashboard');
     }, [user, router]);
 
     const handleGoogleLogin = async () => {
         setLoading(true);
         const { error } = await supabase.auth.signInWithOAuth({
             provider: 'google',
-            options: {
-                redirectTo: `${window.location.origin}/dashboard`
-            }
+            options: { redirectTo: `${window.location.origin}/dashboard` }
         });
-        if (error) {
-            setError(error.message);
-            setLoading(false);
-        }
+        if (error) { setError(error.message); setLoading(false); }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -49,9 +42,7 @@ export default function LoginPage() {
         setError('');
         if (!email || !password) return;
         setLoading(true);
-
         const { error: authError } = await supabase.auth.signInWithPassword({ email, password });
-
         if (authError) {
             setError(authError.message === 'Invalid login credentials'
                 ? 'Wrong email or password. Please try again.'
@@ -59,24 +50,57 @@ export default function LoginPage() {
             setLoading(false);
             return;
         }
-
         router.push('/dashboard');
     };
 
     return (
-        <div style={{ minHeight: 'calc(100vh - 64px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
-            <div style={{ width: '100%', maxWidth: '420px' }}>
-                <div className="card gradient-border" style={{ padding: '40px' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-                        <div style={{ fontSize: '40px', marginBottom: '12px' }}>🎯</div>
-                        <h1 style={{ fontSize: '26px', fontWeight: 800 }}>Welcome Back</h1>
-                        <p style={{ color: 'var(--text-muted)', marginTop: '6px', fontSize: '14px' }}>Continue your preparation journey</p>
+        <div style={{ minHeight: 'calc(100vh - 64px)', display: 'flex' }}>
+            {/* Left Brand Panel */}
+            <div className="hidden-mobile" style={{
+                flex: '1', background: 'linear-gradient(135deg, #0D1628 0%, #070E1C 100%)',
+                display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
+                padding: '48px', position: 'relative', overflow: 'hidden',
+                borderRight: '1px solid var(--border)',
+            }}>
+                {/* Glow effects */}
+                <div style={{ position: 'absolute', top: '20%', left: '30%', width: 300, height: 300, borderRadius: '50%', background: 'radial-gradient(circle, rgba(242,107,29,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+                <div style={{ position: 'absolute', bottom: '20%', right: '20%', width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, rgba(26,190,170,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
+
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '360px' }}>
+                    <div style={{ fontSize: '56px', marginBottom: '24px' }}>🎯</div>
+                    <h2 style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.8px', marginBottom: '16px', color: '#EEF2FF' }}>
+                        Your prep. <br />
+                        <span style={{ background: 'linear-gradient(135deg, #F26B1D, #F59E0B)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Elevated.</span>
+                    </h2>
+                    <p style={{ color: '#94A3B8', fontSize: '15px', lineHeight: 1.7 }}>
+                        Join thousands of aspirants who trust MockIQ for their UPSC and KPSC preparation.
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '40px', textAlign: 'left' }}>
+                        {['8+ exam formats covered', 'Subject-wise analytics', 'Multilingual support', 'Instant result feedback'].map((item) => (
+                            <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#94A3B8', fontSize: '14px' }}>
+                                <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--brand-orange)', flexShrink: 0, boxShadow: '0 0 8px var(--brand-orange)' }} />
+                                {item}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Right Form Panel */}
+            <div style={{
+                flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                padding: '40px 24px',
+            }}>
+                <div style={{ width: '100%', maxWidth: '400px' }} className="fade-in-up">
+                    <div style={{ marginBottom: '36px' }}>
+                        <h1 style={{ fontSize: '28px', fontWeight: 800, letterSpacing: '-0.5px', marginBottom: '6px' }}>Welcome back</h1>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Continue your preparation journey</p>
                     </div>
 
                     {error && (
                         <div style={{
-                            background: 'rgba(244,63,94,0.1)', border: '1px solid rgba(244,63,94,0.3)',
-                            borderRadius: '10px', padding: '12px 16px', marginBottom: '16px',
+                            background: 'rgba(244,63,94,0.08)', border: '1px solid rgba(244,63,94,0.25)',
+                            borderRadius: '10px', padding: '12px 16px', marginBottom: '20px',
                             fontSize: '14px', color: '#F43F5E',
                         }}>
                             ⚠️ {error}
@@ -87,15 +111,15 @@ export default function LoginPage() {
                         onClick={handleGoogleLogin}
                         disabled={loading}
                         className="btn btn-secondary"
-                        style={{ width: '100%', padding: '12px', fontSize: '15px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '16px' }}
+                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px' }}
                     >
                         <GoogleIcon />
                         Continue with Google
                     </button>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
                         <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
-                        <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>— OR —</span>
+                        <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>or continue with email</span>
                         <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
                     </div>
 
@@ -129,11 +153,7 @@ export default function LoginPage() {
                                     autoComplete="current-password"
                                     style={{ paddingRight: '44px' }}
                                 />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowPass(!showPass)}
-                                    style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}
-                                >
+                                <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
                                     {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
                                 </button>
                             </div>
@@ -141,15 +161,16 @@ export default function LoginPage() {
                         <button
                             type="submit"
                             className="btn btn-primary"
-                            style={{ padding: '14px', fontSize: '15px', marginTop: '8px', width: '100%' }}
+                            style={{ padding: '14px', fontSize: '15px', marginTop: '4px', width: '100%' }}
                             disabled={loading}
                         >
-                            {loading ? '⏳ Logging in…' : <><ArrowRight size={16} /> Login</>}
+                            {loading ? '⏳ Signing in…' : <><ArrowRight size={16} /> Sign In</>}
                         </button>
                     </form>
-                    <p style={{ textAlign: 'center', marginTop: '24px', fontSize: '13px', color: 'var(--text-muted)' }}>
+
+                    <p style={{ textAlign: 'center', marginTop: '28px', fontSize: '13px', color: 'var(--text-muted)' }}>
                         New here?{' '}
-                        <Link href="/register" style={{ color: 'var(--accent-indigo)', fontWeight: 600 }}>Create a free account</Link>
+                        <Link href="/register" style={{ color: 'var(--brand-orange)', fontWeight: 600, textDecoration: 'none' }}>Create a free account</Link>
                     </p>
                 </div>
             </div>

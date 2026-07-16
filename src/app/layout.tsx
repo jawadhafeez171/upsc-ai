@@ -72,53 +72,47 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider>
           <AuthProvider>
             <Navbar />
-            <main style={{ minHeight: '100vh', paddingTop: '76px' }}>
+            <main style={{ minHeight: '100vh', paddingTop: '64px' }}>
               {children}
             </main>
             <footer style={{
               borderTop: '1px solid var(--border)',
-              padding: '32px 24px',
-              textAlign: 'center',
-              color: 'var(--text-muted)',
-              fontSize: '13px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '12px'
+              padding: '40px 24px',
+              background: 'var(--bg-secondary)',
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-                {/* Cropped Logo Icon */}
-                <div style={{
-                  width: '38px',
-                  height: '38px',
-                  overflow: 'hidden',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'flex-start',
-                  borderRadius: '50%',
-                  background: '#FAF8F5',
-                  padding: '2px',
-                  boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
-                  flexShrink: 0,
-                  lineHeight: 0,
-                }}>
-                  <img
-                    src="/mIQ_logo.png"
-                    alt="MockIQ Icon"
-                    style={{ height: '32px', width: 'auto', maxWidth: 'none', display: 'block' }}
-                  />
-                </div>
-                
-                {/* Text Brand */}
-                <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', lineHeight: 1.15 }}>
-                  <div style={{ fontSize: '20px', fontWeight: 800, letterSpacing: '-0.5px', fontFamily: 'inherit' }}>
-                    <span style={{ color: '#082C54' }}>MockI</span>
-                    <span style={{ color: '#B83E11' }}>Q</span>
+              <div style={{ maxWidth: '1080px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <div style={{
+                    width: '36px', height: '36px', overflow: 'hidden',
+                    display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
+                    borderRadius: '10px', background: 'rgba(255,255,255,0.06)',
+                    padding: '2px', flexShrink: 0, lineHeight: 0,
+                    border: '1px solid var(--border)',
+                  }}>
+                    <img src="/mIQ_logo.png" alt="MockIQ Icon" style={{ height: '32px', width: 'auto', maxWidth: 'none', display: 'block' }} />
                   </div>
-                  <RotatingTagline />
+                  <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', lineHeight: 1.15 }}>
+                    <div style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.5px' }}>
+                      <span style={{ color: 'var(--text-primary)' }}>MockI</span>
+                      <span style={{ color: 'var(--brand-orange)' }}>Q</span>
+                    </div>
+                    <RotatingTagline />
+                  </div>
+                </div>
+                <div style={{ fontSize: '13px', color: 'var(--text-muted)', textAlign: 'center' }}>
+                  © 2026 MockIQ · Prepare. Practice. Prevail. 🇮🇳
+                </div>
+                <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                  {[
+                    { href: '/exams', label: 'Exams' },
+                    { href: '/current-affairs', label: 'Current Affairs' },
+                    { href: '/leaderboard', label: 'Leaderboard' },
+                    { href: '/login', label: 'Sign In' },
+                  ].map((link) => (
+                    <a key={link.href} href={link.href} className="footer-link">{link.label}</a>
+                  ))}
                 </div>
               </div>
-              <div>© 2026 MockIQ · Prepare. Practice. Prevail. 🇮🇳</div>
             </footer>
           </AuthProvider>
         </ThemeProvider>

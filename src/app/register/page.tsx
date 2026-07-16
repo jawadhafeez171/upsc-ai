@@ -28,91 +28,97 @@ export default function RegisterPage() {
     const { user } = useAppStore();
 
     useEffect(() => {
-        if (user) {
-            router.replace('/dashboard');
-        }
+        if (user) router.replace('/dashboard');
     }, [user, router]);
 
     const handleGoogleLogin = async () => {
         setLoading(true);
         const { error } = await supabase.auth.signInWithOAuth({
             provider: 'google',
-            options: {
-                redirectTo: `${window.location.origin}/dashboard`
-            }
+            options: { redirectTo: `${window.location.origin}/dashboard` }
         });
-        if (error) {
-            setError(error.message);
-            setLoading(false);
-        }
+        if (error) { setError(error.message); setLoading(false); }
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
-
         if (!name.trim()) { setError('Please enter your full name.'); return; }
         if (password.length < 6) { setError('Password must be at least 6 characters.'); return; }
         if (password !== confirm) { setError('Passwords do not match.'); return; }
-
         setLoading(true);
 
         const { data, error: authError } = await supabase.auth.signUp({
-            email,
-            password,
+            email, password,
             options: { data: { name: name.trim() } },
         });
 
-        if (authError) {
-            setError(authError.message);
-            setLoading(false);
-            return;
-        }
-
-        // If email confirmation is disabled, session is set immediately
-        if (data.session) {
-            router.push('/dashboard');
-        } else {
-            // Email confirmation required
-            setSuccess(true);
-            setLoading(false);
-        }
+        if (authError) { setError(authError.message); setLoading(false); return; }
+        if (data.session) { router.push('/dashboard'); } else { setSuccess(true); setLoading(false); }
     };
 
     if (success) {
         return (
             <div style={{ minHeight: 'calc(100vh - 64px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
-                <div style={{ width: '100%', maxWidth: '420px' }}>
-                    <div className="card gradient-border" style={{ padding: '40px', textAlign: 'center' }}>
-                        <div style={{ fontSize: '48px', marginBottom: '16px' }}>📬</div>
-                        <h1 style={{ fontSize: '22px', fontWeight: 800, marginBottom: '12px' }}>Check your email</h1>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '14px', lineHeight: 1.7 }}>
-                            We sent a confirmation link to <strong style={{ color: 'var(--text-primary)' }}>{email}</strong>.<br />
-                            Click it to activate your account, then come back to log in.
-                        </p>
-                        <Link href="/login" className="btn btn-primary" style={{ marginTop: '24px', display: 'inline-flex' }}>
-                            Go to Login
-                        </Link>
-                    </div>
+                <div className="card fade-in-up" style={{ padding: '48px', textAlign: 'center', maxWidth: '420px', width: '100%' }}>
+                    <div style={{ fontSize: '56px', marginBottom: '20px' }}>📬</div>
+                    <h1 style={{ fontSize: '24px', fontWeight: 800, marginBottom: '14px' }}>Check your email</h1>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '14px', lineHeight: 1.7 }}>
+                        We sent a confirmation link to <strong style={{ color: 'var(--text-primary)' }}>{email}</strong>.<br />
+                        Click it to activate your account, then come back to log in.
+                    </p>
+                    <Link href="/login" className="btn btn-primary" style={{ marginTop: '28px', display: 'inline-flex' }}>
+                        Go to Login <ArrowRight size={16} />
+                    </Link>
                 </div>
             </div>
         );
     }
 
     return (
-        <div style={{ minHeight: 'calc(100vh - 64px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px' }}>
-            <div style={{ width: '100%', maxWidth: '420px' }}>
-                <div className="card gradient-border" style={{ padding: '40px' }}>
-                    <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-                        <div style={{ fontSize: '40px', marginBottom: '12px' }}>🚀</div>
-                        <h1 style={{ fontSize: '26px', fontWeight: 800 }}>Start Your Journey</h1>
-                        <p style={{ color: 'var(--text-muted)', marginTop: '6px', fontSize: '14px' }}>Free mock tests. No credit card needed.</p>
+        <div style={{ minHeight: 'calc(100vh - 64px)', display: 'flex' }}>
+            {/* Left Brand Panel */}
+            <div className="hidden-mobile" style={{
+                flex: '1', background: 'linear-gradient(135deg, #0D1628 0%, #070E1C 100%)',
+                display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
+                padding: '48px', position: 'relative', overflow: 'hidden',
+                borderRight: '1px solid var(--border)',
+            }}>
+                <div style={{ position: 'absolute', top: '15%', left: '25%', width: 320, height: 320, borderRadius: '50%', background: 'radial-gradient(circle, rgba(26,190,170,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
+                <div style={{ position: 'absolute', bottom: '15%', right: '15%', width: 220, height: 220, borderRadius: '50%', background: 'radial-gradient(circle, rgba(242,107,29,0.1) 0%, transparent 70%)', pointerEvents: 'none' }} />
+
+                <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '360px' }}>
+                    <div style={{ fontSize: '56px', marginBottom: '24px' }}>🚀</div>
+                    <h2 style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.8px', marginBottom: '16px', color: '#EEF2FF' }}>
+                        Start your <br />
+                        <span style={{ background: 'linear-gradient(135deg, #1ABEAA, #3B82F6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>journey.</span>
+                    </h2>
+                    <p style={{ color: '#94A3B8', fontSize: '15px', lineHeight: 1.7 }}>
+                        Free access to high-quality mock tests. No credit card required.
+                    </p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '40px', textAlign: 'left' }}>
+                        {['Track your progress over time', 'Earn XP and unlock badges', 'Compare with the leaderboard', 'Study in your native language'].map((item) => (
+                            <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#94A3B8', fontSize: '14px' }}>
+                                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#1ABEAA', flexShrink: 0, boxShadow: '0 0 8px rgba(26,190,170,0.6)' }} />
+                                {item}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Right Form Panel */}
+            <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 24px' }}>
+                <div style={{ width: '100%', maxWidth: '400px' }} className="fade-in-up">
+                    <div style={{ marginBottom: '32px' }}>
+                        <h1 style={{ fontSize: '28px', fontWeight: 800, letterSpacing: '-0.5px', marginBottom: '6px' }}>Create account</h1>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Free mock tests. No credit card needed.</p>
                     </div>
 
                     {error && (
                         <div style={{
-                            background: 'rgba(244,63,94,0.1)', border: '1px solid rgba(244,63,94,0.3)',
-                            borderRadius: '10px', padding: '12px 16px', marginBottom: '16px',
+                            background: 'rgba(244,63,94,0.08)', border: '1px solid rgba(244,63,94,0.25)',
+                            borderRadius: '10px', padding: '12px 16px', marginBottom: '20px',
                             fontSize: '14px', color: '#F43F5E',
                         }}>
                             ⚠️ {error}
@@ -123,19 +129,19 @@ export default function RegisterPage() {
                         onClick={handleGoogleLogin}
                         disabled={loading}
                         className="btn btn-secondary"
-                        style={{ width: '100%', padding: '12px', fontSize: '15px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '16px' }}
+                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px' }}
                     >
                         <GoogleIcon />
                         Continue with Google
                     </button>
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
                         <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
-                        <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>— OR —</span>
+                        <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>or sign up with email</span>
                         <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
                     </div>
 
-                    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                         <div>
                             <label style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <User size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Full Name
@@ -159,8 +165,7 @@ export default function RegisterPage() {
                                     placeholder="Min. 6 characters"
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    required
-                                    autoComplete="new-password"
+                                    required autoComplete="new-password"
                                     style={{ paddingRight: '44px' }}
                                 />
                                 <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
@@ -183,9 +188,10 @@ export default function RegisterPage() {
                             {loading ? '⏳ Creating account…' : <><ArrowRight size={16} /> Create Account</>}
                         </button>
                     </form>
-                    <p style={{ textAlign: 'center', marginTop: '24px', fontSize: '13px', color: 'var(--text-muted)' }}>
+
+                    <p style={{ textAlign: 'center', marginTop: '28px', fontSize: '13px', color: 'var(--text-muted)' }}>
                         Already have an account?{' '}
-                        <Link href="/login" style={{ color: 'var(--accent-indigo)', fontWeight: 600 }}>Login</Link>
+                        <Link href="/login" style={{ color: 'var(--brand-orange)', fontWeight: 600, textDecoration: 'none' }}>Sign In</Link>
                     </p>
                 </div>
             </div>
