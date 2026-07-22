@@ -47,6 +47,7 @@ export interface TestConfig {
     question_count: number;
     language: Language;
     year?: number | 'all';
+    paper?: number | 'all';
 }
 
 export interface TestAnswer {

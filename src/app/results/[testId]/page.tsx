@@ -18,6 +18,13 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     const [expanded, setExpanded] = useState<string | null>(null);
     const [exam, setExam] = useState<any>(null);
     const [loadingExam, setLoadingExam] = useState(true);
+    const [activeLang, setActiveLang] = useState<'en' | 'kn' | 'hi'>('en');
+
+    useEffect(() => {
+        if (session?.config?.language) {
+            setActiveLang(session.config.language);
+        }
+    }, [session?.config?.language]);
 
     useEffect(() => {
         if (!session) { router.push('/exams'); return; }
@@ -38,7 +45,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     );
 
     const { questions, answers, score = 0, total_marks = 0, config } = session;
-    const lang = config.language;
+    const lang = activeLang;
     const pct = total_marks > 0 ? Math.round((score / total_marks) * 100) : 0;
     const correct = questions.filter((q) => answers[q.id]?.is_correct === true).length;
     const incorrect = questions.filter((q) => answers[q.id]?.is_correct === false).length;
@@ -130,17 +137,44 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
 
                 {/* Review */}
                 <div className="card" style={{ padding: '24px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '8px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
                         <h2 style={{ fontWeight: 700, fontSize: '16px' }}>📝 Review</h2>
-                        <div style={{ display: 'flex', gap: '4px' }}>
-                            {(['all', 'correct', 'incorrect', 'skipped'] as ReviewFilter[]).map((f) => (
-                                <button key={f} onClick={() => setFilter(f)} style={{
-                                    padding: '5px 12px', borderRadius: '8px', border: 'none', cursor: 'pointer',
-                                    fontWeight: 600, fontSize: '12px', textTransform: 'capitalize',
-                                    background: filter === f ? 'var(--brand-orange)' : 'var(--bg-secondary)',
-                                    color: filter === f ? 'white' : 'var(--text-secondary)', transition: 'all 0.15s',
-                                }}>{f}</button>
-                            ))}
+                        <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+                            {/* Language switcher */}
+                            {(session?.config?.exam_id?.startsWith('kpsc') || session?.config?.exam_id?.startsWith('kea') || session?.config?.exam_id === 'upsc-cse') && (
+                                <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                                    {(['en', 'kn'] as const).map((l) => (
+                                        <button
+                                            key={l}
+                                            onClick={() => setActiveLang(l)}
+                                            style={{
+                                                padding: '4px 10px',
+                                                borderRadius: '6px',
+                                                border: 'none',
+                                                fontSize: '11px',
+                                                fontWeight: 700,
+                                                cursor: 'pointer',
+                                                background: activeLang === l ? 'var(--brand-orange)' : 'transparent',
+                                                color: activeLang === l ? 'white' : 'var(--text-secondary)',
+                                                transition: 'all 0.15s'
+                                            }}
+                                        >
+                                            {l === 'en' ? '🇬🇧 EN' : '🇮🇳 KN'}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+
+                            <div style={{ display: 'flex', gap: '4px' }}>
+                                {(['all', 'correct', 'incorrect', 'skipped'] as ReviewFilter[]).map((f) => (
+                                    <button key={f} onClick={() => setFilter(f)} style={{
+                                        padding: '5px 12px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+                                        fontWeight: 600, fontSize: '12px', textTransform: 'capitalize',
+                                        background: filter === f ? 'var(--brand-orange)' : 'var(--bg-secondary)',
+                                        color: filter === f ? 'white' : 'var(--text-secondary)', transition: 'all 0.15s',
+                                    }}>{f}</button>
+                                ))}
+                            </div>
                         </div>
                     </div>
 

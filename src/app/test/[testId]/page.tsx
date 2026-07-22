@@ -16,6 +16,13 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const [currentIdx, setCurrentIdx] = useState(0);
     const [timeLeft, setTimeLeft] = useState(0);
     const [loading, setLoading] = useState(true);
+    const [activeLang, setActiveLang] = useState<'en' | 'kn' | 'hi'>('en');
+
+    useEffect(() => {
+        if (activeSession?.config?.language) {
+            setActiveLang(activeSession.config.language);
+        }
+    }, [activeSession?.config?.language]);
 
     useEffect(() => {
         if (!activeSession || activeSession.id !== testId) { router.push('/exams'); return; }
@@ -84,6 +91,14 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     const fullRowsResult = await Promise.all(fetchFullRows);
                     selectedRawQuestions = fullRowsResult.flat();
                 }
+            } else if (config.exam_id === 'kpsc-kas') {
+                let query = supabase.from('kas_questions').select('*');
+                if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
+                if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                if (config.year && config.year !== 'all') query = query.eq('year', config.year);
+                if (config.paper && config.paper !== 'all') query = query.eq('paper', config.paper);
+                const { data } = await query;
+                if (data) selectedRawQuestions = data;
             } else {
                 let query = supabase.from('questions').select('*').eq('exam_id', config.exam_id);
                 if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
@@ -214,7 +229,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     }
 
     const question = questions[currentIdx];
-    const lang = activeSession!.config.language;
+    const lang = activeLang;
     const qText = lang === 'kn' && question.text_kn ? question.text_kn : (lang === 'hi' && question.text_hi ? question.text_hi : question.text);
     const currentAnswer = answers[question.id];
     const isTimeLow = timeLeft < 60;
@@ -246,6 +261,32 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         Q {currentIdx + 1}/{questions.length}
                         <span style={{ marginLeft: '10px', color: 'var(--text-muted)' }}>· {answered} answered</span>
                     </div>
+
+                    {/* Language switcher */}
+                    {(activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea') || activeSession?.config?.exam_id === 'upsc-cse') && (
+                        <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                            {(['en', 'kn'] as const).map((l) => (
+                                <button
+                                    key={l}
+                                    onClick={() => setActiveLang(l)}
+                                    style={{
+                                        padding: '4px 10px',
+                                        borderRadius: '6px',
+                                        border: 'none',
+                                        fontSize: '11px',
+                                        fontWeight: 700,
+                                        cursor: 'pointer',
+                                        background: activeLang === l ? 'var(--brand-orange)' : 'transparent',
+                                        color: activeLang === l ? 'white' : 'var(--text-secondary)',
+                                        transition: 'all 0.15s'
+                                    }}
+                                >
+                                    {l === 'en' ? '🇬🇧 EN' : '🇮🇳 KN'}
+                                </button>
+                            ))}
+                        </div>
+                    )}
+
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 700, fontSize: '16px', color: isTimeLow ? 'var(--accent-rose)' : 'var(--text-primary)' }}>
                         <Clock size={15} /> {formatTime(timeLeft)}
                     </div>

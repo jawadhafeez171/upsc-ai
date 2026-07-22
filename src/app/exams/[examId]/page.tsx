@@ -30,6 +30,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [subject, setSubject] = useState('');
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
+    const [paper, setPaper] = useState<number | 'all'>('all');
     const [count, setCount] = useState(25);
     const [customCount, setCustomCount] = useState('');
     const [testLang, setTestLang] = useState<Language>(language);
@@ -50,6 +51,24 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         'Environment',
                         'IR and Current Affairs',
                         'General Awareness'
+                    ];
+                } else if (examId === 'kpsc-kas') {
+                    examData.topics = [
+                        'Ancient History',
+                        'Medieval History',
+                        'Modern History',
+                        'Karnataka History',
+                        'Indian Polity',
+                        'Geography',
+                        'Karnataka Geography',
+                        'Economy',
+                        'Karnataka Economy',
+                        'Science',
+                        'Environment',
+                        'Karnataka Administration',
+                        'International Relations',
+                        'Current Affairs',
+                        'General Mental Ability'
                     ];
                 }
                 setExam(examData);
@@ -98,6 +117,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         const counts = await Promise.all(promises);
                         qCount = counts.reduce((acc, c) => acc + c, 0);
                     }
+                } else if (examId === 'kpsc-kas') {
+                    let query = supabase.from('kas_questions').select('id', { count: 'exact', head: true });
+                    if (mode === 'subject' && subject) query = query.eq('subject', subject);
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                    if (year !== 'all') query = query.eq('year', year);
+                    if (paper !== 'all') query = query.eq('paper', paper);
+
+                    const { count } = await query;
+                    qCount = count || 0;
                 } else {
                     let query = supabase.from('questions').select('id', { count: 'exact', head: true }).eq('exam_id', examId);
                     if (mode === 'subject' && subject) query = query.eq('subject', subject);
@@ -111,7 +139,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             setLoading(false);
         }
         loadExamData();
-    }, [examId, mode, subject, difficulty, year]);
+    }, [examId, mode, subject, difficulty, year, paper]);
 
     if (loading) return <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)' }}>Loading exam...</div>;
     if (!exam) return <div style={{ padding: '80px', textAlign: 'center' }}>Exam not found</div>;
@@ -129,18 +157,17 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             difficulty,
             question_count: finalCount,
             language: testLang,
-            year: examId === 'upsc-cse' ? year : undefined
+            year: examId === 'upsc-cse' || examId === 'kpsc-kas' ? year : undefined,
+            paper: examId === 'kpsc-kas' ? paper : undefined
         };
 
-        // Instead of fetching questions here and passing them via Zustand, we will let the
-        // TestEngine component fetch its own questions from Supabase based on this config
         const sessionId = `session_${Date.now()}`;
         setActiveSession({
             id: sessionId,
             user_id: user.id,
             exam_id: examId,
             config,
-            questions: [], // We'll populate this in the test runner
+            questions: [], 
             answers: {},
             started_at: new Date().toISOString(),
             status: 'active',
@@ -150,7 +177,6 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
     return (
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '32px 24px' }}>
-            {/* Exam header */}
             <div className="card" style={{ padding: '28px', marginBottom: '24px', position: 'relative', overflow: 'hidden' }}>
                 <div style={{ position: 'absolute', inset: 0, background: 'var(--accent-indigo)', opacity: 0.04 }} />
                 <div style={{ position: 'relative' }}>
@@ -165,11 +191,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                 </div>
             </div>
 
-            {/* Config */}
             <div className="card" style={{ padding: '28px' }}>
                 <h2 style={{ fontWeight: 700, fontSize: '18px', marginBottom: '24px' }}>Configure Your Test</h2>
 
-                {/* Test mode */}
                 <div style={{ marginBottom: '24px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>Test Mode</div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
@@ -186,7 +210,6 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     </div>
                 </div>
 
-                {/* Subject selector (subject mode only) */}
                 {mode === 'subject' && (
                     <div style={{ marginBottom: '24px' }}>
                         <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>Select Subject</div>
@@ -202,12 +225,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     </div>
                 )}
 
-                {/* Difficulty */}
                 <div style={{ marginBottom: '24px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>Difficulty</div>
                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                         {DIFFICULTIES.map((d) => {
-                            const cls = d === 'easy' ? 'badge-easy' : d === 'medium' ? 'badge-medium' : d === 'hard' ? 'badge-hard' : '';
                             return (
                                 <button key={d} onClick={() => setDifficulty(d)} style={{
                                     padding: '8px 16px', borderRadius: '8px', cursor: 'pointer', fontWeight: 650, fontSize: '13px',
@@ -220,7 +241,6 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     </div>
                 </div>
 
-                {/* Year Selector (for UPSC CSE only since subject tables have Year) */}
                 {examId === 'upsc-cse' && (
                     <div style={{ marginBottom: '24px' }}>
                         <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>PYQ Year</div>
@@ -241,7 +261,42 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     </div>
                 )}
 
-                {/* Question count */}
+                {examId === 'kpsc-kas' && (
+                    <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '24px' }}>
+                        <div>
+                            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>PYQ Year</div>
+                            <select
+                                className="input"
+                                value={year}
+                                onChange={(e) => {
+                                    const val = e.target.value;
+                                    setYear(val === 'all' ? 'all' : Number(val));
+                                }}
+                                style={{ minWidth: '200px', height: '42px' }}
+                            >
+                                <option value="all">🌐 All Years</option>
+                                <option value={2025}>📅 2025 Prelims</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>Select Paper</div>
+                            <select
+                                className="input"
+                                value={paper}
+                                onChange={(e) => {
+                                    const val = e.target.value;
+                                    setPaper(val === 'all' ? 'all' : Number(val));
+                                }}
+                                style={{ minWidth: '200px', height: '42px' }}
+                            >
+                                <option value="all">📚 All Papers</option>
+                                <option value={1}>📝 Paper 1 (General Studies)</option>
+                                <option value={2}>📝 Paper 2 (General Studies, Science, CSAT)</option>
+                            </select>
+                        </div>
+                    </div>
+                )}
+
                 <div style={{ marginBottom: '24px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>
                         Number of Questions <span style={{ color: 'var(--text-muted)', fontWeight: 400 }}>({availableQs} available)</span>
@@ -269,7 +324,6 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     />
                 </div>
 
-                {/* Language - for now English only from Supabase for simplicity unless KPSC */}
                 {(examId.startsWith('kpsc') || examId.startsWith('kea')) && (
                     <div style={{ marginBottom: '24px' }}>
                         <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>Test Language</div>
@@ -286,13 +340,13 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     </div>
                 )}
 
-                {/* Summary and start */}
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '20px', borderTop: '1px solid var(--border)', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ fontSize: '14px', color: 'var(--text-muted)' }}>
                         <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{finalCount} questions</span>
                         {' · '}{mode === 'subject' ? `${subject || 'pick a subject'}` : 'All subjects'}
                         {' · '}{difficulty === 'mixed' ? 'Mixed difficulty' : difficulty}
                         {examId === 'upsc-cse' && ` · ${year === 'all' ? 'All years' : `${year} paper`}`}
+                        {examId === 'kpsc-kas' && ` · ${year === 'all' ? 'All years' : `${year}`} · ${paper === 'all' ? 'All papers' : `Paper ${paper}`}`}
                     </div>
                     <button
                         onClick={handleStart}
