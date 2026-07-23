@@ -275,7 +275,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 style={{ minWidth: '200px', height: '42px' }}
                             >
                                 <option value="all">🌐 All Years</option>
-                                <option value={2025}>📅 2025 Prelims</option>
+                                <option value={2024}>📅 2024 Prelims</option>
                             </select>
                         </div>
                         <div>

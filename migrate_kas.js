@@ -39,11 +39,11 @@ async function migrateFile(filename) {
     console.log(`Processing file: ${filename}`);
 
     // Parse year, month, paper from filename
-    const yearMatch = filename.match(/\b\d{4}\b/);
+    const yearMatch = filename.match(/\d{4}/);
     const paperMatch = filename.match(/p(\d)/i);
     const monthMatch = filename.match(/(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*/i);
 
-    const year = yearMatch ? parseInt(yearMatch[0]) : 2025;
+    const year = yearMatch ? parseInt(yearMatch[0]) : 2024;
     const paper = paperMatch ? parseInt(paperMatch[1]) : 1;
     const month = normalizeMonth(monthMatch ? monthMatch[0] : 'december');
 
