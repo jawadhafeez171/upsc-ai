@@ -303,7 +303,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             <span className="tag chip-sky">{question.subject}</span>
                             <span className={`tag badge-${question.difficulty}`}>{question.difficulty}</span>
                         </div>
-                        <p style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.6, marginBottom: '24px', color: 'var(--text-primary)' }}>{qText}</p>
+                        <p style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.6, marginBottom: '24px', color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>{qText}</p>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                             {question.options.map((opt) => {

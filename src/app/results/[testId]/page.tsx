@@ -198,7 +198,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                         </div>
                                         <div style={{ flex: 1 }}>
                                             <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {q.subject}</div>
-                                            <p style={{ fontSize: '14px', lineHeight: 1.45, fontWeight: 600 }}>{qText}</p>
+                                            <p style={{ fontSize: '14px', lineHeight: 1.45, fontWeight: 600, whiteSpace: 'pre-line' }}>{qText}</p>
                                         </div>
                                         {isOpen ? <ChevronUp size={14} color="var(--text-muted)" /> : <ChevronDown size={14} color="var(--text-muted)" />}
                                     </button>
@@ -224,7 +224,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                             </div>
                                             <div style={{ background: 'var(--bg-card)', borderRadius: '8px', padding: '12px', boxShadow: 'var(--shadow-sm)' }}>
                                                 <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--brand-orange)', marginBottom: '4px', textTransform: 'uppercase' }}>💡 Explanation</div>
-                                                <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5 }}>{expText}</p>
+                                                <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5, whiteSpace: 'pre-line' }}>{expText}</p>
                                             </div>
                                         </div>
                                     )}

@@ -73,7 +73,7 @@ async function migrateFile(filename) {
     console.log(`Found ${questions.length} questions to migrate.`);
 
     const mappedQuestions = questions.map((q) => {
-        const qNum = q.question_number || 1;
+        const qNum = q.question_number || q.number || 1;
         const correctIndex = parseInt(q.key_answer) - 1;
 
         // Build option arrays
