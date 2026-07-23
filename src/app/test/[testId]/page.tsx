@@ -109,18 +109,28 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             }
 
             if (selectedRawQuestions.length > 0) {
-                const shuffledFinal = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
-                const diffOrder: Record<string, number> = { easy: 0, medium: 1, hard: 2 };
-                shuffledFinal.sort((a, b) => {
-                    const subA = a.subject_name || a.subject || '';
-                    const subB = b.subject_name || b.subject || '';
-                    const diffA = (a.difficulty || 'medium').toLowerCase();
-                    const diffB = (b.difficulty || 'medium').toLowerCase();
-                    if (subA !== subB) return subA.localeCompare(subB);
-                    return (diffOrder[diffA] ?? 1) - (diffOrder[diffB] ?? 1);
-                });
+                let sortedQuestions = [...selectedRawQuestions];
+                if (config.exam_id === 'kpsc-kas') {
+                    sortedQuestions.sort((a, b) => {
+                        const numA = parseInt(a.id.match(/-q(\d+)$/)?.[1] || '0', 10);
+                        const numB = parseInt(b.id.match(/-q(\d+)$/)?.[1] || '0', 10);
+                        return numA - numB;
+                    });
+                } else {
+                    const shuffledFinal = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
+                    const diffOrder: Record<string, number> = { easy: 0, medium: 1, hard: 2 };
+                    shuffledFinal.sort((a, b) => {
+                        const subA = a.subject_name || a.subject || '';
+                        const subB = b.subject_name || b.subject || '';
+                        const diffA = (a.difficulty || 'medium').toLowerCase();
+                        const diffB = (b.difficulty || 'medium').toLowerCase();
+                        if (subA !== subB) return subA.localeCompare(subB);
+                        return (diffOrder[diffA] ?? 1) - (diffOrder[diffB] ?? 1);
+                    });
+                    sortedQuestions = shuffledFinal;
+                }
 
-                const formattedQs: Question[] = shuffledFinal.map((dbq) => {
+                const formattedQs: Question[] = sortedQuestions.map((dbq) => {
                     const isPyqSchema = !!dbq.content_key;
                     if (isPyqSchema) {
                         const rawAns = (dbq['Correct Answer'] || 'a').toLowerCase().trim();
