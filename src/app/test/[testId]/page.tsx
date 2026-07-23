@@ -5,6 +5,7 @@ import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { Clock, Flag, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Question } from '@/types';
+import QuestionFormatter from '@/components/ui/QuestionFormatter';
 
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
@@ -303,7 +304,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             <span className="tag chip-sky">{question.subject}</span>
                             <span className={`tag badge-${question.difficulty}`}>{question.difficulty}</span>
                         </div>
-                        <p style={{ fontSize: '16px', fontWeight: 600, lineHeight: 1.6, marginBottom: '24px', color: 'var(--text-primary)', whiteSpace: 'pre-line' }}>{qText}</p>
+                        <div style={{ fontWeight: 600, marginBottom: '24px' }}>
+                            <QuestionFormatter text={qText} />
+                        </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                             {question.options.map((opt) => {

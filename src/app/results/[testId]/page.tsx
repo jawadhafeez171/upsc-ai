@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { CheckCircle, XCircle, MinusCircle, ChevronDown, ChevronUp, RotateCcw, Home, Loader2 } from 'lucide-react';
-
+import QuestionFormatter from '@/components/ui/QuestionFormatter';
 type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'skipped';
 
 export default function ResultsPage({ params }: { params: Promise<{ testId: string }> }) {
@@ -198,7 +198,9 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                         </div>
                                         <div style={{ flex: 1 }}>
                                             <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {q.subject}</div>
-                                            <p style={{ fontSize: '14px', lineHeight: 1.45, fontWeight: 600, whiteSpace: 'pre-line' }}>{qText}</p>
+                                            <div style={{ fontWeight: 600 }}>
+                                                <QuestionFormatter text={qText} />
+                                            </div>
                                         </div>
                                         {isOpen ? <ChevronUp size={14} color="var(--text-muted)" /> : <ChevronDown size={14} color="var(--text-muted)" />}
                                     </button>
