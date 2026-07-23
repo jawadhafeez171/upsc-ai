@@ -4,6 +4,37 @@ interface QuestionFormatterProps {
     text: string;
 }
 
+// Utility to parse bolding (**text**) and clean math/LaTeX arrow characters
+const parseTextWithFormatting = (lineText: string): React.ReactNode => {
+    if (!lineText) return '';
+
+    // Replace arrow variations first
+    let processed = lineText
+        .replace(/\$( )?\\rightarrow\$/g, ' → ')
+        .replace(/\$( )?ightarrow\$/g, ' → ')
+        .replace(/\$( )?\\Rightarrow\$/g, ' → ')
+        .replace(/\$( )?ightarrow\$/g, ' → ')
+        .replace(/\\rightarrow/g, ' → ')
+        .replace(/\\Rightarrow/g, ' → ')
+        .replace(/\$\s*ightarrow\$/g, ' → ')
+        .replace(/\$\s*rightarrow\$/g, ' → ')
+        .replace(/\$ ightarrow\$/g, ' → ')
+        .replace(/\$rightarrow\$/g, ' → ');
+
+    // Split by double asterisks for bolding
+    const parts = processed.split('**');
+    return (
+        <>
+            {parts.map((part, index) => {
+                if (index % 2 === 1) {
+                    return <strong key={index} style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{part}</strong>;
+                }
+                return <span key={index}>{part}</span>;
+            })}
+        </>
+    );
+};
+
 export default function QuestionFormatter({ text }: QuestionFormatterProps) {
     if (!text) return null;
 
@@ -53,7 +84,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                             borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
                                         }}
                                     >
-                                        {cell}
+                                        {parseTextWithFormatting(cell)}
                                     </th>
                                 ))}
                             </tr>
@@ -79,7 +110,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                             borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
                                         }}
                                     >
-                                        {cell}
+                                        {parseTextWithFormatting(cell)}
                                     </td>
                                 ))}
                             </tr>
@@ -101,8 +132,14 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
             }
             const trimmed = line.trim();
             if (trimmed !== '') {
-                // Match lists like A. B. C. or 1. 2. 3.
-                const isListItem = /^[A-Z0-9a-z]\.\s/.test(trimmed) || /^[•*-]\s/.test(trimmed) || /^\d+\.\s/.test(trimmed);
+                const isBullet = /^[•*-]\s/.test(trimmed);
+                const isListItem = /^[A-Z0-9a-z]\.\s/.test(trimmed) || isBullet || /^\d+\.\s/.test(trimmed);
+                
+                let contentText = line;
+                if (isBullet) {
+                    contentText = line.replace(/^\s*[•*-]\s/, '');
+                }
+
                 elements.push(
                     <p 
                         key={`line-${idx}`} 
@@ -115,7 +152,8 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                             fontSize: '15px'
                         }}
                     >
-                        {line}
+                        {isBullet ? <span style={{ marginRight: '8px', color: 'var(--brand-orange)', fontWeight: 'bold' }}>•</span> : null}
+                        {parseTextWithFormatting(contentText)}
                     </p>
                 );
             } else {

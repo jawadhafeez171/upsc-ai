@@ -226,7 +226,9 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                             </div>
                                             <div style={{ background: 'var(--bg-card)', borderRadius: '8px', padding: '12px', boxShadow: 'var(--shadow-sm)' }}>
                                                 <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--brand-orange)', marginBottom: '4px', textTransform: 'uppercase' }}>💡 Explanation</div>
-                                                <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5, whiteSpace: 'pre-line' }}>{expText}</p>
+                                                <div style={{ fontSize: '13.5px', color: 'var(--text-secondary)' }}>
+                                                    <QuestionFormatter text={expText} />
+                                                </div>
                                             </div>
                                         </div>
                                     )}
