@@ -18,6 +18,14 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
         // Determine column count from the first row
         const colCount = currentTableRows[0].length;
 
+        // Check if the first cell of the first row starts with a list marker (e.g. I., A., 1., etc.)
+        const firstCell = currentTableRows[0][0].trim();
+        const isListMarker = /^(I+|[A-Z0-9a-z])\.\s/.test(firstCell);
+        const hasHeader = !isListMarker;
+
+        const headerRow = hasHeader ? currentTableRows[0] : null;
+        const bodyRows = hasHeader ? currentTableRows.slice(1) : currentTableRows;
+
         elements.push(
             <div 
                 key={`table-${key}`} 
@@ -31,30 +39,32 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                 }}
             >
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13.5px', border: 'none' }}>
-                    <thead>
-                        <tr style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-secondary)' }}>
-                            {currentTableRows[0].map((cell, cellIdx) => (
-                                <th 
-                                    key={`th-${cellIdx}`} 
-                                    style={{ 
-                                        padding: '12px 16px', 
-                                        textAlign: 'left', 
-                                        fontWeight: 700, 
-                                        color: 'var(--text-primary)',
-                                        borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
-                                    }}
-                                >
-                                    {cell}
-                                </th>
-                            ))}
-                        </tr>
-                    </thead>
+                    {headerRow && (
+                        <thead>
+                            <tr style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-secondary)' }}>
+                                {headerRow.map((cell, cellIdx) => (
+                                    <th 
+                                        key={`th-${cellIdx}`} 
+                                        style={{ 
+                                            padding: '12px 16px', 
+                                            textAlign: 'left', 
+                                            fontWeight: 700, 
+                                            color: 'var(--text-primary)',
+                                            borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
+                                        }}
+                                    >
+                                        {cell}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                    )}
                     <tbody>
-                        {currentTableRows.slice(1).map((row, rowIdx) => (
+                        {bodyRows.map((row, rowIdx) => (
                             <tr 
                                 key={`tr-${rowIdx}`} 
                                 style={{ 
-                                    borderBottom: rowIdx === currentTableRows.length - 2 ? 'none' : '1px solid var(--border)',
+                                    borderBottom: rowIdx === bodyRows.length - 1 ? 'none' : '1px solid var(--border)',
                                     background: rowIdx % 2 === 1 ? 'rgba(0, 0, 0, 0.015)' : 'transparent',
                                     transition: 'background-color 0.15s'
                                 }}
