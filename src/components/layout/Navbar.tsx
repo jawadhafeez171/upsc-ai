@@ -34,14 +34,18 @@ export default function Navbar() {
     return (
         <>
             <nav style={{
-                position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
+                position: 'fixed', top: '12px', left: '50%', transform: 'translateX(-50%)', zIndex: 50,
+                width: 'calc(100% - 32px)', maxWidth: '1240px',
                 background: 'var(--nav-bg)',
-                backdropFilter: 'blur(24px)',
-                WebkitBackdropFilter: 'blur(24px)',
-                borderBottom: '1px solid var(--border)',
-                height: '64px',
-                display: 'flex', alignItems: 'center', padding: '0 24px',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)',
+                border: '1px solid var(--border)',
+                borderRadius: '16px',
+                height: '60px',
+                display: 'flex', alignItems: 'center', padding: '0 20px',
                 justifyContent: 'space-between',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+                transition: 'all 0.3s ease',
             }}>
                 {/* Logo */}
                 <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', flexShrink: 0 }}>
@@ -57,7 +61,7 @@ export default function Navbar() {
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
                         <div style={{ fontSize: '19px', fontWeight: 800, letterSpacing: '-0.5px', fontFamily: 'Inter, inherit' }}>
-                            <span style={{ color: theme === 'dark' ? '#EEF2FF' : '#082C54' }}>MockI</span>
+                            <span style={{ color: 'var(--text-primary)' }}>MockI</span>
                             <span style={{ color: 'var(--brand-orange)' }}>Q</span>
                         </div>
                         <RotatingTagline />
@@ -65,18 +69,17 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop nav links */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '2px' }} className="hidden-mobile">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'var(--bg-card)', padding: '4px', borderRadius: '12px', border: '1px solid var(--border)' }} className="hidden-mobile">
                     {NAV_LINKS.map((link) => {
                         const active = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
                         return (
                             <Link key={link.href} href={link.href} style={{
-                                padding: '7px 14px', borderRadius: '8px', textDecoration: 'none',
-                                fontSize: '13.5px', fontWeight: 500,
-                                color: active ? 'var(--text-primary)' : 'var(--text-secondary)',
-                                background: active ? 'var(--bg-card)' : 'transparent',
-                                border: active ? '1px solid var(--border)' : '1px solid transparent',
-                                transition: 'all 0.15s',
-                                backdropFilter: active ? 'blur(8px)' : 'none',
+                                padding: '6px 14px', borderRadius: '8px', textDecoration: 'none',
+                                fontSize: '13px', fontWeight: active ? 700 : 500,
+                                color: active ? 'white' : 'var(--text-secondary)',
+                                background: active ? 'var(--brand-orange)' : 'transparent',
+                                transition: 'all 0.2s ease',
+                                boxShadow: active ? '0 2px 10px rgba(37,99,235,0.3)' : 'none',
                             }}>
                                 {t(link.labelKey, language as Language)}
                             </Link>
@@ -85,16 +88,16 @@ export default function Navbar() {
                 </div>
 
                 {/* Right controls */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     {/* Language switcher */}
-                    <div className="hidden-mobile" style={{ display: 'flex', gap: '2px', background: 'var(--bg-card)', borderRadius: '8px', padding: '3px', border: '1px solid var(--border)' }}>
+                    <div className="hidden-mobile" style={{ display: 'flex', gap: '2px', background: 'var(--bg-card)', borderRadius: '10px', padding: '3px', border: '1px solid var(--border)' }}>
                         {LANGS.map((l) => (
                             <button key={l.code} onClick={() => setLanguage(l.code)} style={{
-                                padding: '4px 10px', borderRadius: '6px', border: 'none', cursor: 'pointer',
-                                fontSize: '12px', fontWeight: 600,
+                                padding: '4px 10px', borderRadius: '7px', border: 'none', cursor: 'pointer',
+                                fontSize: '12px', fontWeight: 700,
                                 background: language === l.code ? 'var(--brand-orange)' : 'transparent',
                                 color: language === l.code ? 'white' : 'var(--text-secondary)',
-                                transition: 'all 0.15s',
+                                transition: 'all 0.15s ease',
                             }}>{l.label}</button>
                         ))}
                     </div>
@@ -104,7 +107,7 @@ export default function Navbar() {
                         onClick={toggleTheme}
                         title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
                         style={{
-                            width: 34, height: 34, borderRadius: '8px',
+                            width: 36, height: 36, borderRadius: '10px',
                             background: 'var(--bg-card)', border: '1px solid var(--border)',
                             cursor: 'pointer',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -112,32 +115,37 @@ export default function Navbar() {
                             transition: 'all 0.2s', flexShrink: 0,
                         }}
                     >
-                        {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+                        {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
                     </button>
 
                     {user ? (
                         <>
-                            <Link href="/dashboard" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <Link href="/dashboard" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <div style={{
-                                    width: 34, height: 34, borderRadius: '50%',
+                                    display: 'flex', alignItems: 'center', gap: '6px',
+                                    background: 'rgba(217, 119, 6, 0.12)', border: '1px solid rgba(217, 119, 6, 0.3)',
+                                    borderRadius: '20px', padding: '4px 10px', fontSize: '12px', fontWeight: 700,
+                                    color: 'var(--brand-gold)',
+                                }} className="hidden-mobile">
+                                    <span>🔥</span> <span>{user.streak || 3}d</span>
+                                </div>
+
+                                <div style={{
+                                    width: 36, height: 36, borderRadius: '50%',
                                     background: 'linear-gradient(135deg, var(--brand-orange), var(--brand-orange-dim))',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                    fontSize: '14px', fontWeight: 700, color: 'white',
-                                    boxShadow: '0 0 12px rgba(242,107,29,0.4)',
+                                    fontSize: '14px', fontWeight: 800, color: 'white',
+                                    boxShadow: '0 2px 12px rgba(37,99,235,0.4)',
                                 }}>
                                     {user.name[0].toUpperCase()}
                                 </div>
-                                <div className="hidden-mobile">
-                                    <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.2 }}>{user.name.split(' ')[0]}</div>
-                                    <div style={{ fontSize: '11px', color: 'var(--brand-orange)', lineHeight: 1 }}>{user.xp} XP</div>
-                                </div>
                             </Link>
-                            <button onClick={handleLogout} className="btn btn-ghost hidden-mobile" style={{ padding: '6px 12px', fontSize: '13px' }}>
-                                <LogOut size={14} /> <span>{t('logout', language as Language)}</span>
+                            <button onClick={handleLogout} className="btn btn-ghost hidden-mobile" style={{ padding: '6px 10px', fontSize: '13px' }}>
+                                <LogOut size={15} /> <span>{t('logout', language as Language)}</span>
                             </button>
                         </>
                     ) : (
-                        <Link href="/login" className="btn btn-primary" style={{ padding: '7px 16px', fontSize: '13px' }}>
+                        <Link href="/login" className="btn btn-primary" style={{ padding: '7px 16px', fontSize: '13px', borderRadius: '10px' }}>
                             <LogIn size={14} /> {t('login', language as Language)}
                         </Link>
                     )}
