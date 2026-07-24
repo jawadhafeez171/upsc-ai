@@ -279,6 +279,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             >
                                 <option value="all">🌐 All Years</option>
                                 <option value={2024}>📅 2024 Prelims</option>
+                                <option value={2020}>📅 2020 Prelims</option>
+                                <option value={2017}>📅 2017 Prelims</option>
+                                <option value={2015}>📅 2015 Prelims</option>
                             </select>
                         </div>
                         <div>
@@ -290,8 +293,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 style={{ minWidth: '180px', height: '42px' }}
                             >
                                 <option value="all">🌐 All Sessions</option>
-                                <option value="august">📅 August 2024</option>
-                                <option value="december">📅 December 2024</option>
+                                <option value="april">📅 April Session</option>
+                                <option value="august">📅 August Session</option>
+                                <option value="december">📅 December Session</option>
                             </select>
                         </div>
                         <div>
