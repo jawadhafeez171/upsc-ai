@@ -31,6 +31,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
     const [paper, setPaper] = useState<number | 'all'>('all');
+    const [month, setMonth] = useState<string | 'all'>('all');
     const [count, setCount] = useState(25);
     const [customCount, setCustomCount] = useState('');
     const [testLang, setTestLang] = useState<Language>(language);
@@ -123,6 +124,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
                     if (year !== 'all') query = query.eq('year', year);
                     if (paper !== 'all') query = query.eq('paper', paper);
+                    if (month !== 'all') query = query.eq('month', month);
 
                     const { count } = await query;
                     qCount = count || 0;
@@ -139,7 +141,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             setLoading(false);
         }
         loadExamData();
-    }, [examId, mode, subject, difficulty, year, paper]);
+    }, [examId, mode, subject, difficulty, year, paper, month]);
 
     if (loading) return <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)' }}>Loading exam...</div>;
     if (!exam) return <div style={{ padding: '80px', textAlign: 'center' }}>Exam not found</div>;
@@ -158,7 +160,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             question_count: finalCount,
             language: testLang,
             year: examId === 'upsc-cse' || examId === 'kpsc-kas' ? year : undefined,
-            paper: examId === 'kpsc-kas' ? paper : undefined
+            paper: examId === 'kpsc-kas' ? paper : undefined,
+            month: examId === 'kpsc-kas' ? month : undefined
         };
 
         const sessionId = `session_${Date.now()}`;
@@ -272,10 +275,23 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     const val = e.target.value;
                                     setYear(val === 'all' ? 'all' : Number(val));
                                 }}
-                                style={{ minWidth: '200px', height: '42px' }}
+                                style={{ minWidth: '150px', height: '42px' }}
                             >
                                 <option value="all">🌐 All Years</option>
                                 <option value={2024}>📅 2024 Prelims</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>Exam Session / Month</div>
+                            <select
+                                className="input"
+                                value={month}
+                                onChange={(e) => setMonth(e.target.value)}
+                                style={{ minWidth: '180px', height: '42px' }}
+                            >
+                                <option value="all">🌐 All Sessions</option>
+                                <option value="august">📅 August 2024</option>
+                                <option value="december">📅 December 2024</option>
                             </select>
                         </div>
                         <div>
@@ -287,7 +303,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     const val = e.target.value;
                                     setPaper(val === 'all' ? 'all' : Number(val));
                                 }}
-                                style={{ minWidth: '200px', height: '42px' }}
+                                style={{ minWidth: '150px', height: '42px' }}
                             >
                                 <option value="all">📚 All Papers</option>
                                 <option value={1}>📝 Paper 1 (General Studies)</option>

@@ -15,6 +15,18 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const DATA_DIR = path.join(__dirname, 'src', 'data');
 
+const translationsPath = path.join(__dirname, 'topic_translations.json');
+let translations = { subjects: {}, subTopics: {} };
+if (fs.existsSync(translationsPath)) {
+    try {
+        translations = JSON.parse(fs.readFileSync(translationsPath, 'utf8'));
+        console.log("Loaded subject & sub-topic translations map.");
+    } catch (e) {
+        console.error("Error loading translations:", e.message);
+    }
+}
+
+
 // Month normalizer
 function normalizeMonth(m) {
     if (!m) return 'december';
@@ -95,6 +107,11 @@ async function migrateFile(filename) {
         const qMonth = q.month !== undefined ? normalizeMonth(q.month) : month;
         const qPaper = q.paper !== undefined ? parseInt(q.paper) : paper;
 
+        const subj = q.subject || 'General Knowledge';
+        const subTop = q.sub_topic || '';
+        const subjKn = translations.subjects[subj] || null;
+        const subTopKn = translations.subTopics[subTop] || null;
+
         return {
             id: `kpsc-kas-${qYear}-${qMonth}-p${qPaper}-q${qNum}`,
             exam_id: 'kpsc-kas',
@@ -105,11 +122,14 @@ async function migrateFile(filename) {
             correct_index: isNaN(correctIndex) ? 0 : correctIndex,
             explanation_en: q.explanation_english || 'No explanation available.',
             explanation_kn: q.explanation_kannada || 'ವಿವರಣೆ ಲಭ್ಯವಿಲ್ಲ.',
-            subject: q.subject || 'General Knowledge',
+            subject: subj,
             difficulty: q.difficulty || 'medium',
             year: qYear,
             month: qMonth,
-            paper: qPaper
+            paper: qPaper,
+            image_url: q.image_url || null,
+            subject_kannada: subjKn,
+            sub_topic_kannada: subTopKn
         };
     });
 

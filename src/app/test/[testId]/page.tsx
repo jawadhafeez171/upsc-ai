@@ -98,6 +98,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
                 if (config.year && config.year !== 'all') query = query.eq('year', config.year);
                 if (config.paper && config.paper !== 'all') query = query.eq('paper', config.paper);
+                if (config.month && config.month !== 'all') query = query.eq('month', config.month);
                 const { data } = await query;
                 if (data) selectedRawQuestions = data;
             } else {
@@ -151,7 +152,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             options: optionsList,
                             correct: correctChar,
                             explanation: dbq.Explanation || dbq.explanation_correct || 'No explanation available.',
-                            explanation_hi: dbq.explanation_hi !== 'None' ? dbq.explanation_hi : undefined
+                            explanation_hi: dbq.explanation_hi !== 'None' ? dbq.explanation_hi : undefined,
+                            image_url: dbq.image_url || undefined,
+                            subject_kannada: dbq.subject_kannada || undefined,
+                            sub_topic_kannada: dbq.sub_topic_kannada || undefined
                         };
                     } else {
                         return {
@@ -170,7 +174,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             correct: String.fromCharCode(97 + dbq.correct_index),
                             explanation: dbq.explanation_en,
                             explanation_kn: dbq.explanation_kn,
-                            explanation_hi: dbq.explanation_hi
+                            explanation_hi: dbq.explanation_hi,
+                            image_url: dbq.image_url || undefined,
+                            subject_kannada: dbq.subject_kannada || undefined,
+                            sub_topic_kannada: dbq.sub_topic_kannada || undefined
                         };
                     }
                 });
@@ -311,11 +318,16 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     {/* Question */}
                     <div className="card" style={{ padding: '24px' }}>
                         <div style={{ display: 'flex', gap: '6px', marginBottom: '16px' }}>
-                            <span className="tag chip-sky">{question.subject}</span>
+                            <span className="tag chip-sky">{lang === 'kn' && question.subject_kannada ? question.subject_kannada : question.subject}</span>
                             <span className={`tag badge-${question.difficulty}`}>{question.difficulty}</span>
                         </div>
                         <div style={{ fontWeight: 600, marginBottom: '24px' }}>
                             <QuestionFormatter text={qText} />
+                            {question.image_url && (
+                                <div style={{ marginTop: '16px', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', background: 'var(--bg-secondary)', display: 'flex', justifyContent: 'center', padding: '16px' }}>
+                                    <img src={question.image_url} alt="Question Diagram" style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'contain' }} />
+                                </div>
+                            )}
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

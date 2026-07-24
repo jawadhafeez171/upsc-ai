@@ -197,9 +197,14 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                             {isCorrect ? <CheckCircle size={16} color="var(--brand-teal)" /> : wasSkipped ? <MinusCircle size={16} color="var(--text-muted)" /> : <XCircle size={16} color="var(--brand-orange)" />}
                                         </div>
                                         <div style={{ flex: 1 }}>
-                                            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {q.subject}</div>
+                                            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}</div>
                                             <div style={{ fontWeight: 600 }}>
                                                 <QuestionFormatter text={qText} />
+                                                {q.image_url && (
+                                                    <div style={{ marginTop: '12px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border)', background: 'var(--bg-card)', display: 'flex', justifyContent: 'center', padding: '12px' }}>
+                                                        <img src={q.image_url} alt="Question Diagram" style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain' }} />
+                                                    </div>
+                                                )}
                                             </div>
                                         </div>
                                         {isOpen ? <ChevronUp size={14} color="var(--text-muted)" /> : <ChevronDown size={14} color="var(--text-muted)" />}

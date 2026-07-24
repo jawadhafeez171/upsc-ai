@@ -23,6 +23,9 @@ export interface Question {
     explanation: string;
     explanation_kn?: string;
     explanation_hi?: string;
+    image_url?: string;
+    subject_kannada?: string;
+    sub_topic_kannada?: string;
 }
 
 export interface Exam {
@@ -48,6 +51,7 @@ export interface TestConfig {
     language: Language;
     year?: number | 'all';
     paper?: number | 'all';
+    month?: string | 'all';
 }
 
 export interface TestAnswer {
