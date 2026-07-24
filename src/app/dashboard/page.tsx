@@ -46,10 +46,10 @@ export default function DashboardPage() {
     const xpProgress = Math.min((user.xp % xpToNextLevel) / xpToNextLevel, 1);
 
     const STATS = [
-        { emoji: '🔥', label: 'Day Streak', value: `${user.streak}`, color: '#F26B1D', bg: 'rgba(242,107,29,0.1)', border: 'rgba(242,107,29,0.2)' },
-        { emoji: '📝', label: 'Tests Taken', value: `${totalTests}`, color: '#1ABEAA', bg: 'rgba(26,190,170,0.1)', border: 'rgba(26,190,170,0.2)' },
-        { emoji: '⭐', label: 'Avg Score', value: totalTests > 0 ? `${avgScore}%` : '—', color: '#F59E0B', bg: 'rgba(245,158,11,0.1)', border: 'rgba(245,158,11,0.2)' },
-        { emoji: '🏅', label: 'Badges', value: `${user.badges.length}`, color: '#8B5CF6', bg: 'rgba(139,92,246,0.1)', border: 'rgba(139,92,246,0.2)' },
+        { emoji: '🔥', label: 'Day Streak', value: `${user.streak}`, color: 'var(--brand-gold)', bg: 'rgba(217, 119, 6, 0.1)', border: 'rgba(217, 119, 6, 0.25)' },
+        { emoji: '📝', label: 'Tests Taken', value: `${totalTests}`, color: 'var(--brand-orange)', bg: 'rgba(37, 99, 235, 0.1)', border: 'rgba(37, 99, 235, 0.25)' },
+        { emoji: '⭐', label: 'Avg Score', value: totalTests > 0 ? `${avgScore}%` : '—', color: 'var(--brand-teal)', bg: 'rgba(13, 148, 136, 0.1)', border: 'rgba(13, 148, 136, 0.25)' },
+        { emoji: '🏅', label: 'Badges', value: `${user.badges.length}`, color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.1)', border: 'rgba(139, 92, 246, 0.25)' },
     ];
 
     return (
@@ -65,13 +65,13 @@ export default function DashboardPage() {
                         </h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '15px' }}>Here&apos;s your preparation overview.</p>
                     </div>
-                    <Link href="/exams" className="btn btn-primary">
+                    <Link href="/exams" className="btn btn-primary" style={{ borderRadius: '10px' }}>
                         New Test <ArrowRight size={15} />
                     </Link>
                 </div>
 
                 {/* XP / Level Card */}
-                <div className="card fade-in-up-d1" style={{ padding: '28px', marginBottom: '24px', background: 'linear-gradient(135deg, rgba(242,107,29,0.06) 0%, rgba(26,190,170,0.03) 100%)', borderColor: 'rgba(242,107,29,0.15)' }}>
+                <div className="card fade-in-up-d1" style={{ padding: '28px', marginBottom: '24px', background: 'linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(13,148,136,0.04) 100%)', borderColor: 'rgba(37,99,235,0.2)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
                         <div>
                             <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '6px' }}>Your Level</div>
