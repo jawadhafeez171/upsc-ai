@@ -282,6 +282,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 <option value={2020}>📅 2020 Prelims</option>
                                 <option value={2017}>📅 2017 Prelims</option>
                                 <option value={2015}>📅 2015 Prelims</option>
+                                <option value={2011}>📅 2011 Prelims</option>
                             </select>
                         </div>
                         <div>
