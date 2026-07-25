@@ -32,6 +32,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [year, setYear] = useState<number | 'all'>('all');
     const [paper, setPaper] = useState<number | 'all'>('all');
     const [month, setMonth] = useState<string | 'all'>('all');
+    const [kasYearSelection, setKasYearSelection] = useState<string>('all');
     const [count, setCount] = useState(25);
     const [customCount, setCustomCount] = useState('');
     const [testLang, setTestLang] = useState<Language>(language);
@@ -270,33 +271,33 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>PYQ Year</div>
                             <select
                                 className="input"
-                                value={year}
+                                value={kasYearSelection}
                                 onChange={(e) => {
                                     const val = e.target.value;
-                                    setYear(val === 'all' ? 'all' : Number(val));
+                                    setKasYearSelection(val);
+                                    if (val === 'all') {
+                                        setYear('all');
+                                        setMonth('all');
+                                    } else if (val === '2024-december') {
+                                        setYear(2024);
+                                        setMonth('december');
+                                    } else if (val === '2024-august') {
+                                        setYear(2024);
+                                        setMonth('august');
+                                    } else {
+                                        setYear(Number(val));
+                                        setMonth('all');
+                                    }
                                 }}
-                                style={{ minWidth: '150px', height: '42px' }}
+                                style={{ minWidth: '220px', height: '42px' }}
                             >
                                 <option value="all">🌐 All Years</option>
-                                <option value={2024}>📅 2024 Prelims</option>
-                                <option value={2020}>📅 2020 Prelims</option>
-                                <option value={2017}>📅 2017 Prelims</option>
-                                <option value={2015}>📅 2015 Prelims</option>
-                                <option value={2011}>📅 2011 Prelims</option>
-                            </select>
-                        </div>
-                        <div>
-                            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '10px' }}>Exam Session / Month</div>
-                            <select
-                                className="input"
-                                value={month}
-                                onChange={(e) => setMonth(e.target.value)}
-                                style={{ minWidth: '180px', height: '42px' }}
-                            >
-                                <option value="all">🌐 All Sessions</option>
-                                <option value="april">📅 April Session</option>
-                                <option value="august">📅 August Session</option>
-                                <option value="december">📅 December Session</option>
+                                <option value="2024-december">📅 2024 (December) Prelims</option>
+                                <option value="2024-august">📅 2024 (August) Prelims</option>
+                                <option value="2020">📅 2020 Prelims</option>
+                                <option value="2017">📅 2017 Prelims</option>
+                                <option value="2015">📅 2015 Prelims</option>
+                                <option value="2011">📅 2011 Prelims</option>
                             </select>
                         </div>
                         <div>
@@ -308,7 +309,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     const val = e.target.value;
                                     setPaper(val === 'all' ? 'all' : Number(val));
                                 }}
-                                style={{ minWidth: '150px', height: '42px' }}
+                                style={{ minWidth: '160px', height: '42px' }}
                             >
                                 <option value="all">📚 All Papers</option>
                                 <option value={1}>📝 Paper 1 (General Studies)</option>
