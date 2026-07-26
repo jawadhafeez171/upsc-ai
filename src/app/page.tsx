@@ -7,6 +7,7 @@ import { EXAMS } from '@/lib/mockData';
 import { t } from '@/lib/i18n';
 import { Language } from '@/types';
 import { useTheme } from '@/components/layout/ThemeProvider';
+import { OptionFormatter } from '@/components/ui/QuestionFormatter';
 
 const FEATURES = [
   { emoji: '🎯', title: 'Subject-Wise Focus', desc: 'Drill into individual chapters across 23 core subjects including Karnataka History, Polity & Economy.', chip: 'chip-peach' },
@@ -224,21 +225,24 @@ export default function HomePage() {
                     key={opt.id}
                     onClick={() => setDemoSelected(opt.id)}
                     style={{
-                      padding: '14px', borderRadius: '12px', cursor: 'pointer', textAlign: 'left',
+                      padding: '14px 18px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
                       border: borderStyle, background: bgStyle, color: 'var(--text-primary)',
-                      fontSize: '14px', fontWeight: isSelected ? 700 : 500,
-                      display: 'flex', alignItems: 'center', gap: '10px', transition: 'all 0.2s'
+                      display: 'flex', alignItems: 'center', gap: '14px', transition: 'all 0.2s'
                     }}
                   >
                     <span style={{
-                      width: 24, height: 24, borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '12px', fontWeight: 800,
+                      width: 32, height: 32, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: '13.5px', fontWeight: 800, flexShrink: 0,
                       background: isSelected ? (isCorrect ? 'var(--accent-emerald)' : 'var(--accent-rose)') : 'var(--bg-tertiary)',
-                      color: isSelected ? 'white' : 'var(--text-secondary)'
+                      color: isSelected ? 'white' : 'var(--text-primary)',
+                      border: isSelected ? 'none' : '1px solid var(--border)',
+                      boxShadow: '0 2px 6px rgba(0,0,0,0.06)'
                     }}>
                       {opt.id.toUpperCase()}
                     </span>
-                    {demoLang === 'kn' ? opt.text_kn : opt.text_en}
+                    <div style={{ flex: 1, lineHeight: 1.6 }}>
+                      <OptionFormatter text={demoLang === 'kn' ? opt.text_kn : opt.text_en} />
+                    </div>
                   </button>
                 );
               })}

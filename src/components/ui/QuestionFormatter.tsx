@@ -261,3 +261,42 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
 
     return <div style={{ display: 'flex', flexDirection: 'column' }}>{elements}</div>;
 }
+
+export function OptionFormatter({ text }: { text: string }) {
+    if (!text) return null;
+    
+    // Check if text has semicolons grouping numbers or sets (e.g. "3, 4, 9; 5, 7, 8; 1, 2, 6")
+    if (text.includes(';')) {
+        const parts = text.split(';');
+        return (
+            <span style={{ display: 'inline-flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px', fontSize: '15px' }}>
+                {parts.map((part, idx) => (
+                    <span key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                        <span style={{
+                            fontWeight: 700,
+                            letterSpacing: '0.03em',
+                            color: 'var(--text-primary)',
+                            padding: '3px 10px',
+                            borderRadius: '8px',
+                            background: 'var(--bg-tertiary)',
+                            border: '1px solid var(--border)',
+                            fontSize: '14.5px'
+                        }}>
+                            {part.trim()}
+                        </span>
+                        {idx < parts.length - 1 && (
+                            <span style={{
+                                color: 'var(--brand-orange)',
+                                fontWeight: 800,
+                                fontSize: '14px',
+                                margin: '0 2px'
+                            }}>•</span>
+                        )}
+                    </span>
+                ))}
+            </span>
+        );
+    }
+
+    return <span style={{ fontSize: '15.5px', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.6 }}>{parseTextWithFormatting(text)}</span>;
+}

@@ -5,7 +5,7 @@ import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { Clock, Flag, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Question } from '@/types';
-import QuestionFormatter from '@/components/ui/QuestionFormatter';
+import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
 
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
@@ -341,28 +341,30 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             )}
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                             {question.options.map((opt) => {
                                 const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
                                 const isSelected = currentAnswer?.selected === opt.id;
                                 return (
                                     <button key={opt.id} onClick={() => selectOption(opt.id)} style={{
-                                        display: 'flex', alignItems: 'center', gap: '12px', padding: '14px 16px',
-                                        borderRadius: '12px', cursor: 'pointer', textAlign: 'left', width: '100%',
-                                        border: isSelected ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
-                                        background: isSelected ? 'rgba(37,99,235,0.12)' : 'var(--bg-secondary)',
-                                        color: 'var(--text-primary)', transition: 'all 0.2s ease', fontSize: '14.5px',
-                                        fontWeight: isSelected ? 600 : 400,
-                                        boxShadow: isSelected ? '0 0 16px rgba(37,99,235,0.15)' : 'none',
+                                        display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px',
+                                        borderRadius: '14px', cursor: 'pointer', textAlign: 'left', width: '100%',
+                                        border: isSelected ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
+                                        background: isSelected ? 'rgba(37, 99, 235, 0.12)' : 'var(--bg-card-solid)',
+                                        color: 'var(--text-primary)', transition: 'all 0.2s ease',
+                                        boxShadow: isSelected ? '0 4px 16px rgba(37,99,235,0.2)' : '0 2px 8px rgba(0,0,0,0.04)',
                                     }}>
                                         <div style={{
-                                            width: 28, height: 28, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                            fontSize: '13px', fontWeight: 800, flexShrink: 0,
+                                            width: 34, height: 34, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                            fontSize: '14px', fontWeight: 800, flexShrink: 0,
                                             background: isSelected ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
-                                            color: isSelected ? 'white' : 'var(--text-secondary)',
+                                            color: isSelected ? 'white' : 'var(--text-primary)',
                                             border: isSelected ? 'none' : '1px solid var(--border)',
+                                            boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
                                         }}>{opt.id.toUpperCase()}</div>
-                                        <div style={{ flexGrow: 1, lineHeight: 1.5 }}>{optText}</div>
+                                        <div style={{ flexGrow: 1, lineHeight: 1.6 }}>
+                                            <OptionFormatter text={optText} />
+                                        </div>
                                     </button>
                                 );
                             })}

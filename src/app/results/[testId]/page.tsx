@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { CheckCircle, XCircle, MinusCircle, ChevronDown, ChevronUp, RotateCcw, Home, Loader2 } from 'lucide-react';
-import QuestionFormatter from '@/components/ui/QuestionFormatter';
+import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
 type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'skipped';
 
 export default function ResultsPage({ params }: { params: Promise<{ testId: string }> }) {
@@ -212,19 +212,45 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
 
                                     {isOpen && (
                                         <div style={{ padding: '0 14px 14px 38px' }}>
-                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '12px' }}>
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '14px' }}>
                                                 {q.options.map((opt) => {
                                                     const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
                                                     const isCorrectOpt = opt.id === q.correct;
                                                     const isSelectedOpt = opt.id === a?.selected;
-                                                    let bg = 'var(--bg-card)'; let col = 'var(--text-secondary)';
-                                                    if (isCorrectOpt) { bg = 'var(--accent-sage)'; col = '#0D5D56'; }
-                                                    else if (isSelectedOpt) { bg = 'var(--accent-peach)'; col = '#8B4513'; }
+                                                    let bg = 'var(--bg-card-solid)';
+                                                    let border = '1px solid var(--border)';
+                                                    let badgeBg = 'var(--bg-tertiary)';
+                                                    let badgeCol = 'var(--text-primary)';
+
+                                                    if (isCorrectOpt) {
+                                                        bg = 'rgba(16, 185, 129, 0.12)';
+                                                        border = '1px solid #10B981';
+                                                        badgeBg = '#10B981';
+                                                        badgeCol = 'white';
+                                                    } else if (isSelectedOpt) {
+                                                        bg = 'rgba(225, 29, 72, 0.12)';
+                                                        border = '1px solid #E11D48';
+                                                        badgeBg = '#E11D48';
+                                                        badgeCol = 'white';
+                                                    }
+
                                                     return (
-                                                        <div key={opt.id} style={{ padding: '8px 12px', borderRadius: '8px', fontSize: '13px', display: 'flex', gap: '8px', background: bg, color: col, fontWeight: isCorrectOpt || isSelectedOpt ? 600 : 400 }}>
-                                                            <span style={{ fontWeight: 700 }}>{opt.id.toUpperCase()}.</span> {optText}
-                                                            {isCorrectOpt && <span style={{ marginLeft: 'auto' }}>✅</span>}
-                                                            {isSelectedOpt && !isCorrectOpt && <span style={{ marginLeft: 'auto' }}>❌</span>}
+                                                        <div key={opt.id} style={{
+                                                            padding: '12px 16px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '12px',
+                                                            background: bg, border: border, transition: 'all 0.15s'
+                                                        }}>
+                                                            <div style={{
+                                                                width: 30, height: 30, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                                fontSize: '13px', fontWeight: 800, flexShrink: 0,
+                                                                background: badgeBg, color: badgeCol, border: isCorrectOpt || isSelectedOpt ? 'none' : '1px solid var(--border)'
+                                                            }}>
+                                                                {opt.id.toUpperCase()}
+                                                            </div>
+                                                            <div style={{ flex: 1 }}>
+                                                                <OptionFormatter text={optText} />
+                                                            </div>
+                                                            {isCorrectOpt && <span style={{ fontSize: '16px' }}>✅</span>}
+                                                            {isSelectedOpt && !isCorrectOpt && <span style={{ fontSize: '16px' }}>❌</span>}
                                                         </div>
                                                     );
                                                 })}
