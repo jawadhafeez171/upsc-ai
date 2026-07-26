@@ -18,6 +18,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const [timeLeft, setTimeLeft] = useState(0);
     const [loading, setLoading] = useState(true);
     const [activeLang, setActiveLang] = useState<'en' | 'kn' | 'hi'>('en');
+    const [previewImage, setPreviewImage] = useState<string | null>(null);
 
     useEffect(() => {
         if (activeSession?.config?.language) {
@@ -324,8 +325,18 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         <div style={{ fontWeight: 600, marginBottom: '24px' }}>
                             <QuestionFormatter text={qText} />
                             {question.image_url && (
-                                <div style={{ marginTop: '16px', borderRadius: '12px', overflow: 'hidden', border: '1px solid var(--border)', background: 'var(--bg-secondary)', display: 'flex', justifyContent: 'center', padding: '16px' }}>
+                                <div
+                                    onClick={() => setPreviewImage(question.image_url!)}
+                                    title="Click to expand diagram"
+                                    style={{
+                                        marginTop: '16px', borderRadius: '12px', overflow: 'hidden',
+                                        border: '1px solid var(--border)', background: 'var(--bg-secondary)',
+                                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                                        padding: '16px', cursor: 'zoom-in', transition: 'all 0.2s'
+                                    }}
+                                >
                                     <img src={question.image_url} alt="Question Diagram" style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'contain' }} />
+                                    <div style={{ fontSize: '11px', color: 'var(--brand-orange)', fontWeight: 600, marginTop: '8px' }}>🔍 Click to view full resolution</div>
                                 </div>
                             )}
                         </div>
@@ -404,6 +415,19 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         </button>
                     </div>
                 </div>
+
+                {/* Diagram Lightbox Preview Modal */}
+                {previewImage && (
+                    <div onClick={() => setPreviewImage(null)} style={{
+                        position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(5, 8, 17, 0.88)',
+                        backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out'
+                    }}>
+                        <div style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh', textAlign: 'center' }}>
+                            <img src={previewImage} alt="Diagram Expanded View" style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: '16px', border: '1px solid var(--border)', boxShadow: '0 12px 40px rgba(0,0,0,0.6)' }} />
+                            <div style={{ textAlign: 'center', color: '#94A3B8', fontSize: '13px', marginTop: '12px', fontWeight: 500 }}>Click anywhere to close preview</div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

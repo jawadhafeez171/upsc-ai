@@ -49,20 +49,22 @@ export default function LeaderboardPage() {
 
                 {/* Podium */}
                 {top3.length >= 3 && (
-                    <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '12px', marginBottom: '32px' }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '16px', marginBottom: '36px' }}>
                         {[top3[1], top3[0], top3[2]].map((entry, i) => {
                             const isYou = user && entry.user_id === user.id;
-                            const heights = ['90px', '120px', '70px'];
-                            const bgs = ['var(--accent-sage)', 'var(--accent-peach)', 'var(--accent-sky)'];
+                            const heights = ['100px', '135px', '80px'];
+                            const podiumBgs = ['rgba(2, 132, 199, 0.15)', 'rgba(37, 99, 235, 0.25)', 'rgba(225, 29, 72, 0.15)'];
+                            const borders = ['1px solid rgba(2, 132, 199, 0.4)', '1px solid rgba(37, 99, 235, 0.5)', '1px solid rgba(225, 29, 72, 0.4)'];
                             return (
-                                <div key={entry.user_id} style={{ textAlign: 'center', flex: 1, maxWidth: '140px' }}>
-                                    <div style={{ fontSize: '22px', marginBottom: '4px' }}>{RANK_EMOJI[i === 1 ? 0 : i === 0 ? 1 : 2]}</div>
-                                    <div style={{ fontWeight: 600, fontSize: '13px', color: isYou ? 'var(--brand-orange)' : 'var(--text-primary)', marginBottom: '2px' }}>{entry.name.split(' ')[0]}</div>
-                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '6px' }}>{entry.xp} XP</div>
+                                <div key={entry.user_id} style={{ textAlign: 'center', flex: 1, maxWidth: '150px' }}>
+                                    <div style={{ fontSize: '24px', marginBottom: '6px' }}>{RANK_EMOJI[i === 1 ? 0 : i === 0 ? 1 : 2]}</div>
+                                    <div style={{ fontWeight: 800, fontSize: '14px', color: isYou ? 'var(--brand-orange)' : 'var(--text-primary)', marginBottom: '2px' }}>{entry.name.split(' ')[0]}</div>
+                                    <div style={{ fontSize: '12px', color: 'var(--brand-gold)', fontWeight: 700, marginBottom: '8px' }}>{entry.xp} XP</div>
                                     <div style={{
-                                        height: heights[i], background: bgs[i],
-                                        borderRadius: '10px 10px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        fontSize: '18px', fontWeight: 700, color: 'var(--text-primary)',
+                                        height: heights[i], background: podiumBgs[i], border: borders[i],
+                                        borderRadius: '14px 14px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        fontSize: '22px', fontWeight: 800, color: 'var(--text-primary)',
+                                        boxShadow: i === 1 ? '0 0 24px rgba(37,99,235,0.3)' : 'none',
                                     }}>
                                         {entry.name[0]}
                                     </div>
@@ -73,28 +75,30 @@ export default function LeaderboardPage() {
                 )}
 
                 {/* Full list */}
-                <div className="card" style={{ overflow: 'hidden' }}>
+                <div className="card" style={{ overflow: 'hidden', borderRadius: '16px' }}>
                     {board.map((entry, idx) => {
                         const isYou = user && entry.user_id === user.id;
                         return (
                             <div key={entry.user_id} style={{
-                                display: 'flex', alignItems: 'center', gap: '12px', padding: '14px 20px',
+                                display: 'flex', alignItems: 'center', gap: '14px', padding: '14px 20px',
                                 borderBottom: idx < board.length - 1 ? '1px solid var(--border)' : 'none',
-                                background: isYou ? 'var(--accent-peach)' : 'transparent',
+                                background: isYou ? 'rgba(37, 99, 235, 0.12)' : 'transparent',
+                                borderLeft: isYou ? '3px solid var(--brand-orange)' : 'none',
                                 transition: 'background 0.15s',
                             }}>
-                                <div style={{ width: '28px', textAlign: 'center', fontWeight: 700, fontSize: '13px', color: entry.rank <= 3 ? 'var(--brand-orange)' : 'var(--text-muted)' }}>
+                                <div style={{ width: '28px', textAlign: 'center', fontWeight: 800, fontSize: '13px', color: entry.rank <= 3 ? 'var(--brand-gold)' : 'var(--text-muted)' }}>
                                     {entry.rank <= 3 ? RANK_EMOJI[entry.rank - 1] : `#${entry.rank}`}
                                 </div>
                                 <div style={{
-                                    width: 34, height: 34, borderRadius: '10px',
-                                    background: isYou ? 'var(--brand-orange)' : 'var(--bg-secondary)',
+                                    width: 36, height: 36, borderRadius: '10px',
+                                    background: isYou ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                    fontWeight: 700, fontSize: '14px', flexShrink: 0,
+                                    fontWeight: 800, fontSize: '14px', flexShrink: 0,
                                     color: isYou ? 'white' : 'var(--text-primary)',
+                                    border: '1px solid var(--border)',
                                 }}>{entry.name[0]}</div>
                                 <div style={{ flex: 1 }}>
-                                    <div style={{ fontWeight: 600, fontSize: '14px', color: isYou ? 'var(--brand-orange)' : 'var(--text-primary)' }}>{entry.name}</div>
+                                    <div style={{ fontWeight: 700, fontSize: '14px', color: isYou ? 'var(--brand-orange)' : 'var(--text-primary)' }}>{entry.name}</div>
                                     <div style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>{entry.level}</div>
                                 </div>
                                 <div style={{ textAlign: 'right' }}>
