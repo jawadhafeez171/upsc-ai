@@ -38,7 +38,7 @@ export default function LeaderboardPage() {
     const top3 = board.slice(0, 3);
 
     return (
-        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '40px 0' }}>
+        <div style={{ background: 'transparent', minHeight: '85vh', padding: '40px 0' }}>
             <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 24px' }}>
                 
                 {/* Header */}

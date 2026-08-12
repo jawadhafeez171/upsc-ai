@@ -34,17 +34,17 @@ export default function Navbar() {
     return (
         <>
             <nav style={{
-                position: 'fixed', top: '12px', left: '50%', transform: 'translateX(-50%)', zIndex: 50,
-                width: 'calc(100% - 32px)', maxWidth: '1240px',
-                background: 'var(--nav-bg)',
+                position: 'fixed', top: '16px', left: '50%', transform: 'translateX(-50%)', zIndex: 50,
+                width: 'calc(100% - 32px)', maxWidth: '1080px',
+                background: theme === 'dark' ? 'rgba(15, 23, 42, 0.82)' : 'rgba(255, 255, 255, 0.92)',
                 backdropFilter: 'blur(20px)',
                 WebkitBackdropFilter: 'blur(20px)',
                 border: '1px solid var(--border)',
-                borderRadius: '16px',
-                height: '60px',
-                display: 'flex', alignItems: 'center', padding: '0 20px',
+                borderRadius: '9999px',
+                height: '56px',
+                display: 'flex', alignItems: 'center', padding: '0 24px',
                 justifyContent: 'space-between',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
                 transition: 'all 0.3s ease',
             }}>
                 {/* Logo */}

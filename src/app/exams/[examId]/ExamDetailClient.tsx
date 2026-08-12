@@ -45,7 +45,7 @@ export default function ExamDetailClient({ examId, initialExam }: { examId: stri
     };
 
     return (
-        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '40px 0' }}>
+        <div style={{ background: 'transparent', minHeight: '85vh', padding: '40px 0' }}>
             <div style={{ maxWidth: '960px', margin: '0 auto', padding: '0 24px' }}>
 
                 {/* Exam header */}

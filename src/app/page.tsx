@@ -14,8 +14,8 @@ const FEATURES = [
   { emoji: '🏆', title: 'Live Leaderboards', desc: 'Compete against thousands of state and national civil services aspirants in real-time.', chip: 'chip-sage' },
   { emoji: '🌐', title: 'Bilingual Mastery', desc: 'Study in English & Kannada with instant side-by-side translation and native font rendering.', chip: 'chip-sky' },
   { emoji: '📊', title: 'Deep Telemetry', desc: 'Receive granular accuracy ratings and per-question speed analytics after every session.', chip: 'chip-lavender' },
-  { emoji: '🔄', title: 'AI Weak Area Retest', desc: 'Auto-assemble custom 10-question drill sets targeting past incorrect responses in 1-click.', chip: 'chip-peach' },
-  { emoji: '⚡', title: 'Instant AI Explanations', desc: 'Detailed, step-by-step rationale for every option right after selecting your answer.', chip: 'chip-sage' },
+  { emoji: '🔄', title: 'Smart Weak Area Retest', desc: 'Auto-assemble custom 10-question drill sets targeting past incorrect responses in 1-click.', chip: 'chip-peach' },
+  { emoji: '⚡', title: 'Instant Detailed Explanations', desc: 'Detailed, step-by-step rationale for every option right after selecting your answer.', chip: 'chip-sage' },
 ];
 
 const QUICK_LAUNCHES = [
@@ -74,52 +74,78 @@ export default function HomePage() {
   return (
     <div style={{ background: 'var(--bg-primary)', paddingBottom: '80px' }}>
 
-      {/* ── 1. HERO & QUICK-START LAUNCHPAD ── */}
-      <section style={{ position: 'relative', overflow: 'hidden', padding: '110px 0 60px', display: 'flex', alignItems: 'center' }}>
-        <div className="hero-glow-1" />
-        <div className="hero-glow-2" />
+      {/* ── 1. HERO SECTION WITH SEAMLESS CREATIVE GRADIENT ── */}
+      <section className="hero-gradient-section">
+        {/* Cool Steel Cyan Glow Node */}
+        <div className="hero-orb-cyan" />
+        {/* Warm Terracotta Coral Glow Node */}
+        <div className="hero-orb-coral" />
+        {/* Vignette Overlay */}
+        <div className="hero-gradient-overlay" />
 
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', width: '100%', position: 'relative', zIndex: 1 }}>
-          <div style={{ maxWidth: '820px', margin: '0 auto', textAlign: 'center', marginBottom: '48px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px', width: '100%', position: 'relative', zIndex: 2 }}>
+          
+          <div style={{ maxWidth: '840px', margin: '0 auto', textAlign: 'center' }}>
             
             {/* Badge */}
             <div className="fade-in-up" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: 'rgba(37, 99, 235, 0.1)', border: '1px solid rgba(37, 99, 235, 0.25)',
-              borderRadius: '999px', padding: '6px 18px', fontSize: '13px', fontWeight: 600,
-              color: 'var(--brand-orange)', marginBottom: '24px', backdropFilter: 'blur(8px)',
+              background: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.2)',
+              borderRadius: '999px', padding: '6px 20px', fontSize: '13px', fontWeight: 600,
+              color: '#FFFFFF', marginBottom: '28px', backdropFilter: 'blur(12px)',
+              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)'
             }}>
-              <Sparkles size={14} /> 1,200+ Verified KPSC & UPSC PYQs (2011 - 2024)
+              <Sparkles size={14} style={{ color: '#F43F5E' }} /> 1,200+ Verified KPSC & UPSC PYQs (2011 - 2024)
             </div>
 
-            {/* Headline */}
-            <h1 className="fade-in-up-d1" style={{
-              fontSize: 'clamp(36px, 5.5vw, 62px)', fontWeight: 900, lineHeight: 1.1,
-              letterSpacing: '-1.5px', marginBottom: '20px', color: 'var(--text-primary)',
+            {/* Creative Lab Bold Headline */}
+            <h1 className="fade-in-up-d1 hero-creative-title" style={{
+              fontSize: 'clamp(36px, 5.8vw, 62px)', marginBottom: '24px',
             }}>
-              Practice KPSC KAS & UPSC <br />
-              <span className="gradient-text">Bilingual PYQs</span> with AI Speed
+              Master KPSC KAS & UPSC Prelims <br />
+              <span className="hero-creative-gradient-text">Bilingual PYQs</span> with Peak Accuracy
             </h1>
 
             {/* Description */}
             <p className="fade-in-up-d2" style={{
-              fontSize: '17px', color: 'var(--text-secondary)', marginBottom: '32px',
-              lineHeight: 1.7, maxWidth: '640px', margin: '0 auto 36px',
+              fontSize: '17px', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '36px',
+              lineHeight: 1.7, maxWidth: '660px', margin: '0 auto 36px', fontWeight: 400
             }}>
-              Master civil service prelims with real exam papers in English & Kannada. Instant explanations, subject drills, and AI weakness telemetry.
+              Master civil service prelims with real exam papers in English & Kannada. Instant explanations, subject drills, and detailed weakness telemetry.
             </p>
 
             {/* Main CTAs */}
-            <div className="fade-in-up-d3" style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/exams" className="btn btn-primary btn-lg" style={{ borderRadius: '12px', padding: '14px 28px', fontSize: '15px' }}>
+            <div className="fade-in-up-d3" style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '36px' }}>
+              <Link href="/exams" className="btn btn-primary btn-lg" style={{
+                borderRadius: '12px', padding: '14px 28px', fontSize: '15px',
+                background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
+                boxShadow: '0 8px 24px rgba(37, 99, 235, 0.4)'
+              }}>
                 Browse All 1,200 Questions <ArrowRight size={18} />
               </Link>
               {!user && (
-                <Link href="/register" className="btn btn-secondary btn-lg" style={{ borderRadius: '12px', padding: '14px 28px', fontSize: '15px' }}>
+                <Link href="/register" className="btn btn-secondary btn-lg" style={{
+                  borderRadius: '12px', padding: '14px 28px', fontSize: '15px',
+                  background: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.25)',
+                  color: '#FFFFFF', backdropFilter: 'blur(12px)'
+                }}>
                   Create Free Account
                 </Link>
               )}
             </div>
+
+            {/* Sub-Text Callout matching Creative Lab style */}
+            <div style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', flexWrap: 'wrap',
+              paddingTop: '24px', borderTop: '1px solid rgba(255, 255, 255, 0.12)'
+            }}>
+              <span className="hero-sub-text-pill">KPSC KAS 2011–2024</span>
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
+              <span className="hero-sub-text-pill">UPSC CSE GS Paper 1 & 2</span>
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
+              <span className="hero-sub-text-pill">Kannada & English Native Rendering</span>
+            </div>
+
           </div>
 
           {/* QUICK-START TILES */}
@@ -159,7 +185,7 @@ export default function HomePage() {
         <section style={{ marginBottom: '80px', marginTop: '20px' }}>
           <div className="card" style={{
             padding: '32px', borderRadius: '24px', border: '1px solid var(--border)',
-            background: 'linear-gradient(135deg, rgba(37,99,235,0.06) 0%, rgba(13,148,136,0.04) 100%)',
+            background: 'var(--bg-card)',
             boxShadow: '0 12px 40px rgba(0,0,0,0.15)'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>

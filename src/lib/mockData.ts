@@ -8,7 +8,7 @@ export const EXAMS: Exam[] = [
         description: 'Civil Services Examination — Prelims GS Paper I',
         languages: ['en'],
         negative_marking: 0.33,
-        subjects: ['Ancient History', 'Art and Culture', 'Modern History', 'Polity', 'Economics', 'Geography', 'Environment', 'IR and Current Affairs', 'General Awareness'],
+        subjects: ['Ancient History', 'Medieval History', 'Art and Culture', 'Modern History', 'Polity', 'Economics', 'Geography', 'Environment', 'Science & Technology', 'IR and Current Affairs', 'General Awareness'],
         icon: '🏛️',
         color: '#082C54',
     },

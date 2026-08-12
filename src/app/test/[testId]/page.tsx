@@ -36,12 +36,16 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             if (config.exam_id === 'upsc-cse') {
                 const SubjectTableMap: Record<string, string> = {
                     'Ancient History': 'PYQ Ancient History',
+                    'Medieval History': 'PYQ Medieval Hisotry',
                     'Art and Culture': 'PYQ Art and Culture',
                     'Modern History': 'PYQ Modern History',
                     'Polity': 'PYQ Polity',
                     'Economics': 'PYQ Economics',
                     'Geography': 'PYQ Geography',
                     'Environment': 'PYQ Environement',
+                    'Science & Technology': 'PYQ Science&Tech',
+                    'Science and Technology': 'PYQ Science&Tech',
+                    'Science': 'PYQ Science&Tech',
                     'IR and Current Affairs': 'PYQ IR and Current Affairs',
                     'General Awareness': 'PYQ General Awareness'
                 };

@@ -53,7 +53,7 @@ export default function DashboardPage() {
     ];
 
     return (
-        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '48px 0' }}>
+        <div style={{ background: 'transparent', minHeight: '85vh', padding: '48px 0' }}>
             <div style={{ maxWidth: '1080px', margin: '0 auto', padding: '0 24px' }}>
 
                 {/* Header */}
