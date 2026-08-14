@@ -1,34 +1,106 @@
 import React from 'react';
+import katex from 'katex';
 
 interface QuestionFormatterProps {
     text: string;
 }
 
-// Utility to parse bolding (**text**) and clean math/LaTeX arrow characters
+// Helper to check if a string slice contains LaTeX math tokens
+const isMathExpression = (str: string): boolean => {
+    return /\^|_|\\frac|\\sqrt|\\cdot|\\times|\\min|\\max|\\pm|\\le|\\ge|\\approx|\\neq|\\propto|\\sum|\\int|\\partial|\\alpha|\\beta|\\theta|\\pi|\\in|\\subset|\\cup|\\cap|\\neg|\\rightarrow|\\Rightarrow|[0-9]+(\^|\/)[0-9]+/i.test(str);
+};
+
+// Render math or LaTeX safely using KaTeX
+const renderKaTeXHtml = (expr: string, displayMode: boolean = false): string => {
+    try {
+        // Clean up common quirks
+        let cleanExpr = expr.trim();
+        // Remove outer quotes if wrapped
+        cleanExpr = cleanExpr.replace(/^["']|["']$/g, '');
+        // Replace \text{...} if it has unescaped characters
+        cleanExpr = cleanExpr.replace(/\\text\{([^}]+)\}/g, '\\mathrm{$1}');
+        
+        return katex.renderToString(cleanExpr, {
+            throwOnError: false,
+            displayMode: displayMode,
+            output: 'htmlAndMathml'
+        });
+    } catch {
+        return expr;
+    }
+};
+
+// Utility to parse bolding (**text**), LaTeX ($math$), and clean arrow characters
 const parseTextWithFormatting = (lineText: string): React.ReactNode => {
     if (!lineText) return '';
 
-    // Replace arrow variations first
-    let processed = lineText
-        .replace(/\$( )?\\rightarrow\$/g, ' → ')
-        .replace(/\$( )?ightarrow\$/g, ' → ')
-        .replace(/\$( )?\\Rightarrow\$/g, ' → ')
-        .replace(/\$( )?ightarrow\$/g, ' → ')
+    // Normalize arrow representations
+    let text = lineText
         .replace(/\\rightarrow/g, ' → ')
-        .replace(/\\Rightarrow/g, ' → ')
-        .replace(/\$\s*ightarrow\$/g, ' → ')
-        .replace(/\$\s*rightarrow\$/g, ' → ')
+        .replace(/\\Rightarrow/g, ' ⇒ ')
+        .replace(/\$\s*\\rightarrow\s*\$/g, ' → ')
+        .replace(/\$\s*\\Rightarrow\s*\$/g, ' ⇒ ')
+        .replace(/\$\s*ightarrow\s*\$/g, ' → ')
         .replace(/\$ ightarrow\$/g, ' → ')
-        .replace(/\$rightarrow\$/g, ' → ');
+        .replace(/\$ightarrow\$/g, ' → ')
+        .replace(/ightarrow/g, ' → ');
 
-    // Split by double asterisks for bolding
-    const parts = processed.split('**');
+    // Normalize spacing around currency symbols (e.g. '$ 346 million' -> '$346 million')
+    text = text.replace(/\$\s+(\d+[\d,]*(?:\.\d+)?(?:\s*(?:million|billion|trillion|lakh|crore))?)\b/gi, '$$$1');
+
+    // Split text into tokens by LaTeX delimiters: $$display$$, $inline$, or **bold**
+    // Regex matches:
+    // 1. $$...$$ (display math)
+    // 2. $...$ (inline math, excluding single currency like $300,000)
+    // 3. **...** (bold text)
+    const tokenRegex = /(\$\$[\s\S]+?\$\$|\$(?!\s*[\d,]+(?:\s*(?:million|billion|trillion|lakh|crore))?\s*(?:[.,!?\s]|$))[^$\n]+?\$|\*\*[^*]+?\*\*)/g;
+
+    const parts = text.split(tokenRegex);
+
     return (
         <>
             {parts.map((part, index) => {
-                if (index % 2 === 1) {
-                    return <strong key={index} style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{part}</strong>;
+                if (!part) return null;
+
+                // Display math $$...$$
+                if (part.startsWith('$$') && part.endsWith('$$') && part.length > 4) {
+                    const mathContent = part.slice(2, -2);
+                    const html = renderKaTeXHtml(mathContent, true);
+                    return (
+                        <span
+                            key={index}
+                            className="math-display-wrapper"
+                            style={{ display: 'block', margin: '8px 0', overflowX: 'auto' }}
+                            dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                    );
                 }
+
+                // Inline math $...$
+                if (part.startsWith('$') && part.endsWith('$') && part.length > 2) {
+                    const mathContent = part.slice(1, -1);
+                    const html = renderKaTeXHtml(mathContent, false);
+                    return (
+                        <span
+                            key={index}
+                            className="math-inline-wrapper"
+                            style={{ display: 'inline-block', verticalAlign: 'middle', margin: '0 2px' }}
+                            dangerouslySetInnerHTML={{ __html: html }}
+                        />
+                    );
+                }
+
+                // Bold text **...**
+                if (part.startsWith('**') && part.endsWith('**') && part.length > 4) {
+                    const boldContent = part.slice(2, -2);
+                    return (
+                        <strong key={index} style={{ fontWeight: 700, color: 'var(--text-primary)' }}>
+                            {parseTextWithFormatting(boldContent)}
+                        </strong>
+                    );
+                }
+
+                // Plain text segment: check if it contains standalone math operators or sub/superscripts
                 return <span key={index}>{part}</span>;
             })}
         </>
@@ -42,7 +114,7 @@ function preProcessQuestionText(text: string): string {
     const hasList1 = /(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i.test(text);
     const hasList2 = /(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i.test(text);
     
-    if (hasList1 && hasList2) {
+    if (hasList1 && hasList2 && !text.includes('|')) {
         const lines = text.split('\n');
         let list1Items: string[] = [];
         let list2Items: string[] = [];
@@ -63,8 +135,8 @@ function preProcessQuestionText(text: string): string {
                 continue;
             }
             
-            const isL1 = /^(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i.test(trimmed) && !trimmed.includes('|');
-            const isL2 = /^(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i.test(trimmed) && !trimmed.includes('|');
+            const isL1 = /^(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i.test(trimmed);
+            const isL2 = /^(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i.test(trimmed);
             
             if (isL1) {
                 state = 'list1';
@@ -118,7 +190,6 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
     if (!text) return null;
 
     const processedText = preProcessQuestionText(text);
-    // Split text by lines
     const lines = processedText.split('\n');
     const elements: React.ReactNode[] = [];
     let currentTableRows: string[][] = [];
@@ -126,10 +197,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
     const flushTable = (key: string) => {
         if (currentTableRows.length === 0) return;
         
-        // Determine column count from the first row
         const colCount = currentTableRows[0].length;
-
-        // Check if the first cell of the first row starts with a list marker (e.g. I., A., 1., etc.)
         const firstCell = currentTableRows[0][0].trim();
         const isListMarker = /^(I+|[A-Z0-9a-z])\.\s/.test(firstCell);
         const hasHeader = !isListMarker;
@@ -205,6 +273,10 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
     lines.forEach((line, idx) => {
         if (line.includes('|')) {
             const cells = line.split('|').map(c => c.trim());
+            // Filter out separator lines like "--- | ---"
+            if (cells.some(c => /^---+$/.test(c))) {
+                return;
+            }
             currentTableRows.push(cells);
         } else {
             if (currentTableRows.length > 0) {
@@ -226,7 +298,10 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
             const trimmed = line.trim();
             if (trimmed !== '') {
                 const isBullet = /^[•*-]\s/.test(trimmed);
-                const isListItem = /^[A-Z0-9a-z]\.\s/.test(trimmed) || isBullet || /^\d+\.\s/.test(trimmed);
+                const isListItem = /^[A-D]\.\s/.test(trimmed) || 
+                                   /^[0-9]+\.\s/.test(trimmed) || 
+                                   /^(IX|IV|V?I{1,3})\.\s/i.test(trimmed) ||
+                                   /^(Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X0-9]+):/i.test(trimmed);
                 
                 let contentText = line;
                 if (isBullet) {
@@ -282,7 +357,7 @@ export function OptionFormatter({ text }: { text: string }) {
                             border: '1px solid var(--border)',
                             fontSize: '14.5px'
                         }}>
-                            {part.trim()}
+                            {parseTextWithFormatting(part.trim())}
                         </span>
                         {idx < parts.length - 1 && (
                             <span style={{
@@ -298,5 +373,10 @@ export function OptionFormatter({ text }: { text: string }) {
         );
     }
 
-    return <span style={{ fontSize: '15.5px', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.6 }}>{parseTextWithFormatting(text)}</span>;
+    return (
+        <span style={{ fontSize: '15.5px', fontWeight: 600, color: 'var(--text-primary)', lineHeight: 1.6 }}>
+            {parseTextWithFormatting(text)}
+        </span>
+    );
 }
+
