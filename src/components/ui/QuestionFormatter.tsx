@@ -100,12 +100,25 @@ export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
     );
 };
 
-// Intelligently pre-process raw text: converts List I/II, pair matching, and tabular rows into markdown tables
+// Intelligently pre-process raw text: converts inline statements, List I/II, pair matching, and tabular rows into markdown tables
 function preProcessQuestionText(text: string): string {
     if (!text) return '';
     
     // Normalize diamond question marks
     let normalized = text.replace(/[\ufffd\uFFFD]/g, ' | ');
+
+    // 0. Split inline premises, numbered statements, and final question prompts crammed on single lines
+    normalized = normalized
+        // Newline after intro premise colon
+        .replace(/(consider the following statements?|consider the following pairs?|consider the following events?|consider the following items?|consider the following:?|statements?:|pairs?:|following:)\s+(?=(?:[1-9]|I|A)\.\s+|Statement\s*1)/gi, '$1\n')
+        // Newline before numbered statements (e.g. " 1. It provided...", " 2. Defence...")
+        .replace(/\s+(?=(?:[1-9]|10)\.\s+[A-Z0-9])/g, '\n')
+        // Newline before roman numerals (e.g. " I. ", " II. ")
+        .replace(/\s+(?=(?:IX|IV|V?I{1,3})\.\s+[A-Z0-9])/gi, '\n')
+        // Newline before Statement / Assertion labels
+        .replace(/\s+(?=(?:Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X\d]+):)/gi, '\n')
+        // Newline before closing question prompts
+        .replace(/\s+(?=(?:Which of the statements? given above|Which of the pairs? given above|Which of the above statements?|Which of the above pairs?|Which of the above is\/are|How many of the above pairs?|How many of the statements? given above|In which of the above rows|Select the correct answer using the code given below|Select the correct answer|Choose the correct|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ ಯಾವುದು|ಮೇಲಿನವುಗಳಲ್ಲಿ ಯಾವುದು))/gi, '\n');
 
     // 1. Check for multi-column pair rows like "1. Chandraketugarh | Odisha | Trading Port town"
     const rawLines = normalized.split('\n');
@@ -349,6 +362,8 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                    /^(IX|IV|V?I{1,3})\.\s/i.test(trimmed) ||
                                    /^(Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X0-9]+):/i.test(trimmed);
                 
+                const isPrompt = /^(Which of the statements?|Which of the pairs?|Which of the above|How many of the|In which of the|Select the correct|Choose the correct|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ|ಮೇಲಿನವುಗಳಲ್ಲಿ)/i.test(trimmed);
+
                 let contentText = line;
                 if (isBullet) {
                     contentText = line.replace(/^\s*[•*-]\s/, '');
@@ -358,12 +373,13 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                     <p 
                         key={`line-${idx}`} 
                         style={{ 
-                            margin: '0 0 10px 0',
+                            margin: isPrompt ? '14px 0 6px 0' : '0 0 10px 0',
                             paddingLeft: isListItem ? '22px' : '0',
                             textIndent: isListItem ? '-22px' : '0',
                             lineHeight: 1.65,
-                            color: 'var(--text-primary)',
-                            fontSize: '15px'
+                            color: isPrompt ? 'var(--text-primary)' : isListItem ? 'var(--text-secondary)' : 'var(--text-primary)',
+                            fontSize: '15px',
+                            fontWeight: isPrompt ? 700 : isListItem ? 500 : 600
                         }}
                     >
                         {isBullet ? <span style={{ marginRight: '8px', color: 'var(--brand-orange)', fontWeight: 'bold' }}>•</span> : null}
