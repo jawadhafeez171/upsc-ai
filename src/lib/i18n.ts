@@ -45,7 +45,7 @@ export const translations: Translations = {
     heroDesc: { en: 'Practice with subject-wise mock tests, track your scores, and get detailed explanations — in English, Hindi & Kannada.', hi: 'विषयवार मॉक टेस्ट से अभ्यास करें, अपने स्कोर ट्रैक करें, और विस्तृत स्पष्टीकरण पाएं — अंग्रेजी, हिंदी और कन्नड़ में।', kn: 'ವಿಷಯವಾರು ಅಣಕು ಪರೀಕ್ಷೆಗಳೊಂದಿಗೆ ಅಭ್ಯಾಸ ಮಾಡಿ, ನಿಮ್ಮ ಅಂಕಗಳನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ, ಮತ್ತು ವಿವರವಾದ ವಿವರಣೆಗಳನ್ನು ಪಡೆಯಿರಿ — ಇಂಗ್ಲಿಷ್, ಹಿಂದಿ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿ.' },
     browseExams: { en: 'Browse Exams', hi: 'परीक्षाएं ब्राउज़ करें', kn: 'ಪರೀಕ್ಷೆಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ' },
     startFree: { en: 'Get Started', hi: 'शुरू करें', kn: 'ಪ್ರಾರಂಭಿಸಿ' },
-    
+
     // Stats
     examsCovered: { en: 'Exams Covered', hi: 'कवर की गई परीक्षाएं', kn: 'ಪರೀಕ್ಷೆಗಳು' },
     totalQuestions: { en: 'Questions', hi: 'प्रश्न', kn: 'ಪ್ರಶ್ನೆಗಳು' },

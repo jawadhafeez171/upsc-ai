@@ -1,7 +1,7 @@
 export type Difficulty = 'easy' | 'medium' | 'hard';
 export type Language = 'en' | 'hi' | 'kn';
 export type TestMode = 'subject' | 'full';
-export type ExamCategory = 'upsc' | 'karnataka';
+export type ExamCategory = 'upsc' | 'karnataka' | 'defence' | 'teaching' | 'regulatory' | 'ssc';
 
 export interface Option {
     id: string;
@@ -36,10 +36,12 @@ export interface Exam {
     description: string;
     description_kn?: string;
     languages: Language[];
-    negative_marking: number; // 0 = none, 0.33 = 1/3
+    negative_marking: number; // 0 = none, 0.33 = 1/3, 0.25 = 1/4
     subjects: string[];
+    subjects_kn?: string[];
     icon: string;
     color: string;
+    badge?: string;
 }
 
 export interface TestConfig {

@@ -48,7 +48,10 @@ export default function Navbar() {
                 transition: 'all 0.3s ease',
             }}>
                 {/* Logo */}
-                <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', flexShrink: 0 }}>
+                <Link href="/" style={{ 
+                    display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', 
+                    flexShrink: 0, width: '230px', minWidth: '230px', maxWidth: '230px' 
+                }}>
                     <div style={{
                         width: '36px', height: '36px', overflow: 'hidden',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
@@ -59,7 +62,7 @@ export default function Navbar() {
                     }}>
                         <img src="/mIQ_logo.png" alt="MockIQ" style={{ height: '32px', width: 'auto', maxWidth: 'none', display: 'block' }} />
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, width: '180px', flexShrink: 0 }}>
                         <div style={{ fontSize: '19px', fontWeight: 800, letterSpacing: '-0.5px', fontFamily: 'Inter, inherit' }}>
                             <span style={{ color: 'var(--text-primary)' }}>MockI</span>
                             <span style={{ color: 'var(--brand-orange)' }}>Q</span>

@@ -311,32 +311,40 @@ export default function HomePage() {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px' }}>
-            {EXAMS.map((exam) => (
-              <Link key={exam.id} href={`/exams/${exam.id}`} style={{ textDecoration: 'none' }}>
-                <div className="exam-card" style={{ borderTop: `3px solid ${exam.color}` }}>
-                  <div className="exam-icon-wrapper" style={{ background: `${exam.color}15`, border: `1px solid ${exam.color}30` }}>
-                    {exam.icon}
-                  </div>
-                  <h3 style={{ fontWeight: 800, fontSize: '16px', marginBottom: '6px' }}>
-                    {lang === 'kn' && exam.name_kn ? exam.name_kn : exam.name}
-                  </h3>
-                  <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: 1.5, flexGrow: 1 }}>
-                    {lang === 'kn' && exam.description_kn ? exam.description_kn : exam.description}
-                  </p>
-                  <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', paddingTop: '14px', borderTop: '1px solid var(--border)', marginTop: 'auto', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-                      <span className="tag chip-sage">
-                        {exam.category === 'upsc' ? '🏛️ UPSC' : '🅺 Karnataka'}
-                      </span>
-                      {exam.languages.includes('kn') && (
-                        <span className="tag chip-sky">ಕನ್ನಡ</span>
-                      )}
+            {EXAMS.map((exam) => {
+              const isNational = exam.category === 'upsc' || exam.category === 'defence' || exam.id.startsWith('upsc');
+              const categoryLabel = exam.category === 'upsc' ? '🏛️ UPSC'
+                : exam.category === 'defence' ? '⚔️ Defence (National)'
+                : exam.category === 'teaching' ? '👩‍🏫 Teaching'
+                : '🅺 Karnataka';
+
+              return (
+                <Link key={exam.id} href={`/exams/${exam.id}`} style={{ textDecoration: 'none' }}>
+                  <div className="exam-card" style={{ borderTop: `3px solid ${exam.color}` }}>
+                    <div className="exam-icon-wrapper" style={{ background: `${exam.color}15`, border: `1px solid ${exam.color}30` }}>
+                      {exam.icon}
                     </div>
-                    <span style={{ color: 'var(--brand-orange)', fontSize: '12px', fontWeight: 700 }}>Start Test →</span>
+                    <h3 style={{ fontWeight: 800, fontSize: '16px', marginBottom: '6px' }}>
+                      {lang === 'kn' && exam.name_kn ? exam.name_kn : exam.name}
+                    </h3>
+                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '16px', lineHeight: 1.5, flexGrow: 1 }}>
+                      {lang === 'kn' && exam.description_kn ? exam.description_kn : exam.description}
+                    </p>
+                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', paddingTop: '14px', borderTop: '1px solid var(--border)', marginTop: 'auto', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                        <span className={`tag ${isNational ? 'chip-peach' : 'chip-sage'}`}>
+                          {categoryLabel}
+                        </span>
+                        {exam.languages.includes('kn') && (
+                          <span className="tag chip-sky">ಕನ್ನಡ</span>
+                        )}
+                      </div>
+                      <span style={{ color: 'var(--brand-orange)', fontSize: '12px', fontWeight: 700 }}>Start Test →</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </section>
 
