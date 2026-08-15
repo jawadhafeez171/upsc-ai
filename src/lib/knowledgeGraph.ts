@@ -64,9 +64,9 @@ export function getNodeSubtree(rootNodeId: string): KnowledgeNode[] {
 }
 
 /**
- * Filter nodes by exam projection (e.g. 'upsc', 'kas', 'ssc', 'banking')
+ * Filter nodes by exam projection (e.g. 'upsc', 'kas', 'teaching', 'karnataka_state', 'police', 'ssc', 'banking')
  */
-export function filterNodesByExam(exam: 'upsc' | 'kas' | 'ssc' | 'banking'): KnowledgeNode[] {
+export function filterNodesByExam(exam: string): KnowledgeNode[] {
     return Object.values(graphData.nodes).filter(node => {
         const tags = node.examTags[exam];
         return tags && tags.length > 0;
@@ -79,7 +79,7 @@ export function filterNodesByExam(exam: 'upsc' | 'kas' | 'ssc' | 'banking'): Kno
 export function searchKnowledgeNodes(
     query: string,
     options?: {
-        exam?: 'upsc' | 'kas' | 'ssc' | 'banking';
+        exam?: string;
         level?: KnowledgeNodeLevel;
         subjectId?: string;
         limit?: number;

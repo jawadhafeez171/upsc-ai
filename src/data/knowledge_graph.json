@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generatedAt": "2026-08-15T08:34:12.613Z",
+  "generatedAt": "2026-08-15T12:19:43.260Z",
   "rootSubjectIds": [
     "history",
     "art_culture_heritage",
@@ -30826,6 +30826,10 @@
           "Prelims-P1",
           "Mains-GS2"
         ],
+        "kea": [
+          "PDO",
+          "VAO"
+        ],
         "state_psc": [
           "General Studies"
         ]
@@ -44486,7 +44490,7 @@
     "ethics_integrity_aptitude.ethics_human_interface": {
       "id": "ethics_integrity_aptitude.ethics_human_interface",
       "slug": "ethics_human_interface",
-      "name": "Ethics & Human Interface",
+      "name": "Ethics & Human Interface (Essence, determinants and consequences of Ethics in human actions; Dimensions of ethics; Ethics in private and public relationships; Human Values – lessons from the lives and teachings of great leaders, reformers and administrators; Role of family, society and educational institutions in inculcating values)",
       "level": 2,
       "levelName": "Domain",
       "subject": "Ethics, Integrity & Aptitude",
@@ -44514,7 +44518,32 @@
       "keywords": [
         "Ethics",
         "Human",
-        "Interface"
+        "Interface",
+        "Essence",
+        "determinants",
+        "consequences",
+        "human",
+        "actions",
+        "Dimensions",
+        "ethics",
+        "private",
+        "public",
+        "relationships",
+        "Values",
+        "lessons",
+        "lives",
+        "teachings",
+        "great",
+        "leaders",
+        "reformers",
+        "administrators",
+        "Role",
+        "family",
+        "society",
+        "educational",
+        "institutions",
+        "inculcating",
+        "values"
       ]
     },
     "ethics_integrity_aptitude.attitude_aptitude": {
@@ -46325,7 +46354,20 @@
         "educational_psychology_child_development_teaching_pedagogy.national_educational_policies_legal_frameworks_teacher_aptitude"
       ],
       "ancestorIds": [],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46354,7 +46396,20 @@
       "ancestorIds": [
         "educational_psychology_child_development_teaching_pedagogy"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46382,7 +46437,20 @@
       "ancestorIds": [
         "educational_psychology_child_development_teaching_pedagogy"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46409,7 +46477,20 @@
       "ancestorIds": [
         "educational_psychology_child_development_teaching_pedagogy"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46439,7 +46520,20 @@
       "ancestorIds": [
         "educational_psychology_child_development_teaching_pedagogy"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46467,7 +46561,20 @@
       "ancestorIds": [
         "educational_psychology_child_development_teaching_pedagogy"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46494,7 +46601,20 @@
       "ancestorIds": [
         "educational_psychology_child_development_teaching_pedagogy"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46521,7 +46641,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.child_development_growth_dynamics"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46566,7 +46699,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.child_development_growth_dynamics"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46608,7 +46754,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.child_development_growth_dynamics"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46656,7 +46815,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.theories_of_learning_cognition_intelligence"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46706,7 +46878,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.theories_of_learning_cognition_intelligence"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46740,7 +46925,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.theories_of_learning_cognition_intelligence"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46799,7 +46997,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.theories_of_learning_cognition_intelligence"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46863,7 +47074,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.inclusive_education_diverse_learners_special_needs"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46901,7 +47125,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.inclusive_education_diverse_learners_special_needs"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46946,7 +47183,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.inclusive_education_diverse_learners_special_needs"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -46989,7 +47239,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.pedagogical_strategies_curriculum_classroom_management"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47034,7 +47297,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.pedagogical_strategies_curriculum_classroom_management"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47083,7 +47359,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.pedagogical_strategies_curriculum_classroom_management"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47127,7 +47416,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.educational_assessment_evaluation_measurement"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47162,7 +47464,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.educational_assessment_evaluation_measurement"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47208,7 +47523,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.educational_assessment_evaluation_measurement"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47243,7 +47571,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.national_educational_policies_legal_frameworks_teacher_aptitude"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47298,7 +47639,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.national_educational_policies_legal_frameworks_teacher_aptitude"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47355,7 +47709,20 @@
         "educational_psychology_child_development_teaching_pedagogy",
         "educational_psychology_child_development_teaching_pedagogy.national_educational_policies_legal_frameworks_teacher_aptitude"
       ],
-      "examTags": {},
+      "examTags": {
+        "teaching": [
+          "KARTET",
+          "GPSTR",
+          "HSTR",
+          "CTET"
+        ],
+        "kset": [
+          "Paper-1"
+        ],
+        "ugc_net": [
+          "Paper-1"
+        ]
+      },
       "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
       "entities": [],
       "keywords": [
@@ -47405,6 +47772,17 @@
       ],
       "ancestorIds": [],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47441,6 +47819,17 @@
         "language_proficiency_grammar_communication"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47476,6 +47865,17 @@
         "language_proficiency_grammar_communication"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47512,6 +47912,17 @@
         "language_proficiency_grammar_communication"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47551,6 +47962,17 @@
         "language_proficiency_grammar_communication"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47587,6 +48009,17 @@
         "language_proficiency_grammar_communication"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47620,6 +48053,17 @@
         "language_proficiency_grammar_communication"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47654,6 +48098,17 @@
         "language_proficiency_grammar_communication"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47694,6 +48149,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47746,6 +48212,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47798,6 +48275,17 @@
         "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47843,6 +48331,17 @@
         "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47885,6 +48384,17 @@
         "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47951,6 +48461,17 @@
         "language_proficiency_grammar_communication.translation_precis_writing"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -47995,6 +48516,17 @@
         "language_proficiency_grammar_communication.translation_precis_writing"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48036,6 +48568,17 @@
         "language_proficiency_grammar_communication.translation_precis_writing"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48084,6 +48627,17 @@
         "language_proficiency_grammar_communication.general_english_grammar_syntax"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48142,6 +48696,17 @@
         "language_proficiency_grammar_communication.general_english_grammar_syntax"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48203,6 +48768,17 @@
         "language_proficiency_grammar_communication.general_english_grammar_syntax"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48261,6 +48837,17 @@
         "language_proficiency_grammar_communication.english_vocabulary_idioms_phrasal_verbs"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48307,6 +48894,17 @@
         "language_proficiency_grammar_communication.english_vocabulary_idioms_phrasal_verbs"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48359,6 +48957,17 @@
         "language_proficiency_grammar_communication.reading_comprehension_sentence_correction_verbal_ability"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48403,6 +49012,17 @@
         "language_proficiency_grammar_communication.reading_comprehension_sentence_correction_verbal_ability"
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48453,6 +49073,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure."
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48506,6 +49137,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure."
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48561,6 +49203,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure."
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48619,6 +49272,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure."
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48661,6 +49325,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure."
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48697,6 +49372,17 @@
         "language_proficiency_grammar_communication.general_kannada_grammar_structure."
       ],
       "examTags": {
+        "kpsc": [
+          "CTI",
+          "FDA",
+          "SDA"
+        ],
+        "kea": [
+          "VAO"
+        ],
+        "ksp": [
+          "PSI-Paper1"
+        ],
         "kas": [
           "Compulsory-Lang"
         ],
@@ -48746,6 +49432,9 @@
     "byExam": {
       "upsc": 741,
       "kas": 723,
+      "teaching": 26,
+      "karnataka_state": 30,
+      "police": 29,
       "ssc": 452,
       "banking": 0
     }

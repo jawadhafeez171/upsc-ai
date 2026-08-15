@@ -1330,7 +1330,7 @@ Security Forces, Intelligence Agencies & Statutory Mandates `[UPSC: Mains-GS3]`
 
 Ethics, Integrity & Aptitude
 
-- Ethics & Human Interface
+- Ethics & Human Interface (Essence, determinants and consequences of Ethics in human actions; Dimensions of ethics; Ethics in private and public relationships; Human Values – lessons from the lives and teachings of great leaders, reformers and administrators; Role of family, society and educational institutions in inculcating values)
 - Attitude & Aptitude
 - Emotional Intelligence & Moral Thinkers
 - Probity in Governance & Public Service Values

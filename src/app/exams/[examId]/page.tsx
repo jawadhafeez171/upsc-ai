@@ -10,13 +10,15 @@ import { TestConfig, Language } from '@/types';
 import { 
     ArrowRight, AlertTriangle, BookOpen, Zap, Info, Shield, 
     Award, CheckCircle2, DollarSign, Briefcase, Calendar, 
-    Layers, HelpCircle, ChevronRight, UserCheck, Scale, Landmark
+    Layers, HelpCircle, ChevronRight, UserCheck, Scale, Landmark,
+    Compass, BrainCircuit
 } from 'lucide-react';
+import ExamMindMapVisualizer from '@/components/graph/ExamMindMapVisualizer';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 const DIFFICULTIES = ['mixed', 'easy', 'medium', 'hard'] as const;
 
-type ActiveTab = 'practice' | 'about' | 'services';
+type ActiveTab = 'practice' | 'about' | 'services' | 'mindmap';
 
 export default function ExamDetailPage({ params }: { params: Promise<{ examId: string }> }) {
     const { examId } = use(params);
@@ -24,9 +26,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const router = useRouter();
     const { user, language, setActiveSession } = useAppStore();
 
-    // Determine initial tab from query parameter: ?tab=about | ?tab=services | default practice
+    // Determine initial tab from query parameter: ?tab=about | ?tab=services | ?tab=mindmap | default practice
     const tabParam = searchParams.get('tab');
-    const initialTab: ActiveTab = tabParam === 'about' ? 'about' : tabParam === 'services' ? 'services' : 'practice';
+    const initialTab: ActiveTab = tabParam === 'about' ? 'about' : tabParam === 'services' ? 'services' : tabParam === 'mindmap' ? 'mindmap' : 'practice';
     const [activeTab, setActiveTab] = useState<ActiveTab>(initialTab);
 
     const [exam, setExam] = useState<any>(null);
@@ -278,6 +280,23 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         >
                             <Briefcase size={16} />
                             Services & Job Roles
+                        </button>
+
+                        {/* Tab 4: Syllabus Mind Map */}
+                        <button
+                            onClick={() => setActiveTab('mindmap')}
+                            style={{
+                                display: 'flex', alignItems: 'center', gap: '8px',
+                                padding: '10px 18px', borderRadius: '12px', cursor: 'pointer',
+                                fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s',
+                                background: activeTab === 'mindmap' ? '#8B5CF6' : 'var(--bg-tertiary)',
+                                color: activeTab === 'mindmap' ? '#FFFFFF' : 'var(--text-secondary)',
+                                border: activeTab === 'mindmap' ? '1px solid #8B5CF6' : '1px solid var(--border)',
+                                boxShadow: activeTab === 'mindmap' ? '0 2px 8px rgba(139,92,246,0.3)' : 'none'
+                            }}
+                        >
+                            <Compass size={16} />
+                            Syllabus Mind Map
                         </button>
                     </div>
                 </div>
@@ -889,6 +908,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 ))}
                             </div>
                         </div>
+                    </div>
+                )}
+
+                {/* ═══════════════════════════════════════════════════════════════
+                    TAB 4: SYLLABUS MIND MAP (EXAM-TAILORED PRUNED HIERARCHY)
+                ═══════════════════════════════════════════════════════════════ */}
+                {activeTab === 'mindmap' && (
+                    <div>
+                        <ExamMindMapVisualizer initialExamId={examId} showExamPicker={false} />
                     </div>
                 )}
             </div>

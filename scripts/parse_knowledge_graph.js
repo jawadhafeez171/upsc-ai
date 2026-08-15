@@ -21,9 +21,9 @@ function parseExamTags(str) {
     const tags = {};
     if (!str) return tags;
 
-    const matches = str.matchAll(/\[(UPSC|KAS|SSC|Banking|State-PSC):\s*([^\]]+)\]/gi);
+    const matches = str.matchAll(/\[([A-Za-z0-9_-]+):\s*([^\]]+)\]/gi);
     for (const match of matches) {
-        const type = match[1].toLowerCase().replace('-', '_');
+        const type = match[1].toLowerCase().replace(/[^a-z0-9_]/g, '_');
         const values = match[2].split(/[,/]/).map(s => s.trim()).filter(Boolean);
         if (!tags[type]) tags[type] = [];
         tags[type].push(...values);
@@ -302,6 +302,9 @@ const stats = {
     byExam: {
         upsc: Object.values(nodes).filter(n => n.examTags.upsc && n.examTags.upsc.length > 0).length,
         kas: Object.values(nodes).filter(n => n.examTags.kas && n.examTags.kas.length > 0).length,
+        teaching: Object.values(nodes).filter(n => (n.examTags.teaching && n.examTags.teaching.length > 0) || (n.examTags.kset && n.examTags.kset.length > 0) || (n.examTags.ugc_net && n.examTags.ugc_net.length > 0)).length,
+        karnataka_state: Object.values(nodes).filter(n => (n.examTags.kea && n.examTags.kea.length > 0) || (n.examTags.kpsc && n.examTags.kpsc.length > 0) || (n.examTags.ksp && n.examTags.ksp.length > 0) || (n.examTags.state_psc && n.examTags.state_psc.length > 0)).length,
+        police: Object.values(nodes).filter(n => (n.examTags.ksp && n.examTags.ksp.length > 0) || (n.examTags.capf && n.examTags.capf.length > 0)).length,
         ssc: Object.values(nodes).filter(n => n.examTags.ssc && n.examTags.ssc.length > 0).length,
         banking: Object.values(nodes).filter(n => n.examTags.banking && n.examTags.banking.length > 0).length,
     }

@@ -3,7 +3,16 @@ export interface ExamProjections {
     kas?: string[];
     ssc?: string[];
     banking?: string[];
-    statePsc?: string[];
+    state_psc?: string[];
+    teaching?: string[];
+    kset?: string[];
+    kea?: string[];
+    kpsc?: string[];
+    ksp?: string[];
+    ugc_net?: string[];
+    capf?: string[];
+    cds?: string[];
+    [key: string]: string[] | undefined;
 }
 
 export type KnowledgeNodeLevel = 1 | 2 | 3 | 4;
@@ -38,8 +47,12 @@ export interface KnowledgeGraphStats {
     byExam: {
         upsc: number;
         kas: number;
+        teaching?: number;
+        karnataka_state?: number;
+        police?: number;
         ssc: number;
         banking: number;
+        [key: string]: number | undefined;
     };
 }
 
