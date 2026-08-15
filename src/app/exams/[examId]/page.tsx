@@ -6,7 +6,7 @@ import { supabase } from '@/lib/supabase';
 import { useAppStore } from '@/lib/store';
 import { EXAMS } from '@/lib/mockData';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
-import { TestConfig, Language } from '@/types';
+import { TestConfig, Language, TestMode } from '@/types';
 import { 
     ArrowRight, AlertTriangle, BookOpen, Zap, Info, Shield, 
     Award, CheckCircle2, DollarSign, Briefcase, Calendar, 
@@ -36,7 +36,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [loading, setLoading] = useState(true);
     const [availableQs, setAvailableQs] = useState(0);
 
-    const [mode, setMode] = useState<'subject' | 'full'>('full');
+    const [mode, setMode] = useState<TestMode>('full');
     const [subject, setSubject] = useState('');
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
@@ -312,7 +312,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             <label style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '12px', display: 'block', letterSpacing: '0.05em' }}>
                                 1. Select Test Mode
                             </label>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
                                 <button
                                     onClick={() => { setMode('full'); setSubject(''); }}
                                     style={{
@@ -322,11 +322,28 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                         transition: 'all 0.15s'
                                     }}
                                 >
-                                    <div style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
                                         🎯 Full Exam Mock Test
                                     </div>
-                                    <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
+                                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
                                         Simulate real exam with questions mixed across all syllabus topics.
+                                    </div>
+                                </button>
+
+                                <button
+                                    onClick={() => { setMode('yearwise'); setSubject(''); }}
+                                    style={{
+                                        padding: '16px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
+                                        background: mode === 'yearwise' ? 'rgba(37, 99, 235, 0.08)' : 'var(--bg-primary)',
+                                        border: mode === 'yearwise' ? '2px solid #2563EB' : '1px solid var(--border)',
+                                        transition: 'all 0.15s'
+                                    }}
+                                >
+                                    <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                                        📅 Year-Wise & Paper-Wise PYQ
+                                    </div>
+                                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
+                                        Practice real previous year question papers (2011–2024) by Paper 1 / Paper 2.
                                     </div>
                                 </button>
 
@@ -334,19 +351,116 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     onClick={() => { setMode('subject'); setSubject(examTopics[0] || ''); }}
                                     style={{
                                         padding: '16px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
-                                        background: mode === 'subject' ? 'rgba(255, 107, 43, 0.08)' : 'var(--bg-primary)',
-                                        border: mode === 'subject' ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
+                                        background: mode === 'subject' ? 'rgba(13, 148, 136, 0.08)' : 'var(--bg-primary)',
+                                        border: mode === 'subject' ? '2px solid var(--brand-teal)' : '1px solid var(--border)',
                                         transition: 'all 0.15s'
                                     }}
                                 >
-                                    <div style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
+                                    <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
                                         📚 Subject-Wise Drill
                                     </div>
-                                    <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
+                                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
                                         Focus practice on a specific syllabus domain or weak subject.
                                     </div>
                                 </button>
                             </div>
+
+                            {/* Year-Wise & Paper-Wise Filters */}
+                            {(mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas') && (
+                                <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                    {/* Paper Selector */}
+                                    <div>
+                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                            <span>📄 SELECT EXAM PAPER:</span>
+                                        </label>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                            <button
+                                                onClick={() => setPaper('all')}
+                                                style={{
+                                                    padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                    fontSize: '12.5px', fontWeight: 700,
+                                                    background: paper === 'all' ? '#2563EB' : 'var(--bg-primary)',
+                                                    color: paper === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                    border: paper === 'all' ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                All Papers (Combined)
+                                            </button>
+                                            <button
+                                                onClick={() => setPaper(1)}
+                                                style={{
+                                                    padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                    fontSize: '12.5px', fontWeight: 700,
+                                                    background: paper === 1 ? '#2563EB' : 'var(--bg-primary)',
+                                                    color: paper === 1 ? '#FFFFFF' : 'var(--text-secondary)',
+                                                    border: paper === 1 ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                {examId === 'upsc-cse' ? 'Paper 1: General Studies (GS-1)' : 'Paper 1: General Studies & Humanities'}
+                                            </button>
+                                            <button
+                                                onClick={() => setPaper(2)}
+                                                style={{
+                                                    padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                    fontSize: '12.5px', fontWeight: 700,
+                                                    background: paper === 2 ? '#2563EB' : 'var(--bg-primary)',
+                                                    color: paper === 2 ? '#FFFFFF' : 'var(--text-secondary)',
+                                                    border: paper === 2 ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                {examId === 'upsc-cse' ? 'Paper 2: CSAT / Aptitude' : 'Paper 2: Science & Tech, Environment & GMA'}
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    {/* Year Selector */}
+                                    <div>
+                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                            <span>📅 SELECT EXAM YEAR:</span>
+                                        </label>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                            <button
+                                                onClick={() => setYear('all')}
+                                                style={{
+                                                    padding: '6px 12px', borderRadius: '9px', cursor: 'pointer',
+                                                    fontSize: '12px', fontWeight: 700,
+                                                    background: year === 'all' ? 'var(--brand-orange)' : 'var(--bg-primary)',
+                                                    color: year === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                    border: year === 'all' ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                All Years (2011–2024)
+                                            </button>
+                                            {(examId === 'kpsc-kas' 
+                                                ? [2024, 2020, 2017, 2015, 2014, 2012, 2011]
+                                                : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
+                                            ).map((yr) => {
+                                                const isSelected = year === yr;
+                                                return (
+                                                    <button
+                                                        key={yr}
+                                                        onClick={() => setYear(yr)}
+                                                        style={{
+                                                            padding: '6px 12px', borderRadius: '9px', cursor: 'pointer',
+                                                            fontSize: '12px', fontWeight: 700,
+                                                            background: isSelected ? 'var(--brand-orange)' : 'var(--bg-primary)',
+                                                            color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: isSelected ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        {yr} {yr === 2024 ? '🔥' : ''}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
 
                             {/* Subject Picker if mode is subject */}
                             {mode === 'subject' && (
@@ -364,9 +478,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     style={{
                                                         padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
                                                         fontSize: '13px', fontWeight: 600,
-                                                        background: isSelected ? 'var(--brand-orange)' : 'var(--bg-primary)',
+                                                        background: isSelected ? 'var(--brand-teal)' : 'var(--bg-primary)',
                                                         color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
-                                                        border: isSelected ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
+                                                        border: isSelected ? '1px solid var(--brand-teal)' : '1px solid var(--border)',
                                                         transition: 'all 0.15s'
                                                     }}
                                                 >

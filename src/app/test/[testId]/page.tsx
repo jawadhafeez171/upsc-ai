@@ -5,6 +5,7 @@ import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { Clock, Flag, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Question } from '@/types';
+import { QUESTIONS } from '@/lib/mockData';
 import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
 
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
@@ -189,6 +190,18 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 setQuestions(formattedQs);
                 setTimeLeft(formattedQs.length * 72);
                 setActiveSession({ ...activeSession!, questions: formattedQs });
+            } else {
+                // Fallback to local QUESTIONS if remote database returns 0 matching rows
+                let fallback = QUESTIONS.filter(q => q.exam_id === config.exam_id);
+                if (config.mode === 'subject' && config.subject) {
+                    const subFiltered = fallback.filter(q => q.subject.toLowerCase() === config.subject?.toLowerCase());
+                    if (subFiltered.length > 0) fallback = subFiltered;
+                }
+                if (fallback.length === 0) fallback = QUESTIONS;
+                const finalFallback = fallback.slice(0, config.question_count || 10);
+                setQuestions(finalFallback);
+                setTimeLeft(finalFallback.length * 72);
+                setActiveSession({ ...activeSession!, questions: finalFallback });
             }
             setLoading(false);
         }

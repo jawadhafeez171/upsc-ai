@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Plus_Jakarta_Sans, Outfit, JetBrains_Mono, Noto_Sans_Kannada } from 'next/font/google';
 import './globals.css';
 import 'katex/dist/katex.min.css';
 import Navbar from '@/components/layout/Navbar';
@@ -6,6 +7,34 @@ import ThemeProvider from '@/components/layout/ThemeProvider';
 import AuthProvider from '@/components/layout/AuthProvider';
 import { Analytics } from '@vercel/analytics/react';
 import RotatingTagline from '@/components/layout/RotatingTagline';
+
+const sansFont = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const displayFont = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const monoFont = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-mono',
+  display: 'swap',
+});
+
+const kannadaFont = Noto_Sans_Kannada({
+  subsets: ['kannada'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-kannada',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -66,9 +95,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html 
+      lang="en" 
+      suppressHydrationWarning
+      className={`${sansFont.variable} ${displayFont.variable} ${monoFont.variable} ${kannadaFont.variable}`}
+    >
       <body suppressHydrationWarning style={{ position: 'relative', overflowX: 'hidden' }}>
         <ThemeProvider>
           <AuthProvider>
@@ -107,6 +144,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   {[
                     { href: '/exams', label: 'Exams' },
                     { href: '/current-affairs', label: 'Current Affairs' },
+                    { href: '/graph', label: 'Knowledge Graph' },
                     { href: '/leaderboard', label: 'Leaderboard' },
                     { href: '/login', label: 'Sign In' },
                   ].map((link) => (
@@ -122,4 +160,3 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
-

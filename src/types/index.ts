@@ -1,6 +1,6 @@
 export type Difficulty = 'easy' | 'medium' | 'hard';
 export type Language = 'en' | 'hi' | 'kn';
-export type TestMode = 'subject' | 'full';
+export type TestMode = 'subject' | 'full' | 'yearwise';
 export type ExamCategory = 'upsc' | 'karnataka' | 'defence' | 'teaching' | 'regulatory' | 'ssc';
 
 export interface Option {
