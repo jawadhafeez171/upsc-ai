@@ -509,6 +509,130 @@ h1, h2, h3, h4, h5, h6 {
 }
 .show-mobile { display: none; }
 
+/* Responsive Navbar System */
+.navbar-pill {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  width: calc(100% - 24px);
+  max-width: 1080px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+  width: 230px;
+  min-width: 230px;
+  max-width: 230px;
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.navbar-tagline-wrapper {
+  display: block;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.navbar-menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-pill {
+    top: 8px;
+    width: calc(100% - 16px);
+    height: 48px;
+    padding: 0 10px;
+  }
+  
+  .navbar-logo-link {
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    gap: 8px !important;
+  }
+  
+  .navbar-logo-text {
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
+  .navbar-tagline-wrapper {
+    display: none !important;
+  }
+
+  .navbar-actions {
+    gap: 6px !important;
+  }
+
+  .navbar-login-btn {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    border-radius: 8px !important;
+  }
+
+  .navbar-theme-btn {
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+  }
+  
+  .navbar-menu-btn {
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-primary) !important;
+    cursor: pointer !important;
+    flex-shrink: 0 !important;
+  }
+}
+
 /* ═══════════════════════════════════════════════
    HERO SECTION CREATIVE GRADIENT (SEAMLESS FULL-WIDTH)
 ═══════════════════════════════════════════════ */

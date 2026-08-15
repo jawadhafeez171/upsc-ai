@@ -33,25 +33,14 @@ export default function Navbar() {
 
     return (
         <>
-            <nav style={{
-                position: 'fixed', top: '16px', left: '50%', transform: 'translateX(-50%)', zIndex: 50,
-                width: 'calc(100% - 32px)', maxWidth: '1080px',
-                background: theme === 'dark' ? 'rgba(15, 23, 42, 0.82)' : 'rgba(255, 255, 255, 0.92)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
-                border: '1px solid var(--border)',
-                borderRadius: '9999px',
-                height: '56px',
-                display: 'flex', alignItems: 'center', padding: '0 24px',
-                justifyContent: 'space-between',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)',
-                transition: 'all 0.3s ease',
-            }}>
+            <nav 
+                className="navbar-pill"
+                style={{
+                    background: theme === 'dark' ? 'rgba(15, 23, 42, 0.88)' : 'rgba(255, 255, 255, 0.94)',
+                }}
+            >
                 {/* Logo */}
-                <Link href="/" style={{ 
-                    display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', 
-                    flexShrink: 0, width: '230px', minWidth: '230px', maxWidth: '230px' 
-                }}>
+                <Link href="/" className="navbar-logo-link">
                     <div style={{
                         width: '36px', height: '36px', overflow: 'hidden',
                         display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
@@ -62,12 +51,14 @@ export default function Navbar() {
                     }}>
                         <img src="/mIQ_logo.png" alt="MockIQ" style={{ height: '32px', width: 'auto', maxWidth: 'none', display: 'block' }} />
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, width: '180px', flexShrink: 0 }}>
+                    <div className="navbar-logo-text">
                         <div style={{ fontSize: '19px', fontWeight: 800, letterSpacing: '-0.5px', fontFamily: 'Inter, inherit' }}>
                             <span style={{ color: 'var(--text-primary)' }}>MockI</span>
                             <span style={{ color: 'var(--brand-orange)' }}>Q</span>
                         </div>
-                        <RotatingTagline />
+                        <div className="navbar-tagline-wrapper">
+                            <RotatingTagline />
+                        </div>
                     </div>
                 </Link>
 
@@ -91,8 +82,8 @@ export default function Navbar() {
                 </div>
 
                 {/* Right controls */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    {/* Language switcher */}
+                <div className="navbar-actions">
+                    {/* Language switcher (desktop) */}
                     <div className="hidden-mobile" style={{ display: 'flex', gap: '2px', background: 'var(--bg-card)', borderRadius: '10px', padding: '3px', border: '1px solid var(--border)' }}>
                         {LANGS.map((l) => (
                             <button key={l.code} onClick={() => setLanguage(l.code)} style={{
@@ -109,13 +100,9 @@ export default function Navbar() {
                     <button
                         onClick={toggleTheme}
                         title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                        className="navbar-theme-btn"
                         style={{
-                            width: 36, height: 36, borderRadius: '10px',
-                            background: 'var(--bg-card)', border: '1px solid var(--border)',
-                            cursor: 'pointer',
-                            display: 'flex', alignItems: 'center', justifyContent: 'center',
                             color: theme === 'dark' ? '#F59E0B' : 'var(--text-secondary)',
-                            transition: 'all 0.2s', flexShrink: 0,
                         }}
                     >
                         {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
@@ -123,22 +110,22 @@ export default function Navbar() {
 
                     {user ? (
                         <>
-                            <Link href="/dashboard" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <Link href="/dashboard" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <div style={{
-                                    display: 'flex', alignItems: 'center', gap: '6px',
+                                    display: 'flex', alignItems: 'center', gap: '4px',
                                     background: 'rgba(217, 119, 6, 0.12)', border: '1px solid rgba(217, 119, 6, 0.3)',
-                                    borderRadius: '20px', padding: '4px 10px', fontSize: '12px', fontWeight: 700,
+                                    borderRadius: '20px', padding: '3px 8px', fontSize: '11.5px', fontWeight: 700,
                                     color: 'var(--brand-gold)',
                                 }} className="hidden-mobile">
                                     <span>🔥</span> <span>{user.streak || 3}d</span>
                                 </div>
 
                                 <div style={{
-                                    width: 36, height: 36, borderRadius: '50%',
+                                    width: 32, height: 32, borderRadius: '50%',
                                     background: 'linear-gradient(135deg, var(--brand-orange), var(--brand-orange-dim))',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                    fontSize: '14px', fontWeight: 800, color: 'white',
-                                    boxShadow: '0 2px 12px rgba(37,99,235,0.4)',
+                                    fontSize: '13px', fontWeight: 800, color: 'white',
+                                    boxShadow: '0 2px 10px rgba(37,99,235,0.3)', flexShrink: 0
                                 }}>
                                     {user.name[0].toUpperCase()}
                                 </div>
@@ -148,14 +135,18 @@ export default function Navbar() {
                             </button>
                         </>
                     ) : (
-                        <Link href="/login" className="btn btn-primary" style={{ padding: '7px 16px', fontSize: '13px', borderRadius: '10px' }}>
-                            <LogIn size={14} /> {t('login', language as Language)}
+                        <Link href="/login" className="btn btn-primary navbar-login-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', textDecoration: 'none' }}>
+                            <LogIn size={13} /> {t('login', language as Language)}
                         </Link>
                     )}
 
                     {/* Mobile menu toggle */}
-                    <button onClick={() => setMenuOpen(!menuOpen)} style={{ background: 'none', border: 'none', color: 'var(--text-primary)', cursor: 'pointer', display: 'none', padding: '4px' }} className="show-mobile">
-                        {menuOpen ? <X size={22} /> : <Menu size={22} />}
+                    <button 
+                        onClick={() => setMenuOpen(!menuOpen)} 
+                        className="navbar-menu-btn"
+                        aria-label="Toggle navigation menu"
+                    >
+                        {menuOpen ? <X size={18} /> : <Menu size={18} />}
                     </button>
                 </div>
             </nav>
@@ -163,18 +154,21 @@ export default function Navbar() {
             {/* Mobile menu */}
             {menuOpen && (
                 <div style={{
-                    position: 'fixed', top: '64px', left: 0, right: 0, zIndex: 49,
-                    background: 'var(--nav-bg)', backdropFilter: 'blur(24px)',
+                    position: 'fixed', top: '60px', left: '10px', right: '10px', zIndex: 49,
+                    background: theme === 'dark' ? 'rgba(15, 23, 42, 0.96)' : 'rgba(255, 255, 255, 0.98)', 
+                    backdropFilter: 'blur(24px)',
                     WebkitBackdropFilter: 'blur(24px)',
-                    borderBottom: '1px solid var(--border)',
+                    border: '1px solid var(--border)',
+                    borderRadius: '16px',
                     padding: '12px', display: 'flex', flexDirection: 'column', gap: '4px',
+                    boxShadow: '0 12px 36px rgba(0,0,0,0.25)'
                 }}>
                     {NAV_LINKS.map((link) => (
                         <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
-                            padding: '12px 14px', borderRadius: '10px', textDecoration: 'none',
-                            color: 'var(--text-primary)', fontWeight: 500, fontSize: '15px',
-                            background: pathname === link.href ? 'var(--bg-card)' : 'transparent',
-                            border: '1px solid transparent',
+                            padding: '10px 14px', borderRadius: '10px', textDecoration: 'none',
+                            color: 'var(--text-primary)', fontWeight: 600, fontSize: '14px',
+                            background: pathname === link.href ? 'rgba(255, 107, 43, 0.12)' : 'transparent',
+                            border: pathname === link.href ? '1px solid rgba(255, 107, 43, 0.25)' : '1px solid transparent',
                             display: 'flex', alignItems: 'center', gap: '10px',
                         }}>
                             <span>{link.emoji}</span>
@@ -183,14 +177,14 @@ export default function Navbar() {
                     ))}
 
                     <div style={{ borderTop: '1px solid var(--border)', paddingTop: '10px', marginTop: '4px' }}>
-                        <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', paddingLeft: '14px', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                            Language
+                        <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)', paddingLeft: '14px', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                            Language / ಭಾಷೆ
                         </div>
                         <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-card)', borderRadius: '8px', padding: '3px', width: 'fit-content', marginLeft: '14px', border: '1px solid var(--border)' }}>
                             {LANGS.map((l) => (
                                 <button key={l.code} onClick={() => { setLanguage(l.code); setMenuOpen(false); }} style={{
-                                    padding: '6px 14px', borderRadius: '6px', border: 'none', cursor: 'pointer',
-                                    fontSize: '12px', fontWeight: 600,
+                                    padding: '5px 12px', borderRadius: '6px', border: 'none', cursor: 'pointer',
+                                    fontSize: '12px', fontWeight: 700,
                                     background: language === l.code ? 'var(--brand-orange)' : 'transparent',
                                     color: language === l.code ? 'white' : 'var(--text-secondary)',
                                     transition: 'all 0.15s',
@@ -200,7 +194,7 @@ export default function Navbar() {
                     </div>
 
                     {user && (
-                        <div style={{ borderTop: '1px solid var(--border)', paddingTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 14px' }}>
+                        <div style={{ borderTop: '1px solid var(--border)', paddingTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 14px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                                 <div style={{
                                     width: 32, height: 32, borderRadius: '50%',
