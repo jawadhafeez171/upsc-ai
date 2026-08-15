@@ -86,20 +86,33 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         'Science and Technology': 'PYQ Science&Tech',
                         'Science': 'PYQ Science&Tech',
                         'IR and Current Affairs': 'PYQ IR and Current Affairs',
+                        'Current Affairs': 'PYQ IR and Current Affairs',
                         'General Awareness': 'PYQ General Awareness'
                     };
 
+                    const distinctTables = [
+                        'PYQ Ancient History',
+                        'PYQ Medieval Hisotry',
+                        'PYQ Art and Culture',
+                        'PYQ Modern History',
+                        'PYQ Polity',
+                        'PYQ Economics',
+                        'PYQ Geography',
+                        'PYQ Environement',
+                        'PYQ Science&Tech',
+                        'PYQ IR and Current Affairs',
+                        'PYQ General Awareness'
+                    ];
+
                     if (mode === 'subject' && subject) {
-                        const tableName = SubjectTableMap[subject];
-                        if (tableName) {
-                            let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
-                            if (difficulty !== 'mixed') query = query.ilike('difficulty', difficulty);
-                            if (year !== 'all') query = query.eq('Year', year);
-                            const { count } = await query;
-                            qCount = count || 0;
-                        }
+                        const tableName = SubjectTableMap[subject] || 'PYQ Modern History';
+                        let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
+                        if (difficulty !== 'mixed') query = query.ilike('difficulty', difficulty);
+                        if (year !== 'all') query = query.eq('Year', year);
+                        const { count } = await query;
+                        qCount = count || 0;
                     } else {
-                        const promises = Object.values(SubjectTableMap).map(async (tableName) => {
+                        const promises = distinctTables.map(async (tableName) => {
                             let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
                             if (difficulty !== 'mixed') query = query.ilike('difficulty', difficulty);
                             if (year !== 'all') query = query.eq('Year', year);
@@ -125,9 +138,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
 
                     const { count } = await query;
-                    qCount = count || 40; // Default simulated pool for Phase 2 starter tests
+                    qCount = count || 0;
                 }
-                setAvailableQs(qCount > 0 ? qCount : 40);
+                setAvailableQs(qCount);
             }
             setLoading(false);
         }
@@ -559,8 +572,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 <label style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
                                     4. Number of Questions
                                 </label>
-                                <span style={{ fontSize: '13px', color: 'var(--brand-orange)', fontWeight: 700 }}>
-                                    {availableQs} Questions Available in Pool
+                                <span style={{ fontSize: '13px', color: availableQs > 0 ? 'var(--brand-orange)' : 'var(--text-muted)', fontWeight: 700 }}>
+                                    {availableQs > 0 ? `${availableQs.toLocaleString()} Questions Available in Pool` : 'Calculating question pool...'}
                                 </span>
                             </div>
 
