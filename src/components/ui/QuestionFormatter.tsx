@@ -13,11 +13,8 @@ const isMathExpression = (str: string): boolean => {
 // Render math or LaTeX safely using KaTeX
 const renderKaTeXHtml = (expr: string, displayMode: boolean = false): string => {
     try {
-        // Clean up common quirks
         let cleanExpr = expr.trim();
-        // Remove outer quotes if wrapped
         cleanExpr = cleanExpr.replace(/^["']|["']$/g, '');
-        // Replace \text{...} if it has unescaped characters
         cleanExpr = cleanExpr.replace(/\\text\{([^}]+)\}/g, '\\mathrm{$1}');
         
         return katex.renderToString(cleanExpr, {
@@ -30,12 +27,13 @@ const renderKaTeXHtml = (expr: string, displayMode: boolean = false): string => 
     }
 };
 
-// Utility to parse bolding (**text**), LaTeX ($math$), and clean arrow characters
-const parseTextWithFormatting = (lineText: string): React.ReactNode => {
+// Utility to clean replacement characters, garbled unicode, and parse bolding & LaTeX
+export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
     if (!lineText) return '';
 
-    // Normalize arrow representations
+    // 1. Sanitize diamond question marks (\ufffd / \uFFFD) and garbled characters
     let text = lineText
+        .replace(/[\ufffd\uFFFD]/g, ' · ')
         .replace(/\\rightarrow/g, ' → ')
         .replace(/\\Rightarrow/g, ' ⇒ ')
         .replace(/\$\s*\\rightarrow\s*\$/g, ' → ')
@@ -45,14 +43,10 @@ const parseTextWithFormatting = (lineText: string): React.ReactNode => {
         .replace(/\$ightarrow\$/g, ' → ')
         .replace(/ightarrow/g, ' → ');
 
-    // Normalize spacing around currency symbols (e.g. '$ 346 million' -> '$346 million')
+    // Normalize spacing around currency symbols
     text = text.replace(/\$\s+(\d+[\d,]*(?:\.\d+)?(?:\s*(?:million|billion|trillion|lakh|crore))?)\b/gi, '$$$1');
 
     // Split text into tokens by LaTeX delimiters: $$display$$, $inline$, or **bold**
-    // Regex matches:
-    // 1. $$...$$ (display math)
-    // 2. $...$ (inline math, excluding single currency like $300,000)
-    // 3. **...** (bold text)
     const tokenRegex = /(\$\$[\s\S]+?\$\$|\$(?!\s*[\d,]+(?:\s*(?:million|billion|trillion|lakh|crore))?\s*(?:[.,!?\s]|$))[^$\n]+?\$|\*\*[^*]+?\*\*)/g;
 
     const parts = text.split(tokenRegex);
@@ -100,22 +94,84 @@ const parseTextWithFormatting = (lineText: string): React.ReactNode => {
                     );
                 }
 
-                // Plain text segment: check if it contains standalone math operators or sub/superscripts
                 return <span key={index}>{part}</span>;
             })}
         </>
     );
 };
 
+// Intelligently pre-process raw text: converts List I/II, pair matching, and tabular rows into markdown tables
 function preProcessQuestionText(text: string): string {
     if (!text) return '';
     
-    // Check if List I and List II are present in the text
-    const hasList1 = /(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i.test(text);
-    const hasList2 = /(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i.test(text);
+    // Normalize diamond question marks
+    let normalized = text.replace(/[\ufffd\uFFFD]/g, ' | ');
+
+    // 1. Check for multi-column pair rows like "1. Chandraketugarh | Odisha | Trading Port town"
+    const rawLines = normalized.split('\n');
+    const processedLines: string[] = [];
+    let pairBlock: { num: string; cols: string[] }[] = [];
+
+    const flushPairBlock = () => {
+        if (pairBlock.length === 0) return;
+        const maxCols = Math.max(...pairBlock.map(p => p.cols.length));
+        if (maxCols >= 2) {
+            // Determine headers
+            const headers = maxCols === 3 
+                ? ['No.', 'Place / Item', 'State / Region', 'Feature / Description']
+                : ['No.', 'Item / Entity', 'Attribute / Matched Feature'];
+            
+            processedLines.push(headers.join(' | '));
+            processedLines.push(headers.map(() => '---').join(' | '));
+            for (const row of pairBlock) {
+                const rowCells = [row.num, ...row.cols];
+                while (rowCells.length < headers.length) rowCells.push('');
+                processedLines.push(rowCells.join(' | '));
+            }
+        } else {
+            for (const row of pairBlock) {
+                processedLines.push(`${row.num}. ${row.cols.join(' · ')}`);
+            }
+        }
+        pairBlock = [];
+    };
+
+    for (let i = 0; i < rawLines.length; i++) {
+        const line = rawLines[i].trim();
+        // Match numbered rows with pipe or tab or multiple spaces separating 2+ items
+        const numMatch = line.match(/^(\d+)\.\s+(.+)$/);
+        if (numMatch) {
+            const num = numMatch[1];
+            const content = numMatch[2];
+            // Split by pipe | or tabs or 2+ spaces
+            let parts: string[] = [];
+            if (content.includes('|')) {
+                parts = content.split('|').map(s => s.trim()).filter(Boolean);
+            } else if (content.includes('\t')) {
+                parts = content.split('\t').map(s => s.trim()).filter(Boolean);
+            } else if (/\s{3,}/.test(content)) {
+                parts = content.split(/\s{3,}/).map(s => s.trim()).filter(Boolean);
+            }
+
+            if (parts.length >= 2) {
+                pairBlock.push({ num, cols: parts });
+                continue;
+            }
+        }
+
+        flushPairBlock();
+        processedLines.push(line);
+    }
+    flushPairBlock();
+
+    const intermediateText = processedLines.join('\n');
+
+    // 2. Check if List I and List II are present in the text
+    const hasList1 = /(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i.test(intermediateText);
+    const hasList2 = /(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i.test(intermediateText);
     
-    if (hasList1 && hasList2 && !text.includes('|')) {
-        const lines = text.split('\n');
+    if (hasList1 && hasList2 && !intermediateText.includes('|')) {
+        const lines = intermediateText.split('\n');
         let list1Items: string[] = [];
         let list2Items: string[] = [];
         let list1Header = 'List I';
@@ -183,7 +239,7 @@ function preProcessQuestionText(text: string): string {
         }
     }
     
-    return text;
+    return intermediateText;
 }
 
 export default function QuestionFormatter({ text }: QuestionFormatterProps) {
@@ -210,8 +266,8 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                 key={`table-${key}`} 
                 style={{ 
                     overflowX: 'auto', 
-                    margin: '18px 0', 
-                    borderRadius: '10px', 
+                    margin: '16px 0', 
+                    borderRadius: '12px', 
                     border: '1px solid var(--border)',
                     boxShadow: 'var(--shadow-sm)',
                     background: 'var(--bg-card)'
@@ -220,14 +276,17 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13.5px', border: 'none' }}>
                     {headerRow && (
                         <thead>
-                            <tr style={{ borderBottom: '1px solid var(--border)', background: 'var(--bg-secondary)' }}>
+                            <tr style={{ borderBottom: '1.5px solid var(--border)', background: 'var(--bg-secondary)' }}>
                                 {headerRow.map((cell, cellIdx) => (
                                     <th 
                                         key={`th-${cellIdx}`} 
                                         style={{ 
-                                            padding: '12px 16px', 
+                                            padding: '10px 14px', 
                                             textAlign: 'left', 
-                                            fontWeight: 700, 
+                                            fontWeight: 800, 
+                                            fontSize: '12.5px',
+                                            textTransform: 'uppercase',
+                                            letterSpacing: '0.04em',
                                             color: 'var(--text-primary)',
                                             borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
                                         }}
@@ -244,7 +303,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                 key={`tr-${rowIdx}`} 
                                 style={{ 
                                     borderBottom: rowIdx === bodyRows.length - 1 ? 'none' : '1px solid var(--border)',
-                                    background: rowIdx % 2 === 1 ? 'rgba(0, 0, 0, 0.015)' : 'transparent',
+                                    background: rowIdx % 2 === 1 ? 'rgba(255, 255, 255, 0.02)' : 'transparent',
                                     transition: 'background-color 0.15s'
                                 }}
                             >
@@ -252,8 +311,9 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                     <td 
                                         key={`td-${cellIdx}`} 
                                         style={{ 
-                                            padding: '12px 16px', 
-                                            color: 'var(--text-secondary)',
+                                            padding: '11px 14px', 
+                                            color: cellIdx === 0 && /^\d+\.?$/.test(cell.trim()) ? 'var(--brand-orange)' : 'var(--text-secondary)',
+                                            fontWeight: cellIdx === 0 ? 700 : 500,
                                             lineHeight: 1.5,
                                             borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
                                         }}
@@ -273,26 +333,12 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
     lines.forEach((line, idx) => {
         if (line.includes('|')) {
             const cells = line.split('|').map(c => c.trim());
-            // Filter out separator lines like "--- | ---"
             if (cells.some(c => /^---+$/.test(c))) {
                 return;
             }
             currentTableRows.push(cells);
         } else {
             if (currentTableRows.length > 0) {
-                const trimmed = line.trim();
-                const isListMarker = /^[A-Z0-9a-z]\.\s/.test(trimmed) || 
-                                     /^[•*-]\s/.test(trimmed) || 
-                                     /^\d+\.\s/.test(trimmed) || 
-                                     /^(IX|IV|V?I{1,3})\.\s/i.test(trimmed);
-                                     
-                if (currentTableRows[0].length === 2 && isListMarker && trimmed.includes(':')) {
-                    const colonIdx = trimmed.indexOf(':');
-                    const col1 = trimmed.substring(0, colonIdx).trim();
-                    const col2 = trimmed.substring(colonIdx + 1).trim();
-                    currentTableRows.push([col1, col2]);
-                    return;
-                }
                 flushTable(`${idx}`);
             }
             const trimmed = line.trim();
@@ -315,7 +361,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                             margin: '0 0 10px 0',
                             paddingLeft: isListItem ? '22px' : '0',
                             textIndent: isListItem ? '-22px' : '0',
-                            lineHeight: 1.6,
+                            lineHeight: 1.65,
                             color: 'var(--text-primary)',
                             fontSize: '15px'
                         }}
@@ -340,7 +386,6 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
 export function OptionFormatter({ text }: { text: string }) {
     if (!text) return null;
     
-    // Check if text has semicolons grouping numbers or sets (e.g. "3, 4, 9; 5, 7, 8; 1, 2, 6")
     if (text.includes(';')) {
         const parts = text.split(';');
         return (
@@ -380,3 +425,124 @@ export function OptionFormatter({ text }: { text: string }) {
     );
 }
 
+// ═══════════════════════════════════════════════════════════════
+// DEDICATED EXPLANATION FORMATTER FOR UPSC CSE & KPSC KAS
+// ═══════════════════════════════════════════════════════════════
+interface ExplanationFormatterProps {
+    text: string;
+}
+
+export function ExplanationFormatter({ text }: ExplanationFormatterProps) {
+    if (!text) return null;
+
+    // Clean diamond question marks
+    let cleanText = text.replace(/[\ufffd\uFFFD]/g, ' · ');
+
+    // Match statement or pair delimiters like "Pair 1 incorrect:", "Pair 2 correct:", "Statement 1 is correct:", "Option (a):"
+    const segmentRegex = /(?:^|\s*)(Pair\s*\d+(?:\s+is\s+)?(?:\s*correct|\s*incorrect|\s*correctly matched|\s*incorrectly matched)?[:\.\-]|Statement\s*[-I|V|X\d]+(?:\s+is\s+)?(?:\s*correct|\s*incorrect|\s*true|\s*false)?[:\.\-]|Option\s*\([a-d]\)(?:\s+is\s+)?(?:\s*correct|\s*incorrect)?[:\.\-]|Why\s+Option\s+[A-D]\s+is\s+Correct:?|Hence,\s+option\s+\([a-d]\)\s+is\s+correct[:\.]?|Correct\s+Answer:?)/gi;
+
+    // Check if the explanation has multiple structured parts
+    const matches = Array.from(cleanText.matchAll(segmentRegex));
+
+    if (matches.length >= 2) {
+        const segments: { label: string; content: string; isCorrect?: boolean; isIncorrect?: boolean }[] = [];
+        
+        let lastIndex = 0;
+        let currentLabel = '';
+
+        for (let i = 0; i < matches.length; i++) {
+            const m = matches[i];
+            const matchIndex = m.index || 0;
+            const matchText = m[0].trim();
+
+            if (i > 0 && currentLabel) {
+                const chunk = cleanText.substring(lastIndex, matchIndex).trim();
+                const lowerLabel = currentLabel.toLowerCase();
+                const isCorrect = lowerLabel.includes('correct') && !lowerLabel.includes('incorrect');
+                const isIncorrect = lowerLabel.includes('incorrect') || lowerLabel.includes('false');
+                segments.push({ label: currentLabel, content: chunk, isCorrect, isIncorrect });
+            } else if (i === 0 && matchIndex > 0) {
+                // Header intro before first pair
+                const intro = cleanText.substring(0, matchIndex).trim();
+                if (intro) {
+                    segments.push({ label: '', content: intro });
+                }
+            }
+
+            currentLabel = matchText;
+            lastIndex = matchIndex + m[0].length;
+        }
+
+        if (currentLabel) {
+            const chunk = cleanText.substring(lastIndex).trim();
+            const lowerLabel = currentLabel.toLowerCase();
+            const isCorrect = lowerLabel.includes('correct') && !lowerLabel.includes('incorrect');
+            const isIncorrect = lowerLabel.includes('incorrect') || lowerLabel.includes('false');
+            segments.push({ label: currentLabel, content: chunk, isCorrect, isIncorrect });
+        }
+
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '6px' }}>
+                {segments.map((seg, idx) => {
+                    if (!seg.label) {
+                        return (
+                            <p key={idx} style={{ margin: '0 0 6px 0', fontSize: '14px', lineHeight: 1.6, color: 'var(--text-secondary)' }}>
+                                {parseTextWithFormatting(seg.content)}
+                            </p>
+                        );
+                    }
+
+                    const isGreen = seg.isCorrect;
+                    const isRed = seg.isIncorrect;
+
+                    const badgeBg = isGreen ? 'rgba(16, 185, 129, 0.15)' : isRed ? 'rgba(225, 29, 72, 0.15)' : 'var(--bg-tertiary)';
+                    const badgeBorder = isGreen ? 'rgba(16, 185, 129, 0.35)' : isRed ? 'rgba(225, 29, 72, 0.35)' : 'var(--border)';
+                    const badgeColor = isGreen ? '#10B981' : isRed ? '#F43F5E' : 'var(--brand-orange)';
+
+                    return (
+                        <div 
+                            key={idx}
+                            style={{
+                                padding: '12px 16px',
+                                borderRadius: '10px',
+                                background: 'var(--bg-secondary)',
+                                border: '1px solid var(--border)',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                gap: '6px',
+                                transition: 'all 0.15s'
+                            }}
+                        >
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <span style={{
+                                    fontSize: '12px',
+                                    fontWeight: 800,
+                                    padding: '3px 10px',
+                                    borderRadius: '6px',
+                                    background: badgeBg,
+                                    border: `1px solid ${badgeBorder}`,
+                                    color: badgeColor,
+                                    letterSpacing: '0.02em',
+                                    textTransform: 'uppercase'
+                                }}>
+                                    {isGreen ? '✅ ' : isRed ? '❌ ' : '📌 '}
+                                    {seg.label.replace(/[:\.\-]$/, '')}
+                                </span>
+                            </div>
+                            <div style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.65 }}>
+                                {parseTextWithFormatting(seg.content)}
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        );
+    }
+
+    // Default fallback: break paragraphs cleanly
+    return (
+        <div style={{ fontSize: '14px', lineHeight: 1.65, color: 'var(--text-secondary)' }}>
+            <QuestionFormatter text={cleanText} />
+        </div>
+    );
+}

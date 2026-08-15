@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { CheckCircle, XCircle, MinusCircle, ChevronDown, ChevronUp, RotateCcw, Home, Loader2 } from 'lucide-react';
-import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
+import QuestionFormatter, { OptionFormatter, ExplanationFormatter } from '@/components/ui/QuestionFormatter';
 type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'skipped';
 
 export default function ResultsPage({ params }: { params: Promise<{ testId: string }> }) {
@@ -255,10 +255,10 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                                     );
                                                 })}
                                             </div>
-                                            <div style={{ background: 'var(--bg-card)', borderRadius: '8px', padding: '12px', boxShadow: 'var(--shadow-sm)' }}>
-                                                <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--brand-orange)', marginBottom: '4px', textTransform: 'uppercase' }}>💡 Explanation</div>
-                                                <div style={{ fontSize: '13.5px', color: 'var(--text-secondary)' }}>
-                                                    <QuestionFormatter text={expText} />
+                                            <div style={{ background: 'var(--bg-card)', borderRadius: '12px', padding: '16px', border: '1px solid var(--border)', boxShadow: 'var(--shadow-sm)' }}>
+                                                <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>💡 Explanation</div>
+                                                <div>
+                                                    <ExplanationFormatter text={expText} />
                                                 </div>
                                             </div>
                                         </div>

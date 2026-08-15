@@ -7,7 +7,7 @@ import { EXAMS } from '@/lib/mockData';
 import { t } from '@/lib/i18n';
 import { Language } from '@/types';
 import { useTheme } from '@/components/layout/ThemeProvider';
-import { OptionFormatter } from '@/components/ui/QuestionFormatter';
+import { OptionFormatter, ExplanationFormatter } from '@/components/ui/QuestionFormatter';
 
 const FEATURES = [
   { emoji: '🎯', title: 'Subject-Wise Focus', desc: 'Drill into individual chapters across 23 core subjects including Karnataka History, Polity & Economy.', chip: 'chip-peach' },
@@ -282,11 +282,11 @@ export default function HomePage() {
                 border: demoSelected === SAMPLE_QUESTION.correct ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(217, 119, 6, 0.3)',
                 animation: 'fadeIn 0.3s ease'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 700, fontSize: '13px', color: demoSelected === SAMPLE_QUESTION.correct ? 'var(--accent-emerald)' : 'var(--brand-gold)', marginBottom: '6px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 700, fontSize: '13px', color: demoSelected === SAMPLE_QUESTION.correct ? 'var(--accent-emerald)' : 'var(--brand-gold)', marginBottom: '8px' }}>
                   <CheckCircle2 size={16} /> {demoSelected === SAMPLE_QUESTION.correct ? 'Correct Answer! (Option A)' : 'Explanation (Correct Answer: Option A)'}
                 </div>
-                <div style={{ fontSize: '13.5px', color: 'var(--text-primary)', lineHeight: 1.6 }}>
-                  {demoLang === 'kn' ? SAMPLE_QUESTION.explanation_kn : SAMPLE_QUESTION.explanation_en}
+                <div style={{ fontSize: '13.5px', color: 'var(--text-primary)', lineHeight: 1.65 }}>
+                  <ExplanationFormatter text={demoLang === 'kn' ? SAMPLE_QUESTION.explanation_kn : SAMPLE_QUESTION.explanation_en} />
                 </div>
               </div>
             )}
