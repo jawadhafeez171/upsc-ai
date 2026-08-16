@@ -73,55 +73,13 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                 // Calculate available questions
                 let qCount = 0;
                 if (examId === 'upsc-cse') {
-                    const SubjectTableMap: Record<string, string> = {
-                        'Ancient History': 'PYQ Ancient History',
-                        'Medieval History': 'PYQ Medieval Hisotry',
-                        'Art and Culture': 'PYQ Art and Culture',
-                        'Modern History': 'PYQ Modern History',
-                        'Polity': 'PYQ Polity',
-                        'Economics': 'PYQ Economics',
-                        'Geography': 'PYQ Geography',
-                        'Environment': 'PYQ Environement',
-                        'Science & Technology': 'PYQ Science&Tech',
-                        'Science and Technology': 'PYQ Science&Tech',
-                        'Science': 'PYQ Science&Tech',
-                        'IR and Current Affairs': 'PYQ IR and Current Affairs',
-                        'Current Affairs': 'PYQ IR and Current Affairs',
-                        'General Awareness': 'PYQ General Awareness'
-                    };
-
-                    const distinctTables = [
-                        'PYQ Ancient History',
-                        'PYQ Medieval Hisotry',
-                        'PYQ Art and Culture',
-                        'PYQ Modern History',
-                        'PYQ Polity',
-                        'PYQ Economics',
-                        'PYQ Geography',
-                        'PYQ Environement',
-                        'PYQ Science&Tech',
-                        'PYQ IR and Current Affairs',
-                        'PYQ General Awareness'
-                    ];
-
-                    if (mode === 'subject' && subject) {
-                        const tableName = SubjectTableMap[subject] || 'PYQ Modern History';
-                        let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
-                        if (difficulty !== 'mixed') query = query.ilike('difficulty', difficulty);
-                        if (year !== 'all') query = query.eq('Year', year);
-                        const { count } = await query;
-                        qCount = count || 0;
-                    } else {
-                        const promises = distinctTables.map(async (tableName) => {
-                            let query = supabase.from(tableName).select('content_key', { count: 'exact', head: true });
-                            if (difficulty !== 'mixed') query = query.ilike('difficulty', difficulty);
-                            if (year !== 'all') query = query.eq('Year', year);
-                            const { count } = await query;
-                            return count || 0;
-                        });
-                        const counts = await Promise.all(promises);
-                        qCount = counts.reduce((acc, c) => acc + c, 0);
-                    }
+                    let query = supabase.from('upsc_questions').select('id', { count: 'exact', head: true }).gt('year', 0);
+                    if (mode === 'subject' && subject) query = query.ilike('subject', `%${subject}%`);
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                    if (year !== 'all') query = query.eq('year', year);
+                    if (paper !== 'all') query = query.eq('paper', paper);
+                    const { count: uCount } = await query;
+                    qCount = uCount || 0;
                 } else if (examId === 'kpsc-kas') {
                     let query = supabase.from('kas_questions').select('id', { count: 'exact', head: true });
                     if (mode === 'subject' && subject) query = query.eq('subject', subject);
@@ -548,6 +506,20 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     >
                                         English
                                     </button>
+                                    {exam.languages.includes('hi') && (
+                                        <button
+                                            onClick={() => setTestLang('hi')}
+                                            style={{
+                                                padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
+                                                fontSize: '13px', fontWeight: 700,
+                                                background: testLang === 'hi' ? 'var(--bg-secondary)' : 'var(--bg-primary)',
+                                                color: testLang === 'hi' ? 'var(--brand-teal)' : 'var(--text-secondary)',
+                                                border: testLang === 'hi' ? '1.5px solid var(--brand-teal)' : '1px solid var(--border)',
+                                            }}
+                                        >
+                                            हिन्दी (Hindi)
+                                        </button>
+                                    )}
                                     {exam.languages.includes('kn') && (
                                         <button
                                             onClick={() => setTestLang('kn')}

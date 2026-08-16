@@ -35,68 +35,16 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             let selectedRawQuestions: any[] = [];
 
             if (config.exam_id === 'upsc-cse') {
-                const SubjectTableMap: Record<string, string> = {
-                    'Ancient History': 'PYQ Ancient History',
-                    'Medieval History': 'PYQ Medieval Hisotry',
-                    'Art and Culture': 'PYQ Art and Culture',
-                    'Modern History': 'PYQ Modern History',
-                    'Polity': 'PYQ Polity',
-                    'Economics': 'PYQ Economics',
-                    'Geography': 'PYQ Geography',
-                    'Environment': 'PYQ Environement',
-                    'Science & Technology': 'PYQ Science&Tech',
-                    'Science and Technology': 'PYQ Science&Tech',
-                    'Science': 'PYQ Science&Tech',
-                    'IR and Current Affairs': 'PYQ IR and Current Affairs',
-                    'General Awareness': 'PYQ General Awareness'
-                };
+                let query = supabase.from('upsc_questions').select('*').gt('year', 0);
+                if (config.mode === 'subject' && config.subject) query = query.ilike('subject', `%${config.subject}%`);
+                if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                if (config.year && config.year !== 'all') query = query.eq('year', config.year);
+                if (config.paper && config.paper !== 'all') query = query.eq('paper', config.paper);
+                const { data, error } = await query;
 
-                const fetchCandidateIds = async (tableName: string) => {
-                    let query = supabase.from(tableName).select('content_key, difficulty');
-                    if (config.difficulty !== 'mixed') {
-                        query = query.ilike('difficulty', config.difficulty);
-                    }
-                    if (config.year && config.year !== 'all') {
-                        query = query.eq('Year', config.year);
-                    }
-                    const { data } = await query;
-                    return (data || []).map(r => ({
-                        content_key: r.content_key,
-                        difficulty: r.difficulty || 'medium',
-                        tableName
-                    }));
-                };
-
-                let candidates: { content_key: string; difficulty: string; tableName: string }[] = [];
-
-                if (config.mode === 'subject' && config.subject) {
-                    const tableName = SubjectTableMap[config.subject];
-                    if (tableName) {
-                        candidates = await fetchCandidateIds(tableName);
-                    }
-                } else {
-                    const tables = Object.values(SubjectTableMap);
-                    const results = await Promise.all(tables.map(t => fetchCandidateIds(t)));
-                    candidates = results.flat();
-                }
-
-                if (candidates.length > 0) {
-                    const shuffledCandidates = [...candidates].sort(() => Math.random() - 0.5);
-                    const selectedCandidates = shuffledCandidates.slice(0, Math.min(config.question_count, candidates.length));
-
-                    const groupedByTable: Record<string, string[]> = {};
-                    selectedCandidates.forEach(c => {
-                        if (!groupedByTable[c.tableName]) groupedByTable[c.tableName] = [];
-                        groupedByTable[c.tableName].push(c.content_key);
-                    });
-
-                    const fetchFullRows = Object.entries(groupedByTable).map(async ([tableName, keys]) => {
-                        const { data } = await supabase.from(tableName).select('*').in('content_key', keys);
-                        return (data || []).map(row => ({ ...row, _source_table: tableName }));
-                    });
-
-                    const fullRowsResult = await Promise.all(fetchFullRows);
-                    selectedRawQuestions = fullRowsResult.flat();
+                if (!error && data && data.length > 0) {
+                    const shuffled = [...data].sort(() => Math.random() - 0.5);
+                    selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
                 }
             } else if (config.exam_id === 'kpsc-kas') {
                 let query = supabase.from('kas_questions').select('*');
@@ -138,8 +86,30 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 }
 
                 const formattedQs: Question[] = sortedQuestions.map((dbq) => {
-                    const isPyqSchema = !!dbq.content_key;
-                    if (isPyqSchema) {
+                    if (dbq.options_en && Array.isArray(dbq.options_en)) {
+                        return {
+                            id: dbq.id,
+                            exam_id: dbq.exam_id || 'upsc-cse',
+                            subject: dbq.subject || 'General Studies',
+                            difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
+                            text: dbq.text_en,
+                            text_hi: dbq.text_hi || undefined,
+                            text_kn: dbq.text_kn || undefined,
+                            options: dbq.options_en.map((opt: string, idx: number) => ({
+                                id: String.fromCharCode(97 + idx),
+                                text: opt,
+                                text_hi: dbq.options_hi?.[idx] || undefined,
+                                text_kn: dbq.options_kn?.[idx] || undefined
+                            })),
+                            correct: dbq.correct_option || (dbq.correct_index !== undefined ? String.fromCharCode(97 + dbq.correct_index) : 'a'),
+                            explanation: dbq.explanation_en || 'No explanation available.',
+                            explanation_hi: dbq.explanation_hi || undefined,
+                            explanation_kn: dbq.explanation_kn || undefined,
+                            image_url: dbq.image_url || undefined,
+                            subject_kannada: dbq.subject_kannada || undefined,
+                            sub_topic_kannada: dbq.sub_topic_kannada || undefined
+                        };
+                    } else if (dbq.content_key) {
                         const rawAns = (dbq['Correct Answer'] || 'a').toLowerCase().trim();
                         const correctChar = ['a', 'b', 'c', 'd'].includes(rawAns) ? rawAns : 'a';
                         const optionsList = [
@@ -299,7 +269,29 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     </div>
 
                     {/* Language switcher */}
-                    {(activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea') || activeSession?.config?.exam_id === 'upsc-cse') && (
+                    {activeSession?.config?.exam_id === 'upsc-cse' ? (
+                        <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                            {(['en', 'hi'] as const).map((l) => (
+                                <button
+                                    key={l}
+                                    onClick={() => setActiveLang(l)}
+                                    style={{
+                                        padding: '4px 10px',
+                                        borderRadius: '6px',
+                                        border: 'none',
+                                        fontSize: '11px',
+                                        fontWeight: 700,
+                                        cursor: 'pointer',
+                                        background: activeLang === l ? 'var(--brand-orange)' : 'transparent',
+                                        color: activeLang === l ? 'white' : 'var(--text-secondary)',
+                                        transition: 'all 0.15s'
+                                    }}
+                                >
+                                    {l === 'en' ? '🇬🇧 EN' : '🇮🇳 HI'}
+                                </button>
+                            ))}
+                        </div>
+                    ) : (activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea')) ? (
                         <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
                             {(['en', 'kn'] as const).map((l) => (
                                 <button
@@ -321,7 +313,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                                 </button>
                             ))}
                         </div>
-                    )}
+                    ) : null}
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 700, fontSize: '16px', color: isTimeLow ? 'var(--accent-rose)' : 'var(--text-primary)' }}>
                         <Clock size={15} /> {formatTime(timeLeft)}

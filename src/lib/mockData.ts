@@ -7,7 +7,7 @@ export const EXAMS: Exam[] = [
         name: 'UPSC CSE',
         category: 'upsc',
         description: 'Civil Services Examination — IAS, IPS, IFS & Group A Central Services',
-        languages: ['en'],
+        languages: ['en', 'hi'],
         negative_marking: 0.33,
         subjects: ['Ancient History', 'Medieval History', 'Art and Culture', 'Modern History', 'Polity', 'Economics', 'Geography', 'Environment', 'Science & Technology', 'IR and Current Affairs', 'General Awareness'],
         icon: '🏛️',
