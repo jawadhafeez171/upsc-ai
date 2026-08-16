@@ -6,6 +6,7 @@ import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { CheckCircle, XCircle, MinusCircle, ChevronDown, ChevronUp, RotateCcw, Home, Loader2 } from 'lucide-react';
 import QuestionFormatter, { OptionFormatter, ExplanationFormatter } from '@/components/ui/QuestionFormatter';
+import { isValidImageUrl } from '@/lib/imageUtils';
 type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'skipped';
 
 export default function ResultsPage({ params }: { params: Promise<{ testId: string }> }) {
@@ -200,7 +201,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                             <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}</div>
                                             <div style={{ fontWeight: 600 }}>
                                                 <QuestionFormatter text={qText} />
-                                                {q.image_url && (
+                                                {isValidImageUrl(q.image_url) && (
                                                     <div style={{ marginTop: '12px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border)', background: 'var(--bg-card)', display: 'flex', justifyContent: 'center', padding: '12px' }}>
                                                         <img src={q.image_url} alt="Question Diagram" style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain' }} />
                                                     </div>

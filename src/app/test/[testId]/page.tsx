@@ -7,6 +7,7 @@ import { Clock, Flag, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
 import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
+import { isValidImageUrl } from '@/lib/imageUtils';
 
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
@@ -25,7 +26,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         if (activeSession?.config?.language) {
             setActiveLang(activeSession.config.language);
         }
-    }, [activeSession?.config?.language]);
+    }, [activeSession]);
 
     useEffect(() => {
         if (!activeSession || activeSession.id !== testId) { router.push('/exams'); return; }
@@ -105,7 +106,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             explanation: dbq.explanation_en || 'No explanation available.',
                             explanation_hi: dbq.explanation_hi || undefined,
                             explanation_kn: dbq.explanation_kn || undefined,
-                            image_url: dbq.image_url || undefined,
+                            image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
                             subject_kannada: dbq.subject_kannada || undefined,
                             sub_topic_kannada: dbq.sub_topic_kannada || undefined
                         };
@@ -129,7 +130,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             correct: correctChar,
                             explanation: dbq.Explanation || dbq.explanation_correct || 'No explanation available.',
                             explanation_hi: dbq.explanation_hi !== 'None' ? dbq.explanation_hi : undefined,
-                            image_url: dbq.image_url || undefined,
+                            image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
                             subject_kannada: dbq.subject_kannada || undefined,
                             sub_topic_kannada: dbq.sub_topic_kannada || undefined
                         };
@@ -151,7 +152,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             explanation: dbq.explanation_en,
                             explanation_kn: dbq.explanation_kn,
                             explanation_hi: dbq.explanation_hi,
-                            image_url: dbq.image_url || undefined,
+                            image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
                             subject_kannada: dbq.subject_kannada || undefined,
                             sub_topic_kannada: dbq.sub_topic_kannada || undefined
                         };
@@ -333,7 +334,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         </div>
                         <div style={{ fontWeight: 600, marginBottom: '24px' }}>
                             <QuestionFormatter text={qText} />
-                            {question.image_url && (
+                            {isValidImageUrl(question.image_url) && (
                                 <div
                                     onClick={() => setPreviewImage(question.image_url!)}
                                     title="Click to expand diagram"
