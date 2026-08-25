@@ -1,0 +1,293 @@
+--- Q4 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-4
+  Asset allocation is the most important investment decision we will ever make, and sadly, most of us do not give that decision the importance it deserves. We are adamant about seeking predictability with our future. We tend to think of investing in risky assets as extremely volatile and value eroding. We also dislike fluctuating returns and the loss of control of investment. We think our money is best left idle, unproductive but safe. There is no asset that is risk-free. We could lose our jobs, our homes can lose value, our banks can go bankrupt, our bonds can default, the government can collapse and companies we chose fondly may cease to exist. But we cannot live life assuming that all these extreme events are waiting to happen, and all at the same time. All these extreme forms of risks we know will not manifest at the same time.
+  
+  Which one of the following statements best implies the suggestion given by the author of the passage?
+
+--- Q6 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-5
+  Although most of the Genetically Modified (GM) crops cultivated now are genetically engineered for a single trait, in future, crops genetically engineered for more than one trait will be the norm. Thus, biotechnology's role in agriculture and the regulation of the same cannot be understood solely in the context of the current generation of GM crops. Instead, there is a need to take a comprehensive look, taking into account various aspects, including socio-economic impacts, so that the potential of the technology can be harnessed while minimizing negative impacts. Given the importance of biotechnology in developing varieties that can help in climate change mitigation and adaptation, not using biotechnology as a part of the climate change action plan cannot be an option. Domestic regulation of biotechnology cannot be viewed in isolation of trade policy and obligations under various international treaties and conventions.
+  
+  Which one of the following statements best implies the crux of the passage?
+
+--- Q11 ---
+  In the sum
+  $$\otimes+1\otimes+5\otimes+\otimes\otimes+\otimes1=1\otimes\otimes$$
+  for which digit does the symbol stand?
+
+--- Q15 ---
+  Consider the following arrangement that has some missing letters:
+  $$abab\_b\_bcb\_dcdcded\_d$$
+  The missing letters which complete the arrangement are
+
+--- Q17 ---
+  Two Statements S1 and S2 are given below followed by a Question:
+  S1: There are not more than two figures on any page of a 51-page book.
+  S2: There is at least one figure on every page.
+  Question:
+  Are there more than 100 figures in that book?
+  Which one of the following is correct in respect of the above Statements and the Question?
+
+--- Q18 ---
+  Consider the following data:
+  * Average marks in English: Girls = 9, Boys = 8, Overall = 8.8
+  * Average marks in Hindi: Girls = 8, Boys = 7, Overall = x
+  What is the value of x in the above table?
+
+--- Q20 ---
+  If in a particular year 12th January is a Sunday, then which one of the following is correct?
+
+--- Q21 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-1
+  Private investment in general is volatile. Foreign private investment is more volatile because the available investment avenues are significantly greater (i.e., the entire world). Therefore, the responsibility of providing employment cannot be left to Foreign Direct Investment (FDI). The current FDI inflows are volatile over time and across sectors and regions, which is a necessary consequence of their search for the highest returns. The adverse consequences are unstable employment and an accentuation of income and regional inequalities. A probable positive consequence of foreign investment is the inflow of new technology and its subsequent diffusion. However, the technology diffusion is not at all certain because the existing state of physical and human capital in India may prove inadequate for the diffusion.
+  
+  With reference to the above passage, the following assumptions have been made:
+  1. Relying on foreign investment in the long run is not an economically sound policy.
+  2. Policies must be undertaken to reduce volatility in foreign private investment.
+  3. Policies must be undertaken to strengthen domestic private investment.
+  4. Public investment should be given priority over private investment.
+  5. Substantial public investment in education and health should be undertaken.
+  Which of the above assumptions is/are valid?
+
+--- Q22 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-2
+  Many opportunities to harness the highly skewed, seasonal and spatial distribution of monsoon flows, which occur in a four-month period from June to September annually, have been lost. Since these few months account for most of the rainfall and consequent freshwater availability, the need for holding rainwater in reservoirs, for subsequently releasing it for use over the year, is a necessity nobody can afford to overlook. Climate change will continue to affect weather conditions and create water shortages and excesses. While millions suffer from droughts and floods, waters in the country's many rivers flow unutilized, and are discharged into the sea every year.
+  
+  With reference to the above passage, which of the following could be the most rational and practical implications for India?
+  1. Inter-linking of rivers should be undertaken.
+  2. A network of dams and canals should be built across the country for proper distribution of water.
+  3. Farmers should be provided easy loans for digging borewells.
+  4. Usage of water for agriculture should be regulated by law.
+  5. Distribution of river water among regions should be regulated by the Union Government.
+  Select the correct answer using the code given below.
+
+--- Q23 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-3
+  People will invest in education whenever they are granted the economic freedom to fully enjoy its benefits. Again, this is for the obvious reason that the return on education increases as the level of economic freedom rises. When people, thanks to lower tax rates, are allowed to retain most of the higher income that they gain from each incremental level of education, it makes eminent sense to invest in education. On the other hand, when the government decides to tax the higher income of educated individuals at even higher rates, it makes very little sense to invest in educating oneself further. The same incentives apply to parents who decide on whether to invest in their children's education.
+  
+  With reference to the above passage, the following assumptions have been made:
+  1. Lower tax rates in a country invariably translate into greater investments in higher education.
+  2. Investment in the education of children ensures their economic freedom.
+  3. Economic freedom has a positive impact on building up human capital.
+  Which of the above assumptions is/are valid?
+
+--- Q24 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-4
+  Our urban bodies cannot possibly ensure sustainable delivery of water in our cities unless financing mechanisms are put in place. Water delivery requires heavy investment in collecting it from a natural source, treating it to make it potable, and laying a distribution network of pipes for delivery to the users. It also requires investments in sewerage infrastructure and sewage treatment plants so that the sewers can carry the wastewater to these plants to ensure that no untreated sewage is discharged back into natural water bodies. If our cities were rich enough to meet the entire cost, water could be delivered free. They are not.
+  
+  What is the most logical and crucial message conveyed by the passage?
+
+--- Q25 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-4
+  Our urban bodies cannot possibly ensure sustainable delivery of water in our cities unless financing mechanisms are put in place. Water delivery requires heavy investment in collecting it from a natural source, treating it to make it potable, and laying a distribution network of pipes for delivery to the users. It also requires investments in sewerage infrastructure and sewage treatment plants so that the sewers can carry the wastewater to these plants to ensure that no untreated sewage is discharged back into natural water bodies. If our cities were rich enough to meet the entire cost, water could be delivered free. They are not.
+  
+  With reference to the above passage, the following assumptions have been made:
+  1. Rich cities only can ensure sustainable delivery of water.
+  2. Sustainable delivery of water in cities means much more than supplying water to households.
+  Which of the above assumptions is/are valid?
+
+--- Q26 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-5
+  In India, agriculture still engages about half of its workforce, and about 85 per cent of its farms are small and marginal. Compared to China and Vietnam, which have experienced fast structural and rural transformation, India's story is of slow transformation. As a result, poverty reduction in India was at a much slower pace during 1988-2014, compared to China and Vietnam. India's poverty reduction was slow during 1988-2005, but during 2005-2012, it accelerated dramatically-almost three times faster than during the earlier period. What did India do during this period? Research reveals that the relative price scenario changed significantly (by more than 50%) in favour of agriculture in the wake of rising global prices. This boosted private investments in agriculture by more than 50%. As a result, agri-GDP growth touched 4.1% during 2007-2012 as against 2.4% during 2002-2007. The net surplus of agri-trade touched $25 billion in 2013-2014; real farm wages rose by 7% per annum. All this led to unprecedented fall in poverty.
+  
+  With reference to the above passage, the following assumptions have been made:
+  1. Structural and rural transformation is impossible when farms are mainly small and marginal.
+  2. A good price incentive can trigger investments in agriculture.
+  3. India needs to build value chains for high-value agri-products like livestock and horticulture.
+  4. Higher global prices of agricultural commodities are essential for India's poverty reduction.
+  Which of the above assumptions are valid?
+
+--- Q27 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-5
+  In India, agriculture still engages about half of its workforce, and about 85 per cent of its farms are small and marginal. Compared to China and Vietnam, which have experienced fast structural and rural transformation, India's story is of slow transformation. As a result, poverty reduction in India was at a much slower pace during 1988-2014, compared to China and Vietnam. India's poverty reduction was slow during 1988-2005, but during 2005-2012, it accelerated dramatically-almost three times faster than during the earlier period. What did India do during this period? Research reveals that the relative price scenario changed significantly (by more than 50%) in favour of agriculture in the wake of rising global prices. This boosted private investments in agriculture by more than 50%. As a result, agri-GDP growth touched 4.1% during 2007-2012 as against 2.4% during 2002-2007. The net surplus of agri-trade touched $25 billion in 2013-2014; real farm wages rose by 7% per annum. All this led to unprecedented fall in poverty.
+  
+  Which one of the following statements best reflects the critical message of the passage?
+
+--- Q28 ---
+  Two Statements S1 and S2 are given below with regard to four numbers P, Q, R and S followed by a Question:
+  S1: R is greater than P as well as Q.
+  S2: S is not the largest one.
+  Question:
+  Among four numbers P, Q, R and S, which one is the largest?
+  Which one of the following is correct in respect of the above Statements and the Question?
+
+--- Q29 ---
+  Two Statements S1 and S2 are given below followed by a Question:
+  S1: n is a prime number.
+  S2: n leaves a remainder of 1 when divided by 4.
+  Question:
+  If n is a unique natural number between 10 and 20, then what is n?
+  Which one of the following is correct in respect of the above Statements and the Question?
+
+--- Q30 ---
+  Two Statements S1 and S2 are given below with regard to two numbers followed by a Question:
+  S1: Their product is 21.
+  S2: Their sum is 10.
+  Question:
+  What are the two numbers?
+  Which one of the following is correct in respect of the above Statements and the Question?
+
+--- Q32 ---
+  Two Statements are given followed by two Conclusions:
+  Statements:
+  All numbers are divisible by 2.
+  All numbers are divisible by 3.
+  Conclusion-I:
+  All numbers are divisible by 6.
+  Conclusion-II:
+  All numbers are divisible by 4.
+  Which of the above Conclusions logically follows/follow from the two given Statements?
+
+--- Q33 ---
+  Two Statements are given followed by two Conclusions:
+  Statements:
+  All cats are dogs.
+  All cats are black.
+  Conclusion-I:
+  All dogs are black.
+  Conclusion-II:
+  Some dogs are not black.
+  Which of the above Conclusions logically follows/follow from the two given Statements, disregarding commonly known facts?
+
+--- Q34 ---
+  Consider the following sequence of numbers:
+  $$5\ 1\ 4\ 7\ 3\ 9\ 8\ 5\ 7\ 2\ 6\ 3\ 1\ 5\ 8\ 6\ 3\ 8\ 5\ 2\ 2\ 4\ 3\ 4\ 9\ 6$$
+  How many odd numbers are followed by the odd number in the above sequence?
+
+--- Q36 ---
+  Three Statements S1, S2 and S3 are given below followed by a Question:
+  S1: C is younger than D, but older than A and B.
+  S2: D is the oldest.
+  S3: A is older than B.
+  Question:
+  Who among A, B, C and D is the youngest?
+  Which one of the following is correct in respect of the above Statements and the Question?
+
+--- Q39 ---
+  The average age of a teacher and three students is 20 years. If all the three students are of same age and the difference between the age of the teacher and each student is 20 years, then what is the age of the teacher?
+
+--- Q41 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-1
+  Spanish ships in the late 16th century first brought the potato tuber from South America to Europe whereby in the early 19th century, it had become a reliable backup to cereal crops, particularly in the cold, rain-soaked soils of Ireland. The Irish were soon almost wholly dependent on the potato as their staple food. And they were planting primarily one prodigious variety, the 'Lumper' potato, whose genetic frailty would be cruelly exposed by the fungus 'Phytophthora infestans'. In 1845, spores of the deadly fungus began spreading across the country, destroying nearly all the Lumpers in its path. The resulting famine killed or displaced millions.
+  
+  Which one of the following statements best reflects the critical message of the passage?
+
+--- Q42 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-2
+  India is at once among the fastest growing global economies and home to the largest number of malnourished children in the world. There are regions where malnutrition is not the exception but the norm. And across the country, malnutrition is the cause of death for roughly half the 1.3 million children who die before their fifth birthday each year. Even those children who survive suffer permanently from the damage that has already been done to their bodies and minds from not getting enough of the right foods and nutrients. Around 44 million children under 5 are stunted. That makes it harder for them to learn in school and subsequently earn a living as adults. Their lifetime earnings potential is almost a quarter less than that of their healthy peers.
+  
+  With reference to the above passage, which of the following is/are the most rational and practical implication/implications?
+  1. India's Public Distribution System should be monitored by the Union Government.
+  2. Girls should be encouraged to delay marriage and first pregnancy.
+  3. Mothers should be encouraged to breastfeed their children immediately after birth.
+  4. The supply of safe drinking water and proper sanitation facilities to all should be ensured.
+  5. Authorities should ensure the vaccination as prescribed.
+  Select the correct answer using the code given below.
+
+--- Q45 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-5
+  Economic liberalization in India was shaped largely by the economic problems of the government than by the economic priorities of the people or by the long-term development objectives. Thus, there were limitations in conception and design which have been subsequently validated by experience. Jobless growth, persistent poverty and rising inequality have mounted as problems since economic liberalization began. And all these years later, four quiet crises confront the economy; agriculture, infrastructure, industrialization and education as constraints on the country's future prospects. These problems must be resolved if economic growth has to be sustained and transformed into meaningful development.
+  
+  Which of the following is/are the most rational and logical inference/inferences that can be made from the passage?
+  1. It is essential to rethink and redefine the economic role of the State in the quest for development.
+  2. India has not made effective implementation of its policies in social sectors nor made sufficient investments in them.
+  Select the correct answer using the code given below.
+
+--- Q46 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-5
+  Economic liberalization in India was shaped largely by the economic problems of the government than by the economic priorities of the people or by the long-term development objectives. Thus, there were limitations in conception and design which have been subsequently validated by experience. Jobless growth, persistent poverty and rising inequality have mounted as problems since economic liberalization began. And all these years later, four quiet crises confront the economy; agriculture, infrastructure, industrialization and education as constraints on the country's future prospects. These problems must be resolved if economic growth has to be sustained and transformed into meaningful development.
+  
+  With reference to the above passage, the following assumptions have been made:
+  1. India's economy needs to be greatly integrated with global economy so as to create large number of jobs and to sustain its growth momentum.
+  2. Economic liberalization would cause large economic growth which would reduce poverty and create sufficient employment in the long run.
+  Which of the above assumptions is/are valid?
+
+--- Q51 ---
+  What is the greatest length x such that $3\frac{1}{2}\text{ m}$ and $8\frac{3}{4}\text{ m}$ are integral multiples of x?
+
+--- Q52 ---
+  Consider the following data:
+  * 1911-1921: Birthrate = 48.1, Death rate = 35.5
+  * 1921-1931: Birthrate = 46.4, Death rate = 36.3
+  * 1931-1941: Birthrate = 45.2, Death rate = 31.2
+  * 1941-1951: Birthrate = 39.9, Death rate = 27.4
+  * 1951-1961: Birthrate = 41.7, Death rate = 22.8
+  * 1961-1971: Birthrate = 41.1, Death rate = 18.9
+  * 1971-1981: Birthrate = 37.1, Death rate = 14.8
+  For which period was the natural growth rate maximum?
+
+--- Q61 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-1
+  Bank credit to the industrial sector has started shrinking. Its decline has been a serious concern as credit growth is essential to revive investment. The problem's origins lie in the incomplete reforms of the last 25 years. An institutional change that should have followed the 1991 reforms should have been setting up of a resolution corporation for banks. In a market economy with booms and busts, banks should be allowed to be set up and to fail. Today, we cannot shut down banks because there is no proper system to shut them down. Weak loss-making banks continue to need more capital.
+  
+  Which one of the following is the most logical and rational inference that can be made from the above passage?
+
+--- Q65 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-4
+  Many people understand the connection between solid waste management and health in terms of the consequences of unattended heaps of dry garbage which become home for flies and other vermin. However, there is another aspect that is not well-understood, that is, what happens when unscientific solid waste management combines with poor drainage and dumping of untreated sewage into drains which are meant to carry storm water during rains. The result is choked drains which are full of stagnant water breeding mosquitoes, resulting in the spread of water-borne diseases.
+  
+  In the context of India, which one of the following statements best reflects the critical message of the passage?
+
+--- Q66 ---
+  Directions for the following item:
+  Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
+  
+  Passage-5
+  In Part III of the Constitution, which assures people certain fundamental rights, Article 25 proclaims that "all persons are equally entitled to freedom of conscience and the right freely to profess, practise and propagate religion". What people fail to notice is that this proclamation is prefixed with the words "subject to public order, morality, health and to the other provisions of this Part", which set conditions precedent for the legal protection of religious practices of any community. The closing words of this prefatory rider in Article 25 virtually constitute a subordination clause placing other fundamental rights mentioned in Part III over and above the right to religious freedom. Among those other fundamental rights is the right to equality before law and equal protection of laws—assured at the outset and elaborated in later articles to mean, inter alia, that the State shall not deny equal protection of laws to any person or group of persons on the basis of religion alone.
+  
+  What is the most logical inference from the above passage?
+
+--- Q69 ---
+  The average score of a batsman after his 50th innings was 46.4. After 60th innings, his average score increases by 2.6. What was his average score in the last ten innings?
+
+--- Q73 ---
+  Consider the following statements:
+  1. The minimum number of points of intersection of a square and a circle is 2.
+  2. The maximum number of points of intersection of a square and a circle is 8.
+  Which of the above statements is/are correct?
+

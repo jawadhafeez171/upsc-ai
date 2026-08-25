@@ -506,11 +506,19 @@ Therefore, S1 and S2 together are not sufficient to answer the Question.', 'स�
 
 अतः S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', NULL),
     ('csat-2020-q18', 18, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Weighted Averages & Class Proportion Determination', 'भारित औसत एवं कक्षा अनुपात निर्धारण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Weighted Averages', 'Mixtures & Allegations']::TEXT[], 'Consider the following data:
-* Average marks in English: Girls = 9, Boys = 8, Overall = 8.8
-* Average marks in Hindi: Girls = 8, Boys = 7, Overall = x
+
+Subject | Average Marks (Girls) | Average Marks (Boys) | Overall Average Marks
+--- | --- | --- | ---
+English | 9 | 8 | 8.8
+Hindi | 8 | 7 | x
+
 What is the value of x in the above table?', 'निम्नलिखित आँकड़ों पर विचार कीजिए:
-* अंग्रेजी में माध्य प्राप्तांक: लड़कियाँ = 9, लड़के = 8, कुल माध्य प्राप्तांक = 8.8
-* हिन्दी में माध्य प्राप्तांक: लड़कियाँ = 8, लड़के = 7, कुल माध्य प्राप्तांक = x
+
+विषय | औसत अंक (लड़कियाँ) | औसत अंक (लड़के) | कुल औसत अंक
+--- | --- | --- | ---
+अंग्रेजी | 9 | 8 | 8.8
+हिन्दी | 8 | 7 | x
+
 उपर्युक्त सारणी में x का मान क्या है?', '7.8', '7.6', '7.4', '7.2', '7.8', '7.6', '7.4', '7.2', 'A', 'Correct Answer: Option A (7.8).
 
 1. Let $G$ be the number of girls and $B$ be the number of boys. Using English average marks:
@@ -1335,15 +1343,7 @@ Therefore, the missing term is NPJM.', 'सही उत्तर: विकल�
    * $I (9) + 4 = M (13)$
 
 अतः लुप्त पद NPJM है।', NULL),
-    ('csat-2020-q50', 50, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Laws of Exponents, Negative Indices & Magnitude Comparison', 'घातांक नियम, ऋणात्मक घातें एवं परिमाण तुलना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Exponents & Powers', 'Number Comparison']::TEXT[], 'What is the largest number among the following?
-(a) $(1/2)^{-6}$
-(b) $(1/4)^{-3}$
-(c) $(1/3)^{-4}$
-(d) $(1/6)^{-2}$', 'निम्न में कौन-सी सबसे बड़ी संख्या है?
-(a) $(1/2)^{-6}$
-(b) $(1/4)^{-3}$
-(c) $(1/3)^{-4}$
-(d) $(1/6)^{-2}$', '(1/2)^-6', '(1/4)^-3', '(1/3)^-4', '(1/6)^-2', '(1/2)^-6', '(1/4)^-3', '(1/3)^-4', '(1/6)^-2', 'C', 'Correct Answer: Option C ($(1/3)^{-4}$).
+    ('csat-2020-q50', 50, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Laws of Exponents, Negative Indices & Magnitude Comparison', 'घातांक नियम, ऋणात्मक घातें एवं परिमाण तुलना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Exponents & Powers', 'Number Comparison']::TEXT[], 'What is the largest number among the following?', 'निम्न में कौन-सी सबसे बड़ी संख्या है?', '$(1/2)^{-6}$', '$(1/4)^{-3}$', '$(1/3)^{-4}$', '$(1/6)^{-2}$', '$(1/2)^{-6}$', '$(1/4)^{-3}$', '$(1/3)^{-4}$', '$(1/6)^{-2}$', 'C', 'Correct Answer: Option C ($(1/3)^{-4}$).
 
 1. Using the negative exponent rule $(1/a)^{-b} = a^b$, evaluate the numerical value of each option:
    * Option A: $\left(\frac{1}{2}\right)^{-6} = 2^6 = 64$
@@ -1362,7 +1362,7 @@ Therefore, $(1/3)^{-4}$ is the largest number.', 'सही उत्तर: व
 2. मानों की तुलना करने पर: $81 > 64 = 64 > 36$।
 
 अतः सबसे बड़ी संख्या $(1/3)^{-4}$ है।', NULL),
-    ('csat-2020-q51', 51, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'HCF of Mixed Fractions & Unit Conversion in Lengths', 'मिश्रित भिन्नों का महत्तम समापवर्तक (HCF) एवं लंबाई इकाई रूपांतरण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'HCF of Fractions', 'Mensuration Units']::TEXT[], 'What is the greatest length x such that $3\frac{1}{2}\text{ m}$ and $8\frac{3}{4}\text{ m}$ are integral multiples of x?', 'अधिकतम लम्बाई x क्या होगी, जिससे कि $3\frac{1}{2}\text{ m}$ और $8\frac{3}{4}\text{ m}$, x के पूर्णांक गुणज हों?', '1 1/2 m', '1 1/3 m', '1 1/4 m', '1 3/4 m', '1 1/2 m', '1 1/3 m', '1 1/4 m', '1 3/4 m', 'D', 'Correct Answer: Option D ($1\frac{3}{4}\text{ m}$).
+    ('csat-2020-q51', 51, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'HCF of Mixed Fractions & Unit Conversion in Lengths', 'मिश्रित भिन्नों का महत्तम समापवर्तक (HCF) एवं लंबाई इकाई रूपांतरण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'HCF of Fractions', 'Mensuration Units']::TEXT[], 'What is the greatest length x such that $3\frac{1}{2}\text{ m}$ and $8\frac{3}{4}\text{ m}$ are integral multiples of x?', 'वह महत्तम लंबाई x क्या है जिससे कि $3\frac{1}{2}\text{ m}$ और $8\frac{3}{4}\text{ m}$, x के पूर्णांक गुणज हैं?', '$1\frac{1}{2}\text{ m}$', '$1\frac{1}{3}\text{ m}$', '$1\frac{1}{4}\text{ m}$', '$1\frac{3}{4}\text{ m}$', '$1\frac{1}{2}\text{ m}$', '$1\frac{1}{3}\text{ m}$', '$1\frac{1}{4}\text{ m}$', '$1\frac{3}{4}\text{ m}$', 'D', 'Correct Answer: Option D ($1\frac{3}{4}\text{ m}$).
 
 1. For both lengths to be integral multiples of $x$, $x$ must be the Highest Common Factor (HCF) of $3\frac{1}{2}\text{ m}$ and $8\frac{3}{4}\text{ m}$.
 2. Convert the mixed numbers into improper fractions:
@@ -1380,22 +1380,30 @@ Therefore, the greatest length x is $1\frac{3}{4}\text{ m}$.', 'सही उत
 
 अतः अधिकतम लम्बाई $x = 1\frac{3}{4}\text{ m}$ होगी।', NULL),
     ('csat-2020-q52', 52, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Demographic Table Data Interpretation (Natural Growth Rate)', 'जनसांख्यिकीय तालिका आँकड़ा व्याख्या (प्राकृतिक संवृद्धि दर)', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Data Interpretation', 'Tables', 'Demographics']::TEXT[], 'Consider the following data:
-* 1911-1921: Birthrate = 48.1, Death rate = 35.5
-* 1921-1931: Birthrate = 46.4, Death rate = 36.3
-* 1931-1941: Birthrate = 45.2, Death rate = 31.2
-* 1941-1951: Birthrate = 39.9, Death rate = 27.4
-* 1951-1961: Birthrate = 41.7, Death rate = 22.8
-* 1961-1971: Birthrate = 41.1, Death rate = 18.9
-* 1971-1981: Birthrate = 37.1, Death rate = 14.8
-For which period was the natural growth rate maximum?', 'निम्न आँकड़ों पर विचार कीजिए :
-* 1911-1921: जन्मदर = 48.1, मृत्यु दर = 35.5
-* 1921-1931: जन्मदर = 46.4, मृत्यु दर = 36.3
-* 1931-1941: जन्मदर = 45.2, मृत्यु दर = 31.2
-* 1941-1951: जन्मदर = 39.9, मृत्यु दर = 27.4
-* 1951-1961: जन्मदर = 41.7, मृत्यु दर = 22.8
-* 1961-1971: जन्मदर = 41.1, मृत्यु दर = 18.9
-* 1971-1981: जन्मदर = 37.1, मृत्यु दर = 14.8
-किस समयावधि में प्राकृतिक विकास दर अधिकतम थी?', '1911-1921', '1941-1951', '1961-1971', '1971-1981', '1911-1921', '1941-1951', '1961-1971', '1971-1981', 'D', 'Correct Answer: Option D (1971-1981).
+
+Period | Birth Rate | Death Rate
+--- | --- | ---
+1911-1921 | 48.1 | 35.5
+1921-1931 | 46.4 | 36.3
+1931-1941 | 45.2 | 31.2
+1941-1951 | 39.9 | 27.4
+1951-1961 | 41.7 | 22.8
+1961-1971 | 41.1 | 18.9
+1971-1981 | 37.1 | 14.8
+
+For which period was the natural growth rate maximum?', 'निम्नलिखित आँकड़ों पर विचार कीजिए:
+
+काल-अवधि | जन्म-दर | मृत्यु-दर
+--- | --- | ---
+1911-1921 | 48.1 | 35.5
+1921-1931 | 46.4 | 36.3
+1931-1941 | 45.2 | 31.2
+1941-1951 | 39.9 | 27.4
+1951-1961 | 41.7 | 22.8
+1961-1971 | 41.1 | 18.9
+1971-1981 | 37.1 | 14.8
+
+किस अवधि के लिए प्राकृतिक वृद्धि-दर अधिकतम थी?', '1911-1921', '1941-1951', '1961-1971', '1971-1981', '1911-1921', '1941-1951', '1961-1971', '1971-1981', 'D', 'Correct Answer: Option D (1971-1981).
 
 1. Natural growth rate is calculated as: $\text{Natural Growth Rate} = \text{Birthrate} - \text{Death rate}$.
 2. Compute the natural growth rate for each given period:
@@ -1467,7 +1475,7 @@ Therefore, the least four-digit number is 1022.', 'सही उत्तर: �
    $$N = 1020 + 2 = 1022$$
 
 अतः चार अंकों की सबसे छोटी संख्या 1022 है।', NULL),
-    ('csat-2020-q55', 55, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Demographic Percentage & Marriage Proportion Equations', 'जनसंख्या प्रतिशत एवं वैवाहिक अनुपात समीकरण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Percentages', 'Ratio & Proportion']::TEXT[], 'In adult population of a city, 40% men and 30% women are married. What is the percentage of married adult population if no man marries more than one woman and no woman marries more than one man; and there are no widows and widowers?', 'एक शहर की वयस्क समष्टि में 40% पुरुष और 30% महिलाएँ विवाहित हैं। विवाहित वयस्क समष्टि का प्रतिशत क्या है, यदि कोई भी पुरुष एक से अधिक महिला से विवाह नहीं करता है और कोई भी महिला एक से अधिक पुरुष से विवाह नहीं करती है; और इनमें कोई विधवा और विधुर नहीं है?', '33 1/7%', '34%', '34 2/7%', '35%', '33 1/7%', '34%', '34 2/7%', '35%', 'C', 'Correct Answer: Option C ($34\frac{2}{7}\%$).
+    ('csat-2020-q55', 55, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Demographic Percentage & Marriage Proportion Equations', 'जनसंख्या प्रतिशत एवं वैवाहिक अनुपात समीकरण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Percentages', 'Ratio & Proportion']::TEXT[], 'In adult population of a city, 40% men and 30% women are married. What is the percentage of married adult population if no man marries more than one woman and no woman marries more than one man; and there are no widows and widowers?', 'एक शहर की वयस्क समष्टि में 40% पुरुष और 30% महिलाएँ विवाहित हैं। विवाहित वयस्क समष्टि का प्रतिशत क्या है, यदि कोई भी पुरुष एक से अधिक महिला से विवाह नहीं करता है और कोई भी महिला एक से अधिक पुरुष से विवाह नहीं करती है; और इनमें कोई विधवा और विधुर नहीं है?', '$33\frac{1}{7}\%$', '34%', '$34\frac{2}{7}\%$', '35%', '$33\frac{1}{7}\%$', '34%', '$34\frac{2}{7}\%$', '35%', 'C', 'Correct Answer: Option C ($34\frac{2}{7}\%$).
 
 1. Let $M$ be the total adult male population and $W$ be the total adult female population.
 2. Since monogamy holds and there are no widows/widowers, the number of married men equals the number of married women:
@@ -1491,7 +1499,7 @@ Therefore, the percentage of married adult population is $34\frac{2}{7}\%$.', '�
    $$\frac{240}{700} \times 100\% = \frac{240}{7}\% = 34\frac{2}{7}\%$$
 
 अतः विवाहित वयस्क समष्टि का प्रतिशत $34\frac{2}{7}\%$ है।', NULL),
-    ('csat-2020-q56', 56, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Modular Arithmetic, Factor Cancellation & Remainder in Large Products', 'मॉड्यूलर अंकगणित, गुणनखंड निरसन एवं वृहद् गुणनफल शेषफल', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Remainders', 'Modular Arithmetic']::TEXT[], 'What is the remainder when $51 \times 27 \times 35 \times 62 \times 75$ is divided by 100?', 'जब $51\times27\times35\times62\times75$ को 100 से विभाजित किया जाता है, तो शेषफल क्या है?', '50', '25', '5', '1', '50', '25', '5', '1', 'A', 'Correct Answer: Option A (50).
+    ('csat-2020-q56', 56, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Modular Arithmetic, Factor Cancellation & Remainder in Large Products', 'मॉड्यूलर अंकगणित, गुणनखंड निरसन एवं वृहद् गुणनफल शेषफल', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Remainders', 'Modular Arithmetic']::TEXT[], 'What is the remainder when $51 \times 27 \times 35 \times 62 \times 75$ is divided by 100?', 'जब $51 \times 27 \times 35 \times 62 \times 75$ को 100 से विभाजित किया जाता है, तो शेषफल क्या है?', '50', '25', '5', '1', '50', '25', '5', '1', 'A', 'Correct Answer: Option A (50).
 
 1. Let $N = 51 \times 27 \times 35 \times 62 \times 75$.
 2. Factorize the prime powers of 2 and 5 in $N$:
@@ -1513,7 +1521,7 @@ Therefore, the remainder is 50.', 'सही उत्तर: विकल्प
 4. 50 का कोई भी विषम गुणज (जैसे 50, 150, 250, ...) 100 से भाग देने पर सदैव 50 शेषफल देता है।
 
 अतः 100 से विभाजित करने पर शेषफल 50 होगा।', NULL),
-    ('csat-2020-q57', 57, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Fractional Ratio Simplification & Monetary Distribution', 'भिन्न अनुपातों का सरलीकरण एवं धनराशि वितरण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Ratio & Proportion', 'Division of Amounts']::TEXT[], 'A sum of ₹2,500 is distributed among X, Y and Z in the ratio $\frac{1}{2} : \frac{3}{4} : \frac{5}{6}$. What is the difference between the maximum share and the minimum share?', '₹2,500 की एक धनराशि को X, Y और Z में $\frac{1}{2}:\frac{3}{4}:\frac{5}{6}$ के अनुपात में वितरित किया जाता है। अधिकतम अंश और न्यूनतम अंश के बीच अंतर क्या है?', '300', '350', '400', '450', '300', '350', '400', '450', 'C', 'Correct Answer: Option C (400).
+    ('csat-2020-q57', 57, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Fractional Ratio Simplification & Monetary Distribution', 'भिन्न अनुपातों का सरलीकरण एवं धनराशि वितरण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Ratio & Proportion', 'Division of Amounts']::TEXT[], 'A sum of ₹2,500 is distributed among X, Y and Z in the ratio $\frac{1}{2} : \frac{3}{4} : \frac{5}{6}$. What is the difference between the maximum share and the minimum share?', '₹2,500 की धनराशि को X, Y और Z में $\frac{1}{2} : \frac{3}{4} : \frac{5}{6}$ के अनुपात में वितरित किया जाता है। अधिकतम अंश और न्यूनतम अंश के बीच अंतर क्या है?', '300', '350', '400', '450', '300', '350', '400', '450', 'C', 'Correct Answer: Option C (400).
 
 1. Clear denominators by multiplying the fractional ratio by $\text{LCM}(2, 4, 6) = 12$:
    $$X : Y : Z = \left(\frac{1}{2} \times 12\right) : \left(\frac{3}{4} \times 12\right) : \left(\frac{5}{6} \times 12\right) = 6 : 9 : 10$$
@@ -1532,7 +1540,7 @@ Therefore, the difference between the maximum and minimum share is 400.', 'स�
 5. अंतर $= 1000 - 600 = 400$ रुपये।
 
 अतः अधिकतम अंश और न्यूनतम अंश के बीच अंतर 400 है।', NULL),
-    ('csat-2020-q58', 58, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Digit Sum of Powers of Ten Expressions (10^n + 1)', 'दस की घात व्यंजकों (10^n + 1) के अंकों का योग', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Powers of 10', 'Sum of Digits']::TEXT[], 'For what value of n, the sum of digits in the number $(10^n + 1)$ is 2?', 'n के किस मान के लिए संख्या $(10^n+1)$ में अंकों का योग 2 है?', 'For n = 0 only', 'For any whole number n', 'For any positive integer n only', 'For any real number n', 'केवल n = 0 के लिए', 'किसी पूर्ण संख्या n के लिए', 'केवल किसी धनात्मक पूर्णांक n के लिए', 'किसी वास्तविक संख्या n के लिए', 'B', 'Correct Answer: Option B (For any whole number n).
+    ('csat-2020-q58', 58, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Digit Sum of Powers of Ten Expressions (10^n + 1)', 'दस की घात व्यंजकों (10^n + 1) के अंकों का योग', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Powers of 10', 'Sum of Digits']::TEXT[], 'For what value of n, the sum of digits in the number $(10^n + 1)$ is 2?', 'n के किस मान के लिए, संख्या $(10^n + 1)$ के अंकों का योग 2 है?', 'For n = 0 only', 'For any whole number n', 'For any positive integer n only', 'For any real number n', 'केवल n = 0 के लिए', 'किसी पूर्ण संख्या n के लिए', 'केवल किसी धनात्मक पूर्णांक n के लिए', 'किसी वास्तविक संख्या n के लिए', 'B', 'Correct Answer: Option B (For any whole number n).
 
 1. Check whole numbers $n \in \{0, 1, 2, 3, \dots\}$:
    * If $n = 0$: $10^0 + 1 = 1 + 1 = 2$. Sum of digits $= 2$.

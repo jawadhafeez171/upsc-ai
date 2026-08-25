@@ -43,11 +43,12 @@ export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
         .replace(/\$ightarrow\$/g, ' → ')
         .replace(/ightarrow/g, ' → ');
 
-    // Normalize spacing around currency symbols
+    // Normalize spacing around currency symbols (e.g. $ 25 billion -> $25 billion)
     text = text.replace(/\$\s+(\d+[\d,]*(?:\.\d+)?(?:\s*(?:million|billion|trillion|lakh|crore))?)\b/gi, '$$$1');
 
     // Split text into tokens by LaTeX delimiters: $$display$$, $inline$, or **bold**
-    const tokenRegex = /(\$\$[\s\S]+?\$\$|\$(?!\s*[\d,]+(?:\s*(?:million|billion|trillion|lakh|crore))?\s*(?:[.,!?\s]|$))[^$\n]+?\$|\*\*[^*]+?\*\*)/g;
+    // Match $$...$$, $...$, or **...**
+    const tokenRegex = /(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$|\*\*[^*]+?\*\*)/g;
 
     const parts = text.split(tokenRegex);
 
@@ -71,8 +72,13 @@ export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
                 }
 
                 // Inline math $...$
-                if (part.startsWith('$') && part.endsWith('$') && part.length > 2) {
-                    const mathContent = part.slice(1, -1);
+                if (part.startsWith('$') && part.endsWith('$') && part.length >= 2) {
+                    const mathContent = part.slice(1, -1).trim();
+                    // Check if it's purely a currency token without math operators, e.g. $25 billion or $100
+                    const isCurrencyOnly = /^\d+(?:,\d+)*(?:\.\d+)?(?:\s*(?:million|billion|trillion|lakh|crore|thousand|USD))?$/i.test(mathContent);
+                    if (isCurrencyOnly) {
+                        return <span key={index}>${mathContent}</span>;
+                    }
                     const html = renderKaTeXHtml(mathContent, false);
                     return (
                         <span
@@ -107,18 +113,18 @@ function preProcessQuestionText(text: string): string {
     // Normalize diamond question marks
     let normalized = text.replace(/[\ufffd\uFFFD]/g, ' | ');
 
-    // 0. Split inline premises, numbered statements, and final question prompts crammed on single lines
+    // 0. Split inline premises, numbered statements, and final question prompts ONLY when crammed on single lines
     normalized = normalized
-        // Newline after intro premise colon
+        // Newline after intro premise colon (e.g. "Consider the following statements: 1. ...")
         .replace(/(consider the following statements?|consider the following pairs?|consider the following events?|consider the following items?|consider the following:?|statements?:|pairs?:|following:)\s+(?=(?:[1-9]|I|A)\.\s+|Statement\s*1)/gi, '$1\n')
-        // Newline before numbered statements (e.g. " 1. It provided...", " 2. Defence...")
-        .replace(/\s+(?=(?:[1-9]|10)\.\s+[A-Z0-9])/g, '\n')
-        // Newline before roman numerals (e.g. " I. ", " II. ")
-        .replace(/\s+(?=(?:IX|IV|V?I{1,3})\.\s+[A-Z0-9])/gi, '\n')
-        // Newline before Statement / Assertion labels
-        .replace(/\s+(?=(?:Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X\d]+):)/gi, '\n')
-        // Newline before closing question prompts
-        .replace(/\s+(?=(?:Which of the statements? given above|Which of the pairs? given above|Which of the above statements?|Which of the above pairs?|Which of the above is\/are|How many of the above pairs?|How many of the statements? given above|In which of the above rows|Select the correct answer using the code given below|Select the correct answer|Choose the correct|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ ಯಾವುದು|ಮೇಲಿನವುಗಳಲ್ಲಿ ಯಾವುದು))/gi, '\n');
+        // Newline before inline numbered statements only after sentence punctuation
+        .replace(/([.;])\s+(?=(?:[1-9]|10)\.\s+[A-Z0-9])/g, '$1\n')
+        // Newline before roman numerals after punctuation
+        .replace(/([.;])\s+(?=(?:IX|IV|V?I{1,3})\.\s+[A-Z0-9])/gi, '$1\n')
+        // Newline before Statement / S1 / S2 / Conclusion / Question labels
+        .replace(/([.;])\s+(?=(?:Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X\d]+|S[1-4]|Conclusion\s*[-I|V|X\d]+|Question):)/gi, '$1\n')
+        // Newline before closing question prompts after punctuation
+        .replace(/([.;])\s+(?=(?:Which of the statements? given above|Which of the pairs? given above|Which of the above statements?|Which of the above pairs?|Which of the above is\/are|Which one of the following|How many of the above pairs?|How many of the statements? given above|In which of the above rows|Select the correct answer using the code given below|Select the correct answer|Choose the correct|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ ಯಾವುದು|ಮೇಲಿನವುಗಳಲ್ಲಿ ಯಾವುದು))/gi, '$1\n');
 
     // 1. Check for multi-column pair rows like "1. Chandraketugarh | Odisha | Trading Port town"
     const rawLines = normalized.split('\n');
@@ -357,12 +363,14 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
             const trimmed = line.trim();
             if (trimmed !== '') {
                 const isBullet = /^[•*-]\s/.test(trimmed);
+                const isStatementLabel = /^(S[1-4]|Statement\s*[-I|V|X0-9]*|Conclusion\s*[-I|V|X0-9]*|Question|Statements|Conclusions):/i.test(trimmed);
                 const isListItem = /^[A-D]\.\s/.test(trimmed) || 
                                    /^[0-9]+\.\s/.test(trimmed) || 
                                    /^(IX|IV|V?I{1,3})\.\s/i.test(trimmed) ||
-                                   /^(Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X0-9]+):/i.test(trimmed);
+                                   /^(Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X0-9]+):/i.test(trimmed) ||
+                                   /^S[1-4]:/i.test(trimmed);
                 
-                const isPrompt = /^(Which of the statements?|Which of the pairs?|Which of the above|How many of the|In which of the|Select the correct|Choose the correct|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ|ಮೇಲಿನವುಗಳಲ್ಲಿ)/i.test(trimmed);
+                const isPrompt = /^(Which of the statements?|Which of the pairs?|Which of the above|Which one of the|What are the|What is the|How many of the|In which of the|Select the correct|Choose the correct|उपर्युक्त|निम्नलिखित|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ|ಮೇಲಿನವುಗಳಲ್ಲಿ)/i.test(trimmed);
 
                 let contentText = line;
                 if (isBullet) {
@@ -373,13 +381,13 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                     <p 
                         key={`line-${idx}`} 
                         style={{ 
-                            margin: isPrompt ? '14px 0 6px 0' : '0 0 10px 0',
-                            paddingLeft: isListItem ? '22px' : '0',
-                            textIndent: isListItem ? '-22px' : '0',
+                            margin: isPrompt ? '14px 0 6px 0' : isStatementLabel ? '6px 0 6px 0' : '0 0 10px 0',
+                            paddingLeft: isListItem && !isStatementLabel ? '22px' : '0',
+                            textIndent: isListItem && !isStatementLabel ? '-22px' : '0',
                             lineHeight: 1.65,
-                            color: isPrompt ? 'var(--text-primary)' : isListItem ? 'var(--text-secondary)' : 'var(--text-primary)',
+                            color: isPrompt ? 'var(--text-primary)' : isStatementLabel ? 'var(--text-primary)' : isListItem ? 'var(--text-secondary)' : 'var(--text-primary)',
                             fontSize: '15px',
-                            fontWeight: isPrompt ? 700 : isListItem ? 500 : 600
+                            fontWeight: isPrompt ? 700 : isStatementLabel ? 600 : isListItem ? 500 : 500
                         }}
                     >
                         {isBullet ? <span style={{ marginRight: '8px', color: 'var(--brand-orange)', fontWeight: 'bold' }}>•</span> : null}
