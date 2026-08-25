@@ -31,11 +31,14 @@ const renderKaTeXHtml = (expr: string, displayMode: boolean = false): string => 
 export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
     if (!lineText) return '';
 
-    // 1. Sanitize diamond question marks (\ufffd / \uFFFD) and garbled characters
+    // 1. Sanitize citation tags, diamond question marks (\ufffd / \uFFFD), arrows, and garbled characters
     let text = lineText
+        .replace(/\[cite:[^\]]+\]/gi, '')
         .replace(/[\ufffd\uFFFD]/g, ' · ')
-        .replace(/\\rightarrow/g, ' → ')
+        .replace(/\\implies/g, ' ⇒ ')
         .replace(/\\Rightarrow/g, ' ⇒ ')
+        .replace(/\\rightarrow/g, ' → ')
+        .replace(/\$\s*\\implies\s*\$/g, ' ⇒ ')
         .replace(/\$\s*\\rightarrow\s*\$/g, ' → ')
         .replace(/\$\s*\\Rightarrow\s*\$/g, ' ⇒ ')
         .replace(/\$\s*ightarrow\s*\$/g, ' → ')
@@ -84,7 +87,7 @@ export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
                         <span
                             key={index}
                             className="math-inline-wrapper"
-                            style={{ display: 'inline-block', verticalAlign: 'middle', margin: '0 2px' }}
+                            style={{ display: 'inline', margin: '0 2px' }}
                             dangerouslySetInnerHTML={{ __html: html }}
                         />
                     );

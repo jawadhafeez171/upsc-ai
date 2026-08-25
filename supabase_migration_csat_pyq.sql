@@ -249,15 +249,15 @@ $$1 \times 5 \times 10 \times 15 \times 20 \times 25 \times 30 \times 35 \times 
 $$1 \times 5 \times 10 \times 15 \times 20 \times 25 \times 30 \times 35 \times 40 \times 45 \times 50 \times 55 \times 60$$
 के अंत में कितने शून्य होंगे?', '10', '12', '14', '15', '10', '12', '14', '15', 'A', 'Correct Answer: Option A (10).
 
-1. Trailing zeroes are formed by the multiplication of factors 2 and 5. The number of zeroes equals $\min(\text{power of 2}, \text{power of 5})$ in the prime factorization.
+1. Trailing zeroes are formed by the multiplication of factors 2 and 5. The number of zeroes equals $\min(power of 2, power of 5)$ in the prime factorization.
 2. Count the powers of 2 in each factor of the product:
-   * $10 = 2^1 \times 5$
-   * $20 = 2^2 \times 5$
-   * $30 = 2^1 \times 3 \times 5$
-   * $40 = 2^3 \times 5$
-   * $50 = 2^1 \times 5^2$
-   * $60 = 2^2 \times 3 \times 5$
-   Total power of 2 = $1 + 2 + 1 + 3 + 1 + 2 = 10$.
+ * $10 = 2^1 \times 5$
+ * $20 = 2^2 \times 5$
+ * $30 = 2^1 \times 3 \times 5$
+ * $40 = 2^3 \times 5$
+ * $50 = 2^1 \times 5^2$
+ * $60 = 2^2 \times 3 \times 5$
+ Total power of 2 = $1 + 2 + 1 + 3 + 1 + 2 = 10$.
 3. Count the powers of 5: there are 14 factors of 5 in total.
 4. Therefore, the number of trailing zeroes is $\min(10, 14) = 10$.
 
@@ -265,35 +265,35 @@ Therefore, there are 10 zeroes at the end of the product.', 'सही उत्
 
 1. किसी गुणनफल के अंत में शून्यों की संख्या 2 और 5 के अभाज्य युग्मों $(2 \times 5)$ की न्यूनतम संख्या पर निर्भर करती है।
 2. गुणनफल में 2 की कुल घातों की गणना करने पर:
-   * $10 = 2^1$
-   * $20 = 2^2$
-   * $30 = 2^1$
-   * $40 = 2^3$
-   * $50 = 2^1$
-   * $60 = 2^2$
-   2 की कुल घात $= 1 + 2 + 1 + 3 + 1 + 2 = 10$.
-3. 5 की कुल घात $= 14$ है।
+ * $10 = 2^1$
+ * $20 = 2^2$
+ * $30 = 2^1$
+ * $40 = 2^3$
+ * $50 = 2^1$
+ * $60 = 2^2$
+ 2 की कुल घात $= 1 + 2 + 1 + 3 + 1 + 2 = 10$.
+3. 5 की कुल घात = 14 है।
 4. अतः अंत में शून्यों की संख्या $\min(10, 14) = 10$ होगी।
 
 अतः गुणनफल के अंत में 10 शून्य होंगे।', NULL),
     ('csat-2020-q8', 8, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', '3-Digit Permutative Place Value & Divisibility Properties', 'तीन-अंकीय स्थानीय मान योग एवं विभाज्यता गुणधर्म', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Place Value', 'Divisibility Rules']::TEXT[], 'Let XYZ be a three-digit number, where $(X+Y+Z)$ is not a multiple of 3. Then $(XYZ+YZX+ZXY)$ is not divisible by', 'माना कि XYZ तीन अंकों की एक संख्या है, जहाँ $(X+Y+Z)$, 3 का गुणांक नहीं है। तब $(XYZ+YZX+ZXY)$ विभाज्य नहीं है', '3', '9', '37', '(X+Y+Z)', '3 से', '9 से', '37 से', '(X+Y+Z) से', 'B', 'Correct Answer: Option B (9).
 
 1. Expanding the three-digit numbers in decimal form:
-   $$XYZ = 100X + 10Y + Z$$
-   $$YZX = 100Y + 10Z + X$$
-   $$ZXY = 100Z + 10X + Y$$
+ $$XYZ = 100X + 10Y + Z$$
+ $$YZX = 100Y + 10Z + X$$
+ $$ZXY = 100Z + 10X + Y$$
 2. Adding the three expressions:
-   $$XYZ + YZX + ZXY = 111(X + Y + Z) = 3 \times 37 \times (X + Y + Z)$$
+ $$XYZ + YZX + ZXY = 111(X + Y + Z) = 3 \times 37 \times (X + Y + Z)$$
 3. The sum is divisible by 3, 37, and $(X + Y + Z)$. Since $(X + Y + Z)$ is given as not a multiple of 3, the total factor of 3 in the sum is exactly 1, meaning it cannot be divisible by $9 = 3^2$.
 
 Therefore, $(XYZ+YZX+ZXY)$ is not divisible by 9.', 'सही उत्तर: विकल्प B (9 से)।
 
 1. तीन अंकों की संख्याओं का स्थानीय मान प्रसार:
-   $$XYZ = 100X + 10Y + Z$$
-   $$YZX = 100Y + 10Z + X$$
-   $$ZXY = 100Z + 10X + Y$$
+ $$XYZ = 100X + 10Y + Z$$
+ $$YZX = 100Y + 10Z + X$$
+ $$ZXY = 100Z + 10X + Y$$
 2. तीनों का योग:
-   $$XYZ + YZX + ZXY = 111(X + Y + Z) = 3 \times 37 \times (X + Y + Z)$$
+ $$XYZ + YZX + ZXY = 111(X + Y + Z) = 3 \times 37 \times (X + Y + Z)$$
 3. यह योग 3, 37 तथा $(X+Y+Z)$ से पूर्णतः विभाज्य है। चूँकि $(X+Y+Z)$ 3 का गुणज नहीं है, अतः इस गुणनफल में 3 की केवल एक घात उपस्थित है, इसलिए यह 9 से विभाज्य नहीं हो सकता।
 
 अतः यह योग 9 से विभाज्य नहीं है।', NULL),
@@ -305,34 +305,34 @@ $$p-2016=q+2017=r-2018=s+2019$$
 
 1. Let $p - 2016 = q + 2017 = r - 2018 = s + 2019 = k$, where $k$ is a constant.
 2. Solve for each variable:
-   * $p = k + 2016$
-   * $q = k - 2017$
-   * $r = k + 2018$
-   * $s = k - 2019$
+ * $p = k + 2016$
+ * $q = k - 2017$
+ * $r = k + 2018$
+ * $s = k - 2019$
 3. Comparing the values: $r = k + 2018 > p = k + 2016 > q > s$.
 
 Therefore, r is the largest natural number.', 'सही उत्तर: विकल्प C (r)।
 
 1. माना कि $p - 2016 = q + 2017 = r - 2018 = s + 2019 = k$ है।
 2. प्रत्येक चर का मान:
-   * $p = k + 2016$
-   * $q = k - 2017$
-   * $r = k + 2018$
-   * $s = k - 2019$
+ * $p = k + 2016$
+ * $q = k - 2017$
+ * $r = k + 2018$
+ * $s = k - 2019$
 3. मानों की तुलना करने पर स्पष्ट है कि $r = k + 2018$ सबसे बड़ा है।
 
 अतः सबसे बड़ी प्राकृतिक संख्या r है।', NULL),
     ('csat-2020-q10', 10, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Digit Sum Rule for Divisibility by 3 & Prime Number Testing', '3 से विभाज्यता का अंक-योग नियम एवं अभाज्य संख्या परीक्षण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Prime Numbers', 'Divisibility by 3']::TEXT[], 'How many five-digit prime numbers can be obtained by using all the digits 1, 2, 3, 4 and 5 without repetition of digits?', 'पाँच अंकों की कितनी अभाज्य संख्याएँ अंकों 1, 2, 3, 4 और 5 के द्वारा, बिना अंकों की पुनरावृत्ति किए हुए, बनाई जा सकती हैं?', 'Zero', 'One', 'Nine', 'Ten', 'शून्य', 'एक', 'नौ', 'दस', 'A', 'Correct Answer: Option A (Zero).
 
 1. The sum of the digits $1, 2, 3, 4, 5$ is:
-   $$1 + 2 + 3 + 4 + 5 = 15$$
+ $$1 + 2 + 3 + 4 + 5 = 15$$
 2. By the divisibility rule for 3, any number whose digits sum to a multiple of 3 is itself divisible by 3.
 3. Since 15 is divisible by 3, every 5-digit number formed using these digits without repetition is divisible by 3 and strictly greater than 3, meaning all such numbers are composite.
 
 Therefore, the number of prime numbers that can be obtained is Zero.', 'सही उत्तर: विकल्प A (शून्य)।
 
 1. अंकों 1, 2, 3, 4 और 5 का योग:
-   $$1 + 2 + 3 + 4 + 5 = 15$$
+ $$1 + 2 + 3 + 4 + 5 = 15$$
 2. 3 की विभाज्यता के नियम के अनुसार, यदि अंकों का योग 3 से विभाज्य है तो संख्या भी 3 से विभाज्य होगी।
 3. चूँकि 15, 3 से विभाज्य है, अतः इन सभी अंकों से बिना पुनरावृत्ति के बनने वाली प्रत्येक पाँच अंकों की संख्या 3 से विभाज्य होगी और कोई भी संख्या अभाज्य नहीं हो सकती।
 
@@ -345,61 +345,61 @@ $$\otimes+1\otimes+5\otimes+\otimes\otimes+\otimes1=1\otimes\otimes$$
 
 1. Let the symbol represent the single digit $x$.
 2. Expand each term by place value:
-   * $\otimes = x$
-   * $1\otimes = 10 + x$
-   * $5\otimes = 50 + x$
-   * $\otimes\otimes = 10x + x = 11x$
-   * $\otimes1 = 10x + 1$
-   * $1\otimes\otimes = 100 + 10x + x = 100 + 11x$
+ * $\otimes = x$
+ * $1\otimes = 10 + x$
+ * $5\otimes = 50 + x$
+ * $\otimes\otimes = 10x + x = 11x$
+ * $\otimes1 = 10x + 1$
+ * $1\otimes\otimes = 100 + 10x + x = 100 + 11x$
 3. Equate LHS and RHS:
-   $$x + (10 + x) + (50 + x) + 11x + (10x + 1) = 100 + 11x$$
-   $$24x + 61 = 100 + 11x$$
-   $$13x = 39 \implies x = 3$$
+ $$x + (10 + x) + (50 + x) + 11x + (10x + 1) = 100 + 11x$$
+ $$24x + 61 = 100 + 11x$$
+ $$13x = 39 ⇒ x = 3$$
 
 Therefore, the symbol stands for the digit 3.', 'सही उत्तर: विकल्प B (3)।
 
 1. माना कि प्रतीक अंक $x$ को दर्शाता है।
 2. स्थानीय मान के अनुसार पदों का विस्तार करने पर:
-   * $\otimes = x$
-   * $1\otimes = 10 + x$
-   * $5\otimes = 50 + x$
-   * $\otimes\otimes = 11x$
-   * $\otimes1 = 10x + 1$
-   * $1\otimes\otimes = 100 + 11x$
+ * $\otimes = x$
+ * $1\otimes = 10 + x$
+ * $5\otimes = 50 + x$
+ * $\otimes\otimes = 11x$
+ * $\otimes1 = 10x + 1$
+ * $1\otimes\otimes = 100 + 11x$
 3. समीकरण:
-   $$x + (10 + x) + (50 + x) + 11x + (10x + 1) = 100 + 11x$$
-   $$24x + 61 = 100 + 11x$$
-   $$13x = 39 \implies x = 3$$
+ $$x + (10 + x) + (50 + x) + 11x + (10x + 1) = 100 + 11x$$
+ $$24x + 61 = 100 + 11x$$
+ $$13x = 39 ⇒ x = 3$$
 
 अतः प्रतीक अंक 3 को दर्शाता है।', NULL),
-    ('csat-2020-q12', 12, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'HCF and GCD of Decimals / Fractions in Length Measurement', 'दशमलव/भिन्न का महत्तम समापवर्तक (HCF) एवं लंबाई मापन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'HCF', 'Decimals & Fractions']::TEXT[], 'If you have two straight sticks of length 7.5 feet and 3.25 feet, what is the minimum length can you measure?', 'यदि आपके पास दो सीधी 7-5 फुट और 3-25 फुट की छड़े हैं, तो आप कम-से-कम कितनी लम्बाई नाप सकते हैं?', '0.05 foot', '0.25 foot', '1 foot', '3.25 feet', '0.05 फुट', '0-25 फुट', '1 फुट', '3-25 फुट', 'B', 'Correct Answer: Option B (0.25 foot).
+    ('csat-2020-q12', 12, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'HCF and GCD of Decimals / Fractions in Length Measurement', 'दशमलव/भिन्न का महत्तम समापवर्तक (HCF) एवं लंबाई मापन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'HCF', 'Decimals & Fractions']::TEXT[], 'If you have two straight sticks of length 7.5 feet and 3.25 feet, what is the minimum length can you measure?', 'यदि आपके पास दो सीधी 7-5 फुट और 3-25 फुट की छड़े हैं, तो आप कम-से-कम कितनी लम्बाई नाप सकते हैं?', '0.05 foot', '0.25 foot', '1 foot', '3.25 feet', '0.05 फुट', '0-25 फुट', '1 फुट', '3-25 फुट', 'B', 'Correct Answer: Option B (0. 25 foot).
 
 1. The minimum measurable length obtained by combining and difference-measuring two straight sticks is the Highest Common Factor (HCF) of their lengths.
 2. Express the lengths as fractions:
-   $$7.5 = \frac{15}{2} = \frac{30}{4}\text{ feet}, \quad 3.25 = \frac{13}{4}\text{ feet}$$
+ $$7. 5 = \frac{15}{2} = \frac{30}{4} feet, \quad 3. 25 = \frac{13}{4} feet$$
 3. Calculate the HCF:
-   $$\text{HCF}\left(\frac{30}{4}, \frac{13}{4}\right) = \frac{\text{HCF}(30, 13)}{\text{LCM}(4, 4)} = \frac{1}{4} = 0.25\text{ foot}$$
-   (Practically achieved by: $7 \times 3.25 - 3 \times 7.5 = 22.75 - 22.50 = 0.25\text{ foot}$).
+ $$HCF\left(\frac{30}{4}, \frac{13}{4}\right) = \frac{HCF(30, 13)}{LCM(4, 4)} = \frac{1}{4} = 0. 25 foot$$
+ (Practically achieved by: $7 \times 3. 25 - 3 \times 7. 5 = 22. 75 - 22. 50 = 0. 25 foot$).
 
-Therefore, the minimum length that can be measured is 0.25 foot.', 'सही उत्तर: विकल्प B (0.25 फुट)।
+Therefore, the minimum length that can be measured is 0. 25 foot.', 'सही उत्तर: विकल्प B (0. 25 फुट)।
 
 1. दो छड़ों की लम्बाइयों के संयोजन और अंतर से नापी जा सकने वाली न्यूनतम लम्बाई उनका महत्तम समापवर्तक (HCF) होती है।
 2. भिन्नों में बदलने पर:
-   $$7.5 = \frac{30}{4}\text{ फुट}, \quad 3.25 = \frac{13}{4}\text{ फुट}$$
+ $$7. 5 = \frac{30}{4} फुट, \quad 3. 25 = \frac{13}{4} फुट$$
 3. भिन्नों का HCF:
-   $$\text{HCF}\left(\frac{30}{4}, \frac{13}{4}\right) = \frac{\text{HCF}(30, 13)}{\text{LCM}(4, 4)} = \frac{1}{4} = 0.25\text{ फुट}$$
-   (उदाहरणार्थ: $7 \times 3.25 - 3 \times 7.5 = 22.75 - 22.50 = 0.25\text{ फुट}$)।
+ $$HCF\left(\frac{30}{4}, \frac{13}{4}\right) = \frac{HCF(30, 13)}{LCM(4, 4)} = \frac{1}{4} = 0. 25 फुट$$
+ (उदाहरणार्थ: $7 \times 3. 25 - 3 \times 7. 5 = 22. 75 - 22. 50 = 0. 25 फुट$)।
 
-अतः कम-से-कम 0.25 फुट की लम्बाई नापी जा सकती है।', NULL),
+अतः कम-से-कम 0. 25 फुट की लम्बाई नापी जा सकती है।', NULL),
     ('csat-2020-q13', 13, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Prime Number Generation via Sequence Operations', 'अनुक्रम संक्रियाओं द्वारा अभाज्य संख्या निर्माण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Number Series', 'Prime Numbers']::TEXT[], 'A simple mathematical operation in each number of the sequence 14, 18, 20, 24, 30, 32, ... results in a sequence with respect to prime numbers. Which one of the following is the next number in the sequence?', 'अनुक्रम 14, 18, 20, 24, 30, 32, ... की प्रत्येक संख्या में एक सरल गणितीय संक्रिया द्वारा अभाज्य संख्याओं का एक अनुक्रम प्राप्त किया जाता है। निम्न में से कौन-सी अनुक्रम की अगली संख्या है?', '34', '36', '38', '40', '34', '36', '38', '40', 'C', 'Correct Answer: Option C (38).
 
 1. Subtracting 1 from each number in the sequence yields:
-   * $14 - 1 = 13$
-   * $18 - 1 = 17$
-   * $20 - 1 = 19$
-   * $24 - 1 = 23$
-   * $30 - 1 = 29$
-   * $32 - 1 = 31$
+ * $14 - 1 = 13$
+ * $18 - 1 = 17$
+ * $20 - 1 = 19$
+ * $24 - 1 = 23$
+ * $30 - 1 = 29$
+ * $32 - 1 = 31$
 2. The sequence $(13, 17, 19, 23, 29, 31)$ is a consecutive series of prime numbers.
 3. The next prime number after 31 is 37.
 4. Therefore, the next number in the given sequence is $37 + 1 = 38$.
@@ -407,12 +407,12 @@ Therefore, the minimum length that can be measured is 0.25 foot.', 'सही �
 Therefore, the next number in the sequence is 38.', 'सही उत्तर: विकल्प C (38)।
 
 1. अनुक्रम के प्रत्येक पद में से 1 घटाने पर:
-   * $14 - 1 = 13$
-   * $18 - 1 = 17$
-   * $20 - 1 = 19$
-   * $24 - 1 = 23$
-   * $30 - 1 = 29$
-   * $32 - 1 = 31$
+ * $14 - 1 = 13$
+ * $18 - 1 = 17$
+ * $20 - 1 = 19$
+ * $24 - 1 = 23$
+ * $30 - 1 = 29$
+ * $32 - 1 = 31$
 2. प्राप्त संख्याएँ $(13, 17, 19, 23, 29, 31)$ क्रमागत अभाज्य संख्याओं का अनुक्रम हैं।
 3. 31 के बाद अगली अभाज्य संख्या 37 है, अतः अनुक्रम की अगली संख्या $37 + 1 = 38$ होगी।
 
@@ -423,7 +423,7 @@ Therefore, the next number in the sequence is 38.', 'सही उत्तर: 
 2. Tearing one leaf removes two consecutive page numbers $x$ (odd) and $x+1$ (even). The remaining sum is $S - (2x + 1) = 195$.
 3. For $n = 20$, total sum $S = \frac{20 \times 21}{2} = 210$.
 4. Sum of numbers on the torn page $= 210 - 195 = 15$.
-5. Solving $x + (x + 1) = 15 \implies 2x = 14 \implies x = 7$ and $x + 1 = 8$.
+5. Solving $x + (x + 1) = 15 ⇒ 2x = 14 ⇒ x = 7$ and $x + 1 = 8$.
 
 Therefore, the torn page contains the numbers 7 and 8.', 'सही उत्तर: विकल्प B (7, 8)।
 
@@ -431,7 +431,7 @@ Therefore, the torn page contains the numbers 7 and 8.', 'सही उत्त
 2. एक पन्ना फाड़ने पर दो क्रमागत पृष्ठ संख्याएँ $x$ (विषम) और $x+1$ (सम) अलग होती हैं। अतः $S - (2x + 1) = 195$।
 3. $n = 20$ लेने पर कुल योग $S = \frac{20 \times 21}{2} = 210$ प्राप्त होता है।
 4. फटे हुए पन्ने की दोनों पृष्ठ संख्याओं का योग $= 210 - 195 = 15$।
-5. $x + (x + 1) = 15 \implies 2x = 14 \implies x = 7$ तथा $x+1 = 8$।
+5. $x + (x + 1) = 15 ⇒ 2x = 14 ⇒ x = 7$ तथा $x+1 = 8$।
 
 अतः फटे हुए पन्ने पर 7 और 8 संख्याएँ हैं।', NULL),
     ('csat-2020-q15', 15, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Letter Sequence Pattern Completion & Repeating Blocks', 'वर्ण अनुक्रम पैटर्न पूर्णता एवं पुनरावर्ती खंड', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Letter Series', 'Pattern Completion']::TEXT[], 'Consider the following arrangement that has some missing letters:
@@ -441,20 +441,20 @@ $$abab\_b\_bcb\_dcdcded\_d$$
 लुप्त वर्ण, जो कि विन्यास को पूर्ण करते हैं, हैं', 'a, b, c, d', 'a, b, d, e', 'a, c, c, e', 'b, c, d, e', 'a, b, c, d', 'a, b, d, e', 'a, c, c, e', 'b, c, d, e', 'C', 'Correct Answer: Option C (a, c, c, e).
 
 1. The sequence consists of four alternating 5-letter blocks progressing alphabetically:
-   * Block 1: `ababa`
-   * Block 2: `bcbcb`
-   * Block 3: `cdcdc`
-   * Block 4: `deded`
+ * Block 1: `ababa`
+ * Block 2: `bcbcb`
+ * Block 3: `cdcdc`
+ * Block 4: `deded`
 2. Concatenated sequence: `ababa bcbcb cdcdc deded`.
 3. Comparing with `abab[_] b[_]bcb [_]dcdc ded[_]d` gives the missing letters in sequence as **a, c, c, e**.
 
 Therefore, the missing letters are a, c, c, e.', 'सही उत्तर: विकल्प C (a, c, c, e)।
 
 1. विन्यास 5-5 अक्षरों के चार एकांतर खंडों का प्रतिरूप है:
-   * प्रथम खंड: `ababa`
-   * द्वितीय खंड: `bcbcb`
-   * तृतीय खंड: `cdcdc`
-   * चतुर्थ खंड: `deded`
+ * प्रथम खंड: `ababa`
+ * द्वितीय खंड: `bcbcb`
+ * तृतीय खंड: `cdcdc`
+ * चतुर्थ खंड: `deded`
 2. पूर्ण अनुक्रम: `ababa bcbcb cdcdc deded`।
 3. दिए गए रिक्त स्थानों `abab[a] b[c]bcb [c]dcdc ded[e]d` की तुलना करने पर लुप्त वर्ण क्रमशः **a, c, c, e** प्राप्त होते हैं।
 
@@ -463,10 +463,10 @@ Therefore, the missing letters are a, c, c, e.', 'सही उत्तर: व
 
 1. Distinct digits $> 3$ are $\{4, 5, 6, 7, 8, 9\}$.
 2. In the addition $A3BC + DE2F = 15902$:
-   * **Units place**: $C + F = 12$ (with carry 1) $\implies \{C, F\} = \{4, 8\}$.
-   * **Tens place**: $B + 2 + 1 = 10 \implies B = 7$ (with carry 1).
-   * **Hundreds place**: $3 + E + 1 = 9 \implies E = 5$ (carry 0).
-   * **Thousands place**: $A + D = 15$.
+ * **Units place**: $C + F = 12$ (with carry 1) $ ⇒ \{C, F\} = \{4, 8\}$.
+ * **Tens place**: $B + 2 + 1 = 10 ⇒ B = 7$ (with carry 1).
+ * **Hundreds place**: $3 + E + 1 = 9 ⇒ E = 5$ (carry 0).
+ * **Thousands place**: $A + D = 15$.
 3. The remaining unused digits are $6$ and $9$. Thus, $\{A, D\} = \{6, 9\}$.
 4. Difference $= |9 - 6| = 3$.
 
@@ -474,10 +474,10 @@ Therefore, the difference between the values of A and D is 3.', 'सही उ�
 
 1. 3 से बड़े उपलब्ध भिन्न अंक $\{4, 5, 6, 7, 8, 9\}$ हैं।
 2. जोड़ $A3BC + DE2F = 15902$ में:
-   * **इकाई**: $C + F = 12$ (हासिल 1) $\implies \{C, F\} = \{4, 8\}$
-   * **दहाई**: $B + 2 + 1 = 10 \implies B = 7$ (हासिल 1)
-   * **सैकड़ा**: $3 + E + 1 = 9 \implies E = 5$ (हासिल 0)
-   * **हजार**: $A + D = 15$
+ * **इकाई**: $C + F = 12$ (हासिल 1) $ ⇒ \{C, F\} = \{4, 8\}$
+ * **दहाई**: $B + 2 + 1 = 10 ⇒ B = 7$ (हासिल 1)
+ * **सैकड़ा**: $3 + E + 1 = 9 ⇒ E = 5$ (हासिल 0)
+ * **हजार**: $A + D = 15$
 3. शेष बचे अंक $6$ और $9$ हैं, अतः $\{A, D\} = \{6, 9\}$।
 4. अंतर $= |9 - 6| = 3$।
 
@@ -519,23 +519,23 @@ What is the value of x in the above table?', 'निम्नलिखित आ
 अंग्रेजी | 9 | 8 | 8.8
 हिन्दी | 8 | 7 | x
 
-उपर्युक्त सारणी में x का मान क्या है?', '7.8', '7.6', '7.4', '7.2', '7.8', '7.6', '7.4', '7.2', 'A', 'Correct Answer: Option A (7.8).
+उपर्युक्त सारणी में x का मान क्या है?', '7.8', '7.6', '7.4', '7.2', '7.8', '7.6', '7.4', '7.2', 'A', 'Correct Answer: Option A (7. 8).
 
 1. Let $G$ be the number of girls and $B$ be the number of boys. Using English average marks:
-   $$\frac{9G + 8B}{G + B} = 8.8 \implies 9G + 8B = 8.8G + 8.8B \implies 0.2G = 0.8B \implies \frac{G}{B} = 4$$
-2. The ratio of Girls to Boys is $4 : 1$.
+ $$\frac{9G + 8B}{G + B} = 8. 8 ⇒ 9G + 8B = 8. 8G + 8. 8B ⇒ 0. 2G = 0. 8B ⇒ \frac{G}{B} = 4$$
+2. The ratio of Girls to Boys is $4: 1$.
 3. Calculate the overall average marks in Hindi ($x$):
-   $$x = \frac{8G + 7B}{G + B} = \frac{8(4) + 7(1)}{4 + 1} = \frac{32 + 7}{5} = \frac{39}{5} = 7.8$$
+ $$x = \frac{8G + 7B}{G + B} = \frac{8(4) + 7(1)}{4 + 1} = \frac{32 + 7}{5} = \frac{39}{5} = 7. 8$$
 
-Therefore, the value of x in the table is 7.8.', 'सही उत्तर: विकल्प A (7.8)।
+Therefore, the value of x in the table is 7. 8.', 'सही उत्तर: विकल्प A (7. 8)।
 
 1. माना लड़कियों की संख्या $G$ और लड़कों की संख्या $B$ है। अंग्रेजी के औसत से:
-   $$\frac{9G + 8B}{G + B} = 8.8 \implies 0.2G = 0.8B \implies \frac{G}{B} = \frac{4}{1}$$
-2. लड़कियों और लड़कों का अनुपात $4 : 1$ है।
+ $$\frac{9G + 8B}{G + B} = 8. 8 ⇒ 0. 2G = 0. 8B ⇒ \frac{G}{B} = \frac{4}{1}$$
+2. लड़कियों और लड़कों का अनुपात $4: 1$ है।
 3. हिन्दी के कुल माध्य प्राप्तांक ($x$) का मान:
-   $$x = \frac{8(4) + 7(1)}{4 + 1} = \frac{32 + 7}{5} = \frac{39}{5} = 7.8$$
+ $$x = \frac{8(4) + 7(1)}{4 + 1} = \frac{32 + 7}{5} = \frac{39}{5} = 7. 8$$
 
-अतः सारणी में x का मान 7.8 है।', NULL),
+अतः सारणी में x का मान 7. 8 है।', NULL),
     ('csat-2020-q19', 19, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Blood Relations, Family Tree & Gender Logic', 'रक्त संबंध, पारिवारिक वृक्ष एवं लिंग निर्धारण तर्क', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Blood Relations', 'Family Tree']::TEXT[], 'A family of two generations consisting of six members P, Q, R, S, T and U has three males and three females. There are two married couples and two unmarried siblings. U is P''s daughter and Q is R''s mother-in-law. T is an unmarried male and S is a male. Which one of the following is correct?', 'एक परिवार की दो पीढ़ियों के छः सदस्यों P, Q, R, S, T और U में तीन पुरुष और तीन महिलाएँ हैं। उनमें दो विवाहित जोड़े और दो अविवाहित सहोदर हैं। U, P की पुत्री है और Q, R की सास है। T अविवाहित पुरुष है और S एक पुरुष है। निम्नलिखित में से कौन-सा सही है?', 'R is U''s husband.', 'R is S''s wife.', 'S is unmarried.', 'None of the above', 'R, U का पति है।', 'R, S की पत्नी है।', 'S अविवाहित है।', 'उपर्युक्त में से कोई नहीं', 'B', 'Correct Answer: Option B (R is S''s wife).
 
 1. There are 3 males and 3 females across 2 generations with 2 married couples and 2 unmarried siblings.
@@ -554,13 +554,13 @@ Therefore, R is S''s wife.', 'सही उत्तर: विकल्प B (R
     ('csat-2020-q20', 20, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Calendar Odd Days & Leap Year vs Ordinary Year Day-Matching', 'कैलेंडर विषम दिन एवं लीप वर्ष बनाम सामान्य वर्ष वार गणना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Clocks & Calendar', 'Odd Days']::TEXT[], 'If in a particular year 12th January is a Sunday, then which one of the following is correct?', 'यदि किसी विशेष वर्ष में 12 जनवरी को रविवार है, तो निम्नलिखित में से कौन-सा सही है?', '15th July is a Sunday if the year is a leap year.', '15th July is a Sunday if the year is not a leap year.', '12th July is a Sunday if the year is a leap year.', '12th July is not a Sunday if the year is a leap year.', '15 जुलाई को रविवार है यदि वर्ष एक अधिवर्ष है।', '15 जुलाई को रविवार है यदि वर्ष एक अधिवर्ष नहीं है।', '12 जुलाई को रविवार है यदि वर्ष एक अधिवर्ष है।', '12 जुलाई को रविवार नहीं है यदि वर्ष एक अधिवर्ष है।', 'C', 'Correct Answer: Option C (12th July is a Sunday if the year is a leap year).
 
 1. In a leap year, February has 29 days. Count the days between 12th January and 12th July:
-   * January remaining = $31 - 12 = 19$ days
-   * February = 29 days
-   * March = 31 days
-   * April = 30 days
-   * May = 31 days
-   * June = 30 days
-   * July = 12 days
+ * January remaining = $31 - 12 = 19$ days
+ * February = 29 days
+ * March = 31 days
+ * April = 30 days
+ * May = 31 days
+ * June = 30 days
+ * July = 12 days
 2. Total days = $19 + 29 + 31 + 30 + 31 + 30 + 12 = 182$ days.
 3. Odd days = $182 \pmod 7 = 0$.
 4. Because there are 0 odd days, 12th July falls on the exact same day of the week as 12th January (Sunday).
@@ -568,15 +568,15 @@ Therefore, R is S''s wife.', 'सही उत्तर: विकल्प B (R
 Therefore, 12th July is a Sunday if the year is a leap year.', 'सही उत्तर: विकल्प C (12 जुलाई को रविवार है यदि वर्ष एक अधिवर्ष है)।
 
 1. अधिवर्ष (Leap year) में फरवरी में 29 दिन होते हैं। 12 जनवरी से 12 जुलाई के मध्य कुल दिन:
-   * जनवरी (शेष) $= 19$ दिन
-   * फरवरी $= 29$ दिन
-   * मार्च $= 31$ दिन
-   * अप्रैल $= 30$ दिन
-   * मई $= 31$ दिन
-   * जून $= 30$ दिन
-   * जुलाई $= 12$ दिन
+ * जनवरी (शेष) = 19 दिन
+ * फरवरी = 29 दिन
+ * मार्च = 31 दिन
+ * अप्रैल = 30 दिन
+ * मई = 31 दिन
+ * जून = 30 दिन
+ * जुलाई = 12 दिन
 2. कुल दिन $= 19 + 29 + 31 + 30 + 31 + 30 + 12 = 182$ दिन।
-3. $182 \div 7 = 26$ सप्ताह (शेष $= 0$ विषम दिन)।
+3. $182 \div 7 = 26$ सप्ताह (शेष = 0 विषम दिन)।
 4. शून्य विषम दिन होने से 12 जुलाई का दिन भी 12 जनवरी के समान रविवार होगा।
 
 अतः 12 जुलाई को रविवार है यदि वर्ष एक अधिवर्ष है।', NULL),
@@ -604,19 +604,19 @@ Which of the above assumptions is/are valid?', 'निम्नलिखित �
 3. घरेलू निजी निवेश को सशक्त बनाने वाली नीतियाँ अपनायी जानी चाहिए।
 4. निजी निवेश की अपेक्षा सार्वजनिक निवेश को अधिक प्राथमिकता देनी चाहिए।
 5. शिक्षा एवं स्वास्थ्य क्षेत्र में पर्याप्त सार्वजनिक निवेश किया जाना चाहिए।
-उपर्युक्त में से कौन-सी पूर्वधारणा/पूर्वधारणाएँ वैध है/हैं?', '1, 2 and 4', '1, 3 and 5', '2, 4 and 5', '3 only', '1, 2 और 4', '1, 3 और 5', '2, 4 और 5', 'केवल 3', 'B', 'Correct Answer: Option B (1, 3 and 5)[cite: 3].
+उपर्युक्त में से कौन-सी पूर्वधारणा/पूर्वधारणाएँ वैध है/हैं?', '1, 2 and 4', '1, 3 and 5', '2, 4 and 5', '3 only', '1, 2 और 4', '1, 3 और 5', '2, 4 और 5', 'केवल 3', 'B', 'Correct Answer: Option B (1, 3 and 5).
 
-1. Why Assumptions 1, 3, and 5 are valid: The author explains that FDI is inherently volatile and leads to unstable employment and growing inequality, which directly implies that relying on it in the long run is economically unsound (Assumption 1)[cite: 3]. Because foreign private capital seeks global avenues, the country must strengthen domestic private investment to secure stable employment (Assumption 3)[cite: 3]. Furthermore, the passage explicitly points out that technology diffusion is hindered by inadequate human and physical capital, assuming that substantial public investment in education and health (human capital) is required (Assumption 5)[cite: 3].
-2. Why Assumption 2 is invalid: The passage states that the volatility of FDI is a "necessary consequence of their search for the highest returns" worldwide, meaning this global volatility cannot simply be eliminated by domestic policy[cite: 3].
-3. Why Assumption 4 is invalid: The passage does not assume that public investment should universally be prioritized over all private investment; it only critiques the over-reliance on foreign private investment[cite: 3].
+1. Why Assumptions 1, 3, and 5 are valid: The author explains that FDI is inherently volatile and leads to unstable employment and growing inequality, which directly implies that relying on it in the long run is economically unsound (Assumption 1). Because foreign private capital seeks global avenues, the country must strengthen domestic private investment to secure stable employment (Assumption 3). Furthermore, the passage explicitly points out that technology diffusion is hindered by inadequate human and physical capital, assuming that substantial public investment in education and health (human capital) is required (Assumption 5).
+2. Why Assumption 2 is invalid: The passage states that the volatility of FDI is a "necessary consequence of their search for the highest returns" worldwide, meaning this global volatility cannot simply be eliminated by domestic policy.
+3. Why Assumption 4 is invalid: The passage does not assume that public investment should universally be prioritized over all private investment; it only critiques the over-reliance on foreign private investment.
 
-Therefore, assumptions 1, 3, and 5 are valid[cite: 3].', 'सही उत्तर: विकल्प B (1, 3 और 5)[cite: 3]।
+Therefore, assumptions 1, 3, and 5 are valid.', 'सही उत्तर: विकल्प B (1, 3 और 5)।
 
-1. पूर्वधारणाएँ 1, 3 और 5 क्यों वैध हैं: परिच्छेद स्पष्ट करता है कि विदेशी निजी निवेश अत्यधिक चपल होता है तथा अस्थिर रोज़गार व असमानता को जन्म देता है, अतः दीर्घकाल में केवल इस पर निर्भर रहना आर्थिक रूप से सही नीति नहीं है (पूर्वधारणा 1)[cite: 3]। चूँकि विदेशी पूँजी वैश्विक विकल्पों की तलाश में अस्थिर रहती है, इसलिए रोज़गार हेतु घरेलू निजी निवेश को सशक्त बनाना आवश्यक है (पूर्वधारणा 3)[cite: 3]। साथ ही, परिच्छेद बताता है कि भारत में मानवीय पूँजी की अपर्याप्तता के कारण प्रौद्योगिकी विसरण नहीं हो पाता, जो यह पूर्वधारित करता है कि शिक्षा और स्वास्थ्य (मानव पूँजी) में पर्याप्त सार्वजनिक निवेश की आवश्यकता है (पूर्वधारणा 5)[cite: 3]।
-2. पूर्वधारणा 2 क्यों अवैध है: परिच्छेद के अनुसार विदेशी निवेश की चपलता वैश्विक स्तर पर अधिकतम प्रतिफल खोजने का ''आवश्यक परिणाम'' है, जिसे केवल घरेलू नीतियों द्वारा कम नहीं किया जा सकता[cite: 3]।
-3. पूर्वधारणा 4 क्यों अवैध है: परिच्छेद निजी निवेश के स्थान पर सार्वजनिक निवेश को सामान्य प्राथमिकता देने की बात नहीं करता, बल्कि विदेशी निजी निवेश पर अत्यधिक निर्भरता की सीमाओं को रेखांकित करता है[cite: 3]।
+1. पूर्वधारणाएँ 1, 3 और 5 क्यों वैध हैं: परिच्छेद स्पष्ट करता है कि विदेशी निजी निवेश अत्यधिक चपल होता है तथा अस्थिर रोज़गार व असमानता को जन्म देता है, अतः दीर्घकाल में केवल इस पर निर्भर रहना आर्थिक रूप से सही नीति नहीं है (पूर्वधारणा 1)। चूँकि विदेशी पूँजी वैश्विक विकल्पों की तलाश में अस्थिर रहती है, इसलिए रोज़गार हेतु घरेलू निजी निवेश को सशक्त बनाना आवश्यक है (पूर्वधारणा 3)। साथ ही, परिच्छेद बताता है कि भारत में मानवीय पूँजी की अपर्याप्तता के कारण प्रौद्योगिकी विसरण नहीं हो पाता, जो यह पूर्वधारित करता है कि शिक्षा और स्वास्थ्य (मानव पूँजी) में पर्याप्त सार्वजनिक निवेश की आवश्यकता है (पूर्वधारणा 5)।
+2. पूर्वधारणा 2 क्यों अवैध है: परिच्छेद के अनुसार विदेशी निवेश की चपलता वैश्विक स्तर पर अधिकतम प्रतिफल खोजने का ''आवश्यक परिणाम'' है, जिसे केवल घरेलू नीतियों द्वारा कम नहीं किया जा सकता।
+3. पूर्वधारणा 4 क्यों अवैध है: परिच्छेद निजी निवेश के स्थान पर सार्वजनिक निवेश को सामान्य प्राथमिकता देने की बात नहीं करता, बल्कि विदेशी निजी निवेश पर अत्यधिक निर्भरता की सीमाओं को रेखांकित करता है।
 
-अतः पूर्वधारणाएँ 1, 3 और 5 वैध हैं[cite: 3]।', NULL),
+अतः पूर्वधारणाएँ 1, 3 और 5 वैध हैं।', NULL),
     ('csat-2020-q22', 22, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.reading_comprehension_inference', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Reading Comprehension & Interpersonal Skills', 'बोधगम्यता एवं अंतर-वैयक्तिक कौशल', 'Practical Implications for Solar Energy Ecosystem in India', 'भारत में सौर ऊर्जा पारिस्थितिकी तंत्र के व्यावहारिक निहितार्थ', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Reading Comprehension', 'Solar Energy', 'Policy Implications']::TEXT[], 'Directions for the following item:
 Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
 
@@ -641,19 +641,19 @@ Select the correct answer using the code given below.', 'निम्नलि�
 3. कृषकों को बोरवेल की खुदाई के लिए सुलभ ऋण दिया जाना चाहिए।
 4. कृषि में जल के प्रयोग को कानूनी रूप से नियंत्रित किया जाना चाहिए।
 5. केन्द्र सरकार द्वारा विभिन्न क्षेत्रों में नदियों के जल के वितरण को नियंत्रित किया जाना चाहिए।
-नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए।', '1 and 2', '2, 4 and 5', '1, 3 and 4', '2, 3 and 5', '1 और 2', '2, 4 और 5', '1, 3 और 4', '2, 3 और 5', 'A', 'Correct Answer: Option A (1 and 2)[cite: 3].
+नीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए।', '1 and 2', '2, 4 and 5', '1, 3 and 4', '2, 3 and 5', '1 और 2', '2, 4 और 5', '1, 3 और 4', '2, 3 और 5', 'A', 'Correct Answer: Option A (1 and 2).
 
-1. Why Statements 1 and 2 are correct: The author highlights that monsoon flows are concentrated within four months and distributed unevenly, leading simultaneously to droughts and floods while unutilized river water flows into the sea[cite: 3]. Storing rainwater in reservoirs and distributing it across regions directly points to building a network of dams/canals (2) and undertaking the inter-linking of rivers to transfer surplus water to deficit basins (1)[cite: 3].
-2. Why Statement 3 is incorrect: Digging more borewells accelerates groundwater depletion and does not address the passage''s primary focus on capturing unutilized seasonal surface monsoon flows[cite: 3].
-3. Why Statements 4 and 5 are incorrect: Legal rationing of agricultural water and centralizing river water distribution are governance issues not derived as direct physical solutions from the text[cite: 3].
+1. Why Statements 1 and 2 are correct: The author highlights that monsoon flows are concentrated within four months and distributed unevenly, leading simultaneously to droughts and floods while unutilized river water flows into the sea. Storing rainwater in reservoirs and distributing it across regions directly points to building a network of dams/canals (2) and undertaking the inter-linking of rivers to transfer surplus water to deficit basins (1).
+2. Why Statement 3 is incorrect: Digging more borewells accelerates groundwater depletion and does not address the passage''s primary focus on capturing unutilized seasonal surface monsoon flows.
+3. Why Statements 4 and 5 are incorrect: Legal rationing of agricultural water and centralizing river water distribution are governance issues not derived as direct physical solutions from the text.
 
-Therefore, statements 1 and 2 are the most rational and practical implications[cite: 3].', 'सही उत्तर: विकल्प A (1 और 2)[cite: 3]।
+Therefore, statements 1 and 2 are the most rational and practical implications.', 'सही उत्तर: विकल्प A (1 और 2)।
 
-1. कथन 1 और 2 क्यों सही हैं: परिच्छेद स्पष्ट करता है कि वर्षा जल का चार महीनों में विषम वितरण सूखे और बाढ़ का कारण बनता है, जबकि नदियों का जल अप्रयुक्त रहकर समुद्र में बह जाता है[cite: 3]। इसे रोकने हेतु जलाशयों में जल संचयन और वर्ष भर वितरण के लिए बाँधों व नहरों के नेटवर्क का निर्माण (2) तथा जल अधिशेष वाली नदियों को जल की कमी वाले क्षेत्रों से जोड़ने हेतु नदियों का अंतःसंबंधन (1) सर्वाधिक तार्किक और व्यावहारिक समाधान हैं[cite: 3]।
-2. कथन 3 क्यों गलत है: बोरवेल की खुदाई को बढ़ावा देना भूजल का दोहन बढ़ाता है, जबकि परिच्छेद सतही मानसूनी जल के संचयन की बात करता है[cite: 3]।
-3. कथन 4 और 5 क्यों गलत हैं: कृषि जल के कानूनी नियमन या केंद्र सरकार द्वारा जल वितरण के नियंत्रण की चर्चा परिच्छेद के भौतिक जल-प्रबंधन समाधान से सीधे संबंधित नहीं है[cite: 3]।
+1. कथन 1 और 2 क्यों सही हैं: परिच्छेद स्पष्ट करता है कि वर्षा जल का चार महीनों में विषम वितरण सूखे और बाढ़ का कारण बनता है, जबकि नदियों का जल अप्रयुक्त रहकर समुद्र में बह जाता है। इसे रोकने हेतु जलाशयों में जल संचयन और वर्ष भर वितरण के लिए बाँधों व नहरों के नेटवर्क का निर्माण (2) तथा जल अधिशेष वाली नदियों को जल की कमी वाले क्षेत्रों से जोड़ने हेतु नदियों का अंतःसंबंधन (1) सर्वाधिक तार्किक और व्यावहारिक समाधान हैं।
+2. कथन 3 क्यों गलत है: बोरवेल की खुदाई को बढ़ावा देना भूजल का दोहन बढ़ाता है, जबकि परिच्छेद सतही मानसूनी जल के संचयन की बात करता है।
+3. कथन 4 और 5 क्यों गलत हैं: कृषि जल के कानूनी नियमन या केंद्र सरकार द्वारा जल वितरण के नियंत्रण की चर्चा परिच्छेद के भौतिक जल-प्रबंधन समाधान से सीधे संबंधित नहीं है।
 
-अतः केवल 1 और 2 सही निहितार्थ हैं[cite: 3]।', NULL),
+अतः केवल 1 और 2 सही निहितार्थ हैं।', NULL),
     ('csat-2020-q23', 23, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.reading_comprehension_inference', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Reading Comprehension & Interpersonal Skills', 'बोधगम्यता एवं अंतर-वैयक्तिक कौशल', 'Fiscal Policy & Progressive Taxation Assumptions', 'राजकोषीय नीति एवं प्रगतिशील कराधान पूर्वधारणाएँ', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Reading Comprehension', 'Taxation', 'Income Inequality']::TEXT[], 'Directions for the following item:
 Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
 
@@ -674,19 +674,19 @@ Which of the above assumptions is/are valid?', 'निम्नलिखित �
 1. किसी देश में निम्न कर दर निरपवाद रूप से उच्च शिक्षा में अधिक निवेश के लिए परिणत हो जाती हैं।
 2. बच्चों की शिक्षा में निवेश उनकी आर्थिक स्वतंत्रता को सुनिश्चित करता है।
 3. आर्थिक स्वतंत्रता का मानव पूँजी निर्माण पर सकारात्मक प्रभाव होता है।
-उपर्युक्त में से कौन-सी पूर्वधारणा/पूर्वधारणाएँ वैध है/हैं?', '1 only', '2 only', '3 only', '1, 2 and 3', 'केवल 1', 'केवल 2', 'केवल 3', '1, 2 और 3', 'C', 'Correct Answer: Option C (3 only)[cite: 3].
+उपर्युक्त में से कौन-सी पूर्वधारणा/पूर्वधारणाएँ वैध है/हैं?', '1 only', '2 only', '3 only', '1, 2 and 3', 'केवल 1', 'केवल 2', 'केवल 3', '1, 2 और 3', 'C', 'Correct Answer: Option C (3 only).
 
-1. Why Assumption 3 is valid: The passage establishes that granting economic freedom increases the return on education, encouraging individuals and parents to invest in education, which directly translates into building human capital[cite: 3].
-2. Why Assumption 1 is invalid: The word "invariably" is an absolute and rigid generalization; lower tax rates incentivize education investment, but do not invariably guarantee it in every circumstance[cite: 3].
-3. Why Assumption 2 is invalid: The passage views economic freedom as a prerequisite incentive for investing in education, not that investing in education automatically "ensures" economic freedom (the causal direction is reversed)[cite: 3].
+1. Why Assumption 3 is valid: The passage establishes that granting economic freedom increases the return on education, encouraging individuals and parents to invest in education, which directly translates into building human capital.
+2. Why Assumption 1 is invalid: The word "invariably" is an absolute and rigid generalization; lower tax rates incentivize education investment, but do not invariably guarantee it in every circumstance.
+3. Why Assumption 2 is invalid: The passage views economic freedom as a prerequisite incentive for investing in education, not that investing in education automatically "ensures" economic freedom (the causal direction is reversed).
 
-Therefore, only assumption 3 is valid[cite: 3].', 'सही उत्तर: विकल्प C (केवल 3)[cite: 3]।
+Therefore, only assumption 3 is valid.', 'सही उत्तर: विकल्प C (केवल 3)।
 
-1. पूर्वधारणा 3 क्यों वैध है: परिच्छेद का केंद्रीय विचार है कि जब लोगों को आर्थिक स्वतंत्रता मिलती है, तो शिक्षा पर मिलने वाला प्रतिफल बढ़ता है और वे शिक्षा में अधिक निवेश करते हैं, जिसका मानव पूँजी निर्माण पर प्रत्यक्ष सकारात्मक प्रभाव पड़ता है[cite: 3]।
-2. पूर्वधारणा 1 क्यों अवैध है: ''निरपवाद रूप से'' (invariably) एक अतिवादी शब्द है; निम्न कर दरें शिक्षा में निवेश को प्रोत्साहित करती हैं, किन्तु यह आवश्यक नहीं कि वे हर स्थिति में उच्च शिक्षा में अधिक निवेश में ही परिणत हों[cite: 3]।
-3. पूर्वधारणा 2 क्यों अवैध है: परिच्छेद आर्थिक स्वतंत्रता को शिक्षा में निवेश का कारण मानता है, न कि यह कि शिक्षा में निवेश स्वतः बच्चों की आर्थिक स्वतंत्रता को ''सुनिश्चित'' कर देता है[cite: 3]।
+1. पूर्वधारणा 3 क्यों वैध है: परिच्छेद का केंद्रीय विचार है कि जब लोगों को आर्थिक स्वतंत्रता मिलती है, तो शिक्षा पर मिलने वाला प्रतिफल बढ़ता है और वे शिक्षा में अधिक निवेश करते हैं, जिसका मानव पूँजी निर्माण पर प्रत्यक्ष सकारात्मक प्रभाव पड़ता है।
+2. पूर्वधारणा 1 क्यों अवैध है: ''निरपवाद रूप से'' (invariably) एक अतिवादी शब्द है; निम्न कर दरें शिक्षा में निवेश को प्रोत्साहित करती हैं, किन्तु यह आवश्यक नहीं कि वे हर स्थिति में उच्च शिक्षा में अधिक निवेश में ही परिणत हों।
+3. पूर्वधारणा 2 क्यों अवैध है: परिच्छेद आर्थिक स्वतंत्रता को शिक्षा में निवेश का कारण मानता है, न कि यह कि शिक्षा में निवेश स्वतः बच्चों की आर्थिक स्वतंत्रता को ''सुनिश्चित'' कर देता है।
 
-अतः केवल पूर्वधारणा 3 वैध है[cite: 3]।', NULL),
+अतः केवल पूर्वधारणा 3 वैध है।', NULL),
     ('csat-2020-q24', 24, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.reading_comprehension_inference', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Reading Comprehension & Interpersonal Skills', 'बोधगम्यता एवं अंतर-वैयक्तिक कौशल', 'Crucial Message on Tax Revenues & Inclusive Growth', 'कर राजस्व एवं समावेशी विकास पर महत्वपूर्ण संदेश', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Reading Comprehension', 'Inclusive Growth', 'Tax Policy']::TEXT[], 'Directions for the following item:
 Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
 
@@ -699,21 +699,21 @@ What is the most logical and crucial message conveyed by the passage?', 'नि�
 परिच्छेद-4
 जब तक वित्तीयन तंत्र स्थापित न हो जाए तब तक हमारे शहरी निकाय संभवतः हमारे शहरों में जलापूर्ति की धारणीय व्यवस्था सुनिश्चित नहीं कर सकते। जलापूर्ति के लिए प्राकृतिक स्रोतों से जल संचित करने, उसे पीने योग्य बनाने की अभिक्रिया, तथा उपभोक्ताओं तक उसकी आपूर्ति करने के लिए पाइपों के जल-वितरण नेटवर्क बिछाने में भारी निवेश की आवश्यकता होती है। उसमें मल-प्रबंधन अधःसंरचना एवं मल-जल अभिक्रिया संयंत्रों में भी निवेश की आवश्यकता होती है, जिससे मल-प्रणाल अपशिष्ट जल को इन संयंत्रों तक ले जा सकें और यह सुनिश्चित किया जा सके कि असंसाधित मल-जल प्राकृतिक जल निकायों में बिलकुल ही नहीं छोड़ा जाए। यदि हमारे शहर इतने समृद्ध होते कि वो पूरी लागत को वहन कर सकते तो जल की निःशुल्क पूर्ति की जा सकती है। वे ऐसे नहीं हैं।
 
-परिच्छेद द्वारा संप्रेषित सर्वाधिक तार्किक और निर्णायक संदेश क्या है?', 'Urban local bodies must recover costs through user charges.', 'Urban local bodies are not efficient enough to meet the water requirements of our cities.', 'Water shortage in our cities is a perennial problem that cannot be solved.', 'In view of the water crisis in our cities, there is an urgent need to limit the population of cities by adopting an upper limit of population size.', 'शहरी स्थानीय निकायों को उपभोक्ता शुल्कों के माध्यम से लागत वसूलनी चाहिए।', 'शहरी स्थानीय निकाय हमारे शहरों की जल आवश्यकताओं को पूर्ण करने के लिए पर्याप्त रूप से दक्ष नहीं हैं।', 'हमारे शहरों में जल का अभाव एक चिरस्थायी समस्या है जिसका समाधान सम्भव नहीं है।', 'हमारे शहरों में जल संकट की दृष्टि से यह बहुत आवश्यक है कि शहरों में जनसंख्या का एक अधिकतम आकार निर्धारित कर शहरों की जनसंख्या को सीमित किया जाए।', 'A', 'Correct Answer: Option A (Urban local bodies must recover costs through user charges)[cite: 3].
+परिच्छेद द्वारा संप्रेषित सर्वाधिक तार्किक और निर्णायक संदेश क्या है?', 'Urban local bodies must recover costs through user charges.', 'Urban local bodies are not efficient enough to meet the water requirements of our cities.', 'Water shortage in our cities is a perennial problem that cannot be solved.', 'In view of the water crisis in our cities, there is an urgent need to limit the population of cities by adopting an upper limit of population size.', 'शहरी स्थानीय निकायों को उपभोक्ता शुल्कों के माध्यम से लागत वसूलनी चाहिए।', 'शहरी स्थानीय निकाय हमारे शहरों की जल आवश्यकताओं को पूर्ण करने के लिए पर्याप्त रूप से दक्ष नहीं हैं।', 'हमारे शहरों में जल का अभाव एक चिरस्थायी समस्या है जिसका समाधान सम्भव नहीं है।', 'हमारे शहरों में जल संकट की दृष्टि से यह बहुत आवश्यक है कि शहरों में जनसंख्या का एक अधिकतम आकार निर्धारित कर शहरों की जनसंख्या को सीमित किया जाए।', 'A', 'Correct Answer: Option A (Urban local bodies must recover costs through user charges).
 
-1. Why Option A is correct: The passage emphasizes that water delivery and sewage treatment require massive investments and that cities are not wealthy enough to supply water for free[cite: 3]. It argues that sustainable delivery is impossible without financing mechanisms, logically concluding that urban bodies must recover operational and capital costs through user charges[cite: 3].
-2. Why Option B is incorrect: The passage attributes the problem to financial constraints, not to the operational inefficiency of urban local bodies[cite: 3].
-3. Why Option C is incorrect: The passage does not claim water shortages are permanently insoluble; it provides a structural financing solution[cite: 3].
-4. Why Option D is incorrect: Imposing an upper limit on city populations is an external idea not suggested by the author[cite: 3].
+1. Why Option A is correct: The passage emphasizes that water delivery and sewage treatment require massive investments and that cities are not wealthy enough to supply water for free. It argues that sustainable delivery is impossible without financing mechanisms, logically concluding that urban bodies must recover operational and capital costs through user charges.
+2. Why Option B is incorrect: The passage attributes the problem to financial constraints, not to the operational inefficiency of urban local bodies.
+3. Why Option C is incorrect: The passage does not claim water shortages are permanently insoluble; it provides a structural financing solution.
+4. Why Option D is incorrect: Imposing an upper limit on city populations is an external idea not suggested by the author.
 
-Therefore, option A is the most logical and crucial message[cite: 3].', 'सही उत्तर: विकल्प A (शहरी स्थानीय निकायों को उपभोक्ता शुल्कों के माध्यम से लागत वसूलनी चाहिए)[cite: 3]।
+Therefore, option A is the most logical and crucial message.', 'सही उत्तर: विकल्प A (शहरी स्थानीय निकायों को उपभोक्ता शुल्कों के माध्यम से लागत वसूलनी चाहिए)।
 
-1. विकल्प A क्यों सही है: परिच्छेद स्पष्ट करता है कि जल शोधन, वितरण और सीवेज उपचार में भारी पूँजी की आवश्यकता होती है और शहर इतने समृद्ध नहीं हैं कि निःशुल्क जलापूर्ति कर सकें[cite: 3]। अतः धारणीय व्यवस्था बनाए रखने के लिए वित्तीय तंत्र स्थापित कर उपभोक्ता शुल्कों (User charges) से लागत वसूलना ही मुख्य संदेश है[cite: 3]।
-2. विकल्प B क्यों गलत है: परिच्छेद शहरी निकायों की प्रशासनिक अक्षमता की बात नहीं करता, बल्कि वित्तीय साधनों की कमी पर केंद्रित है[cite: 3]।
-3. विकल्प C क्यों गलत है: परिच्छेद समस्या को समाधान-विहीन नहीं मानता बल्कि इसके लिए वित्तीय तंत्र की स्थापना का समाधान सुझाता है[cite: 3]।
-4. विकल्प D क्यों गलत है: शहरों की जनसंख्या पर अधिकतम सीमा लगाने का विचार परिच्छेद में नहीं है[cite: 3]।
+1. विकल्प A क्यों सही है: परिच्छेद स्पष्ट करता है कि जल शोधन, वितरण और सीवेज उपचार में भारी पूँजी की आवश्यकता होती है और शहर इतने समृद्ध नहीं हैं कि निःशुल्क जलापूर्ति कर सकें। अतः धारणीय व्यवस्था बनाए रखने के लिए वित्तीय तंत्र स्थापित कर उपभोक्ता शुल्कों (User charges) से लागत वसूलना ही मुख्य संदेश है।
+2. विकल्प B क्यों गलत है: परिच्छेद शहरी निकायों की प्रशासनिक अक्षमता की बात नहीं करता, बल्कि वित्तीय साधनों की कमी पर केंद्रित है।
+3. विकल्प C क्यों गलत है: परिच्छेद समस्या को समाधान-विहीन नहीं मानता बल्कि इसके लिए वित्तीय तंत्र की स्थापना का समाधान सुझाता है।
+4. विकल्प D क्यों गलत है: शहरों की जनसंख्या पर अधिकतम सीमा लगाने का विचार परिच्छेद में नहीं है।
 
-अतः विकल्प A सर्वाधिक तार्किक और निर्णायक संदेश है[cite: 3]।', NULL),
+अतः विकल्प A सर्वाधिक तार्किक और निर्णायक संदेश है।', NULL),
     ('csat-2020-q25', 25, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.reading_comprehension_inference', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Reading Comprehension & Interpersonal Skills', 'बोधगम्यता एवं अंतर-वैयक्तिक कौशल', 'Assumption Testing on Urbanization & Spatial Inequality', 'शहरीकरण एवं स्थानिक असमानता पर पूर्वधारणा परीक्षण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Reading Comprehension', 'Urban Planning', 'Agglomeration']::TEXT[], 'Directions for the following item:
 Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
 
@@ -732,17 +732,17 @@ Which of the above assumptions is/are valid?', 'निम्नलिखित �
 उपर्युक्त परिच्छेद के संदर्भ में, निम्नलिखित पूर्वधारणाएँ बनाई गई हैं :
 1. केवल धनी शहर ही जल की धारणीय आपूर्ति को सुनिश्चित कर सकते हैं।
 2. शहरों में जल की धारणीय आपूर्ति का अर्थ कुटुम्बों को जल की आपूर्ति करने से कहीं अधिक है।
-उपर्युक्त में से कौन-सी पूर्वधारणा/पूर्वधारणाएँ वैध है/हैं?', '1 only', '2 only', 'Both 1 and 2', 'Neither 1 nor 2', 'केवल 1', 'केवल 2', '1 और 2 दोनों', 'न तो 1, न ही 2', 'B', 'Correct Answer: Option B (2 only)[cite: 3].
+उपर्युक्त में से कौन-सी पूर्वधारणा/पूर्वधारणाएँ वैध है/हैं?', '1 only', '2 only', 'Both 1 and 2', 'Neither 1 nor 2', 'केवल 1', 'केवल 2', '1 और 2 दोनों', 'न तो 1, न ही 2', 'B', 'Correct Answer: Option B (2 only).
 
-1. Why Assumption 2 is valid: The passage explains that sustainable water delivery involves a comprehensive cycle: collecting water, purifying it, laying distribution pipes, and building sewerage infrastructure and treatment plants to protect natural water bodies[cite: 3].
-2. Why Assumption 1 is invalid: The passage states that rich cities could deliver water for *free*, but any city can ensure sustainable delivery by putting proper financing mechanisms (cost-recovery tariffs) in place, not exclusively rich cities[cite: 3].
+1. Why Assumption 2 is valid: The passage explains that sustainable water delivery involves a comprehensive cycle: collecting water, purifying it, laying distribution pipes, and building sewerage infrastructure and treatment plants to protect natural water bodies.
+2. Why Assumption 1 is invalid: The passage states that rich cities could deliver water for *free*, but any city can ensure sustainable delivery by putting proper financing mechanisms (cost-recovery tariffs) in place, not exclusively rich cities.
 
-Therefore, only assumption 2 is valid[cite: 3].', 'सही उत्तर: विकल्प B (केवल 2)[cite: 3]।
+Therefore, only assumption 2 is valid.', 'सही उत्तर: विकल्प B (केवल 2)।
 
-1. पूर्वधारणा 2 क्यों वैध है: परिच्छेद के अनुसार धारणीय जलापूर्ति केवल घरों में पानी पहुँचाने तक सीमित नहीं है, बल्कि इसमें जल शोधन, वितरण पाइपलाइन बिछाना, मल-जल प्रबंधन और प्रदूषण नियंत्रण के लिए उपचार संयंत्र लगाना भी शामिल है[cite: 3]।
-2. पूर्वधारणा 1 क्यों अवैध है: परिच्छेद कहता है कि यदि शहर धनी होते तो पानी *मुफ़्त* दे सकते थे; किन्तु उपयुक्त वित्तीय तंत्र अपनाकर कोई भी शहर धारणीय जलापूर्ति सुनिश्चित कर सकता है, केवल धनी शहर ही नहीं[cite: 3]।
+1. पूर्वधारणा 2 क्यों वैध है: परिच्छेद के अनुसार धारणीय जलापूर्ति केवल घरों में पानी पहुँचाने तक सीमित नहीं है, बल्कि इसमें जल शोधन, वितरण पाइपलाइन बिछाना, मल-जल प्रबंधन और प्रदूषण नियंत्रण के लिए उपचार संयंत्र लगाना भी शामिल है।
+2. पूर्वधारणा 1 क्यों अवैध है: परिच्छेद कहता है कि यदि शहर धनी होते तो पानी *मुफ़्त* दे सकते थे; किन्तु उपयुक्त वित्तीय तंत्र अपनाकर कोई भी शहर धारणीय जलापूर्ति सुनिश्चित कर सकता है, केवल धनी शहर ही नहीं।
 
-अतः केवल पूर्वधारणा 2 वैध है[cite: 3]।', NULL),
+अतः केवल पूर्वधारणा 2 वैध है।', NULL),
     ('csat-2020-q26', 26, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.reading_comprehension_inference', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Reading Comprehension & Interpersonal Skills', 'बोधगम्यता एवं अंतर-वैयक्तिक कौशल', 'Assumptions on Structural Transformation in Agriculture', 'कृषि में संरचनात्मक रूपांतरण संबंधी पूर्वधारणाएँ', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Reading Comprehension', 'Agrarian Economy', 'Rural Distress']::TEXT[], 'Directions for the following item:
 Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
 
@@ -765,19 +765,19 @@ Which of the above assumptions are valid?', 'निम्नलिखित प�
 2. अच्छी कीमत प्रोत्साहन कृषि में निवेश को प्रेरित कर सकती है।
 3. भारत के लिए उच्च मूल्य के कृषि उत्पादों, जैसे कि पशुधन और बागवानी, के लिए मूल्य-श्रृंखलाओं (value chains) को बनाने की आवश्यकता है।
 4. कृषि-माल की उच्च वैश्विक कीमतें भारत के गरीबी-ह्रास के लिए आवश्यक हैं।
-उपर्युक्त में से कौन-सी पूर्वधारणाएँ वैध हैं?', '1 and 3', '2 and 4', '2 and 3', '3 and 4', '1 और 3', '2 और 4', '2 और 3', '3 और 4', 'C', 'Correct Answer: Option C (2 and 3)[cite: 3].
+उपर्युक्त में से कौन-सी पूर्वधारणाएँ वैध हैं?', '1 and 3', '2 and 4', '2 and 3', '3 and 4', '1 और 3', '2 और 4', '2 और 3', '3 और 4', 'C', 'Correct Answer: Option C (2 and 3).
 
-1. Why Assumptions 2 and 3 are valid: The passage directly demonstrates that when relative prices shifted in favour of agriculture by 50%, private investment rose by over 50%, validating Assumption 2[cite: 3]. Building robust value chains for high-value agricultural produce is a necessary structural assumption recognized in this context to sustain agricultural growth and farm wages (Assumption 3)[cite: 3].
-2. Why Assumption 1 is invalid: The passage notes that transformation in India was slow compared to China and Vietnam, but does not claim it is "impossible" with small farms[cite: 3].
-3. Why Assumption 4 is invalid: Higher global prices triggered growth in 2005-2012, but stating they are permanently "essential" (indispensable) for India''s poverty reduction is an unwarranted extreme assumption[cite: 3].
+1. Why Assumptions 2 and 3 are valid: The passage directly demonstrates that when relative prices shifted in favour of agriculture by 50%, private investment rose by over 50%, validating Assumption 2. Building robust value chains for high-value agricultural produce is a necessary structural assumption recognized in this context to sustain agricultural growth and farm wages (Assumption 3).
+2. Why Assumption 1 is invalid: The passage notes that transformation in India was slow compared to China and Vietnam, but does not claim it is "impossible" with small farms.
+3. Why Assumption 4 is invalid: Higher global prices triggered growth in 2005-2012, but stating they are permanently "essential" (indispensable) for India''s poverty reduction is an unwarranted extreme assumption.
 
-Therefore, assumptions 2 and 3 are valid[cite: 3].', 'सही उत्तर: विकल्प C (2 और 3)[cite: 3]।
+Therefore, assumptions 2 and 3 are valid.', 'सही उत्तर: विकल्प C (2 और 3)।
 
-1. पूर्वधारणाएँ 2 और 3 क्यों वैध हैं: परिच्छेद दिखाता है कि जब कीमतें कृषि के पक्ष में 50% बढ़ीं तो निजी निवेश में 50% से अधिक वृद्धि हुई, जो पूर्वधारणा 2 को सिद्ध करता है[cite: 3]। कृषि विकास और आय वृद्धि को टिकाऊ बनाने के लिए उच्च मूल्य उत्पादों की मूल्य-श्रृंखलाओं का निर्माण एक आवश्यक पूर्वधारणा है (पूर्वधारणा 3)[cite: 3]।
-2. पूर्वधारणा 1 क्यों अवैध है: परिच्छेद छोटे खेतों के कारण परिवर्तन की गति को ''धीमा'' बताता है, इसे ''असंभव'' नहीं कहता[cite: 3]।
-3. पूर्वधारणा 4 क्यों अवैध है: वैश्विक कीमतें 2005-2012 में एक प्रेरक थीं, किन्तु यह मानना कि गरीबी कम करने के लिए उच्च वैश्विक कीमतें ''अनिवार्य'' हैं, एक अतिवादी पूर्वधारणा है[cite: 3]।
+1. पूर्वधारणाएँ 2 और 3 क्यों वैध हैं: परिच्छेद दिखाता है कि जब कीमतें कृषि के पक्ष में 50% बढ़ीं तो निजी निवेश में 50% से अधिक वृद्धि हुई, जो पूर्वधारणा 2 को सिद्ध करता है। कृषि विकास और आय वृद्धि को टिकाऊ बनाने के लिए उच्च मूल्य उत्पादों की मूल्य-श्रृंखलाओं का निर्माण एक आवश्यक पूर्वधारणा है (पूर्वधारणा 3)।
+2. पूर्वधारणा 1 क्यों अवैध है: परिच्छेद छोटे खेतों के कारण परिवर्तन की गति को ''धीमा'' बताता है, इसे ''असंभव'' नहीं कहता।
+3. पूर्वधारणा 4 क्यों अवैध है: वैश्विक कीमतें 2005-2012 में एक प्रेरक थीं, किन्तु यह मानना कि गरीबी कम करने के लिए उच्च वैश्विक कीमतें ''अनिवार्य'' हैं, एक अतिवादी पूर्वधारणा है।
 
-अतः पूर्वधारणाएँ 2 और 3 वैध हैं[cite: 3]।', NULL),
+अतः पूर्वधारणाएँ 2 और 3 वैध हैं।', NULL),
     ('csat-2020-q27', 27, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.reading_comprehension_inference', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Reading Comprehension & Interpersonal Skills', 'बोधगम्यता एवं अंतर-वैयक्तिक कौशल', 'Critical Message on Institutional Support for Small Farmers', 'लघु किसानों के संस्थागत समर्थन पर महत्वपूर्ण संदेश', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Reading Comprehension', 'Smallholder Agriculture', 'Farmer Support']::TEXT[], 'Directions for the following item:
 Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
 
@@ -790,21 +790,21 @@ Which one of the following statements best reflects the critical message of the 
 परिच्छेद-5
 भारत में, अभी भी लगभग पचास प्रतिशत कामगार कृषि में विनियोजित हैं, तथा लगभग 85 प्रतिशत खेत छोटे और सीमांत हैं। चीन और वियतनाम की तुलना में, जहाँ तेज़ गति से संरचनात्मक और ग्रामीण परिवर्तन हुए, भारत की कहानी धीमे परिवर्तन की है। परिणामस्वरूप भारत में गरीबी-ह्रास, चीन और वियतनाम की तुलना में, 1988-2014 के बीच बहुत धीमी गति का था। भारत का गरीबी-ह्रास 1988-2005 के बीच धीमा था, परंतु 2005-2012 के दौरान यह नाटकीय गति से बढ़ा-पूर्व के काल की तुलना में तीन गुना तेज़ गति से। इस काल में भारत ने क्या किया ? शोध से पता चलता है कि सापेक्ष कीमतों का दृश्यलेख, बढ़ती वैश्विक कीमतों के परिणामस्वरूप, कृषि के पक्ष में महत्त्वपूर्ण ढंग से परिवर्तित हुआ है (50% से भी अधिक)। इससे कृषि में निजी निवेश 50% से भी अधिक बढ़ा। परिणामस्वरूप, कृषि-जी० डी० पी० की वृद्धि ने 2002-2007 के 2.4% के मुकाबले 2007-2012 में 4.1% के स्तर को छुआ। कृषि-व्यापार के निवल अधिशेष ने 2013-2014 में $25 बिलियन के स्तर को छुआ; वास्तविक कृषि मज़दूरी 7% प्रति वर्ष की दर से बढ़ी। इन सबके कारण गरीबी में अभूतपूर्व गिरावट आई।
 
-निम्नलिखित में से कौन-सा कथन परिच्छेद के क्रांतिक संदेश का सर्वोत्तम प्रेषण करता है?', 'India should create large-scale off-farm rural employment to reduce poverty in the near future.', 'India should create a large number of farmer producer companies.', 'Private investment in agriculture should be given priority over public investment.', 'Inclusive agricultural growth is key to reduce poverty in the near future.', 'निकट भविष्य में भारत की गरीबी कम करने के लिए बड़े पैमाने पर कृषीतर ग्रामीण रोज़गार सृजित करना चाहिए।', 'भारत को बड़े पैमाने पर कृषक उत्पाद कंपनियाँ सृजित करनी चाहिए।', 'कृषि में लोक निवेश की तुलना में निजी निवेश को प्राथमिकता देनी चाहिए।', 'निकट भविष्य में गरीबी कम करने के लिए समावेशी कृषि विकास मुख्य समाधान है।', 'D', 'Correct Answer: Option D (Inclusive agricultural growth is key to reduce poverty in the near future)[cite: 3].
+निम्नलिखित में से कौन-सा कथन परिच्छेद के क्रांतिक संदेश का सर्वोत्तम प्रेषण करता है?', 'India should create large-scale off-farm rural employment to reduce poverty in the near future.', 'India should create a large number of farmer producer companies.', 'Private investment in agriculture should be given priority over public investment.', 'Inclusive agricultural growth is key to reduce poverty in the near future.', 'निकट भविष्य में भारत की गरीबी कम करने के लिए बड़े पैमाने पर कृषीतर ग्रामीण रोज़गार सृजित करना चाहिए।', 'भारत को बड़े पैमाने पर कृषक उत्पाद कंपनियाँ सृजित करनी चाहिए।', 'कृषि में लोक निवेश की तुलना में निजी निवेश को प्राथमिकता देनी चाहिए।', 'निकट भविष्य में गरीबी कम करने के लिए समावेशी कृषि विकास मुख्य समाधान है।', 'D', 'Correct Answer: Option D (Inclusive agricultural growth is key to reduce poverty in the near future).
 
-1. Why Option D is correct: The passage emphasizes that because half of India''s workforce depends on agriculture and 85% are small/marginal farmers, accelerating agricultural growth and real farm wages directly triggered an unprecedented fall in poverty[cite: 3].
-2. Why Option A is incorrect: The passage focuses on revitalizing agriculture directly rather than creating off-farm employment[cite: 3].
-3. Why Option B is incorrect: Farmer producer companies are not discussed in the text[cite: 3].
-4. Why Option C is incorrect: The passage notes that private investment surged, but does not prescribe prioritizing private investment over public investment[cite: 3].
+1. Why Option D is correct: The passage emphasizes that because half of India''s workforce depends on agriculture and 85% are small/marginal farmers, accelerating agricultural growth and real farm wages directly triggered an unprecedented fall in poverty.
+2. Why Option A is incorrect: The passage focuses on revitalizing agriculture directly rather than creating off-farm employment.
+3. Why Option B is incorrect: Farmer producer companies are not discussed in the text.
+4. Why Option C is incorrect: The passage notes that private investment surged, but does not prescribe prioritizing private investment over public investment.
 
-Therefore, option D best reflects the critical message[cite: 3].', 'सही उत्तर: विकल्प D (निकट भविष्य में गरीबी कम करने के लिए समावेशी कृषि विकास मुख्य समाधान है)[cite: 3]।
+Therefore, option D best reflects the critical message.', 'सही उत्तर: विकल्प D (निकट भविष्य में गरीबी कम करने के लिए समावेशी कृषि विकास मुख्य समाधान है)।
 
-1. विकल्प D क्यों सही है: परिच्छेद दर्शाता है कि भारत की 50% कार्यबल कृषि पर निर्भर है और जब कृषि विकास दर बढ़ी व कृषि मज़दूरी में 7% की वार्षिक वृद्धि हुई, तो गरीबी में भारी कमी आई; अतः समावेशी कृषि विकास ही गरीबी उन्मूलन की कुंजी है[cite: 3]।
-2. विकल्प A क्यों गलत है: परिच्छेद का जोर कृषि क्षेत्र के भीतर सुधार पर है, कृषीतर (off-farm) रोज़गार पर नहीं[cite: 3]।
-3. विकल्प B क्यों गलत है: कृषक उत्पादक कंपनियों का परिच्छेद में कोई उल्लेख नहीं है[cite: 3]।
-4. विकल्प C क्यों गलत है: परिच्छेद निजी निवेश की वृद्धि को दर्शाता है, किन्तु लोक निवेश के ऊपर इसे प्राथमिकता देने की वकालत नहीं करता[cite: 3]।
+1. विकल्प D क्यों सही है: परिच्छेद दर्शाता है कि भारत की 50% कार्यबल कृषि पर निर्भर है और जब कृषि विकास दर बढ़ी व कृषि मज़दूरी में 7% की वार्षिक वृद्धि हुई, तो गरीबी में भारी कमी आई; अतः समावेशी कृषि विकास ही गरीबी उन्मूलन की कुंजी है।
+2. विकल्प A क्यों गलत है: परिच्छेद का जोर कृषि क्षेत्र के भीतर सुधार पर है, कृषीतर (off-farm) रोज़गार पर नहीं।
+3. विकल्प B क्यों गलत है: कृषक उत्पादक कंपनियों का परिच्छेद में कोई उल्लेख नहीं है।
+4. विकल्प C क्यों गलत है: परिच्छेद निजी निवेश की वृद्धि को दर्शाता है, किन्तु लोक निवेश के ऊपर इसे प्राथमिकता देने की वकालत नहीं करता।
 
-अतः विकल्प D क्रांतिक संदेश का सर्वोत्तम प्रेषण करता है[cite: 3]।', NULL),
+अतः विकल्प D क्रांतिक संदेश का सर्वोत्तम प्रेषण करता है।', NULL),
     ('csat-2020-q28', 28, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Data Sufficiency in Linear Inequality Ordering', 'रैखिक असमानता क्रम में आंकड़े की पर्याप्तता', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Data Sufficiency', 'Inequalities', 'Ordering']::TEXT[], 'Two Statements S1 and S2 are given below with regard to four numbers P, Q, R and S followed by a Question:
 S1: R is greater than P as well as Q.
 S2: S is not the largest one.
@@ -815,19 +815,19 @@ S1: R, P और Q से बड़ा है।
 S2: S सबसे बड़ा नहीं है।
 प्रश्न :
 चार संख्याओं P, Q, R और S में कौन-सा सबसे बड़ा है?
-निम्नलिखित में से कौन-सा उपर्युक्त कथनों और प्रश्न के लिए सही है?', 'S1 alone is sufficient to answer the Question.', 'S2 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question.', 'S1 and S2 together are not sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S2 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', 'C', 'Correct Answer: Option C (S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question)[cite: 3].
+निम्नलिखित में से कौन-सा उपर्युक्त कथनों और प्रश्न के लिए सही है?', 'S1 alone is sufficient to answer the Question.', 'S2 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question.', 'S1 and S2 together are not sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S2 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', 'C', 'Correct Answer: Option C (S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question).
 
-1. From S1 alone: $R > P$ and $R > Q$. However, we have no information about $S$, so $S$ could be the largest. Hence, S1 alone is insufficient[cite: 3].
-2. From S2 alone: $S$ is not the largest, but no relationship among $P, Q,$ and $R$ is provided. Hence, S2 alone is insufficient[cite: 3].
-3. Combining S1 and S2: From S1, neither $P$ nor $Q$ can be the largest since $R$ is greater than both. From S2, $S$ cannot be the largest. Therefore, $R$ must be the largest number among $P, Q, R,$ and $S$[cite: 3].
+1. From S1 alone: $R > P$ and $R > Q$. However, we have no information about $S$, so $S$ could be the largest. Hence, S1 alone is insufficient.
+2. From S2 alone: $S$ is not the largest, but no relationship among $P, Q,$ and $R$ is provided. Hence, S2 alone is insufficient.
+3. Combining S1 and S2: From S1, neither $P$ nor $Q$ can be the largest since $R$ is greater than both. From S2, $S$ cannot be the largest. Therefore, $R$ must be the largest number among $P, Q, R,$ and $S$.
 
-Therefore, S1 and S2 together are sufficient to answer the Question[cite: 3].', 'सही उत्तर: विकल्प C (दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है)[cite: 3]।
+Therefore, S1 and S2 together are sufficient to answer the Question.', 'सही उत्तर: विकल्प C (दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है)।
 
-1. केवल S1 से: $R > P$ तथा $R > Q$ है, किन्तु $S$ का मान $R$ से बड़ा हो सकता है, अतः S1 अकेला अपर्याप्त है[cite: 3]।
-2. केवल S2 से: $S$ सबसे बड़ा नहीं है, किन्तु $P, Q, R$ में तुलना उपलब्ध नहीं है, अतः S2 अकेला अपर्याप्त है[cite: 3]।
-3. S1 और S2 को मिलाने पर: $P$ और $Q$ सबसे बड़े नहीं हो सकते (क्योंकि $R$ उनसे बड़ा है) और $S$ भी सबसे बड़ा नहीं है। अतः चारों में सबसे बड़ी संख्या अनिवार्य रूप से $R$ होगी[cite: 3]।
+1. केवल S1 से: $R > P$ तथा $R > Q$ है, किन्तु $S$ का मान $R$ से बड़ा हो सकता है, अतः S1 अकेला अपर्याप्त है।
+2. केवल S2 से: $S$ सबसे बड़ा नहीं है, किन्तु $P, Q, R$ में तुलना उपलब्ध नहीं है, अतः S2 अकेला अपर्याप्त है।
+3. S1 और S2 को मिलाने पर: $P$ और $Q$ सबसे बड़े नहीं हो सकते (क्योंकि $R$ उनसे बड़ा है) और $S$ भी सबसे बड़ा नहीं है। अतः चारों में सबसे बड़ी संख्या अनिवार्य रूप से $R$ होगी।
 
-अतः दोनों कथन मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त हैं[cite: 3]।', NULL),
+अतः दोनों कथन मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', NULL),
     ('csat-2020-q29', 29, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Data Sufficiency in Prime Number Testing & Modular Remainders', 'अभाज्य संख्या एवं शेषफल परीक्षण में आंकड़े की पर्याप्तता', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Data Sufficiency', 'Prime Numbers', 'Modular Arithmetic']::TEXT[], 'Two Statements S1 and S2 are given below followed by a Question:
 S1: n is a prime number.
 S2: n leaves a remainder of 1 when divided by 4.
@@ -838,21 +838,21 @@ S1: n एक अभाज्य संख्या है।
 S2 : n को 4 से विभाजित करने पर 1 शेष आता है।
 प्रश्न :
 यदि n, 10 और 20 के बीच एकमात्र प्राकृतिक संख्या है, तो n क्या है?
-निम्नलिखित में से कौन-सा उपर्युक्त कथनों और प्रश्न के लिए सही है?', 'S1 alone is sufficient to answer the Question.', 'S2 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question.', 'S1 and S2 together are not sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S2 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', 'D', 'Correct Answer: Option D (S1 and S2 together are not sufficient to answer the Question)[cite: 3].
+निम्नलिखित में से कौन-सा उपर्युक्त कथनों और प्रश्न के लिए सही है?', 'S1 alone is sufficient to answer the Question.', 'S2 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question.', 'S1 and S2 together are not sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S2 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', 'D', 'Correct Answer: Option D (S1 and S2 together are not sufficient to answer the Question).
 
-1. Natural numbers strictly between 10 and 20 are $\{11, 12, 13, 14, 15, 16, 17, 18, 19\}$[cite: 3].
-2. From S1 (prime numbers): $n \in \{11, 13, 17, 19\}$ (multiple values, insufficient)[cite: 3].
-3. From S2 ($n \equiv 1 \pmod 4$): $n \in \{13, 17\}$ (multiple values, insufficient)[cite: 3].
-4. Combining S1 and S2: The set of prime numbers between 10 and 20 that leave remainder 1 when divided by 4 contains both $13$ ($4 \times 3 + 1$) and $17$ ($4 \times 4 + 1$). Since a unique value for $n$ cannot be determined, the statements together are insufficient[cite: 3].
+1. Natural numbers strictly between 10 and 20 are $\{11, 12, 13, 14, 15, 16, 17, 18, 19\}$.
+2. From S1 (prime numbers): $n \in \{11, 13, 17, 19\}$ (multiple values, insufficient).
+3. From S2 ($n \equiv 1 \pmod 4$): $n \in \{13, 17\}$ (multiple values, insufficient).
+4. Combining S1 and S2: The set of prime numbers between 10 and 20 that leave remainder 1 when divided by 4 contains both $13$ ($4 \times 3 + 1$) and $17$ ($4 \times 4 + 1$). Since a unique value for $n$ cannot be determined, the statements together are insufficient.
 
-Therefore, S1 and S2 together are not sufficient to answer the Question[cite: 3].', 'सही उत्तर: विकल्प D (S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं)[cite: 3]।
+Therefore, S1 and S2 together are not sufficient to answer the Question.', 'सही उत्तर: विकल्प D (S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं)।
 
-1. 10 और 20 के बीच की संख्याएँ: $\{11, 12, 13, 14, 15, 16, 17, 18, 19\}$[cite: 3]।
-2. कथन S1 से (अभाज्य संख्याएँ): $n \in \{11, 13, 17, 19\}$ (अपर्याप्त)[cite: 3]।
-3. कथन S2 से ($n$ को 4 से भाग देने पर 1 शेष): $n \in \{13, 17\}$ (अपर्याप्त)[cite: 3]।
-4. S1 और S2 दोनों को मिलाने पर: $n$ अभाज्य भी है और $4k+1$ के रूप में भी है। 13 और 17 दोनों संख्याएँ इन दोनों शर्तों को पूरा करती हैं। चूँकि $n$ का कोई अद्वितीय मान नहीं मिलता, अतः दोनों कथन मिलकर भी पर्याप्त नहीं हैं[cite: 3]।
+1. 10 और 20 के बीच की संख्याएँ: $\{11, 12, 13, 14, 15, 16, 17, 18, 19\}$।
+2. कथन S1 से (अभाज्य संख्याएँ): $n \in \{11, 13, 17, 19\}$ (अपर्याप्त)।
+3. कथन S2 से ($n$ को 4 से भाग देने पर 1 शेष): $n \in \{13, 17\}$ (अपर्याप्त)।
+4. S1 और S2 दोनों को मिलाने पर: $n$ अभाज्य भी है और $4k+1$ के रूप में भी है। 13 और 17 दोनों संख्याएँ इन दोनों शर्तों को पूरा करती हैं। चूँकि $n$ का कोई अद्वितीय मान नहीं मिलता, अतः दोनों कथन मिलकर भी पर्याप्त नहीं हैं।
 
-अतः S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं[cite: 3]।', NULL),
+अतः S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', NULL),
     ('csat-2020-q30', 30, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Data Sufficiency in Quadratic Number Pairs (Product & Sum)', 'द्विघाती संख्या युग्म (गुणनफल एवं योग) में आंकड़े की पर्याप्तता', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Data Sufficiency', 'Number Properties', 'Simultaneous Equations']::TEXT[], 'Two Statements S1 and S2 are given below with regard to two numbers followed by a Question:
 S1: Their product is 21.
 S2: Their sum is 10.
@@ -863,38 +863,38 @@ S1: उनका गुणनफल 21 है।
 S2: उनका योग 10 है।
 प्रश्न :
 वे दो संख्याएँ क्या हैं?
-निम्नलिखित में से कौन-सा उपर्युक्त कथनों और प्रश्न के लिए सही है?', 'S1 alone is sufficient to answer the Question.', 'S2 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question.', 'S1 and S2 together are not sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S2 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', 'C', 'Correct Answer: Option C (S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question)[cite: 3].
+निम्नलिखित में से कौन-सा उपर्युक्त कथनों और प्रश्न के लिए सही है?', 'S1 alone is sufficient to answer the Question.', 'S2 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question.', 'S1 and S2 together are not sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S2 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त नहीं हैं।', 'C', 'Correct Answer: Option C (S1 and S2 together are sufficient to answer the Question, but neither S1 alone nor S2 alone is sufficient to answer the Question).
 
 1. Let the two numbers be $x$ and $y$.
-2. From S1: $xy = 21$ (infinite real number pairs or pairs like $1, 21$ and $3, 7$; insufficient)[cite: 3].
-3. From S2: $x + y = 10$ (infinite pairs; insufficient)[cite: 3].
-4. Combining S1 and S2 gives the quadratic equation: $t^2 - (x+y)t + xy = 0 \implies t^2 - 10t + 21 = 0 \implies (t - 3)(t - 7) = 0$. The roots uniquely identify the set of numbers as $\{3, 7\}$[cite: 3].
+2. From S1: $xy = 21$ (infinite real number pairs or pairs like $1, 21$ and $3, 7$; insufficient).
+3. From S2: $x + y = 10$ (infinite pairs; insufficient).
+4. Combining S1 and S2 gives the quadratic equation: $t^2 - (x+y)t + xy = 0 ⇒ t^2 - 10t + 21 = 0 ⇒ (t - 3)(t - 7) = 0$. The roots uniquely identify the set of numbers as $\{3, 7\}$.
 
-Therefore, S1 and S2 together are sufficient to answer the Question[cite: 3].', 'सही उत्तर: विकल्प C (दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है)[cite: 3]।
+Therefore, S1 and S2 together are sufficient to answer the Question.', 'सही उत्तर: विकल्प C (दोनों कथन S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं किन्तु न तो अकेला S1 और न ही अकेला S2 प्रश्न का उत्तर देने के लिए पर्याप्त है)।
 
 1. माना दो संख्याएँ $x$ और $y$ हैं।
-2. कथन S1 से: $xy = 21$ (अकेले अपर्याप्त)[cite: 3]।
-3. कथन S2 से: $x + y = 10$ (अकेले अपर्याप्त)[cite: 3]।
-4. दोनों कथनों को मिलाने पर द्विघात समीकरण $t^2 - 10t + 21 = 0$ बनता है, जिससे $(t-3)(t-7)=0$ प्राप्त होता है। इससे दोनों संख्याएँ विशिष्ट रूप से 3 और 7 निश्चित हो जाती हैं[cite: 3]।
+2. कथन S1 से: $xy = 21$ (अकेले अपर्याप्त)।
+3. कथन S2 से: $x + y = 10$ (अकेले अपर्याप्त)।
+4. दोनों कथनों को मिलाने पर द्विघात समीकरण $t^2 - 10t + 21 = 0$ बनता है, जिससे $(t-3)(t-7)=0$ प्राप्त होता है। इससे दोनों संख्याएँ विशिष्ट रूप से 3 और 7 निश्चित हो जाती हैं।
 
-अतः S1 और S2 मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त हैं[cite: 3]।', NULL),
-    ('csat-2020-q31', 31, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Direction Sense Test & Spatial Navigation', 'दिशा ज्ञान परीक्षण एवं स्थानिक संचलन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Direction Sense', 'Spatial Logic']::TEXT[], 'A man walks down the backside of his house straight 25 metres, then turns to the right and walks 50 metres again; then he turns towards left and again walks 25 metres. If his house faces to the East, what is his direction from the starting point?', 'एक व्यक्ति अपने घर के पीछे से सीधे 25 मीटर चलता है, फिर वह दाहिने मुड़कर 50 मीटर और चलता है; फिर वह बाएँ मुड़कर पुनः 25 मीटर चलता है। यदि उसके घर का मुख पूर्व की ओर है, तो वह अपने प्रारंभिक बिंदु से किस दिशा में है?', 'South-East', 'South-West', 'North-East', 'North-West', 'दक्षिण-पूर्व', 'दक्षिण-पश्चिम', 'उत्तर-पूर्व', 'उत्तर-पश्चिम', 'D', 'Correct Answer: Option D (North-West)[cite: 3].
+अतः S1 और S2 मिलकर प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', NULL),
+    ('csat-2020-q31', 31, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Direction Sense Test & Spatial Navigation', 'दिशा ज्ञान परीक्षण एवं स्थानिक संचलन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Direction Sense', 'Spatial Logic']::TEXT[], 'A man walks down the backside of his house straight 25 metres, then turns to the right and walks 50 metres again; then he turns towards left and again walks 25 metres. If his house faces to the East, what is his direction from the starting point?', 'एक व्यक्ति अपने घर के पीछे से सीधे 25 मीटर चलता है, फिर वह दाहिने मुड़कर 50 मीटर और चलता है; फिर वह बाएँ मुड़कर पुनः 25 मीटर चलता है। यदि उसके घर का मुख पूर्व की ओर है, तो वह अपने प्रारंभिक बिंदु से किस दिशा में है?', 'South-East', 'South-West', 'North-East', 'North-West', 'दक्षिण-पूर्व', 'दक्षिण-पश्चिम', 'उत्तर-पूर्व', 'उत्तर-पश्चिम', 'D', 'Correct Answer: Option D (North-West).
 
-1. House faces East $\implies$ walking straight out of the backside means walking towards the **West**[cite: 3].
-2. First movement: $25\text{ m}$ West $\implies$ position $(-25, 0)$[cite: 3].
-3. Second movement: Turns right (facing West, right turn is **North**) and walks $50\text{ m} \implies$ position $(-25, 50)$[cite: 3].
-4. Third movement: Turns left (facing North, left turn is **West**) and walks $25\text{ m} \implies$ final position $(-50, 50)$[cite: 3].
-5. From the origin $(0,0)$, the point $(-50, 50)$ lies in the **North-West** quadrant[cite: 3].
+1. House faces East ⇒ walking straight out of the backside means walking towards the **West**.
+2. First movement: $25 m$ West ⇒ position $(-25, 0)$.
+3. Second movement: Turns right (facing West, right turn is **North**) and walks $50 m ⇒ $ position $(-25, 50)$.
+4. Third movement: Turns left (facing North, left turn is **West**) and walks $25 m ⇒ $ final position $(-50, 50)$.
+5. From the origin $(0, 0)$, the point $(-50, 50)$ lies in the **North-West** quadrant.
 
-Therefore, his direction from the starting point is North-West[cite: 3].', 'सही उत्तर: विकल्प D (उत्तर-पश्चिम)[cite: 3]।
+Therefore, his direction from the starting point is North-West.', 'सही उत्तर: विकल्प D (उत्तर-पश्चिम)।
 
-1. घर का मुख पूर्व की ओर है, अतः घर के पीछे से चलने का अर्थ है **पश्चिम** दिशा में आगे बढ़ना[cite: 3]।
-2. पहली गति: पश्चिम में 25 मीटर $\implies$ स्थिति $(-25, 0)$[cite: 3]।
-3. दूसरी गति: दाहिने मुड़ना (पश्चिम दिशा में दाहिना मोड़ **उत्तर** होगा) और 50 मीटर चलना $\implies$ स्थिति $(-25, 50)$[cite: 3]।
-4. तीसरी गति: बाएँ मुड़ना (उत्तर दिशा में बायाँ मोड़ **पश्चिम** होगा) और 25 मीटर चलना $\implies$ अंतिम स्थिति $(-50, 50)$[cite: 3]।
-5. प्रारंभिक बिंदु $(0, 0)$ से बिंदु $(-50, 50)$ **उत्तर-पश्चिम** दिशा में है[cite: 3]।
+1. घर का मुख पूर्व की ओर है, अतः घर के पीछे से चलने का अर्थ है **पश्चिम** दिशा में आगे बढ़ना।
+2. पहली गति: पश्चिम में 25 मीटर ⇒ स्थिति $(-25, 0)$।
+3. दूसरी गति: दाहिने मुड़ना (पश्चिम दिशा में दाहिना मोड़ **उत्तर** होगा) और 50 मीटर चलना ⇒ स्थिति $(-25, 50)$।
+4. तीसरी गति: बाएँ मुड़ना (उत्तर दिशा में बायाँ मोड़ **पश्चिम** होगा) और 25 मीटर चलना ⇒ अंतिम स्थिति $(-50, 50)$।
+5. प्रारंभिक बिंदु $(0, 0)$ से बिंदु $(-50, 50)$ **उत्तर-पश्चिम** दिशा में है।
 
-अतः वह अपने प्रारंभिक बिंदु से उत्तर-पश्चिम दिशा में है[cite: 3]।', NULL),
+अतः वह अपने प्रारंभिक बिंदु से उत्तर-पश्चिम दिशा में है।', NULL),
     ('csat-2020-q32', 32, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Deductive Syllogism & Divisibility Predicate Logic', 'न्याय वाक्य (सिलोगिज़्म) एवं विभाज्यता तर्कशास्त्र', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Syllogism', 'Deductive Logic']::TEXT[], 'Two Statements are given followed by two Conclusions:
 Statements:
 All numbers are divisible by 2.
@@ -911,17 +911,17 @@ Which of the above Conclusions logically follows/follow from the two given State
 सभी संख्याएँ 6 से विभाज्य हैं।
 निष्कर्ष-II :
 सभी संख्याएँ 4 से विभाज्य हैं।
-ऊपर लिखे हुए निष्कर्षों में से कौन-सा/से दिए गए दो कथनों से तार्किक रूप से निकाला/निकाले जा सकता/सकते है/हैं?', 'Only Conclusion-I', 'Only Conclusion-II', 'Neither Conclusion-I nor Conclusion-II', 'Both Conclusion-I and Conclusion-II', 'केवल निष्कर्ष-I', 'केवल निष्कर्ष-II', 'न तो निष्कर्ष-I, न ही निष्कर्ष-II', 'दोनों निष्कर्ष-I और निष्कर्ष-II', 'A', 'Correct Answer: Option A (Only Conclusion-I)[cite: 3].
+ऊपर लिखे हुए निष्कर्षों में से कौन-सा/से दिए गए दो कथनों से तार्किक रूप से निकाला/निकाले जा सकता/सकते है/हैं?', 'Only Conclusion-I', 'Only Conclusion-II', 'Neither Conclusion-I nor Conclusion-II', 'Both Conclusion-I and Conclusion-II', 'केवल निष्कर्ष-I', 'केवल निष्कर्ष-II', 'न तो निष्कर्ष-I, न ही निष्कर्ष-II', 'दोनों निष्कर्ष-I और निष्कर्ष-II', 'A', 'Correct Answer: Option A (Only Conclusion-I).
 
-1. If a number is divisible by 2 and also divisible by 3, by the properties of coprime numbers it must be divisible by $2 \times 3 = 6$. Thus, Conclusion-I logically follows[cite: 3].
-2. Divisibility by 2 does not imply divisibility by 4 (for example, 6 is divisible by 2 and 3, but not divisible by 4). Thus, Conclusion-II does not follow[cite: 3].
+1. If a number is divisible by 2 and also divisible by 3, by the properties of coprime numbers it must be divisible by $2 \times 3 = 6$. Thus, Conclusion-I logically follows.
+2. Divisibility by 2 does not imply divisibility by 4 (for example, 6 is divisible by 2 and 3, but not divisible by 4). Thus, Conclusion-II does not follow.
 
-Therefore, only Conclusion-I logically follows[cite: 3].', 'सही उत्तर: विकल्प A (केवल निष्कर्ष-I)[cite: 3]।
+Therefore, only Conclusion-I logically follows.', 'सही उत्तर: विकल्प A (केवल निष्कर्ष-I)।
 
-1. यदि कोई संख्या 2 और 3 दोनों से विभाज्य है, तो वह उनके गुणनफल $2 \times 3 = 6$ से भी अनिवार्य रूप से विभाज्य होगी। अतः निष्कर्ष-I तार्किक रूप से निकलता है[cite: 3]।
-2. 2 से विभाज्य संख्या 4 से भी विभाज्य हो यह आवश्यक नहीं है (जैसे 6, जो 2 और 3 से विभाज्य है किन्तु 4 से नहीं)। अतः निष्कर्ष-II नहीं निकलता[cite: 3]।
+1. यदि कोई संख्या 2 और 3 दोनों से विभाज्य है, तो वह उनके गुणनफल $2 \times 3 = 6$ से भी अनिवार्य रूप से विभाज्य होगी। अतः निष्कर्ष-I तार्किक रूप से निकलता है।
+2. 2 से विभाज्य संख्या 4 से भी विभाज्य हो यह आवश्यक नहीं है (जैसे 6, जो 2 और 3 से विभाज्य है किन्तु 4 से नहीं)। अतः निष्कर्ष-II नहीं निकलता।
 
-अतः केवल निष्कर्ष-I सही है[cite: 3]।', NULL),
+अतः केवल निष्कर्ष-I सही है।', NULL),
     ('csat-2020-q33', 33, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Categorical Syllogism & Venn Diagram Deductions', 'वर्गिक न्याय वाक्य एवं वेन आरेख निष्कर्ष', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Syllogism', 'Venn Diagrams']::TEXT[], 'Two Statements are given followed by two Conclusions:
 Statements:
 All cats are dogs.
@@ -938,61 +938,61 @@ Which of the above Conclusions logically follows/follow from the two given State
 सभी कुत्ते काले हैं।
 निष्कर्ष-II :
 कुछ कुत्ते काले नहीं हैं।
-सामान्य ज्ञात तथ्यों की उपेक्षा करते हुए, ऊपर लिखे हुए निष्कर्षों में से कौन-सा/से दिए गए दो कथनों से तार्किक रूप से निकाला/निकाले जा सकता/सकते है/हैं?', 'Only Conclusion-I', 'Only Conclusion-II', 'Neither Conclusion-I nor Conclusion-II', 'Both Conclusion-I and Conclusion-II', 'केवल निष्कर्ष-I', 'केवल निष्कर्ष-II', 'न तो निष्कर्ष-I, न ही निष्कर्ष-II', 'दोनों निष्कर्ष-I और निष्कर्ष-II', 'C', 'Correct Answer: Option C (Neither Conclusion-I nor Conclusion-II)[cite: 3].
+सामान्य ज्ञात तथ्यों की उपेक्षा करते हुए, ऊपर लिखे हुए निष्कर्षों में से कौन-सा/से दिए गए दो कथनों से तार्किक रूप से निकाला/निकाले जा सकता/सकते है/हैं?', 'Only Conclusion-I', 'Only Conclusion-II', 'Neither Conclusion-I nor Conclusion-II', 'Both Conclusion-I and Conclusion-II', 'केवल निष्कर्ष-I', 'केवल निष्कर्ष-II', 'न तो निष्कर्ष-I, न ही निष्कर्ष-II', 'दोनों निष्कर्ष-I और निष्कर्ष-II', 'C', 'Correct Answer: Option C (Neither Conclusion-I nor Conclusion-II).
 
-1. From "All cats are dogs" and "All cats are black", we can only deduce the particular intersection: "Some dogs are black" (specifically, those dogs that are cats)[cite: 3].
-2. Conclusion-I ("All dogs are black") does not follow because there may be dogs outside the cat subset that are not black[cite: 3].
-3. Conclusion-II ("Some dogs are not black") is also not necessarily guaranteed because all dogs could potentially be black[cite: 3].
+1. From "All cats are dogs" and "All cats are black", we can only deduce the particular intersection: "Some dogs are black" (specifically, those dogs that are cats).
+2. Conclusion-I ("All dogs are black") does not follow because there may be dogs outside the cat subset that are not black.
+3. Conclusion-II ("Some dogs are not black") is also not necessarily guaranteed because all dogs could potentially be black.
 
-Therefore, neither Conclusion-I nor Conclusion-II logically follows[cite: 3].', 'सही उत्तर: विकल्प C (न तो निष्कर्ष-I, न ही निष्कर्ष-II)[cite: 3]।
+Therefore, neither Conclusion-I nor Conclusion-II logically follows.', 'सही उत्तर: विकल्प C (न तो निष्कर्ष-I, न ही निष्कर्ष-II)।
 
-1. "सभी बिल्लियाँ कुत्ते हैं" और "सभी बिल्लियाँ काली हैं" से केवल यह निश्चित निष्कर्ष निकलता है कि "कुछ कुत्ते काले हैं" (जो बिल्लियाँ हैं)[cite: 3]।
-2. निष्कर्ष-I ("सभी कुत्ते काले हैं") निश्चित नहीं है क्योंकि बिल्लियों के अलावा अन्य कुत्ते किसी अन्य रंग के हो सकते हैं[cite: 3]।
-3. निष्कर्ष-II ("कुछ कुत्ते काले नहीं हैं") भी निश्चित रूप से सत्य नहीं है क्योंकि संभव है कि सभी कुत्ते काले हों[cite: 3]।
+1. "सभी बिल्लियाँ कुत्ते हैं" और "सभी बिल्लियाँ काली हैं" से केवल यह निश्चित निष्कर्ष निकलता है कि "कुछ कुत्ते काले हैं" (जो बिल्लियाँ हैं)।
+2. निष्कर्ष-I ("सभी कुत्ते काले हैं") निश्चित नहीं है क्योंकि बिल्लियों के अलावा अन्य कुत्ते किसी अन्य रंग के हो सकते हैं।
+3. निष्कर्ष-II ("कुछ कुत्ते काले नहीं हैं") भी निश्चित रूप से सत्य नहीं है क्योंकि संभव है कि सभी कुत्ते काले हों।
 
-अतः न तो निष्कर्ष-I और न ही निष्कर्ष-II निकलता है[cite: 3]।', NULL),
+अतः न तो निष्कर्ष-I और न ही निष्कर्ष-II निकलता है।', NULL),
     ('csat-2020-q34', 34, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Conditional Odd-Even Sequence Counting', 'प्रतिबंधित सम-विषम अनुक्रम गणना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Number Sequence', 'Pattern Recognition']::TEXT[], 'Consider the following sequence of numbers:
 $$5\ 1\ 4\ 7\ 3\ 9\ 8\ 5\ 7\ 2\ 6\ 3\ 1\ 5\ 8\ 6\ 3\ 8\ 5\ 2\ 2\ 4\ 3\ 4\ 9\ 6$$
 How many odd numbers are followed by the odd number in the above sequence?', 'निम्नलिखित संख्याओं के अनुक्रम पर विचार कीजिए:
 $$5\ 1\ 4\ 7\ 3\ 9\ 8\ 5\ 7\ 2\ 6\ 3\ 1\ 5\ 8\ 6\ 3\ 8\ 5\ 2\ 2\ 4\ 3\ 4\ 9\ 6$$
-ऊपर लिखे हुए अनुक्रम में कितनी विषम संख्याओं के बाद विषम संख्या आती है?', '5', '6', '7', '8', '5', '6', '7', '8', 'B', 'Correct Answer: Option B (6)[cite: 3].
+ऊपर लिखे हुए अनुक्रम में कितनी विषम संख्याओं के बाद विषम संख्या आती है?', '5', '6', '7', '8', '5', '6', '7', '8', 'B', 'Correct Answer: Option B (6).
 
 1. Identify every instance where an odd number is immediately followed by an odd number in the sequence:
-   * **(5, 1)** $\rightarrow$ 5 is odd, followed by 1 (odd) [1]
-   * **(7, 3)** $\rightarrow$ 7 is odd, followed by 3 (odd) [2]
-   * **(3, 9)** $\rightarrow$ 3 is odd, followed by 9 (odd) [3]
-   * **(5, 7)** $\rightarrow$ 5 is odd, followed by 7 (odd) [4]
-   * **(3, 1)** $\rightarrow$ 3 is odd, followed by 1 (odd) [5]
-   * **(1, 5)** $\rightarrow$ 1 is odd, followed by 5 (odd) [6]
-2. Count $= 6$.
+ * **(5, 1)** → 5 is odd, followed by 1 (odd) [1]
+ * **(7, 3)** → 7 is odd, followed by 3 (odd) [2]
+ * **(3, 9)** → 3 is odd, followed by 9 (odd) [3]
+ * **(5, 7)** → 5 is odd, followed by 7 (odd) [4]
+ * **(3, 1)** → 3 is odd, followed by 1 (odd) [5]
+ * **(1, 5)** → 1 is odd, followed by 5 (odd) [6]
+2. Count = 6.
 
-Therefore, there are 6 such odd numbers[cite: 3].', 'सही उत्तर: विकल्प B (6)[cite: 3]।
+Therefore, there are 6 such odd numbers.', 'सही उत्तर: विकल्प B (6)।
 
 1. अनुक्रम में विषम संख्या के तुरंत बाद विषम संख्या आने वाले युग्मों की पहचान:
-   * **(5, 1)** $\rightarrow$ 5 के बाद 1 [1]
-   * **(7, 3)** $\rightarrow$ 7 के बाद 3 [2]
-   * **(3, 9)** $\rightarrow$ 3 के बाद 9 [3]
-   * **(5, 7)** $\rightarrow$ 5 के बाद 7 [4]
-   * **(3, 1)** $\rightarrow$ 3 के बाद 1 [5]
-   * **(1, 5)** $\rightarrow$ 1 के बाद 5 [6]
-2. कुल संख्या $= 6$।
+ * **(5, 1)** → 5 के बाद 1 [1]
+ * **(7, 3)** → 7 के बाद 3 [2]
+ * **(3, 9)** → 3 के बाद 9 [3]
+ * **(5, 7)** → 5 के बाद 7 [4]
+ * **(3, 1)** → 3 के बाद 1 [5]
+ * **(1, 5)** → 1 के बाद 5 [6]
+2. कुल संख्या = 6।
 
-अतः ऐसे विषम अंकों की संख्या 6 है[cite: 3]।', NULL),
-    ('csat-2020-q35', 35, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Linear Order, Ranking & Left-Right Position Shifting', 'रैखिक क्रम व्यवस्था, रैंकिंग एवं स्थिति परिवर्तन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Order and Ranking', 'Linear Arrangement']::TEXT[], 'A is 16th from the left end in a row of boys and V is 18th from the right end. G is 11th from A towards the right and 3rd from V towards the right end. How many boys are there in the row?', 'लड़कों की एक पंक्ति में A बाएँ छोर से 16वें स्थान पर और V दाएँ छोर से 18वें स्थान पर है। G, A की दाईं ओर 11वें और V से तीसरे स्थान पर दाहिने छोर की ओर है। पंक्ति में कितने लड़के हैं?', '40', '41', '42', 'Cannot be determined due to insufficient data', '40', '41', '42', 'अपर्याप्त आँकड़ों के कारण निर्धारित नहीं किया जा सकता है', 'B', 'Correct Answer: Option B (41)[cite: 3].
+अतः ऐसे विषम अंकों की संख्या 6 है।', NULL),
+    ('csat-2020-q35', 35, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Linear Order, Ranking & Left-Right Position Shifting', 'रैखिक क्रम व्यवस्था, रैंकिंग एवं स्थिति परिवर्तन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Order and Ranking', 'Linear Arrangement']::TEXT[], 'A is 16th from the left end in a row of boys and V is 18th from the right end. G is 11th from A towards the right and 3rd from V towards the right end. How many boys are there in the row?', 'लड़कों की एक पंक्ति में A बाएँ छोर से 16वें स्थान पर और V दाएँ छोर से 18वें स्थान पर है। G, A की दाईं ओर 11वें और V से तीसरे स्थान पर दाहिने छोर की ओर है। पंक्ति में कितने लड़के हैं?', '40', '41', '42', 'Cannot be determined due to insufficient data', '40', '41', '42', 'अपर्याप्त आँकड़ों के कारण निर्धारित नहीं किया जा सकता है', 'B', 'Correct Answer: Option B (41).
 
-1. Position of A from the left end $= 16$[cite: 3].
-2. G is 11th to the right of A $\implies$ Position of G from the left end $= 16 + 11 = 27$[cite: 3].
-3. V is 18th from the right end. G is 3rd from V towards the right end $\implies$ Position of G from the right end $= 18 - 3 = 15$[cite: 3].
-4. Total boys in the row $= (\text{Left position of G}) + (\text{Right position of G}) - 1 = 27 + 15 - 1 = 41$[cite: 3].
+1. Position of A from the left end = 16.
+2. G is 11th to the right of A ⇒ Position of G from the left end = 16 + 11 = 27.
+3. V is 18th from the right end. G is 3rd from V towards the right end ⇒ Position of G from the right end = 18 - 3 = 15.
+4. Total boys in the row = (Left position of G) + (Right position of G) - 1 = 27 + 15 - 1 = 41.
 
-Therefore, there are 41 boys in the row[cite: 3].', 'सही उत्तर: विकल्प B (41)[cite: 3]।
+Therefore, there are 41 boys in the row.', 'सही उत्तर: विकल्प B (41)।
 
-1. बाएँ छोर से A का स्थान $= 16$वाँ[cite: 3]।
-2. G, A के दाईं ओर 11वें स्थान पर है $\implies$ बाएँ छोर से G का स्थान $= 16 + 11 = 27$वाँ[cite: 3]।
-3. दाएँ छोर से V का स्थान $= 18$वाँ। G, V से 3 स्थान दाएँ छोर की ओर है $\implies$ दाएँ छोर से G का स्थान $= 18 - 3 = 15$वाँ[cite: 3]।
-4. पंक्ति में लड़कों की कुल संख्या $= 27 + 15 - 1 = 41$[cite: 3]।
+1. बाएँ छोर से A का स्थान = 16वाँ।
+2. G, A के दाईं ओर 11वें स्थान पर है ⇒ बाएँ छोर से G का स्थान = 16 + 11 = 27वाँ।
+3. दाएँ छोर से V का स्थान = 18वाँ। G, V से 3 स्थान दाएँ छोर की ओर है ⇒ दाएँ छोर से G का स्थान = 18 - 3 = 15वाँ।
+4. पंक्ति में लड़कों की कुल संख्या = (G का बायाँ स्थान) + (G का दायाँ स्थान) - 1 = 27 + 15 - 1 = 41।
 
-अतः पंक्ति में कुल 41 लड़के हैं[cite: 3]।', NULL),
+अतः पंक्ति में कुल 41 लड़के हैं।', NULL),
     ('csat-2020-q36', 36, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', '3-Statement Data Sufficiency in Age Ordering Logic', 'आयु क्रम तर्क में 3-कथन आंकड़े की पर्याप्तता', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Data Sufficiency', 'Age Ordering', 'Inequality Chains']::TEXT[], 'Three Statements S1, S2 and S3 are given below followed by a Question:
 S1: C is younger than D, but older than A and B.
 S2: D is the oldest.
@@ -1005,75 +1005,75 @@ S2: D सबसे बड़ा है।
 S3: A, B से बड़ा है।
 प्रश्न :
 A, B, C और D में से सबसे छोटा कौन है?
-निम्नलिखित में से कौन-सा ऊपर लिखे हुए कथनों और प्रश्न के संदर्भ में सही है?', 'S1 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question.', 'S2 and S3 together are sufficient to answer the Question.', 'S1 and S3 together are sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', 'S2 और S3 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', 'S1 और S3 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', 'D', 'Correct Answer: Option D (S1 and S3 together are sufficient to answer the Question)[cite: 3].
+निम्नलिखित में से कौन-सा ऊपर लिखे हुए कथनों और प्रश्न के संदर्भ में सही है?', 'S1 alone is sufficient to answer the Question.', 'S1 and S2 together are sufficient to answer the Question.', 'S2 and S3 together are sufficient to answer the Question.', 'S1 and S3 together are sufficient to answer the Question.', 'S1 अकेले ही प्रश्न का उत्तर देने के लिए पर्याप्त है।', 'S1 और S2 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', 'S2 और S3 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', 'S1 और S3 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं।', 'D', 'Correct Answer: Option D (S1 and S3 together are sufficient to answer the Question).
 
-1. From S1: $D > C > A$ and $D > C > B$ (both $A$ and $B$ are younger than $C$ and $D$)[cite: 3].
-2. From S3: $A > B$[cite: 3].
-3. Combining S1 and S3 establishes the complete order: $D > C > A > B$, uniquely identifying $B$ as the youngest[cite: 3].
+1. From S1: $D > C > A$ and $D > C > B$ (both $A$ and $B$ are younger than $C$ and $D$).
+2. From S3: $A > B$.
+3. Combining S1 and S3 establishes the complete order: $D > C > A > B$, uniquely identifying $B$ as the youngest.
 
-Therefore, S1 and S3 together are sufficient to answer the Question[cite: 3].', 'सही उत्तर: विकल्प D (S1 और S3 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं)[cite: 3]।
+Therefore, S1 and S3 together are sufficient to answer the Question.', 'सही उत्तर: विकल्प D (S1 और S3 एकसाथ प्रश्न का उत्तर देने के लिए पर्याप्त हैं)।
 
-1. कथन S1 से: $D > C > A$ तथा $D > C > B$[cite: 3]।
-2. कथन S3 से: $A > B$[cite: 3]।
-3. S1 और S3 को मिलाने पर पूर्ण क्रम $D > C > A > B$ प्राप्त होता है, जिससे $B$ सबसे छोटा सिद्ध होता है[cite: 3]।
+1. कथन S1 से: $D > C > A$ तथा $D > C > B$।
+2. कथन S3 से: $A > B$।
+3. S1 और S3 को मिलाने पर पूर्ण क्रम $D > C > A > B$ प्राप्त होता है, जिससे $B$ सबसे छोटा सिद्ध होता है।
 
-अतः S1 और S3 मिलकर उत्तर देने के लिए पर्याप्त हैं[cite: 3]।', NULL),
-    ('csat-2020-q37', 37, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Digit Inclusion Counting & Divisibility Exclusion', 'अंक समावेश गणना एवं विभाज्यता अपवर्जन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Digit Counting', 'Divisibility by 4']::TEXT[], 'How many integers are there between 1 and 100 which have 4 as a digit but are not divisible by 4?', '1 और 100 के मध्य कितनी ऐसी पूर्ण संख्याएँ हैं जिनमें एक अंक 4 है लेकिन वे 4 से विभाज्य नहीं हैं?', '5', '11', '12', '13', '5', '11', '12', '13', 'C', 'Correct Answer: Option C (12)[cite: 3].
+अतः S1 और S3 मिलकर उत्तर देने के लिए पर्याप्त हैं।', NULL),
+    ('csat-2020-q37', 37, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Digit Inclusion Counting & Divisibility Exclusion', 'अंक समावेश गणना एवं विभाज्यता अपवर्जन', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Digit Counting', 'Divisibility by 4']::TEXT[], 'How many integers are there between 1 and 100 which have 4 as a digit but are not divisible by 4?', '1 और 100 के मध्य कितनी ऐसी पूर्ण संख्याएँ हैं जिनमें एक अंक 4 है लेकिन वे 4 से विभाज्य नहीं हैं?', '5', '11', '12', '13', '5', '11', '12', '13', 'C', 'Correct Answer: Option C (12).
 
-1. List all 19 numbers between 1 and 100 containing the digit 4: $\{4, 14, 24, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 54, 64, 74, 84, 94\}$[cite: 3].
-2. Numbers from this set that are divisible by 4: $\{4, 24, 40, 44, 48, 64, 84\}$ (7 numbers)[cite: 3].
-3. Numbers containing 4 but NOT divisible by 4: $\{14, 34, 41, 42, 43, 45, 46, 47, 49, 54, 74, 94\}$ ($19 - 7 = 12$ numbers)[cite: 3].
+1. List all 19 numbers between 1 and 100 containing the digit 4: $\{4, 14, 24, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 54, 64, 74, 84, 94\}$.
+2. Numbers from this set that are divisible by 4: $\{4, 24, 40, 44, 48, 64, 84\}$ (7 numbers).
+3. Numbers containing 4 but NOT divisible by 4: $\{14, 34, 41, 42, 43, 45, 46, 47, 49, 54, 74, 94\}$ ($19 - 7 = 12$ numbers).
 
-Therefore, there are 12 such integers[cite: 3].', 'सही उत्तर: विकल्प C (12)[cite: 3]।
+Therefore, there are 12 such integers.', 'सही उत्तर: विकल्प C (12)।
 
-1. 1 और 100 के मध्य अंक 4 वाली कुल 19 संख्याएँ हैं: $\{4, 14, 24, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 54, 64, 74, 84, 94\}$[cite: 3]।
-2. इनमें से 4 से विभाज्य संख्याएँ: $\{4, 24, 40, 44, 48, 64, 84\}$ (कुल 7 संख्याएँ)[cite: 3]।
-3. 4 अंक वाली किन्तु 4 से अविभाज्य संख्याएँ: $19 - 7 = 12$ संख्याएँ[cite: 3]।
+1. 1 और 100 के मध्य अंक 4 वाली कुल 19 संख्याएँ हैं: $\{4, 14, 24, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 54, 64, 74, 84, 94\}$।
+2. इनमें से 4 से विभाज्य संख्याएँ: $\{4, 24, 40, 44, 48, 64, 84\}$ (कुल 7 संख्याएँ)।
+3. 4 अंक वाली किन्तु 4 से अविभाज्य संख्याएँ: $19 - 7 = 12$ संख्याएँ।
 
-अतः ऐसी कुल 12 संख्याएँ हैं[cite: 3]।', NULL),
-    ('csat-2020-q38', 38, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', '3D Solid Cube Volume Ratios & Density Equations', '3D ठोस घन आयतन अनुपात एवं घनत्व समीकरण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Mensuration & Geometry', 'Cubes', 'Volume & Density']::TEXT[], 'Let x, y be the volumes; m, n be the masses of two metallic cubes P and Q respectively. Each side of Q is two times that of P and mass of Q is two times that of P. Let u = m/x and v = n/y. Which one of the following is correct?', 'माना कि दो धातु के घनों P और Q के क्रमशः x, y आयतन हैं; m, n द्रव्यमान हैं। Q की प्रत्येक भुजा P की दोगुनी है और Q का द्रव्यमान P का दोगुना है। माना कि u = m/x और v = n/y है। निम्नलिखित में से कौन-सा सही है?', 'u = 4v', 'u = 2v', 'v = u', 'v = 4u', 'u = 4v', 'u = 2v', 'v = u', 'v = 4u', 'A', 'Correct Answer: Option A (u = 4v)[cite: 3].
+अतः ऐसी कुल 12 संख्याएँ हैं।', NULL),
+    ('csat-2020-q38', 38, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', '3D Solid Cube Volume Ratios & Density Equations', '3D ठोस घन आयतन अनुपात एवं घनत्व समीकरण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Mensuration & Geometry', 'Cubes', 'Volume & Density']::TEXT[], 'Let x, y be the volumes; m, n be the masses of two metallic cubes P and Q respectively. Each side of Q is two times that of P and mass of Q is two times that of P. Let u = m/x and v = n/y. Which one of the following is correct?', 'माना कि दो धातु के घनों P और Q के क्रमशः x, y आयतन हैं; m, n द्रव्यमान हैं। Q की प्रत्येक भुजा P की दोगुनी है और Q का द्रव्यमान P का दोगुना है। माना कि u = m/x और v = n/y है। निम्नलिखित में से कौन-सा सही है?', 'u = 4v', 'u = 2v', 'v = u', 'v = 4u', 'u = 4v', 'u = 2v', 'v = u', 'v = 4u', 'A', 'Correct Answer: Option A (u = 4v).
 
-1. Let the side of cube P be $a \implies$ volume $x = a^3$[cite: 3].
-2. The side of cube Q is $2a \implies$ volume $y = (2a)^3 = 8a^3 = 8x$[cite: 3].
-3. Mass of P is $m$, mass of Q is $n = 2m$[cite: 3].
-4. Ratios: $u = \frac{m}{x}$ and $v = \frac{n}{y} = \frac{2m}{8x} = \frac{1}{4} \left(\frac{m}{x}\right) = \frac{u}{4} \implies u = 4v$[cite: 3].
+1. Let the side of cube P be $a ⇒ $ volume $x = a^3$.
+2. The side of cube Q is $2a ⇒ $ volume $y = (2a)^3 = 8a^3 = 8x$.
+3. Mass of P is $m$, mass of Q is $n = 2m$.
+4. Ratios: $u = \frac{m}{x}$ and $v = \frac{n}{y} = \frac{2m}{8x} = \frac{1}{4} \left(\frac{m}{x}\right) = \frac{u}{4} ⇒ u = 4v$.
 
-Therefore, $u = 4v$ is correct[cite: 3].', 'सही उत्तर: विकल्प A (u = 4v)[cite: 3]।
+Therefore, $u = 4v$ is correct.', 'सही उत्तर: विकल्प A (u = 4v)।
 
-1. माना घन P की भुजा $a \implies$ आयतन $x = a^3$[cite: 3]।
-2. घन Q की भुजा $2a \implies$ आयतन $y = (2a)^3 = 8a^3 = 8x$[cite: 3]।
-3. P का द्रव्यमान $m$ तथा Q का द्रव्यमान $n = 2m$[cite: 3]।
-4. $u = \frac{m}{x}$ और $v = \frac{n}{y} = \frac{2m}{8x} = \frac{u}{4} \implies u = 4v$[cite: 3]।
+1. माना घन P की भुजा $a ⇒ $ आयतन $x = a^3$।
+2. घन Q की भुजा $2a ⇒ $ आयतन $y = (2a)^3 = 8a^3 = 8x$।
+3. P का द्रव्यमान $m$ तथा Q का द्रव्यमान $n = 2m$।
+4. $u = \frac{m}{x}$ और $v = \frac{n}{y} = \frac{2m}{8x} = \frac{u}{4} ⇒ u = 4v$।
 
-अतः $u = 4v$ सही उत्तर है[cite: 3]।', NULL),
-    ('csat-2020-q39', 39, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Average Age Calculation & Multi-Variable Age System', 'औसत आयु गणना एवं बहु-चर आयु प्रणाली', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Averages', 'Age Problems']::TEXT[], 'The average age of a teacher and three students is 20 years. If all the three students are of same age and the difference between the age of the teacher and each student is 20 years, then what is the age of the teacher?', 'एक शिक्षक और तीन छात्रों की औसत आयु 20 वर्ष है। यदि तीनों छात्र समान आयु के हों और शिक्षक तथा प्रत्येक छात्र की आयु का अंतर 20 वर्ष हो, तो शिक्षक की आयु कितनी है?', '25 years', '30 years', '35 years', '45 years', '25 वर्ष', '30 वर्ष', '35 वर्ष', '45 वर्ष', 'C', 'Correct Answer: Option C (35 years)[cite: 3].
+अतः $u = 4v$ सही उत्तर है।', NULL),
+    ('csat-2020-q39', 39, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Average Age Calculation & Multi-Variable Age System', 'औसत आयु गणना एवं बहु-चर आयु प्रणाली', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Averages', 'Age Problems']::TEXT[], 'The average age of a teacher and three students is 20 years. If all the three students are of same age and the difference between the age of the teacher and each student is 20 years, then what is the age of the teacher?', 'एक शिक्षक और तीन छात्रों की औसत आयु 20 वर्ष है। यदि तीनों छात्र समान आयु के हों और शिक्षक तथा प्रत्येक छात्र की आयु का अंतर 20 वर्ष हो, तो शिक्षक की आयु कितनी है?', '25 years', '30 years', '35 years', '45 years', '25 वर्ष', '30 वर्ष', '35 वर्ष', '45 वर्ष', 'C', 'Correct Answer: Option C (35 years).
 
-1. Let $T$ be the teacher''s age and $S$ be each student''s age[cite: 3].
-2. Total age sum: $T + 3S = 4 \times 20 = 80$[cite: 3].
-3. Age difference: $T - S = 20 \implies S = T - 20$[cite: 3].
-4. Substitute: $T + 3(T - 20) = 80 \implies 4T - 60 = 80 \implies 4T = 140 \implies T = 35$[cite: 3].
+1. Let $T$ be the teacher''s age and $S$ be each student''s age.
+2. Total age sum: $T + 3S = 4 \times 20 = 80$.
+3. Age difference: $T - S = 20 ⇒ S = T - 20$.
+4. Substitute: $T + 3(T - 20) = 80 ⇒ 4T - 60 = 80 ⇒ 4T = 140 ⇒ T = 35$.
 
-Therefore, the age of the teacher is 35 years[cite: 3].', 'सही उत्तर: विकल्प C (35 वर्ष)[cite: 3]।
+Therefore, the age of the teacher is 35 years.', 'सही उत्तर: विकल्प C (35 वर्ष)।
 
-1. माना शिक्षक की आयु $T$ वर्ष और प्रत्येक छात्र की आयु $S$ वर्ष है[cite: 3]।
-2. कुल आयु: $T + 3S = 4 \times 20 = 80$[cite: 3]।
-3. आयु अंतर: $T - S = 20 \implies S = T - 20$[cite: 3]।
-4. मान रखने पर: $T + 3(T - 20) = 80 \implies 4T = 140 \implies T = 35$ वर्ष[cite: 3]।
+1. माना शिक्षक की आयु $T$ वर्ष और प्रत्येक छात्र की आयु $S$ वर्ष है।
+2. कुल आयु: $T + 3S = 4 \times 20 = 80$।
+3. आयु अंतर: $T - S = 20 ⇒ S = T - 20$।
+4. मान रखने पर: $T + 3(T - 20) = 80 ⇒ 4T = 140 ⇒ T = 35$ वर्ष।
 
-अतः शिक्षक की आयु 35 वर्ष है[cite: 3]।', NULL),
-    ('csat-2020-q40', 40, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Cost Price, Selling Price & Loss Percentage Calculation', 'क्रय मूल्य, विक्रय मूल्य एवं हानि प्रतिशत गणना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Profit and Loss', 'Commercial Math']::TEXT[], 'A person bought a car and sold it for ₹3,00,000. If he incurred a loss of 20%, then how much did he spend to buy the car?', 'एक व्यक्ति ने एक कार खरीदी और ₹3,00,000 में बेच दी। यदि उसे 20% की हानि उठानी पड़ी, तो उसने कार खरीदने में कितने रुपये खर्च किए ?', '3,60,000', '3,65,000', '3,70,000', '3,75,000', '3,60,000', '3,65,000', '3,70,000', '3,75,000', 'D', 'Correct Answer: Option D (3,75,000)[cite: 3].
+अतः शिक्षक की आयु 35 वर्ष है।', NULL),
+    ('csat-2020-q40', 40, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Cost Price, Selling Price & Loss Percentage Calculation', 'क्रय मूल्य, विक्रय मूल्य एवं हानि प्रतिशत गणना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Profit and Loss', 'Commercial Math']::TEXT[], 'A person bought a car and sold it for ₹3,00,000. If he incurred a loss of 20%, then how much did he spend to buy the car?', 'एक व्यक्ति ने एक कार खरीदी और ₹3,00,000 में बेच दी। यदि उसे 20% की हानि उठानी पड़ी, तो उसने कार खरीदने में कितने रुपये खर्च किए ?', '3,60,000', '3,65,000', '3,70,000', '3,75,000', '3,60,000', '3,65,000', '3,70,000', '3,75,000', 'D', 'Correct Answer: Option D (3, 75, 000).
 
-1. Let the cost price be $C$[cite: 3].
-2. Selling price after 20% loss: $0.80 C = 3,00,000$[cite: 3].
-3. $C = \frac{3,00,000}{0.80} = 3,75,000$[cite: 3].
+1. Let the cost price be $C$.
+2. Selling price after 20% loss: $0. 80 C = 3, 00, 000$.
+3. $C = \frac{3, 00, 000}{0. 80} = 3, 75, 000$.
 
-Therefore, he spent ₹3,75,000 to buy the car[cite: 3].', 'सही उत्तर: विकल्प D (3,75,000)[cite: 3]।
+Therefore, he spent ₹3, 75, 000 to buy the car.', 'सही उत्तर: विकल्प D (3, 75, 000)।
 
-1. माना क्रय मूल्य $C$ है[cite: 3]।
-2. 20% हानि पर विक्रय मूल्य: $0.80 C = 3,00,000$[cite: 3]।
-3. $C = \frac{3,00,000}{0.80} = 3,75,000$ रुपये[cite: 3]।
+1. माना क्रय मूल्य $C$ है।
+2. 20% हानि पर विक्रय मूल्य: $0. 80 C = 3, 00, 000$।
+3. $C = \frac{3, 00, 000}{0. 80} = 3, 75, 000$ रुपये।
 
-अतः उसने कार खरीदने में ₹3,75,000 खर्च किए[cite: 3]।', NULL),
+अतः उसने कार खरीदने में ₹3, 75, 000 खर्च किए।', NULL),
     ('csat-2020-q41', 41, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.reading_comprehension_inference', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Reading Comprehension & Interpersonal Skills', 'बोधगम्यता एवं अंतर-वैयक्तिक कौशल', 'Critical Message on Groundwater Depletion & Irrigation Management', 'भूजल ह्रास एवं सिंचाई प्रबंधन पर महत्वपूर्ण संदेश', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Reading Comprehension', 'Groundwater', 'Water Policy']::TEXT[], 'Directions for the following item:
 Read the following passage and answer the item that follows. Your answer to this item should be based on the passage only.
 
@@ -1278,107 +1278,107 @@ Which one of the following is correct?', 'एक वस्तु पर, एक 
 
 1. Let the original price of the article be $P$.
 2. Calculate the final price paid under each option:
-   * **Option 1**: $P \times (1 - 0.10) \times (1 - 0.20) \times (1 + 0.10) = P \times 0.9 \times 0.8 \times 1.1 = 0.792 P$
-   * **Option 2**: $P \times (1 - 0.20) \times (1 - 0.10) \times (1 + 0.10) = P \times 0.8 \times 0.9 \times 1.1 = 0.792 P$
-   * **Option 3**: $P \times (1 + 0.10) \times (1 - 0.20) \times (1 - 0.10) = P \times 1.1 \times 0.8 \times 0.9 = 0.792 P$
-3. Because multiplication is commutative, the final effective payable amount is identical ($0.792 P$) in all three scenarios.
+ * **Option 1**: $P \times (1 - 0. 10) \times (1 - 0. 20) \times (1 + 0. 10) = P \times 0. 9 \times 0. 8 \times 1. 1 = 0. 792 P$
+ * **Option 2**: $P \times (1 - 0. 20) \times (1 - 0. 10) \times (1 + 0. 10) = P \times 0. 8 \times 0. 9 \times 1. 1 = 0. 792 P$
+ * **Option 3**: $P \times (1 + 0. 10) \times (1 - 0. 20) \times (1 - 0. 10) = P \times 1. 1 \times 0. 8 \times 0. 9 = 0. 792 P$
+3. Because multiplication is commutative, the final effective payable amount is identical ($0. 792 P$) in all three scenarios.
 
 Therefore, all the options are equally good for the customer.', 'सही उत्तर: विकल्प D (ग्राहक के लिए सभी विकल्प समान रूप से अच्छे हैं)।
 
 1. माना वस्तु का अंकित/प्रारंभिक मूल्य $P$ है।
 2. प्रत्येक विकल्प के तहत अंतिम देय राशि:
-   * **विकल्प 1**: $P \times (1 - 0.10) \times (1 - 0.20) \times (1 + 0.10) = P \times 0.9 \times 0.8 \times 1.1 = 0.792 P$
-   * **विकल्प 2**: $P \times (1 - 0.20) \times (1 - 0.10) \times (1 + 0.10) = P \times 0.8 \times 0.9 \times 1.1 = 0.792 P$
-   * **विकल्प 3**: $P \times (1 + 0.10) \times (1 - 0.20) \times (1 - 0.10) = P \times 1.1 \times 0.8 \times 0.9 = 0.792 P$
-3. चूँकि गुणनफल क्रमविनिमेय (commutative) होता है, अतः तीनों ही विकल्पों में ग्राहक को एक समान राशि ($0.792 P$) का भुगतान करना होगा।
+ * **विकल्प 1**: $P \times (1 - 0. 10) \times (1 - 0. 20) \times (1 + 0. 10) = P \times 0. 9 \times 0. 8 \times 1. 1 = 0. 792 P$
+ * **विकल्प 2**: $P \times (1 - 0. 20) \times (1 - 0. 10) \times (1 + 0. 10) = P \times 0. 8 \times 0. 9 \times 1. 1 = 0. 792 P$
+ * **विकल्प 3**: $P \times (1 + 0. 10) \times (1 - 0. 20) \times (1 - 0. 10) = P \times 1. 1 \times 0. 8 \times 0. 9 = 0. 792 P$
+3. चूँकि गुणनफल क्रमविनिमेय (commutative) होता है, अतः तीनों ही विकल्पों में ग्राहक को एक समान राशि ($0. 792 P$) का भुगतान करना होगा।
 
 अतः ग्राहक के लिए सभी विकल्प समान रूप से अच्छे हैं।', NULL),
     ('csat-2020-q48', 48, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Alphabet Alphabetical Positional Values & Arithmetic Coding', 'वर्णमाला स्थितीय मान एवं अंकगणितीय कोडिंग', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Coding-Decoding', 'Letter Positions']::TEXT[], 'The letters from A to Z are numbered from 1 to 26 respectively. If GHI = 1578 and DEF = 912, then what is ABC equal to?', 'A से Z तक के वर्ण 1 से 26 तक क्रमशः क्रमांकित किए गए हैं। यदि GHI = 1578 और DEF = 912 हों, तो ABC किसके बराबर है?', '492', '468', '262', '246', '492', '468', '262', '246', 'D', 'Correct Answer: Option D (246).
 
 1. Replace each letter with its positional value in the alphabet to form a multi-digit number, then observe the multiplying factor:
-   * For $GHI$: $G = 7, H = 8, I = 9 \implies 789$. Multiplying by 2: $789 \times 2 = 1578$.
-   * For $DEF$: $D = 4, E = 5, F = 6 \implies 456$. Multiplying by 2: $456 \times 2 = 912$.
+ * For $GHI$: $G = 7, H = 8, I = 9 ⇒ 789$. Multiplying by 2: $789 \times 2 = 1578$.
+ * For $DEF$: $D = 4, E = 5, F = 6 ⇒ 456$. Multiplying by 2: $456 \times 2 = 912$.
 2. Apply the same rule to $ABC$:
-   * For $ABC$: $A = 1, B = 2, C = 3 \implies 123$.
-   * Value $= 123 \times 2 = 246$.
+ * For $ABC$: $A = 1, B = 2, C = 3 ⇒ 123$.
+ * Value $= 123 \times 2 = 246$.
 
 Therefore, ABC is equal to 246.', 'सही उत्तर: विकल्प D (246)।
 
 1. वर्णों के वर्णमाला क्रमांकों को मिलाकर बनने वाली संख्या का संबंध देखने पर:
-   * $GHI$: $G = 7, H = 8, I = 9 \implies 789$, और $789 \times 2 = 1578$
-   * $DEF$: $D = 4, E = 5, F = 6 \implies 456$, और $456 \times 2 = 912$
+ * $GHI$: $G = 7, H = 8, I = 9 ⇒ 789$, और $789 \times 2 = 1578$
+ * $DEF$: $D = 4, E = 5, F = 6 ⇒ 456$, और $456 \times 2 = 912$
 2. इसी नियम के अनुसार $ABC$ के लिए:
-   * $ABC$: $A = 1, B = 2, C = 3 \implies 123$
-   * मान $= 123 \times 2 = 246$
+ * $ABC$: $A = 1, B = 2, C = 3 ⇒ 123$
+ * मान $= 123 \times 2 = 246$
 
 अतः ABC का मान 246 के बराबर है।', NULL),
     ('csat-2020-q49', 49, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Letter Cluster Analogy & Alphabet Shift Patterns', 'अक्षर समूह सादृश्यता एवं वर्णमाला विस्थापन पैटर्न', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Analogy', 'Letter Shifts']::TEXT[], 'What is the missing term @ in the following?
 $$\text{ACPQ : BESU :: MNGI : @}$$', 'निम्न में लुप्त पद @ क्या है?
 $$\text{ACPQ : BESU :: MNGI : @}$$', 'NPJL', 'NOJM', 'NPIL', 'NPJM', 'NPJL', 'NOJM', 'NPIL', 'NPJM', 'D', 'Correct Answer: Option D (NPJM).
 
-1. Determine the positional letter-shift pattern between $\text{ACPQ}$ and $\text{BESU}$:
-   * $A (1) + 1 = B (2)$
-   * $C (3) + 2 = E (5)$
-   * $P (16) + 3 = S (19)$
-   * $Q (17) + 4 = U (21)$
-   The shifts across the four letter positions are $+1, +2, +3, +4$.
-2. Apply the identical rule to $\text{MNGI}$:
-   * $M (13) + 1 = N (14)$
-   * $N (14) + 2 = P (16)$
-   * $G (7) + 3 = J (10)$
-   * $I (9) + 4 = M (13)$
+1. Determine the positional letter-shift pattern between (ACPQ) and (BESU):
+ * $A (1) + 1 = B (2)$
+ * $C (3) + 2 = E (5)$
+ * $P (16) + 3 = S (19)$
+ * $Q (17) + 4 = U (21)$
+ The shifts across the four letter positions are $+1, +2, +3, +4$.
+2. Apply the identical rule to (MNGI):
+ * $M (13) + 1 = N (14)$
+ * $N (14) + 2 = P (16)$
+ * $G (7) + 3 = J (10)$
+ * $I (9) + 4 = M (13)$
 
 Therefore, the missing term is NPJM.', 'सही उत्तर: विकल्प D (NPJM)।
 
-1. $\text{ACPQ}$ और $\text{BESU}$ के बीच वर्णों के विस्थापन का नियम:
-   * $A (1) + 1 = B (2)$
-   * $C (3) + 2 = E (5)$
-   * $P (16) + 3 = S (19)$
-   * $Q (17) + 4 = U (21)$
-   यहाँ विस्थापन का क्रम $+1, +2, +3, +4$ है।
-2. इसी क्रम को $\text{MNGI}$ पर लागू करने पर:
-   * $M (13) + 1 = N (14)$
-   * $N (14) + 2 = P (16)$
-   * $G (7) + 3 = J (10)$
-   * $I (9) + 4 = M (13)$
+1. (ACPQ) और (BESU) के बीच वर्णों के विस्थापन का नियम:
+ * $A (1) + 1 = B (2)$
+ * $C (3) + 2 = E (5)$
+ * $P (16) + 3 = S (19)$
+ * $Q (17) + 4 = U (21)$
+ यहाँ विस्थापन का क्रम $+1, +2, +3, +4$ है।
+2. इसी क्रम को (MNGI) पर लागू करने पर:
+ * $M (13) + 1 = N (14)$
+ * $N (14) + 2 = P (16)$
+ * $G (7) + 3 = J (10)$
+ * $I (9) + 4 = M (13)$
 
 अतः लुप्त पद NPJM है।', NULL),
     ('csat-2020-q50', 50, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Laws of Exponents, Negative Indices & Magnitude Comparison', 'घातांक नियम, ऋणात्मक घातें एवं परिमाण तुलना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Exponents & Powers', 'Number Comparison']::TEXT[], 'What is the largest number among the following?', 'निम्न में कौन-सी सबसे बड़ी संख्या है?', '$(1/2)^{-6}$', '$(1/4)^{-3}$', '$(1/3)^{-4}$', '$(1/6)^{-2}$', '$(1/2)^{-6}$', '$(1/4)^{-3}$', '$(1/3)^{-4}$', '$(1/6)^{-2}$', 'C', 'Correct Answer: Option C ($(1/3)^{-4}$).
 
 1. Using the negative exponent rule $(1/a)^{-b} = a^b$, evaluate the numerical value of each option:
-   * Option A: $\left(\frac{1}{2}\right)^{-6} = 2^6 = 64$
-   * Option B: $\left(\frac{1}{4}\right)^{-3} = 4^3 = 64$
-   * Option C: $\left(\frac{1}{3}\right)^{-4} = 3^4 = 81$
-   * Option D: $\left(\frac{1}{6}\right)^{-2} = 6^2 = 36$
+ * Option A: $\left(\frac{1}{2}\right)^{-6} = 2^6 = 64$
+ * Option B: $\left(\frac{1}{4}\right)^{-3} = 4^3 = 64$
+ * Option C: $\left(\frac{1}{3}\right)^{-4} = 3^4 = 81$
+ * Option D: $\left(\frac{1}{6}\right)^{-2} = 6^2 = 36$
 2. Comparing the evaluated numbers: $81 > 64 = 64 > 36$.
 
 Therefore, $(1/3)^{-4}$ is the largest number.', 'सही उत्तर: विकल्प C ($(1/3)^{-4}$)।
 
 1. ऋणात्मक घातांक नियम $(1/a)^{-b} = a^b$ के अनुसार प्रत्येक विकल्प का मान निकालने पर:
-   * (a) $\left(\frac{1}{2}\right)^{-6} = 2^6 = 64$
-   * (b) $\left(\frac{1}{4}\right)^{-3} = 4^3 = 64$
-   * (c) $\left(\frac{1}{3}\right)^{-4} = 3^4 = 81$
-   * (d) $\left(\frac{1}{6}\right)^{-2} = 6^2 = 36$
+ * (a) $\left(\frac{1}{2}\right)^{-6} = 2^6 = 64$
+ * (b) $\left(\frac{1}{4}\right)^{-3} = 4^3 = 64$
+ * (c) $\left(\frac{1}{3}\right)^{-4} = 3^4 = 81$
+ * (d) $\left(\frac{1}{6}\right)^{-2} = 6^2 = 36$
 2. मानों की तुलना करने पर: $81 > 64 = 64 > 36$।
 
 अतः सबसे बड़ी संख्या $(1/3)^{-4}$ है।', NULL),
-    ('csat-2020-q51', 51, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'HCF of Mixed Fractions & Unit Conversion in Lengths', 'मिश्रित भिन्नों का महत्तम समापवर्तक (HCF) एवं लंबाई इकाई रूपांतरण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'HCF of Fractions', 'Mensuration Units']::TEXT[], 'What is the greatest length x such that $3\frac{1}{2}\text{ m}$ and $8\frac{3}{4}\text{ m}$ are integral multiples of x?', 'वह महत्तम लंबाई x क्या है जिससे कि $3\frac{1}{2}\text{ m}$ और $8\frac{3}{4}\text{ m}$, x के पूर्णांक गुणज हैं?', '$1\frac{1}{2}\text{ m}$', '$1\frac{1}{3}\text{ m}$', '$1\frac{1}{4}\text{ m}$', '$1\frac{3}{4}\text{ m}$', '$1\frac{1}{2}\text{ m}$', '$1\frac{1}{3}\text{ m}$', '$1\frac{1}{4}\text{ m}$', '$1\frac{3}{4}\text{ m}$', 'D', 'Correct Answer: Option D ($1\frac{3}{4}\text{ m}$).
+    ('csat-2020-q51', 51, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'HCF of Mixed Fractions & Unit Conversion in Lengths', 'मिश्रित भिन्नों का महत्तम समापवर्तक (HCF) एवं लंबाई इकाई रूपांतरण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'HCF of Fractions', 'Mensuration Units']::TEXT[], 'What is the greatest length x such that $3\frac{1}{2}\text{ m}$ and $8\frac{3}{4}\text{ m}$ are integral multiples of x?', 'वह महत्तम लंबाई x क्या है जिससे कि $3\frac{1}{2}\text{ m}$ और $8\frac{3}{4}\text{ m}$, x के पूर्णांक गुणज हैं?', '$1\frac{1}{2}\text{ m}$', '$1\frac{1}{3}\text{ m}$', '$1\frac{1}{4}\text{ m}$', '$1\frac{3}{4}\text{ m}$', '$1\frac{1}{2}\text{ m}$', '$1\frac{1}{3}\text{ m}$', '$1\frac{1}{4}\text{ m}$', '$1\frac{3}{4}\text{ m}$', 'D', 'Correct Answer: Option D ($1\frac{3}{4} m$).
 
-1. For both lengths to be integral multiples of $x$, $x$ must be the Highest Common Factor (HCF) of $3\frac{1}{2}\text{ m}$ and $8\frac{3}{4}\text{ m}$.
+1. For both lengths to be integral multiples of $x$, $x$ must be the Highest Common Factor (HCF) of $3\frac{1}{2} m$ and $8\frac{3}{4} m$.
 2. Convert the mixed numbers into improper fractions:
-   $$3\frac{1}{2} = \frac{7}{2} = \frac{14}{4}\text{ m}, \quad 8\frac{3}{4} = \frac{35}{4}\text{ m}$$
+ $$3\frac{1}{2} = \frac{7}{2} = \frac{14}{4} m, \quad 8\frac{3}{4} = \frac{35}{4} m$$
 3. Calculate the HCF of the fractions:
-   $$\text{HCF}\left(\frac{14}{4}, \frac{35}{4}\right) = \frac{\text{HCF}(14, 35)}{\text{LCM}(4, 4)} = \frac{7}{4} = 1\frac{3}{4}\text{ m}$$
+ $$HCF\left(\frac{14}{4}, \frac{35}{4}\right) = \frac{HCF(14, 35)}{LCM(4, 4)} = \frac{7}{4} = 1\frac{3}{4} m$$
 
-Therefore, the greatest length x is $1\frac{3}{4}\text{ m}$.', 'सही उत्तर: विकल्प D ($1\frac{3}{4}\text{ m}$)।
+Therefore, the greatest length x is $1\frac{3}{4} m$.', 'सही उत्तर: विकल्प D ($1\frac{3}{4} m$)।
 
 1. यदि दोनों लम्बाइयाँ $x$ के पूर्णांक गुणज हैं, तो $x$ दोनों का महत्तम समापवर्तक (HCF) होगा।
 2. मिश्र भिन्नों को विषम भिन्नों में बदलने पर:
-   $$3\frac{1}{2} = \frac{7}{2} = \frac{14}{4}\text{ m}, \quad 8\frac{3}{4} = \frac{35}{4}\text{ m}$$
+ $$3\frac{1}{2} = \frac{7}{2} = \frac{14}{4} m, \quad 8\frac{3}{4} = \frac{35}{4} m$$
 3. भिन्नों का HCF:
-   $$\text{HCF}\left(\frac{14}{4}, \frac{35}{4}\right) = \frac{\text{HCF}(14, 35)}{\text{LCM}(4, 4)} = \frac{7}{4} = 1\frac{3}{4}\text{ m}$$
+ $$HCF\left(\frac{14}{4}, \frac{35}{4}\right) = \frac{HCF(14, 35)}{LCM(4, 4)} = \frac{7}{4} = 1\frac{3}{4} m$$
 
-अतः अधिकतम लम्बाई $x = 1\frac{3}{4}\text{ m}$ होगी।', NULL),
+अतः अधिकतम लम्बाई $x = 1\frac{3}{4} m$ होगी।', NULL),
     ('csat-2020-q52', 52, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Demographic Table Data Interpretation (Natural Growth Rate)', 'जनसांख्यिकीय तालिका आँकड़ा व्याख्या (प्राकृतिक संवृद्धि दर)', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Data Interpretation', 'Tables', 'Demographics']::TEXT[], 'Consider the following data:
 
 Period | Birth Rate | Death Rate
@@ -1405,126 +1405,126 @@ For which period was the natural growth rate maximum?', 'निम्नलि�
 
 किस अवधि के लिए प्राकृतिक वृद्धि-दर अधिकतम थी?', '1911-1921', '1941-1951', '1961-1971', '1971-1981', '1911-1921', '1941-1951', '1961-1971', '1971-1981', 'D', 'Correct Answer: Option D (1971-1981).
 
-1. Natural growth rate is calculated as: $\text{Natural Growth Rate} = \text{Birthrate} - \text{Death rate}$.
+1. Natural growth rate is calculated as: $Natural Growth Rate = Birthrate - Death rate$.
 2. Compute the natural growth rate for each given period:
-   * 1911-1921: $48.1 - 35.5 = 12.6$
-   * 1921-1931: $46.4 - 36.3 = 10.1$
-   * 1931-1941: $45.2 - 31.2 = 14.0$
-   * 1941-1951: $39.9 - 27.4 = 12.5$
-   * 1951-1961: $41.7 - 22.8 = 18.9$
-   * 1961-1971: $41.1 - 18.9 = 22.2$
-   * 1971-1981: $37.1 - 14.8 = 22.3$
-3. The maximum natural growth rate is $22.3$, occurring in the period 1971-1981.
+ * 1911-1921: $48. 1 - 35. 5 = 12. 6$
+ * 1921-1931: $46. 4 - 36. 3 = 10. 1$
+ * 1931-1941: $45. 2 - 31. 2 = 14. 0$
+ * 1941-1951: $39. 9 - 27. 4 = 12. 5$
+ * 1951-1961: $41. 7 - 22. 8 = 18. 9$
+ * 1961-1971: $41. 1 - 18. 9 = 22. 2$
+ * 1971-1981: $37. 1 - 14. 8 = 22. 3$
+3. The maximum natural growth rate is $22. 3$, occurring in the period 1971-1981.
 
 Therefore, the natural growth rate was maximum during 1971-1981.', 'सही उत्तर: विकल्प D (1971-1981)।
 
-1. प्राकृतिक विकास दर की गणना का सूत्र: $\text{प्राकृतिक विकास दर} = \text{जन्मदर} - \text{मृत्यु दर}$।
+1. प्राकृतिक विकास दर की गणना का सूत्र: $प्राकृतिक विकास दर = जन्मदर - मृत्यु दर$।
 2. प्रत्येक समयावधि के लिए अंतर ज्ञात करने पर:
-   * 1911-1921: $48.1 - 35.5 = 12.6$
-   * 1921-1931: $46.4 - 36.3 = 10.1$
-   * 1931-1941: $45.2 - 31.2 = 14.0$
-   * 1941-1951: $39.9 - 27.4 = 12.5$
-   * 1951-1961: $41.7 - 22.8 = 18.9$
-   * 1961-1971: $41.1 - 18.9 = 22.2$
-   * 1971-1981: $37.1 - 14.8 = 22.3$
-3. सर्वाधिक दर 22.3 समयावधि 1971-1981 में प्राप्त होती है।
+ * 1911-1921: $48. 1 - 35. 5 = 12. 6$
+ * 1921-1931: $46. 4 - 36. 3 = 10. 1$
+ * 1931-1941: $45. 2 - 31. 2 = 14. 0$
+ * 1941-1951: $39. 9 - 27. 4 = 12. 5$
+ * 1951-1961: $41. 7 - 22. 8 = 18. 9$
+ * 1961-1971: $41. 1 - 18. 9 = 22. 2$
+ * 1971-1981: $37. 1 - 14. 8 = 22. 3$
+3. सर्वाधिक दर 22. 3 समयावधि 1971-1981 में प्राप्त होती है।
 
 अतः 1971-1981 की समयावधि में प्राकृतिक विकास दर अधिकतम थी।', NULL),
     ('csat-2020-q53', 53, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Recurring Decimal Conversion to Rational Fractions', 'आवर्ती दशमलव का परिमेय भिन्न में रूपांतरण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Recurring Decimals', 'Fractions']::TEXT[], 'The recurring decimal representation 1.272727... is equivalent to', 'आवर्त दशमलव निरूपण 1-272727... किसके समान है?', '13/11', '14/11', '127/99', '137/99', '13/11', '14/11', '127/99', '137/99', 'B', 'Correct Answer: Option B (14/11).
 
-1. Let $x = 1.272727\dots = 1.\overline{27}$.
+1. Let $x = 1. 272727\dots = 1.\overline{27}$.
 2. Multiply by 100:
-   $$100x = 127.272727\dots$$
+ $$100x = 127. 272727\dots$$
 3. Subtract the original equation from this:
-   $$100x - x = 127.\overline{27} - 1.\overline{27}$$
-   $$99x = 126$$
+ $$100x - x = 127.\overline{27} - 1.\overline{27}$$
+ $$99x = 126$$
 4. Reduce the fraction by dividing numerator and denominator by 9:
-   $$x = \frac{126}{99} = \frac{14}{11}$$
+ $$x = \frac{126}{99} = \frac{14}{11}$$
 
-Therefore, 1.272727... is equivalent to 14/11.', 'सही उत्तर: विकल्प B (14/11)।
+Therefore, 1. 272727... is equivalent to 14/11.', 'सही उत्तर: विकल्प B (14/11)।
 
-1. माना $x = 1.272727\dots = 1.\overline{27}$।
+1. माना $x = 1. 272727\dots = 1.\overline{27}$।
 2. दोनों पक्षों में 100 से गुणा करने पर:
-   $$100x = 127.272727\dots$$
+ $$100x = 127. 272727\dots$$
 3. घटाने पर:
-   $$100x - x = 127.\overline{27} - 1.\overline{27}$$
-   $$99x = 126$$
+ $$100x - x = 127.\overline{27} - 1.\overline{27}$$
+ $$99x = 126$$
 4. भिन्न को 9 से विभाजित कर सरल करने पर:
-   $$x = \frac{126}{99} = \frac{14}{11}$$
+ $$x = \frac{126}{99} = \frac{14}{11}$$
 
-अतः आवर्त दशमलव 1.272727... का मान 14/11 के समान है।', NULL),
+अतः आवर्त दशमलव 1. 272727... का मान 14/11 के समान है।', NULL),
     ('csat-2020-q54', 54, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'LCM & Constant Remainder Theorem for 4-Digit Integers', 'लघुत्तम समापवर्त्य (LCM) एवं 4-अंकीय संख्याओं के लिए शेषफल प्रमेय', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'LCM', 'Remainder Theorem']::TEXT[], 'What is the least four-digit number when divided by 3, 4, 5 and 6 leaves a remainder 2 in each case?', 'चार अंकों की सबसे छोटी संख्या कौन-सी है जिसे 3, 4, 5 और 6 से विभाजित करने पर प्रत्येक बार 2 शेष बचता है?', '1012', '1022', '1122', '1222', '1012', '1022', '1122', '1222', 'B', 'Correct Answer: Option B (1022).
 
 1. Find the LCM of the divisors 3, 4, 5, and 6:
-   $$\text{LCM}(3, 4, 5, 6) = 60$$
+ $$LCM(3, 4, 5, 6) = 60$$
 2. Any number satisfying the condition must be of the form $N = 60k + 2$.
 3. The smallest 4-digit number is 1000. Dividing 1000 by 60:
-   $$1000 = 60 \times 16 + 40$$
+ $$1000 = 60 \times 16 + 40$$
 4. The smallest 4-digit multiple of 60 is $60 \times 17 = 1020$.
 5. Adding the common remainder of 2:
-   $$N = 1020 + 2 = 1022$$
+ $$N = 1020 + 2 = 1022$$
 
 Therefore, the least four-digit number is 1022.', 'सही उत्तर: विकल्प B (1022)।
 
 1. भाजकों 3, 4, 5 और 6 का ल.स.प. (LCM) निकालने पर:
-   $$\text{LCM}(3, 4, 5, 6) = 60$$
+ $$LCM(3, 4, 5, 6) = 60$$
 2. अभीष्ट संख्या का रूप $N = 60k + 2$ होगा।
 3. चार अंकों की सबसे छोटी संख्या 1000 है। $1000 \div 60$ करने पर शेषफल 40 बचता है।
 4. अतः चार अंकों का 60 का सबसे छोटा गुणज $= 60 \times 17 = 1020$ है।
 5. शेषफल 2 जोड़ने पर:
-   $$N = 1020 + 2 = 1022$$
+ $$N = 1020 + 2 = 1022$$
 
 अतः चार अंकों की सबसे छोटी संख्या 1022 है।', NULL),
     ('csat-2020-q55', 55, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Demographic Percentage & Marriage Proportion Equations', 'जनसंख्या प्रतिशत एवं वैवाहिक अनुपात समीकरण', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Percentages', 'Ratio & Proportion']::TEXT[], 'In adult population of a city, 40% men and 30% women are married. What is the percentage of married adult population if no man marries more than one woman and no woman marries more than one man; and there are no widows and widowers?', 'एक शहर की वयस्क समष्टि में 40% पुरुष और 30% महिलाएँ विवाहित हैं। विवाहित वयस्क समष्टि का प्रतिशत क्या है, यदि कोई भी पुरुष एक से अधिक महिला से विवाह नहीं करता है और कोई भी महिला एक से अधिक पुरुष से विवाह नहीं करती है; और इनमें कोई विधवा और विधुर नहीं है?', '$33\frac{1}{7}\%$', '34%', '$34\frac{2}{7}\%$', '35%', '$33\frac{1}{7}\%$', '34%', '$34\frac{2}{7}\%$', '35%', 'C', 'Correct Answer: Option C ($34\frac{2}{7}\%$).
 
 1. Let $M$ be the total adult male population and $W$ be the total adult female population.
 2. Since monogamy holds and there are no widows/widowers, the number of married men equals the number of married women:
-   $$0.40 M = 0.30 W \implies \frac{M}{W} = \frac{3}{4}$$
+ $$0. 40 M = 0. 30 W ⇒ \frac{M}{W} = \frac{3}{4}$$
 3. Let $M = 300$ and $W = 400$. Total adult population $= 300 + 400 = 700$.
-4. Number of married men $= 0.40 \times 300 = 120$.
-   Number of married women $= 0.30 \times 400 = 120$.
-   Total married adult population $= 120 + 120 = 240$.
+4. Number of married men $= 0. 40 \times 300 = 120$.
+ Number of married women $= 0. 30 \times 400 = 120$.
+ Total married adult population $= 120 + 120 = 240$.
 5. Percentage of married adult population:
-   $$\text{Percentage} = \frac{240}{700} \times 100\% = \frac{240}{7}\% = 34\frac{2}{7}\%$$
+ $$Percentage = \frac{240}{700} \times 100\% = \frac{240}{7}\% = 34\frac{2}{7}\%$$
 
 Therefore, the percentage of married adult population is $34\frac{2}{7}\%$.', 'सही उत्तर: विकल्प C ($34\frac{2}{7}\%$)।
 
 1. माना वयस्क पुरुषों की संख्या $M$ तथा वयस्क महिलाओं की संख्या $W$ है।
 2. चूँकि विवाहित पुरुषों और विवाहित महिलाओं की संख्या बराबर होगी:
-   $$0.40 M = 0.30 W \implies \frac{M}{W} = \frac{3}{4}$$
+ $$0. 40 M = 0. 30 W ⇒ \frac{M}{W} = \frac{3}{4}$$
 3. माना $M = 300$ और $W = 400$, अतः कुल वयस्क जनसंख्या $= 300 + 400 = 700$।
-4. विवाहित पुरुषों की संख्या $= 0.40 \times 300 = 120$ तथा विवाहित महिलाओं की संख्या $= 120$।
-   कुल विवाहित वयस्क $= 120 + 120 = 240$।
+4. विवाहित पुरुषों की संख्या $= 0. 40 \times 300 = 120$ तथा विवाहित महिलाओं की संख्या = 120।
+ कुल विवाहित वयस्क $= 120 + 120 = 240$।
 5. विवाहित वयस्क समष्टि का प्रतिशत:
-   $$\frac{240}{700} \times 100\% = \frac{240}{7}\% = 34\frac{2}{7}\%$$
+ $$\frac{240}{700} \times 100\% = \frac{240}{7}\% = 34\frac{2}{7}\%$$
 
 अतः विवाहित वयस्क समष्टि का प्रतिशत $34\frac{2}{7}\%$ है।', NULL),
     ('csat-2020-q56', 56, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Modular Arithmetic, Factor Cancellation & Remainder in Large Products', 'मॉड्यूलर अंकगणित, गुणनखंड निरसन एवं वृहद् गुणनफल शेषफल', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Remainders', 'Modular Arithmetic']::TEXT[], 'What is the remainder when $51 \times 27 \times 35 \times 62 \times 75$ is divided by 100?', 'जब $51 \times 27 \times 35 \times 62 \times 75$ को 100 से विभाजित किया जाता है, तो शेषफल क्या है?', '50', '25', '5', '1', '50', '25', '5', '1', 'A', 'Correct Answer: Option A (50).
 
 1. Let $N = 51 \times 27 \times 35 \times 62 \times 75$.
 2. Factorize the prime powers of 2 and 5 in $N$:
-   * $62 = 2 \times 31$ (contains one factor of 2)
-   * $35 = 5 \times 7$ (contains one factor of 5)
-   * $75 = 25 \times 3 = 5^2 \times 3$ (contains two factors of 5)
+ * $62 = 2 \times 31$ (contains one factor of 2)
+ * $35 = 5 \times 7$ (contains one factor of 5)
+ * $75 = 25 \times 3 = 5^2 \times 3$ (contains two factors of 5)
 3. Regroup the factors $2 \times 25 = 50$:
-   $$N = 50 \times (51 \times 27 \times 7 \times 31 \times 15) = 50 \times (\text{an odd integer } k)$$
-4. Any odd multiple of 50 ends with the two digits ''50'' (e.g., 50, 150, 250, ...), which gives a remainder of 50 when divided by 100.
+ $$N = 50 \times (51 \times 27 \times 7 \times 31 \times 15) = 50 \times (an odd integer k)$$
+4. Any odd multiple of 50 ends with the two digits ''50'' (e. g., 50, 150, 250,...), which gives a remainder of 50 when divided by 100.
 
 Therefore, the remainder is 50.', 'सही उत्तर: विकल्प A (50)।
 
 1. गुणनफल $N = 51 \times 27 \times 35 \times 62 \times 75$।
 2. 2 और 5 के गुणनखंडों को अलग करने पर:
-   * $62 = 2 \times 31$
-   * $35 = 5 \times 7$
-   * $75 = 25 \times 3$
-3. $N = (2 \times 25) \times (51 \times 27 \times 7 \times 31 \times 15) = 50 \times (\text{एक विषम पूर्णांक})$।
-4. 50 का कोई भी विषम गुणज (जैसे 50, 150, 250, ...) 100 से भाग देने पर सदैव 50 शेषफल देता है।
+ * $62 = 2 \times 31$
+ * $35 = 5 \times 7$
+ * $75 = 25 \times 3$
+3. $N = (2 \times 25) \times (51 \times 27 \times 7 \times 31 \times 15) = 50 \times (एक विषम पूर्णांक)$।
+4. 50 का कोई भी विषम गुणज (जैसे 50, 150, 250,...) 100 से भाग देने पर सदैव 50 शेषफल देता है।
 
 अतः 100 से विभाजित करने पर शेषफल 50 होगा।', NULL),
     ('csat-2020-q57', 57, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Fractional Ratio Simplification & Monetary Distribution', 'भिन्न अनुपातों का सरलीकरण एवं धनराशि वितरण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Ratio & Proportion', 'Division of Amounts']::TEXT[], 'A sum of ₹2,500 is distributed among X, Y and Z in the ratio $\frac{1}{2} : \frac{3}{4} : \frac{5}{6}$. What is the difference between the maximum share and the minimum share?', '₹2,500 की धनराशि को X, Y और Z में $\frac{1}{2} : \frac{3}{4} : \frac{5}{6}$ के अनुपात में वितरित किया जाता है। अधिकतम अंश और न्यूनतम अंश के बीच अंतर क्या है?', '300', '350', '400', '450', '300', '350', '400', '450', 'C', 'Correct Answer: Option C (400).
 
-1. Clear denominators by multiplying the fractional ratio by $\text{LCM}(2, 4, 6) = 12$:
-   $$X : Y : Z = \left(\frac{1}{2} \times 12\right) : \left(\frac{3}{4} \times 12\right) : \left(\frac{5}{6} \times 12\right) = 6 : 9 : 10$$
+1. Clear denominators by multiplying the fractional ratio by $LCM(2, 4, 6) = 12$:
+ $$X: Y: Z = \left(\frac{1}{2} \times 12\right): \left(\frac{3}{4} \times 12\right): \left(\frac{5}{6} \times 12\right) = 6: 9: 10$$
 2. Total ratio parts $= 6 + 9 + 10 = 25$ parts.
 3. Value per part $= \frac{2500}{25} = 100$.
 4. Maximum share is Z ($10 \times 100 = 1000$) and minimum share is X ($6 \times 100 = 600$).
@@ -1533,7 +1533,7 @@ Therefore, the remainder is 50.', 'सही उत्तर: विकल्प
 Therefore, the difference between the maximum and minimum share is 400.', 'सही उत्तर: विकल्प C (400)।
 
 1. भिन्नों के हरों के ल.स.प. (12) से गुणा करके अनुपात को पूर्णांक में बदलने पर:
-   $$X : Y : Z = \left(\frac{1}{2} \times 12\right) : \left(\frac{3}{4} \times 12\right) : \left(\frac{5}{6} \times 12\right) = 6 : 9 : 10$$
+ $$X: Y: Z = \left(\frac{1}{2} \times 12\right): \left(\frac{3}{4} \times 12\right): \left(\frac{5}{6} \times 12\right) = 6: 9: 10$$
 2. कुल अनुपाती भाग $= 6 + 9 + 10 = 25$ भाग।
 3. 1 भाग का मान $= \frac{2500}{25} = 100$ रुपये।
 4. अधिकतम अंश Z ($10 \times 100 = 1000$) और न्यूनतम अंश X ($6 \times 100 = 600$) है।
@@ -1543,33 +1543,33 @@ Therefore, the difference between the maximum and minimum share is 400.', 'स�
     ('csat-2020-q58', 58, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Digit Sum of Powers of Ten Expressions (10^n + 1)', 'दस की घात व्यंजकों (10^n + 1) के अंकों का योग', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Powers of 10', 'Sum of Digits']::TEXT[], 'For what value of n, the sum of digits in the number $(10^n + 1)$ is 2?', 'n के किस मान के लिए, संख्या $(10^n + 1)$ के अंकों का योग 2 है?', 'For n = 0 only', 'For any whole number n', 'For any positive integer n only', 'For any real number n', 'केवल n = 0 के लिए', 'किसी पूर्ण संख्या n के लिए', 'केवल किसी धनात्मक पूर्णांक n के लिए', 'किसी वास्तविक संख्या n के लिए', 'B', 'Correct Answer: Option B (For any whole number n).
 
 1. Check whole numbers $n \in \{0, 1, 2, 3, \dots\}$:
-   * If $n = 0$: $10^0 + 1 = 1 + 1 = 2$. Sum of digits $= 2$.
-   * If $n = 1$: $10^1 + 1 = 11$. Sum of digits $= 1 + 1 = 2$.
-   * If $n = 2$: $10^2 + 1 = 101$. Sum of digits $= 1 + 0 + 1 = 2$.
-   * For any integer $n \ge 1$: $10^n + 1 = 100\dots01$ (with $n-1$ zeroes between the two $1$s). The sum of the digits is always $1 + 0 + \dots + 0 + 1 = 2$.
+ * If $n = 0$: $10^0 + 1 = 1 + 1 = 2$. Sum of digits = 2.
+ * If $n = 1$: $10^1 + 1 = 11$. Sum of digits $= 1 + 1 = 2$.
+ * If $n = 2$: $10^2 + 1 = 101$. Sum of digits $= 1 + 0 + 1 = 2$.
+ * For any integer $n \ge 1$: $10^n + 1 = 100\dots01$ (with $n-1$ zeroes between the two $1$s). The sum of the digits is always $1 + 0 + \dots + 0 + 1 = 2$.
 2. Since it holds for $n = 0$ and all positive integers, it is true for any whole number $n$.
 
 Therefore, the statement holds for any whole number n.', 'सही उत्तर: विकल्प B (किसी पूर्ण संख्या n के लिए)।
 
 1. पूर्ण संख्याओं ($n = 0, 1, 2, 3, \dots$) के लिए परीक्षण करने पर:
-   * $n = 0$ के लिए: $10^0 + 1 = 1 + 1 = 2$ (अंकों का योग $= 2$)
-   * $n = 1$ के लिए: $10^1 + 1 = 11$ (अंकों का योग $= 1 + 1 = 2$)
-   * $n = 2$ के लिए: $10^2 + 1 = 101$ (अंकों का योग $= 1 + 0 + 1 = 2$)
-   * किसी भी धनात्मक पूर्णांक $n$ के लिए, संख्या का स्वरूप $100\dots01$ होता है जिसमें केवल दो ''1'' और बीच में शून्य होते हैं, अतः अंकों का योग सदैव $1 + 1 = 2$ रहता है।
+ * $n = 0$ के लिए: $10^0 + 1 = 1 + 1 = 2$ (अंकों का योग = 2)
+ * $n = 1$ के लिए: $10^1 + 1 = 11$ (अंकों का योग $= 1 + 1 = 2$)
+ * $n = 2$ के लिए: $10^2 + 1 = 101$ (अंकों का योग $= 1 + 0 + 1 = 2$)
+ * किसी भी धनात्मक पूर्णांक $n$ के लिए, संख्या का स्वरूप $100\dots01$ होता है जिसमें केवल दो ''1'' और बीच में शून्य होते हैं, अतः अंकों का योग सदैव $1 + 1 = 2$ रहता है।
 2. चूँकि यह $n = 0$ और सभी धनात्मक पूर्णांकों के लिए सत्य है, अतः यह किसी भी पूर्ण संख्या $n$ के लिए मान्य है।
 
 अतः किसी पूर्ण संख्या n के लिए अंकों का योग 2 है।', NULL),
     ('csat-2020-q59', 59, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Group Averages & Inter-Group Transfer Invariance', 'समूह औसत एवं अंतर-समूह स्थानांतरण अपरिवर्तनीयता', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Averages', 'Class Distribution']::TEXT[], 'In a class, there are three groups A, B and C. If one student from group A and two students from group B are shifted to group C, then what happens to the average weight of the students of the class?', 'एक कक्षा में तीन समूह A, B और C हैं। यदि समूह A से एक विद्यार्थी और समूह B से दो विद्यार्थियों को समूह C में स्थानांतरित किया जाता है, तो कक्षा के विद्यार्थियों के औसत भार का क्या होगा?', 'It increases.', 'It decreases.', 'It remains the same.', 'No conclusion can be drawn due to insufficient data.', 'यह बढ़ जाएगा।', 'यह घट जाएगा।', 'यह वही रहेगा।', 'अपर्याप्त आँकड़ों के कारण कोई निष्कर्ष नहीं निकाला जा सकता है।', 'C', 'Correct Answer: Option C (It remains the same).
 
 1. The overall average weight of the students of the class is given by:
-   $$\text{Class Average Weight} = \frac{\text{Total weight of all students in the class}}{\text{Total number of students in the class}}$$
+ $$Class Average Weight = \frac{Total weight of all students in the class}{Total number of students in the class}$$
 2. Shifting students between groups A, B, and C within the same class is purely an internal rearrangement.
 3. The total weight of all students and the total count of students in the class remain completely unchanged.
 
 Therefore, the average weight of the students of the class remains the same.', 'सही उत्तर: विकल्प C (यह वही रहेगा)।
 
 1. पूरी कक्षा के विद्यार्थियों के औसत भार का सूत्र:
-   $$\text{कक्षा का औसत भार} = \frac{\text{कक्षा के सभी विद्यार्थियों का कुल भार}}{\text{कक्षा के विद्यार्थियों की कुल संख्या}}$$
+ $$कक्षा का औसत भार = \frac{कक्षा के सभी विद्यार्थियों का कुल भार}{कक्षा के विद्यार्थियों की कुल संख्या}$$
 2. एक ही कक्षा के भीतर विद्यार्थियों को समूह A और B से समूह C में स्थानांतरित करने से पूरी कक्षा के कुल भार और विद्यार्थियों की कुल संख्या में कोई परिवर्तन नहीं होता।
 
 अतः कक्षा के विद्यार्थियों का औसत भार वही रहेगा।', NULL),
@@ -1577,9 +1577,9 @@ Therefore, the average weight of the students of the class remains the same.', '
 
 1. We are given $n = 5$ distinct denominations: $\{50, 100, 200, 500, 2000\}$.
 2. "At least three denominations at a time" means selecting subsets of size 3, 4, or 5:
-   * Selecting 3 denominations: $\binom{5}{3} = 10$
-   * Selecting 4 denominations: $\binom{5}{4} = 5$
-   * Selecting 5 denominations: $\binom{5}{5} = 1$
+ * Selecting 3 denominations: $\binom{5}{3} = 10$
+ * Selecting 4 denominations: $\binom{5}{4} = 5$
+ * Selecting 5 denominations: $\binom{5}{5} = 1$
 3. Total number of combinations $= 10 + 5 + 1 = 16$.
 4. Because all denominations are widely spaced positive integers, every unique subset yields a distinct total sum.
 
@@ -1587,9 +1587,9 @@ Therefore, 16 different sums can be formed.', 'सही उत्तर: वि
 
 1. कुल $n = 5$ भिन्न मूल्यवर्ग दिए गए हैं: $\{50, 100, 200, 500, 2000\}$।
 2. "कम-से-कम तीन मूल्यवर्ग" लेने का अर्थ है 3, 4 या 5 मूल्यवर्गों के संचय (Combinations) बनाना:
-   * 3 मूल्यवर्गों को चुनना $= \binom{5}{3} = 10$
-   * 4 मूल्यवर्गों को चुनना $= \binom{5}{4} = 5$
-   * 5 मूल्यवर्गों को चुनना $= \binom{5}{5} = 1$
+ * 3 मूल्यवर्गों को चुनना $= \binom{5}{3} = 10$
+ * 4 मूल्यवर्गों को चुनना $= \binom{5}{4} = 5$
+ * 5 मूल्यवर्गों को चुनना $= \binom{5}{5} = 1$
 3. कुल विभिन्न धनराशियों की संख्या $= 10 + 5 + 1 = 16$।
 4. चूँकि प्रत्येक संयोजन से बनने वाली कुल राशि का मान भिन्न और अद्वितीय है, अतः कुल 16 विभिन्न धनराशियाँ बनेंगी।
 
@@ -1775,39 +1775,39 @@ Therefore, 6 different 5-letter words can be constructed.', 'सही उत्
 4. 3 अक्षरों को व्यवस्थित करने के कुल तरीके = $3! = 3 \times 2 \times 1 = 6$।
 
 अतः कुल 6 विभिन्न शब्द बनाए जा सकते हैं।', NULL),
-    ('csat-2020-q68', 68, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Repeated Liquid Replacement & Mixture Dilution Formula', 'क्रमिक द्रव प्रतिस्थापन एवं मिश्रण तनुकरण सूत्र', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Mixtures & Alligations', 'Replacement Formula']::TEXT[], 'A bottle contains 20 litres of liquid A. 4 litres of liquid A is taken out of it and replaced by same quantity of liquid B. Again 4 litres of the mixture is taken out and replaced by same quantity of liquid B. What is the ratio of quantity of liquid A to that of liquid B in the final mixture?', 'एक बोतल में द्रव A की 20 लीटर मात्रा है। इसमें से द्रव A की 4 लीटर मात्रा बाहर निकाल दी जाती है और द्रव B की उतनी ही मात्रा वापस डाल दी जाती है। फिर से मिश्रण की 4 लीटर मात्रा बाहर निकाल दी जाती है और द्रव B की उतनी ही मात्रा वापस डाल दी जाती है। अंतिम मिश्रण में द्रव A की मात्रा का द्रव B की मात्रा से अनुपात क्या है?', '4:1', '5:1', '16:9', '17:8', '4:1', '5:1', '16:9', '17:8', 'C', 'Correct Answer: Option C (16:9).
+    ('csat-2020-q68', 68, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Repeated Liquid Replacement & Mixture Dilution Formula', 'क्रमिक द्रव प्रतिस्थापन एवं मिश्रण तनुकरण सूत्र', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Mixtures & Alligations', 'Replacement Formula']::TEXT[], 'A bottle contains 20 litres of liquid A. 4 litres of liquid A is taken out of it and replaced by same quantity of liquid B. Again 4 litres of the mixture is taken out and replaced by same quantity of liquid B. What is the ratio of quantity of liquid A to that of liquid B in the final mixture?', 'एक बोतल में द्रव A की 20 लीटर मात्रा है। इसमें से द्रव A की 4 लीटर मात्रा बाहर निकाल दी जाती है और द्रव B की उतनी ही मात्रा वापस डाल दी जाती है। फिर से मिश्रण की 4 लीटर मात्रा बाहर निकाल दी जाती है और द्रव B की उतनी ही मात्रा वापस डाल दी जाती है। अंतिम मिश्रण में द्रव A की मात्रा का द्रव B की मात्रा से अनुपात क्या है?', '4:1', '5:1', '16:9', '17:8', '4:1', '5:1', '16:9', '17:8', 'C', 'Correct Answer: Option C (16: 9).
 
-1. Initial volume of liquid A is $V = 20\text{ L}$, and the volume removed and replaced each time is $x = 4\text{ L}$.
+1. Initial volume of liquid A is $V = 20 L$, and the volume removed and replaced each time is $x = 4 L$.
 2. After $n = 2$ replacements, the remaining quantity of liquid A is:
-   $$\text{Quantity of A} = V \left(1 - \frac{x}{V}\right)^n = 20 \left(1 - \frac{4}{20}\right)^2 = 20 \left(\frac{4}{5}\right)^2 = 20 \times \frac{16}{25} = 12.8\text{ litres}$$
+ $$Quantity of A = V \left(1 - \frac{x}{V}\right)^n = 20 \left(1 - \frac{4}{20}\right)^2 = 20 \left(\frac{4}{5}\right)^2 = 20 \times \frac{16}{25} = 12. 8 litres$$
 3. Quantity of liquid B in the 20-litre mixture:
-   $$\text{Quantity of B} = 20 - 12.8 = 7.2\text{ litres}$$
+ $$Quantity of B = 20 - 12. 8 = 7. 2 litres$$
 4. Ratio of liquid A to liquid B:
-   $$\frac{\text{Quantity of A}}{\text{Quantity of B}} = \frac{12.8}{7.2} = \frac{128}{72} = \frac{16}{9}$$
+ $$\frac{Quantity of A}{Quantity of B} = \frac{12. 8}{7. 2} = \frac{128}{72} = \frac{16}{9}$$
 
-Therefore, the ratio of liquid A to liquid B is 16:9.', 'सही उत्तर: विकल्प C (16:9)।
+Therefore, the ratio of liquid A to liquid B is 16: 9.', 'सही उत्तर: विकल्प C (16: 9)।
 
 1. द्रव A की प्रारंभिक मात्रा $V = 20$ लीटर तथा निकाली गई मात्रा $x = 4$ लीटर है।
 2. 2 बार प्रतिस्थापन के बाद द्रव A की शेष मात्रा:
-   $$\text{A की मात्रा} = 20 \left(1 - \frac{4}{20}\right)^2 = 20 \times \frac{16}{25} = 12.8 \text{ लीटर}$$
-3. 20 लीटर के मिश्रण में द्रव B की मात्रा $= 20 - 12.8 = 7.2 \text{ लीटर}$।
+ $$A की मात्रा = 20 \left(1 - \frac{4}{20}\right)^2 = 20 \times \frac{16}{25} = 12. 8 लीटर$$
+3. 20 लीटर के मिश्रण में द्रव B की मात्रा $= 20 - 12. 8 = 7. 2 लीटर$।
 4. द्रव A और द्रव B का अनुपात:
-   $$\text{A} : \text{B} = 12.8 : 7.2 = 128 : 72 = 16 : 9$$
+ $$A: B = 12. 8: 7. 2 = 128: 72 = 16: 9$$
 
-अतः अंतिम मिश्रण में द्रव A और B का अनुपात 16:9 है।', NULL),
+अतः अंतिम मिश्रण में द्रव A और B का अनुपात 16: 9 है।', NULL),
     ('csat-2020-q69', 69, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Batting Averages Progression & Score Calculation', 'बल्लेबाजी औसत संवृद्धि एवं पारी स्कोर गणना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Averages', 'Sports Arithmetic']::TEXT[], 'The average score of a batsman after his 50th innings was 46.4. After 60th innings, his average score increases by 2.6. What was his average score in the last ten innings?', 'एक बल्लेबाज का उसकी 50वीं पारी के बाद औसत स्कोर 46.4 था। 60वीं पारी के बाद, उसका औसत स्कोर 2.6 बढ़ जाता है। पिछली दस पारियों में उसका औसत स्कोर क्या था?', '122', '91', '62', '49', '122', '91', '62', '49', 'C', 'Correct Answer: Option C (62).
 
-1. Total runs in the first 50 innings $= 50 \times 46.4 = 2320$.
-2. New average after 60 innings $= 46.4 + 2.6 = 49.0$.
-3. Total runs in 60 innings $= 60 \times 49.0 = 2940$.
+1. Total runs in the first 50 innings $= 50 \times 46. 4 = 2320$.
+2. New average after 60 innings $= 46. 4 + 2. 6 = 49. 0$.
+3. Total runs in 60 innings $= 60 \times 49. 0 = 2940$.
 4. Runs scored in the last 10 innings $= 2940 - 2320 = 620$.
 5. Average score in the last ten innings $= \frac{620}{10} = 62$.
 
 Therefore, his average score in the last ten innings was 62.', 'सही उत्तर: विकल्प C (62)।
 
-1. 50 पारियों के बाद कुल रन $= 50 \times 46.4 = 2320$।
-2. 60 पारियों के बाद नया औसत $= 46.4 + 2.6 = 49.0$ रन।
-3. 60 पारियों के बाद कुल रन $= 60 \times 49.0 = 2940$।
+1. 50 पारियों के बाद कुल रन $= 50 \times 46. 4 = 2320$।
+2. 60 पारियों के बाद नया औसत $= 46. 4 + 2. 6 = 49. 0$ रन।
+3. 60 पारियों के बाद कुल रन $= 60 \times 49. 0 = 2940$।
 4. अंतिम 10 पारियों के कुल रन $= 2940 - 2320 = 620$ रन।
 5. अंतिम 10 पारियों का औसत स्कोर $= \frac{620}{10} = 62$।
 
@@ -1815,56 +1815,56 @@ Therefore, his average score in the last ten innings was 62.', 'सही उत
     ('csat-2020-q70', 70, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Price Hike & Consumption Reduction (Expenditure Invariance)', 'मूल्य वृद्धि एवं उपभोग में कमी (व्यय अपरिवर्तनीयता)', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Percentages', 'Price & Consumption']::TEXT[], 'As a result of 25% hike in the price of rice per kg, a person is able to purchase 6 kg less rice for ₹1,200. What was the original price of rice per kg?', 'चावल के प्रति किलो मूल्य में 25% की वृद्धि के परिणामस्वरूप, एक व्यक्ति ₹1,200 में 6 किलो कम चावल खरीद पाता है। चावल का प्रति किलो प्रारंभिक मूल्य क्या था?', '30', '40', '50', '60', '30', '40', '50', '60', 'B', 'Correct Answer: Option B (40).
 
 1. Let the original price of rice per kg be $P$.
-2. Original quantity purchased for ₹1,200 $= \frac{1200}{P}$.
-3. Increased price per kg $= 1.25 P$. New quantity purchased $= \frac{1200}{1.25 P} = \frac{960}{P}$.
+2. Original quantity purchased for ₹1, 200 $= \frac{1200}{P}$.
+3. Increased price per kg $= 1. 25 P$. New quantity purchased $= \frac{1200}{1. 25 P} = \frac{960}{P}$.
 4. Set up the difference equation:
-   $$\frac{1200}{P} - \frac{960}{P} = 6 \implies \frac{240}{P} = 6 \implies P = \frac{240}{6} = 40$$
+ $$\frac{1200}{P} - \frac{960}{P} = 6 ⇒ \frac{240}{P} = 6 ⇒ P = \frac{240}{6} = 40$$
 
 Therefore, the original price of rice per kg was ₹40.', 'सही उत्तर: विकल्प B (40)।
 
 1. माना चावल का प्रारंभिक मूल्य $P$ रुपये प्रति किलो है।
-2. ₹1,200 में खरीदी गई प्रारंभिक मात्रा $= \frac{1200}{P}$ किलो।
-3. 25% मूल्य वृद्धि के बाद नया मूल्य $= 1.25 P$ रुपये। नई मात्रा $= \frac{1200}{1.25 P} = \frac{960}{P}$ किलो।
+2. ₹1, 200 में खरीदी गई प्रारंभिक मात्रा $= \frac{1200}{P}$ किलो।
+3. 25% मूल्य वृद्धि के बाद नया मूल्य $= 1. 25 P$ रुपये। नई मात्रा $= \frac{1200}{1. 25 P} = \frac{960}{P}$ किलो।
 4. मात्रा का अंतर:
-   $$\frac{1200}{P} - \frac{960}{P} = 6 \implies \frac{240}{P} = 6 \implies P = 40$$
+ $$\frac{1200}{P} - \frac{960}{P} = 6 ⇒ \frac{240}{P} = 6 ⇒ P = 40$$
 
 अतः चावल का प्रति किलो प्रारंभिक मूल्य ₹40 था।', NULL),
     ('csat-2020-q71', 71, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Work-Rate Percentages & Combined Task Completion Time', 'कार्य-दर प्रतिशत एवं संयुक्त कार्य पूर्णता समय', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Time, Work & Distance', 'Time and Work', 'Work Rate']::TEXT[], 'A person X can complete 20% of work in 8 days and another person Y can complete 25% of the same work in 6 days. If they work together, in how many days will 40% of the work be completed?', 'एक व्यक्ति X किसी कार्य का 20%, 8 दिनों में पूरा कर सकता है और दूसरा व्यक्ति Y उसी कार्य का 25%, 6 दिनों में पूरा कर सकता है। यदि वे दोनों साथ-साथ काम करते हैं, तो उस कार्य का 40% कितने दिनों में पूरा हो जाएगा?', '6', '8', '10', '12', '6', '8', '10', '12', 'A', 'Correct Answer: Option A (6).
 
-1. Time taken by X to complete 100% of the work $= \frac{8}{0.20} = 40\text{ days}$.
-2. Time taken by Y to complete 100% of the work $= \frac{6}{0.25} = 24\text{ days}$.
+1. Time taken by X to complete 100% of the work $= \frac{8}{0. 20} = 40 days$.
+2. Time taken by Y to complete 100% of the work $= \frac{6}{0. 25} = 24 days$.
 3. Combined 1-day work rate of X and Y:
-   $$\text{Rate} = \frac{1}{40} + \frac{1}{24} = \frac{3 + 5}{120} = \frac{8}{120} = \frac{1}{15}$$
-4. Time required to complete 40% (0.40) of the total work:
-   $$\text{Days} = \frac{0.40}{1/15} = 0.40 \times 15 = 6\text{ days}$$
+ $$Rate = \frac{1}{40} + \frac{1}{24} = \frac{3 + 5}{120} = \frac{8}{120} = \frac{1}{15}$$
+4. Time required to complete 40% (0. 40) of the total work:
+ $$Days = \frac{0. 40}{1/15} = 0. 40 \times 15 = 6 days$$
 
 Therefore, 40% of the work will be completed in 6 days.', 'सही उत्तर: विकल्प A (6)।
 
-1. X द्वारा 100% कार्य पूरा करने में लगा समय $= \frac{8}{0.20} = 40$ दिन।
-2. Y द्वारा 100% कार्य पूरा करने में लगा समय $= \frac{6}{0.25} = 24$ दिन।
+1. X द्वारा 100% कार्य पूरा करने में लगा समय $= \frac{8}{0. 20} = 40$ दिन।
+2. Y द्वारा 100% कार्य पूरा करने में लगा समय $= \frac{6}{0. 25} = 24$ दिन।
 3. X और Y द्वारा मिलकर 1 दिन में किया गया कार्य:
-   $$\frac{1}{40} + \frac{1}{24} = \frac{3 + 5}{120} = \frac{8}{120} = \frac{1}{15}$$
-4. कार्य का 40% (0.40 भाग) पूरा करने में आवश्यक दिन:
-   $$\text{दिन} = 0.40 \times 15 = 6 \text{ दिन}$$
+ $$\frac{1}{40} + \frac{1}{24} = \frac{3 + 5}{120} = \frac{8}{120} = \frac{1}{15}$$
+4. कार्य का 40% (0. 40 भाग) पूरा करने में आवश्यक दिन:
+ $$दिन = 0. 40 \times 15 = 6 दिन$$
 
 अतः 40% कार्य 6 दिनों में पूरा हो जाएगा।', NULL),
     ('csat-2020-q72', 72, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Harmonic Mean of Speeds for Round Trips (Average Speed)', 'आवागमन फेरों के लिए गतियों का हरात्मक माध्य (औसत गति)', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Time, Work & Distance', 'Average Speed', 'Harmonic Mean']::TEXT[], 'A car travels from a place X to place Y at an average speed of v km/hr, from Y to X at an average speed of 2v km/hr, again from X to Y at an average speed of 3v km/hr and again from Y to X at an average speed of 4v km/hr. Then the average speed of the car for the entire journey', 'एक कार v km/hr की औसत चाल से स्थान X से स्थान Y तक यात्रा करती है, Y से X तक 2v km/hr की औसत चाल से, फिर X से Y तक 3v km/hr की औसत चाल से और फिर Y से X तक 4v km/hr की औसत चाल से यात्रा करती है। तो संपूर्ण यात्रा के लिए कार की औसत चाल', 'is less than v km/hr', 'lies between v and 2v km/hr', 'lies between 2v and 3v km/hr', 'lies between 3v and 4v km/hr', 'v km/hr से कम है', 'v और 2v km/hr के बीच रहती है', '2v और 3v km/hr के बीच रहती है', '3v और 4v km/hr के बीच रहती है', 'B', 'Correct Answer: Option B (lies between v and 2v km/hr).
 
 1. Let the distance between X and Y be $d$. Total distance for 4 one-way trips $= 4d$.
 2. Total time taken for all 4 legs:
-   $$T = \frac{d}{v} + \frac{d}{2v} + \frac{d}{3v} + \frac{d}{4v} = \frac{d}{v} \left(1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}\right) = \frac{d}{v} \left(\frac{12 + 6 + 4 + 3}{12}\right) = \frac{25d}{12v}$$
+ $$T = \frac{d}{v} + \frac{d}{2v} + \frac{d}{3v} + \frac{d}{4v} = \frac{d}{v} \left(1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}\right) = \frac{d}{v} \left(\frac{12 + 6 + 4 + 3}{12}\right) = \frac{25d}{12v}$$
 3. Calculate the overall average speed:
-   $$\text{Average Speed} = \frac{\text{Total Distance}}{\text{Total Time}} = \frac{4d}{\frac{25d}{12v}} = \frac{48}{25} v = 1.92 v$$
-4. Since $1.92v$ falls strictly in the interval $[v, 2v]$, the average speed lies between $v$ and $2v\text{ km/hr}$.
+ $$Average Speed = \frac{Total Distance}{Total Time} = \frac{4d}{\frac{25d}{12v}} = \frac{48}{25} v = 1. 92 v$$
+4. Since $1. 92v$ falls strictly in the interval $[v, 2v]$, the average speed lies between $v$ and $2v km/hr$.
 
 Therefore, the average speed lies between v and 2v km/hr.', 'सही उत्तर: विकल्प B (v और 2v km/hr के बीच रहती है)।
 
 1. माना X और Y के बीच की दूरी $d$ है। 4 यात्राओं की कुल दूरी $= 4d$।
 2. चारों यात्राओं में लगा कुल समय:
-   $$T = \frac{d}{v} + \frac{d}{2v} + \frac{d}{3v} + \frac{d}{4v} = \frac{d}{v}\left(1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}\right) = \frac{25d}{12v}$$
+ $$T = \frac{d}{v} + \frac{d}{2v} + \frac{d}{3v} + \frac{d}{4v} = \frac{d}{v}\left(1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4}\right) = \frac{25d}{12v}$$
 3. संपूर्ण यात्रा की औसत चाल:
-   $$\text{औसत चाल} = \frac{\text{कुल दूरी}}{\text{कुल समय}} = \frac{4d}{\frac{25d}{12v}} = \frac{48}{25} v = 1.92 v$$
-4. चूँकि $1.92 v$ का मान $v$ और $2v$ के बीच है, अतः औसत चाल $v$ और $2v\text{ km/hr}$ के बीच रहती है।
+ $$औसत चाल = \frac{कुल दूरी}{कुल समय} = \frac{4d}{\frac{25d}{12v}} = \frac{48}{25} v = 1. 92 v$$
+4. चूँकि $1. 92 v$ का मान $v$ और $2v$ के बीच है, अतः औसत चाल $v$ और $2v km/hr$ के बीच रहती है।
 
 अतः विकल्प B सही उत्तर है।', NULL),
     ('csat-2020-q73', 73, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Geometric Intersections of Straight Lines and Circles', 'सरल रेखाओं एवं वृत्तों के ज्यामितीय प्रतिच्छेदन बिंदु', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Mensuration & Geometry', 'Geometry', 'Intersections']::TEXT[], 'Consider the following statements:
@@ -1884,68 +1884,68 @@ Therefore, only statement 2 is correct.', 'सही उत्तर: विक�
 2. कथन 2 सही है: एक वृत्त वर्ग की प्रत्येक भुजा (4 भुजाओं) को अधिकतम 2 बिंदुओं पर काट सकता है, अतः प्रतिच्छेदन बिंदुओं की अधिकतम संख्या $4 \times 2 = 8$ हो सकती है।
 
 अतः केवल कथन 2 सही है।', NULL),
-    ('csat-2020-q74', 74, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Relative Speed in Upstream and Downstream Rowing', 'धारा के अनुकूल एवं प्रतिकूल नौकायन में सापेक्ष गति', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Time, Work & Distance', 'Boats and Streams', 'Relative Speed']::TEXT[], 'A man takes half time in rowing a certain distance downstream than upstream. What is the ratio of the speed in still water to the speed of current?', 'एक व्यक्ति को धारा की उल्टी दिशा में जाने की अपेक्षा धारा प्रवाह की दिशा में किसी निश्चित दूरी को नाव द्वारा खेने में आधा समय लगता है। अचल पानी में चाल का, धारा की चाल से अनुपात क्या है?', '1:2', '2:1', '1:3', '3:1', '1:2', '2:1', '1:3', '3:1', 'D', 'Correct Answer: Option D (3:1).
+    ('csat-2020-q74', 74, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Relative Speed in Upstream and Downstream Rowing', 'धारा के अनुकूल एवं प्रतिकूल नौकायन में सापेक्ष गति', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Time, Work & Distance', 'Boats and Streams', 'Relative Speed']::TEXT[], 'A man takes half time in rowing a certain distance downstream than upstream. What is the ratio of the speed in still water to the speed of current?', 'एक व्यक्ति को धारा की उल्टी दिशा में जाने की अपेक्षा धारा प्रवाह की दिशा में किसी निश्चित दूरी को नाव द्वारा खेने में आधा समय लगता है। अचल पानी में चाल का, धारा की चाल से अनुपात क्या है?', '1:2', '2:1', '1:3', '3:1', '1:2', '2:1', '1:3', '3:1', 'D', 'Correct Answer: Option D (3: 1).
 
 1. Let the speed in still water be $u$ and the speed of the current be $v$.
 2. Downstream speed $= u + v$, Upstream speed $= u - v$.
 3. Since downstream time is half of upstream time for the same distance, downstream speed is twice upstream speed:
-   $$u + v = 2(u - v)$$
-   $$u + v = 2u - 2v \implies u = 3v \implies \frac{u}{v} = \frac{3}{1}$$
+ $$u + v = 2(u - v)$$
+ $$u + v = 2u - 2v ⇒ u = 3v ⇒ \frac{u}{v} = \frac{3}{1}$$
 
-Therefore, the ratio of speed in still water to the speed of current is 3:1.', 'सही उत्तर: विकल्प D (3:1)।
+Therefore, the ratio of speed in still water to the speed of current is 3: 1.', 'सही उत्तर: विकल्प D (3: 1)।
 
 1. माना शांत/अचल पानी में चाल $u$ तथा धारा की चाल $v$ है।
 2. अनुप्रवाह (Downstream) चाल $= u + v$ तथा ऊर्ध्वप्रवाह (Upstream) चाल $= u - v$।
 3. समान दूरी के लिए अनुप्रवाह में लगा समय ऊर्ध्वप्रवाह के समय का आधा है, अर्थात् अनुप्रवाह की चाल ऊर्ध्वप्रवाह की चाल से दोगुनी है:
-   $$u + v = 2(u - v)$$
-   $$u + v = 2u - 2v \implies u = 3v \implies \frac{u}{v} = \frac{3}{1}$$
+ $$u + v = 2(u - v)$$
+ $$u + v = 2u - 2v ⇒ u = 3v ⇒ \frac{u}{v} = \frac{3}{1}$$
 
-अतः अचल पानी में चाल का धारा की चाल से अनुपात 3:1 है।', NULL),
+अतः अचल पानी में चाल का धारा की चाल से अनुपात 3: 1 है।', NULL),
     ('csat-2020-q75', 75, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Difference of Two Squares & Natural Number Factor Pairs (x^2 - y^2 = k)', 'दो वर्गों का अंतर एवं प्राकृतिक संख्या गुणनखंड युग्म (x^2 - y^2 = k)', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Difference of Squares', 'Factor Pairs']::TEXT[], 'How many pairs of natural numbers are there such that the difference of whose squares is 63?', 'प्राकृतिक संख्याओं के ऐसे कितने युग्म हैं, जिनके वर्गों का अंतर 63 है?', '3', '4', '5', '2', '3', '4', '5', '2', 'A', 'Correct Answer: Option A (3).
 
 1. Let the natural numbers be $a$ and $b$ with $a > b$.
-   $$a^2 - b^2 = 63 \implies (a - b)(a + b) = 63$$
+ $$a^2 - b^2 = 63 ⇒ (a - b)(a + b) = 63$$
 2. Since $a, b \in \mathbb{N}$, $(a - b)$ and $(a + b)$ must be positive integer factors of 63 with $a - b < a + b$.
 3. Factor pairs $(x, y)$ of 63 such that $x < y$:
-   * **Pair 1**: $a - b = 1, a + b = 63 \implies 2a = 64 \implies a = 32, b = 31$
-   * **Pair 2**: $a - b = 3, a + b = 21 \implies 2a = 24 \implies a = 12, b = 9$
-   * **Pair 3**: $a - b = 7, a + b = 9 \implies 2a = 16 \implies a = 8, b = 1$
+ * **Pair 1**: $a - b = 1, a + b = 63 ⇒ 2a = 64 ⇒ a = 32, b = 31$
+ * **Pair 2**: $a - b = 3, a + b = 21 ⇒ 2a = 24 ⇒ a = 12, b = 9$
+ * **Pair 3**: $a - b = 7, a + b = 9 ⇒ 2a = 16 ⇒ a = 8, b = 1$
 4. There are exactly 3 valid pairs of natural numbers: $(32, 31), (12, 9),$ and $(8, 1)$.
 
 Therefore, there are 3 such pairs.', 'सही उत्तर: विकल्प A (3)।
 
 1. माना प्राकृतिक संख्याएँ $a$ और $b$ ($a > b$) हैं:
-   $$a^2 - b^2 = 63 \implies (a - b)(a + b) = 63$$
+ $$a^2 - b^2 = 63 ⇒ (a - b)(a + b) = 63$$
 2. $a, b$ प्राकृतिक संख्याएँ हैं, अतः $(a - b)$ और $(a + b)$ 63 के धनात्मक गुणनखंड युग्म होंगे जहाँ $(a - b) < (a + b)$।
 3. 63 के गुणनखंड युग्मों को हल करने पर:
-   * **युग्म 1**: $a - b = 1, a + b = 63 \implies a = 32, b = 31$
-   * **युग्म 2**: $a - b = 3, a + b = 21 \implies a = 12, b = 9$
-   * **युग्म 3**: $a - b = 7, a + b = 9 \implies a = 8, b = 1$
+ * **युग्म 1**: $a - b = 1, a + b = 63 ⇒ a = 32, b = 31$
+ * **युग्म 2**: $a - b = 3, a + b = 21 ⇒ a = 12, b = 9$
+ * **युग्म 3**: $a - b = 7, a + b = 9 ⇒ a = 8, b = 1$
 4. इससे प्राकृतिक संख्याओं के कुल 3 युग्म प्राप्त होते हैं।
 
 अतः प्राकृतिक संख्याओं के ऐसे 3 युग्म हैं।', NULL),
     ('csat-2020-q76', 76, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Sensitivity of Fractional Values to Constant Additive Shifts', 'स्थिर योगात्मक विस्थापन के प्रति भिन्न मानों की संवेदनशीलता', 'medium', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Fractions', 'Percentage Change']::TEXT[], 'Which one of the following will have minimum change in its value if 5 is added to both numerator and the denominator of the fractions 2/3, 3/4, 4/5 and 5/6?', 'यदि भिन्नों 2/3, 3/4, 4/5 और 5/6 के अंश और हर दोनों में 5 जोड़ दिया जाता है, तो निम्नलिखित में से किस एक के मान में न्यूनतम परिवर्तन होगा?', '2/3', '3/4', '4/5', '5/6', '2/3', '3/4', '4/5', '5/6', 'D', 'Correct Answer: Option D (5/6).
 
 1. For any proper fraction $\frac{a}{b}$, the change when adding 5 to both numerator and denominator is:
-   $$\Delta = \frac{a+5}{b+5} - \frac{a}{b} = \frac{5(b - a)}{b(b + 5)}$$
+ $$\Delta = \frac{a+5}{b+5} - \frac{a}{b} = \frac{5(b - a)}{b(b + 5)}$$
 2. In all four given fractions $\frac{2}{3}, \frac{3}{4}, \frac{4}{5}, \frac{5}{6}$, the difference $(b - a) = 1$.
 3. Thus, $\Delta = \frac{5}{b(b+5)}$. This change is minimized when the denominator $b(b+5)$ is largest.
 4. Computing $\Delta$ for each fraction:
-   * For $\frac{2}{3}$ ($b=3$): $\Delta = \frac{5}{3 \times 8} = \frac{5}{24} \approx 0.2083$
-   * For $\frac{3}{4}$ ($b=4$): $\Delta = \frac{5}{4 \times 9} = \frac{5}{36} \approx 0.1389$
-   * For $\frac{4}{5}$ ($b=5$): $\Delta = \frac{5}{5 \times 10} = \frac{5}{50} = 0.1000$
-   * For $\frac{5}{6}$ ($b=6$): $\Delta = \frac{5}{6 \times 11} = \frac{5}{66} \approx 0.0758$
+ * For $\frac{2}{3}$ ($b=3$): $\Delta = \frac{5}{3 \times 8} = \frac{5}{24} \approx 0. 2083$
+ * For $\frac{3}{4}$ ($b=4$): $\Delta = \frac{5}{4 \times 9} = \frac{5}{36} \approx 0. 1389$
+ * For $\frac{4}{5}$ ($b=5$): $\Delta = \frac{5}{5 \times 10} = \frac{5}{50} = 0. 1000$
+ * For $\frac{5}{6}$ ($b=6$): $\Delta = \frac{5}{6 \times 11} = \frac{5}{66} \approx 0. 0758$
 
 Therefore, 5/6 will have the minimum change in its value.', 'सही उत्तर: विकल्प D (5/6)।
 
 1. किसी भिन्न $\frac{a}{b}$ के अंश और हर में 5 जोड़ने पर मान में परिवर्तन:
-   $$\Delta = \frac{a+5}{b+5} - \frac{a}{b} = \frac{5(b - a)}{b(b + 5)}$$
+ $$\Delta = \frac{a+5}{b+5} - \frac{a}{b} = \frac{5(b - a)}{b(b + 5)}$$
 2. दी गई सभी भिन्नों में $(b - a) = 1$ है। अतः $\Delta = \frac{5}{b(b+5)}$।
 3. यह परिवर्तन तब न्यूनतम होगा जब हर $b(b+5)$ का मान अधिकतम होगा (अर्थात् जब $b$ सबसे बड़ा होगा):
-   * $\frac{2}{3}$ के लिए: $\Delta = \frac{5}{3 \times 8} = \frac{5}{24} \approx 0.2083$
-   * $\frac{3}{4}$ के लिए: $\Delta = \frac{5}{4 \times 9} = \frac{5}{36} \approx 0.1389$
-   * $\frac{4}{5}$ के लिए: $\Delta = \frac{5}{5 \times 10} = \frac{5}{50} = 0.1000$
-   * $\frac{5}{6}$ के लिए: $\Delta = \frac{5}{6 \times 11} = \frac{5}{66} \approx 0.0758$
+ * $\frac{2}{3}$ के लिए: $\Delta = \frac{5}{3 \times 8} = \frac{5}{24} \approx 0. 2083$
+ * $\frac{3}{4}$ के लिए: $\Delta = \frac{5}{4 \times 9} = \frac{5}{36} \approx 0. 1389$
+ * $\frac{4}{5}$ के लिए: $\Delta = \frac{5}{5 \times 10} = \frac{5}{50} = 0. 1000$
+ * $\frac{5}{6}$ के लिए: $\Delta = \frac{5}{6 \times 11} = \frac{5}{66} \approx 0. 0758$
 
 अतः भिन्न 5/6 के मान में न्यूनतम परिवर्तन होगा।', NULL),
     ('csat-2020-q77', 77, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Compound Divisibility Rules (Divisible by 3 but Not by 6)', 'मिश्रित विभाज्यता नियम (3 से विभाज्य किंतु 6 से नहीं)', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Number System', 'Divisibility Rules', 'Even-Odd Logic']::TEXT[], 'A digit n > 3 is divisible by 3 but not divisible by 6. Which one of the following is divisible by 4?', 'एक अंक n > 3 भाज्य है 3 से लेकिन 6 से भाज्य नहीं है। निम्नलिखित में से कौन-सा एक 4 से भाज्य है?', '2n', '3n', '2n + 4', '3n + 1', '2n', '3n', '2n + 4', '3n + 1', 'D', 'Correct Answer: Option D (3n + 1).
@@ -1954,84 +1954,84 @@ Therefore, 5/6 will have the minimum change in its value.', 'सही उत्
 2. $n$ is divisible by 3: $n \in \{6, 9\}$.
 3. $n$ is not divisible by 6: $n = 9$.
 4. Evaluate each option with $n = 9$:
-   * Option A: $2n = 2(9) = 18$ (not divisible by 4)
-   * Option B: $3n = 3(9) = 27$ (not divisible by 4)
-   * Option C: $2n + 4 = 2(9) + 4 = 22$ (not divisible by 4)
-   * Option D: $3n + 1 = 3(9) + 1 = 28 = 4 \times 7$ (divisible by 4)
+ * Option A: $2n = 2(9) = 18$ (not divisible by 4)
+ * Option B: $3n = 3(9) = 27$ (not divisible by 4)
+ * Option C: $2n + 4 = 2(9) + 4 = 22$ (not divisible by 4)
+ * Option D: $3n + 1 = 3(9) + 1 = 28 = 4 \times 7$ (divisible by 4)
 
 Therefore, 3n + 1 is divisible by 4.', 'सही उत्तर: विकल्प D (3n + 1)।
 
 1. $n$ एक एकल अंक है जो 3 से बड़ा है: $n \in \{4, 5, 6, 7, 8, 9\}$।
-2. $n$ 3 से भाज्य है $\implies n = 6$ या $9$।
-3. $n$ 6 से भाज्य नहीं है $\implies n = 9$।
+2. $n$ 3 से भाज्य है $ ⇒ n = 6$ या $9$।
+3. $n$ 6 से भाज्य नहीं है $ ⇒ n = 9$।
 4. $n = 9$ मान रखकर विकल्पों की जाँच करने पर:
-   * (a) $2n = 2 \times 9 = 18$ (4 से विभाज्य नहीं)
-   * (b) $3n = 3 \times 9 = 27$ (4 से विभाज्य नहीं)
-   * (c) $2n + 4 = 18 + 4 = 22$ (4 से विभाज्य नहीं)
-   * (d) $3n + 1 = 3(9) + 1 = 28$ ($28 = 4 \times 7$, 4 से पूर्णतः विभाज्य)
+ * (a) $2n = 2 \times 9 = 18$ (4 से विभाज्य नहीं)
+ * (b) $3n = 3 \times 9 = 27$ (4 से विभाज्य नहीं)
+ * (c) $2n + 4 = 18 + 4 = 22$ (4 से विभाज्य नहीं)
+ * (d) $3n + 1 = 3(9) + 1 = 28$ ($28 = 4 \times 7$, 4 से पूर्णतः विभाज्य)
 
 अतः 3n + 1, 4 से विभाज्य है।', NULL),
     ('csat-2020-q78', 78, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Metric Unit Conversions in Volume, Mass & Cubic Millimetres', 'आयतन, द्रव्यमान एवं घन मिलीमीटर में मीट्रिक इकाई रूपांतरण', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Mensuration & Geometry', 'Metric Units', 'Volume Conversion']::TEXT[], 'If 1 litre of water weighs 1 kg, then how many cubic millimetres of water will weigh 0.1 gm?', 'यदि 1 लीटर पानी का भार 1 kg है, तो कितने घन मिलीमीटर पानी का भार 0.1 gm होगा?', '1', '10', '100', '1000', '1', '10', '100', '1000', 'C', 'Correct Answer: Option C (100).
 
 1. Establish the relationship between mass and volume:
-   $$1\text{ litre} = 1000\text{ cm}^3 = 1000 \times 10^3\text{ mm}^3 = 10^6\text{ mm}^3$$
-   $$1\text{ kg} = 1000\text{ gm}$$
-2. Thus, $1000\text{ gm}$ of water corresponds to $10^6\text{ mm}^3$.
+ $$1 litre = 1000 cm^3 = 1000 \times 10^3 mm^3 = 10^6 mm^3$$
+ $$1 kg = 1000 gm$$
+2. Thus, $1000 gm$ of water corresponds to $10^6 mm^3$.
 3. Find volume per gram of water:
-   $$1\text{ gm of water} = \frac{10^6}{1000} = 1000\text{ mm}^3$$
-4. Calculate volume for $0.1\text{ gm}$:
-   $$\text{Volume} = 0.1 \times 1000\text{ mm}^3 = 100\text{ mm}^3$$
+ $$1 gm of water = \frac{10^6}{1000} = 1000 mm^3$$
+4. Calculate volume for $0. 1 gm$:
+ $$Volume = 0. 1 \times 1000 mm^3 = 100 mm^3$$
 
-Therefore, 100 cubic millimetres of water weighs 0.1 gm.', 'सही उत्तर: विकल्प C (100)।
+Therefore, 100 cubic millimetres of water weighs 0. 1 gm.', 'सही उत्तर: विकल्प C (100)।
 
 1. आयतन और द्रव्यमान की इकाइयों का संबंध:
-   $$1 \text{ लीटर} = 1000 \text{ सेमी}^3 = 10^6 \text{ मिमी}^3$$
-   $$1 \text{ kg} = 1000 \text{ ग्राम}$$
-2. अतः 1000 ग्राम पानी का आयतन $= 10^6 \text{ घन मिलीमीटर}$ है।
-3. 1 ग्राम पानी का आयतन $= \frac{10^6}{1000} = 1000 \text{ घन मिलीमीटर}$।
-4. 0.1 ग्राम पानी का आयतन $= 0.1 \times 1000 = 100 \text{ घन मिलीमीटर}$।
+ $$1 लीटर = 1000 सेमी^3 = 10^6 मिमी^3$$
+ $$1 kg = 1000 ग्राम$$
+2. अतः 1000 ग्राम पानी का आयतन $= 10^6 घन मिलीमीटर$ है।
+3. 1 ग्राम पानी का आयतन $= \frac{10^6}{1000} = 1000 घन मिलीमीटर$।
+4. 0. 1 ग्राम पानी का आयतन $= 0. 1 \times 1000 = 100 घन मिलीमीटर$।
 
-अतः 100 घन मिलीमीटर पानी का भार 0.1 gm होगा।', NULL),
+अतः 100 घन मिलीमीटर पानी का भार 0. 1 gm होगा।', NULL),
     ('csat-2020-q79', 79, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'Quantitative Aptitude & Basic Numeracy', 'मात्रात्मक अभियोग्यता एवं मूल संख्यात्मकता (कक्षा X स्तर)', 'Linear Weight Systems (Vessel Tare Weight & Fluid Volume)', 'रैखिक भार प्रणाली (पात्र का भार एवं द्रव आयतन)', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Basic Numeracy', 'Linear Equations', 'Word Problems']::TEXT[], 'A vessel full of water weighs 40 kg. If it is one-third filled, its weight becomes 20 kg. What is the weight of the empty vessel?', 'पानी से भरे हुए एक बर्तन का भार 40 kg है। यदि यह एक-तिहाई भरा हुआ है, तो इसका भार 20 kg हो जाता है। खाली बर्तन का भार क्या है?', '10 kg', '15 kg', '20 kg', '25 kg', '10 kg', '15 kg', '20 kg', '25 kg', 'A', 'Correct Answer: Option A (10 kg).
 
 1. Let $V$ be the weight of the empty vessel and $W$ be the weight of water when the vessel is full.
 2. Formulate equations from the given conditions:
-   $$V + W = 40 \quad \text{--- (Equation 1)}$$
-   $$V + \frac{1}{3}W = 20 \quad \text{--- (Equation 2)}$$
+ $$V + W = 40 \quad --- (Equation 1)$$
+ $$V + \frac{1}{3}W = 20 \quad --- (Equation 2)$$
 3. Subtract Equation 2 from Equation 1:
-   $$\frac{2}{3}W = 20 \implies W = \frac{20 \times 3}{2} = 30\text{ kg}$$
+ $$\frac{2}{3}W = 20 ⇒ W = \frac{20 \times 3}{2} = 30 kg$$
 4. Substitute $W = 30$ into Equation 1:
-   $$V + 30 = 40 \implies V = 10\text{ kg}$$
+ $$V + 30 = 40 ⇒ V = 10 kg$$
 
 Therefore, the weight of the empty vessel is 10 kg.', 'सही उत्तर: विकल्प A (10 kg)।
 
 1. माना खाली बर्तन का भार $V$ तथा पूरी तरह भरे पानी का भार $W$ है।
 2. दिए गए कथनों से समीकरण बनाने पर:
-   $$V + W = 40 \quad \text{--- (समीकरण 1)}$$
-   $$V + \frac{1}{3}W = 20 \quad \text{--- (समीकरण 2)}$$
+ $$V + W = 40 \quad --- (समीकरण 1)$$
+ $$V + \frac{1}{3}W = 20 \quad --- (समीकरण 2)$$
 3. समीकरण 1 में से समीकरण 2 को घटाने पर:
-   $$\frac{2}{3}W = 20 \implies W = 30 \text{ kg}$$
+ $$\frac{2}{3}W = 20 ⇒ W = 30 kg$$
 4. समीकरण 1 में $W$ का मान रखने पर:
-   $$V + 30 = 40 \implies V = 10 \text{ kg}$$
+ $$V + 30 = 40 ⇒ V = 10 kg$$
 
 अतः खाली बर्तन का भार 10 kg है।', NULL),
     ('csat-2020-q80', 80, 2020, 2, 'upsc-cse', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'सामान्य मानसिक योग्यता, मात्रात्मक अभियोग्यता एवं बोधगम्यता', 'General Mental Ability & Logical Reasoning', 'सामान्य मानसिक योग्यता एवं तार्किक तर्कशक्ति', 'Slippery Well Clambering Progression & Net Displacement Puzzles', 'फिसलनदार कुआँ चढ़ाई पहेली एवं कुल विस्थापन गणना', 'easy', ARRAY['PYQ', 'UPSC 2020', 'CSAT', 'Paper 2', 'Logical Reasoning', 'Climbing Puzzles', 'Progression']::TEXT[], 'A frog tries to come out of a dried well 4.5 m deep with slippery walls. Every time the frog jumps 30 cm, slides down 15 cm. What is the number of jumps required for the frog to come out of the well?', 'एक मेंढक फिसलन वाली दीवारों वाले 4.5 m गहरे एक सूखे कुएँ से बाहर आने की कोशिश करता है। प्रत्येक बार मेंढक 30 cm फुदकता है और 15 cm नीचे सरक जाता है। कुएँ से बाहर आने के लिए मेंढक के लिए जरूरी फुदकन की संख्या क्या है?', '28', '29', '30', '31', '28', '29', '30', '31', 'B', 'Correct Answer: Option B (29).
 
-1. Total depth of the well $= 4.5\text{ m} = 450\text{ cm}$.
-2. In each regular jump, the frog ascends $30\text{ cm}$ and slips back $15\text{ cm}$, achieving a net progress of $30 - 15 = 15\text{ cm}$.
-3. On the final jump, once the frog reaches or clears the top rim ($450\text{ cm}$), it escapes and does not slide back down.
-4. Height to be covered before the final jump $= 450 - 30 = 420\text{ cm}$.
-5. Number of jumps to reach $420\text{ cm} = \frac{420}{15} = 28\text{ jumps}$.
-6. On the 29th jump, from $420\text{ cm}$, the frog leaps $30\text{ cm}$ and reaches $420 + 30 = 450\text{ cm}$ (the top of the well).
+1. Total depth of the well $= 4. 5 m = 450 cm$.
+2. In each regular jump, the frog ascends $30 cm$ and slips back $15 cm$, achieving a net progress of $30 - 15 = 15 cm$.
+3. On the final jump, once the frog reaches or clears the top rim ($450 cm$), it escapes and does not slide back down.
+4. Height to be covered before the final jump $= 450 - 30 = 420 cm$.
+5. Number of jumps to reach $420 cm = \frac{420}{15} = 28 jumps$.
+6. On the 29th jump, from $420 cm$, the frog leaps $30 cm$ and reaches $420 + 30 = 450 cm$ (the top of the well).
 
 Therefore, the number of jumps required is 29.', 'सही उत्तर: विकल्प B (29)।
 
-1. कुएँ की कुल गहराई $= 4.5 \text{ m} = 450 \text{ cm}$।
-2. प्रत्येक सामान्य छलाँग में मेंढक 30 cm ऊपर जाता है और 15 cm नीचे सरकता है, अतः प्रति छलाँग शुद्ध प्रगति $= 30 - 15 = 15 \text{ cm}$।
+1. कुएँ की कुल गहराई $= 4. 5 m = 450 cm$।
+2. प्रत्येक सामान्य छलाँग में मेंढक 30 cm ऊपर जाता है और 15 cm नीचे सरकता है, अतः प्रति छलाँग शुद्ध प्रगति $= 30 - 15 = 15 cm$।
 3. अंतिम छलाँग में 450 cm की ऊँचाई पर पहुँचने के बाद वह बाहर आ जाएगा और नीचे नहीं फिसलेगा।
-4. अंतिम छलाँग से पहले तय की जाने वाली ऊँचाई $= 450 - 30 = 420 \text{ cm}$।
+4. अंतिम छलाँग से पहले तय की जाने वाली ऊँचाई $= 450 - 30 = 420 cm$।
 5. 420 cm तक पहुँचने के लिए आवश्यक छलाँगों की संख्या $= \frac{420}{15} = 28$ छलाँग।
-6. 28 छलाँग के बाद वह 420 cm पर होगा; 29वीं छलाँग में वह $420 + 30 = 450 \text{ cm}$ पहुँचकर कुएँ से बाहर आ जाएगा।
+6. 28 छलाँग के बाद वह 420 cm पर होगा; 29वीं छलाँग में वह $420 + 30 = 450 cm$ पहुँचकर कुएँ से बाहर आ जाएगा।
 
 अतः मेंढक के लिए जरूरी फुदकन (छलाँगों) की संख्या 29 है।', NULL)
 ON CONFLICT (id) DO UPDATE SET
