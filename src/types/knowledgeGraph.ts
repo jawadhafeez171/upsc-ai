@@ -56,10 +56,13 @@ export interface KnowledgeGraphStats {
     };
 }
 
+export type KnowledgeGraphStream = 'civil_services' | 'teaching' | 'languages' | 'all';
+
 export interface KnowledgeGraphData {
     version: string;
+    name?: string;
     generatedAt: string;
     rootSubjectIds: string[];
     nodes: Record<string, KnowledgeNode>;
-    stats: KnowledgeGraphStats;
+    stats: any;
 }

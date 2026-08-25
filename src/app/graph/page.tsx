@@ -11,10 +11,11 @@ import {
     getKnowledgeGraph, getRootSubjects, getNodeChildren, 
     getNodeAncestors, searchKnowledgeNodes 
 } from '@/lib/knowledgeGraph';
-import { KnowledgeNode } from '@/types/knowledgeGraph';
+import { KnowledgeNode, KnowledgeGraphStream } from '@/types/knowledgeGraph';
 import ExamMindMapVisualizer from '@/components/graph/ExamMindMapVisualizer';
 
 const SUBJECT_ICONS: Record<string, string> = {
+    // Civil Services
     'history': '🏛️',
     'art_culture_heritage': '🎨',
     'geography_earth_systems': '🌍',
@@ -27,20 +28,71 @@ const SUBJECT_ICONS: Record<string, string> = {
     'internal_security': '🛡️',
     'ethics_integrity_aptitude': '💡',
     'general_mental_ability_quantitative_aptitude_comprehension': '🧮',
+    // Teaching & Education
+    'child_development_educational_psychology': '🧠',
+    'theories_of_learning_motivation_cognition': '💡',
+    'inclusive_education_diverse_learners_special_needs': '🤝',
+    'pedagogical_strategies_curriculum_assessment': '📊',
+    'subject_specific_pedagogies': '📚',
+    'national_policies_and_higher_education_research_aptitude': '🎓',
     'educational_psychology_child_development_teaching_pedagogy': '👩‍🏫',
+    // State Languages
+    'language_proficiency_grammar_communication': '🗣️',
     'language_proficiency_grammar_communication_general_kannada_general_english': '🗣️'
 };
 
+const STREAM_DEFINITIONS: {
+    id: KnowledgeGraphStream;
+    label: string;
+    icon: string;
+    badge: string;
+    color: string;
+    description: string;
+}[] = [
+    {
+        id: 'civil_services',
+        label: 'Civil Services (UPSC & KPSC)',
+        icon: '🏛️',
+        badge: '760 Nodes · 12 Pillars',
+        color: 'var(--brand-orange)',
+        description: 'Comprehensive General Studies, Mapping & CSAT for UPSC CSE & KPSC KAS'
+    },
+    {
+        id: 'teaching',
+        label: 'Teaching & Education',
+        icon: '👩‍🏫',
+        badge: '90 Nodes · 6 Domains',
+        color: '#8B5CF6',
+        description: 'Child Development, Educational Psychology, Pedagogy & Research Aptitude (KARTET, CTET, GPSTR, HSTR, KSET, UGC-NET)'
+    },
+    {
+        id: 'languages',
+        label: 'State Languages & Dept Exams',
+        icon: '🗣️',
+        badge: '29 Nodes · 2 Languages',
+        color: 'var(--brand-teal)',
+        description: 'General Kannada & General English Grammar, Syntax & Vocabulary for FDA, SDA, CTI, VAO & PSI'
+    },
+    {
+        id: 'all',
+        label: 'Unified Master Graph',
+        icon: '🌐',
+        badge: '815 Nodes Total',
+        color: '#10B981',
+        description: 'Master knowledge federation across all civil services, teaching, and departmental curricula'
+    }
+];
+
 type MainExamType = 'all' | 'upsc' | 'kas' | 'teaching' | 'karnataka_state' | 'police' | 'ssc';
 
-const MAIN_EXAM_TABS: { id: MainExamType; label: string; icon: string; countKey?: string }[] = [
-    { id: 'all', label: 'All Knowledge', icon: '🌐' },
-    { id: 'upsc', label: 'UPSC CSE', icon: '🏛️' },
-    { id: 'kas', label: 'KPSC KAS', icon: '🅺' },
-    { id: 'teaching', label: 'Teaching (TET/KSET)', icon: '👩‍🏫' },
-    { id: 'karnataka_state', label: 'Karnataka State (PDO/VAO/CTI)', icon: '🌾' },
-    { id: 'police', label: 'Police & Defence (PSI/CAPF)', icon: '⚔️' },
-    { id: 'ssc', label: 'SSC CGL', icon: '🏢' },
+const MAIN_EXAM_TABS: { id: MainExamType; label: string; icon: string; streams: KnowledgeGraphStream[] }[] = [
+    { id: 'all', label: 'All Stream Knowledge', icon: '🌐', streams: ['civil_services', 'teaching', 'languages', 'all'] },
+    { id: 'upsc', label: 'UPSC CSE', icon: '🏛️', streams: ['civil_services', 'all'] },
+    { id: 'kas', label: 'KPSC KAS', icon: '🅺', streams: ['civil_services', 'all'] },
+    { id: 'teaching', label: 'Teaching (TET/KSET/NET)', icon: '👩‍🏫', streams: ['teaching', 'all'] },
+    { id: 'karnataka_state', label: 'Karnataka State (PDO/VAO/CTI)', icon: '🌾', streams: ['civil_services', 'languages', 'all'] },
+    { id: 'police', label: 'Police & Defence (PSI/CAPF)', icon: '⚔️', streams: ['civil_services', 'all'] },
+    { id: 'ssc', label: 'SSC CGL', icon: '🏢', streams: ['civil_services', 'all'] },
 ];
 
 const EXAM_SUB_FILTERS: Record<MainExamType, { id: string; label: string }[]> = {
@@ -101,17 +153,42 @@ const EXAM_SUB_FILTERS: Record<MainExamType, { id: string; label: string }[]> = 
 };
 
 export default function KnowledgeGraphPage() {
-    const graph = getKnowledgeGraph();
-    const rootSubjects = getRootSubjects();
-
+    const [selectedStream, setSelectedStream] = useState<KnowledgeGraphStream>('civil_services');
     const [viewMode, setViewMode] = useState<'mindmap' | 'tree'>('mindmap');
     const [selectedExam, setSelectedExam] = useState<MainExamType>('all');
-    const [subFilter, setSubFilter] = useState<string>('all_upsc');
+    const [subFilter, setSubFilter] = useState<string>('');
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedNode, setSelectedNode] = useState<KnowledgeNode | null>(null);
-    const [expandedNodes, setExpandedNodes] = useState<Record<string, boolean>>({
-        [rootSubjects[0]?.id || 'history']: true
-    });
+
+    const graph = useMemo(() => getKnowledgeGraph(selectedStream), [selectedStream]);
+    const rootSubjects = useMemo(() => getRootSubjects(selectedStream), [selectedStream]);
+
+    const [expandedNodes, setExpandedNodes] = useState<Record<string, boolean>>({});
+
+    // Reset expanded nodes when stream changes
+    useMemo(() => {
+        if (rootSubjects.length > 0) {
+            setExpandedNodes({ [rootSubjects[0].id]: true });
+        }
+        setSelectedNode(null);
+    }, [rootSubjects]);
+
+    const handleStreamChange = (stream: KnowledgeGraphStream) => {
+        setSelectedStream(stream);
+        if (stream === 'civil_services') {
+            setSelectedExam('upsc');
+            setSubFilter('all_upsc');
+        } else if (stream === 'teaching') {
+            setSelectedExam('teaching');
+            setSubFilter('all_teaching');
+        } else if (stream === 'languages') {
+            setSelectedExam('karnataka_state');
+            setSubFilter('all_karnataka_state');
+        } else {
+            setSelectedExam('all');
+            setSubFilter('');
+        }
+    };
 
     const handleMainExamChange = (exam: MainExamType) => {
         setSelectedExam(exam);
@@ -153,7 +230,8 @@ export default function KnowledgeGraphPage() {
         }
 
         if (selectedExam === 'teaching') {
-            const isPedagogy = node.subjectId === 'educational_psychology_child_development_teaching_pedagogy';
+            if (selectedStream === 'teaching') return true;
+            const isPedagogy = node.subjectId === 'educational_psychology_child_development_teaching_pedagogy' || node.subjectId.includes('teaching') || node.subjectId.includes('pedagogy');
             const hasTeachingTag = (node.examTags.teaching && node.examTags.teaching.length > 0) ||
                                   (node.examTags.kset && node.examTags.kset.length > 0) ||
                                   (node.examTags.ugc_net && node.examTags.ugc_net.length > 0);
@@ -162,7 +240,6 @@ export default function KnowledgeGraphPage() {
             if (!subFilter || subFilter === 'all_teaching') return true;
 
             const textLow = `${node.name} ${node.description || ''} ${(node.entities || []).join(' ')}`.toLowerCase();
-
             if (subFilter === 'kartet') return textLow.includes('kartet') || textLow.includes('primary') || isPedagogy;
             if (subFilter === 'gpstr') return textLow.includes('gpstr') || textLow.includes('teacher') || isPedagogy;
             if (subFilter === 'kset') return textLow.includes('kset') || textLow.includes('higher education') || textLow.includes('research');
@@ -175,6 +252,7 @@ export default function KnowledgeGraphPage() {
         }
 
         if (selectedExam === 'karnataka_state') {
+            if (selectedStream === 'languages') return true;
             const isLang = node.subjectId.includes('language_proficiency');
             const isPanchayat = node.slug.includes('panchayat') || node.slug.includes('gram_swaraj') || node.name.includes('Panchayat');
             const hasStateTag = (node.examTags.kea && node.examTags.kea.length > 0) ||
@@ -230,39 +308,43 @@ export default function KnowledgeGraphPage() {
 
         return rootSubjects.filter(sub => {
             if (checkNodeMatchesExam(sub)) return true;
-            const children = getNodeChildren(sub.id);
+            const children = getNodeChildren(sub.id, selectedStream);
             return children.some(ch => {
                 if (checkNodeMatchesExam(ch)) return true;
-                const topics = getNodeChildren(ch.id);
+                const topics = getNodeChildren(ch.id, selectedStream);
                 return topics.some(tp => checkNodeMatchesExam(tp));
             });
         });
-    }, [rootSubjects, selectedExam, subFilter]);
+    }, [rootSubjects, selectedExam, subFilter, selectedStream]);
 
-    // Real-time search results
+    // Real-time search results within stream
     const searchResults = useMemo(() => {
         if (!searchQuery.trim()) return [];
         return searchKnowledgeNodes(searchQuery, {
+            stream: selectedStream,
             exam: selectedExam === 'all' ? undefined : selectedExam,
             limit: 20
         });
-    }, [searchQuery, selectedExam]);
+    }, [searchQuery, selectedExam, selectedStream]);
 
     const activeNodeAncestors = useMemo(() => {
         if (!selectedNode) return [];
-        return getNodeAncestors(selectedNode.id);
-    }, [selectedNode]);
+        return getNodeAncestors(selectedNode.id, selectedStream);
+    }, [selectedNode, selectedStream]);
 
-    const getExamCount = (tabId: MainExamType): number => {
-        if (tabId === 'all') return graph.stats.totalNodes;
-        if (tabId === 'upsc') return graph.stats.byExam.upsc;
-        if (tabId === 'kas') return graph.stats.byExam.kas;
-        if (tabId === 'teaching') return graph.stats.byExam.teaching || 26;
-        if (tabId === 'karnataka_state') return graph.stats.byExam.karnataka_state || 30;
-        if (tabId === 'police') return graph.stats.byExam.police || 29;
-        if (tabId === 'ssc') return graph.stats.byExam.ssc;
-        return 0;
-    };
+    const visibleExamTabs = useMemo(() => {
+        return MAIN_EXAM_TABS.filter(t => t.streams.includes(selectedStream));
+    }, [selectedStream]);
+
+    const activeStreamInfo = useMemo(() => {
+        return STREAM_DEFINITIONS.find(s => s.id === selectedStream) || STREAM_DEFINITIONS[0];
+    }, [selectedStream]);
+
+    const initialMindMapExam = useMemo(() => {
+        if (selectedStream === 'teaching') return 'kartet';
+        if (selectedStream === 'languages') return 'kpsc-cti';
+        return 'upsc-cse';
+    }, [selectedStream]);
 
     return (
         <div style={{ background: 'var(--bg-primary)', minHeight: '100vh', paddingTop: '80px', paddingBottom: '80px' }}>
@@ -277,28 +359,65 @@ export default function KnowledgeGraphPage() {
                         color: 'var(--brand-orange)', fontSize: '13px', fontWeight: 700, marginBottom: '14px'
                     }}>
                         <Network size={15} />
-                        Universal Syllabus & Knowledge Graph Architecture
+                        Modular Examination Knowledge Graph Architecture
                     </div>
                     <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '12px', letterSpacing: '-0.02em' }}>
-                        14-Pillar Enterprise Knowledge Graph
+                        {activeStreamInfo.label}
                     </h1>
-                    <p style={{ fontSize: '16px', color: 'var(--text-secondary)', maxWidth: '760px', margin: '0 auto 24px', lineHeight: 1.6 }}>
-                        Explore <strong>{graph.stats.totalNodes} structured canonical nodes</strong> across 14 Subject Pillars, mapped with exact exam projections for UPSC, KAS, Teaching, State Services, Police & Defence.
+                    <p style={{ fontSize: '16px', color: 'var(--text-secondary)', maxWidth: '820px', margin: '0 auto 24px', lineHeight: 1.6 }}>
+                        {activeStreamInfo.description}. Exploring <strong>{graph.stats.total_nodes || graph.stats.totalNodes} canonical nodes</strong> structured for precision learning and exam-accurate mastery.
                     </p>
+
+                    {/* Stream Selection Ribbon */}
+                    <div style={{ 
+                        display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px', 
+                        maxWidth: '960px', margin: '0 auto 28px',
+                        background: 'var(--bg-card)', padding: '8px', borderRadius: '16px',
+                        border: '1px solid var(--border)', boxShadow: 'var(--shadow-sm)'
+                    }}>
+                        {STREAM_DEFINITIONS.map(stream => {
+                            const isSelected = selectedStream === stream.id;
+                            return (
+                                <button
+                                    key={stream.id}
+                                    onClick={() => handleStreamChange(stream.id)}
+                                    style={{
+                                        display: 'flex', alignItems: 'center', gap: '8px',
+                                        padding: '10px 18px', borderRadius: '12px', cursor: 'pointer',
+                                        fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s',
+                                        background: isSelected ? 'var(--brand-orange)' : 'transparent',
+                                        color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
+                                        border: isSelected ? '1px solid var(--brand-orange)' : '1px solid transparent',
+                                        boxShadow: isSelected ? '0 4px 12px rgba(255, 107, 43, 0.3)' : 'none'
+                                    }}
+                                >
+                                    <span>{stream.icon}</span>
+                                    <span>{stream.label}</span>
+                                    <span style={{ 
+                                        fontSize: '11px', opacity: 0.9, 
+                                        background: isSelected ? 'rgba(0,0,0,0.2)' : 'var(--bg-tertiary)', 
+                                        padding: '2px 8px', borderRadius: '6px' 
+                                    }}>
+                                        {stream.badge.split('·')[0].trim()}
+                                    </span>
+                                </button>
+                            );
+                        })}
+                    </div>
 
                     {/* Stats Pill Row */}
                     <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '24px' }}>
                         <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: 'var(--brand-orange)' }}>🏛️ {graph.stats.byLevel.subjects}</span> Pillars
+                            <span style={{ color: 'var(--brand-orange)' }}>🏛️ {graph.stats.level_1_subjects || graph.stats.byLevel?.subjects || rootSubjects.length}</span> Pillars
                         </div>
                         <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: 'var(--brand-teal)' }}>📁 {graph.stats.byLevel.domains}</span> Core Domains
+                            <span style={{ color: 'var(--brand-teal)' }}>📁 {graph.stats.level_2_domains || graph.stats.byLevel?.domains || 0}</span> Core Domains
                         </div>
                         <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: '#8B5CF6' }}>🎯 {graph.stats.byLevel.topics}</span> Syllabi Topics
+                            <span style={{ color: '#8B5CF6' }}>🎯 {graph.stats.level_3_topics || graph.stats.byLevel?.topics || 0}</span> Syllabi Topics
                         </div>
                         <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: '#10B981' }}>💎 {graph.stats.byLevel.entities}</span> High-Yield Entities
+                            <span style={{ color: '#10B981' }}>💎 {graph.stats.total_nodes || graph.stats.totalNodes}</span> Total Nodes
                         </div>
                     </div>
 
@@ -317,7 +436,7 @@ export default function KnowledgeGraphPage() {
                             }}
                         >
                             <BrainCircuit size={17} />
-                            Exam-Tailored Syllabus Mind Map
+                            Exam-Tailored Mind Map
                         </button>
 
                         <button
@@ -333,7 +452,7 @@ export default function KnowledgeGraphPage() {
                             }}
                         >
                             <Layers size={17} />
-                            Universal 14-Pillars Knowledge Graph
+                            Structured Syllabus Explorer
                         </button>
                     </div>
                 </div>
@@ -343,16 +462,16 @@ export default function KnowledgeGraphPage() {
                 ═══════════════════════════════════════════════════════════════ */}
                 {viewMode === 'mindmap' && (
                     <div>
-                        <ExamMindMapVisualizer initialExamId="upsc-cse" showExamPicker={true} />
+                        <ExamMindMapVisualizer initialExamId={initialMindMapExam} showExamPicker={true} />
                     </div>
                 )}
 
                 {/* ═══════════════════════════════════════════════════════════════
-                    VIEW 2: UNIVERSAL 14-PILLARS TREE & SEARCH MODE
+                    VIEW 2: STRUCTURED SYLLABUS TREE & SEARCH MODE
                 ═══════════════════════════════════════════════════════════════ */}
                 {viewMode === 'tree' && (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                        {/* Expanded 7-Category Exam Filter Bar */}
+                        {/* Stream-Filtered Exam Filter Bar */}
                         <div style={{ 
                             maxWidth: '960px', margin: '0 auto', width: '100%',
                             display: 'flex', flexDirection: 'column', gap: '14px',
@@ -364,7 +483,7 @@ export default function KnowledgeGraphPage() {
                                 <Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                                 <input 
                                     type="text"
-                                    placeholder="Search any topic, act, dynasty, theory, river, scheme or grammar rule (e.g. Piaget, Article 371J, Gram Swaraj, ಸಂಧಿ, Western Ghats)..."
+                                    placeholder="Search any topic, act, theory, river, scheme or rule within this knowledge stream..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     style={{
@@ -390,12 +509,11 @@ export default function KnowledgeGraphPage() {
                             {/* Top-Level Exam Selection Pills */}
                             <div>
                                 <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '8px', textAlign: 'left' }}>
-                                    Target Examination Projections:
+                                    Examination Projections for {activeStreamInfo.label}:
                                 </div>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px' }}>
-                                    {MAIN_EXAM_TABS.map((tab) => {
+                                    {visibleExamTabs.map((tab) => {
                                         const isActive = selectedExam === tab.id;
-                                        const count = getExamCount(tab.id);
 
                                         return (
                                             <button
@@ -414,13 +532,6 @@ export default function KnowledgeGraphPage() {
                                             >
                                                 <span>{tab.icon}</span>
                                                 <span>{tab.label}</span>
-                                                <span style={{ 
-                                                    fontSize: '11px', opacity: 0.85, 
-                                                    background: isActive ? 'rgba(0,0,0,0.2)' : 'var(--bg-card)', 
-                                                    padding: '1px 6px', borderRadius: '6px' 
-                                                }}>
-                                                    {count}
-                                                </span>
                                             </button>
                                         );
                                     })}
@@ -471,7 +582,7 @@ export default function KnowledgeGraphPage() {
                                         </div>
                                         {searchResults.length === 0 ? (
                                             <div style={{ padding: '40px 20px', textAlign: 'center', color: 'var(--text-muted)' }}>
-                                                No syllabus nodes matching "{searchQuery}" found. Try searching another keyword or clear search.
+                                                No syllabus nodes matching "{searchQuery}" found in this stream. Try searching another keyword or switch stream.
                                             </div>
                                         ) : (
                                             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -516,7 +627,7 @@ export default function KnowledgeGraphPage() {
                                         {filteredSubjects.map((subject, sIdx) => {
                                             const isExpanded = !!expandedNodes[subject.id];
                                             const icon = SUBJECT_ICONS[subject.slug] || '📚';
-                                            const domains = getNodeChildren(subject.id).filter(d => checkNodeMatchesExam(d) || getNodeChildren(d.id).some(t => checkNodeMatchesExam(t)));
+                                            const domains = getNodeChildren(subject.id, selectedStream).filter(d => checkNodeMatchesExam(d) || getNodeChildren(d.id, selectedStream).some(t => checkNodeMatchesExam(t)));
 
                                             return (
                                                 <div 
@@ -545,9 +656,9 @@ export default function KnowledgeGraphPage() {
                                                                     <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                                                                         PILLAR {sIdx + 1}
                                                                     </span>
-                                                                    {subject.examTags[selectedExam === 'all' ? 'upsc' : selectedExam] && (
+                                                                    {subject.examTags[selectedExam === 'all' ? (selectedStream === 'teaching' ? 'teaching' : 'upsc') : selectedExam] && (
                                                                         <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--brand-teal)', background: 'rgba(13, 148, 136, 0.1)', padding: '2px 6px', borderRadius: '4px' }}>
-                                                                            {subject.examTags[selectedExam === 'all' ? 'upsc' : selectedExam]?.slice(0, 2).join(', ')}
+                                                                            {subject.examTags[selectedExam === 'all' ? (selectedStream === 'teaching' ? 'teaching' : 'upsc') : selectedExam]?.slice(0, 2).join(', ')}
                                                                         </span>
                                                                     )}
                                                                 </div>
@@ -569,7 +680,7 @@ export default function KnowledgeGraphPage() {
                                                     {isExpanded && (
                                                         <div style={{ padding: '20px 22px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                                             {domains.map((domain) => {
-                                                                const topics = getNodeChildren(domain.id).filter(t => checkNodeMatchesExam(t));
+                                                                const topics = getNodeChildren(domain.id, selectedStream).filter(t => checkNodeMatchesExam(t));
                                                                 const isDomainExpanded = !!expandedNodes[domain.id];
 
                                                                 return (
@@ -739,7 +850,7 @@ export default function KnowledgeGraphPage() {
 
                                     {/* Launch Practice Drill CTA */}
                                     <Link
-                                        href={`/exams/upsc-cse`}
+                                        href={selectedStream === 'teaching' ? '/exams/kartet' : '/exams/upsc-cse'}
                                         style={{
                                             width: '100%', padding: '12px', borderRadius: '10px',
                                             background: 'var(--brand-orange)', color: '#FFFFFF',

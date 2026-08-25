@@ -1,57 +1,76 @@
-import knowledgeGraphRaw from '@/data/knowledge_graph.json';
-import { KnowledgeGraphData, KnowledgeNode, KnowledgeNodeLevel } from '@/types/knowledgeGraph';
+import civilServicesGraphRaw from '@/data/knowledge_graph_civil_services.json';
+import teachingGraphRaw from '@/data/knowledge_graph_teaching.json';
+import languagesGraphRaw from '@/data/knowledge_graph_languages.json';
+import masterGraphRaw from '@/data/knowledge_graph.json';
+import { KnowledgeGraphData, KnowledgeGraphStream, KnowledgeNode, KnowledgeNodeLevel } from '@/types/knowledgeGraph';
 
-const graphData = knowledgeGraphRaw as unknown as KnowledgeGraphData;
+const GRAPHS: Record<KnowledgeGraphStream, KnowledgeGraphData> = {
+    civil_services: civilServicesGraphRaw as unknown as KnowledgeGraphData,
+    teaching: teachingGraphRaw as unknown as KnowledgeGraphData,
+    languages: languagesGraphRaw as unknown as KnowledgeGraphData,
+    all: masterGraphRaw as unknown as KnowledgeGraphData
+};
 
 /**
- * Returns the entire knowledge graph dataset and stats.
+ * Returns the knowledge graph dataset for a specific stream (defaults to 'civil_services').
  */
-export function getKnowledgeGraph(): KnowledgeGraphData {
-    return graphData;
+export function getKnowledgeGraph(stream: KnowledgeGraphStream = 'civil_services'): KnowledgeGraphData {
+    return GRAPHS[stream] || GRAPHS.civil_services;
 }
 
 /**
- * Get all 12 Root Subjects (Level 1)
+ * Get all Root Subjects (Level 1) for a specific stream.
  */
-export function getRootSubjects(): KnowledgeNode[] {
+export function getRootSubjects(stream: KnowledgeGraphStream = 'civil_services'): KnowledgeNode[] {
+    const graphData = getKnowledgeGraph(stream);
     return graphData.rootSubjectIds.map(id => graphData.nodes[id]).filter(Boolean);
 }
 
 /**
- * Retrieve a specific node by its unique ID
+ * Retrieve a specific node by its unique ID across a stream or all graphs.
  */
-export function getNodeById(id: string): KnowledgeNode | undefined {
-    return graphData.nodes[id];
+export function getNodeById(id: string, stream: KnowledgeGraphStream = 'all'): KnowledgeNode | undefined {
+    const graphData = getKnowledgeGraph(stream);
+    if (graphData.nodes[id]) return graphData.nodes[id];
+    
+    // Fallback search across all graphs if not found in current stream
+    for (const g of Object.values(GRAPHS)) {
+        if (g.nodes[id]) return g.nodes[id];
+    }
+    return undefined;
 }
 
 /**
- * Retrieve all immediate child nodes for a given parent node
+ * Retrieve all immediate child nodes for a given parent node.
  */
-export function getNodeChildren(parentId: string): KnowledgeNode[] {
-    const parent = graphData.nodes[parentId];
+export function getNodeChildren(parentId: string, stream: KnowledgeGraphStream = 'civil_services'): KnowledgeNode[] {
+    const graphData = getKnowledgeGraph(stream);
+    const parent = graphData.nodes[parentId] || getNodeById(parentId, 'all');
     if (!parent || !parent.childrenIds) return [];
-    return parent.childrenIds.map(childId => graphData.nodes[childId]).filter(Boolean);
+    return parent.childrenIds.map(childId => graphData.nodes[childId] || getNodeById(childId, 'all')).filter(Boolean) as KnowledgeNode[];
 }
 
 /**
- * Retrieve all ancestor nodes (from root subject down to direct parent)
+ * Retrieve all ancestor nodes (from root subject down to direct parent).
  */
-export function getNodeAncestors(nodeId: string): KnowledgeNode[] {
-    const node = graphData.nodes[nodeId];
+export function getNodeAncestors(nodeId: string, stream: KnowledgeGraphStream = 'civil_services'): KnowledgeNode[] {
+    const node = getNodeById(nodeId, stream);
     if (!node || !node.ancestorIds) return [];
-    return node.ancestorIds.map(aId => graphData.nodes[aId]).filter(Boolean);
+    const graphData = getKnowledgeGraph(stream);
+    return node.ancestorIds.map(aId => graphData.nodes[aId] || getNodeById(aId, 'all')).filter(Boolean) as KnowledgeNode[];
 }
 
 /**
- * Retrieve the full subtree under a given node
+ * Retrieve the full subtree under a given node.
  */
-export function getNodeSubtree(rootNodeId: string): KnowledgeNode[] {
+export function getNodeSubtree(rootNodeId: string, stream: KnowledgeGraphStream = 'civil_services'): KnowledgeNode[] {
     const results: KnowledgeNode[] = [];
     const queue: string[] = [rootNodeId];
+    const graphData = getKnowledgeGraph(stream);
 
     while (queue.length > 0) {
         const currentId = queue.shift()!;
-        const node = graphData.nodes[currentId];
+        const node = graphData.nodes[currentId] || getNodeById(currentId, 'all');
         if (node) {
             results.push(node);
             if (node.childrenIds && node.childrenIds.length > 0) {
@@ -64,9 +83,10 @@ export function getNodeSubtree(rootNodeId: string): KnowledgeNode[] {
 }
 
 /**
- * Filter nodes by exam projection (e.g. 'upsc', 'kas', 'teaching', 'karnataka_state', 'police', 'ssc', 'banking')
+ * Filter nodes by exam projection (e.g. 'upsc', 'kas', 'teaching', 'kset', 'ugc_net', 'ssc', 'banking')
  */
-export function filterNodesByExam(exam: string): KnowledgeNode[] {
+export function filterNodesByExam(exam: string, stream: KnowledgeGraphStream = 'civil_services'): KnowledgeNode[] {
+    const graphData = getKnowledgeGraph(stream);
     return Object.values(graphData.nodes).filter(node => {
         const tags = node.examTags[exam];
         return tags && tags.length > 0;
@@ -74,11 +94,12 @@ export function filterNodesByExam(exam: string): KnowledgeNode[] {
 }
 
 /**
- * Search nodes by name, entity, or keyword query with optional exam filter
+ * Search nodes by name, entity, or keyword query with optional exam & stream filters.
  */
 export function searchKnowledgeNodes(
     query: string,
     options?: {
+        stream?: KnowledgeGraphStream;
         exam?: string;
         level?: KnowledgeNodeLevel;
         subjectId?: string;
@@ -88,6 +109,8 @@ export function searchKnowledgeNodes(
     if (!query || query.trim().length === 0) return [];
     const cleanQuery = query.toLowerCase().trim();
     const limit = options?.limit || 20;
+    const stream = options?.stream || 'civil_services';
+    const graphData = getKnowledgeGraph(stream);
 
     const matched = Object.values(graphData.nodes).filter(node => {
         if (options?.level && node.level !== options.level) return false;

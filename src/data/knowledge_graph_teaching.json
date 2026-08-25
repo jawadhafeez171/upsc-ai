@@ -1,0 +1,3153 @@
+{
+    "version": "2.5.0",
+    "name": "Teaching & Education Examinations Knowledge Graph (KARTET, CTET, GPSTR, HSTR, KSET, UGC-NET)",
+    "generatedAt": "2026-08-22",
+    "rootSubjectIds": [
+        "child_development_educational_psychology",
+        "theories_of_learning_motivation_cognition",
+        "inclusive_education_diverse_learners_special_needs",
+        "pedagogical_strategies_curriculum_assessment",
+        "subject_specific_pedagogies",
+        "national_policies_and_higher_education_research_aptitude"
+    ],
+    "nodes": {
+        "child_development_educational_psychology.growth_development_principles.stages_of_child_development_infancy_childhood_adolescence": {
+            "id": "child_development_educational_psychology.growth_development_principles.stages_of_child_development_infancy_childhood_adolescence",
+            "slug": "stages_of_child_development_infancy_childhood_adolescence",
+            "name": "Stages of Child Development: Infancy, Early & Late Childhood, Adolescence",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.growth_development_principles",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.growth_development_principles"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "STAGES OF CHILD DEVELOPMENT: INFANCY, EARLY & LATE CHILDHOOD, ADOLESCENCE"
+            ]
+        },
+        "child_development_educational_psychology.growth_development_principles.principles_of_development_cephalocaudal_proximodistal": {
+            "id": "child_development_educational_psychology.growth_development_principles.principles_of_development_cephalocaudal_proximodistal",
+            "slug": "principles_of_development_cephalocaudal_proximodistal",
+            "name": "Principles of Development: Cephalocaudal, Proximodistal & Individual Differences",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.growth_development_principles",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.growth_development_principles"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "PRINCIPLES OF DEVELOPMENT: CEPHALOCAUDAL, PROXIMODISTAL & INDIVIDUAL DIFFERENCES"
+            ]
+        },
+        "child_development_educational_psychology.growth_development_principles.role_of_heredity_and_environment_nature_vs_nurture": {
+            "id": "child_development_educational_psychology.growth_development_principles.role_of_heredity_and_environment_nature_vs_nurture",
+            "slug": "role_of_heredity_and_environment_nature_vs_nurture",
+            "name": "Role of Heredity and Environment (Nature vs Nurture Dynamics)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.growth_development_principles",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.growth_development_principles"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ROLE OF HEREDITY AND ENVIRONMENT (NATURE VS NURTURE DYNAMICS)"
+            ]
+        },
+        "child_development_educational_psychology.growth_development_principles": {
+            "id": "child_development_educational_psychology.growth_development_principles",
+            "slug": "growth_development_principles",
+            "name": "Growth & Development Principles and Heredity vs Environment",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology",
+            "childrenIds": [
+                "child_development_educational_psychology.growth_development_principles.stages_of_child_development_infancy_childhood_adolescence",
+                "child_development_educational_psychology.growth_development_principles.principles_of_development_cephalocaudal_proximodistal",
+                "child_development_educational_psychology.growth_development_principles.role_of_heredity_and_environment_nature_vs_nurture"
+            ],
+            "ancestorIds": [
+                "child_development_educational_psychology"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "GROWTH & DEVELOPMENT PRINCIPLES AND HEREDITY VS ENVIRONMENT"
+            ]
+        },
+        "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.piaget_cognitive_development_theory_stages_schemas": {
+            "id": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.piaget_cognitive_development_theory_stages_schemas",
+            "slug": "piaget_cognitive_development_theory_stages_schemas",
+            "name": "Jean Piaget Cognitive Development Theory: Sensorimotor, Preoperational, Concrete, Formal Operational",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "JEAN PIAGET COGNITIVE DEVELOPMENT THEORY: SENSORIMOTOR, PREOPERATIONAL, CONCRETE, FORMAL OPERATIONAL"
+            ]
+        },
+        "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.vygotsky_socio-cultural_theory_zpd_scaffolding_mko": {
+            "id": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.vygotsky_socio-cultural_theory_zpd_scaffolding_mko",
+            "slug": "vygotsky_socio-cultural_theory_zpd_scaffolding_mko",
+            "name": "Lev Vygotsky Socio-Cultural Theory: ZPD, Scaffolding & Private Speech",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "LEV VYGOTSKY SOCIO-CULTURAL THEORY: ZPD, SCAFFOLDING & PRIVATE SPEECH"
+            ]
+        },
+        "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.kohlberg_moral_development_stages_levels_heinz_dilemma": {
+            "id": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.kohlberg_moral_development_stages_levels_heinz_dilemma",
+            "slug": "kohlberg_moral_development_stages_levels_heinz_dilemma",
+            "name": "Lawrence Kohlberg Moral Development: Pre-conventional, Conventional & Post-conventional",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "LAWRENCE KOHLBERG MORAL DEVELOPMENT: PRE-CONVENTIONAL, CONVENTIONAL & POST-CONVENTIONAL"
+            ]
+        },
+        "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.erikson_psychosocial_development_eight_stages": {
+            "id": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.erikson_psychosocial_development_eight_stages",
+            "slug": "erikson_psychosocial_development_eight_stages",
+            "name": "Erik Erikson Psychosocial Development: Eight Life-Span Stages & Crises",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ERIK ERIKSON PSYCHOSOCIAL DEVELOPMENT: EIGHT LIFE-SPAN STAGES & CRISES"
+            ]
+        },
+        "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development": {
+            "id": "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development",
+            "slug": "theories_of_cognitive_moral_psychosocial_development",
+            "name": "Theories of Cognitive, Moral & Psychosocial Development",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology",
+            "childrenIds": [
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.piaget_cognitive_development_theory_stages_schemas",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.vygotsky_socio-cultural_theory_zpd_scaffolding_mko",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.kohlberg_moral_development_stages_levels_heinz_dilemma",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development.erikson_psychosocial_development_eight_stages"
+            ],
+            "ancestorIds": [
+                "child_development_educational_psychology"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "THEORIES OF COGNITIVE, MORAL & PSYCHOSOCIAL DEVELOPMENT"
+            ]
+        },
+        "child_development_educational_psychology.intelligence_theories_and_emotional_development.gardner_multiple_intelligences_theory": {
+            "id": "child_development_educational_psychology.intelligence_theories_and_emotional_development.gardner_multiple_intelligences_theory",
+            "slug": "gardner_multiple_intelligences_theory",
+            "name": "Howard Gardner Multiple Intelligences Theory (8/9 Intelligences)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.intelligence_theories_and_emotional_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "HOWARD GARDNER MULTIPLE INTELLIGENCES THEORY (8/9 INTELLIGENCES)"
+            ]
+        },
+        "child_development_educational_psychology.intelligence_theories_and_emotional_development.spearman_two_factor_thurstone_guilford_structure_of_intellect": {
+            "id": "child_development_educational_psychology.intelligence_theories_and_emotional_development.spearman_two_factor_thurstone_guilford_structure_of_intellect",
+            "slug": "spearman_two_factor_thurstone_guilford_structure_of_intellect",
+            "name": "Spearman Two-Factor Theory, Thurstone Primary Mental Abilities & Guilford SOI",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.intelligence_theories_and_emotional_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "SPEARMAN TWO-FACTOR THEORY, THURSTONE PRIMARY MENTAL ABILITIES & GUILFORD SOI"
+            ]
+        },
+        "child_development_educational_psychology.intelligence_theories_and_emotional_development.measurement_of_intelligence_iq_tests_binet_simon_wechsler": {
+            "id": "child_development_educational_psychology.intelligence_theories_and_emotional_development.measurement_of_intelligence_iq_tests_binet_simon_wechsler",
+            "slug": "measurement_of_intelligence_iq_tests_binet_simon_wechsler",
+            "name": "Measurement of Intelligence: IQ Formula, Binet-Simon, Wechsler & Raven CPM/SPM",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.intelligence_theories_and_emotional_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "MEASUREMENT OF INTELLIGENCE: IQ FORMULA, BINET-SIMON, WECHSLER & RAVEN CPM/SPM"
+            ]
+        },
+        "child_development_educational_psychology.intelligence_theories_and_emotional_development.emotional_intelligence_daniel_goleman_dimensions": {
+            "id": "child_development_educational_psychology.intelligence_theories_and_emotional_development.emotional_intelligence_daniel_goleman_dimensions",
+            "slug": "emotional_intelligence_daniel_goleman_dimensions",
+            "name": "Emotional Intelligence (EQ): Daniel Goleman Model & Classroom Applications",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.intelligence_theories_and_emotional_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "EMOTIONAL INTELLIGENCE (EQ): DANIEL GOLEMAN MODEL & CLASSROOM APPLICATIONS"
+            ]
+        },
+        "child_development_educational_psychology.intelligence_theories_and_emotional_development.creativity_convergent_divergent_thinking_torrance_tests": {
+            "id": "child_development_educational_psychology.intelligence_theories_and_emotional_development.creativity_convergent_divergent_thinking_torrance_tests",
+            "slug": "creativity_convergent_divergent_thinking_torrance_tests",
+            "name": "Creativity: Convergent vs Divergent Thinking & Torrance Tests of Creative Thinking (TTCT)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology.intelligence_theories_and_emotional_development",
+            "childrenIds": [],
+            "ancestorIds": [
+                "child_development_educational_psychology",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CREATIVITY: CONVERGENT VS DIVERGENT THINKING & TORRANCE TESTS OF CREATIVE THINKING (TTCT)"
+            ]
+        },
+        "child_development_educational_psychology.intelligence_theories_and_emotional_development": {
+            "id": "child_development_educational_psychology.intelligence_theories_and_emotional_development",
+            "slug": "intelligence_theories_and_emotional_development",
+            "name": "Theories of Intelligence, Creativity & Emotional Quotient",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": "child_development_educational_psychology",
+            "childrenIds": [
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development.gardner_multiple_intelligences_theory",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development.spearman_two_factor_thurstone_guilford_structure_of_intellect",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development.measurement_of_intelligence_iq_tests_binet_simon_wechsler",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development.emotional_intelligence_daniel_goleman_dimensions",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development.creativity_convergent_divergent_thinking_torrance_tests"
+            ],
+            "ancestorIds": [
+                "child_development_educational_psychology"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "THEORIES OF INTELLIGENCE, CREATIVITY & EMOTIONAL QUOTIENT"
+            ]
+        },
+        "child_development_educational_psychology": {
+            "id": "child_development_educational_psychology",
+            "slug": "child_development_educational_psychology",
+            "name": "Child Development & Educational Psychology",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "CHILD_DEVELOPMENT_EDUCATIONAL_PSYCHOLOGY",
+            "subjectId": "child_development_educational_psychology",
+            "parentId": null,
+            "childrenIds": [
+                "child_development_educational_psychology.growth_development_principles",
+                "child_development_educational_psychology.theories_of_cognitive_moral_psychosocial_development",
+                "child_development_educational_psychology.intelligence_theories_and_emotional_development"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CHILD DEVELOPMENT & EDUCATIONAL PSYCHOLOGY"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.pavlov_classical_conditioning_stimulus_response_extinction": {
+            "id": "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.pavlov_classical_conditioning_stimulus_response_extinction",
+            "slug": "pavlov_classical_conditioning_stimulus_response_extinction",
+            "name": "Ivan Pavlov Classical Conditioning: UCS, CS, UCR, CR, Generalization & Extinction",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "IVAN PAVLOV CLASSICAL CONDITIONING: UCS, CS, UCR, CR, GENERALIZATION & EXTINCTION"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.skinner_operant_conditioning_reinforcement_schedules_punishment": {
+            "id": "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.skinner_operant_conditioning_reinforcement_schedules_punishment",
+            "slug": "skinner_operant_conditioning_reinforcement_schedules_punishment",
+            "name": "B.F. Skinner Operant Conditioning: Positive/Negative Reinforcement & Schedules",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "B.F. SKINNER OPERANT CONDITIONING: POSITIVE/NEGATIVE REINFORCEMENT & SCHEDULES"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.thorndike_trial_and_error_laws_of_learning": {
+            "id": "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.thorndike_trial_and_error_laws_of_learning",
+            "slug": "thorndike_trial_and_error_laws_of_learning",
+            "name": "E.L. Thorndike Trial and Error Theory: Laws of Readiness, Exercise & Effect",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "E.L. THORNDIKE TRIAL AND ERROR THEORY: LAWS OF READINESS, EXERCISE & EFFECT"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories": {
+            "id": "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories",
+            "slug": "behaviorist_and_conditioning_theories",
+            "name": "Behaviorist Theories of Learning",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition",
+            "childrenIds": [
+                "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.pavlov_classical_conditioning_stimulus_response_extinction",
+                "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.skinner_operant_conditioning_reinforcement_schedules_punishment",
+                "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories.thorndike_trial_and_error_laws_of_learning"
+            ],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "BEHAVIORIST THEORIES OF LEARNING"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.bandura_social_learning_theory_observational_modeling_bobo_doll": {
+            "id": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.bandura_social_learning_theory_observational_modeling_bobo_doll",
+            "slug": "bandura_social_learning_theory_observational_modeling_bobo_doll",
+            "name": "Albert Bandura Social Cognitive Theory: Modeling, Vicarious Learning & Self-Efficacy",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ALBERT BANDURA SOCIAL COGNITIVE THEORY: MODELING, VICARIOUS LEARNING & SELF-EFFICACY"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.brunner_discovery_learning_enactive_iconic_symbolic_spiral_curriculum": {
+            "id": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.brunner_discovery_learning_enactive_iconic_symbolic_spiral_curriculum",
+            "slug": "brunner_discovery_learning_enactive_iconic_symbolic_spiral_curriculum",
+            "name": "Jerome Bruner Discovery Learning: Enactive, Iconic, Symbolic Modes & Spiral Curriculum",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "JEROME BRUNER DISCOVERY LEARNING: ENACTIVE, ICONIC, SYMBOLIC MODES & SPIRAL CURRICULUM"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.constructivism_5e_model_engage_explore_explain_elaborate_evaluate": {
+            "id": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.constructivism_5e_model_engage_explore_explain_elaborate_evaluate",
+            "slug": "constructivism_5e_model_engage_explore_explain_elaborate_evaluate",
+            "name": "Constructivist Learning Paradigm & 5E Instructional Model",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CONSTRUCTIVIST LEARNING PARADIGM & 5E INSTRUCTIONAL MODEL"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.information_processing_theory_sensory_short_term_long_term_memory": {
+            "id": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.information_processing_theory_sensory_short_term_long_term_memory",
+            "slug": "information_processing_theory_sensory_short_term_long_term_memory",
+            "name": "Information Processing Theory: Sensory Register, Working Memory & Long-Term Memory",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "INFORMATION PROCESSING THEORY: SENSORY REGISTER, WORKING MEMORY & LONG-TERM MEMORY"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories": {
+            "id": "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories",
+            "slug": "cognitive_constructivist_social_learning_theories",
+            "name": "Constructivist & Social Learning Theories",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition",
+            "childrenIds": [
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.bandura_social_learning_theory_observational_modeling_bobo_doll",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.brunner_discovery_learning_enactive_iconic_symbolic_spiral_curriculum",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.constructivism_5e_model_engage_explore_explain_elaborate_evaluate",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories.information_processing_theory_sensory_short_term_long_term_memory"
+            ],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CONSTRUCTIVIST & SOCIAL LEARNING THEORIES"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.maslow_hierarchy_of_needs_deficiency_vs_growth_needs": {
+            "id": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.maslow_hierarchy_of_needs_deficiency_vs_growth_needs",
+            "slug": "maslow_hierarchy_of_needs_deficiency_vs_growth_needs",
+            "name": "Abraham Maslow Hierarchy of Needs: Deficiency vs Growth Needs",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ABRAHAM MASLOW HIERARCHY OF NEEDS: DEFICIENCY VS GROWTH NEEDS"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.intrinsic_vs_extrinsic_motivation_self_determination_theory": {
+            "id": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.intrinsic_vs_extrinsic_motivation_self_determination_theory",
+            "slug": "intrinsic_vs_extrinsic_motivation_self_determination_theory",
+            "name": "Intrinsic vs Extrinsic Motivation & Self-Determination Theory",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "INTRINSIC VS EXTRINSIC MOTIVATION & SELF-DETERMINATION THEORY"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.transfer_of_learning_positive_negative_zero_bilateral": {
+            "id": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.transfer_of_learning_positive_negative_zero_bilateral",
+            "slug": "transfer_of_learning_positive_negative_zero_bilateral",
+            "name": "Transfer of Learning: Positive, Negative, Zero, Vertical & Bilateral Transfer",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "TRANSFER OF LEARNING: POSITIVE, NEGATIVE, ZERO, VERTICAL & BILATERAL TRANSFER"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.factors_influencing_learning_maturation_attention_interest_fatigue": {
+            "id": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.factors_influencing_learning_maturation_attention_interest_fatigue",
+            "slug": "factors_influencing_learning_maturation_attention_interest_fatigue",
+            "name": "Factors Influencing Learning: Maturation, Attention, Interest, Memory & Fatigue",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning",
+            "childrenIds": [],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "FACTORS INFLUENCING LEARNING: MATURATION, ATTENTION, INTEREST, MEMORY & FATIGUE"
+            ]
+        },
+        "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning": {
+            "id": "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning",
+            "slug": "motivation_and_affective_factors_in_learning",
+            "name": "Motivation, Personality & Factors Affecting Learning",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": "theories_of_learning_motivation_cognition",
+            "childrenIds": [
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.maslow_hierarchy_of_needs_deficiency_vs_growth_needs",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.intrinsic_vs_extrinsic_motivation_self_determination_theory",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.transfer_of_learning_positive_negative_zero_bilateral",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning.factors_influencing_learning_maturation_attention_interest_fatigue"
+            ],
+            "ancestorIds": [
+                "theories_of_learning_motivation_cognition"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "MOTIVATION, PERSONALITY & FACTORS AFFECTING LEARNING"
+            ]
+        },
+        "theories_of_learning_motivation_cognition": {
+            "id": "theories_of_learning_motivation_cognition",
+            "slug": "theories_of_learning_motivation_cognition",
+            "name": "Theories of Learning, Cognition & Motivation",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "THEORIES_OF_LEARNING_MOTIVATION_COGNITION",
+            "subjectId": "theories_of_learning_motivation_cognition",
+            "parentId": null,
+            "childrenIds": [
+                "theories_of_learning_motivation_cognition.behaviorist_and_conditioning_theories",
+                "theories_of_learning_motivation_cognition.cognitive_constructivist_social_learning_theories",
+                "theories_of_learning_motivation_cognition.motivation_and_affective_factors_in_learning"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "THEORIES OF LEARNING, COGNITION & MOTIVATION"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.dyslexia_dyscalculia_dysgraphia_dyspraxia_identification": {
+            "id": "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.dyslexia_dyscalculia_dysgraphia_dyspraxia_identification",
+            "slug": "dyslexia_dyscalculia_dysgraphia_dyspraxia_identification",
+            "name": "Specific Learning Disabilities: Dyslexia, Dyscalculia, Dysgraphia, Dyspraxia",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "SPECIFIC LEARNING DISABILITIES: DYSLEXIA, DYSCALCULIA, DYSGRAPHIA, DYSPRAXIA"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.adhd_attention_deficit_hyperactivity_disorder_classroom_interventions": {
+            "id": "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.adhd_attention_deficit_hyperactivity_disorder_classroom_interventions",
+            "slug": "adhd_attention_deficit_hyperactivity_disorder_classroom_interventions",
+            "name": "ADHD (Attention Deficit Hyperactivity Disorder) & Behavioral Interventions",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ADHD (ATTENTION DEFICIT HYPERACTIVITY DISORDER) & BEHAVIORAL INTERVENTIONS"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.autism_spectrum_disorder_asd_sensory_communication_needs": {
+            "id": "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.autism_spectrum_disorder_asd_sensory_communication_needs",
+            "slug": "autism_spectrum_disorder_asd_sensory_communication_needs",
+            "name": "Autism Spectrum Disorder (ASD): Communication Strategies & Sensory Needs",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "AUTISM SPECTRUM DISORDER (ASD): COMMUNICATION STRATEGIES & SENSORY NEEDS"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders": {
+            "id": "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders",
+            "slug": "learning_disabilities_and_neurodevelopmental_disorders",
+            "name": "Specific Learning Disabilities & Neurodevelopmental Needs",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs",
+            "childrenIds": [
+                "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.dyslexia_dyscalculia_dysgraphia_dyspraxia_identification",
+                "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.adhd_attention_deficit_hyperactivity_disorder_classroom_interventions",
+                "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.autism_spectrum_disorder_asd_sensory_communication_needs"
+            ],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "SPECIFIC LEARNING DISABILITIES & NEURODEVELOPMENTAL NEEDS"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.gifted_and_talented_children_enrichment_acceleration_programmes": {
+            "id": "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.gifted_and_talented_children_enrichment_acceleration_programmes",
+            "slug": "gifted_and_talented_children_enrichment_acceleration_programmes",
+            "name": "Gifted and Talented Learners: Identification, Enrichment & Acceleration",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "GIFTED AND TALENTED LEARNERS: IDENTIFICATION, ENRICHMENT & ACCELERATION"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.first_generation_learners_sedg_socio-economically_disadvantaged_groups": {
+            "id": "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.first_generation_learners_sedg_socio-economically_disadvantaged_groups",
+            "slug": "first_generation_learners_sedg_socio-economically_disadvantaged_groups",
+            "name": "First Generation Learners & Socio-Economically Disadvantaged Groups (SEDGs)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "FIRST GENERATION LEARNERS & SOCIO-ECONOMICALLY DISADVANTAGED GROUPS (SEDGS)"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.gender_sensitization_gender_bias_stereotypes_in_textbooks_classrooms": {
+            "id": "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.gender_sensitization_gender_bias_stereotypes_in_textbooks_classrooms",
+            "slug": "gender_sensitization_gender_bias_stereotypes_in_textbooks_classrooms",
+            "name": "Gender Sensitization, Stereotypes in Textbooks & Inclusive Classroom Culture",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "GENDER SENSITIZATION, STEREOTYPES IN TEXTBOOKS & INCLUSIVE CLASSROOM CULTURE"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged": {
+            "id": "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged",
+            "slug": "diverse_learners_gifted_socio-economically_disadvantaged",
+            "name": "Gifted, Creative & Disadvantaged Learners",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs",
+            "childrenIds": [
+                "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.gifted_and_talented_children_enrichment_acceleration_programmes",
+                "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.first_generation_learners_sedg_socio-economically_disadvantaged_groups",
+                "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged.gender_sensitization_gender_bias_stereotypes_in_textbooks_classrooms"
+            ],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "GIFTED, CREATIVE & DISADVANTAGED LEARNERS"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.rights_of_persons_with_disabilities_act_rpwd_2016_21_disabilities": {
+            "id": "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.rights_of_persons_with_disabilities_act_rpwd_2016_21_disabilities",
+            "slug": "rights_of_persons_with_disabilities_act_rpwd_2016_21_disabilities",
+            "name": "Rights of Persons with Disabilities (RPwD) Act 2016 (21 Specified Disabilities)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "RIGHTS OF PERSONS WITH DISABILITIES (RPWD) ACT 2016 (21 SPECIFIED DISABILITIES)"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.individualized_education_plan_iep_universal_design_for_learning_udl": {
+            "id": "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.individualized_education_plan_iep_universal_design_for_learning_udl",
+            "slug": "individualized_education_plan_iep_universal_design_for_learning_udl",
+            "name": "Individualized Education Plan (IEP) & Universal Design for Learning (UDL)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "INDIVIDUALIZED EDUCATION PLAN (IEP) & UNIVERSAL DESIGN FOR LEARNING (UDL)"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.assistive_devices_braille_screen_readers_hearing_aids_in_inclusive_schools": {
+            "id": "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.assistive_devices_braille_screen_readers_hearing_aids_in_inclusive_schools",
+            "slug": "assistive_devices_braille_screen_readers_hearing_aids_in_inclusive_schools",
+            "name": "Assistive Technologies: Braille, Screen Readers, AAC & Hearing Aids",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks",
+            "childrenIds": [],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs",
+                "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ASSISTIVE TECHNOLOGIES: BRAILLE, SCREEN READERS, AAC & HEARING AIDS"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks": {
+            "id": "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks",
+            "slug": "assistive_technologies_and_rights_frameworks",
+            "name": "Assistive Technologies & Legal Frameworks for CWSN",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": "inclusive_education_diverse_learners_special_needs",
+            "childrenIds": [
+                "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.rights_of_persons_with_disabilities_act_rpwd_2016_21_disabilities",
+                "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.individualized_education_plan_iep_universal_design_for_learning_udl",
+                "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks.assistive_devices_braille_screen_readers_hearing_aids_in_inclusive_schools"
+            ],
+            "ancestorIds": [
+                "inclusive_education_diverse_learners_special_needs"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ASSISTIVE TECHNOLOGIES & LEGAL FRAMEWORKS FOR CWSN"
+            ]
+        },
+        "inclusive_education_diverse_learners_special_needs": {
+            "id": "inclusive_education_diverse_learners_special_needs",
+            "slug": "inclusive_education_diverse_learners_special_needs",
+            "name": "Inclusive Education, Diverse Learners & Special Needs (CWSN)",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS",
+            "subjectId": "inclusive_education_diverse_learners_special_needs",
+            "parentId": null,
+            "childrenIds": [
+                "inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders",
+                "inclusive_education_diverse_learners_special_needs.diverse_learners_gifted_socio-economically_disadvantaged",
+                "inclusive_education_diverse_learners_special_needs.assistive_technologies_and_rights_frameworks"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "INCLUSIVE EDUCATION, DIVERSE LEARNERS & SPECIAL NEEDS (CWSN)"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.child-centered_vs_teacher-centered_pedagogy_inquiry-based_learning": {
+            "id": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.child-centered_vs_teacher-centered_pedagogy_inquiry-based_learning",
+            "slug": "child-centered_vs_teacher-centered_pedagogy_inquiry-based_learning",
+            "name": "Child-Centered vs Teacher-Centered Methods: Inquiry & Problem-Based Learning",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CHILD-CENTERED VS TEACHER-CENTERED METHODS: INQUIRY & PROBLEM-BASED LEARNING"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.cooperative_and_collaborative_learning_jigsaw_peer_tutoring": {
+            "id": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.cooperative_and_collaborative_learning_jigsaw_peer_tutoring",
+            "slug": "cooperative_and_collaborative_learning_jigsaw_peer_tutoring",
+            "name": "Cooperative & Collaborative Learning Strategies: Jigsaw, Think-Pair-Share, Peer Tutoring",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "COOPERATIVE & COLLABORATIVE LEARNING STRATEGIES: JIGSAW, THINK-PAIR-SHARE, PEER TUTORING"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.ict_integration_in_education_digital_tools_diksha_swayam_moocs": {
+            "id": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.ict_integration_in_education_digital_tools_diksha_swayam_moocs",
+            "slug": "ict_integration_in_education_digital_tools_diksha_swayam_moocs",
+            "name": "ICT Integration in Education: DIKSHA, SWAYAM, PM eVidya & Digital Resources",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ICT INTEGRATION IN EDUCATION: DIKSHA, SWAYAM, PM EVIDYA & DIGITAL RESOURCES"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.bloom_taxonomy_revised_anderson_krathwohl_cognitive_affective_psychomotor": {
+            "id": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.bloom_taxonomy_revised_anderson_krathwohl_cognitive_affective_psychomotor",
+            "slug": "bloom_taxonomy_revised_anderson_krathwohl_cognitive_affective_psychomotor",
+            "name": "Bloom's Revised Taxonomy (Anderson & Krathwohl): Cognitive, Affective & Psychomotor Domains",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "BLOOM'S REVISED TAXONOMY (ANDERSON & KRATHWOHL): COGNITIVE, AFFECTIVE & PSYCHOMOTOR DOMAINS"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials": {
+            "id": "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials",
+            "slug": "instructional_methods_and_teaching-learning_materials",
+            "name": "Instructional Methods & Teaching-Learning Materials (TLM)",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment",
+            "childrenIds": [
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.child-centered_vs_teacher-centered_pedagogy_inquiry-based_learning",
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.cooperative_and_collaborative_learning_jigsaw_peer_tutoring",
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.ict_integration_in_education_digital_tools_diksha_swayam_moocs",
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials.bloom_taxonomy_revised_anderson_krathwohl_cognitive_affective_psychomotor"
+            ],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "INSTRUCTIONAL METHODS & TEACHING-LEARNING MATERIALS (TLM)"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.assessment_for_learning_of_learning_as_learning_formative_summative": {
+            "id": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.assessment_for_learning_of_learning_as_learning_formative_summative",
+            "slug": "assessment_for_learning_of_learning_as_learning_formative_summative",
+            "name": "Assessment For, Of & As Learning: Formative vs Summative Assessment",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ASSESSMENT FOR, OF & AS LEARNING: FORMATIVE VS SUMMATIVE ASSESSMENT"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.continuous_and_comprehensive_evaluation_cce_scholastic_co-scholastic": {
+            "id": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.continuous_and_comprehensive_evaluation_cce_scholastic_co-scholastic",
+            "slug": "continuous_and_comprehensive_evaluation_cce_scholastic_co-scholastic",
+            "name": "Continuous and Comprehensive Evaluation (CCE): Scholastic & Co-Scholastic Aspects",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CONTINUOUS AND COMPREHENSIVE EVALUATION (CCE): SCHOLASTIC & CO-SCHOLASTIC ASPECTS"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.tools_and_techniques_rubrics_portfolios_anecdotal_records_rating_scales": {
+            "id": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.tools_and_techniques_rubrics_portfolios_anecdotal_records_rating_scales",
+            "slug": "tools_and_techniques_rubrics_portfolios_anecdotal_records_rating_scales",
+            "name": "Evaluation Tools: Rubrics, Portfolios, Anecdotal Records & Checklists",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "EVALUATION TOOLS: RUBRICS, PORTFOLIOS, ANECDOTAL RECORDS & CHECKLISTS"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.characteristics_of_a_good_test_validity_reliability_usability_objectivity": {
+            "id": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.characteristics_of_a_good_test_validity_reliability_usability_objectivity",
+            "slug": "characteristics_of_a_good_test_validity_reliability_usability_objectivity",
+            "name": "Characteristics of a Standardized Test: Validity, Reliability, Usability & Objectivity",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CHARACTERISTICS OF A STANDARDIZED TEST: VALIDITY, RELIABILITY, USABILITY & OBJECTIVITY"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.diagnostic_testing_and_remedial_teaching_strategies": {
+            "id": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.diagnostic_testing_and_remedial_teaching_strategies",
+            "slug": "diagnostic_testing_and_remedial_teaching_strategies",
+            "name": "Diagnostic Testing, Error Analysis & Remedial Teaching Strategies",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "DIAGNOSTIC TESTING, ERROR ANALYSIS & REMEDIAL TEACHING STRATEGIES"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction": {
+            "id": "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction",
+            "slug": "assessment_evaluation_cce_and_test_construction",
+            "name": "Assessment, Evaluation & Measurement",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment",
+            "childrenIds": [
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.assessment_for_learning_of_learning_as_learning_formative_summative",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.continuous_and_comprehensive_evaluation_cce_scholastic_co-scholastic",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.tools_and_techniques_rubrics_portfolios_anecdotal_records_rating_scales",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.characteristics_of_a_good_test_validity_reliability_usability_objectivity",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.diagnostic_testing_and_remedial_teaching_strategies"
+            ],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ASSESSMENT, EVALUATION & MEASUREMENT"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management.action_research_steps_problem_hypothesis_data_action_reflection": {
+            "id": "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management.action_research_steps_problem_hypothesis_data_action_reflection",
+            "slug": "action_research_steps_problem_hypothesis_data_action_reflection",
+            "name": "Educational Action Research: Steps (Plan, Act, Observe, Reflect)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "EDUCATIONAL ACTION RESEARCH: STEPS (PLAN, ACT, OBSERVE, REFLECT)"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management.classroom_management_strategies_positive_discipline_behavioral_support": {
+            "id": "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management.classroom_management_strategies_positive_discipline_behavioral_support",
+            "slug": "classroom_management_strategies_positive_discipline_behavioral_support",
+            "name": "Classroom Management: Positive Behavioral Interventions & Supports (PBIS)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management",
+            "childrenIds": [],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment",
+                "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "CLASSROOM MANAGEMENT: POSITIVE BEHAVIORAL INTERVENTIONS & SUPPORTS (PBIS)"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management": {
+            "id": "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management",
+            "slug": "action_research_and_classroom_management",
+            "name": "Action Research & Classroom Management",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": "pedagogical_strategies_curriculum_assessment",
+            "childrenIds": [
+                "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management.action_research_steps_problem_hypothesis_data_action_reflection",
+                "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management.classroom_management_strategies_positive_discipline_behavioral_support"
+            ],
+            "ancestorIds": [
+                "pedagogical_strategies_curriculum_assessment"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ACTION RESEARCH & CLASSROOM MANAGEMENT"
+            ]
+        },
+        "pedagogical_strategies_curriculum_assessment": {
+            "id": "pedagogical_strategies_curriculum_assessment",
+            "slug": "pedagogical_strategies_curriculum_assessment",
+            "name": "Pedagogical Strategies, Curriculum & Assessment",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT",
+            "subjectId": "pedagogical_strategies_curriculum_assessment",
+            "parentId": null,
+            "childrenIds": [
+                "pedagogical_strategies_curriculum_assessment.instructional_methods_and_teaching-learning_materials",
+                "pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction",
+                "pedagogical_strategies_curriculum_assessment.action_research_and_classroom_management"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "PEDAGOGICAL STRATEGIES, CURRICULUM & ASSESSMENT"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_mathematics.nature_scope_values_of_mathematics_inductive_deductive_methods": {
+            "id": "subject_specific_pedagogies.pedagogy_of_mathematics.nature_scope_values_of_mathematics_inductive_deductive_methods",
+            "slug": "nature_scope_values_of_mathematics_inductive_deductive_methods",
+            "name": "Nature, Scope & Values of Mathematics: Inductive vs Deductive Reasoning",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_mathematics",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_mathematics"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NATURE, SCOPE & VALUES OF MATHEMATICS: INDUCTIVE VS DEDUCTIVE REASONING"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_mathematics.mathematical_concepts_formation_van_hiele_geometric_thinking_levels": {
+            "id": "subject_specific_pedagogies.pedagogy_of_mathematics.mathematical_concepts_formation_van_hiele_geometric_thinking_levels",
+            "slug": "mathematical_concepts_formation_van_hiele_geometric_thinking_levels",
+            "name": "Van Hiele Levels of Geometric Thinking & Number Sense Development",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_mathematics",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_mathematics"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "VAN HIELE LEVELS OF GEOMETRIC THINKING & NUMBER SENSE DEVELOPMENT"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_mathematics.remedial_strategies_for_dyscalculia_and_math_anxiety": {
+            "id": "subject_specific_pedagogies.pedagogy_of_mathematics.remedial_strategies_for_dyscalculia_and_math_anxiety",
+            "slug": "remedial_strategies_for_dyscalculia_and_math_anxiety",
+            "name": "Mathematical Misconceptions, Math Anxiety & Remedial Interventions",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_mathematics",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_mathematics"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "MATHEMATICAL MISCONCEPTIONS, MATH ANXIETY & REMEDIAL INTERVENTIONS"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_mathematics": {
+            "id": "subject_specific_pedagogies.pedagogy_of_mathematics",
+            "slug": "pedagogy_of_mathematics",
+            "name": "Pedagogy of Mathematics",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies",
+            "childrenIds": [
+                "subject_specific_pedagogies.pedagogy_of_mathematics.nature_scope_values_of_mathematics_inductive_deductive_methods",
+                "subject_specific_pedagogies.pedagogy_of_mathematics.mathematical_concepts_formation_van_hiele_geometric_thinking_levels",
+                "subject_specific_pedagogies.pedagogy_of_mathematics.remedial_strategies_for_dyscalculia_and_math_anxiety"
+            ],
+            "ancestorIds": [
+                "subject_specific_pedagogies"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "PEDAGOGY OF MATHEMATICS"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.scientific_inquiry_process_skills_observation_experimentation_inference": {
+            "id": "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.scientific_inquiry_process_skills_observation_experimentation_inference",
+            "slug": "scientific_inquiry_process_skills_observation_experimentation_inference",
+            "name": "Scientific Inquiry & Science Process Skills: Observation, Hypothesis, Experimentation",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "SCIENTIFIC INQUIRY & SCIENCE PROCESS SKILLS: OBSERVATION, HYPOTHESIS, EXPERIMENTATION"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.evs_themes_ncert_family_food_shelter_water_travel_things_we_make": {
+            "id": "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.evs_themes_ncert_family_food_shelter_water_travel_things_we_make",
+            "slug": "evs_themes_ncert_family_food_shelter_water_travel_things_we_make",
+            "name": "NCERT 6 EVS Themes: Family & Friends, Food, Shelter, Water, Travel, Things We Make",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NCERT 6 EVS THEMES: FAMILY & FRIENDS, FOOD, SHELTER, WATER, TRAVEL, THINGS WE MAKE"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.laboratory_activities_science_kits_exhibitions_field_trips": {
+            "id": "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.laboratory_activities_science_kits_exhibitions_field_trips",
+            "slug": "laboratory_activities_science_kits_exhibitions_field_trips",
+            "name": "Science Laboratories, Science Kits, Exhibitions & Hands-on Inquiry",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "SCIENCE LABORATORIES, SCIENCE KITS, EXHIBITIONS & HANDS-ON INQUIRY"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies": {
+            "id": "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies",
+            "slug": "pedagogy_of_science_and_environmental_studies",
+            "name": "Pedagogy of Science & Environmental Studies (EVS)",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies",
+            "childrenIds": [
+                "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.scientific_inquiry_process_skills_observation_experimentation_inference",
+                "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.evs_themes_ncert_family_food_shelter_water_travel_things_we_make",
+                "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies.laboratory_activities_science_kits_exhibitions_field_trips"
+            ],
+            "ancestorIds": [
+                "subject_specific_pedagogies"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "PEDAGOGY OF SCIENCE & ENVIRONMENTAL STUDIES (EVS)"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_social_sciences.nature_of_social_sciences_critical_thinking_source_method_role_play": {
+            "id": "subject_specific_pedagogies.pedagogy_of_social_sciences.nature_of_social_sciences_critical_thinking_source_method_role_play",
+            "slug": "nature_of_social_sciences_critical_thinking_source_method_role_play",
+            "name": "Nature of Social Sciences: Source Method, Critical Inquiry & Role Play",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_social_sciences",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_social_sciences"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NATURE OF SOCIAL SCIENCES: SOURCE METHOD, CRITICAL INQUIRY & ROLE PLAY"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_social_sciences.utilizing_primary_sources_maps_historical_evidence_in_classrooms": {
+            "id": "subject_specific_pedagogies.pedagogy_of_social_sciences.utilizing_primary_sources_maps_historical_evidence_in_classrooms",
+            "slug": "utilizing_primary_sources_maps_historical_evidence_in_classrooms",
+            "name": "Utilizing Primary Historical Sources, Maps, Timelines & Artifacts",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_social_sciences",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_social_sciences"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "UTILIZING PRIMARY HISTORICAL SOURCES, MAPS, TIMELINES & ARTIFACTS"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_social_sciences": {
+            "id": "subject_specific_pedagogies.pedagogy_of_social_sciences",
+            "slug": "pedagogy_of_social_sciences",
+            "name": "Pedagogy of Social Sciences",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies",
+            "childrenIds": [
+                "subject_specific_pedagogies.pedagogy_of_social_sciences.nature_of_social_sciences_critical_thinking_source_method_role_play",
+                "subject_specific_pedagogies.pedagogy_of_social_sciences.utilizing_primary_sources_maps_historical_evidence_in_classrooms"
+            ],
+            "ancestorIds": [
+                "subject_specific_pedagogies"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "PEDAGOGY OF SOCIAL SCIENCES"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.four_language_skills_lsrw_listening_speaking_reading_writing": {
+            "id": "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.four_language_skills_lsrw_listening_speaking_reading_writing",
+            "slug": "four_language_skills_lsrw_listening_speaking_reading_writing",
+            "name": "Four Basic Language Skills: Listening, Speaking, Reading & Writing (LSRW)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_languages_kannada_english",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_languages_kannada_english"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "FOUR BASIC LANGUAGE SKILLS: LISTENING, SPEAKING, READING & WRITING (LSRW)"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.chomsky_language_acquisition_device_lad_universal_grammar": {
+            "id": "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.chomsky_language_acquisition_device_lad_universal_grammar",
+            "slug": "chomsky_language_acquisition_device_lad_universal_grammar",
+            "name": "Noam Chomsky Language Acquisition Device (LAD) & Universal Grammar",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_languages_kannada_english",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_languages_kannada_english"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NOAM CHOMSKY LANGUAGE ACQUISITION DEVICE (LAD) & UNIVERSAL GRAMMAR"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.approaches_to_language_teaching_communicative_structural_bilingual": {
+            "id": "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.approaches_to_language_teaching_communicative_structural_bilingual",
+            "slug": "approaches_to_language_teaching_communicative_structural_bilingual",
+            "name": "Language Teaching Approaches: Communicative (CLT), Structural, Grammar-Translation, Direct Method",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies.pedagogy_of_languages_kannada_english",
+            "childrenIds": [],
+            "ancestorIds": [
+                "subject_specific_pedagogies",
+                "subject_specific_pedagogies.pedagogy_of_languages_kannada_english"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "LANGUAGE TEACHING APPROACHES: COMMUNICATIVE (CLT), STRUCTURAL, GRAMMAR-TRANSLATION, DIRECT METHOD"
+            ]
+        },
+        "subject_specific_pedagogies.pedagogy_of_languages_kannada_english": {
+            "id": "subject_specific_pedagogies.pedagogy_of_languages_kannada_english",
+            "slug": "pedagogy_of_languages_kannada_english",
+            "name": "Pedagogy of Language Development (LSRW)",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": "subject_specific_pedagogies",
+            "childrenIds": [
+                "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.four_language_skills_lsrw_listening_speaking_reading_writing",
+                "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.chomsky_language_acquisition_device_lad_universal_grammar",
+                "subject_specific_pedagogies.pedagogy_of_languages_kannada_english.approaches_to_language_teaching_communicative_structural_bilingual"
+            ],
+            "ancestorIds": [
+                "subject_specific_pedagogies"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "PEDAGOGY OF LANGUAGE DEVELOPMENT (LSRW)"
+            ]
+        },
+        "subject_specific_pedagogies": {
+            "id": "subject_specific_pedagogies",
+            "slug": "subject_specific_pedagogies",
+            "name": "Subject-Specific Pedagogies (Science, Math, Social Science, Languages)",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "SUBJECT_SPECIFIC_PEDAGOGIES",
+            "subjectId": "subject_specific_pedagogies",
+            "parentId": null,
+            "childrenIds": [
+                "subject_specific_pedagogies.pedagogy_of_mathematics",
+                "subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies",
+                "subject_specific_pedagogies.pedagogy_of_social_sciences",
+                "subject_specific_pedagogies.pedagogy_of_languages_kannada_english"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "SUBJECT-SPECIFIC PEDAGOGIES (SCIENCE, MATH, SOCIAL SCIENCE, LANGUAGES)"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.national_education_policy_nep_2020_school_higher_education_5_3_3_4": {
+            "id": "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.national_education_policy_nep_2020_school_higher_education_5_3_3_4",
+            "slug": "national_education_policy_nep_2020_school_higher_education_5_3_3_4",
+            "name": "National Education Policy (NEP 2020): 5+3+3+4 Curricular Structure, PARAKH, NCF-SE 2023",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NATIONAL EDUCATION POLICY (NEP 2020): 5+3+3+4 CURRICULAR STRUCTURE, PARAKH, NCF-SE 2023"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.right_to_education_act_rte_2009_provisions_pupil_teacher_ratio_smc": {
+            "id": "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.right_to_education_act_rte_2009_provisions_pupil_teacher_ratio_smc",
+            "slug": "right_to_education_act_rte_2009_provisions_pupil_teacher_ratio_smc",
+            "name": "Right to Education (RTE) Act 2009: Section Provisions, PTR (1:30, 1:35), SMC Role",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "RIGHT TO EDUCATION (RTE) ACT 2009: SECTION PROVISIONS, PTR (1:30, 1:35), SMC ROLE"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.national_curriculum_frameworks_ncf_2005_ncf-se_2023_foundational_stage": {
+            "id": "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.national_curriculum_frameworks_ncf_2005_ncf-se_2023_foundational_stage",
+            "slug": "national_curriculum_frameworks_ncf_2005_ncf-se_2023_foundational_stage",
+            "name": "National Curriculum Frameworks: NCF 2005 Guiding Principles & NCF-FS / NCF-SE 2023",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NATIONAL CURRICULUM FRAMEWORKS: NCF 2005 GUIDING PRINCIPLES & NCF-FS / NCF-SE 2023"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts": {
+            "id": "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts",
+            "slug": "national_educational_policies_and_acts",
+            "name": "National Educational Policies & Acts",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude",
+            "childrenIds": [
+                "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.national_education_policy_nep_2020_school_higher_education_5_3_3_4",
+                "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.right_to_education_act_rte_2009_provisions_pupil_teacher_ratio_smc",
+                "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts.national_curriculum_frameworks_ncf_2005_ncf-se_2023_foundational_stage"
+            ],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NATIONAL EDUCATIONAL POLICIES & ACTS"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_types_fundamental_applied_action_qualitative_quantitative": {
+            "id": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_types_fundamental_applied_action_qualitative_quantitative",
+            "slug": "research_types_fundamental_applied_action_qualitative_quantitative",
+            "name": "Types of Research: Fundamental, Applied, Action, Qualitative & Quantitative Research",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "TYPES OF RESEARCH: FUNDAMENTAL, APPLIED, ACTION, QUALITATIVE & QUANTITATIVE RESEARCH"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_process_problem_formulation_hypothesis_sampling_methods": {
+            "id": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_process_problem_formulation_hypothesis_sampling_methods",
+            "slug": "research_process_problem_formulation_hypothesis_sampling_methods",
+            "name": "Research Process: Problem Formulation, Hypothesis Testing & Probability/Non-Probability Sampling",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "RESEARCH PROCESS: PROBLEM FORMULATION, HYPOTHESIS TESTING & PROBABILITY/NON-PROBABILITY SAMPLING"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.data_collection_tools_questionnaires_interviews_observations_scales": {
+            "id": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.data_collection_tools_questionnaires_interviews_observations_scales",
+            "slug": "data_collection_tools_questionnaires_interviews_observations_scales",
+            "name": "Data Collection Tools: Questionnaires, Structured Interviews, Psychometric Scales",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "DATA COLLECTION TOOLS: QUESTIONNAIRES, STRUCTURED INTERVIEWS, PSYCHOMETRIC SCALES"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_ethics_plagiarism_citation_styles_apa_mla_chicago": {
+            "id": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_ethics_plagiarism_citation_styles_apa_mla_chicago",
+            "slug": "research_ethics_plagiarism_citation_styles_apa_mla_chicago",
+            "name": "Research Ethics, Plagiarism Prevention (UGC Regulations) & Referencing Styles (APA, MLA)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "RESEARCH ETHICS, PLAGIARISM PREVENTION (UGC REGULATIONS) & REFERENCING STYLES (APA, MLA)"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.thesis_and_article_writing_format_style_peer_review": {
+            "id": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.thesis_and_article_writing_format_style_peer_review",
+            "slug": "thesis_and_article_writing_format_style_peer_review",
+            "name": "Thesis & Research Article Writing: Structure, Abstract, Methodology & Peer Review",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "THESIS & RESEARCH ARTICLE WRITING: STRUCTURE, ABSTRACT, METHODOLOGY & PEER REVIEW"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1": {
+            "id": "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1",
+            "slug": "research_methodology_kset_ugc_net_paper1",
+            "name": "Research Aptitude & Methodology (KSET & UGC-NET Paper 1)",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude",
+            "childrenIds": [
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_types_fundamental_applied_action_qualitative_quantitative",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_process_problem_formulation_hypothesis_sampling_methods",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.data_collection_tools_questionnaires_interviews_observations_scales",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.research_ethics_plagiarism_citation_styles_apa_mla_chicago",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1.thesis_and_article_writing_format_style_peer_review"
+            ],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "RESEARCH APTITUDE & METHODOLOGY (KSET & UGC-NET PAPER 1)"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.higher_education_regulatory_bodies_ugc_aicte_ncte_naac_nirf": {
+            "id": "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.higher_education_regulatory_bodies_ugc_aicte_ncte_naac_nirf",
+            "slug": "higher_education_regulatory_bodies_ugc_aicte_ncte_naac_nirf",
+            "name": "Regulatory & Quality Assurance Bodies: UGC, AICTE, NCTE, NAAC, NIRF & ABC (Academic Bank of Credits)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "REGULATORY & QUALITY ASSURANCE BODIES: UGC, AICTE, NCTE, NAAC, NIRF & ABC (ACADEMIC BANK OF CREDITS)"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.evolution_of_higher_learning_in_ancient_india_takshashila_nalanda_valabhi": {
+            "id": "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.evolution_of_higher_learning_in_ancient_india_takshashila_nalanda_valabhi",
+            "slug": "evolution_of_higher_learning_in_ancient_india_takshashila_nalanda_valabhi",
+            "name": "Ancient Institutions of Higher Learning: Takshashila, Nalanda, Valabhi, Vikramashila",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "ANCIENT INSTITUTIONS OF HIGHER LEARNING: TAKSHASHILA, NALANDA, VALABHI, VIKRAMASHILA"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.value_education_environmental_education_in_higher_institutions": {
+            "id": "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.value_education_environmental_education_in_higher_institutions",
+            "slug": "value_education_environmental_education_in_higher_institutions",
+            "name": "Value Education, Environmental Education & Skill Development in Higher Education",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance",
+            "childrenIds": [],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude",
+                "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "VALUE EDUCATION, ENVIRONMENTAL EDUCATION & SKILL DEVELOPMENT IN HIGHER EDUCATION"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance": {
+            "id": "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance",
+            "slug": "higher_education_system_and_governance",
+            "name": "Higher Education System, Governance & Quality Assurance",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": "national_policies_and_higher_education_research_aptitude",
+            "childrenIds": [
+                "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.higher_education_regulatory_bodies_ugc_aicte_ncte_naac_nirf",
+                "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.evolution_of_higher_learning_in_ancient_india_takshashila_nalanda_valabhi",
+                "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.value_education_environmental_education_in_higher_institutions"
+            ],
+            "ancestorIds": [
+                "national_policies_and_higher_education_research_aptitude"
+            ],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "HIGHER EDUCATION SYSTEM, GOVERNANCE & QUALITY ASSURANCE"
+            ]
+        },
+        "national_policies_and_higher_education_research_aptitude": {
+            "id": "national_policies_and_higher_education_research_aptitude",
+            "slug": "national_policies_and_higher_education_research_aptitude",
+            "name": "National Education Policies & Research Aptitude (TET, KSET & UGC-NET)",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE",
+            "subjectId": "national_policies_and_higher_education_research_aptitude",
+            "parentId": null,
+            "childrenIds": [
+                "national_policies_and_higher_education_research_aptitude.national_educational_policies_and_acts",
+                "national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1",
+                "national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "teaching": [
+                    "KARTET",
+                    "GPSTR",
+                    "HSTR",
+                    "CTET"
+                ],
+                "kset": [
+                    "Paper-1"
+                ],
+                "ugc_net": [
+                    "Paper-1"
+                ]
+            },
+            "rawExamTagString": "[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]",
+            "entities": [],
+            "keywords": [
+                "NATIONAL EDUCATION POLICIES & RESEARCH APTITUDE (TET, KSET & UGC-NET)"
+            ]
+        }
+    },
+    "stats": {
+        "total_nodes": 90,
+        "level_1_subjects": 6,
+        "level_2_domains": 19,
+        "level_3_topics": 65
+    }
+}

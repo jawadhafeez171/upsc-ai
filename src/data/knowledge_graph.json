@@ -22939,7 +22939,10 @@
         "geography_earth_systems.indian_physical_geography_monsoon_architecture",
         "geography_earth_systems.economic_resource_geography",
         "geography_earth_systems.human_geography_population_settlements",
-        "geography_earth_systems.geography_of_karnataka"
+        "geography_earth_systems.geography_of_karnataka",
+        "geography_earth_systems.world_mapping_geopolitical_locations",
+        "geography_earth_systems.indian_mapping_spatial_geography",
+        "geography_earth_systems.karnataka_mapping_state_geography"
       ],
       "ancestorIds": [],
       "examTags": {
@@ -49403,10 +49406,860 @@
         "relationship",
         "edges."
       ]
+    },
+    "geography_earth_systems.world_mapping_geopolitical_locations": {
+      "id": "geography_earth_systems.world_mapping_geopolitical_locations",
+      "slug": "world_mapping_geopolitical_locations",
+      "name": "World Mapping & Geopolitical Locations",
+      "level": 2,
+      "levelName": "Domain",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems",
+      "childrenIds": [
+        "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+        "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+        "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+        "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+        "geography_earth_systems.world_mapping_geopolitical_locations.mountain_ranges_peaks_plateaus_world",
+        "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories"
+      ],
+      "ancestorIds": [
+        "geography_earth_systems"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1",
+          "Mains-GS1",
+          "Mains-GS2"
+        ],
+        "kas": [
+          "Prelims-P1",
+          "Mains-GS2"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1, Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]",
+      "entities": [
+        "World Map",
+        "Geopolitics",
+        "Strategic Locations",
+        "Places in News"
+      ],
+      "keywords": [
+        "World",
+        "Mapping",
+        "Geopolitical",
+        "Locations",
+        "Seas",
+        "Straits",
+        "Conflict Zones",
+        "Rivers",
+        "Mountains"
+      ]
+    },
+    "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations": {
+      "id": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+      "slug": "enclosed_seas_bordering_nations",
+      "name": "Enclosed Seas, Marginal Seas & Bordering Nations (Mediterranean Sea, Black Sea, Caspian Sea, Red Sea, Baltic Sea, Persian Gulf, Aral Sea, Dead Sea)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.world_mapping_geopolitical_locations",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.world_mapping_geopolitical_locations"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Mediterranean Sea",
+        "Black Sea",
+        "Caspian Sea",
+        "Red Sea",
+        "Baltic Sea",
+        "Persian Gulf",
+        "Aral Sea"
+      ],
+      "keywords": [
+        "Enclosed",
+        "Seas",
+        "Bordering",
+        "Countries",
+        "Mediterranean",
+        "Black Sea",
+        "Caspian",
+        "Red Sea",
+        "Persian Gulf"
+      ]
+    },
+    "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals": {
+      "id": "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+      "slug": "strategic_straits_chokepoints_canals",
+      "name": "Strategic Maritime Straits, Canals & Chokepoints (Strait of Hormuz, Bab-el-Mandeb, Malacca Strait, Bosphorus & Dardanelles, Kerch Strait, Taiwan Strait, Suez Canal, Panama Canal)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.world_mapping_geopolitical_locations",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.world_mapping_geopolitical_locations"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1",
+          "Mains-GS2"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Strait of Hormuz",
+        "Bab-el-Mandeb",
+        "Malacca Strait",
+        "Bosphorus",
+        "Dardanelles",
+        "Kerch Strait",
+        "Taiwan Strait",
+        "Suez Canal"
+      ],
+      "keywords": [
+        "Straits",
+        "Chokepoints",
+        "Canals",
+        "Hormuz",
+        "Bab el Mandeb",
+        "Malacca",
+        "Bosphorus",
+        "Suez Canal",
+        "Panama"
+      ]
+    },
+    "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones": {
+      "id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "slug": "places_in_news_conflict_zones",
+      "name": "Places in News & Conflict Zones (West Asia / Levant: Gaza, West Bank, Golan Heights, Sinai; Sahel Region: Mali, Niger, Burkina Faso, Chad; Horn of Africa: Tigray, Somaliland; Eastern Europe: Donbas, Crimea, Zaporizhzhia; South China Sea)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.world_mapping_geopolitical_locations",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.world_mapping_geopolitical_locations"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1",
+          "Mains-GS2"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Gaza",
+        "Golan Heights",
+        "Sahel",
+        "Tigray",
+        "Donbas",
+        "Zaporizhzhia",
+        "South China Sea",
+        "Crimea"
+      ],
+      "keywords": [
+        "Places in News",
+        "Conflict Zones",
+        "Gaza",
+        "Golan",
+        "Sahel",
+        "Tigray",
+        "Donbas",
+        "Levant",
+        "South China Sea"
+      ]
+    },
+    "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage": {
+      "id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "slug": "major_world_rivers_lakes_drainage",
+      "name": "Major World Rivers, Lakes & Drainage Basins (Nile, Amazon, Congo, Danube, Rhine, Volga, Mekong, Tigris-Euphrates, Lake Victoria, Lake Baikal, Great Lakes of North America, Rift Valley Lakes)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.world_mapping_geopolitical_locations",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.world_mapping_geopolitical_locations"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Nile River",
+        "Amazon River",
+        "Danube River",
+        "Mekong River",
+        "Lake Victoria",
+        "Lake Baikal",
+        "Great Lakes"
+      ],
+      "keywords": [
+        "Rivers",
+        "Lakes",
+        "Drainage",
+        "Nile",
+        "Amazon",
+        "Danube",
+        "Mekong",
+        "Baikal",
+        "Great Lakes",
+        "World Geography"
+      ]
+    },
+    "geography_earth_systems.world_mapping_geopolitical_locations.mountain_ranges_peaks_plateaus_world": {
+      "id": "geography_earth_systems.world_mapping_geopolitical_locations.mountain_ranges_peaks_plateaus_world",
+      "slug": "mountain_ranges_peaks_plateaus_world",
+      "name": "Global Mountain Ranges, Continental Summits, Major Plateaus & Deserts (Alps, Andes, Rockies, Atlas, Urals, Anatolian Plateau, Tibetan Plateau, Atacama, Namib, Kalahari, Gobi)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.world_mapping_geopolitical_locations",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.world_mapping_geopolitical_locations"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Alps",
+        "Andes",
+        "Rockies",
+        "Atlas Mountains",
+        "Tibetan Plateau",
+        "Anatolian Plateau",
+        "Atacama Desert"
+      ],
+      "keywords": [
+        "Mountains",
+        "Plateaus",
+        "Deserts",
+        "Alps",
+        "Andes",
+        "Rockies",
+        "Tibet",
+        "Atacama",
+        "World Relief"
+      ]
+    },
+    "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories": {
+      "id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "slug": "international_land_borders_disputed_territories",
+      "name": "International Land Borders, Landlocked Nations & Disputed Boundary Lines (Radcliffe Line, McMahon Line, Durand Line, 38th Parallel, 49th Parallel, Kuril Islands, Senkaku/Diaoyu, Spratly/Paracel)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.world_mapping_geopolitical_locations",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.world_mapping_geopolitical_locations"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1",
+          "Mains-GS2"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Radcliffe Line",
+        "McMahon Line",
+        "Durand Line",
+        "Landlocked Countries",
+        "Disputed Islands"
+      ],
+      "keywords": [
+        "Borders",
+        "Boundary Lines",
+        "Landlocked",
+        "Durand Line",
+        "McMahon Line",
+        "Radcliffe",
+        "Disputed Territories"
+      ]
+    },
+    "geography_earth_systems.indian_mapping_spatial_geography": {
+      "id": "geography_earth_systems.indian_mapping_spatial_geography",
+      "slug": "indian_mapping_spatial_geography",
+      "name": "Indian Mapping & Spatial Geography",
+      "level": 2,
+      "levelName": "Domain",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems",
+      "childrenIds": [
+        "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+        "geography_earth_systems.indian_mapping_spatial_geography.himalayan_mountain_ranges_passes_glaciers",
+        "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout",
+        "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes",
+        "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels",
+        "geography_earth_systems.indian_mapping_spatial_geography.infrastructure_ports_transport_corridors"
+      ],
+      "ancestorIds": [
+        "geography_earth_systems"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1",
+          "Mains-GS1"
+        ],
+        "kas": [
+          "Prelims-P1",
+          "Mains-GS2"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]",
+      "entities": [
+        "India Map",
+        "Indian Rivers",
+        "Himalayas",
+        "Western Ghats",
+        "National Parks India",
+        "Indian Passes"
+      ],
+      "keywords": [
+        "India",
+        "Mapping",
+        "Rivers",
+        "Tributaries",
+        "Passes",
+        "National Parks",
+        "Hills",
+        "Ports",
+        "Channels"
+      ]
+    },
+    "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering": {
+      "id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "slug": "river_systems_tributaries_spatial_ordering",
+      "name": "Indian River Systems & Tributaries Spatial Layout (Indus Basin, Ganga Basin, Brahmaputra Basin, Peninsular Rivers: Godavari, Krishna, Cauvery, Mahanadi, Narmada, Tapi - Left & Right Bank Tributaries, North-to-South & West-to-East Ordering)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.indian_mapping_spatial_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.indian_mapping_spatial_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Indus River",
+        "Ganga River",
+        "Brahmaputra",
+        "Godavari",
+        "Krishna",
+        "Cauvery",
+        "Narmada",
+        "Tapi"
+      ],
+      "keywords": [
+        "Rivers",
+        "Tributaries",
+        "Left Bank",
+        "Right Bank",
+        "Indus",
+        "Ganga",
+        "Brahmaputra",
+        "Godavari",
+        "Krishna",
+        "Cauvery"
+      ]
+    },
+    "geography_earth_systems.indian_mapping_spatial_geography.himalayan_mountain_ranges_passes_glaciers": {
+      "id": "geography_earth_systems.indian_mapping_spatial_geography.himalayan_mountain_ranges_passes_glaciers",
+      "slug": "himalayan_mountain_ranges_passes_glaciers",
+      "name": "Himalayan Ranges, Mountain Passes & Glaciers (Karakoram, Ladakh, Zanskar, Great Himalayas, Pir Panjal, Dhauladhar, Shiwaliks; Passes: Zoji La, Khardung La, Rohtang, Shipki La, Lipulekh, Nathu La, Jelep La, Bomdi La; Glaciers: Siachen, Gangotri, Zemu)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.indian_mapping_spatial_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.indian_mapping_spatial_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Karakoram",
+        "Zanskar",
+        "Pir Panjal",
+        "Zoji La",
+        "Nathu La",
+        "Shipki La",
+        "Siachen Glacier"
+      ],
+      "keywords": [
+        "Himalayas",
+        "Passes",
+        "Zoji La",
+        "Nathu La",
+        "Shipki La",
+        "Lipulekh",
+        "Siachen",
+        "Glaciers",
+        "Mountain Ranges"
+      ]
+    },
+    "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout": {
+      "id": "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout",
+      "slug": "protected_areas_wildlife_corridors_spatial_layout",
+      "name": "Protected Areas & Biogeography Spatial Layout (North-to-South and West-to-East Sequential Ordering of National Parks, Tiger Reserves, Ramsar Wetlands, Biosphere Reserves & Wildlife Corridors in India)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.indian_mapping_spatial_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.indian_mapping_spatial_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "National Parks India",
+        "Tiger Reserves",
+        "Ramsar Sites India",
+        "Biosphere Reserves",
+        "Corridors"
+      ],
+      "keywords": [
+        "National Parks",
+        "Tiger Reserves",
+        "Ramsar Sites",
+        "Biosphere Reserves",
+        "Spatial Ordering",
+        "North to South",
+        "Wildlife"
+      ]
+    },
+    "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes": {
+      "id": "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes",
+      "slug": "peninsular_hills_plateaus_passes",
+      "name": "Peninsular Hills, Plateaus & Mountain Passes (Aravalli, Vindhya, Satpura, Western Ghats / Sahyadri, Eastern Ghats, Nilgiri Hills, Anaimalai, Cardamom Hills; Thal Ghat, Bhor Ghat, Palghat Gap, Shencottah Gap; Anamudi & Doddabetta Peaks)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.indian_mapping_spatial_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.indian_mapping_spatial_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "Western Ghats",
+        "Eastern Ghats",
+        "Aravalli",
+        "Nilgiris",
+        "Palghat Gap",
+        "Anamudi",
+        "Thal Ghat"
+      ],
+      "keywords": [
+        "Western Ghats",
+        "Eastern Ghats",
+        "Nilgiris",
+        "Palghat",
+        "Anaimalai",
+        "Cardamom Hills",
+        "Peninsular India",
+        "Passes"
+      ]
+    },
+    "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels": {
+      "id": "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels",
+      "slug": "coastal_features_islands_maritime_channels",
+      "name": "Coastal Features, Island Territories & Maritime Channels (10 Degree Channel: Andaman & Nicobar, 9 Degree Channel: Minicoy & Lakshadweep, 8 Degree Channel: Minicoy & Maldives, Palk Strait, Gulf of Mannar, Rann of Kutch, Sir Creek, Konkan & Coromandel Coast)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.indian_mapping_spatial_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.indian_mapping_spatial_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]",
+      "entities": [
+        "10 Degree Channel",
+        "9 Degree Channel",
+        "8 Degree Channel",
+        "Palk Strait",
+        "Gulf of Mannar",
+        "Andaman Nicobar",
+        "Lakshadweep"
+      ],
+      "keywords": [
+        "10 Degree Channel",
+        "9 Degree Channel",
+        "Palk Strait",
+        "Gulf of Mannar",
+        "Andaman",
+        "Lakshadweep",
+        "Coastline",
+        "Islands"
+      ]
+    },
+    "geography_earth_systems.indian_mapping_spatial_geography.infrastructure_ports_transport_corridors": {
+      "id": "geography_earth_systems.indian_mapping_spatial_geography.infrastructure_ports_transport_corridors",
+      "slug": "infrastructure_ports_transport_corridors",
+      "name": "Major Sea Ports, National Waterways, Dedicated Freight Corridors & Industrial Transport Corridors (Major 13 Ports, NW-1 to NW-5, Western & Eastern DFC, Golden Quadrilateral & Strategic Expressways)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.indian_mapping_spatial_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.indian_mapping_spatial_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1",
+          "Mains-GS3"
+        ],
+        "kas": [
+          "Prelims-P1",
+          "Mains-GS2"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]",
+      "entities": [
+        "Major Ports India",
+        "National Waterways",
+        "Dedicated Freight Corridors",
+        "Golden Quadrilateral"
+      ],
+      "keywords": [
+        "Ports",
+        "National Waterways",
+        "Freight Corridors",
+        "DFC",
+        "Infrastructure Mapping",
+        "Transport Corridors"
+      ]
+    },
+    "geography_earth_systems.karnataka_mapping_state_geography": {
+      "id": "geography_earth_systems.karnataka_mapping_state_geography",
+      "slug": "karnataka_mapping_state_geography",
+      "name": "Karnataka Mapping & Spatial Geography",
+      "level": 2,
+      "levelName": "Domain",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems",
+      "childrenIds": [
+        "geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs",
+        "geography_earth_systems.karnataka_mapping_state_geography.western_ghats_peaks_elevations",
+        "geography_earth_systems.karnataka_mapping_state_geography.agro_climatic_zones_mineral_belts"
+      ],
+      "ancestorIds": [
+        "geography_earth_systems"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1",
+          "Mains-GS2"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]",
+      "entities": [
+        "Karnataka Map",
+        "Krishna Basin Karnataka",
+        "Cauvery Basin",
+        "Western Ghats Karnataka",
+        "Mullayanagiri"
+      ],
+      "keywords": [
+        "Karnataka",
+        "Mapping",
+        "Rivers",
+        "Waterfalls",
+        "Peaks",
+        "Mullayanagiri",
+        "Agro-Climatic Zones",
+        "Districts"
+      ]
+    },
+    "geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs": {
+      "id": "geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs",
+      "slug": "river_basins_waterfalls_reservoirs",
+      "name": "Karnataka River Basins, Tributaries, Waterfalls & Major Dams Spatial Distribution (Krishna, Cauvery, Godavari, Pennar, West-Flowing Rivers: Sharavathi, Bedthi, Netravathi; Waterfalls: Jog, Shivanasamudra, Gokak, Magod, Abbey; Dams: KRS, Almatti, Tungabhadra, Linganamakki)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.karnataka_mapping_state_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.karnataka_mapping_state_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1",
+          "Mains-GS2"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]",
+      "entities": [
+        "Krishna Basin",
+        "Cauvery Basin",
+        "Sharavathi",
+        "Jog Falls",
+        "Shivanasamudra",
+        "KRS Dam",
+        "Almatti"
+      ],
+      "keywords": [
+        "Karnataka Rivers",
+        "Krishna",
+        "Cauvery",
+        "Sharavathi",
+        "Jog Falls",
+        "Gokak",
+        "KRS Dam",
+        "Almatti",
+        "Waterfalls"
+      ]
+    },
+    "geography_earth_systems.karnataka_mapping_state_geography.western_ghats_peaks_elevations": {
+      "id": "geography_earth_systems.karnataka_mapping_state_geography.western_ghats_peaks_elevations",
+      "slug": "western_ghats_peaks_elevations",
+      "name": "Western Ghats Mountain Peaks & Elevations Descending Order in Karnataka (Mullayanagiri 1930m, Bababudangiri 1895m, Kudremukh 1894m, Pushpagiri / Kumara Parvatha 1712m, Tadiandamol 1748m, Biligirirangana Hills)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.karnataka_mapping_state_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.karnataka_mapping_state_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1",
+          "Mains-GS2"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]",
+      "entities": [
+        "Mullayanagiri",
+        "Bababudangiri",
+        "Kudremukh",
+        "Pushpagiri",
+        "Tadiandamol",
+        "Western Ghats Karnataka"
+      ],
+      "keywords": [
+        "Peaks Karnataka",
+        "Mullayanagiri",
+        "Kudremukh",
+        "Bababudangiri",
+        "Pushpagiri",
+        "Tadiandamol",
+        "Elevation Order"
+      ]
+    },
+    "geography_earth_systems.karnataka_mapping_state_geography.agro_climatic_zones_mineral_belts": {
+      "id": "geography_earth_systems.karnataka_mapping_state_geography.agro_climatic_zones_mineral_belts",
+      "slug": "agro_climatic_zones_mineral_belts",
+      "name": "10 Agro-Climatic Zones, District Boundaries, National Parks & Mineral Belts of Karnataka (Coastal, Hilly/Malnad, Northern Dry, Central Dry, Southern Dry; Sandur/Bellary Iron Ore, Kolar Gold, Hassan Chromite; Bandipur, Nagarhole, Kudremukh, Anshi, Bannerghatta)",
+      "level": 3,
+      "levelName": "Topic",
+      "subject": "Geography & Earth Systems",
+      "subjectId": "geography_earth_systems",
+      "parentId": "geography_earth_systems.karnataka_mapping_state_geography",
+      "childrenIds": [],
+      "ancestorIds": [
+        "geography_earth_systems",
+        "geography_earth_systems.karnataka_mapping_state_geography"
+      ],
+      "examTags": {
+        "upsc": [
+          "Prelims-GS1"
+        ],
+        "kas": [
+          "Prelims-P1",
+          "Mains-GS2"
+        ],
+        "ssc": [
+          "GA"
+        ]
+      },
+      "rawExamTagString": "[UPSC: Prelims-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]",
+      "entities": [
+        "Agro-Climatic Zones Karnataka",
+        "Mineral Belts",
+        "Sandur",
+        "Bandipur",
+        "Nagarhole",
+        "Kudremukh"
+      ],
+      "keywords": [
+        "10 Agro-Climatic Zones",
+        "Districts Karnataka",
+        "Mineral Belts",
+        "National Parks Karnataka",
+        "Bandipur",
+        "Nagarhole"
+      ]
     }
   },
   "stats": {
-    "totalNodes": 797,
+    "totalNodes": 815,
     "byLevel": {
       "subjects": 14,
       "domains": 100,
@@ -49437,6 +50290,8 @@
       "police": 29,
       "ssc": 452,
       "banking": 0
-    }
+    },
+    "domainsCount": 103,
+    "topicsCount": 397
   }
 }

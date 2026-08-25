@@ -36,15 +36,71 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             let selectedRawQuestions: any[] = [];
 
             if (config.exam_id === 'upsc-cse') {
-                let query = supabase.from('upsc_questions').select('*').gt('year', 0);
-                if (config.mode === 'subject' && config.subject) query = query.ilike('subject', `%${config.subject}%`);
-                if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
-                if (config.year && config.year !== 'all') query = query.eq('year', config.year);
-                if (config.paper && config.paper !== 'all') query = query.eq('paper', config.paper);
-                const { data, error } = await query;
+                if (config.paper === 2) {
+                    let query = supabase.from('csat_pyq').select('*').gt('year', 0);
+                    if (config.mode === 'subject' && config.subject) query = query.or(`domain.ilike.%${config.subject}%,sub_topic.ilike.%${config.subject}%`);
+                    if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                    if (config.year && config.year !== 'all') query = query.eq('year', config.year);
+                    const { data, error } = await query;
 
-                if (!error && data && data.length > 0) {
-                    const shuffled = [...data].sort(() => Math.random() - 0.5);
+                    if (!error && data && data.length > 0) {
+                        const shuffled = [...data].sort(() => Math.random() - 0.5);
+                        selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
+                    } else {
+                        // Local fallback for CSAT 2020
+                        try {
+                            const csatModule = await import('@/data/upsc_pyq/csat/2020_csat.json');
+                            let filtered = [...(csatModule.default || csatModule)];
+                            if (config.mode === 'subject' && config.subject) {
+                                const subLower = config.subject.toLowerCase();
+                                filtered = filtered.filter((q: any) => 
+                                    q.domain?.toLowerCase().includes(subLower) || 
+                                    q.sub_topic?.toLowerCase().includes(subLower) ||
+                                    q.subject?.toLowerCase().includes(subLower)
+                                );
+                            }
+                            if (config.difficulty && config.difficulty !== 'mixed') {
+                                filtered = filtered.filter((q: any) => q.difficulty?.toLowerCase() === config.difficulty);
+                            }
+                            const shuffled = filtered.sort(() => Math.random() - 0.5);
+                            selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
+                        } catch (err) {
+                            console.error('CSAT fallback error:', err);
+                        }
+                    }
+                } else if (config.paper === 1) {
+                    let query = supabase.from('upsc_questions').select('*').gt('year', 0);
+                    if (config.mode === 'subject' && config.subject) query = query.ilike('subject', `%${config.subject}%`);
+                    if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                    if (config.year && config.year !== 'all') query = query.eq('year', config.year);
+                    const { data, error } = await query;
+
+                    if (!error && data && data.length > 0) {
+                        const shuffled = [...data].sort(() => Math.random() - 0.5);
+                        selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
+                    }
+                } else {
+                    let q1 = supabase.from('upsc_questions').select('*').gt('year', 0);
+                    let q2 = supabase.from('csat_pyq').select('*').gt('year', 0);
+                    if (config.difficulty && config.difficulty !== 'mixed') {
+                        q1 = q1.eq('difficulty', config.difficulty);
+                        q2 = q2.eq('difficulty', config.difficulty);
+                    }
+                    if (config.year && config.year !== 'all') {
+                        q1 = q1.eq('year', config.year);
+                        q2 = q2.eq('year', config.year);
+                    }
+                    const [{ data: d1 }, { data: d2 }] = await Promise.all([q1, q2]);
+                    let combined = [...(d1 || [])];
+                    if (d2 && d2.length > 0) {
+                        combined = [...combined, ...d2];
+                    } else {
+                        try {
+                            const csatModule = await import('@/data/upsc_pyq/csat/2020_csat.json');
+                            combined = [...combined, ...(csatModule.default || csatModule)];
+                        } catch (e) {}
+                    }
+                    const shuffled = combined.sort(() => Math.random() - 0.5);
                     selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
                 }
             } else if (config.exam_id === 'kpsc-kas') {
@@ -76,8 +132,8 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     const shuffledFinal = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
                     const diffOrder: Record<string, number> = { easy: 0, medium: 1, hard: 2 };
                     shuffledFinal.sort((a, b) => {
-                        const subA = a.subject_name || a.subject || '';
-                        const subB = b.subject_name || b.subject || '';
+                        const subA = a.domain || a.subject_name || a.subject || '';
+                        const subB = b.domain || b.subject_name || b.subject || '';
                         const diffA = (a.difficulty || 'medium').toLowerCase();
                         const diffB = (b.difficulty || 'medium').toLowerCase();
                         if (subA !== subB) return subA.localeCompare(subB);
@@ -87,7 +143,32 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 }
 
                 const formattedQs: Question[] = sortedQuestions.map((dbq) => {
-                    if (dbq.options_en && Array.isArray(dbq.options_en)) {
+                    // CSAT Question Format (from csat_pyq or 2020_csat.json)
+                    if (dbq.question_english) {
+                        const optionsList = [
+                            { id: 'a', text: dbq.option_a_english || '', text_hi: dbq.option_a_hindi || undefined },
+                            { id: 'b', text: dbq.option_b_english || '', text_hi: dbq.option_b_hindi || undefined },
+                            { id: 'c', text: dbq.option_c_english || '', text_hi: dbq.option_c_hindi || undefined },
+                            { id: 'd', text: dbq.option_d_english || '', text_hi: dbq.option_d_hindi || undefined }
+                        ];
+                        const rawAns = (dbq.key_answer || 'a').toLowerCase().trim();
+                        const correctChar = ['a', 'b', 'c', 'd'].includes(rawAns) ? rawAns : 'a';
+                        return {
+                            id: dbq.id || `csat-${dbq.year || 2020}-q${dbq.question_number || 1}`,
+                            exam_id: 'upsc-cse',
+                            subject: dbq.domain || dbq.subject || 'CSAT Aptitude',
+                            difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
+                            text: dbq.question_english,
+                            text_hi: dbq.question_hindi || undefined,
+                            options: optionsList,
+                            correct: correctChar,
+                            explanation: dbq.explanation_english || 'No explanation available.',
+                            explanation_hi: dbq.explanation_hindi || undefined,
+                            image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
+                            subject_kannada: dbq.subject_kannada || undefined,
+                            sub_topic_kannada: dbq.sub_topic_kannada || undefined
+                        };
+                    } else if (dbq.options_en && Array.isArray(dbq.options_en)) {
                         return {
                             id: dbq.id,
                             exam_id: dbq.exam_id || 'upsc-cse',

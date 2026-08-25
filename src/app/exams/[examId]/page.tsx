@@ -73,13 +73,38 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                 // Calculate available questions
                 let qCount = 0;
                 if (examId === 'upsc-cse') {
-                    let query = supabase.from('upsc_questions').select('id', { count: 'exact', head: true }).gt('year', 0);
-                    if (mode === 'subject' && subject) query = query.ilike('subject', `%${subject}%`);
-                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
-                    if (year !== 'all') query = query.eq('year', year);
-                    if (paper !== 'all') query = query.eq('paper', paper);
-                    const { count: uCount } = await query;
-                    qCount = uCount || 0;
+                    if (paper === 2) {
+                        let query = supabase.from('csat_pyq').select('id', { count: 'exact', head: true }).gt('year', 0);
+                        if (mode === 'subject' && subject) query = query.or(`domain.ilike.%${subject}%,sub_topic.ilike.%${subject}%`);
+                        if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                        if (year !== 'all') query = query.eq('year', year);
+                        const { count: cCount, error: cErr } = await query;
+                        if (!cErr && cCount !== null && cCount > 0) {
+                            qCount = cCount;
+                        } else {
+                            qCount = 80; // Local CSAT fallback count
+                        }
+                    } else if (paper === 1) {
+                        let query = supabase.from('upsc_questions').select('id', { count: 'exact', head: true }).gt('year', 0);
+                        if (mode === 'subject' && subject) query = query.ilike('subject', `%${subject}%`);
+                        if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                        if (year !== 'all') query = query.eq('year', year);
+                        const { count: uCount } = await query;
+                        qCount = uCount || 0;
+                    } else {
+                        let q1 = supabase.from('upsc_questions').select('id', { count: 'exact', head: true }).gt('year', 0);
+                        let q2 = supabase.from('csat_pyq').select('id', { count: 'exact', head: true }).gt('year', 0);
+                        if (difficulty !== 'mixed') {
+                            q1 = q1.eq('difficulty', difficulty);
+                            q2 = q2.eq('difficulty', difficulty);
+                        }
+                        if (year !== 'all') {
+                            q1 = q1.eq('year', year);
+                            q2 = q2.eq('year', year);
+                        }
+                        const [{ count: c1 }, { count: c2, error: c2Err }] = await Promise.all([q1, q2]);
+                        qCount = (c1 || 0) + (c2 !== null && !c2Err ? c2 : 80);
+                    }
                 } else if (examId === 'kpsc-kas') {
                     let query = supabase.from('kas_questions').select('id', { count: 'exact', head: true });
                     if (mode === 'subject' && subject) query = query.eq('subject', subject);
@@ -132,7 +157,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             question_count: finalCount,
             language: testLang,
             year: examId === 'upsc-cse' || examId === 'kpsc-kas' ? year : undefined,
-            paper: examId === 'kpsc-kas' ? paper : undefined,
+            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : undefined,
             month: examId === 'kpsc-kas' ? month : undefined
         };
 
@@ -152,7 +177,25 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
     const examTitle = language === 'kn' && exam.name_kn ? exam.name_kn : (exam.title || exam.name);
     const examDesc = language === 'kn' && exam.description_kn ? exam.description_kn : exam.description;
-    const examTopics = language === 'kn' && exam.subjects_kn ? exam.subjects_kn : (exam.topics || exam.subjects || []);
+    
+    let baseTopics = language === 'kn' && exam.subjects_kn ? exam.subjects_kn : (exam.topics || exam.subjects || []);
+    if (examId === 'upsc-cse') {
+        if (paper === 2) {
+            baseTopics = [
+                'Reading Comprehension & Interpersonal Skills',
+                'Quantitative Aptitude & Basic Numeracy',
+                'General Mental Ability & Logical Reasoning'
+            ];
+        } else if (paper === 'all') {
+            baseTopics = [
+                ...baseTopics,
+                'Reading Comprehension & Interpersonal Skills',
+                'Quantitative Aptitude & Basic Numeracy',
+                'General Mental Ability & Logical Reasoning'
+            ];
+        }
+    }
+    const examTopics = baseTopics;
 
     return (
         <div style={{ background: 'var(--bg-primary)', minHeight: '100vh', padding: '40px 0 80px' }}>
