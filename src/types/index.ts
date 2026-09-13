@@ -54,6 +54,7 @@ export interface TestConfig {
     year?: number | 'all';
     paper?: number | 'all';
     month?: string | 'all';
+    paper_code?: 'hk' | 'nhk' | 'all';
 }
 
 export interface TestAnswer {

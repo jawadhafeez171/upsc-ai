@@ -586,207 +586,1195 @@ Art, Culture & Heritage
 - Indian Literature & Languages
 - Schools of Indian Philosophy
 - Fairs, Festivals, Crafts & UNESCO Heritage
+- Art, Architecture & Cultural Heritage of Karnataka
+- Martial Arts, Traditional Sports & Indian Calendar Systems
+- Cultural Institutions, Numismatics & Heritage Governance
 
 Indian Architecture & Sculpture `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
 
-- Harappan Architecture & Town Planning (Citadel, Great Bath, Granaries, Drainage System)
-- Mauryan Art & Pillars (Ashokan Pillars, Stupas, Sanchi, Bharhut, Rock-Cut Caves - Barabar)
-- Post-Mauryan Caves & Sculpture (Karle, Bhaja, Kanheri, Gandhara, Mathura & Amaravati Schools of Art)
-- Temple Architecture Styles (Nagara Style - Odisha, Khajuraho, Solanki; Dravida Style - Pallava, Chola, Vijayanagara; Vesara / Chalukyan Style - Badami, Pattadakal, Hoysala)
-- Indo-Islamic Architecture (Imperial / Delhi Sultanate Style, Provincial Styles, Mughal Architecture - Taj Mahal, Fatehpur Sikri, Red Fort)
-- Colonial & Modern Architecture (Indo-Saracenic Architecture, Neo-Gothic Style, Neo-Classical Style, Lutyens' Delhi)
+### Harappan Architecture & Town Planning (Citadel, Great Bath, Granaries, Drainage System)
+
+- **Harappan Citadel, Lower Town & Drainage Infrastructure** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Grid-iron layout, citadel on elevated platform, lower town residential quarters, Great Bath with gypsum mortar waterproofing, massive granaries, and underground covered drainage network with inspection manholes.
+  *Key Concepts & Entities*: Grid-iron Town Plan • Citadel and Lower Town • Great Bath Mohenjo-daro • Brick Granaries • Covered Drainage Systems • Lothal Dockyard
+
+- **Harappan Sculptures: Bronze Dancing Girl & Steatite Priest** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Lost-wax (cire-perdue) technique in bronze Dancing Girl of Mohenjo-daro, steatite bearded Priest-King draped in trefoil patterned shawl, red sandstone male torso, and terracotta Mother Goddess figurines.
+  *Key Concepts & Entities*: Bronze Dancing Girl • Lost-Wax Technique (Cire-Perdue) • Steatite Priest-King • Trefoil Motif • Mother Goddess Figurines • Red Sandstone Male Torso
+
+### Mauryan Art & Pillars (Ashokan Pillars, Stupas, Sanchi, Bharhut, Rock-Cut Caves - Barabar)
+
+- **Ashokan Monolithic Pillars & Sarnath Lion Capital** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Chunar sandstone monolithic shafts with distinctive Mauryan high polish (glass-like sheen), animal capitals (Sarnath Lion Capital, Rampurva Bull, Lauriya-Nandangarh), abacus carvings, and Ashoka Chakra symbolism.
+  *Key Concepts & Entities*: Ashokan Monolithic Pillars • Chunar Sandstone Polish • Sarnath Lion Capital • Dharmachakra Symbolism • Rampurva Bull Capital • Abacus Carvings
+
+- **Mauryan Rock-Cut Caves & Didarganj Yakshini** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Barabar and Nagarjuni rock-cut caves dedicated to Ajivika ascetics (Lomas Rishi cave featuring horseshoe-shaped chaitya arch), and life-size polished freestanding stone statues including Didarganj Yakshini holding a flywhisk (chauri).
+  *Key Concepts & Entities*: Barabar Hill Caves • Lomas Rishi Chaitya Arch • Ajivika Sect Patronage • Didarganj Yakshini • Parkham Yaksha • Chauri-bearer Sculpture
+
+### Post-Mauryan Caves & Sculpture (Karle, Bhaja, Kanheri, Gandhara, Mathura & Amaravati Schools of Art)
+
+- **Sculpture Schools: Gandhara, Mathura & Amaravati** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Comparative analysis of post-Mauryan sculpture schools: Gandhara (Greco-Roman Apollo-like Buddha, grey/blue schist, wavy hair), Mathura (indigenous, spotted red sandstone, seated fleshy Buddha, Jina, Brahmanical deities), Amaravati (white marble/limestone, dynamic narrative reliefs of Jataka tales).
+  *Key Concepts & Entities*: Gandhara Art School • Greco-Buddhist Hybrid Style • Mathura Sculpture School • Spotted Red Sandstone • Amaravati School • White Marble Jataka Reliefs
+
+- **Stupa Architecture (Sanchi) & Western Deccan Caves** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Structural components of Stupa (Anda hemispherical mound, Medhi circular terrace, Harmika square railing, Chhatra threefold umbrella, Torana gateways with intricate narrative carvings at Great Stupa Sanchi); Rock-cut Buddhist Chaityas (prayer halls) and Viharas (monasteries) at Karle, Bhaja, and Kanheri.
+  *Key Concepts & Entities*: Great Stupa Sanchi • Torana Gateways • Harmika & Chhatra • Karle Grand Chaitya • Bhaja & Bedse Caves • Rock-cut Viharas
+
+### Temple Architecture Styles (Nagara Style - Odisha, Khajuraho, Solanki; Dravida Style - Pallava, Chola, Vijayanagara; Vesara / Chalukyan Style - Badami, Pattadakal, Hoysala)
+
+- **Nagara Style Temple Architecture (Odisha, Khajuraho, Solanki)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  North Indian Nagara style (curvilinear Shikhara / Rekha-Prasad, Phamsana, Valabhi, Amalaka, Kalasha); Sub-schools: Odisha (Deula, Jagamohana - Konark Sun Temple, Lingaraj), Khajuraho (erotic sculptures, Panchayatana plan, Kandariya Mahadeva), Solanki / Maru-Gurjara (stepped tank Surya Kund at Modhera, Dilwara Jain temples with carved white marble ceilings).
+  *Key Concepts & Entities*: Nagara Architecture • Rekha-Prasad Shikhara • Amalaka & Kalasha • Khajuraho Panchayatana Style • Kandariya Mahadeva Temple • Odisha Deula Style • Modhera Sun Temple • Dilwara Marble Carvings
+
+- **Dravida Style Temple Architecture (Pallava, Chola, Nayaka)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  South Indian Dravida style characterized by pyramidal stepped tower (Vimana), monumental entrance gateways (Gopurams), pillared assembly halls (Mandapas), sacred water tanks, and enclosed Prakara walls; Evolution through Pallavas (Shore Temple Mahabalipuram), Imperial Cholas (Brihadeeswara Temple Thanjavur), and Madurai Nayakas (Meenakshi Temple thousand-pillared halls).
+  *Key Concepts & Entities*: Dravida Style Architecture • Pyramidal Vimana • Monumental Gopuram • Brihadeeswara Temple Thanjavur • Mahabalipuram Shore Temple • Nayaka Mandapas • Prakara Enclosures
+
+- **Vesara Hybrid Style & Monolithic Rock-Cut Kailasa** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Vesara / Karnataka hybrid school blending Nagara curvilinear profile with Dravida tier articulation; Early experimentation at Aihole, Badami, and Pattadakal (Virupaksha Temple); Pinnacle of rock-cut monolithic excavation in Kailasanatha Temple (Cave 16, Ellora) carved top-down under Rashtrakuta King Krishna I.
+  *Key Concepts & Entities*: Vesara Architectural Style • Aihole Experimentation • Pattadakal Virupaksha • Kailasanatha Temple Ellora (Cave 16) • Top-down Monolithic Excavation • Rashtrakuta Patronage
+
+### Indo-Islamic Architecture (Imperial / Delhi Sultanate Style, Provincial Styles, Mughal Architecture - Taj Mahal, Fatehpur Sikri, Red Fort)
+
+- **Delhi Sultanate Architecture (Mamluk, Khalji, Tughlaq, Lodi)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Introduction of true arch (arcuate system), dome, minarets, and geometric arabesque / calligraphic motifs; Mamluk (Qutub Minar, Quwwat-ul-Islam), Khalji (Alai Darwaza red sandstone with white marble), Tughlaq (sloping battered walls, grey stone, Tughlaqabad), and Lodi period (octagonal tombs, double dome introduction).
+  *Key Concepts & Entities*: Arcuate Architectural System • True Arch and Dome • Qutub Minar Complex • Alai Darwaza • Tughlaq Battered Walls • Lodi Double Dome Tombs
+
+- **Mughal Architecture: Charbagh, Red Sandstone & Marble Inlay** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  High aesthetic synthesis of Persian, Central Asian, and indigenous Indian traditions; Humayun's Tomb (first Charbagh garden tomb and Persian double dome), Akbar's Fatehpur Sikri (Buland Darwaza, Panch Mahal, Jodha Bai palace), Jahangir's Itimad-ud-Daulah (pioneering Pietra Dura floral inlay), and Shah Jahan's white marble masterpieces (Taj Mahal, Red Fort, Jama Masjid Delhi).
+  *Key Concepts & Entities*: Charbagh Garden Layout • Humayun's Tomb • Fatehpur Sikri & Buland Darwaza • Pietra Dura Inlay Technique • Taj Mahal Architecture • Red Fort Diwan-i-Khas
+
+### Colonial & Modern Architecture (Indo-Saracenic Architecture, Neo-Gothic Style, Neo-Classical Style, Lutyens' Delhi)
+
+- **Colonial Indo-Saracenic & Neo-Gothic Architecture** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Portuguese Baroque churches in Old Goa (Basilica of Bom Jesus, Se Cathedral); British colonial architectural styles: Neo-Classical, Victorian Neo-Gothic (Chhatrapati Shivaji Maharaj Terminus Mumbai, St. Paul's Cathedral Kolkata), and Indo-Saracenic synthesis (Gateway of India, Victoria Memorial, Madras High Court).
+  *Key Concepts & Entities*: Indo-Saracenic Style • Victorian Neo-Gothic • CSMT Mumbai • Victoria Memorial Kolkata • Goan Baroque Architecture • Basilica of Bom Jesus
+
+- **Modern & Post-Independence Architecture (Lutyens, Corbusier, Baker)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Imperial New Delhi planned by Edwin Lutyens and Herbert Baker (Rashtrapati Bhavan, Parliament House, India Gate); Post-independence modernist city planning by Le Corbusier in Chandigarh (Capitol Complex, concrete brise-soleil); Sustainable, vernacular cost-effective brick architecture of Laurie Baker in Kerala.
+  *Key Concepts & Entities*: Lutyens' Delhi Plan • Rashtrapati Bhavan Architecture • Le Corbusier Capitol Complex Chandigarh • Laurie Baker Vernacular Architecture • Post-Independence Modernism
 
 Indian Paintings & Visual Arts `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
 
-- Prehistoric Rock Art (Bhimbetka, Lakhudiyar, Kupgallu)
-- Ancient & Medieval Murals (Ajanta Caves, Ellora, Bagh Caves, Sittanavasal, Lepakshi)
-- Miniature Painting Traditions (Pala & Jain Manuscript Paintings, Mughal School, Rajasthani Schools - Mewar, Marwar, Kishangarh Bani Thani, Pahari Schools - Basohli, Kangra)
-- Folk & Regional Painting Styles (Madhubani / Mithila, Kalamkari, Pattachitra, Warli, Tanjore Paintings, Phad, Gond, Cheriyal)
+### Prehistoric Rock Art (Bhimbetka, Lakhudiyar, Kupgallu)
+
+- **Prehistoric Rock Paintings: Bhimbetka & Lakhudiyar** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Upper Palaeolithic and Mesolithic rock art at UNESCO site Bhimbetka (Madhya Pradesh) and Lakhudiyar (Uttarakhand); natural mineral pigments (red ochre/geru, white from limestone), stick-like human figures, group dancing, animal hunt depictions (bison, boars, deer, elephants).
+  *Key Concepts & Entities*: Bhimbetka Caves Rock Art • Mesolithic Hunting Scenes • Red Ochre and White Pigments • Lakhudiyar Rock Shelters • Prehistoric Zoo Rock
+
+### Ancient & Medieval Murals (Ajanta Caves, Ellora, Bagh Caves, Sittanavasal, Lepakshi)
+
+- **Classical Murals: Ajanta, Ellora, Bagh & Sittanavasal** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Technique of Indian mural painting (clay, cow dung, straw plaster ground with lime coat and tempera pigments); Masterpieces at Ajanta Caves (Bodhisattva Padmapani and Vajrapani in Cave 1, Mahajanaka Jataka, Dying Princess), Ellora Kailasa murals, Bagh cave paintings, and Jain murals at Sittanavasal (Pudukkottai).
+  *Key Concepts & Entities*: Ajanta Cave Murals • Bodhisattva Padmapani Fresco-Secco • Tempera Technique • Sittanavasal Jain Murals • Bagh Cave Paintings • Jataka Tale Narrative Panels
+
+### Miniature Painting Traditions (Pala & Jain Manuscript Paintings, Mughal School, Rajasthani Schools - Mewar, Marwar, Kishangarh Bani Thani, Pahari Schools - Basohli, Kangra)
+
+- **Mughal Miniatures: Court Chronicles, Realism & Portraiture** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Development of Mughal atelier under Akbar (Hamzanama, Razmnama, Tasvir Khana, blending Persian delicacy with Indian dynamism), Jahangir (flora and fauna naturalism, Ustad Mansur's Siberian crane and dodo paintings, European halo/perspective influence), and Shah Jahan (luxurious gold illumination, static court ceremonies).
+  *Key Concepts & Entities*: Mughal Miniature Atelier • Akbari Illustrated Manuscripts (Hamzanama) • Jahangir Flora & Fauna Realism • Ustad Mansur Bird Paintings • Karkhana Painting Studio
+
+- **Rajasthani Miniatures: Kishangarh, Mewar, Bundi & Kota** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Lyrical court and devotional schools of Rajasthan: Mewar (deep vibrant colors, Chawand Ragamala), Bundi and Kota (lush vegetation, hunting expeditions, dramatic skies), and Kishangarh School famous for Radha / 'Bani Thani' painted by Nihal Chand featuring elongated almond eyes and graceful sharp features.
+  *Key Concepts & Entities*: Bani Thani (Indian Mona Lisa) • Kishangarh School • Nihal Chand Artist • Mewar Ragamala Paintings • Bundi-Kota Hunting Scenes • Vaishnavite Devotional Themes
+
+- **Pahari (Kangra, Basohli) & Deccani Miniature Schools** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Pahari schools of Himalayan foothills: Basohli (bold fiery colors, beetle-wing casing jewelry, Rasamanjari) and Kangra (refined poetic grace, soft landscapes, Gita Govinda romance under Raja Sansar Chand); Deccani schools of Bijapur, Golconda, and Ahmadnagar (Persian elegance, rich lapis lazuli gold palette, Tarif-i-Husain Shahi).
+  *Key Concepts & Entities*: Basohli School Rasamanjari • Kangra Gita Govinda Paintings • Raja Sansar Chand Patronage • Deccani Sultanate Miniatures • Bijapur Portraiture • Najm-ul-Ulum Manuscript
+
+### Folk & Regional Painting Styles (Madhubani / Mithila, Kalamkari, Pattachitra, Warli, Tanjore Paintings, Phad, Gond, Cheriyal)
+
+- **Folk Paintings: Madhubani, Pattachitra & Kalamkari** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Madhubani / Mithila painting of Bihar (ritual wall and floor Kohbar/Aripana art, double line borders, natural dye figures of deities), Pattachitra of Odisha (narrative cloth scrolls painted with tamarind seed glue and mineral colors, Jagannath themes), and Kalamkari of Andhra Pradesh (Srikalahasti freehand temple hangings vs Machilipatnam block-printed textiles).
+  *Key Concepts & Entities*: Madhubani / Mithila Painting • Odisha Pattachitra on Cloth • Kalamkari (Srikalahasti & Machilipatnam) • Natural Mineral & Vegetable Dyes • Kohbar Marriage Murals
+
+- **Tribal & Ritual Paintings: Warli, Gond & Pithora** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Warli painting of Maharashtra (monochrome white rice paste on cow-dung mud walls, geometric circles of life, Tarpa dance), Gond painting of central India (dot and line patterns expressing forest ecology, Jangarh Singh Shyam), and Pithora ritual murals of Rathwa tribes in Gujarat.
+  *Key Concepts & Entities*: Warli Tribal Art • Tarpa Dance Circle Motif • Gond Art (Dot & Line Style) • Jangarh Singh Shyam • Pithora Ritual Wall Murals • Saura Paintings
 
 Performing Arts (Dance, Music, Theatre & Puppetry) `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
 
-- Classical Dance Traditions (Bharatanatyam, Kathak, Kathakali, Kuchipudi, Manipuri, Mohiniyattam, Odissi, Sattriya)
-- Folk Dances of India (Bhangra, Ghoomar, Chhau, Garba, Lavani, Yakshagana, Bihu, Rouf, Koodiyattam)
-- Indian Classical Music Systems (Hindustani Music - Dhrupad, Khayal, Thumri, Tappa; Carnatic Music - Kriti, Varnam, Ragam Tanam Pallavi)
-- Musical Instruments & Folk Music (Stringed / Tat, Wind / Sushira, Percussion / Avanaddha, Solid / Ghana; Baul, Bihu, Pandavani, Bhatiali)
-- Traditional Theatre Forms & Puppetry (Yakshagana, Nautanki, Jatra, Bhavai, Tamasha, Dashavatar, Bhand Pather; String, Glove, Rod & Shadow Puppetry)
+### Classical Dance Traditions (Bharatanatyam, Kathak, Kathakali, Kuchipudi, Manipuri, Mohiniyattam, Odissi, Sattriya)
+
+- **Classical Dances: Bharatanatyam, Odissi & Kuchipudi** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Sangeet Natak Akademi recognized classical forms: Bharatanatyam of Tamil Nadu (temple Devadasi solo dance, Ekaharya, Alarippu to Tillana, Lasya and Tandava aspects), Odissi of Odisha (sculptural Tribhanga deflection, Chowk stance, Mahari tradition), and Kuchipudi of Andhra Pradesh (dance-drama, Tarangam dancing on rim of brass plate with water pot, Manduka Shabdam).
+  *Key Concepts & Entities*: Bharatanatyam (Ekaharya Tradition) • Alarippu & Tillana • Odissi Tribhanga Posture • Mahari & Gotipua Traditions • Kuchipudi Tarangam (Brass Plate Dance) • Manduka Shabdam
+
+- **Classical Dances: Kathak, Kathakali & Mohiniyattam** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Kathak of North India (storytellers/Kathakars, rhythmic footwork Tatkar, pirouettes Chakkars, Gharanas of Lucknow, Jaipur, Banaras), Kathakali of Kerala (male dance-drama, stylized facial expressions Navarasas, green Paccha noble makeup vs red Kathi villainous makeup), and Mohiniyattam of Kerala (dance of the enchantress, graceful Lasya swaying movements, distinctive white and gold Kasavu costume).
+  *Key Concepts & Entities*: Kathak Gharanas (Lucknow, Jaipur, Banaras) • Tatkar Footwork & Chakkars • Kathakali Facial Makeup (Paccha, Kathi, Minukku) • Navarasas Facial Expressions • Mohiniyattam Lasya Dance • Kerala Kasavu Costume
+
+- **Classical Dances: Manipuri, Sattriya & Chhau** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Manipuri of Manipur (Vaishnavite Rasleela, barrel-shaped Potloi skirt, graceful serpentine movements, dynamic Pung Cholom drum dance), Sattriya of Assam (monastic Vaishnavite dance founded by Srimanta Sankardeva, performance in Sattras, Borgeet devotional accompaniment), and Chhau dance (semi-classical martial mask dance of Purulia, Seraikela, and Mayurbhanj, UNESCO ICH).
+  *Key Concepts & Entities*: Manipuri Rasleela • Pung Cholom Drum Dance • Potloi Skirt Costume • Sattriya Dance of Assam • Srimanta Sankardeva Sattras • Chhau Martial Mask Dance (Purulia, Seraikela, Mayurbhanj)
+
+### Folk Dances of India (Bhangra, Ghoomar, Chhau, Garba, Lavani, Yakshagana, Bihu, Rouf, Koodiyattam)
+
+- **Major Regional Folk Dances Across Indian States** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Celebrated regional folk dances: Bhangra and Giddha (Punjab), Garba and Dandiya Raas (Gujarat), Ghoomar and Kalbelia (Rajasthan snake-charmer dance, UNESCO ICH), Lavani and Koli (Maharashtra), Bihu (Assam harvest dance), Cheraw (Mizoram bamboo dance), Rouf (Jammu & Kashmir), Hojagiri (Tripura), and Theyyam (Kerala ritual dance).
+  *Key Concepts & Entities*: Bhangra & Giddha • Garba & Dandiya • Ghoomar & Kalbelia (UNESCO) • Lavani of Maharashtra • Bihu Harvest Dance Assam • Cheraw Bamboo Dance Mizoram • Theyyam Ritual Dance Kerala
+
+### Indian Classical Music Systems (Hindustani Music - Dhrupad, Khayal, Thumri, Tappa; Carnatic Music - Kriti, Varnam, Ragam Tanam Pallavi)
+
+- **Hindustani Classical Music: Thaats, Gharanas & Forms** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Hindustani music foundation: Swara, Raga, Tala, 10-Thaat classification system by V.N. Bhatkhande; Musical forms: Dhrupad (austere spiritual style, Dagar gharana), Khayal (improvisational style, Gwalior, Kirana, Agra, Patiala gharanas), semi-classical Thumri, Dadra, Tappa, and Tarana.
+  *Key Concepts & Entities*: Hindustani 10 Thaats • Dhrupad Vocal Style • Khayal and Major Gharanas • V.N. Bhatkhande Classification • Thumri Semi-Classical • Tala and Laya
+
+- **Carnatic Classical Music: Melakarta, Trinity & Kriti** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  South Indian Carnatic tradition based on 72 Melakarta parent ragas schema formulated by Venkatamakhin; Revered Trinity of Carnatic Music (Tyagaraja, Muthuswami Dikshitar, Syama Sastri); Contributions of Purandara Dasa (Pitamaha of Carnatic music); Musical compositions: Varnam, Kriti (Pallavi, Anupallavi, Charanam), Ragam-Tanam-Pallavi (RTP), and Tillana.
+  *Key Concepts & Entities*: Carnatic Trinity (Tyagaraja, Dikshitar, Syama Sastri) • 72 Melakarta Raga Scheme • Purandara Dasa (Carnatic Pitamaha) • Kriti Structure (Pallavi, Anupallavi, Charanam) • Ragam-Tanam-Pallavi • Varnam & Tillana
+
+### Musical Instruments & Folk Music (Stringed / Tat, Wind / Sushira, Percussion / Avanaddha, Solid / Ghana; Baul, Bihu, Pandavani, Bhatiali)
+
+- **Fourfold Classification of Musical Instruments (Vadya)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Ancient Natya Shastra classification into four musical categories: Tata Vadya (stringed chordophones: Sitar, Saraswati Veena, Sarod, Santoor), Sushira Vadya (wind aerophones: Bansuri bamboo flute, Shehnai, Nadaswaram), Avanaddha Vadya (percussion membranophones: Tabla, Mridangam, Pakhawaj, Dholak), and Ghana Vadya (solid idiophones: Ghatam clay pot, Manjira, Jaltarang).
+  *Key Concepts & Entities*: Tata Vadya (Chordophones - Sitar, Veena) • Sushira Vadya (Aerophones - Shehnai, Bansuri) • Avanaddha Vadya (Membranophones - Mridangam, Tabla) • Ghana Vadya (Idiophones - Ghatam, Manjira) • Natya Shastra Vadya Classification
+
+### Traditional Theatre Forms & Puppetry (Yakshagana, Nautanki, Jatra, Bhavai, Tamasha, Dashavatar, Bhand Pather; String, Glove, Rod & Shadow Puppetry)
+
+- **Traditional Folk Theatre & Puppetry Traditions of India** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Folk theatre forms: Bhavai (Gujarat), Nautanki (Uttar Pradesh), Tamasha (Maharashtra), Jatra (Bengal), Koodiyattam (Kerala Sanskrit temple theatre, UNESCO ICH), Maach (Madhya Pradesh), Bhand Pather (Kashmir); Four Indian puppetry traditions: String (Kathputli Rajasthan, Gombeyatta Karnataka), Shadow (Togalu Gombeyaata Karnataka, Tholu Bommalata Andhra, Ravanchhaya Odisha), Rod (Putul Nach Bengal, Yampuri Bihar), and Glove (Pavakoothu Kerala).
+  *Key Concepts & Entities*: Koodiyattam Sanskrit Theatre (UNESCO) • Bhavai & Tamasha Folk Theatres • Nautanki & Jatra • Kathputli String Puppetry • Togalu Gombeyaata Shadow Puppets • Tholu Bommalata • Pavakoothu Glove Puppets
 
 Indian Literature & Languages `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
 
-- Vedic, Epic & Puranic Literature (Rigveda, Samaveda, Yajurveda, Atharvaveda, Upanishads, Mahabharata, Ramayana, Puranas)
-- Classical & Religious Texts (Buddhist Canon - Tripitakas, Jatakas; Jain Canon - Agamas; Sangam Literature - Ettuthokai, Pattupattu, Silappatikaram, Manimekalai)
-- Medieval & Bhakti-Sufi Literature (Kabir, Tulsidas, Surdas, Guru Nanak, Amir Khusrau, Alvars & Nayanars Compositions)
-- Scientific, Astronomical & Legal Treatises (Aryabhatiya, Sushruta Samhita, Charaka Samhita, Arthashastra, Manusmriti, Mitakshara, Dayabhaga)
+### Vedic, Epic & Puranic Literature (Rigveda, Samaveda, Yajurveda, Atharvaveda, Upanishads, Mahabharata, Ramayana, Puranas)
 
-Schools of Indian Philosophy `[UPSC: Prelims-GS1, Mains-GS1, Mains-GS4] [KAS: Paper-2, Paper-4]`
+- **Vedic Corpus: Samhitas, Brahmanas, Aranyakas & Upanishads** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Structure of Vedic literature: Four Samhitas (Rigveda hymns, Samaveda chants, Yajurveda sacrificial formulas, Atharvaveda spells and daily life), ritualistic Brahmanas, mystical Aranyakas (forest texts), and philosophical Upanishads / Vedanta expounding the metaphysical relationship between Atman and Brahman (Principal 108 Upanishads, Satyameva Jayate from Mundaka Upanishad).
+  *Key Concepts & Entities*: Four Vedas (Rig, Sama, Yajur, Atharva) • Brahmanas Ritual Explanations • Aranyakas Forest Treatises • Upanishads (Mundaka, Chandogya, Mandukya) • Atman-Brahman Philosophy • Satyameva Jayate Motto
 
-- Orthodox / Astika Systems (Samkhya - Kapila, Yoga - Patanjali, Nyaya - Gautama, Vaisheshika - Kanada, Mimamsa - Jaimini, Vedanta - Shankara, Ramanuja, Madhva)
-- Heterodox / Nastika Systems (Carvaka / Lokayata Materialism, Ajivika Determinism, Jain Philosophy - Anekantavada, Syadvada, Buddhist Philosophy - Pratityasamutpada, Anatta, Shunyata)
+### Classical & Religious Texts (Buddhist Canon - Tripitakas, Jatakas; Jain Canon - Agamas; Sangam Literature - Ettuthokai, Pattupattu, Silappatikaram, Manimekalai)
+
+- **Classical Sanskrit Literature: Kalidasa, Bhasa & Epics** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Golden age of classical Sanskrit dramatic and poetic literature: Kalidasa's plays (Abhijnanashakuntalam, Malavikagnimitram) and epics (Raghuvamsha, Kumarasambhava, Meghaduta); Plays of Bhasa (Svapnavasavadatta), Shudraka (Mrichhakatika / The Little Clay Cart), Vishakhadatta (Mudrarakshasa political drama), and Harsha (Ratnavali, Priyadarsika, Nagananda).
+  *Key Concepts & Entities*: Kalidasa Dramatic Works • Abhijnanashakuntalam • Meghaduta Lyric Poem • Shudraka's Mrichhakatika • Vishakhadatta's Mudrarakshasa • Bhasa's Plays
+
+- **Sangam Literature Corpus: Ettuthokai, Pattupattu & Epics** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Early Tamil Sangam literature composed in three royal academies at Madurai: Ettuthokai (Eight Anthologies), Pattupattu (Ten Idylls), Tolkappiyam (foundational grammar and poetics by Tolkappiyar), categorized into Akam (internal personal love poetry) and Puram (external heroic war poetry); Five Great Tamil Epics (Aimperumkappiyam) led by Ilango Adigal's Silappadikaram (story of Kannagi's anklet) and Sittalai Sathanar's Manimekalai.
+  *Key Concepts & Entities*: Sangam Academies at Madurai • Akam and Puram Poetics • Tolkappiyam Grammar • Silappadikaram (Kannagi's Story) • Manimekalai Buddhist Epic • Ettuthokai & Pattupattu
+
+### Medieval & Bhakti-Sufi Literature (Kabir, Tulsidas, Surdas, Guru Nanak, Amir Khusrau, Alvars & Nayanars Compositions)
+
+- **Bhakti & Sufi Vernacular Literature Across India** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Democratization of spiritual knowledge through regional vernacular languages: Tamil Alvars (Divya Prabandham) and Nayanars (Tevaram); Nirguna poets Kabir (Bijak, Sakhi, Sabad) and Guru Nanak (Guru Granth Sahib); Saguna poets Tulsidas (Ramcharitmanas in Awadhi), Surdas (Sursagar in Brajbhasha), and Mirabai (Rajasthani/Braj padas); Sufi Persian and Hindavi literature pioneered by Amir Khusrau (father of Qawwali and Khari Boli poetry).
+  *Key Concepts & Entities*: Alvars (Divya Prabandham) & Nayanars (Tevaram) • Kabir's Bijak and Dohas • Tulsidas Ramcharitmanas • Mirabai Devotional Padas • Amir Khusrau Hindavi Poetry • Sufi Premakhyan (Padmavat by Jayasi)
+
+### Scientific, Astronomical & Legal Treatises (Aryabhatiya, Sushruta Samhita, Charaka Samhita, Arthashastra, Manusmriti, Mitakshara, Dayabhaga)
+
+*(Core Overview Topic)*
+
+### Classical Languages of India & Evolution of Scripts
+
+- **Classical Languages of India: Criteria & Recognized Languages** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Government of India criteria for conferring Classical Language status (high antiquity of early texts over 1500–2000 years, valuable heritage corpus, original literary tradition); Currently recognized classical languages: Tamil (2004), Sanskrit (2005), Telugu (2008), Kannada (2008), Malayalam (2013), Odia (2014), along with newly inducted Marathi, Pali, Prakrit, Assamese, and Bengali (2024).
+  *Key Concepts & Entities*: Classical Language Criteria • Tamil & Sanskrit Recognition • Kannada & Telugu Classical Status • Malayalam & Odia Classical Status • 2024 Inclusions (Marathi, Pali, Prakrit, Assamese, Bengali)
+
+- **Evolution of Ancient Indian Scripts (Brahmi, Kharosthi)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Paleography and epigraphic evolution: Brahmi script (mother of most Indian and Southeast Asian writing systems, deciphered by James Prinsep in 1837 for Ashokan edicts, written left-to-right), Kharosthi script (Aramaic-derived, written right-to-left in northwestern Gandhara), development of Gupta script, Siddhamatrika, Nagari/Devanagari, and Southern Grantha/Kadamba scripts.
+  *Key Concepts & Entities*: Brahmi Script Decipherment (James Prinsep 1837) • Kharosthi Right-to-Left Script • Ashokan Inscriptions Epigraphy • Devanagari Evolution • Grantha & Kadamba Scripts
+
+Schools of Indian Philosophy `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+
+### Orthodox / Astika Systems (Samkhya - Kapila, Yoga - Patanjali, Nyaya - Gautama, Vaisheshika - Kanada, Mimamsa - Jaimini, Vedanta - Shankara, Ramanuja, Madhva)
+
+- **Six Orthodox Schools of Indian Philosophy (Shad-Darshana)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Philosophical systems accepting authority of Vedas: Samkhya (Kapila, dualism of Purusha consciousness and Prakriti matter), Yoga (Patanjali, practical meditative Ashtanga eight-fold path), Nyaya (Gautama, rigorous logical reasoning and Pramanas epistemology), Vaisheshika (Kanada, atomic theory of matter and Padarthas categories), Purva Mimamsa (Jaimini, Vedic ritual hermeneutics), and Uttara Mimamsa / Vedanta (Badarayana, Advaita non-dualism of Adi Shankara, Vishishtadvaita of Ramanuja).
+  *Key Concepts & Entities*: Shad-Darshana Vedic Philosophy • Samkhya (Purusha-Prakriti Dualism) • Patanjali's Yoga Sutras • Nyaya Epistemology & Pramanas • Vaisheshika Atomic Pluralism • Shankara's Advaita Vedanta • Ramanuja's Vishishtadvaita
+
+### Heterodox / Nastika Systems (Carvaka / Lokayata Materialism, Ajivika Determinism, Jain Philosophy - Anekantavada, Syadvada, Buddhist Philosophy - Pratityasamutpada, Anatta, Shunyata)
+
+- **Heterodox Traditions: Buddhism, Jainism, Charvaka & Ajivika** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Non-Vedic nastika philosophical systems: Buddhism (Gautama Buddha, Four Noble Truths, Noble Eightfold Path, Pratityasamutpada dependent origination, Anatta non-self, Hinayana vs Mahayana vs Vajrayana), Jainism (Lord Mahavira, Triratna, Ahimsa absolute non-violence, Anekantavada multi-faceted reality, Syadvada, Digambara and Svetambara), Charvaka / Lokayata (Brihaspati, radical empiricism and hedonistic materialism, rejecting afterlife), and Ajivika (Makkhali Gosala, strict fatalism and cosmic determinism / Niyati).
+  *Key Concepts & Entities*: Four Noble Truths & Eightfold Path • Pratityasamutpada & Anatta • Anekantavada & Syadvada (Jain Epistemology) • Ahimsa and Triratna • Charvaka Materialism (Lokayata) • Ajivika Determinism (Niyati)
 
 Fairs, Festivals, Crafts & UNESCO Heritage `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
 
-- Traditional Handicrafts & Textiles (Kanjeevaram, Banarasi, Ikat, Chanderi, Pashmina, Chikankari, Zardozi, Terracotta, Bidriware)
-- UNESCO World Heritage Sites & Intangible Cultural Heritage (Kumbh Mela, Yoga, Vedic Chanting, Ramlila, Chhau Dance, Mudiyettu, Durga Puja, Garba)
+### Traditional Handicrafts & Textiles (Kanjeevaram, Banarasi, Ikat, Chanderi, Pashmina, Chikankari, Zardozi, Terracotta, Bidriware)
+
+- **Traditional Indian Textiles, Weaves & Embroidery Crafts** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Celebrated regional textile traditions holding Geographical Indication (GI) tags: Pashmina & Kani shawls (Kashmir), Banarasi brocade silk (UP), Kanjeevaram silk (Tamil Nadu), Patola double-ikat (Patan, Gujarat), Chanderi and Maheshwari (MP), Muga golden silk (Assam); Traditional embroidery styles: Phulkari (Punjab), Chikankari (Lucknow), Kantha (Bengal), Kasuti (Karnataka), and Zardozi metallic embroidery.
+  *Key Concepts & Entities*: Pashmina & Kani Shawls (GI) • Banarasi & Kanjeevaram Silks • Patola Double-Ikat Weaving • Muga Silk of Assam • Chikankari & Phulkari Embroidery • Kasuti Embroidery of Karnataka
+
+- **Traditional Metal, Clay, Stone & Wood Crafts of India** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Indigenous non-textile handicrafts: Dhokra lost-wax bell-metal casting (Bastar, Chhattisgarh and Bengal), Bidriware inlaid zinc-copper metalwork (Bidar), Blue Pottery (Jaipur), Bankura terracotta horses (West Bengal), Thanjavur metal plates, Sandalwood carving (Karnataka), and Aranmula Kannadi metal mirrors (Kerala).
+  *Key Concepts & Entities*: Dhokra Lost-Wax Bell Metal Craft • Bidriware Silver Inlay Metalwork • Jaipur Blue Pottery • Aranmula Metal Mirror (GI) • Bankura Terracotta Horses • Sandalwood Woodcarving
+
+### UNESCO World Heritage Sites & Intangible Cultural Heritage (Kumbh Mela, Yoga, Vedic Chanting, Ramlila, Chhau Dance, Mudiyettu, Durga Puja, Garba)
+
+- **UNESCO Cultural World Heritage Sites in India** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  In-depth coverage of India's 34+ cultural UNESCO World Heritage sites: Ancient rock sanctuaries (Ajanta, Ellora, Bhimbetka), monumental temple complexes (Khajuraho, Sun Temple Konark, Great Living Chola Temples, Mahabalipuram, Pattadakal, Hampi), Harappan metropolis Dholavira, Kakatiya Rudreshwara (Ramappa) Temple, Santiniketan of Rabindranath Tagore, and the Sacred Ensembles of the Hoysalas (Belur, Halebidu, Somanathapura).
+  *Key Concepts & Entities*: UNESCO Cultural Heritage Sites • Dholavira Harappan City (UNESCO) • Kakatiya Ramappa Temple (UNESCO) • Sacred Ensembles of the Hoysalas (UNESCO 2023) • Santiniketan (UNESCO 2023) • Hampi Vijayanagara Ruins
+
+- **UNESCO Representative List of Intangible Cultural Heritage (ICH)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  India's 15 cultural elements inscribed on UNESCO Representative List of Intangible Cultural Heritage of Humanity: Tradition of Vedic Chanting, Ramlila, Koodiyattam Sanskrit theatre, Ramman festival of Garhwal, Mudiyettu ritual theatre of Kerala, Kalbelia folk songs/dances, Chhau dance, Buddhist chanting of Ladakh, Sankirtana of Manipur, Traditional brass and copper craft of utensil making among Thatheras of Jandiala Guru (Punjab), Yoga, Nawrouz, Kumbh Mela, Durga Puja in Kolkata, and Garba dance of Gujarat (2023).
+  *Key Concepts & Entities*: UNESCO Intangible Cultural Heritage (ICH) • Tradition of Vedic Chanting • Ramlila & Kumbh Mela • Durga Puja in Kolkata (UNESCO ICH) • Garba of Gujarat (UNESCO ICH 2023) • Thatheras of Jandiala Guru Copper Craft • Koodiyattam & Mudiyettu
+
+### Major Fairs & Religious Cultural Festivals of India
+
+- **Major Fairs & Harvest Festivals Across India** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Fairs and carnivals of cultural significance: Kumbh Mela (Prayagraj, Haridwar, Ujjain, Nashik - largest peaceful religious gathering), Pushkar Camel Fair (Rajasthan), Hornbill Festival (Nagaland 'Festival of Festivals'), Hemis Festival (Ladakh), Thrissur Pooram (Kerala elephant festival); Harvest and New Year festivals: Makar Sankranti, Pongal, Bihu, Baisakhi, Onam, Ugadi, Vishu, Gudi Padwa, Losar, and Cheti Chand.
+  *Key Concepts & Entities*: Kumbh Mela (Four Sacred Tirthas) • Pushkar Camel Fair • Hornbill Festival of Nagaland • Hemis Gompa Festival Ladakh • Thrissur Pooram Temple Festival • Harvest Festivals (Pongal, Makar Sankranti, Bihu, Onam)
+
+Art, Architecture & Cultural Heritage of Karnataka `[KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]`
+
+### Karnataka Temple Architecture & Sculptural Evolution
+
+- **Badami Chalukya Architecture (Aihole, Badami, Pattadakal)** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Early Chalukyan architectural revolution (6th–8th century CE): Aihole known as the 'Cradle of Indian Temple Architecture' (Lad Khan, Durga Temple with apsidal Buddhist chaitya plan, Ravana Phadi cave temple), Badami rock-cut cave temples (Cave 3 dedicated to Vishnu with Anantasayana relief), and UNESCO World Heritage site Pattadakal representing climax of early structural temple synthesis (Virupaksha Temple built by Queen Lokamahadevi, Mallikarjuna Temple, Sangameshwara).
+  *Key Concepts & Entities*: Aihole Cradle of Temple Architecture • Durga Temple Apsidal Plan Aihole • Badami Rock-Cut Caves (Cave 3 Vishnu) • Pattadakal UNESCO Monuments • Virupaksha Temple Lokamahadevi • Synthesis of Nagara & Dravida
+
+- **Hoysala Architecture & Sculptures (UNESCO World Heritage 2023)** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Distinctive medieval Hoysala temple style (11th–14th century) constructed using fine-grained chloritic schist (soapstone): Stellate (star-shaped) ground plan raised on a high platform (Jagati), richly carved friezes of elephants, lions, horses, and floral creepers; Celebrated temples: Chennakeshava Temple at Belur (sculpted Madanika/Shalabhanjika bracket figures), Hoysaleshwara Temple at Halebidu (twin Dvikuta shrine with 240+ relief statues), and Keshava Temple at Somanathapura (complete Trikuta shrine); Inscribed on UNESCO World Heritage list in 2023.
+  *Key Concepts & Entities*: Hoysala Architecture (UNESCO 2023) • Stellate / Star-shaped Ground Plan • Chloritic Schist / Soapstone Carving • Belur Chennakeshava Temple • Halebidu Hoysaleshwara Dvikuta • Somanathapura Keshava Trikuta • Madanika Bracket Sculptures
+
+- **Vijayanagara Architecture & Hampi UNESCO Monuments** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Grand imperial architecture of Vijayanagara Empire (14th–16th century) centered at capital Hampi (Pampa Kshetra on Tungabhadra river): Distinctive Kalyana Mandapa (marriage hall) with intricate composite pillars carving rearing Yalis (mythical beasts), open pavilions, massive Raya Gopurams; Iconic monuments: Vitthala Temple complex with 56 musical acoustic pillars and monolithic Stone Chariot (Garuda shrine), Virupaksha Temple, Mahanavami Dibba platform, Lotus Mahal, and Queen's Bath reflecting Islamic-Vijayanagara secular synthesis.
+  *Key Concepts & Entities*: Vijayanagara Architectural Style • Hampi UNESCO World Heritage Site • Vitthala Temple Musical Pillars • Monolithic Stone Chariot (Hampi) • Kalyana Mandapa & Rearing Yalis • Mahanavami Dibba Reliefs • Lotus Mahal Secular Architecture
+
+- **Kadamba, Ganga, Rashtrakuta & Deccan Sultanate Architecture** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Diverse architectural expressions in Karnataka: Kadamba dynasty's stepped pyramidal Shikhara (Kadamba Shikhara, Halasi temples); Western Ganga dynasty's Jain architectural legacy, climaxing in the monolithic 57-foot statue of Gommateshwara / Bahubali carved on Vindhyagiri hill at Shravanabelagola by Chavundaraya (981 CE, Mahamastakabhisheka festival); Adil Shahi dynasty of Bijapur featuring Gol Gumbaz (one of the largest single domes in the world with an acoustic Whispering Gallery) and Ibrahim Rauza.
+  *Key Concepts & Entities*: Kadamba Stepped Shikhara • Gommateshwara Monolith Shravanabelagola • Chavundaraya Western Ganga Dynasty • Mahamastakabhisheka Festival • Gol Gumbaz Whispering Gallery • Ibrahim Rauza Bijapur
+
+### Performing Arts, Theatre & Folk Traditions of Karnataka
+
+- **Yakshagana: Coastal & Malnad Traditional Dance-Theatre** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  All-night traditional folk theatre of coastal and Malnad Karnataka: Distinctive regional styles Tenkutittu (Southern style, vibrant percussion Chande/Maddale, Carnatic influence) and Badagutittu (Northern style, Yakshagana headgear Kireeta, dramatic footwork); Performance structure: Prasanga (episodic mythic script from Mahabharata/Ramayana), Himmela (background musical ensemble led by Bhagavatha narrator), Mummela (actors, dancers performing dialogue and impromptu Vachika abhinaya).
+  *Key Concepts & Entities*: Yakshagana Dance-Drama • Tenkutittu vs Badagutittu Styles • Bhagavatha (Narrator & Music Director) • Himmela and Mummela Structure • Prasanga Mythological Texts • Kireeta Headgear & Costumes
+
+- **Folk Dances of Karnataka: Dollu Kunitha, Veeragase & Kamsale** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Rich folk dances and ritual performance traditions: Dollu Kunitha (vigorous drum dance performed by Kuruba community dedicated to deity Beereshwara), Veeragase (energetic warrior martial dance performed during Dasara by Shaivite Jangamas, based on Veerabhadra legends), Kamsale (rhythmic bronze cymbal dance dedicated to Male Mahadeshwara), Goravara Kunitha (devotees of Mailara Linga wearing bear-fur caps and flute/damaruga), Suggi Kunitha, and Somana Kunitha.
+  *Key Concepts & Entities*: Dollu Kunitha (Kuruba Drum Dance) • Veeragase (Shaivite Martial Dance) • Kamsale (Male Mahadeshwara Cymbals) • Goravara Kunitha (Mailara Devotees) • Somana Kunitha & Suggi Kunitha
+
+- **Puppetry of Karnataka: Togalu Gombeyaata & Gombeyatta** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Ancient puppetry heritage of Karnataka: Togalu Gombeyaata (traditional shadow puppetry using translucent dyed deer-skin/goat-leather puppets projected against a backlit white cloth screen, narrating episodes from epic scriptures) and Gombeyatta (intricate traditional string puppetry styled after Yakshagana dance figures with wooden joints and ornate crowns).
+  *Key Concepts & Entities*: Togalu Gombeyaata Shadow Puppetry • Leather Puppet Craftsmanship • Gombeyatta String Puppetry • Yakshagana Puppet Styling • Epic Storytelling Traditions
+
+### Karnataka Paintings, Traditional Crafts & GI Heritage
+
+- **Mysore Traditional Paintings: Gesso Work & Royal Patronage** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Celebrated classical painting style flourishing under the Wodeyar rulers of Mysore (especially Maharaja Krishnaraja Wodeyar III): Delicate muted colors, lustrous gold leaf embossing, unique Gesso paste technique (white lead, gambose, and zinc oxide paste creating tactile low-relief ornamentation on jewelry and thrones), primarily depicting Vaishnavite and Shaivite deities with serene expressions.
+  *Key Concepts & Entities*: Mysore Traditional Paintings • Gesso Paste Relief Technique • Pure Gold Leaf Embossing • Mumbra & Shweta Varna Aesthetics • Krishnaraja Wodeyar III Patronage • Devotional Iconography
+
+- **GI-Tagged Handicrafts & Handlooms of Karnataka** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Karnataka's premier crafts awarded Geographical Indication (GI) status: Channapatna wooden lacquer toys (Gombe made from soft Wrightia tinctoria / Aale mara wood, patronized originally by Tipu Sultan), Bidriware (intricate silver inlay on blackened zinc-copper alloy from Bidar), Mysore Silk (pure mulberry silk with gold zari), Ilkal Sarees (featuring distinctive red Tope Teni pallu and Kasuti embroidery), Sandalwood Carvings, Kinnal Wooden Craft, and Guledgudd Khana.
+  *Key Concepts & Entities*: Channapatna Lacquerware Toys (GI) • Bidriware Silver Inlay (GI) • Mysore Silk & Zari Weaving (GI) • Ilkal Sarees & Tope Teni Pallu (GI) • Kinnal Wooden Toys & Idols • Sandalwood Carving Heritage
+
+### Vachana & Haridasa Bhakti Movements of Karnataka
+
+- **Vachana Movement: Basaveshwara, Anubhava Mantapa & Sharanas** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  12th-century socio-religious and literary revolution led by Basaveshwara (Basavanna) and the Sharanas: Radical rejection of caste hierarchies, untouchability, and gender discrimination; Establishment of Anubhava Mantapa at Kalyana (first socio-spiritual parliament); Foundational ethics of 'Kayaka' (dignity of labor) and 'Dasoha' (selfless sharing); Vachana literature in simple Kannada prose-poetry by Basavanna (pen name Koodalasangamadeva), Allama Prabhu, Akka Mahadevi (Chennamallikarjuna), and Channabasavanna.
+  *Key Concepts & Entities*: Basaveshwara (Basavanna) • Anubhava Mantapa (Spiritual Parliament) • Vachana Literature in Kannada • Kayaka & Dasoha Philosophy • Akka Mahadevi & Allama Prabhu • Socio-Religious Equality Movement
+
+- **Haridasa Movement: Purandara Dasa & Kanaka Dasa** [KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]
+  Bhakti devotional movement in Karnataka spreading Dvaita philosophy through devotional songs (Devaranamas/Kirtanas): Purandara Dasa (revered as Karnataka Sangeeta Pitamaha for structuring fundamental musical exercises / Sarale Varase and composing thousands of Kirtanas praising Lord Vittala) and Kanaka Dasa (saint-philosopher from Kuruba community, composed Mohanatarangini, Nalacharitre, and Ramadhanya Charitre advocating caste equality; associated with Kanakana Kindi window at Udupi Sri Krishna Temple).
+  *Key Concepts & Entities*: Purandara Dasa (Karnataka Sangeeta Pitamaha) • Kanaka Dasa & Ramadhanya Charitre • Kanakana Kindi at Udupi • Devaranama Devotional Compositions • Vyasatirtha & Dasa Sahitya • Dvaita Bhakti Tradition
+
+Martial Arts, Traditional Sports & Indian Calendar Systems `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+
+### Traditional Martial Arts & Indigenous Sports of India
+
+- **Traditional Indian Martial Arts (Kalaripayattu, Thang-Ta, Silambam)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Ancient combat systems of India: Kalaripayattu of Kerala (one of the oldest surviving martial arts, training in Kalari pit arena, weapon forms including Urumi flexible sword), Silambam of Tamil Nadu (bamboo staff martial technique, references in Silappadikaram), Thang-Ta / Huyen Langlon of Manipur (sword and spear armed combat), Gatka of Punjab (Sikh martial art with wooden sticks and shields), Mardani Khel of Maharashtra, and Pari-Khanda of Bihar.
+  *Key Concepts & Entities*: Kalaripayattu (Kerala Mother of Martial Arts) • Urumi Flexible Sword • Silambam Bamboo Staff Martial Art • Thang-Ta (Manipur Huyen Langlon) • Gatka Sikh Martial Tradition • Mardani Khel & Pari-Khanda
+
+- **Indigenous Sports & Cultural Animal Events (Mallakhamb, Kambala)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Indigenous physical and community sports: Mallakhamb (traditional acrobatic gymnastics on a vertical wooden pole or rope, state sport of Madhya Pradesh), Kambala (slushy paddy-field buffalo racing festival in coastal Karnataka), Jallikattu (traditional bull-taming sport during Pongal in Tamil Nadu), Vallam Kali (Nehru Trophy snake boat race in Kerala backwaters), and Kabaddi & Kho-Kho.
+  *Key Concepts & Entities*: Mallakhamb Pole Gymnastics • Kambala Buffalo Race Karnataka • Jallikattu Bull Taming Event • Vallam Kali Snake Boat Race Kerala • Indigenous Indian Sports
+
+### Indian Calendar Systems, Historical Eras & National Symbols
+
+- **Indian Calendar Systems: Saka, Vikrama Samvat & National Calendar** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Historical astronomical eras and chronological systems in India: Saka Era (commencing 78 CE, instituted by King Kanishka/Chastana, adopted as India's National Calendar on March 22, 1957 alongside Gregorian calendar; months Chaitra through Phalguna), Vikrama Samvat (commencing 57 BCE commemorating King Vikramaditya's victory, lunar calendar base), Kali Era (3102 BCE), and comparison of solar vs lunisolar calculations.
+  *Key Concepts & Entities*: Saka Era (78 CE National Calendar) • Saha Calendar Reform Committee (1957) • Chaitra First Month of National Year • Vikrama Samvat (57 BCE) • Lunisolar & Solar Indian Calendars • Regional Eras (Kollam, Hijri)
+
+- **National Symbols, State Insignia & Cultural Heritage Emblems** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Official national cultural emblems: State Emblem of India adapted from Lion Capital of Sarnath (four Asiatic lions, abacus with elephant, horse, bull, lion separated by wheels, motto Satyameva Jayate in Devanagari from Mundaka Upanishad, adopted Jan 26, 1950); National Anthem (Jana Gana Mana by Rabindranath Tagore), National Song (Vande Mataram from Bankim Chandra Chattopadhyay's Anandamath), National Flag design by Pingali Venkayya, and National Animal, Bird, Flower symbols.
+  *Key Concepts & Entities*: National Emblem (Sarnath Lion Capital) • Satyameva Jayate (Mundaka Upanishad) • Jana Gana Mana National Anthem • Vande Mataram (Bankim Chandra Anandamath) • Pingali Venkayya Flag Design • State Insignia Protocols
+
+Cultural Institutions, Numismatics & Heritage Governance `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+
+### Premier National Cultural Institutions, Akademis & Museums
+
+- **Premier Cultural Bodies: ASI, Sangeet Natak, Sahitya & Lalit Kala** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Apex statutory and autonomous cultural institutions under Ministry of Culture: Archaeological Survey of India (ASI, founded 1861 by Alexander Cunningham for conservation of centrally protected monuments), Sangeet Natak Akademi (National Academy of Music, Dance and Drama, established 1953), Sahitya Akademi (National Academy of Letters promoting 24 languages), Lalit Kala Akademi (National Academy of Visual Arts), and National School of Drama (NSD).
+  *Key Concepts & Entities*: Archaeological Survey of India (ASI) • Alexander Cunningham (Father of Indian Archaeology) • Sangeet Natak Akademi (1953) • Sahitya Akademi (24 Languages) • Lalit Kala Akademi • National School of Drama (NSD)
+
+- **National Museums, Art Galleries & Cultural Repositories** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Major national repositories of tangible heritage: National Museum (New Delhi, housing Harappan antiquities and Buddhist relics), National Gallery of Modern Art (NGMA, exhibiting Raja Ravi Varma, Amrita Sher-Gil, Bengal School), National Library of India (Kolkata, largest library under Delivery of Books Act), and Indira Gandhi National Centre for the Arts (IGNCA, multidimensional art resource center).
+  *Key Concepts & Entities*: National Museum New Delhi • National Gallery of Modern Art (NGMA) • Raja Ravi Varma & Amrita Sher-Gil Collections • National Library Kolkata • IGNCA Cultural Centre
+
+### Ancient & Medieval Indian Coinage (Numismatics)
+
+- **Ancient Indian Coinage: Punch-Marked Coins to Gupta Dinaras** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Chronological evolution of Indian numismatics: Punch-Marked Coins (Puranas/Karshapanas, 6th century BCE Mahajanapadas, silver/copper irregular shapes stamped with symbols of sun, hill, tree); Indo-Greek coinage (first to bear portraits, titles, and bilingual Greek-Kharosthi legends); Kushana coinage (first gold coins in India under Vima Kadphises, high purity gold Dinaras depicting Shiva and Buddha); Gupta coinage (superb artistic gold Dinaras showing rulers as archers, lion-slayers, and lyrist/veena players under Samudragupta).
+  *Key Concepts & Entities*: Punch-Marked Coins (Karshapanas) • Indo-Greek Portrait Coinage • Kushana Gold Dinaras (Vima Kadphises) • Gupta Gold Coinage (Dinaras) • Samudragupta Lyrist Type Coins • Ancient Numismatics & Metrology
+
+- **Medieval Coinage: Vijayanagara Varahas, Sher Shah Rupiya & Mughals** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Medieval numismatic developments: South Indian coinage led by Vijayanagara Empire's gold 'Varaha' (also known as Pagoda, depicting deities Venkateshwara, Shiva-Parvati, and Gandabherunda double-headed eagle); Delhi Sultanate coinage (Iltutmish introducing silver Tanka and copper Jital); Sher Shah Suri's standard silver 'Rupiya' (base of modern Rupee) and copper 'Dam'; Mughal coinage system perfected by Akbar featuring circular and square Mohurs with calligraphic Quranic verses and Persian couplets.
+  *Key Concepts & Entities*: Vijayanagara Gold Varahas (Pagodas) • Gandabherunda Mythical Emblem • Iltutmish Tanka and Jital • Sher Shah Suri Silver Rupiya • Mughal Gold Mohurs & Zodiac Coins • Calligraphic Numismatic Art
+
+### Government Heritage Conservation Schemes & Cultural Awards
+
+- **Government Heritage Conservation Schemes: PRASHAD, HRIDAY & Mausam** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Central government flagship schemes for heritage conservation and tourism: PRASHAD (Pilgrimage Rejuvenation and Spiritual, Heritage Augmentation Drive), HRIDAY (Heritage City Development and Augmentation Yojana), Adopt a Heritage 2.0 / Apni Dharohar Apni Pehchan initiative, Project Mausam (reconnecting Indian Ocean maritime trade and cultural linkages), and National Mission on Cultural Mapping (Mera Gaon Meri Dharohar).
+  *Key Concepts & Entities*: PRASHAD Scheme (Pilgrimage & Heritage) • HRIDAY Heritage City Scheme • Adopt a Heritage 2.0 Initiative • Project Mausam Indian Ocean Cultural Route • Mera Gaon Meri Dharohar Portal
+
+- **National Honours & Cultural Awards (Jnanpith, Akademi, Kalidas)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Pre-eminent national honors in art and literature: Jnanpith Award (highest Indian literary award presented by Bharatiya Jnanpith in 22 Eighth Schedule languages + English); Sahitya Akademi Awards; Sangeet Natak Akademi Fellowship and Amrit Awards; Kalidas Samman (prestigious arts award by MP government); Civilian honors (Padma Vibhushan, Padma Bhushan, Padma Shri) recognizing master craftsmen, folk artists, and classical exponents.
+  *Key Concepts & Entities*: Jnanpith Award (Highest Literary Honour) • Sahitya Akademi Awards • Sangeet Natak Akademi Amrit Awards • Kalidas Samman • Padma Awards for Traditional Artists • Cultural Recognition Systems
 
 ==================================================
-3. GEOGRAPHY & EARTH SYSTEMS `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+3. GEOGRAPHY & EARTH SYSTEMS `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
 ==================================================
 
 Geography & Earth Systems
 
 - Physical Geography & Earth Systems (Geomorphology)
-- Climatology & Atmospheric Dynamics
+- Climatology
 - Oceanography & Marine Systems
 - Indian Physical Geography & Monsoon Architecture
-- Economic & Resource Geography
 - Human Geography & Population Settlements
-- Geography of Karnataka `[KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]`
+- Economic & Resource Geography
+- Geography of the World
+- World Mapping & Geopolitical Locations
+- Indian Mapping & Spatial Geography
+- Geography of Karnataka
+- Karnataka Mapping & Spatial Geography
 
-Physical Geography & Earth Systems (Geomorphology) `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+Physical Geography & Earth Systems (Geomorphology) `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
 
-- Earth's Origin & Internal Structure (Crust, Mantle, Core, Discontinuities - Mohorovicic, Gutenberg, Seismic Waves P & S)
-- Continental Drift & Plate Tectonics (Pangaea, Plate Boundaries - Divergent, Convergent, Transform, Sea Floor Spreading, Ring of Fire)
-- Earthquakes, Tsunamis & Volcanism (Epicentre, Focus, Richter Scale, Volcanic Landforms - Intrusive & Extrusive, Caldera, Shield, Composite)
-- Geomorphic Processes & Landform Evolution (Weathering - Physical, Chemical, Biological; Mass Wasting; Fluvial, Glacial, Aeolian, Karst & Coastal Landforms)
+### Earth and The Solar System
 
-Climatology & Atmospheric Dynamics `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+- **Origin of the Universe, Solar System & Nebular Hypothesis** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Cosmological origins: Big Bang Theory (expanding universe, cosmic microwave background radiation), Nebular Hypothesis of Immanuel Kant and Pierre-Simon Laplace, Planetesimal Hypothesis; Accretion of protoplanets, Terrestrial (inner rocky) vs Jovian (outer gas giant) planets, asteroid belt, Kuiper belt, and Oort cloud.
+  *Key Concepts & Entities*: Big Bang Theory • Nebular Hypothesis (Kant & Laplace) • Terrestrial vs Jovian Planets • Planetesimal Accretion • Asteroid Belt (Mars & Jupiter) • Kuiper Belt & Oort Cloud
 
-- Atmosphere Structure & Heat Budget (Troposphere, Stratosphere, Mesosphere, Thermosphere; Insolation, Terrestrial Radiation, Atmospheric Heat Budget)
-- Atmospheric Pressure & Global Wind Belts (Pressure Belts - Equatorial Low, Subtropical High, Subpolar Low; Planetary Winds - Trade Winds, Westerlies, Polar Easterlies; Jet Streams)
-- Air Masses, Fronts & Cyclogenesis (Air Mass Types, Fronts - Warm, Cold, Occluded; Tropical Cyclones vs Temperate / Extra-Tropical Cyclones, Eye of Cyclone)
-- World Climate Regions (Equatorial, Tropical Monsoon, Savanna, Mediterranean, Steppe, Taiga, Tundra, Desert Climates)
+- **Earth's Shape (Geoid), Coordinate System & Motions** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Oblate spheroid and Geoid shape (equatorial bulge due to centrifugal rotation); Earth's orbital motions: Rotation on 23.5 deg tilted axis (day-night cycle, Coriolis effect), Revolution around Sun along elliptical orbit; Perihelion (Jan 3) and Aphelion (July 4); Solstices (Summer June 21, Winter Dec 22) and Equinoxes (Vernal March 21, Autumnal Sept 23); Parallels of Latitude, Meridians of Longitude, International Date Line (IDL at 180 deg with zigzags), and Indian Standard Time (IST at 82.5 deg E).
+  *Key Concepts & Entities*: Geoid Shape & Equatorial Bulge • Orbital Revolution & Axis Tilt (23.5 deg) • Solstices and Equinoxes • Perihelion & Aphelion • Latitudes & Longitudes • International Date Line (180 deg) • Indian Standard Time (82.5 deg E)
 
-Oceanography & Marine Systems `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+### Earth's Origin & Internal Structure (Crust, Mantle, Core, Discontinuities - Mohorovicic, Gutenberg, Seismic Waves P & S)
 
-- Ocean Floor Relief & Features (Continental Shelf, Slope, Abyssal Plains, Oceanic Trenches, Mid-Oceanic Ridges)
-- Ocean Water Dynamics (Temperature & Salinity Distribution, Ocean Currents - Warm & Cold Currents, Thermohaline Circulation, Tides - Spring & Neap Tides)
-- Marine Ecosystems & Conservation (Coral Reefs - Fringing, Barrier, Atoll; Coral Bleaching, Blue Carbon, Ocean Acidification, EEZ, Marine Protected Areas)
+- **Earth's Internal Layers: Crust, Mantle & Core** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Compositional and mechanical stratification: Crust (continental granitic SIAL vs oceanic basaltic SIMA), Mantle (Lithosphere rigid top, semi-molten ductile Asthenosphere source of magma and plate tectonics, lower Mesosphere), and Core / Barysphere (liquid outer core generating geomagnetic geodynamo field, solid crystalline inner core of NIFE iron-nickel at extreme pressure).
+  *Key Concepts & Entities*: Continental Crust (SIAL) • Oceanic Crust (SIMA) • Asthenosphere (Partial Melt Zone) • Lower Mantle (Mesosphere) • Liquid Outer Core (Geodynamo) • Solid Inner Core (NIFE)
 
-Indian Physical Geography & Monsoon Architecture `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+- **Seismic Discontinuities & Wave Shadow Zones** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Internal density boundaries: Conrad (upper-lower crust), Mohorovicic / Moho (crust-mantle), Repetti (upper-lower mantle), Gutenberg (mantle-outer core), and Lehmann discontinuity (outer-inner core); Seismic wave propagation: Primary (P) longitudinal compressional waves traveling through solids and liquids vs Secondary (S) transverse shear waves penetrating only solids; P-wave shadow zone (105 deg to 142 deg) and total S-wave shadow zone beyond 105 deg proving liquid outer core.
+  *Key Concepts & Entities*: Mohorovicic Discontinuity (Moho) • Gutenberg Discontinuity • Lehmann Discontinuity • P-wave Shadow Zone (105-142 deg) • S-wave Complete Shadow Zone (>105 deg) • Seismic Velocity Profile
 
-- Physiographic Divisions of India (Himalayan Mountain System, Northern Great Plains, Peninsular Plateau, Coastal Plains, Lakshadweep & Andaman Nicobar Islands)
-- Drainage Systems of India (Himalayan Rivers - Indus, Ganga, Brahmaputra; Peninsular Rivers - Narmada, Tapi, Godavari, Krishna, Kaveri, Mahanadi; River Interlinking)
-- Indian Monsoon & Climate Dynamics (South-West & North-East Monsoons, Mechanism of Monsoon - ITCZ Shift, Jet Streams, El Niño, La Niña, Indian Ocean Dipole / IOD, Western Disturbances)
-- Soils & Natural Vegetation of India (Soil Types - Alluvial, Black / Regur, Red, Laterite, Arid, Saline; Forest Types - Tropical Evergreen, Deciduous, Thorn, Montane, Mangroves)
+- **Geological Time Scale & Stratigraphic Eras** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Chronostratigraphic classification of Earth's 4.54 billion year history: Eons (Hadean, Archean, Proterozoic, Phanerozoic), Eras (Paleozoic ancient life, Mesozoic age of reptiles/dinosaurs, Cenozoic age of mammals), Periods (Cambrian, Carboniferous coal formations, Jurassic, Cretaceous Deccan volcanism, Quaternary), and Epochs (Pleistocene ice ages, Holocene recent, Anthropocene proposed).
+  *Key Concepts & Entities*: Geological Time Scale • Precambrian Eon • Paleozoic Era (Carboniferous Coal) • Mesozoic Era (Cretaceous Deccan Traps) • Cenozoic Era (Himalayan Orogeny) • Pleistocene Ice Ages & Holocene Epoch
 
-Economic & Resource Geography `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+### Continental Drift & Plate Tectonics (Pangaea, Plate Boundaries - Divergent, Convergent, Transform, Sea Floor Spreading, Ring of Fire)
 
-- Global & Indian Distribution of Natural Resources (Mineral Resources - Iron Ore, Bauxite, Copper, Coal, Petroleum, Natural Gas, Uranium; Water Resources, Land & Soil Resources)
-- Location Factors of Primary, Secondary & Tertiary Industries (Raw Material, Power, Labour, Market, Transport; Iron & Steel, Cotton Textile, Petrochemical, Pharmaceutical, IT Industries)
+- **Continental Drift Theory & Paleomagnetic Evidence** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Alfred Wegener's Continental Drift Theory (1912): Supercontinent Pangaea surrounded by Panthalassa; Evidence: Jig-saw fit of South American and African Atlantic coastlines, matching ancient orogenic rock belts, fossil distribution of freshwater reptile Mesosaurus and seed fern Glossopteris, and Permo-Carboniferous glacial tillite beds across Gondwana fragments; Paleomagnetism and polar wandering curves confirming continental mobility.
+  *Key Concepts & Entities*: Wegener's Continental Drift Theory • Supercontinent Pangaea & Panthalassa • Jig-saw Coastline Matching • Glossopteris & Mesosaurus Fossil Evidence • Carboniferous Glacial Tillite • Paleomagnetism & Polar Wandering
 
-Human Geography & Population Settlements `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+- **Seafloor Spreading & Geomagnetic Reversals** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Harry Hess's Seafloor Spreading hypothesis (1960): Upwelling convection currents in mantle creating new basaltic oceanic crust at Mid-Ocean Ridges (MOR); Vine-Matthews-Morley hypothesis of symmetric magnetic anomalies / paleomagnetic striping parallel to ridge crests recording Earth's magnetic field polarity reversals; Youthful age of oceanic crust (<200 million years) compared to ancient continental rocks.
+  *Key Concepts & Entities*: Harry Hess Seafloor Spreading • Mid-Ocean Ridge Upwelling • Vine-Matthews-Morley Hypothesis • Symmetric Magnetic Striping • Geomagnetic Polarity Reversals • Oceanic Crust Subduction
 
-- Global & Indian Demographic Trends (Population Distribution, Density, Growth Models - Demographic Transition Theory, Migration Types & Push-Pull Factors)
-- Human Settlements & Urban Systems (Rural Settlement Types - Clustered, Dispersed; Urban Classification, Conurbations, Megalopolis, Functional Classification of Towns)
+- **Plate Boundaries (Convergent, Divergent, Transform) & Ring of Fire** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Seven major and minor tectonic plates (Pacific, North American, Eurasian, African, Indo-Australian, South American, Antarctic, Nazca, Cocos, Arabian); Plate boundaries: Divergent constructive (Mid-Atlantic Ridge, East African Great Rift Valley), Convergent destructive (Oceanic-Continental forming Andes, Oceanic-Oceanic forming Mariana trench and island arcs, Continental-Continental collision forming Himalayas), and Transform conservative faults (San Andreas Fault California); Pacific Ring of Fire harboring 75% of active volcanoes and 90% of global earthquakes.
+  *Key Concepts & Entities*: Major and Minor Tectonic Plates • Divergent Boundaries (Rift Valleys) • Convergent Boundaries (Subduction Zones) • Himalayan Continental Collision • Transform Faults (San Andreas) • Pacific Ring of Fire Subduction
+
+### Geomorphic Processes & Landform Evolution (Weathering - Physical, Chemical, Biological; Mass Wasting; Fluvial, Glacial, Aeolian, Karst & Coastal Landforms)
+
+- **Weathering (Physical, Chemical, Biological) & Mass Movements** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  In-situ disintegration and decomposition: Mechanical weathering (thermal stress shattering, frost wedging in periglacial areas, exfoliation onion-peeling domes, salt haloclasty); Chemical weathering (carbonation of limestone, hydration, oxidation of ferruginous rocks, hydrolysis of feldspars); Biological weathering (root wedging, lichen chelating acids, burrowing fauna); Mass Wasting driven by gravity: Slow movements (soil creep, solifluction), Rapid movements (earthflow, mudflow, debris avalanche), Landslides (rockfall, rotational slump); Slope stability factors and disaster risk reduction.
+  *Key Concepts & Entities*: Mechanical Frost Wedging & Exfoliation • Chemical Carbonation & Oxidation • Biological Root Wedging • Soil Creep & Solifluction • Mudflow & Debris Avalanches • Rotational Slump Landslides
+
+- **Fluvial Landforms: River Erosion, Transportation & Deposition** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Fluvial cycle of erosion: Youth stage (downcutting, V-shaped valleys, gorges, Grand Canyon canyons, potholes, plunge pools, waterfalls); Mature stage (lateral planation, meandering courses, oxbow lakes, natural levees, broad floodplains); Old stage (braided river channels, peneplains, monadnocks, delta systems: arcuate Nile/Ganga, bird's-foot Mississippi, estuarine Narmada/Tapi).
+  *Key Concepts & Entities*: V-shaped Valleys & Canyons • Potholes & Plunge Pools • Meanders & Oxbow Lakes • Natural Levees & Floodplains • Deltas (Arcuate, Bird's-foot, Estuarine) • Peneplains & Monadnocks
+
+- **Glacial Landforms: Alpine & Continental Glaciation** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Glacial erosion by plucking and abrasion: Cirques (amphitheatre-shaped hollows / corries), Tarn lakes, Aretes knife-edge ridges, Pyramidal horns (Matterhorn), U-shaped glacial troughs, Hanging valleys with waterfalls, truncated spurs, Fiords drowned glacial valleys; Glacial deposition: Unsorted glacial till, Moraines (terminal, lateral, medial, ground), Drumlins (basket-of-eggs topography), Eskers sinuous gravel ridges, Kames, and outwash plains.
+  *Key Concepts & Entities*: Cirques & Tarn Lakes • Aretes & Pyramidal Horns • U-shaped Glacial Valleys • Hanging Valleys & Fiords • Moraines (Terminal, Lateral, Medial) • Drumlins & Sinuous Eskers
+
+- **Aeolian Landforms: Desert Wind Erosion & Sand Dunes** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Wind action in arid landscapes: Deflation and abrasion; Erosional: Deflation hollows / blowouts, Mushroom rocks (pedestal rocks), Yardangs wind-carved ridges, Zeugen tabular masses, Inselbergs (isolated residual hills); Depositional: Sand dunes classified by wind regimes (Barchans crescent-shaped pointing downwind, Seif longitudinal dunes, Transverse dunes, Star dunes), Loess vast unstratified wind-blown silt deposits (Huang He basin), Playas ephemeral salt lakes and Bajadas.
+  *Key Concepts & Entities*: Mushroom / Pedestal Rocks • Yardangs and Zeugen • Barchans Crescent Dunes • Seif Longitudinal Dunes • Loess Silt Deposits (China) • Playas & Bajadas
+
+- **Karst Topography: Limestone Caves & Speleothems** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Groundwater dissolution in calcium carbonate limestone and dolomite terrain: Surface erosional features: Sinkholes (swallow holes), Doline, Uvala, Polje massive depressions, Lapies furrowed surfaces, Blind valleys; Subterranean depositional features (Speleothems): Stalactites hanging from roof, Stalagmites growing upward from floor, cave pillars/columns formed by coalescence; Indian karst regions: Borra Caves (Visakhapatnam), Gupteswar (Odisha), Bastar.
+  *Key Concepts & Entities*: Karst Dissolution Process • Sinkholes, Doline & Polje • Blind Valleys & Lapies • Stalactites and Stalagmites • Cave Columns & Pillars • Borra Caves Limestone Karst
+
+- **Coastal Landforms: Marine Wave Action & Shorelines** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Marine wave hydraulic action, abrasion, and attrition: Erosional features: Sea cliffs, Wave-cut notches, Wave-cut platforms, Sea caves, Sea arches, Sea stacks, Stumps; Depositional features: Sandy and shingle beaches, Spits, Offshore bars and barrier islands, Tombolos (sand bar connecting mainland to offshore island), Coastal lagoons (Chilika Lake, Pulicat, Vembanad); Coastlines of submergence (Ria, Fiord, Dalmatian) vs emergence.
+  *Key Concepts & Entities*: Sea Cliffs & Wave-cut Platforms • Sea Caves, Arches & Stacks • Sandy Beaches & Spits • Tombolos (Mainland-Island Connection) • Barrier Islands & Coastal Lagoons • Coastlines of Emergence & Submergence
+
+### Rocks: Formation and Classification
+
+- **Major Mineral Groups & Physical Properties** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Earth crust mineralogy: Major rock-forming mineral groups: Silicates (Feldspar most abundant 50%, Quartz 12%, Pyroxenes, Amphiboles, Mica, Olivine), Carbonates (Calcite, Dolomite), Oxides (Hematite, Magnetite); Physical testing criteria: Mohs Scale of Mineral Hardness (1-Talc, 2-Gypsum, 3-Calcite, 4-Fluorite, 5-Apatite, 6-Orthoclase Feldspar, 7-Quartz, 8-Topaz, 9-Corundum, 10-Diamond), cleavage, fracture, luster, and streak.
+  *Key Concepts & Entities*: Silicate Mineral Group • Feldspar & Quartz • Mohs Scale of Mineral Hardness • Cleavage and Fracture • Streak and Luster Properties
+
+- **Igneous, Sedimentary, Metamorphic Rocks & The Rock Cycle** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Classification of rocks: Igneous primary rocks (Plutonic intrusive: Granite, Diorite, Gabbro with coarse crystals; Volcanic extrusive: Basalt, Obsidian, Pumice with fine crystals; Acidic high-silica vs Basic low-silica); Sedimentary stratified rocks (Mechanically formed/clastic: Sandstone, Shale, Conglomerate; Organically formed: Coal, Limestone; Chemically formed: Halite/Rock salt, Gypsum); Metamorphic rocks (Thermal contact vs Dynamic regional metamorphism; Foliated: Slate, Schist, Gneiss; Non-foliated: Marble from limestone, Quartzite from sandstone); Dynamic Rock Cycle driving continual transformation.
+  *Key Concepts & Entities*: Igneous Rocks (Granite & Basalt) • Sedimentary Rocks (Stratification & Fossils) • Clastic vs Chemical Sedimentary • Metamorphic Rocks (Foliation & Gneiss) • Marble and Quartzite Metamorphism • The Dynamic Rock Cycle
+
+### Earthquakes: Mechanics, Seismic Waves & Hazard Zones
+
+- **Earthquake Mechanics, Seismic Waves & India's Seismic Zones** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Elastic Rebound Theory; Hypocenter (Focus) vs Epicenter; Seismic waves: Body waves (P compressional, S shear) and Surface waves (Rayleigh ground-roll, Love horizontal shearing causing maximum structural destruction); Measurement scales: Richter scale (logarithmic physical magnitude) vs Modified Mercalli scale (observed human/structural intensity); Seismic Hazard Zonation of India (Zone II low to Zone V very severe in Himalayas, Kutch, Northeast).
+  *Key Concepts & Entities*: Elastic Rebound Theory • Focus (Hypocenter) & Epicenter • Body Waves (P and S Waves) • Surface Waves (Rayleigh and Love) • Richter vs Mercalli Intensity Scale • India Seismic Zones (Zone II to V)
+
+### Volcanoes: Volcanism, Intrusive & Extrusive Landforms
+
+- **Volcanism: Intrusive Plutonic & Extrusive Landforms** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Magma vs lava; Intrusive plutonic structures: Batholiths (gigantic granitic core intrusions), Laccoliths (dome-shaped with level base), Lopoliths (saucer-shaped concavity), Phacoliths (anticline crest and syncline trough lens), Sills (horizontal concordant sheets), and Dikes (vertical discordant conduits); Extrusive volcanic morphology: Shield volcanoes (Hawaiian low-viscosity basaltic lava, gentle slopes, Mauna Loa), Composite/Stratovolcanoes (viscous explosive andesite with alternating pyroclastic ash layers, Mt. Fuji, Mt. St. Helens, Vesuvius), Calderas (catastrophic explosive collapses), Flood basalt provinces (Deccan Traps), and mid-ocean ridge fissure eruptions.
+  *Key Concepts & Entities*: Plutonic Batholiths & Laccoliths • Concordant Sills & Discordant Dikes • Shield Volcanoes (Basaltic) • Composite / Stratovolcanoes (Andesitic) • Explosive Caldera Collapse • Deccan Traps Flood Basalts
+
+### Tsunamis: Generation, Shoaling & Early Warning Systems
+
+- **Tsunami Generation, Coastal Shoaling & Warning Systems** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Physics of tsunamis: Submarine megathrust earthquake vertical seabed displacement, submarine volcanic caldera collapse or massive undersea landslides; Open ocean characteristics (extreme wavelength hundreds of kilometers, low amplitude <1m, jet-aircraft velocity ~800 km/h); Coastal Shoaling (compressing wave energy, sharp reduction in velocity, dramatic surge in wave height exceeding 10-30 meters); 2004 Indian Ocean tsunami (Sumatra 9.1 Mw earthquake) and 2011 Tohoku tsunami; Indian Ocean Tsunami Early Warning System (INCOIS, Hyderabad) utilizing Deep Ocean Assessment and Reporting of Tsunamis (DART) buoys and bottom pressure recorders.
+  *Key Concepts & Entities*: Megathrust Displacement Mechanism • Open-Ocean Wavelength & High Velocity • Coastal Shoaling Effect (Wave Height Surge) • 2004 Indian Ocean Tsunami • INCOIS Tsunami Warning System • DART Buoy Sensor Network
+
+Climatology `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Atmosphere Structure & Heat Budget (Troposphere, Stratosphere, Mesosphere, Thermosphere; Insolation, Terrestrial Radiation, Atmospheric Heat Budget)
+
+- **Atmospheric Layers, Composition & Lapse Rates** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Atmospheric composition: Nitrogen 78%, Oxygen 21%, Argon 0.93%, Carbon dioxide 0.04%, water vapour and aerosols; Thermal layers: Troposphere (weather phenomena, thickness 8km at poles to 18km at equator, normal lapse rate 6.5 deg C/km), Stratosphere (Ozone layer absorbing UV rays, absence of vertical convection), Mesosphere (coldest layer -100 deg C, noctilucent clouds, meteor ablation), Thermosphere / Ionosphere (D, E, F layers reflecting HF radio waves, Aurora Borealis and Australis), Exosphere; Adiabatic lapse rates: Dry Adiabatic Lapse Rate (DALR 10 deg C/km) vs Wet/Saturated Adiabatic Lapse Rate (WALR 5-9 deg C/km).
+  *Key Concepts & Entities*: Troposphere & Tropopause • Stratosphere & Ozonosphere • Mesosphere Noctilucent Clouds • Ionosphere & Auroral Displays • Normal Environmental Lapse Rate (6.5 deg C/km) • Dry vs Wet Adiabatic Lapse Rate
+
+- **Insolation, Earth's Heat Budget & Albedo** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Solar radiation physics: Solar Constant (1.94 cal/cm2/min); Shortwave solar insolation vs Longwave terrestrial radiation; Earth's Heat Budget: Out of 100 incoming units, 35 units reflected back into space unabsorbed (Albedo of Earth: 27 from clouds, 2 from snow/ice, 6 from atmosphere); Remaining 65 units absorbed (14 by atmosphere, 51 by Earth's surface) and returned through radiation, conduction, and latent heat of condensation maintaining global thermal equilibrium.
+  *Key Concepts & Entities*: Solar Constant • Shortwave vs Longwave Radiation • Earth's Albedo (35% Reflection) • Global Heat Budget Equilibrium • Greenhouse Radiative Balance
+
+- **Temperature Inversion: Radiation, Advection & Valley Belts** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Reversal of normal lapse rate where temperature increases with height; Favourable conditions: Long winter nights, clear cloudless skies, calm dry air; Inversion types: Surface / Ground radiation inversion, Advectional inversion (warm air blowing over cold surface), Valley inversion (cold dense air draining down slopes into valley bottoms while thermal belts form on mid-slopes, preventing frost damage to orchards); Inversion impacts: Trapping urban air pollution and smog, radiation fog formation.
+  *Key Concepts & Entities*: Temperature Inversion Reversal • Radiation Ground Inversion • Advectional Marine Inversion • Valley Air Drainage & Frost Pockets • Thermal Belts on Slopes • Smog Trapping Effects
+
+### Atmospheric Pressure & Global Wind Belts (Pressure Belts - Equatorial Low, Subtropical High, Subpolar Low; Planetary Winds - Trade Winds, Westerlies, Polar Easterlies; Jet Streams)
+
+- **Global Pressure Belts & Tricellular Circulation (Hadley, Ferrel, Polar)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Seven global pressure belts: Thermal belts (Equatorial Low Pressure Belt / Doldrums / ITCZ, Polar Highs), Dynamic belts (Subtropical High Pressure Belts / Horse Latitudes at 30-35 deg, Subpolar Low Pressure Belts at 60-65 deg); Tricellular meridional circulation cells: Hadley Cell (tropical convection and subtropical subsidence), Ferrel Cell (mid-latitude indirect circulation), Polar Cell; Seasonal latitudinal migration of pressure belts tracking the apparent movement of the Sun.
+  *Key Concepts & Entities*: Equatorial Low / ITCZ Doldrums • Subtropical High / Horse Latitudes • Subpolar Lows & Polar Highs • Hadley, Ferrel & Polar Cells • Pressure Belt Seasonal Shifting
+
+- **Coriolis Force, Geostrophic Winds & Polar Jet Streams** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Mechanics of wind: Pressure Gradient Force, Friction; Coriolis Force (apparent deflection proportional to wind velocity and sine of latitude, zero at equator, maximum at poles); Ferrel's Law (deflection to right in Northern Hemisphere, left in Southern Hemisphere); Geostrophic Winds (frictionless upper-air winds blowing parallel to straight isobars where PGF balances Coriolis); Jet Streams: Narrow meandering bands of high-velocity upper-tropospheric winds (Polar Jet Stream, Subtropical Westerly Jet Stream, Tropical Easterly Jet Stream, Rossby Waves and index cycle).
+  *Key Concepts & Entities*: Coriolis Force & Ferrel's Law • Pressure Gradient Force • Geostrophic Wind Equilibrium • Polar Front Jet Stream • Subtropical Westerly Jet Stream • Rossby Waves Index Cycle
+
+- **Planetary Winds & World Regional Local Winds** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Primary planetary winds: Trade Winds (Northeast and Southeast Trades), Prevailing Westerlies (Roaring Forties, Furious Fifties, Shrieking Sixties in open Southern Ocean), Polar Easterlies; Periodic daily winds: Land and sea breezes, Anabatic (upslope daytime valley breeze) vs Katabatic (downslope nighttime mountain wind); Regional hot winds: Loo (Indo-Gangetic plain), Chinook (snow-eater, eastern Rockies), Foehn (Alps), Sirocco (Sahara to Mediterranean), Harmattan (Doctor wind, West Africa), Khamsin; Regional cold winds: Mistral (Rhone valley France), Bora (Adriatic coast), Blizzard (polar prairies), Pampero (Argentina pampas).
+  *Key Concepts & Entities*: Trade Winds & Prevailing Westerlies • Roaring Forties & Furious Fifties • Land and Sea Breezes • Anabatic & Katabatic Winds • Hot Winds (Chinook, Harmattan, Loo, Foehn) • Cold Winds (Mistral, Bora, Blizzard)
+
+### Air Masses, Fronts & Cyclogenesis (Air Mass Types, Fronts - Warm, Cold, Occluded; Tropical Cyclones vs Temperate / Extra-Tropical Cyclones, Eye of Cyclone)
+
+- **Air Masses Classification & Frontogenesis (Warm, Cold, Occluded)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Air mass definition and source regions: Continental Polar (cP, bitterly cold and stable), Maritime Polar (mP, cool and humid), Continental Tropical (cT, hot and arid), Maritime Tropical (mT, warm and highly unstable); Frontogenesis (creation of fronts) and Frontolysis (dissipation); Front types: Warm Front (gentle slope 1:200, cirrus-altostratus-nimbostratus sequence, broad steady rain), Cold Front (steep slope 1:50, violent cumulonimbus, squall line storms, abrupt post-frontal temperature drop), Occluded Front (cold front overtakes warm front lifting warm air completely), Stationary Front.
+  *Key Concepts & Entities*: Air Mass Source Regions (cP, mP, cT, mT) • Warm Front Cloud Sequence • Cold Front Squall Lines • Occluded Front Mechanics • Frontogenesis and Frontolysis
+
+- **Temperate Frontal Cyclones vs Tropical Cyclones** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Comparative cyclonic meteorology: Extra-tropical / Temperate Wave Cyclones (Polar Front Theory of Bjerknes, formation along polar front 35-65 deg, steer from west to east by Westerlies, vast scale >1000km, presence of distinct warm and cold fronts, active over land and sea, year-round); Tropical Cyclones (Thermal engine driven by latent heat of condensation, strictly over warm seas SST > 27 deg C, Coriolis force required, absence of fronts, steer east to west by Trade winds, rapid dissipation over land); Anatomy: Eye (calm, sinking air, clear sky), Eyewall (maximum torrential fury, gale force winds >120 km/h), Spiral rainbands; Storm surge flooding hazard; Regional names: Cyclones (Indian Ocean), Typhoons (Northwest Pacific), Hurricanes (Atlantic/Caribbean), Willy-Willies (Australia).
+  *Key Concepts & Entities*: Temperate Wave Cyclones (Bjerknes) • Tropical Cyclone Thermal Engine • Sea Surface Temperature (>27 deg C) • Eye, Eyewall & Rainbands • Storm Surge Hazards • Regional Names (Typhoon, Hurricane, Cyclone)
+
+### World Climate Regions (Equatorial, Tropical Monsoon, Savanna, Mediterranean, Steppe, Taiga, Tundra, Desert Climates)
+
+- **Köppen Climate Classification System & World Biomes** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Wladimir Köppen's empirical climatic classification: Major groups: A (Tropical humid), B (Dry/Arid), C (Warm temperate/Mesothermal), D (Cold snow-forest/Microthermal), E (Polar), H (Highland); Major world biomes: Equatorial Rainforest (Af, Selvas, layered emergent canopy, buttress roots, absence of winter), Tropical Monsoon (Am, seasonal deciduous teak/sal), Tropical Savanna (Aw, Sudan type, tall elephant grass, big game country), Hot Deserts (BWh, xerophytic adaptations, subtropical subsidence), Mediterranean Climate (Cs, winter rain, summer drought, sclerophyllous chaparral vegetation, citrus viticulture), Marine West Coast (Cfb, British type, temperate deciduous forests), Taiga (Df, boreal coniferous evergreen needle-leaf softwood forests), and Tundra (ET, permafrost, lichens and mosses).
+  *Key Concepts & Entities*: Köppen Empirical Climate Scheme • Equatorial Selvas Rainforest (Af) • Tropical Savanna Sudan Type (Aw) • Mediterranean Winter Rain (Cs) • Marine West Coast British Type (Cfb) • Taiga Boreal Coniferous (Df) • Tundra Permafrost Biome (ET)
+
+### Atmospheric Moisture, Condensation & Precipitation
+
+- **Atmospheric Humidity, Dew Point & Fog Types** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Moisture metrics: Absolute humidity (mass of water vapor per unit volume), Specific humidity (mass of vapor per mass of moist air), Relative Humidity (RH = actual vapor pressure / saturation vapor pressure * 100%, inversely proportional to temperature); Dew Point temperature and hygroscopic condensation nuclei; Non-cloud condensation: Dew, White frost, Mist, Haze; Fog genesis and types: Radiation fog (ground radiative cooling on calm winter nights), Advection fog (warm moist air advecting over cold surface, Grand Banks), Upslope fog, Evaporation fog / steam fog.
+  *Key Concepts & Entities*: Absolute, Specific & Relative Humidity • Dew Point Temperature • Hygroscopic Nuclei • Radiation Fog & Smog • Advection Fog (Sea Fog) • Dew and White Frost
+
+- **Cloud Classification (10 Genera) & Rainfall Types** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  International Cloud Atlas 10 standard cloud genera by altitude: High clouds (Cirrus feathery ice crystals, Cirrostratus lunar/solar halos, Cirrocumulus mackerel sky), Middle clouds (Altostratus, Altocumulus), Low clouds (Stratus low grey overcast, Stratocumulus, Nimbostratus continuous heavy rain), Clouds of vertical development (Cumulus cauliflower fair weather, Cumulonimbus towering anvil thunderheads with lightning and hail); Precipitation physics: Collision-coalescence in warm clouds and Bergeron-Findeisen ice process in cold clouds; Rainfall mechanisms: Convectional (afternoon 4 o'clock showers), Orographic / Relief (heavy windward vs dry leeward rain-shadow), Cyclonic / Frontal.
+  *Key Concepts & Entities*: 10 Cloud Genera Classification • Cirrus, Stratus & Cumulus • Cumulonimbus Anvil Thunderheads • Haloes in Cirrostratus • Bergeron-Findeisen Rain Process • Convectional, Orographic & Frontal Rainfall
+
+### Hydrological Cycle & Global Water Balance
+
+- **Global Hydrological Cycle & Global Water Budget** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Earth's water distribution: 97.2% saline in oceans, 2.8% freshwater (68.7% in ice caps and glaciers, 30.1% in groundwater, 0.3% in lakes and rivers, 0.04% in atmosphere); Hydrological Cycle components: Evaporation, Transpiration (Evapotranspiration), Condensation, Precipitation, Infiltration, Percolation, Surface runoff, and Groundwater flow; Global water budget balancing ocean excess evaporation vs land excess precipitation.
+  *Key Concepts & Entities*: Global Freshwater Distribution • Hydrological Cycle Mechanics • Evapotranspiration & Runoff • Infiltration and Percolation • Global Water Budget Equilibrium
+
+### Groundwater Hydrology, Aquifers & Springs
+
+- **Groundwater Hydrology: Water Table, Aquifers & Springs** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Subsurface hydrology: Zone of aeration / Vadose zone (soil moisture, capillary fringe) vs Zone of saturation / Phreatic zone; Water Table (fluctuating upper limit of saturation); Porosity vs Permeability; Aquifers: Unconfined (water table aquifer), Confined / Artesian aquifer (trapped between impermeable aquitards/aquicludes under hydrostatic pressure, artesian wells); Perched water table; Natural springs and geysers (Old Faithful, geothermal groundwater heated by magma); Groundwater depletion, saltwater intrusion in coastal aquifers, and artificial recharge.
+  *Key Concepts & Entities*: Water Table & Phreatic Zone • Vadose / Aeration Zone • Unconfined vs Confined Aquifers • Artesian Wells & Hydrostatic Pressure • Aquitards and Aquicludes • Groundwater Depletion & Recharge
+
+Oceanography & Marine Systems `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Ocean Floor Relief & Features (Continental Shelf, Slope, Abyssal Plains, Oceanic Trenches, Mid-Oceanic Ridges)
+
+- **Ocean Bottom Relief: Continental Shelf, Slope, Rise & Abyssal Plains** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Hypsographic curve of Earth's surface; Major oceanic provinces: Continental Shelf (gently sloping platform <1 deg, width 80km to 1500km in Siberian shelf, shallow depth <200m, richest marine life, commercial fisheries like Grand Banks of Newfoundland and Dogger Bank, offshore petroleum like Mumbai High), Continental Slope (steep incline 2-5 deg marking boundary of continental crust), Continental Rise (gradual apron of turbidity current sediment), and Abyssal Plains (flattest smoothest regions on Earth at depth 3000-6000m, blanketed in pelagic red clay and biogenous oozes).
+  *Key Concepts & Entities*: Hypsographic / Hypsometric Curve • Continental Shelf (Fisheries & Oil) • Continental Slope & Continental Rise • Turbidity Currents & Sediment Aprons • Abyssal Plains (Pelagic Oozes)
+
+- **Submarine Canyons, Trenches, Mid-Ocean Ridges & Guyots** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Submarine Canyons (deep V-shaped valleys gouged across continental shelf and slope, e.g., Hudson Canyon, Indus Canyon, Swatch of No Ground); Mid-Oceanic Ridges (continuous 65,000km undersea volcanic mountain chain, central rift valley, hydrothermal vents / black smokers, Mid-Atlantic Ridge, Southwest Indian Ridge); Deep-Sea Trenches (narrow V-shaped subduction chasms: Mariana Trench Challenger Deep 10,994m, Puerto Rico Trench, Sunda/Java Trench); Seamounts (submerged volcanic cones >1000m) and Guyots (flat-topped wave-truncated seamounts).
+  *Key Concepts & Entities*: Submarine Canyons (Swatch of No Ground) • Mid-Oceanic Ridge Central Rift • Hydrothermal Vents (Black Smokers) • Mariana Trench Challenger Deep • Seamounts and Flat-Topped Guyots
+
+### Ocean Water Dynamics (Temperature & Salinity Distribution, Ocean Currents - Warm & Cold Currents, Thermohaline Circulation, Tides - Spring & Neap Tides)
+
+- **Ocean Temperature, Salinity & Density Profiles (Thermocline, Halocline)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Physicochemical stratification: Temperature profile: Warm epipelagic mixed layer, Thermocline (rapid temperature decline between 200m-1000m), Cold deep layer; Factors affecting surface temperature: Latitude, upwelling, ocean currents; Salinity: Global average 35 practical salinity units (psu or ‰), Halocline (rapid salinity gradient); Drivers: Evaporation, precipitation, river discharge, ice melting; High-salinity water bodies (Lake Van 330‰, Dead Sea 240‰, Great Salt Lake 220‰, Red Sea 41‰) vs Low-salinity bodies (Baltic Sea 2-7‰, Black Sea); Pycnocline (density stratification zone combining temperature and salinity).
+  *Key Concepts & Entities*: Thermocline Temperature Layering • Halocline Salinity Stratification • Pycnocline Density Zone • Average Ocean Salinity (35‰) • High Salinity Seas (Red Sea, Dead Sea) • Low Salinity Seas (Baltic Sea)
+
+- **Ocean Waves: Mechanics, Wave Parameters & Energy** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Wave physics: Wind blowing over fetch generating surface orbital motion; Wave Anatomy: Crest (highest point), Trough (lowest point), Wave Height (vertical distance from trough to crest), Wavelength (horizontal distance between two consecutive crests), Wave Period (time for one wavelength to pass a point), Wave Frequency; Orbital motion of water particles decaying with depth (wave base = wavelength / 2); Shoaling in shallow water where friction slows wave base, steepens wave height, and creates breaking surf (Spilling, Plunging, Surging breakers); Constructive vs Destructive waves shaping coastal morphology.
+  *Key Concepts & Entities*: Wave Anatomy (Crest, Trough, Height, Period) • Wind Fetch and Wind Duration • Orbital Particle Motion & Wave Base • Wave Shoaling & Breakers (Surf Zone) • Constructive vs Destructive Waves
+
+- **Tides: Gravitational Forces, Syzygy, Quadrature & Tidal Bores** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Tide generating forces: Differential gravitational attraction of Moon (dominant 2.17x greater) and Sun, balanced by centrifugal force creating two tidal bulges on opposite sides of Earth; Astronomical tidal cycles: Spring Tides (Syzygy alignment: Conjunction/New Moon and Opposition/Full Moon when lunar and solar gravitational forces reinforce each other producing highest tidal range); Neap Tides (Quadrature alignment: First and Third Quarter moons when Sun and Moon act at right angles producing lowest tidal range); Diurnal (one high, one low daily), Semidiurnal (two equal highs, two equal lows daily), Mixed tides; Tidal bore phenomena (steep turbulent wall of water rushing up shallow estuaries, Hooghly River, Qiantang River China, Bay of Fundy world's highest tides 16m); Amphidromic points (cotidal nodal points where tidal range is zero).
+  *Key Concepts & Entities*: Tidal Bulges (Moon & Sun Gravitational Forces) • Spring Tides (Syzygy Alignment) • Neap Tides (Quadrature 90 deg) • Semidiurnal & Diurnal Tides • Tidal Bore (Hooghly River) • Bay of Fundy Extreme Tidal Range (16m) • Amphidromic Nodal Points
+
+- **Ocean Currents: Global Gyres & Thermohaline Circulation** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Surface wind-driven ocean circulation: Five major Subtropical Gyres (North/South Atlantic, North/South Pacific, Indian Ocean) circulating clockwise in Northern Hemisphere and counter-clockwise in Southern Hemisphere; Western Boundary Currents (narrow, deep, swift warm currents: Gulf Stream, Kuroshio, Brazil, Agulhas) vs Eastern Boundary Currents (broad, shallow, slow cold currents: California, Canaries, Benguela, Peru / Humboldt); Sargasso Sea enclosed by Atlantic gyre; Seasonal reversal of North Indian Ocean currents (Southwest Monsoon Drift eastward vs Northeast Monsoon Drift westward); Thermohaline Circulation / Global Conveyor Belt driven by cold saline North Atlantic Deep Water (NADW) formation; Coastal upwelling and downwelling mechanisms.
+  *Key Concepts & Entities*: Five Subtropical Ocean Gyres • Western Boundary Currents (Gulf Stream, Kuroshio) • Eastern Boundary Currents (Humboldt, Canaries) • Sargasso Sea • North Indian Ocean Monsoon Reversal • Thermohaline Conveyor Belt (NADW) • Coastal Upwelling and Downwelling
+
+- **Ocean-Atmosphere Teleconnections: ENSO (El Niño, La Niña) & Indian Ocean Dipole (IOD)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Coupled ocean-atmosphere teleconnections: Normal Walker Circulation over equatorial Pacific; El Niño Southern Oscillation (ENSO): El Niño warm phase (weakening of Trade winds, eastward displacement of warm water pool, suppression of Peruvian coastal upwelling, collapse of anchovy fishery, teleconnections suppressing Indian monsoon and causing Australian drought); La Niña cold phase (intensified Trade winds, amplified Peruvian upwelling, enhanced monsoon rainfall in India); El Niño Modoki (central Pacific warming anomaly); Indian Ocean Dipole (IOD): Positive IOD (warm Western Indian Ocean, cool Eastern Indian Ocean, favorable for Indian monsoon) vs Negative IOD (cool Western Indian Ocean, suppressed monsoon); ENSO-IOD coupling and global climatic anomalies.
+  *Key Concepts & Entities*: Walker Circulation Cell • El Niño (ENSO Warm Phase) • La Niña (ENSO Cold Phase) • Southern Oscillation Index (SOI) • El Niño Modoki • Indian Ocean Dipole (Positive & Negative IOD) • Peruvian Upwelling Suppression • Teleconnections to Indian Monsoon
+
+### Marine Ecosystems & Conservation (Coral Reefs - Fringing, Barrier, Atoll; Coral Bleaching, Blue Carbon, Ocean Acidification, EEZ, Marine Protected Areas)
+
+- **Coral Reefs: Symbiosis, Darwin's Subsidence Theory & Bleaching** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Marine biodiversity hotspots: Hermatypic reef-building polyps in mutualistic symbiosis with photosynthetic Zooxanthellae dinoflagellates; Environmental requirements: Warm shallow tropical waters (20-28 deg C), depth <50m for light penetration, normal salinity 30-35‰, clear sediment-free water; Morphological reef types: Fringing Reefs, Barrier Reefs (Great Barrier Reef Australia), Atolls (Lakshadweep, Maldives); Formation theories: Charles Darwin's Subsidence Theory (fringing -> barrier -> atoll as volcanic island subsides), Reginald Daly's Glacial Control Theory; Coral Bleaching: Expulsion of zooxanthellae under elevated Sea Surface Temperatures and marine heatwaves; Ocean Acidification (carbonic acid reducing carbonate saturation needed for aragonite calcium carbonate skeletons).
+  *Key Concepts & Entities*: Coral-Zooxanthellae Symbiosis • Fringing, Barrier & Atoll Reefs • Darwin's Subsidence Theory • Coral Bleaching Thermal Triggers • Ocean Acidification (Carbonate Saturation) • Great Barrier Reef & Lakshadweep Atolls
+
+- **Marine Resources (Polymetallic Nodules), UNCLOS Maritime Zones & Blue Economy** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Ocean economics and international law of the sea: Living resources (pelagic and demersal fisheries, mariculture, seaweed); Non-living marine resources: Polymetallic Nodules / Manganese Nodules on abyssal floor (rich in manganese, nickel, cobalt, copper; India's deep-sea mining exploration block in Central Indian Ocean Basin approved by International Seabed Authority / ISA under Deep Ocean Mission / Samudrayaan), Gas hydrates, Placer mineral sands (monazite, ilmenite on Kerala beaches); United Nations Convention on the Law of the Sea (UNCLOS) maritime zones: Baseline, Internal Waters, Territorial Sea (12 nautical miles, sovereign territory), Contiguous Zone (24 nm, fiscal/customs/immigration jurisdiction), Exclusive Economic Zone / EEZ (200 nm, exclusive sovereign rights to living and non-living resources), High Seas (global commons under ISA jurisdiction).
+  *Key Concepts & Entities*: Polymetallic Nodules (Manganese Nodules) • Deep Ocean Mission (Samudrayaan) • International Seabed Authority (ISA) • UNCLOS Maritime Zones (Territorial Sea 12nm) • Exclusive Economic Zone (EEZ 200nm) • High Seas Global Commons • Blue Economy Initiatives
+
+Indian Physical Geography & Monsoon Architecture `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Physiographic Divisions of India (Himalayan Mountain System, Northern Great Plains, Peninsular Plateau, Coastal Plains, Lakshadweep & Andaman Nicobar Islands)
+
+- **Himalayan Mountain System: Ranges, Passes & Structural Faults** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Morphotectonic divisions: Trans-Himalayas (Karakoram with K2/Godwin-Austen, Ladakh, Zanskar), Greater Himalayas / Himadri (average elevation 6,000m, Mt. Everest, Kanchenjunga, Nanda Devi), Lesser Himalayas / Himachal (Pir Panjal, Dhauladhar, Nag Tibba, Mahabharat range; famous hill stations & Duns/Duars), Shiwaliks / Outer Himalayas (youngest sedimentary fold range with hogback topography), and Purvanchal / Eastern Hills (Patkai Bum, Naga Hills, Manipur Hills, Mizo/Lushai Hills); Longitudinal divisions: Punjab/Kashmir, Kumaon, Nepal, and Assam Himalayas; Strategic mountain passes: Zoji La, Banihal, Rohtang, Shipki La, Lipulekh, Nathu La, Jelep La, Bomdi La; Structural boundary thrusts: Main Central Thrust (MCT), Main Boundary Thrust (MBT), and Himalayan Frontal Thrust (HFT).
+  *Key Concepts & Entities*: Himadri (Greater Himalayas) • Himachal (Lesser Himalayas) • Shiwalik Outer Range • Purvanchal Hills • Karakoram & Zanskar Ranges • Zoji La, Shipki La & Nathu La Passes • Main Central Thrust (MCT) & MBT
+
+- **Northern Great Plains: Bhabar, Tarai, Bhangar & Khadar Morphology** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geomorphological zones of the Indo-Gangetic-Brahmaputra alluvial trough: Bhabar (narrow 8-10 km piedmont pebble belt at the Shiwalik foot where streams disappear subterraneanly), Tarai (marshy, damp, heavily forested zone of stream re-emergence with high water table), Bhangar (older, elevated alluvium lying above flood levels containing Kankar calcareous nodules), and Khadar / Bet (newer, fertile, annually replenished silt deposits in river floodplains); Regional plain divisions: Rajasthan Plains, Punjab-Haryana Plains, Upper, Middle, and Lower Ganga Plains, and Brahmaputra Valley; Riverine islands such as Majuli on the Brahmaputra (world's largest inhabited river island).
+  *Key Concepts & Entities*: Bhabar Pebble Belt • Tarai Marshy Zone • Bhangar Older Alluvium & Kankar • Khadar Floodplain Silt • Indo-Gangetic Alluvial Trough • Majuli River Island
+
+- **Peninsular Plateau: Central Highlands, Deccan & Western-Eastern Ghats** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Ancient Gondwana crystalline plateau: Central Highlands: Aravalli Range (relict fold mountain, Guru Shikhar 1,722m), Malwa Plateau, Bundelkhand, Baghelkhand, and Chota Nagpur Plateau ('Ruhr of India' rich in minerals); Deccan Plateau: Deccan Traps (basaltic lava plateau in Maharashtra), Karnataka/Mysore Plateau (divided into Malnad hill tracts and Maidan rolling plains), and Telangana Plateau; Satpura Range (horst mountain, Dhupgarh peak) and Vindhyan Range; Western Ghats / Sahyadri (continuous escarpment, UNESCO World Heritage site, Anamudi 2,695m highest peak in South India, Doddabetta in Nilgiris, Thal Ghat, Bhor Ghat, Palghat Gap); Eastern Ghats (discontinuous, eroded residual hills dissected by east-flowing rivers, Arma Konda / Jindhagada peak, Shevaroy, Javadi Hills).
+  *Key Concepts & Entities*: Chota Nagpur Plateau • Aravalli Range & Guru Shikhar • Deccan Traps Basalt • Western Ghats / Sahyadri & Anamudi • Eastern Ghats Discontinuous Arc • Nilgiri Hills & Doddabetta • Palghat Gap
+
+- **Coastal Plains & Island Territories: Arabian Sea & Bay of Bengal** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Comparative morphology: West Coastal Plain (submerged narrow coastal strip, indented coastline with natural ports, lagoons/Kayals like Vembanad in Kerala, divided into Kathiawar, Konkan, Kannada, and Malabar coasts) vs East Coastal Plain (emergent broad coastal strip, massive river deltas of Mahanadi, Godavari, Krishna, Cauvery, lagoons like Chilika and Pulicat, divided into Utkal, Northern Circars, and Coromandel Coast); Island Territories: Andaman & Nicobar Islands in Bay of Bengal (submerged peaks of Arakan Yoma fold belt, volcanic Barren Island and Narcondam, Ten Degree Channel separating Andaman from Nicobar, Duncan Passage, Great Nicobar biosphere reserve, Indira Point southernmost tip); Lakshadweep Islands in Arabian Sea (coral atoll archipelago, Minicoy island separated by Nine Degree Channel, Eight Degree Channel separating Minicoy from Maldives).
+  *Key Concepts & Entities*: West Coastal Plain & Malabar Kayals • East Coastal Plain & Coromandel Coast • Andaman & Nicobar Islands • Barren Island Active Volcano • Ten Degree Channel • Lakshadweep Coral Atolls • Nine Degree Channel
+
+### Drainage Systems of India (Himalayan Rivers - Indus, Ganga, Brahmaputra; Peninsular Rivers - Narmada, Tapi, Godavari, Krishna, Kaveri, Mahanadi; River Interlinking)
+
+- **Himalayan Drainage: Indus, Ganga & Brahmaputra Basins** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Antecedent, perennial, snow-fed drainage: Indus River System (origin near Bokhar Chu glacier near Lake Mansarovar; 5 Punjab tributaries: Jhelum originating at Verinag, Chenab formed by Chandra and Bhaga, Ravi, Beas, Sutlej cutting through Shipki La; Right bank tributaries: Shyok, Gilgit, Hunza, Kabul; Indus Waters Treaty 1960); Ganga River System (Panch Prayag headwaters: Vishnuprayag / Alaknanda-Dhauliganga, Nandaprayag / Nandakini, Karnaprayag / Pindar, Rudraprayag / Mandakini, Devprayag / Bhagirathi-Alaknanda confluence forming Ganga; Left-bank tributaries: Ramganga, Gomti, Ghaghara, Gandak, Kosi 'Sorrow of Bihar'; Right-bank tributaries: Yamuna originating at Yamunotri with Chambal, Betwa, Ken, and Son from Amarkantak; deltaic bifurcation into Hugli and Padma); Brahmaputra River System (origin at Chemayungdung glacier as Yarlung Tsangpo in Tibet, carved Namcha Barwa syntaxis into Arunachal Pradesh as Siang/Dihang; joined by Dibang and Lohit; major tributaries: Subansiri, Kameng, Manas, Sankosh, Teesta; merges with Padma and Meghna into Bay of Bengal).
+  *Key Concepts & Entities*: Indus Basin & 5 Punjab Rivers • Indus Waters Treaty 1960 • Panch Prayag (Devprayag Confluence) • Ganga Basin Tributaries • Yamuna, Chambal & Son Rivers • Brahmaputra / Tsangpo Basin • Teesta & Subansiri Tributaries
+
+- **Peninsular Drainage: East-Flowing Deltas & West-Flowing Rift Valleys** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Superimposed, mature, rain-fed peninsular drainage: Major East-Flowing Rivers (drain into Bay of Bengal forming arcuate/bird-foot deltas): Godavari / Dakshin Ganga (longest peninsular river 1,465 km, origin at Trimbakeshwar in Nasik, tributaries: Pravara, Manjira, Penganga, Wainganga, Wardha, Indravati, Sabari); Krishna River (origin at Mahabaleshwar, tributaries: Koyna, Ghataprabha, Malaprabha, Bhima, Tungabhadra); Cauvery / Kaveri (origin at Talakaveri in Brahmagiri hills, perennial character due to SW and NE monsoon rains, tributaries: Harangi, Hemavati, Shimsha, Arkavathi, Kabini, Bhavani, Noyyal, Amaravati; Shivanasamudra & Hogenakkal falls); Mahanadi (origin in Dandakaranya Chhattisgarh, Hirakud Dam, delta in Odisha); Major West-Flowing Rivers (drain into Arabian Sea through estuaries without deltas): Narmada (origin at Amarkantak, flows through tectonic rift valley between Vindhya and Satpura, Dhuandhar falls in marble rocks, Sardar Sarovar Dam); Tapi / Tapti (origin at Multai in Betul, flows through rift valley south of Satpura, Ukai Dam); Sabarmati and Mahi (cuts across Tropic of Cancer twice); Short coastal rivers: Mandovi & Zuari in Goa, Sharavathi (Jog / Gersoppa Falls), Netravathi in Karnataka, Periyar and Bharatapuzha in Kerala.
+  *Key Concepts & Entities*: Godavari / Dakshin Ganga Basin • Krishna River & Tungabhadra • Cauvery / Kaveri Basin & Tributaries • Mahanadi River & Hirakud Dam • Narmada Rift Valley & Dhuandhar • Tapi River Estuary • Sharavathi (Jog Falls) & Periyar
+
+- **Inter-State River Water Disputes, Interlinking & Watershed Management** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Water governance, federal hydrological conflicts, and basin management: National River Linking Project (NRLP by NWDA: 14 Himalayan and 16 Peninsular links; Ken-Betwa Link Project connecting MP and UP; Par-Tapi-Narmada link, Godavari-Cauvery link); Inter-State River Water Disputes Act 1956 (Article 262 constitutional bar on Supreme Court jurisdiction; Cauvery Water Disputes Tribunal, Krishna Water Disputes Tribunal, Mahadayi Water Disputes Tribunal, Vansadhara tribunal); Integrated Watershed Management Programme (IWMP under PMKSY - Watershed Development component), Neeranchal National Watershed Project, check dams, and ridge-to-valley conservation approach.
+  *Key Concepts & Entities*: National River Linking Project (NRLP) • Ken-Betwa River Link • Inter-State River Water Disputes Act (Article 262) • Cauvery & Krishna Disputes Tribunals • Mahadayi River Dispute • Integrated Watershed Management (PMKSY)
+
+### Indian Monsoon & Climate Dynamics (South-West & North-East Monsoons, Mechanism of Monsoon - ITCZ Shift, Jet Streams, El Niño, La Niña, Indian Ocean Dipole / IOD, Western Disturbances)
+
+- **Monsoon Mechanism: ITCZ Migration, Arabian Sea & Bay of Bengal Branches** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Dynamic mechanism of Indian monsoon: Thermal vs Dynamic theories (Halley's differential heating vs Flohn's seasonal migration of Inter-Tropical Convergence Zone / ITCZ / Monsoon Trough); Onset of Southwest Monsoon (typically June 1 over Kerala coast); Dual branches: Arabian Sea Branch (strikes Western Ghats causing heavy orographic precipitation, moves across Mumbai, Gujarat, and merges with Bengal branch in Punjab) vs Bay of Bengal Branch (strikes Arakan Yoma and Meghalaya hills causing world-record rainfall at Mawsynram and Cherrapunji due to funneling effect, deflects westwards along Indo-Gangetic trough); Monsoon 'Breaks' (shifts of monsoon trough to Himalayan foothills causing plains dry spells and mountain flash floods); Retreating / Northeast Monsoon (October-November withdrawal, retreating cyclones striking Coromandel coast, winter rainfall over Tamil Nadu).
+  *Key Concepts & Entities*: ITCZ / Monsoon Trough Migration • Onset of Southwest Monsoon (June 1) • Arabian Sea Monsoon Branch • Bay of Bengal Branch & Funneling Effect • Mawsynram Rainfall Record • Retreating / Northeast Monsoon (Tamil Nadu Rains)
+
+- **Jet Streams & Global Teleconnections: TEJS, STWJ, ENSO, IOD & MJO** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Upper tropospheric steering engines and global teleconnections: Subtropical Westerly Jet Stream (STWJ: presence south of Himalayas in winter, sudden northward bifurcation/withdrawal beyond Tibetan Plateau triggering sudden summer monsoon burst); Tropical Easterly Jet Stream (TEJS: dynamic outflow generated by intense summer heating of Tibetan Plateau anticyclone); Somali / Findlater Low-Level Jet (cross-equatorial low-level flow driving moisture towards peninsular coast); Mascarene High (subtropical high-pressure cell near Madagascar acting as primary monsoon pump); Global teleconnections: El Niño-Southern Oscillation (ENSO: El Niño warming in eastern Pacific suppressing Indian monsoon vs La Niña enhancing rains), Indian Ocean Dipole (positive IOD warming western Indian Ocean aiding monsoon vs negative IOD causing deficit), and Madden-Julian Oscillation (MJO: eastward propagating pulse of cloudiness and convective rainfall).
+  *Key Concepts & Entities*: Subtropical Westerly Jet Stream (STWJ) • Tropical Easterly Jet Stream (TEJS) • Tibetan Plateau Thermal Engine • Somali / Findlater Jet & Mascarene High • ENSO Teleconnection to Indian Monsoon • Indian Ocean Dipole (Positive/Negative IOD) • Madden-Julian Oscillation (MJO)
+
+- **Western Disturbances, Pre-Monsoon Showers & Extreme Weather Events** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Winter precipitation and localized convective weather systems: Western Disturbances (shallow extra-tropical cyclonic depressions originating over Mediterranean Sea and Caspian Sea, steered into northwest India by subtropical westerly jet stream; vital winter precipitation for Rabi crops, especially wheat, and snowfall in Western Himalayas; causes cold waves and dense fog); Pre-monsoon convective thunderstorms: Mango Showers (Kerala and coastal Karnataka aiding mango ripening), Blossom Showers / Cherry Blossom (coffee-growing regions of Karnataka), Nor'westers / Kalbaisakhi (severe localized evening thunderstorms with gale winds in West Bengal and Assam / Bardoli Chheerha vital for tea and jute), and Loo (intense, dry, scorching summer winds across northern plains causing severe heatwaves).
+  *Key Concepts & Entities*: Western Disturbances (Mediterranean Origin) • Rabi Crop Rainfall & Himalayan Snowfall • Mango Showers & Blossom Showers • Nor'westers / Kalbaisakhi (Bengal) • Bardoli Chheerha (Assam) • Loo Heatwaves & Northern Plains Fog
+
+### Soils & Natural Vegetation of India (Soil Types - Alluvial, Black / Regur, Red, Laterite, Arid, Saline; Forest Types - Tropical Evergreen, Deciduous, Thorn, Montane, Mangroves)
+
+- **Major Soil Groups of India: ICAR Classification & Land Degradation** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  ICAR 8 major soil orders and distribution: Alluvial Soils (most extensive ~40% area, rich in potash and lime, deficient in nitrogen and phosphorus, divided into Khadar and Bhangar); Black / Regur Soils (formed by weathering of Deccan basaltic lava, high montmorillonite clay content, self-ploughing, high moisture retention, ideal for cotton); Red and Yellow Soils (formed on ancient crystalline Archean granites, ferric oxides impart red color, hydrated form appears yellow, widespread in Tamil Nadu, Odisha, Chota Nagpur); Laterite Soils (formed under high temperature and alternate wet-dry seasons by intense leaching of silica, rich in iron and aluminium oxides, bauxite/cashew/tea/coffee); Arid & Desert Soils (sandy, saline, deficient in moisture/humus); Saline & Alkaline Soils (Usar/Reh/Kallar, high capillary evaporation, Punjab/Haryana canal tracts); Peaty and Marshy Soils (Kari soils in Kerala, high organic matter); Soil erosion and land degradation: Sheet, rill, and gully erosion (Chambal badlands/ravines), desertification, wind erosion in Thar, and soil conservation schemes (Soil Health Card Scheme).
+  *Key Concepts & Entities*: Alluvial Soils (Khadar & Bhangar) • Black / Regur Soil (Montmorillonite Clay) • Red & Yellow Soils (Ferric Oxides) • Laterite Soil & Intense Leaching • Arid & Saline Soils (Usar / Reh) • Gully Erosion & Chambal Ravines • Soil Health Card Scheme
+
+- **Natural Vegetation & Forest Types of India (Champion & Seth)** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Ecological classification based on rainfall, altitude, and temperature (Champion and Seth system): Tropical Wet Evergreen Forests (rainfall >250 cm, Western Ghats, NE India, multi-layered canopy, rosewood, mahogany, ebony); Tropical Semi-Evergreen Forests; Tropical Moist Deciduous Forests (most widespread forest type in India, rainfall 100-200 cm, teak, sal, shisham, sandalwood, mahua); Tropical Dry Deciduous Forests (rainfall 70-100 cm, transition to open woodland, tendu, palas, amaltas, bel); Tropical Thorn Forests (rainfall <70 cm, arid/semi-arid, xerophytic acacias, euphorbias, date palms); Montane Subtropical and Temperate Forests (broadleaf evergreen oaks/chestnuts, coniferous pines/deodar/spruce, Sholas of Nilgiris and Annamalai); Alpine Forests and Tundra (silver fir, junipers, rhododendrons); Littoral & Swamp / Mangrove Forests (halophytic vegetation, pneumatophores / breathing roots, stilt roots, Sundarbans Sundari trees Heritiera fomes, Godavari-Krishna deltas, Pichavaram).
+  *Key Concepts & Entities*: Tropical Wet Evergreen Forests • Tropical Moist Deciduous (Teak & Sal) • Tropical Dry Deciduous (Tendu & Palas) • Montane Temperate Shola Forests • Coniferous Deodar & Pine Forests • Littoral & Swamp Mangroves • Sundarbans & Pichavaram Mangroves
+
+- **Forest Conservation, ISFR Dynamics & Policy Frameworks** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Biennial assessment and statutory conservation architecture: India State of Forest Report (ISFR published biennially by Forest Survey of India / FSI; parameters: Forest Cover categorized into Very Dense Forest >70% canopy, Moderately Dense Forest 40-70%, and Open Forest 10-40%; Tree Cover outside recorded forests; Mangrove cover trends; Forest fire vulnerability mapping; Growing stock and carbon stock assessments); Legal categorization: Reserved Forests (highest protection under Indian Forest Act 1927), Protected Forests, and Village Forests; Conservation frameworks: Compensatory Afforestation Fund Management and Planning Authority (CAMPA Act 2016), National Mission for a Green India (GIM), Joint Forest Management (JFM), and social forestry programs.
+  *Key Concepts & Entities*: India State of Forest Report (ISFR / FSI) • Very Dense vs Moderately Dense Forest Cover • Tree Cover Outside Forests (TOF) • Carbon Stock Assessments • Reserved & Protected Forests (IFA 1927) • CAMPA Act 2016 • Green India Mission (GIM)
+
+Human Geography & Population Settlements `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Global & Indian Demographic Trends (Population Distribution, Density, Growth Models - Demographic Transition Theory, Migration Types & Push-Pull Factors)
+
+- **Demographic Attributes: Vital Rates, Fertility & Demographic Dividend** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Core demographic metrics and population structures: Vital rates: Crude Birth Rate (CBR), Crude Death Rate (CDR), Natural Growth Rate; Total Fertility Rate (TFR: national replacement level of 2.1, regional divergence between northern states like Bihar/UP and southern states like Kerala/Tamil Nadu); Mortality indicators: Infant Mortality Rate (IMR), Under-5 Mortality Rate, Maternal Mortality Ratio (MMR); Population pyramids and age structures (expansive, constrictive, stationary); Dependency Ratio (youth vs elderly dependency); Demographic Dividend (working-age cohort 15-59 years, opportunity window and human capital constraints); Sex Ratio (national trends, Child Sex Ratio 0-6 years, regional imbalances, Beti Bachao Beti Padhao initiative).
+  *Key Concepts & Entities*: Total Fertility Rate (TFR & 2.1 Replacement) • Crude Birth & Death Rates • Infant Mortality Rate (IMR) • Maternal Mortality Ratio (MMR) • Demographic Dividend (15-59 Cohort) • Child Sex Ratio Dynamics • Population Age Pyramids
+
+- **Theories of Population Growth: Malthus, Marx & Demographic Transition** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Classical and modern population doctrines: Malthusian Theory of Population (Essay on the Principle of Population 1798: food production grows arithmetically 1, 2, 3, 4 while population grows geometrically 1, 2, 4, 8; Malthusian catastrophe; Preventive checks vs Positive checks like famine/pestilence/war); Marxist critique of Malthus (poverty as a result of capitalist distribution, not biological overpopulation); Demographic Transition Model (DTM: 5 stages: Stage 1 High Stationary / high birth & death, Stage 2 Early Expanding / death rate falls while birth rate remains high causing population explosion, Stage 3 Late Expanding / birth rate begins declining, Stage 4 Low Stationary / low birth & death, Stage 5 Declining / sub-replacement fertility; India positioned in Stage 3 late expanding transition).
+  *Key Concepts & Entities*: Malthusian Theory of Population • Arithmetic vs Geometric Growth • Preventive & Positive Checks • Demographic Transition Model (5 Stages) • Stage 2 Population Explosion • India Stage 3 Transition
+
+- **Migration Dynamics: Streams, Push-Pull Determinants & Socio-Economic Impact** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Spatial mobility of populations: Internal migration streams in India (rural-to-rural predominantly female marriage migration, rural-to-urban predominantly male economic migration, urban-to-urban, and urban-to-rural counter-urbanization); Migration theories: Ravenstein's Laws of Migration, Everett Lee's Push and Pull Factors (push: agrarian distress, lack of employment, floods/droughts; pull: higher wages, industrial jobs, educational infrastructure); Inter-state vs intra-state migration corridors (UP/Bihar to Maharashtra, Gujarat, Delhi, Punjab); Socio-economic consequences: Remittance economies (domestic and international remittances from Gulf), feminization of agriculture in source areas, pressure on urban civic infrastructure and growth of informal settlements, brain drain vs brain gain.
+  *Key Concepts & Entities*: Rural-to-Rural & Rural-to-Urban Migration • Push-Pull Factors (Everett Lee) • Inter-State Migration Corridors • Remittance Economy & Agrarian Impact • Feminization of Agriculture • Urban Infrastructure Strain
+
+### Human Settlements & Urban Systems (Rural Settlement Types - Clustered, Dispersed; Urban Classification, Conurbations, Megalopolis, Functional Classification of Towns)
+
+- **Rural Settlement Morphology: Spatial Types & Vernacular Architecture** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geographical morphology of rural dwellings: Physical, cultural, and historical determinants of settlement patterns (water points/wet point settlements, defensibility, fertile soil); Four standard morphological types: Clustered / Compact / Nucleated settlements (closely built houses, common in fertile alluvial plains of Ganga and valley tracts), Semi-clustered / Fragmented settlements (segregation or grouping of specific castes/clans on the periphery, Gujarat plains, Rajasthan), Hamleted settlements (physically separated units bearing local names like Panna, Para, Palli, Nagla, Dhani across Middle Ganga plain and lower Himalayas), and Dispersed / Isolated settlements (isolated farmsteads or huts scattered over hills, Western Ghats, Meghalaya, Himachal Pradesh); Vernacular building materials adapted to local micro-climates (adobe, thatch, stone masonry, bamboo).
+  *Key Concepts & Entities*: Clustered / Nucleated Settlements • Semi-Clustered Morphology • Hamleted Settlements (Panna / Para / Palli) • Dispersed / Isolated Mountain Huts • Wet Point Settlement Determinants • Vernacular Architecture
+
+- **Urbanization Processes: Census Criteria, Hierarchy & Functional Towns** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Criteria, taxonomy, and distribution of urban centres: Census of India definition of Urban: Statutory Towns (all places with a municipality, corporation, cantonment board, or notified town area committee) vs Census Towns (places satisfying three criteria: minimum population of 5,000, at least 75% of male working population engaged in non-agricultural pursuits, and a density of at least 400 persons/sq km); Urban hierarchy: Class I towns (>100,000 population), Metropolitan cities / Million-plus cities, and Megacities (>10 million population); Conurbations and Urban Agglomerations (UAs); Ashok Mitra's functional classification of Indian cities: Administrative/capital towns, Industrial/manufacturing cities, Mining towns, Garrison/cantonment towns, Commercial/trading ports, and Religious/cultural/educational centers.
+  *Key Concepts & Entities*: Statutory Towns vs Census Towns • Census 3-Fold Urban Criteria • Metropolitan & Megacity Classifications • Urban Agglomerations (UAs) • Ashok Mitra Functional Classification • Conurbations & Urban Hierarchy
+
+- **Urban Morphology: Spatial Models, Slums & Sustainable City Missions** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Internal spatial structure and contemporary challenges of cities: Classical urban land-use models: Concentric Zone Model (Ernest Burgess - Central Business District / CBD, zone of transition, commuter zone), Sector Model (Homer Hoyt - transport corridors and radial sectors), and Multiple Nuclei Model (Chauncy Harris & Edward Ullman - polycentric urban growth); Mark Jefferson's Primate City concept and Zipf's Rank-Size Rule; Critical urban challenges: Proliferation of informal settlements/slums (Dharavi in Mumbai), urban sprawling, Urban Heat Island (UHI) effect, urban flooding due to encroachment of wetlands, acute water stress (Day Zero crises), municipal solid waste management, air quality crises; National urban missions: Smart Cities Mission, AMRUT (Atal Mission for Rejuvenation and Urban Transformation), Pradhan Mantri Awas Yojana - Urban (PMAY-U), and Swachh Bharat Mission - Urban.
+  *Key Concepts & Entities*: Concentric Zone Model (Burgess) • Sector Model (Hoyt) • Multiple Nuclei Model (Harris & Ullman) • Primate City & Rank-Size Rule • Urban Heat Island (UHI) Effect • Informal Settlements & Slums (Dharavi) • Smart Cities Mission & AMRUT
+
+### Tribal Demographics, PVTGs & Cultural Anthropology
+
+- **Tribal Demographics: Geographic Belts, Major Tribes & Linguistic Families** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geographical distribution, demographic attributes, and ethnographic profiles: Constitutional status (Scheduled Tribes under Article 342, comprising 8.6% of India's population as per Census 2011; state distributions: Madhya Pradesh highest ST population, Lakshadweep and Mizoram highest percentage share, absence in Punjab/Haryana); Major geographic belts: Central Tribal Belt (over 55% of tribal population: Gonds, Bhils, Santhals, Oraon, Munda, Ho across MP, Chhattisgarh, Jharkhand, Odisha, Rajasthan), North-Eastern Tribal Belt (Nagas, Mizos, Khasis, Garos, Bodos, Apatanis), Western Ghats & Southern Hills (Toda of Nilgiris pastoralists, Irula snake-catchers, Kadar, Kurumba), and Himalayan / Sub-Himalayan Belt (Gaddis, Gujjars, Bakarwals transhumant pastoralists, Bhotias); Linguistic classifications: Austro-Asiatic (Mundari, Santhali, Khasi), Tibeto-Burman (NE tribes), Dravidian (Gondi, Kurukh, Toda), and Indo-Aryan (Bhil).
+  *Key Concepts & Entities*: Scheduled Tribes (Article 342 & 8.6% Share) • Central Tribal Belt (Gonds, Bhils, Santhals) • North-Eastern Tribes (Nagas, Khasis, Garos) • Transhumant Pastoralists (Gaddis & Bakarwals) • Nilgiri Tribes (Toda & Irula) • Austro-Asiatic & Tibeto-Burman Languages
+
+- **Particularly Vulnerable Tribal Groups (PVTGs) & Statutory Rights** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Ethnographic vulnerability criteria, statutory safeguards, and affirmative policies: Particularly Vulnerable Tribal Groups (PVTGs: created based on Dhebar Commission recommendations 1973; 75 identified groups across 18 states and UT of Andaman & Nicobar Islands; Odisha has highest number 13 PVTGs); Fourfold identification criteria: Pre-agricultural level of technology (hunting-gathering/shifting cultivation), stagnant or declining population, extremely low literacy, and subsistence level of economy; Iconic PVTG communities: Great Andamanese, Sentinelese (uncontacted hunter-gatherers of North Sentinel Island), Jarawas, Onge, Shompen of Nicobar; Birhor of Jharkhand, Chenchus of Nallamala Hills, Dongria Kondh of Niyamgiri Hills, Maria Gond; Statutory frameworks: Panchayats (Extension to Scheduled Areas) Act 1996 (PESA: Gram Sabha self-governance over minor forest produce and land acquisition), Forest Rights Act 2006 (FRA: Individual Forest Rights, Community Forest Rights, Habitat Rights for PVTGs), and PM-JANMAN scheme (Pradhan Mantri Janjati Adivasi Nyaya Maha Abhiyan).
+  *Key Concepts & Entities*: 75 Identified PVTGs (Dhebar Commission) • Andamanese, Sentinelese, Jarawas & Onge • Dongria Kondh (Niyamgiri) & Chenchus • Fourfold PVTG Identification Criteria • PESA Act 1996 & Gram Sabha Rights • Forest Rights Act 2006 (FRA) • PM-JANMAN Mission
+
+Economic & Resource Geography `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Global & Indian Distribution of Natural Resources (Mineral Resources - Iron Ore, Bauxite, Copper, Coal, Petroleum, Natural Gas, Uranium; Water Resources, Land & Soil Resources)
+
+- **Metallic & Non-Metallic Mineral Belts: India & Global Reserves** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geological distribution and spatial concentrations of minerals: Iron Ore (Hematite 75% and Magnetite 25% reserves; Major Indian belts: Odisha-Jharkhand belt with Badampahar, Noamundi, Gua; Durg-Bastar-Chandrapur belt with Bailadila mechanized mines in Chhattisgarh; Bellary-Chitradurga-Chikmagalur-Tumkur belt in Karnataka with Kudremukh and Sandur hills; Goa-Ratnagiri belt; Global iron ore reserves: Pilbara region in Australia, Carajás and Minas Gerais in Brazil, Lake Superior region USA, Anshan China, Krivoy Rog Ukraine); Bauxite & Aluminium (Odisha Panchpatmali deposits largest producer, Gujarat Jamnagar, Jharkhand Lohardaga, MP Amarkantak plateau; Global: Weipa Australia, Guinea Boké, Jamaica); Copper Ore (Malanjkhand in Balaghat MP, Khetri copper belt in Rajasthan, Singhbhum Jharkhand; Global: Atacama Chuquicamata Chile largest open-pit, DRC-Zambia Copperbelt); Manganese (Balaghat MP, Nagpur-Bhandara Maharashtra, Keonjhar Odisha; Global: South Africa Kalahari basin, Gabon); Chromite (Sukinda valley in Jajpur Odisha 90% reserves); Non-metallic minerals: Mica (Koderma in Jharkhand 'Mica capital', Nellore in Andhra Pradesh, Bhilwara Rajasthan), Limestone (cement raw material in MP, Rajasthan, Andhra Pradesh), and Gypsum.
+  *Key Concepts & Entities*: Hematite & Magnetite Belts • Bailadila & Kudremukh Iron Mines • Pilbara (Australia) & Carajás (Brazil) • Bauxite (Panchpatmali Odisha) • Khetri & Malanjkhand Copper Belts • Chuquicamata Copper (Chile) • Mica & Sukinda Valley Chromite
+
+- **Energy Resources: Coal, Hydrocarbons, Critical Minerals & Renewables** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Spatial mapping of conventional and non-conventional energy resources: Coal (Gondwana coal ~250 million years old, non-coking/bituminous, 98% Indian reserves located in river valleys: Damodar valley with Jharia oldest/richest coalfield and Raniganj, Son valley with Singrauli, Mahanadi valley with Talcher, Wardha-Godavari valley; Tertiary coal ~15-60 million years old, high sulphur/moisture, Makum in Assam, lignite brown coal at Neyveli Tamil Nadu; Global: Appalachian basin USA, Ruhr Germany, Shanxi China, Newcastle Australia); Petroleum & Natural Gas (Onshore: Brahmaputra valley Digboi oldest oilfield, Naharkatiya, Moran-Hugrijan; Gujarat basin Ankleshwar, Kalol, Cambay; Rajasthan Barmer basin Mangala, Bhagyam, Aishwarya; Offshore: Mumbai High on continental shelf, Bassein gas field, Krishna-Godavari deepwater basin KG-D6; Strategic Petroleum Reserves: Padur, Mangalore, Visakhapatnam, Chandikhol); Nuclear Energy & Critical Minerals (Uranium: Jaduguda and Narwapahar in Singhbhum Jharkhand, Tummalapalle in Andhra Pradesh largest reserve in carbonate rock; Thorium: Monazite beach sands of Kerala Chavara and Odisha; Critical Minerals & Rare Earth Elements: Lithium discovery in Reasi J&K and Mandya Karnataka); Renewable Energy Geography (Solar parks: Bhadla Rajasthan largest, Pavagada Karnataka, Kurnool; Wind energy corridors: Muppandal wind farm in Tamil Nadu, Jaisalmer, coastal Gujarat; Green Hydrogen mission hubs).
+  *Key Concepts & Entities*: Gondwana Coal Basins (Jharia & Raniganj) • Tertiary Lignite (Neyveli) • Offshore Mumbai High & KG-D6 Gas Basin • Strategic Petroleum Reserves (SPR) • Uranium (Jaduguda & Tummalapalle) • Monazite Thorium Beach Sands • Solar Parks (Bhadla & Pavagada) • Muppandal Wind Energy Corridor
+
+- **Water Resources: Multipurpose River Valley Projects & Irrigation Networks** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Surface and groundwater endowments and hydraulic infrastructure: Surface water resources (12 major river basins; utilizable surface flow constraints); Major Multipurpose River Valley Projects ('Temples of Modern India'): Bhakra-Nangal Project on Sutlej (Gobind Sagar reservoir), Hirakud Dam on Mahanadi (longest earthen dam), Tehri Dam on Bhagirathi (highest dam), Sardar Sarovar Dam on Narmada, Damodar Valley Corporation (DVC model of US Tennessee Valley Authority: Tilaiya, Maithon, Panchet, Konar), Nagarjuna Sagar and Srisailam on Krishna; Irrigation systems: Canal irrigation (dominant in northern alluvial plains: Indira Gandhi Canal / Rajasthan Canal bringing Sutlej-Beas waters to Thar desert, Western Yamuna Canal), Tubewell and well irrigation (over 60% irrigated area, leading to groundwater overdraft, dark blocks in Punjab, Haryana, Western UP), and Tank irrigation (traditional method in rocky, undulating Peninsular India, Eri tanks in Tamil Nadu); Micro-irrigation infrastructure (drip and sprinkler systems under Pradhan Mantri Krishi Sinchayee Yojana - Per Drop More Crop).
+  *Key Concepts & Entities*: Multipurpose River Valley Projects • Bhakra Nangal & Tehri Dams • Hirakud & Sardar Sarovar Dams • Damodar Valley Corporation (DVC) • Indira Gandhi Canal (Rajasthan) • Tubewell vs Traditional Tank Irrigation • PMKSY (Per Drop More Crop)
+
+### Location Factors of Primary, Secondary & Tertiary Industries (Raw Material, Power, Labour, Market, Transport; Iron & Steel, Cotton Textile, Petrochemical, Pharmaceutical, IT Industries)
+
+- **Industrial Location Theories: Weberian Least Cost & Locational Factors** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Theoretical models and economic geography of industrial siting: Alfred Weber's Theory of Industrial Location / Least Cost Theory (Material Index = weight of localized raw material / weight of finished product; Gross / Weight-losing raw materials MI > 1 pulling industry to raw material source; Pure raw materials MI = 1 locating anywhere; Ubiquitous raw materials like air/water pulling towards market; Concept of Isotims lines of equal transport cost and Isodapanes lines of equal total transport costs, Critical Isodapane; Labour orientation and agglomeration economies); August Lösch's Profit Maximization Theory and Walter Christaller's Central Place Theory; Primary locational factors: Raw material proximity, energy/power availability, skilled/unskilled labour, transport networks, capital access, government industrial zoning, environmental clearances, and port proximity for export-oriented manufacturing.
+  *Key Concepts & Entities*: Alfred Weber Least Cost Theory • Material Index (Weight-Losing vs Pure) • Isotims & Isodapanes (Critical Isodapane) • Agglomeration Economies • August Lösch Profit Maximization • Primary Industrial Locational Factors
+
+- **Heavy Metallurgical & Engineering Clusters: Iron, Steel & Automobile** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Locational dynamics of heavy resource-based industries: Iron & Steel Industry (weight-losing industry requiring iron ore, coking coal, limestone, dolomite, manganese; Historical locational shifts: Coalfields orientation to Iron ore fields orientation, and modern shift towards coastal locations for cheap seaborne coking coal imports and exports); Major Indian steel plants: TISCO Jamshedpur (pioneer private sector, confluence of Subarnarekha and Kharkai), IISCO Burnpur, Public sector SAIL plants: Bhilai (Chhattisgarh, Russian collaboration, Bailadila/Dalli-Rajhara ore), Rourkela (Odisha, German collaboration), Durgapur (West Bengal, British collaboration), Bokaro (Jharkhand), Visakhapatnam Steel Plant / RINL (India's first shore-based integrated steel plant), Salem Steel Plant in Tamil Nadu, and JSW Vijayanagar in Karnataka; Global steel belts: Rust Belt in USA (Pittsburgh 'Steel City'), Ruhr Valley in Germany, Anshan-Benxi and Wuhan in China; Automobile Industry (agglomeration economies, supply chain hubs: Delhi-NCR Gurgaon-Manesar, Chennai 'Detroit of Asia', Pune-Chakan-Pimpri belt, Sanand in Gujarat).
+  *Key Concepts & Entities*: Iron & Steel Locational Shifts • TISCO Jamshedpur & Bokaro Steel • SAIL Plants (Bhilai, Rourkela, Durgapur) • Visakhapatnam Shore-Based Steel Plant • American Rust Belt & German Ruhr Valley • Automobile Hubs (Chennai, Pune, Gurgaon)
+
+- **Textile, Chemical & Agro-Processing Industries: Cotton, Sugar & Jute** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Locational shifts and clustering of consumer and agro-based industries: Cotton Textile Industry (pure raw material, historically located in Mumbai and Ahmedabad due to humid maritime climate preventing yarn breakage, port facilities, and black soil hinterland; subsequent spatial decentralization to handloom/powerloom hubs in Coimbatore 'Manchester of South India', Tirupur knitwear capital, Surat synthetic textiles, Ludhiana woolen knitwear); Jute Industry (highly localized in Hooghly river basin West Bengal due to proximity to raw jute cultivation in Ganga-Brahmaputra delta, abundant fresh water for retting, cheap labour from Bihar/Odisha, and Kolkata port); Sugar Industry (weight-losing, perishable raw material crushed within 24 hours of harvest; major locational shift from Northern India UP/Bihar to Southern and Western India Maharashtra/Karnataka/Tamil Nadu driven by tropical maritime climate, longer crushing season, higher sucrose content in cane, and thriving cooperative sugar mill structure); Chemical and Petrochemical complexes (concentrated near refineries and ports: Jamnagar refinery complex, Dahej PCPIR in Gujarat, Nagothane in Maharashtra).
+  *Key Concepts & Entities*: Cotton Textile (Mumbai to Coimbatore & Tirupur) • Jute Retting & Hooghly River Basin • Sugar Industry Shift (North to Maharashtra) • Tropical vs Subtropical Cane Sucrose Content • Petrochemical Hubs (Jamnagar & Dahej PCPIR) • Agro-Processing Cooperatives
+
+- **Footloose, Knowledge-Based & High-Tech IT Corridors** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Post-industrial economic geography and service clustering: Footloose Industries (industries with no specific raw material or market weight bias, negligible transport costs relative to value, highly dependent on component interchangeability, precision engineering, electronics assembly); Information Technology (IT) and Software Services (agglomeration driven by human capital, educational ecosystems, telecommunications infrastructure, venture capital, and airport connectivity; Major Indian IT corridors: Bengaluru 'Silicon Valley of India', Hyderabad 'Cyberabad', Pune Hinjawadi, Chennai OMR corridor, Delhi-NCR Gurgaon/Noida; Global tech clusters: Silicon Valley California, Route 128 Boston, Shenzhen hardware capital); Global Capability Centers (GCCs), semiconductor fabrication geography, and biotechnology hubs (Genome Valley Hyderabad).
+  *Key Concepts & Entities*: Footloose Industry Concept • IT Corridors (Bengaluru, Hyderabad, Pune) • Silicon Valley & Global Tech Hubs • Semiconductor Fabrication Geography • Global Capability Centers (GCCs) • Biotechnology Parks (Genome Valley)
+
+### Agricultural Geography, Cropping Patterns & Food Security
+
+- **Cropping Patterns & Geographic Belts of Food & Commercial Crops** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geographical distribution, climatic thresholds, and agrarian zoning of major crops: Major cropping seasons: Kharif (monsoon sowings June-July: Rice, Maize, Jowar, Bajra, Cotton, Jute, Groundnut), Rabi (winter sowings October-November: Wheat, Barley, Gram, Mustard), and Zaid (summer inter-cropping: watermelons, cucumbers, vegetables); Food grain geography: Rice (staple crop requiring >100 cm rainfall, high temperature >25 deg C, alluvial clayey soils; West Bengal, UP, Punjab, coastal deltas), Wheat (temperate crop requiring cool growing season 10-15 deg C, bright sunshine at harvest, 50-75 cm rainfall, well-drained loams; Punjab, Haryana, UP, MP), Millets / Nutri-Cereals (hardy, drought-resistant C4 crops: Jowar in Maharashtra/Karnataka, Bajra in Rajasthan, Ragi in Karnataka); Pulses (leguminous nitrogen-fixing crops, MP, Rajasthan, Maharashtra); Commercial crops: Sugarcane (tropical/subtropical, 100-150 cm rainfall; UP, Maharashtra, Karnataka), Cotton (black regur soil, 210 frost-free days, Gujarat, Maharashtra, Telangana), Jute (golden fiber, warm humid deltaic climate; West Bengal, Assam, Bihar), Tea (plantation crop requiring acidic highland slopes, 150-250 cm rainfall, shade trees; Assam Brahmaputra valley, Darjeeling, Nilgiris), Coffee (plantation crop requiring well-drained volcanic/humus soils, 150-200 cm rain; Karnataka 70% national output with Arabica and Robusta in Kodagu/Chikkamagaluru, Wayanad Kerala).
+  *Key Concepts & Entities*: Kharif, Rabi & Zaid Seasons • Rice & Wheat Agro-Climatic Requirements • Millets / Nutri-Cereals (Jowar, Bajra, Ragi) • Cotton Belt (Black Regur Soil & 210 Frost-Free Days) • Sugarcane Production Belts • Tea (Assam & Darjeeling) & Coffee (Karnataka) • Pulses & Nitrogen Fixation
+
+- **Agricultural Revolutions, Land Reforms & Food Security Architecture** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Technological transformations, institutional reforms, and food management: Agricultural revolutions: Green Revolution (launched in mid-1960s with High Yielding Variety / HYV semi-dwarf seeds developed by Norman Borlaug & M.S. Swaminathan, intensive chemical fertilizers, canal/tubewell irrigation; initial focus on wheat and rice in Punjab, Haryana, and Western UP; ecological fallouts: groundwater depletion, soil salinization, nitrate pollution, regional disparities; Rainbow Revolution concept), White Revolution / Operation Flood (Dr. Verghese Kurien, National Dairy Development Board, Anand cooperative model AMUL, dairy self-sufficiency), Blue Revolution (fisheries and aquaculture), Yellow Revolution (oilseeds), Silver Revolution (poultry); Institutional Land Reforms: Abolition of intermediaries (Zamindari abolition), tenancy reforms (security of tenure, fair rent), land ceiling acts and redistribution of surplus land, consolidation of fragmented land holdings; Food security architecture: Minimum Support Price (MSP recommended by CACP based on A2+FL/C2 cost metrics), Food Corporation of India (FCI buffer stocking), Public Distribution System (Targeted PDS / One Nation One Ration Card), and National Food Security Act 2013 (NFSA: legal entitlement covering 75% rural and 50% urban population, Antyodaya Anna Yojana).
+  *Key Concepts & Entities*: Green Revolution (Swaminathan & Borlaug) • HYV Seeds & Ecological Side Effects • White Revolution / Operation Flood (AMUL) • Blue, Yellow & Rainbow Revolutions • Land Reforms (Zamindari Abolition & Ceilings) • MSP & Commission for Agricultural Costs and Prices (CACP) • Public Distribution System (PDS) & NFSA 2013
+
+Geography of the World `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]`
+
+### Regional Geography of United States: Physiography, Agricultural & Industrial Belts
+
+- **United States: Physiographic Provinces, River Basins & Great Lakes** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Major morphological provinces of the continental United States: Atlantic & Gulf Coastal Plains (broad lowlands, barrier islands, Everglades subtropical wetland); Appalachian Highlands (ancient, folded and eroded mountains: Blue Ridge, Great Valley, Allegheny and Cumberland Plateaus); Interior Plains / Great Plains (vast semi-arid grassland plateau stretching from the 100th meridian west to the Rocky Mountains, drained by Missouri and Arkansas rivers); Rocky Mountains (young fold cordillera, Continental Divide / Great Divide separating Pacific and Atlantic drainages, Mt. Elbert 4,401m); Intermontane Plateaus (Colorado Plateau with Grand Canyon carved by Colorado River, Columbia-Snake basalt plateau, Great Basin region of endorheic inland drainage including Great Salt Lake and Death Valley - lowest point in North America -86m); Pacific Mountain System (Cascade Range with volcanic peaks Mt. Rainier and Mt. St. Helens, Sierra Nevada fault-block range with Mt. Whitney, Central Valley of California, and San Andreas transform fault zone); Major drainage networks: Mississippi-Missouri river system (longest river network in North America, bird-foot delta on Gulf of Mexico), Ohio River, Colorado River (Hoover Dam & Lake Mead), Columbia River (Grand Coulee Dam), Rio Grande (international border with Mexico); Great Lakes System (Superior largest freshwater lake, Michigan entirely within US, Huron, Erie, Ontario, interconnected by St. Mary's River, Detroit River, and Niagara Falls with Welland Canal).
+  *Key Concepts & Entities*: Appalachian Highlands • Great Plains & 100th Meridian • Rocky Mountains & Continental Divide • Colorado Plateau & Grand Canyon • Great Basin & Death Valley (-86m) • Mississippi-Missouri Drainage System • Great Lakes (Superior, Michigan, Huron, Erie, Ontario) • San Andreas Fault Zone
+
+- **United States: Agricultural Belts, Manufacturing Belts & Tech Complexes** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Spatial specialization of American agricultural and industrial economies: Agricultural Belts: Corn Belt (Midwest states: Iowa, Illinois, Indiana, Nebraska; rich Mollisol soils, feed grains and livestock fattening), Wheat Belt (divided into Spring Wheat Belt in North Dakota/Montana and Winter Wheat Belt in Kansas/Oklahoma), Dairy Belt (northern states around Great Lakes: Wisconsin, Minnesota, New York), Cotton Belt (historical South, now diversified into poultry and soybeans), Fruit and Vegetable Belts (California Central Valley Mediterranean irrigation farming, Florida citrus); Industrial complexes: American Manufacturing Belt / Rust Belt (historical industrial heartland from New England through Pittsburgh, Cleveland, Detroit to Chicago; Pittsburgh iron and steel hub, Detroit automotive capital, Chicago meatpacking and transport crossroads; deindustrialization and restructuring); Modern Sun Belt and High-Tech growth corridors: Silicon Valley in California (San Jose, Palo Alto, Cupertino - global epicenter of software, venture capital, and semiconductors), Texas Silicon Hills (Austin tech cluster) and Gulf Coast Petrochemical Belt (Houston oil refining and aerospace), Pacific Northwest (Seattle aerospace Boeing and software Microsoft/Amazon), Research Triangle in North Carolina (Raleigh-Durham-Chapel Hill).
+  *Key Concepts & Entities*: Corn Belt (Midwest Mollisols) • Wheat Belt (Spring & Winter Wheat) • Dairy Belt (Wisconsin & Great Lakes) • American Manufacturing Belt (Rust Belt) • Silicon Valley (San Jose & Bay Area) • Texas Silicon Hills (Austin) & Houston Petrochemicals • Pacific Northwest (Seattle Tech & Aerospace)
+
+### Regional Geography of Canada: Canadian Shield, Prairies & Energy Wealth
+
+- **Canada: Canadian Shield, Glacial Drainage & Arctic Tundra** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Physical architecture and northern environments of Canada: Canadian Shield / Laurentian Plateau (vast U-shaped region of exposed pre-Cambrian crystalline igneous and metamorphic rocks covering over half of Canada, heavily scoured by Pleistocene continental ice sheets; thousands of glacial lakes: Great Bear Lake, Great Slave Lake deepest in North America, Lake Athabasca, Reindeer Lake, Lake Winnipeg); St. Lawrence Lowlands and River (vital commercial waterway linking Great Lakes to the Atlantic Ocean via the St. Lawrence Seaway); Appalachian Region of the Maritime Provinces (Nova Scotia, New Brunswick, Newfoundland); Western Canadian Cordillera (Canadian Rockies, Coast Mountains, Mount Logan 5,959m highest peak in Canada located in Yukon); Arctic Archipelago and Tundra biome (permafrost, muskeg bogs, pingos, Beaufort Sea, Northwest Passage maritime route through high-latitude ice).
+  *Key Concepts & Entities*: Canadian Shield (Laurentian Plateau) • Glacial Lakes (Great Bear & Great Slave Lakes) • St. Lawrence Seaway Maritime Corridor • Canadian Cordillera & Mount Logan • Arctic Archipelago & Permafrost Tundra • Northwest Passage Arctic Route
+
+- **Canada: Prairie Grain Belts, Tar Sands & Mineral Resources** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Economic geography, agricultural production, and resource distribution of Canada: Prairie Provinces (Alberta, Saskatchewan, Manitoba: vast expanse of fertile Chernozem / black soils; leading global producer and exporter of spring wheat, canola, barley; Winnipeg known as the 'Gateway to the West' and grain exchange capital); Mineral and energy resources: Athabasca Oil Sands in northern Alberta (world's third-largest proven petroleum reserves in the form of bitumen); Conventional oil and natural gas in Western Canada Sedimentary Basin; Nickel and copper deposits at Sudbury Basin in Ontario (formed by ancient meteorite impact); Uranium deposits in Athabasca Basin (Saskatchewan leading global exporter); Potash reserves in Saskatchewan (world's largest producer and exporter for fertilizers); Diamond mines in Northwest Territories; Forestry and paper pulp industry across the extensive Boreal Taiga forest belt; Hydroelectric power generation (James Bay Project in Quebec, Churchill Falls in Labrador).
+  *Key Concepts & Entities*: Canadian Prairies (Alberta, Saskatchewan, Manitoba) • Chernozem Soils & Spring Wheat Export • Athabasca Oil Sands (Bitumen Deposits) • Sudbury Nickel Basin (Meteorite Impact) • Saskatchewan Potash & Uranium Reserves • Boreal Forest Paper Pulp & James Bay Hydro
+
+### Regional Geography of Russia & Central Asia: Siberia, Steppes & Hydrocarbon Basins
+
+- **Russia: Physical Divides, Siberian Drainage & Lake Baikal** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Continental physiography of the Russian Federation across 11 time zones: European Russia: East European / Russian Plain (undulating lowlands, Valdai Hills source of major rivers, Moscow basin); Ural Mountains (ancient north-south trending Hercynian fold mountain chain serving as the traditional geographic boundary between Europe and Asia); Asian Russia / Siberia: West Siberian Plain (world's largest continuous flat alluvial plain, drained by the Ob-Irtysh system, characterized by extensive peat bogs and swamps like Vasyugan Swamp), Central Siberian Plateau (elevated plateau between Yenisey and Lena rivers underlain by Siberian Traps volcanic basalt), and East Siberian Highlands (Verkhoyansk and Chersky ranges, Oymyakon pole of cold in northern hemisphere); Kamchatka Peninsula (active volcanism on Pacific Ring of Fire, Klyuchevskaya Sopka); Major river networks draining north into the Arctic Ocean: Ob River (with Irtysh), Yenisey River, and Lena River; Volga River (longest river in Europe 3,530 km, 'Mother Volga', draining into landlocked Caspian Sea); Lake Baikal in southern Siberia (world's oldest and deepest freshwater lake 1,642m, holds 20% of Earth's unfrozen surface freshwater, UNESCO site).
+  *Key Concepts & Entities*: Ural Mountains (Europe-Asia Divide) • East European Plain & Volga River • West Siberian Plain & Vasyugan Swamps • Central Siberian Plateau & Siberian Traps • North-Draining Siberian Rivers (Ob, Yenisey, Lena) • Lake Baikal (Deepest Freshwater Lake 1,642m) • Kamchatka Volcanic Peninsula & Oymyakon
+
+- **Central Asia: Steppes, Tian Shan-Pamirs & Caspian Energy Basins** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geographical and resource profile of the five Central Asian republics (Kazakhstan, Uzbekistan, Turkmenistan, Kyrgyzstan, Tajikistan): Physical relief: Kazakh Steppe (vast open grassland extending across northern Kazakhstan); Tian Shan and Pamir mountain ranges ('Roof of the World', Ismail Samani peak, Fedchenko Glacier); Deserts: Kyzylkum Desert (Uzbekistan and Kazakhstan) and Karakum Desert (Turkmenistan); Drainage and environmental tragedy: Amu Darya and Syr Darya rivers originating in glaciers and historically feeding the Aral Sea (now largely desiccated due to Soviet cotton irrigation diversions); Fergana Valley (densely populated, fertile agricultural heartland shared across complex enclaves of Uzbekistan, Kyrgyzstan, and Tajikistan); Mineral and energy wealth: Caspian Sea Basin hydrocarbons (Tengiz, Kashagan, and Karachaganak fields in Kazakhstan, Galkynysh giant gas field in Turkmenistan); Uranium reserves of Kazakhstan (world's leading producer ~43% global output); Cotton agriculture and Baikonur Cosmodrome.
+  *Key Concepts & Entities*: Kazakh Steppe & Aral Sea Desiccation • Pamir Knot & Tian Shan Ranges • Amu Darya & Syr Darya Rivers • Fergana Valley Agricultural Oasis • Kaspian Hydrocarbon Basins (Tengiz & Kashagan) • Turkmenistan Galkynysh Gas Field • Kazakhstan Uranium Reserves
+
+### Regional Geography of China & East Asia: Relief, River Basins & Industrial Clusters
+
+- **China: Three Topographic Steps, Major River Basins & Deserts** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Three-step topographical staircase of China descending from west to east: Step 1: Qinghai-Tibet Plateau ('Roof of the World', average elevation >4,500m, source of Asia's major rivers / 'Water Tower of Asia', bounded by Himalayas, Kunlun, and Qilian mountains); Step 2: Intermediate plateaus and basins (elevation 1,000-2,000m: Tarim Basin with hyper-arid Taklamakan Desert and Lop Nur nuclear test site, Junggar Basin, Inner Mongolian Plateau, Loess Plateau with thick wind-blown silt deposits, and Sichuan Red Basin / fertile purple-earth basin); Step 3: Low-lying coastal plains and hills (elevation <500m: Northeast / Manchurian Plain, North China Plain, Middle-Lower Yangtze Plain); Major River Systems: Yangtze River / Chang Jiang (longest river in Asia 6,300 km, Three Gorges Dam, flows through Sichuan basin and Shanghai delta), Yellow River / Huang He (second longest 5,464 km, carries world's highest sediment load from Loess Plateau, historically prone to catastrophic floods / 'China's Sorrow', delta on Bohai Sea), Xi Jiang / Pearl River (southern commercial artery), and Heilongjiang / Amur River (border with Russia).
+  *Key Concepts & Entities*: Three-Step Topographical Staircase • Qinghai-Tibet Plateau ('Water Tower of Asia') • Tarim Basin & Taklamakan Desert • Loess Plateau Silt Deposits • Sichuan Red Basin (Purple Earth) • Yangtze River (Chang Jiang) & Three Gorges Dam • Yellow River (Huang He) & Bohai Delta
+
+- **China: Agricultural Zones, Coastal SEZs & Rare Earth Belts** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Agrarian divisions, rapid coastal industrialization, and resource clusters of China: Agricultural geography: Qinling Mountains-Huai River line dividing China into two distinct agricultural zones: Northern Dry Farming Zone (wheat, corn, millets, soybeans in North China and Manchurian Plains) vs Southern Wet Paddy Rice Zone (double-cropped paddy rice, tea, freshwater aquaculture in Yangtze basin and South China); Special Economic Zones (SEZs) and industrial clusters: Pearl River Delta / Greater Bay Area (Shenzhen, Guangzhou, Dongguan, Hong Kong - world's hardware and electronics manufacturing hub), Yangtze River Delta (Shanghai, Suzhou, Hangzhou, Ningbo - finance, high-tech, automotive, chemicals), and Bohai Bay Economic Rim (Beijing, Tianjin, Hebei / Jing-Jin-Ji cluster); Energy and mineral centers: Coal belts of Shanxi and Inner Mongolia, Daqing oilfield in Heilongjiang, and Bayan Obo mine in Inner Mongolia (world's largest deposit of Rare Earth Elements / REEs).
+  *Key Concepts & Entities*: Qinling-Huai River Line (Wheat vs Rice Divide) • Pearl River Delta SEZ (Greater Bay Area) • Yangtze River Delta Industrial Belt • Bohai Economic Rim (Jing-Jin-Ji) • Shanxi Coalfields & Daqing Oilfield • Bayan Obo Rare Earth Elements (REEs)
+
+### Regional Geography of Japan: Archipelago Tectonics & Tokaido Industrial Megalopolis
+
+- **Japan: Archipelago Physiography, Ring of Fire & Tectonic Hazards** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Insular physical geography and tectonic dynamics of the Japanese archipelago: Four main islands stretching in an arc from northeast to southwest: Hokkaido (northernmost, cold temperate climate, Sapporo plain), Honshu (largest and most populous island, containing Tokyo, Kyoto, Osaka, and the high Japanese Alps / Hida, Kiso, and Akaishi ranges), Shikoku (smallest main island, citrus and maritime farming), and Kyushu (southernmost, subtropical climate, active volcanism); Tectonic setting: Located at the complex convergence zone of four tectonic plates (Pacific, Philippine Sea, Eurasian, and North American / Okhotsk plates); Pacific Ring of Fire volcanism: Over 100 active volcanoes including Mount Fuji (composite stratovolcano, 3,776m highest peak in Japan, dormant since 1707); High seismic vulnerability: Frequent megathrust earthquakes and devastating tsunamis (Great Kanto Earthquake 1923, Great Hanshin-Awake Earthquake 1995, 2011 Tohoku megathrust earthquake and tsunami triggering Fukushima Daiichi disaster); Limited flat land: Over 73% mountainous terrain, confining urban populations to narrow coastal alluvial plains such as Kanto Plain (largest plain in Honshu surrounding Tokyo), Nobi Plain (Nagoya), and Kansai Plain (Osaka-Kobe).
+  *Key Concepts & Entities*: Four Main Japanese Islands (Honshu, Hokkaido, Kyushu, Shikoku) • Japanese Alps (Hida, Kiso, Akaishi) • Mount Fuji (3,776m Composite Volcano) • Four-Plate Tectonic Convergence • 2011 Tohoku Earthquake & Megathrust Tsunami • Kanto Plain & Tokyo Alluvial Basin • Ring of Fire Active Volcanism
+
+- **Japan: Tokaido Megalopolis, Manufacturing Prowess & Fisheries** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Industrial structure, export-led manufacturing, and marine economic geography of Japan: Resource scarcity: Acute deficiency in indigenous fossil fuels (imports 99% petroleum and coal) and metallic ores, compelling the development of highly efficient port-based import-refine-export industrial models; Pacific Coast Industrial Belt / Tokaido Megalopolis (continuous urban-industrial corridor along the southern Pacific coast of Honshu home to over 60% of Japan's population and industrial output): Keihin Industrial Region (Tokyo-Yokohama-Kawasaki: precision machinery, electronics, publishing, optics), Chukyo Industrial Region (Nagoya-Toyota City: world's leading automotive manufacturing hub / Toyota headquarters, aviation, ceramics), Hanshin Industrial Region (Osaka-Kobe-Kyoto: heavy steel, shipbuilding, chemicals, electronics), and Kitakyushu-Setouchi Region (northern Kyushu and Inland Sea: heavy metallurgy, chemicals, semiconductors); Marine economy: One of the world's premier fishing and aquaculture nations, greatly favored by the convergence of the warm northward-flowing Kuroshio Current and cold nutrient-rich southward-flowing Oyashio Current in the northwest Pacific, generating exceptionally fertile pelagic fishing grounds.
+  *Key Concepts & Entities*: Tokaido Megalopolis Industrial Corridor • Keihin Region (Tokyo-Yokohama Precision Engineering) • Chukyo Region (Nagoya & Toyota City Automotive) • Hanshin Region (Osaka-Kobe Metallurgy) • Import-Dependent Port-Based Manufacturing • Kuroshio-Oyashio Convergence Marine Fisheries
+
+### Regional Geography of South Asia: Subcontinent Relief, Drainage & Climate Vulnerability
+
+- **South Asia: Subcontinental Morphology, Drainage Networks & Deserts** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Unified geomorphic and hydrological entity of the South Asian realm: Terrestrial borders and countries: Bounded by the towering Himalayas in the north, Karakoram and Hindu Kush in the northwest, Arakan Yoma in the east, and the vast expanse of the Indian Ocean in the south; Comprises 8 nations: India, Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka, Maldives, and Afghanistan; Major physiographic divisions: Himalayan mountain wall, Indo-Gangetic-Brahmaputra alluvial plains, Thar / Great Indian Desert (extending into Sindh and Punjab as Cholistan), Balochistan Plateau (arid intermontane basins and Chagai Hills), Potwar Plateau and Salt Range in Pakistan; Major drainage networks: Indus River Basin (draining northwest into Arabian Sea via Kotri delta), Ganga-Brahmaputra-Meghna Basin (draining southeast into Bay of Bengal through the world's largest delta / Sundarbans mangrove swamp); Island nations: Sri Lanka (Central Highlands with Mount Pidurutalagala, Mahaweli Ganga river, Jaffna peninsula connected via Elephant Pass) and Maldives (low-lying coral atoll chain with 26 natural atolls resting on the Chagos-Laccadive submarine ridge).
+  *Key Concepts & Entities*: Himalayan-Hindu Kush Mountain Arc • Indo-Gangetic-Brahmaputra Alluvial Realm • Thar Desert & Cholistan Dunes • Potwar Plateau & Salt Range • Ganga-Brahmaputra-Meghna Sundarbans Delta • Sri Lanka Central Highlands & Mahaweli Ganga • Maldives Coral Atoll Chain
+
+- **South Asia: Monsoon Agriculture, Water Treaties & Natural Disasters** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Climatic rhythms, agrarian dependencies, transboundary hydrology, and disaster vulnerabilities across South Asia: Climatic dominance: Governed by the seasonal reversal of the South Asian Monsoon system, ranging from super-humid rainforest environments in Bangladesh and Western Ghats to hyper-arid conditions in Balochistan and Thar; Agricultural specialization: Jute and wet rice cultivation in the fertile floodplains of Bangladesh, intensive wheat and cotton farming in the irrigated Indus basin of Pakistani Punjab and Sindh, tea plantations on the highland slopes of Sri Lanka (Ceylon tea) and Nepal; Transboundary water governance: Indus Waters Treaty 1960 between India and Pakistan (allocating eastern rivers Ravi, Beas, Sutlej to India and western rivers Indus, Jhelum, Chenab to Pakistan), Ganga Water Sharing Treaty 1996 between India and Bangladesh (Farakka Barrage water allocations); Severe environmental vulnerabilities: Glacial Lake Outburst Floods (GLOFs) in Nepal and Bhutan, seismic hazards along the Himalayan collision boundary (2015 Gorkha Nepal earthquake), catastrophic tropical cyclones striking the shallow Bay of Bengal coast (Bangladesh and Odisha), and existential sea level rise threats confronting the low-lying Maldives and Bengal delta.
+  *Key Concepts & Entities*: South Asian Monsoon Agricultural Rhythm • Indus Waters Treaty 1960 (India-Pakistan) • Ganga Water Sharing Treaty (Farakka Barrage) • Ceylon Tea & Bengal Jute Agriculture • Glacial Lake Outburst Floods (GLOFs) • Himalayan Seismicity & 2015 Nepal Earthquake • Bay of Bengal Tropical Cyclones & Maldives Sea Rise
+
+### Regional Geography of South-East Asia: Mainland River Systems & Insular Archipelagos
+
+- **Mainland Southeast Asia: Indochina River Basins & Deltas** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geographical profile of mainland Indochina: Five sovereign nations: Myanmar (Burma), Thailand, Laos (only landlocked country in SE Asia), Cambodia, and Vietnam; Morphological structure: North-to-south trending parallel mountain ranges (Arakan Yoma, Shan Plateau, Bilauktaung Range, and Annamite Range / Cordillera separating Vietnam from Laos) alternating with deep river valleys and broad alluvial floodplains; Major southward-flowing river systems: Mekong River (longest in SE Asia 4,350 km, 'Lancang' in Tibet, flows through 6 countries forming borders between Laos, Myanmar, and Thailand, crossing Cambodia and discharging through a vast 9-mouthed delta in southern Vietnam), Irrawaddy River (vital commercial lifeline of Myanmar flowing into Andaman Sea via vast delta) and its tributary Chindwin, Salween River (draining deep gorges across Shan Plateau), Chao Phraya River (Thailand's sacred river, irrigating the fertile central plain rice bowl before flowing through Bangkok into Gulf of Thailand), and Red River / Song Hong (northern Vietnam draining into Gulf of Tonkin); Tonle Sap Lake in Cambodia (largest freshwater lake in SE Asia, unique hydrological feature with seasonal flow reversal from Mekong during summer monsoon expansion).
+  *Key Concepts & Entities*: Mekong River Basin & Nine-Mouthed Delta • Irrawaddy & Salween Rivers (Myanmar) • Chao Phraya River & Bangkok Plain • Red River Delta (Vietnam) • Tonle Sap Lake (Seasonal Flow Reversal) • Annamite Range & Shan Plateau • Laos Landlocked Geography
+
+- **Maritime Southeast Asia: Archipelagos, Ring of Fire & Resources** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Insular physical and economic geography of maritime Southeast Asia: Sovereign archipelago nations: Indonesia (world's largest island country with >17,000 islands: Sumatra, Java - world's most populous island with extremely fertile volcanic soils, Kalimantan / Indonesian Borneo, Sulawesi / Celebes, Maluku Spice Islands, and Western New Guinea / Papua), Philippines (over 7,100 islands: Luzon in north, Mindanao in south, Visayas in center), Malaysia (Peninsular Malaysia and East Malaysia / Sabah and Sarawak on northern Borneo), Singapore (island city-state at southern tip of Malay Peninsula), Brunei, and Timor-Leste; Tectonic framework: Sunda Shelf (continental extension linking mainland to Sumatra, Java, and Borneo) and Sahul Shelf (Australian continental extension); Intense Ring of Fire volcanism: Over 130 active volcanoes in Indonesia (Krakatoa / Krakatau, Mount Merapi near Yogyakarta, Mount Bromo, Mount Tambora 1815 super-eruption) and Philippines (Mount Pinatubo 1991 eruption, Mount Mayon perfect cone, Taal volcano); Economic resource wealth: Palm oil (Indonesia and Malaysia produce over 85% global supply), natural rubber, tin mining (Bangka-Belitung islands in Indonesia), petroleum and liquefied natural gas (LNG in Brunei, Natuna Sea, East Kalimantan), copper and gold (Grasberg mine in Papua - one of the world's largest open-pit gold and copper mines).
+  *Key Concepts & Entities*: Indonesian Archipelago (>17,000 Islands) • Java Volcanic Fertility & Sumatra • Philippines Archipelago (Luzon & Mindanao) • Sunda Shelf vs Sahul Shelf • Volcanism (Krakatoa, Merapi, Tambora, Pinatubo) • Palm Oil & Rubber Global Hegemony • Grasberg Copper-Gold Mine (Papua)
+
+### Regional Geography of New Zealand: Southern Alps, Volcanic Zones & Pastoral Economy
+
+- **New Zealand: Southern Alps, Fiordland & Taupo Volcanic Zone** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Physiographic contrast between the two main islands separated by the narrow Cook Strait: South Island / Te Waipounamu (larger, dominated by the formidable Southern Alps fold mountain range running along the western spine for 500 km; Mount Cook / Aoraki 3,724m highest peak; extensive Alpine Fault plate boundary between Pacific and Australian plates; heavy Pleistocene and active glaciation: Tasman Glacier, Franz Josef, and Fox Glaciers; glacial lakes like Lake Wakatipu and Lake Te Anau; spectacular glacial fiords in Fiordland National Park including Milford Sound and Doubtful Sound; broad Canterbury Plains on the eastern rain-shadow side formed by coalescing glacial outwash fans); North Island / Te Ika-a-Maui (characterized by active volcanism and thermal phenomena on the Taupo Volcanic Zone: Mount Ruapehu active stratovolcano, Mount Ngauruhoe, Mount Tongariro, Mount Taranaki / Egmont isolated volcanic cone; Lake Taupo world's largest rhyolitic super-volcanic caldera lake; extensive geothermal fields, geysers, and boiling mud pools of Rotorua; rolling pastoral hill country).
+  *Key Concepts & Entities*: Cook Strait Separation • Southern Alps & Mount Cook (Aoraki 3,724m) • Alpine Fault Plate Boundary • Fiordland (Milford Sound & Doubtful Sound) • Canterbury Plains Alluvial Fans • Taupo Volcanic Zone & Lake Taupo Caldera • Rotorua Geothermal Geysers & Mud Pools
+
+- **New Zealand: Marine Climate, Pastoral Dairy Economy & Geothermal Energy** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Temperate climate dynamics, pastoral agriculture, energy systems, and isolated biogeography: Climate regime: Marine West Coast temperate climate (Köppen Cfb) governed by prevailing moisture-laden Westerlies; dramatic orographic rainfall contrast (over 6,000 mm rain on the western slopes of the Southern Alps vs semi-arid rain-shadow <600 mm on the eastern Canterbury Plains); Pastoral economic dominance: World's premier exporter of dairy products (Fonterra cooperative handling ~95% of NZ export milk, highly efficient year-round pasture-based dairy farming without indoor barns); Extensive sheep farming on highland tussock grasslands for coarse wool and lamb meat; Viticulture and fruit horticulture (Marlborough Sauvignon Blanc wine region, Hawke's Bay, kiwifruit production in Bay of Plenty); Energy resources: Clean renewable energy profile with over 80% electricity from renewables (hydroelectric dams on Waikato and Clutha rivers, pioneer geothermal energy harnessing at Wairakei geothermal power station); Unique island biogeography: Prolonged evolutionary isolation since breaking away from Gondwana ~80 million years ago, resulting in distinct avifauna and absence of native land mammals (flightless Kiwi bird, Kakapo, Takahe, ancient Tuatara reptile).
+  *Key Concepts & Entities*: Marine West Coast Climate (Köppen Cfb) • Orographic Westerlies & Canterbury Rain Shadow • Fonterra Dairy Cooperative Export Dominance • Pastoral Sheep Farming & Tussock Grasslands • Marlborough Viticulture & Kiwifruit • Wairakei Geothermal Power Station • Isolated Biogeography (Kiwi & Tuatara)
+
+### Continental Geography: Europe, Africa, South America, Australia & Antarctica
+
+- **Europe: Morphological Belts, Rhine-Danube Basins & Alpine Arc** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Continental structure of Europe across four major morphological belts: 1. Western Uplands (ancient eroded Caledonian crystalline massifs: Scandinavian Highlands with glacial fjords, Scottish Highlands, Massif Central); 2. North European Plain (unbroken lowland plain stretching from southwestern France across northern Germany, Poland, and into Russia, intensive agriculture and industrial settlements); 3. Central Uplands (heavily forested Hercynian plateaus: Ardennes, Black Forest / Schwarzwald, Vosges, Bohemian Massif); 4. Alpine Mountain System (young Tertiary fold mountain arcs: Alps with Mont Blanc 4,809m, Pyrenees separating France and Spain, Apennines of Italy, Carpathians, Balkans, and Caucasus with Mount Elbrus 5,642m highest peak in Europe); Major river arteries: Rhine River (vital commercial waterway flowing from Swiss Alps through German industrial core to Rotterdam port / Europoort on North Sea), Danube River (longest river in EU 2,850 km, flowing east through 10 countries and 4 national capitals Vienna, Bratislava, Budapest, Belgrade into Black Sea delta), and Po River (northern Italian industrial and agrarian basin / Lombardy plain).
+  *Key Concepts & Entities*: North European Plain • Alpine Mountain Arc (Mont Blanc & Elbrus) • Rhine River & Rotterdam Europoort • Danube River Basin (10 Countries) • Po River & Lombardy Plain • Scandinavian Glacial Fjords • Black Forest (Schwarzwald)
+
+- **Africa: Great Rift Valley, Congo Rainforest, Nile & Sahara** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geomorphology and drainage of the African plateau continent: East African Great Rift Valley (continental divergent boundary stretching over 6,000 km from Jordan/Red Sea through Ethiopia, Kenya, Tanzania to Mozambique; Western and Eastern Rift branches; deep rift lakes: Lake Tanganyika world's longest freshwater lake and second deepest 1,470m, Lake Malawi / Nyasa; Lake Victoria shallow inland depression lake, Africa's largest; isolated volcanic peaks: Mount Kilimanjaro 5,895m highest peak in Africa, Mount Kenya); Vast drainage basins: Nile River (longest river on Earth 6,650 km, formed by confluence of White Nile from Lake Victoria and Blue Nile from Lake Tana in Ethiopia at Khartoum Sudan, Aswan High Dam, fertile Nile delta), Congo River Basin (world's deepest river >220m and second largest by discharge, cuts equator twice through equatorial rainforest / Selvas), and Niger River (inland delta in Mali); Deserts: Sahara Desert (largest hot desert in world, erg sand dunes, reg stony desert, hamada rock plateaus), Sahel semi-arid transition zone, Namib Desert (coastal hyper-arid desert under cold Benguela current), and Kalahari Basin (semi-desert red sand sheets); Victoria Falls on Zambezi River; Atlas Mountains in northwest and Drakensberg escarpment in south.
+  *Key Concepts & Entities*: East African Great Rift Valley • Mount Kilimanjaro (5,895m) & Mount Kenya • Lake Tanganyika & Lake Victoria • Nile River Basin & Aswan Dam • Congo River Equatorial Basin • Sahara Desert & Sahel Transition Zone • Namib & Kalahari Deserts • Victoria Falls (Zambezi River)
+
+- **South America: Andes Cordillera, Amazon Basin & Grassland Biomes** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Tripartite physical architecture and biomes of South America: 1. Western Cordillera / Andes Mountains (longest continental mountain range on Earth 7,000 km, formed by subduction of Nazca plate beneath South American plate; Mount Aconcagua 6,961m highest peak in the Western Hemisphere; Altiplano high-altitude plateau with Lake Titicaca world's highest navigable lake; Cotopaxi and Chimborazo volcanoes); 2. Eastern Crystalline Highlands (ancient Brazilian Shield and Guiana Highlands; Angel Falls in Venezuela highest waterfall in world 979m); 3. Central Lowland River Basins: Amazon Basin (world's largest drainage basin and highest discharge, drained by Amazon River and 1,100 tributaries, home to Amazon Rainforest / Amazonia 'lungs of the Earth' with unmatched biodiversity), Orinoco Basin, and Paraná-Paraguay-Río de la Plata system (Itaipu Dam); Distinctive biomes: Pampas (vast temperate grasslands of Argentina and Uruguay, fertile Mollisols, wheat and cattle estancias), Llanos (tropical savanna grasslands of Orinoco basin in Venezuela/Colombia), Campos and Cerrado (tropical savanna of central Brazil), Gran Chaco (dry scrub lowland), and Atacama Desert in northern Chile (driest non-polar desert on Earth created by rain-shadow of Andes and cold offshore Humboldt / Peru Current).
+  *Key Concepts & Entities*: Andes Cordillera & Mount Aconcagua (6,961m) • Altiplano & Lake Titicaca • Amazon River Basin & Rainforest (Amazonia) • Angel Falls & Guiana Highlands • Pampas Temperate Grasslands (Argentina) • Llanos & Cerrado Tropical Savannas • Atacama Desert (Humboldt Current Aridity)
+
+- **Australia, Oceania & Antarctica: Great Barrier Reef & Polar Ice Cap** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Physiography and environmental systems of Australia, Pacific Oceania, and Antarctica: Australia: Tripartite relief: Eastern Highlands / Great Dividing Range (Mount Kosciuszko 2,228m highest peak), Central Lowlands (endorheic drainage of Lake Eyre lowest point in Australia -15m, Great Artesian Basin largest artesian groundwater aquifer in world, Murray-Darling river system), and Western Plateau / Outback (ancient eroded shield, Great Victoria and Great Sandy Deserts, Uluru / Ayers Rock inselberg); Great Barrier Reef along Queensland coast (world's largest coral reef ecosystem, UNESCO World Heritage, stretching over 2,300 km); Oceania sub-regions: Melanesia (Papua New Guinea, Fiji, Solomon Islands), Micronesia (Guam, Marshall Islands, Palau), and Polynesia (Hawaii, Samoa, Tonga, Easter Island); Antarctica: Fifth-largest continent, 98% covered by the Antarctic Ice Sheet (averaging 1.9 km thickness, holds 70% of world's freshwater and 90% of Earth's ice); Transantarctic Mountains dividing East and West Antarctica; Vinson Massif (4,892m highest summit); Ross Ice Shelf and Ronne Ice Shelf; Coldest, windiest, and driest continent (polar desert); Antarctic Treaty System 1959 (preserving continent for peaceful scientific research); Indian Antarctic Research Stations: Dakshin Gangotri (1983 historical), Maitri (1989), and Bharati (2012 in Larsemann Hills).
+  *Key Concepts & Entities*: Great Dividing Range & Mount Kosciuszko • Great Barrier Reef (2,300 km Coral System) • Murray-Darling Basin & Lake Eyre • Great Artesian Basin (Groundwater) • Melanesia, Micronesia & Polynesia Sub-Regions • Antarctic Ice Sheet & Vinson Massif • Antarctic Treaty & Indian Stations (Maitri, Bharati)
 
 Geography of Karnataka `[KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]`
 
-- Physiography & Relief Divisions of Karnataka
-- Drainage Systems & River Basins of Karnataka
-- Climate, Rainfall & Agro-Climatic Zones of Karnataka
-- Soils & Natural Vegetation of Karnataka
-- Biodiversity, Protected Areas & Conservation in Karnataka
-- Mineral, Power & Economic Resources of Karnataka
+### Physiography & Relief Divisions of Karnataka
 
-Physiography & Relief Divisions of Karnataka `[KAS: Prelims-P1, Mains-GS1] [UPSC: Mains-GS1]`
+- **Karavali / Coastal Plains** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Canara Coast stretching ~320 km between Karwar in North to Mangaluru in South; Narrow Coastal Strip bounded by Arabian Sea & Western Ghats; Estuaries, Spits & Lagoons; Major River Outlets - Netravati, Gurupura, Sharavathi, Gangavali, Aghanashini, Kali; Major Ports - New Mangalore Port / Only Major Port of Karnataka, Karwar Port, Malpe, Tadadi, Belekeri; St. Mary's Islands / Columnar Basaltic Lava Geo-Heritage Site
+  *Key Concepts & Entities*: Canara Coast stretching ~320 km between Karwar in North to Mangaluru in South • Narrow Coastal Strip bounded by Arabian Sea & Western Ghats • Estuaries, Spits & Lagoons • Major River Outlets - Netravati, Gurupura, Sharavathi, Gangavali, Aghanashini, Kali • Major Ports - New Mangalore Port • Only Major Port of Karnataka, Karwar Port, Malpe, Tadadi, Belekeri • St. Mary's Islands • Columnar Basaltic Lava Geo-Heritage Site
 
-- Karavali / Coastal Plains (Canara Coast stretching ~320 km between Karwar in North to Mangaluru in South; Narrow Coastal Strip bounded by Arabian Sea & Western Ghats; Estuaries, Spits & Lagoons; Major River Outlets - Netravati, Gurupura, Sharavathi, Gangavali, Aghanashini, Kali; Major Ports - New Mangalore Port / Only Major Port of Karnataka, Karwar Port, Malpe, Tadadi, Belekeri; St. Mary's Islands / Columnar Basaltic Lava Geo-Heritage Site)
-- Malnad / Western Ghats / Sahyadri Range (Continuous Mountainous Escarpment; Average Elevation 900–1500m; Peak Formations - Mullayanagiri 1930m / Highest Peak in Karnataka in Chikmagalur / Baba Budangiri Range / Chandra Drona Parvatha; Kudremukh 1894m / Horse-face Peak; Pushpagiri / Kumara Parvatha 1712m in Kodagu-Dakshina Kannada border; Brahmagiri 1608m; Tadiandamol 1748m / Highest Peak of Kodagu; Agumbe Ghat; Major Mountain Passes / Ghats - Charmadi Ghat / Chikmagalur-Mangalore link, Shiradi Ghat / Hassan-Mangalore link, Sampaje Ghat / Kodagu-Mangalore link, Hulikal Ghat / Shimoga-Udupi link, Agumbe Ghat / Shimoga-Udupi link)
-- Northern Maidan / Bayaluseeme (Extensive Treeless Semi-Arid Plateau formed by Deccan Trap Lava Flows & Ancient Granites; Krishna, Bhima, Ghataprabha & Malaprabha River Plains; Black Cotton Soils / Regur; Residual Monadnocks & Flat-Topped Mesas; Drought-Prone Dry Landscape covering Belagavi, Bagalkote, Vijayapura, Kalaburagi, Yadgir, Raichur, Koppal, Gadag, Ballari & Vijayanagara districts; Kappatagudda Hill Range)
-- Southern Maidan / Mysore Plateau (Rolling Undulating Plateau between 600–900m Elevation; Archean Granites & Gneisses; Red Soils; Cauvery, Hemavati, Shimsha, Arkavathi & Palar-Pennar River Valleys; Distinct Residual Hill Clusters - Savandurga / Largest Monolithic Hill in Asia, Madhugiri / Second Largest Monolithic Fort in Asia, Shivagange, Nandi Hills / Chikkaballapur, Chamundi Hills / Mysuru, Biligirirangana Hills / BR Hills / Ecological Transition between Western & Eastern Ghats, Male Mahadeshwara Hills / MM Hills)
+- **Malnad / Western Ghats / Sahyadri Range** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Continuous Mountainous Escarpment; Average Elevation 900–1500m; Peak Formations - Mullayanagiri 1930m / Highest Peak in Karnataka in Chikmagalur / Baba Budangiri Range / Chandra Drona Parvatha; Kudremukh 1894m / Horse-face Peak; Pushpagiri / Kumara Parvatha 1712m in Kodagu-Dakshina Kannada border; Brahmagiri 1608m; Tadiandamol 1748m / Highest Peak of Kodagu; Agumbe Ghat; Major Mountain Passes / Ghats - Charmadi Ghat / Chikmagalur-Mangalore link, Shiradi Ghat / Hassan-Mangalore link, Sampaje Ghat / Kodagu-Mangalore link, Hulikal Ghat / Shimoga-Udupi link, Agumbe Ghat / Shimoga-Udupi link
+  *Key Concepts & Entities*: Continuous Mountainous Escarpment • Average Elevation 900–1500m • Peak Formations - Mullayanagiri 1930m • Highest Peak in Karnataka in Chikmagalur • Baba Budangiri Range • Chandra Drona Parvatha • Kudremukh 1894m • Horse-face Peak • Pushpagiri • Kumara Parvatha 1712m in Kodagu-Dakshina Kannada border • Brahmagiri 1608m • Tadiandamol 1748m • Highest Peak of Kodagu • Agumbe Ghat • Major Mountain Passes • Ghats - Charmadi Ghat • Chikmagalur-Mangalore link, Shiradi Ghat • Hassan-Mangalore link, Sampaje Ghat • Kodagu-Mangalore link, Hulikal Ghat • Shimoga-Udupi link, Agumbe Ghat • Shimoga-Udupi link
 
-Drainage Systems & River Basins of Karnataka `[KAS: Prelims-P1, Mains-GS1] [UPSC: Mains-GS1]`
+- **Northern Maidan / Bayaluseeme** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Extensive Treeless Semi-Arid Plateau formed by Deccan Trap Lava Flows & Ancient Granites; Krishna, Bhima, Ghataprabha & Malaprabha River Plains; Black Cotton Soils / Regur; Residual Monadnocks & Flat-Topped Mesas; Drought-Prone Dry Landscape covering Belagavi, Bagalkote, Vijayapura, Kalaburagi, Yadgir, Raichur, Koppal, Gadag, Ballari & Vijayanagara districts; Kappatagudda Hill Range
+  *Key Concepts & Entities*: Extensive Treeless Semi-Arid Plateau formed by Deccan Trap Lava Flows & Ancient Granites • Krishna, Bhima, Ghataprabha & Malaprabha River Plains • Black Cotton Soils • Regur • Residual Monadnocks & Flat-Topped Mesas • Drought-Prone Dry Landscape covering Belagavi, Bagalkote, Vijayapura, Kalaburagi, Yadgir, Raichur, Koppal, Gadag, Ballari & Vijayanagara districts • Kappatagudda Hill Range
 
-- East-Flowing River Systems (Major Drainage directed towards Bay of Bengal across Peninsular Gradient):
-  - Krishna River Basin (Drains ~60% of State Area; Origin at Mahabaleshwar in Maharashtra; Enters Karnataka at Hipparagi; Major Tributaries in Karnataka: Bhima River / Origin Bhimashankar; Ghataprabha River / Gokak Falls; Malaprabha River / Origin Kanakumbi, Peacock Sanctuary at Bankapura; Tungabhadra River / Formed by Confluence of Tunga & Bhadra at Kudli near Shivamogga, Tributary Varada; Vedavati / Hagari River / Vani Vilasa Sagara / Mari Kanive Dam in Chitradurga / Oldest Dam in Karnataka 1907; Major Irrigation Projects: Upper Krishna Project / UKP - Almatti Dam / Lal Bahadur Shastri Reservoir & Narayanpur Dam / Basavasagara Reservoir; Tungabhadra Dam at Hosapete / Pampa Sagara)
-  - Cauvery / Kaveri River Basin (Lifeline of Southern Karnataka; Origin at Talakaveri in Brahmagiri Hills of Kodagu District 1341m; Eastward Flow across Mysore Plateau; Major Left-Bank Tributaries: Harangi, Hemavati / Gorur Dam, Shimsha, Arkavathi; Major Right-Bank Tributaries: Lakshmana Tirtha, Kabini / Beechanahalli Dam, Suvarnavathi; Waterfalls & Gorges: Chunchanakatte Falls, Shivanasamudra Falls / Gaganachukki & Bharachukki / Asia's First Hydroelectric Power Project 1902, Mekedatu Gorge / Proposed Balancing Reservoir at Arkavathi Confluence; Major Reservoirs: Krishnaraja Sagara / KRS Dam at Kannambadi built under Sir M. Visvesvaraya; Inter-State Cauvery Water Dispute with Tamil Nadu)
-  - Pennar & Palar River Basins (Uttara Pinakini / North Pennar, Dakshina Pinakini / South Pennar & Palar Rivers originating in Nandi Hills / Chennakesava Hills of Chikkaballapur District, draining eastern arid plateau into Andhra Pradesh & Tamil Nadu)
-- West-Flowing River Systems (Short, Rapid, High-Velocity Torrential Rivers draining into Arabian Sea through Malnad & Coastal Escarpments):
-  - Sharavathi River (Origin at Ambuthirtha in Thirthahalli Taluk of Shivamogga; Jog Falls / Gersoppa / Raja, Roarer, Rocket & Rani / 253m Drop / Major Plunge Waterfall in India; Linganamakki Dam / Largest Reservoir by Water Capacity in Karnataka, Sharavathi Hydroelectric Project)
-  - Kali River (Origin at Diggi in Uttara Kannada; Supa Dam Hydroelectric Project, Kodasalli Dam, Kadra Dam; Karwar Estuary)
-  - Netravati & Gurupura Rivers (Netravati Origin at Bangrabalige Valley in Kudremukh; Confluence with Kumaradhara at Uppinangadi; Lifeline of Dakshina Kannada; Yettinahole Water Diversion Project)
-  - Other West-Flowing Rivers: Aghanashini River / Unchalli Falls / Lushington Falls, Pristine Estuary / Ramsar Site; Gangavali / Bedthi River / Magod Falls; Varahi River / Kunchikal Falls / Underground Hydroelectric Station; Mahadayi / Mandovi River / Origin at Khanapur in Belagavi, Kalasa-Banduri Nala Drinking Water Project Dispute with Goa)
+- **Southern Maidan / Mysore Plateau** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Rolling Undulating Plateau between 600–900m Elevation; Archean Granites & Gneisses; Red Soils; Cauvery, Hemavati, Shimsha, Arkavathi & Palar-Pennar River Valleys; Distinct Residual Hill Clusters - Savandurga / Largest Monolithic Hill in Asia, Madhugiri / Second Largest Monolithic Fort in Asia, Shivagange, Nandi Hills / Chikkaballapur, Chamundi Hills / Mysuru, Biligirirangana Hills / BR Hills / Ecological Transition between Western & Eastern Ghats, Male Mahadeshwara Hills / MM Hills
+  *Key Concepts & Entities*: Rolling Undulating Plateau between 600–900m Elevation • Archean Granites & Gneisses • Red Soils • Cauvery, Hemavati, Shimsha, Arkavathi & Palar-Pennar River Valleys • Distinct Residual Hill Clusters - Savandurga • Largest Monolithic Hill in Asia, Madhugiri • Second Largest Monolithic Fort in Asia, Shivagange, Nandi Hills • Chikkaballapur, Chamundi Hills • Mysuru, Biligirirangana Hills • BR Hills • Ecological Transition between Western & Eastern Ghats, Male Mahadeshwara Hills • MM Hills
 
-Climate, Rainfall & Agro-Climatic Zones of Karnataka `[KAS: Prelims-P1, Mains-GS1] [UPSC: Mains-GS1]`
+### Drainage Systems & River Basins of Karnataka
 
-- Climate & Monsoon Dynamics (Tropical Monsoon Climate; Four Distinct Seasons: Dry Winter / Jan–Feb, Hot Pre-Monsoon Summer / March–May / Mango Showers / Coffee Showers, South-West Monsoon Season / Mungaru / June–Sept / Accounts for ~80% of Annual Rainfall, North-East Post-Monsoon Season / Hingaru / Oct–Dec / Retreating Monsoon Rainfall in Southern & Eastern Districts)
-- Rainfall Distribution & Spatial Variation (Heavy Orographic Rainfall in Malnad & Coastal Belt: Agumbe in Shivamogga & Hulikal / ~8000mm Annual Rainfall / 'Cherrapunji of South India', Bhagamandala in Kodagu; Steep Rain-Shadow Effect eastward of Western Ghats: Semi-Arid Core of Central & Northern Karnataka receiving <500mm Annual Rainfall / Nayakarahatti & Challakere in Chitradurga, Bagalkote, Vijayapura; High Frequency of Agricultural Droughts)
-- 10 Agro-Climatic Zones of Karnataka (Demarcated by NARP / ICAR based on Rainfall, Soil & Cropping Patterns):
-  1. North-Eastern Transition Zone (Bidar, Kalaburagi / Pulses, Black Soil, Moderate Rainfall)
-  2. North-Eastern Dry Zone (Raichur, Yadgir, Kalaburagi / Cotton, Jowar, Deep Black Soils)
-  3. Northern Dry Zone (Vijayapura, Bagalkote, Gadag, Belagavi, Koppal, Ballari / Largest Zone, Low Rainfall, Bajra, Sunflower, Jowar)
-  4. Central Dry Zone (Chitradurga, Davanagere, Tumakuru / Millets, Groundnut, Maize)
-  5. Eastern Dry Zone (Bengaluru Urban & Rural, Kolar, Chikkaballapur, Ramanagara / Ragi, Mulberry / Sericulture, Vegetables)
-  6. Southern Dry Zone (Mysuru, Mandya, Chamarajanagar / Paddy, Sugarcane, Ragi, Cauvery Canal Irrigation)
-  7. Southern Transition Zone (Hassan, Mysuru, Shivamogga / Transitional Cropping, Ragi, Tobacco, Potato)
-  8. Northern Transition Zone (Dharwad, Belagavi, Haveri / High Agricultural Productivity, Cotton, Soybean, Wheat, Chilli)
-  9. Hilly / Malnad Zone (Uttara Kannada, Shivamogga, Chikmagalur, Hassan, Kodagu / Plantation Crops: Coffee, Arecanut, Pepper, Cardamom, Tea, Paddy)
-  10. Coastal Zone (Dakshina Kannada, Udupi, Uttara Kannada coastal strip / Coconut, Arecanut, Paddy, Cashew, Fisheries)
+- **East-Flowing River Systems (Major Drainage directed towards Bay of Bengal across Peninsular Gradient):** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
 
-Soils & Natural Vegetation of Karnataka `[KAS: Prelims-P1, Mains-GS1] [UPSC: Mains-GS1]`
+- **Krishna River Basin** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Drains ~60% of State Area; Origin at Mahabaleshwar in Maharashtra; Enters Karnataka at Hipparagi; Major Tributaries in Karnataka: Bhima River / Origin Bhimashankar; Ghataprabha River / Gokak Falls; Malaprabha River / Origin Kanakumbi, Peacock Sanctuary at Bankapura; Tungabhadra River / Formed by Confluence of Tunga & Bhadra at Kudli near Shivamogga, Tributary Varada; Vedavati / Hagari River / Vani Vilasa Sagara / Mari Kanive Dam in Chitradurga / Oldest Dam in Karnataka 1907; Major Irrigation Projects: Upper Krishna Project / UKP - Almatti Dam / Lal Bahadur Shastri Reservoir & Narayanpur Dam / Basavasagara Reservoir; Tungabhadra Dam at Hosapete / Pampa Sagara
+  *Key Concepts & Entities*: Drains ~60% of State Area • Origin at Mahabaleshwar in Maharashtra • Enters Karnataka at Hipparagi • Major Tributaries in Karnataka: Bhima River • Origin Bhimashankar • Ghataprabha River • Gokak Falls • Malaprabha River • Origin Kanakumbi, Peacock Sanctuary at Bankapura • Tungabhadra River • Formed by Confluence of Tunga & Bhadra at Kudli near Shivamogga, Tributary Varada • Vedavati • Hagari River • Vani Vilasa Sagara • Mari Kanive Dam in Chitradurga • Oldest Dam in Karnataka 1907 • Major Irrigation Projects: Upper Krishna Project • UKP - Almatti Dam • Lal Bahadur Shastri Reservoir & Narayanpur Dam • Basavasagara Reservoir • Tungabhadra Dam at Hosapete • Pampa Sagara
 
-- Major Soil Types of Karnataka:
-  - Red Soils / Alfisols & Inceptisols (Largest Soil Group in Karnataka ~50% area; Red Sandy Loams & Red Clay Loams; Formed from Archean Gneisses & Granites; Rich in Iron Oxides & Potash, Deficient in Nitrogen, Phosphorus & Humus; Predominant in Southern Maidan - Tumakuru, Kolar, Bengaluru, Mandya, Mysuru; Ideal for Ragi, Groundnut, Pulses, Millets)
-  - Black Cotton Soils / Regur / Vertisols (Covers ~28% area; Formed from Weathering of Deccan Basaltic Traps; High Clay Content, High Moisture Retentivity, Self-Ploughing Nature with Deep Cracks during Summer; Rich in Calcium Carbonate, Magnesium & Lime, Poor in Nitrogen & Organic Matter; Predominant in Northern Maidan - Kalaburagi, Vijayapura, Bagalkote, Belagavi, Dharwad, Raichur; Ideal for Cotton, Jowar, Wheat, Sunflower, Bengal Gram)
-  - Laterite Soils / Ultisols & Oxisols (Formed by Intense Leaching under High Temperature & Heavy Rainfall; Acidic, Rich in Iron & Aluminium Hydroxides, Deficient in Lime & Silica; Found in Coastal Plains & Malnad Plateaus - Uttara Kannada, Udupi, Dakshina Kannada, Kodagu, Chikmagalur; Highly Suitable for Plantation Crops: Coffee, Tea, Cashew, Rubber, Arecanut)
-  - Alluvial & Coastal Soils / Entisols (Narrow Belts along River Valleys & Coastal Plains; High Fertility, Rich in Organic Matter, Well-Drained; Paddy, Coconut, Banana)
-- Forest Cover & Natural Vegetation Types:
-  - Forest Area (~20.1% of State Geographical Area; Western Ghats as Global Biodiversity Hotspot):
-  - Tropical Wet Evergreen & Semi-Evergreen Forests (Western Slopes of Western Ghats / Annual Rainfall >2500mm; Dense Multi-Layered Canopy; Rosewood / Dalbergia latifolia, Ebony, Mahogany, White Cedar / Dysoxylum, Gurjan, Wild Jackfruit, Cinnamon; Silent Valley type microhabitats in Agumbe, Bhagamandala)
-  - Tropical Moist Deciduous Forests (Transition Zone of Malnad & Foot of Western Ghats / Rainfall 1500–2500mm; Shed leaves in early summer; Teak / Tectona grandis, Rosewood, Honne / Pterocarpus marsupium, Mathi / Terminalia tomentosa, Dindiga, Bamboo Brakes, Sandalwood / Santalum album / 'Sandalwood State' / 'Gandhada Gudi')
-  - Tropical Dry Deciduous Forests (Eastern slopes of Ghats & Southern Maidan / Rainfall 750–1500mm; Teak, Axle-wood / Anogeissus, Bael, Neem, Palas / Flame of the Forest, Red Sanders in border areas)
-  - Tropical Thorn & Scrub Forests (Northern & Central Dry Plains / Rainfall <750mm; Xerophytic Adaptations, Thorns, Spines & Fleshy Stems; Acacia / Babul, Kair, Euphorbias, Prosopis, Zizyphus / Ber, Cactus)
-  - Coastal Mangroves (Estuarine Intertidal Mudflats; Halophytic Vegetation with Pneumatophores / Stilt Roots; Karwar, Honnavar, Aghanashini Estuary, Gangavali & Kundapura Mangroves)
+- **Cauvery / Kaveri River Basin** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Lifeline of Southern Karnataka; Origin at Talakaveri in Brahmagiri Hills of Kodagu District 1341m; Eastward Flow across Mysore Plateau; Major Left-Bank Tributaries: Harangi, Hemavati / Gorur Dam, Shimsha, Arkavathi; Major Right-Bank Tributaries: Lakshmana Tirtha, Kabini / Beechanahalli Dam, Suvarnavathi; Waterfalls & Gorges: Chunchanakatte Falls, Shivanasamudra Falls / Gaganachukki & Bharachukki / Asia's First Hydroelectric Power Project 1902, Mekedatu Gorge / Proposed Balancing Reservoir at Arkavathi Confluence; Major Reservoirs: Krishnaraja Sagara / KRS Dam at Kannambadi built under Sir M. Visvesvaraya; Inter-State Cauvery Water Dispute with Tamil Nadu
+  *Key Concepts & Entities*: Lifeline of Southern Karnataka • Origin at Talakaveri in Brahmagiri Hills of Kodagu District 1341m • Eastward Flow across Mysore Plateau • Major Left-Bank Tributaries: Harangi, Hemavati • Gorur Dam, Shimsha, Arkavathi • Major Right-Bank Tributaries: Lakshmana Tirtha, Kabini • Beechanahalli Dam, Suvarnavathi • Waterfalls & Gorges: Chunchanakatte Falls, Shivanasamudra Falls • Gaganachukki & Bharachukki • Asia's First Hydroelectric Power Project 1902, Mekedatu Gorge • Proposed Balancing Reservoir at Arkavathi Confluence • Major Reservoirs: Krishnaraja Sagara • KRS Dam at Kannambadi built under Sir M. Visvesvaraya • Inter-State Cauvery Water Dispute with Tamil Nadu
 
-Biodiversity, Protected Areas & Conservation in Karnataka `[KAS: Prelims-P1, Mains-GS1] [UPSC: Mains-GS1]`
+- **Pennar & Palar River Basins** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Uttara Pinakini / North Pennar, Dakshina Pinakini / South Pennar & Palar Rivers originating in Nandi Hills / Chennakesava Hills of Chikkaballapur District, draining eastern arid plateau into Andhra Pradesh & Tamil Nadu
+  *Key Concepts & Entities*: Uttara Pinakini • North Pennar, Dakshina Pinakini • South Pennar & Palar Rivers originating in Nandi Hills • Chennakesava Hills of Chikkaballapur District, draining eastern arid plateau into Andhra Pradesh & Tamil Nadu
 
-- National Parks of Karnataka:
-  - Bandipur National Park (Chamarajanagar / Part of Nilgiri Biosphere Reserve; Established as Venugopala Wildlife Park 1931 by Mysore Maharaja; Project Tiger Site 1973; High Density of Bengal Tigers, Asian Elephants, Indian Gaur, Dholes; Moyar River / Kabini River borders)
-  - Nagarahole / Rajiv Gandhi National Park (Kodagu & Mysuru districts; Part of Nilgiri Biosphere Reserve; Kabini River separates Bandipur & Nagarahole; High Density of Tigers, Leopards, Elephants, Marsh Crocodiles)
-  - Kudremukh National Park (Chikmagalur, Udupi & Dakshina Kannada / Tropical Wet Evergreen Forests; Origin of Tunga, Bhadra & Netravati Rivers; Shola-Grassland Ecosystem; Lion-Tailed Macaque / LTM habitat; Iron Ore Mining Halted for Eco-Restoration)
-  - Bannerghatta National Park (Bengaluru Urban / Biological Park, Tiger & Lion Safari, Butterfly Park, Elephant Wildlife Corridor connecting BM Betta & Talli Reserve Forests)
-  - Anshi National Park / Kali Tiger Reserve (Uttara Kannada / Moist Evergreen Rainforests, Kali River Basin, Black Panther / Melanistic Leopard Population, Great Indian Hornbill)
-- Tiger Reserves & Biosphere Reserves:
-  - 5 Tiger Reserves of Karnataka (Bandipur, Nagarahole, BRT / Biligirirangana Hills Tiger Reserve, Bhadra Tiger Reserve, Kali Tiger Reserve / Formerly Anshi-Dandeli)
-  - Nilgiri Biosphere Reserve (First Biosphere Reserve in India 1986; Karnataka Sector covers Bandipur, Nagarahole & Nagarhole-Mudumalai-Wayanad Contiguous Forest Landscape)
-- Wildlife & Bird Sanctuaries of Prominence:
-  - Bhadra Wildlife Sanctuary / Muthodi (Chikmagalur / Bhadra Dam / Tiger Reserve)
-  - Dandeli Wildlife Sanctuary & Hornbill Conservation Reserve (Uttara Kannada)
-  - Daroji Sloth Bear Sanctuary (Ballari-Vijayanagara / Dedicated Habitat for Melursus ursinus)
-  - Ramadevara Betta Vulture Sanctuary (Ramanagara / Long-Billed Vulture Protection)
-  - Ranganathittu Bird Sanctuary (Mandya / Cauvery Islets / Declared Ramsar Wetland Site)
-  - Magadi Kere Bird Sanctuary (Gadag / Bar-Headed Goose Wintering Site / Ramsar Site)
-  - Ankasamudra Bird Conservation Reserve (Vijayanagara / Ramsar Site)
-  - Aghanashini Estuary (Uttara Kannada / Marine & Brackish Water Wetland / Ramsar Site)
-  - Kokkare Bellur Pelicanry (Mandya / Spot-Billed Pelicans & Painted Storks Co-existing with Villagers)
-  - UNESCO World Heritage Sites (Western Ghats Sub-Clusters in Karnataka - Agumbe, Kudremukh, Pushpagiri, Talakaveri, Brahmagiri)
+- **West-Flowing River Systems (Short, Rapid, High-Velocity Torrential Rivers draining into Arabian Sea through Malnad & Coastal Escarpments):** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
 
-Mineral, Power & Economic Resources of Karnataka `[KAS: Prelims-P1, Mains-GS1] [UPSC: Mains-GS1]`
+- **Sharavathi River** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Origin at Ambuthirtha in Thirthahalli Taluk of Shivamogga; Jog Falls / Gersoppa / Raja, Roarer, Rocket & Rani / 253m Drop / Major Plunge Waterfall in India; Linganamakki Dam / Largest Reservoir by Water Capacity in Karnataka, Sharavathi Hydroelectric Project
+  *Key Concepts & Entities*: Origin at Ambuthirtha in Thirthahalli Taluk of Shivamogga • Jog Falls • Gersoppa • Raja, Roarer, Rocket & Rani • 253m Drop • Major Plunge Waterfall in India • Linganamakki Dam • Largest Reservoir by Water Capacity in Karnataka, Sharavathi Hydroelectric Project
 
-- Mineral Resources of Karnataka (Richest Archean Craton / Dharwar Craton Geological Formations):
-  - Metallic Minerals:
-    - Iron Ore (Extensive Banded Iron Formations / BIF - Magnetite & Hematite; Major Belts: Bellary-Hospet-Sandur Sector / High Grade Hematite, Kudremukh / Magnetite deposits, Kemmangundi / Bababudan Hills in Chikmagalur / Historic Feeder to Bhadravathi Steel Plant, Chitradurga, Tumakuru)
-    - Gold (Karnataka produces over 99% of India's Primary Gold; Hutti Gold Mines in Raichur / Only active primary underground gold mining company in India; Historic Kolar Gold Fields / KGF in Champion Reefs - Extensively mined up to 3.2 km depth / Closed in 2001)
-    - Manganese (Associated with Iron Ore Formations; Sandur, Kumsi in Shivamogga, Belagavi, Uttara Kannada)
-    - Copper (Ingaldhal Mines in Chitradurga, Kalyadi in Hassan, Thinthini in Raichur)
-    - Bauxite (Aluminium Ore formed in Lateritic Caps; Belagavi / Supplies INDAL Smelter, Uttara Kannada, Dakshina Kannada)
-    - Chromite (Byrapur in Hassan District)
-  - Non-Metallic & Industrial Minerals:
-    - Limestone & Dolomite (Extensive Bhima & Kaladgi Rock Basins; Major Cement Clusters in Kalaburagi / Sedam, Wadi, Malkhed, Bagalkote, Belagavi)
-    - Granite & Dimensional Stones (Ilkal Red Granite / Bagalkote, Ruby Red / Chamarajanagar, Bengaluru Grey Granite, Black Granite / Kanakapura)
-    - Silica Sand & Quartz (Coastal Udupi & Dakshina Kannada, Belagavi)
-- Energy, Power Infrastructure & Industrial Corridors of Karnataka:
-  - Hydroelectric Power (First State in Asia to harness Commercial Hydro Power: Shivanasamudra 1902; Mahatma Gandhi Sharavathi Hydroelectric Project at Jog Falls; Linganamakki Powerhouse, Supa Dam on Kali, Varahi Underground Powerhouse, Kadra & Kodasalli Projects, Almatti Dam Hydel Project)
-  - Thermal Power Stations (Raichur Thermal Power Station / RTPS / First Coal-Fired TPS in Karnataka; Bellary Thermal Power Station / BTPS at Kudatini; Yermarus Thermal Power Station / YTPS in Raichur)
-  - Nuclear Energy (Kaiga Atomic Power Station in Uttara Kannada / 4 Units of Pressurised Heavy Water Reactors / PHWR / Indigenous Nuclear Technology)
-  - Renewable Energy Leadership (Karnataka is a National Leader in Clean Energy Generation):
-    - Solar Energy: Pavagada Solar Park / 'Shakti Sthala' in Tumakuru District / 2,050 MW Capacity / One of the Largest Ultra-Mega Solar Parks in the World; PM-KUSUM Decentralized Solarisation
-    - Wind Energy: Wind Power Farms in Kappatagudda / Gadag, Jogimatti / Chitradurga, Harapanahalli, Belagavi, Chikkaballapur
-  - Major Industrial & Economic Hubs:
-    - IT & Biotechnology Hub (Bengaluru / 'Silicon Valley of India' / Electronic City, Whitefield; Mysore IT Hub)
-    - Heavy Engineering, Aerospace & Defence Corridor (HAL, BEL, BEML, ISRO, DRDO, Gas Turbine Research Establishment)
-    - Textile & Garment Clusters (Ballari / Jeans Capital of India, Doddaballapura, Ilkal Sarees, Guledgudda Khana, Mysore Silk)
-    - Automobile & Machinery Corridors (Bidadi / Toyota, Narasapura & Peenya Industrial Area / Largest MSME Industrial Estate in SE Asia)
+- **Kali River** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Origin at Diggi in Uttara Kannada; Supa Dam Hydroelectric Project, Kodasalli Dam, Kadra Dam; Karwar Estuary
+  *Key Concepts & Entities*: Origin at Diggi in Uttara Kannada • Supa Dam Hydroelectric Project, Kodasalli Dam, Kadra Dam • Karwar Estuary
+
+- **Netravati & Gurupura Rivers** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Netravati Origin at Bangrabalige Valley in Kudremukh; Confluence with Kumaradhara at Uppinangadi; Lifeline of Dakshina Kannada; Yettinahole Water Diversion Project
+  *Key Concepts & Entities*: Netravati Origin at Bangrabalige Valley in Kudremukh • Confluence with Kumaradhara at Uppinangadi • Lifeline of Dakshina Kannada • Yettinahole Water Diversion Project
+
+- **Other West-Flowing Rivers: Aghanashini River / Unchalli Falls / Lushington Falls, Pristine Estuary / Ramsar Site; Gangavali / Bedthi River / Magod Falls; Varahi River / Kunchikal Falls / Underground Hydroelectric Station; Mahadayi / Mandovi River / Origin at Khanapur in Belagavi, Kalasa-Banduri Nala Drinking Water Project Dispute with Goa)** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+### Climate, Rainfall & Agro-Climatic Zones of Karnataka
+
+- **Climate & Monsoon Dynamics** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Tropical Monsoon Climate; Four Distinct Seasons: Dry Winter / Jan–Feb, Hot Pre-Monsoon Summer / March–May / Mango Showers / Coffee Showers, South-West Monsoon Season / Mungaru / June–Sept / Accounts for ~80% of Annual Rainfall, North-East Post-Monsoon Season / Hingaru / Oct–Dec / Retreating Monsoon Rainfall in Southern & Eastern Districts
+  *Key Concepts & Entities*: Tropical Monsoon Climate • Four Distinct Seasons: Dry Winter • Jan–Feb, Hot Pre-Monsoon Summer • March–May • Mango Showers • Coffee Showers, South-West Monsoon Season • Mungaru • June–Sept • Accounts for ~80% of Annual Rainfall, North-East Post-Monsoon Season • Hingaru • Oct–Dec • Retreating Monsoon Rainfall in Southern & Eastern Districts
+
+- **Rainfall Distribution & Spatial Variation** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Heavy Orographic Rainfall in Malnad & Coastal Belt: Agumbe in Shivamogga & Hulikal / ~8000mm Annual Rainfall / 'Cherrapunji of South India', Bhagamandala in Kodagu; Steep Rain-Shadow Effect eastward of Western Ghats: Semi-Arid Core of Central & Northern Karnataka receiving <500mm Annual Rainfall / Nayakarahatti & Challakere in Chitradurga, Bagalkote, Vijayapura; High Frequency of Agricultural Droughts
+  *Key Concepts & Entities*: Heavy Orographic Rainfall in Malnad & Coastal Belt: Agumbe in Shivamogga & Hulikal • ~8000mm Annual Rainfall • 'Cherrapunji of South India', Bhagamandala in Kodagu • Steep Rain-Shadow Effect eastward of Western Ghats: Semi-Arid Core of Central & Northern Karnataka receiving <500mm Annual Rainfall • Nayakarahatti & Challakere in Chitradurga, Bagalkote, Vijayapura • High Frequency of Agricultural Droughts
+
+- **10 Agro-Climatic Zones of Karnataka (Demarcated by NARP / ICAR based on Rainfall, Soil & Cropping Patterns):** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+### Soils & Natural Vegetation of Karnataka
+
+- **Major Soil Types of Karnataka:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Red Soils / Alfisols & Inceptisols** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Largest Soil Group in Karnataka ~50% area; Red Sandy Loams & Red Clay Loams; Formed from Archean Gneisses & Granites; Rich in Iron Oxides & Potash, Deficient in Nitrogen, Phosphorus & Humus; Predominant in Southern Maidan - Tumakuru, Kolar, Bengaluru, Mandya, Mysuru; Ideal for Ragi, Groundnut, Pulses, Millets
+  *Key Concepts & Entities*: Largest Soil Group in Karnataka ~50% area • Red Sandy Loams & Red Clay Loams • Formed from Archean Gneisses & Granites • Rich in Iron Oxides & Potash, Deficient in Nitrogen, Phosphorus & Humus • Predominant in Southern Maidan - Tumakuru, Kolar, Bengaluru, Mandya, Mysuru • Ideal for Ragi, Groundnut, Pulses, Millets
+
+- **Black Cotton Soils / Regur / Vertisols** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Covers ~28% area; Formed from Weathering of Deccan Basaltic Traps; High Clay Content, High Moisture Retentivity, Self-Ploughing Nature with Deep Cracks during Summer; Rich in Calcium Carbonate, Magnesium & Lime, Poor in Nitrogen & Organic Matter; Predominant in Northern Maidan - Kalaburagi, Vijayapura, Bagalkote, Belagavi, Dharwad, Raichur; Ideal for Cotton, Jowar, Wheat, Sunflower, Bengal Gram
+  *Key Concepts & Entities*: Covers ~28% area • Formed from Weathering of Deccan Basaltic Traps • High Clay Content, High Moisture Retentivity, Self-Ploughing Nature with Deep Cracks during Summer • Rich in Calcium Carbonate, Magnesium & Lime, Poor in Nitrogen & Organic Matter • Predominant in Northern Maidan - Kalaburagi, Vijayapura, Bagalkote, Belagavi, Dharwad, Raichur • Ideal for Cotton, Jowar, Wheat, Sunflower, Bengal Gram
+
+- **Laterite Soils / Ultisols & Oxisols** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Formed by Intense Leaching under High Temperature & Heavy Rainfall; Acidic, Rich in Iron & Aluminium Hydroxides, Deficient in Lime & Silica; Found in Coastal Plains & Malnad Plateaus - Uttara Kannada, Udupi, Dakshina Kannada, Kodagu, Chikmagalur; Highly Suitable for Plantation Crops: Coffee, Tea, Cashew, Rubber, Arecanut
+  *Key Concepts & Entities*: Formed by Intense Leaching under High Temperature & Heavy Rainfall • Acidic, Rich in Iron & Aluminium Hydroxides, Deficient in Lime & Silica • Found in Coastal Plains & Malnad Plateaus - Uttara Kannada, Udupi, Dakshina Kannada, Kodagu, Chikmagalur • Highly Suitable for Plantation Crops: Coffee, Tea, Cashew, Rubber, Arecanut
+
+- **Alluvial & Coastal Soils / Entisols** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Narrow Belts along River Valleys & Coastal Plains; High Fertility, Rich in Organic Matter, Well-Drained; Paddy, Coconut, Banana
+  *Key Concepts & Entities*: Narrow Belts along River Valleys & Coastal Plains • High Fertility, Rich in Organic Matter, Well-Drained • Paddy, Coconut, Banana
+
+- **Forest Cover & Natural Vegetation Types:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Forest Area (~20.1% of State Geographical Area; Western Ghats as Global Biodiversity Hotspot):** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Tropical Wet Evergreen & Semi-Evergreen Forests** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Western Slopes of Western Ghats / Annual Rainfall >2500mm; Dense Multi-Layered Canopy; Rosewood / Dalbergia latifolia, Ebony, Mahogany, White Cedar / Dysoxylum, Gurjan, Wild Jackfruit, Cinnamon; Silent Valley type microhabitats in Agumbe, Bhagamandala
+  *Key Concepts & Entities*: Western Slopes of Western Ghats • Annual Rainfall >2500mm • Dense Multi-Layered Canopy • Rosewood • Dalbergia latifolia, Ebony, Mahogany, White Cedar • Dysoxylum, Gurjan, Wild Jackfruit, Cinnamon • Silent Valley type microhabitats in Agumbe, Bhagamandala
+
+- **Tropical Moist Deciduous Forests** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Transition Zone of Malnad & Foot of Western Ghats / Rainfall 1500–2500mm; Shed leaves in early summer; Teak / Tectona grandis, Rosewood, Honne / Pterocarpus marsupium, Mathi / Terminalia tomentosa, Dindiga, Bamboo Brakes, Sandalwood / Santalum album / 'Sandalwood State' / 'Gandhada Gudi'
+  *Key Concepts & Entities*: Transition Zone of Malnad & Foot of Western Ghats • Rainfall 1500–2500mm • Shed leaves in early summer • Teak • Tectona grandis, Rosewood, Honne • Pterocarpus marsupium, Mathi • Terminalia tomentosa, Dindiga, Bamboo Brakes, Sandalwood • Santalum album • 'Sandalwood State' • 'Gandhada Gudi'
+
+- **Tropical Dry Deciduous Forests** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Eastern slopes of Ghats & Southern Maidan / Rainfall 750–1500mm; Teak, Axle-wood / Anogeissus, Bael, Neem, Palas / Flame of the Forest, Red Sanders in border areas
+  *Key Concepts & Entities*: Eastern slopes of Ghats & Southern Maidan • Rainfall 750–1500mm • Teak, Axle-wood • Anogeissus, Bael, Neem, Palas • Flame of the Forest, Red Sanders in border areas
+
+- **Tropical Thorn & Scrub Forests** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Northern & Central Dry Plains / Rainfall <750mm; Xerophytic Adaptations, Thorns, Spines & Fleshy Stems; Acacia / Babul, Kair, Euphorbias, Prosopis, Zizyphus / Ber, Cactus
+  *Key Concepts & Entities*: Northern & Central Dry Plains • Rainfall <750mm • Xerophytic Adaptations, Thorns, Spines & Fleshy Stems • Acacia • Babul, Kair, Euphorbias, Prosopis, Zizyphus • Ber, Cactus
+
+- **Coastal Mangroves** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Estuarine Intertidal Mudflats; Halophytic Vegetation with Pneumatophores / Stilt Roots; Karwar, Honnavar, Aghanashini Estuary, Gangavali & Kundapura Mangroves
+  *Key Concepts & Entities*: Estuarine Intertidal Mudflats • Halophytic Vegetation with Pneumatophores • Stilt Roots • Karwar, Honnavar, Aghanashini Estuary, Gangavali & Kundapura Mangroves
+
+### Biodiversity, Protected Areas & Conservation in Karnataka
+
+- **National Parks of Karnataka:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Bandipur National Park** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Chamarajanagar / Part of Nilgiri Biosphere Reserve; Established as Venugopala Wildlife Park 1931 by Mysore Maharaja; Project Tiger Site 1973; High Density of Bengal Tigers, Asian Elephants, Indian Gaur, Dholes; Moyar River / Kabini River borders
+  *Key Concepts & Entities*: Chamarajanagar • Part of Nilgiri Biosphere Reserve • Established as Venugopala Wildlife Park 1931 by Mysore Maharaja • Project Tiger Site 1973 • High Density of Bengal Tigers, Asian Elephants, Indian Gaur, Dholes • Moyar River • Kabini River borders
+
+- **Nagarahole / Rajiv Gandhi National Park** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Kodagu & Mysuru districts; Part of Nilgiri Biosphere Reserve; Kabini River separates Bandipur & Nagarahole; High Density of Tigers, Leopards, Elephants, Marsh Crocodiles
+  *Key Concepts & Entities*: Kodagu & Mysuru districts • Part of Nilgiri Biosphere Reserve • Kabini River separates Bandipur & Nagarahole • High Density of Tigers, Leopards, Elephants, Marsh Crocodiles
+
+- **Kudremukh National Park** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Chikmagalur, Udupi & Dakshina Kannada / Tropical Wet Evergreen Forests; Origin of Tunga, Bhadra & Netravati Rivers; Shola-Grassland Ecosystem; Lion-Tailed Macaque / LTM habitat; Iron Ore Mining Halted for Eco-Restoration
+  *Key Concepts & Entities*: Chikmagalur, Udupi & Dakshina Kannada • Tropical Wet Evergreen Forests • Origin of Tunga, Bhadra & Netravati Rivers • Shola-Grassland Ecosystem • Lion-Tailed Macaque • LTM habitat • Iron Ore Mining Halted for Eco-Restoration
+
+- **Bannerghatta National Park** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Bengaluru Urban / Biological Park, Tiger & Lion Safari, Butterfly Park, Elephant Wildlife Corridor connecting BM Betta & Talli Reserve Forests
+  *Key Concepts & Entities*: Bengaluru Urban • Biological Park, Tiger & Lion Safari, Butterfly Park, Elephant Wildlife Corridor connecting BM Betta & Talli Reserve Forests
+
+- **Anshi National Park / Kali Tiger Reserve** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Uttara Kannada / Moist Evergreen Rainforests, Kali River Basin, Black Panther / Melanistic Leopard Population, Great Indian Hornbill
+  *Key Concepts & Entities*: Uttara Kannada • Moist Evergreen Rainforests, Kali River Basin, Black Panther • Melanistic Leopard Population, Great Indian Hornbill
+
+- **Tiger Reserves & Biosphere Reserves:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **5 Tiger Reserves of Karnataka** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Bandipur, Nagarahole, BRT / Biligirirangana Hills Tiger Reserve, Bhadra Tiger Reserve, Kali Tiger Reserve / Formerly Anshi-Dandeli
+  *Key Concepts & Entities*: Bandipur, Nagarahole, BRT • Biligirirangana Hills Tiger Reserve, Bhadra Tiger Reserve, Kali Tiger Reserve • Formerly Anshi-Dandeli
+
+- **Nilgiri Biosphere Reserve** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  First Biosphere Reserve in India 1986; Karnataka Sector covers Bandipur, Nagarahole & Nagarhole-Mudumalai-Wayanad Contiguous Forest Landscape
+  *Key Concepts & Entities*: First Biosphere Reserve in India 1986 • Karnataka Sector covers Bandipur, Nagarahole & Nagarhole-Mudumalai-Wayanad Contiguous Forest Landscape
+
+- **Wildlife & Bird Sanctuaries of Prominence:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Bhadra Wildlife Sanctuary / Muthodi** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Chikmagalur / Bhadra Dam / Tiger Reserve
+  *Key Concepts & Entities*: Chikmagalur • Bhadra Dam • Tiger Reserve
+
+- **Dandeli Wildlife Sanctuary & Hornbill Conservation Reserve** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Uttara Kannada
+  *Key Concepts & Entities*: Uttara Kannada
+
+- **Daroji Sloth Bear Sanctuary** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Ballari-Vijayanagara / Dedicated Habitat for Melursus ursinus
+  *Key Concepts & Entities*: Ballari-Vijayanagara • Dedicated Habitat for Melursus ursinus
+
+- **Ramadevara Betta Vulture Sanctuary** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Ramanagara / Long-Billed Vulture Protection
+  *Key Concepts & Entities*: Ramanagara • Long-Billed Vulture Protection
+
+- **Ranganathittu Bird Sanctuary** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Mandya / Cauvery Islets / Declared Ramsar Wetland Site
+  *Key Concepts & Entities*: Mandya • Cauvery Islets • Declared Ramsar Wetland Site
+
+- **Magadi Kere Bird Sanctuary** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Gadag / Bar-Headed Goose Wintering Site / Ramsar Site
+  *Key Concepts & Entities*: Gadag • Bar-Headed Goose Wintering Site • Ramsar Site
+
+- **Ankasamudra Bird Conservation Reserve** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Vijayanagara / Ramsar Site
+  *Key Concepts & Entities*: Vijayanagara • Ramsar Site
+
+- **Aghanashini Estuary** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Uttara Kannada / Marine & Brackish Water Wetland / Ramsar Site
+  *Key Concepts & Entities*: Uttara Kannada • Marine & Brackish Water Wetland • Ramsar Site
+
+- **Kokkare Bellur Pelicanry** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Mandya / Spot-Billed Pelicans & Painted Storks Co-existing with Villagers
+  *Key Concepts & Entities*: Mandya • Spot-Billed Pelicans & Painted Storks Co-existing with Villagers
+
+- **UNESCO World Heritage Sites** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Western Ghats Sub-Clusters in Karnataka - Agumbe, Kudremukh, Pushpagiri, Talakaveri, Brahmagiri
+  *Key Concepts & Entities*: Western Ghats Sub-Clusters in Karnataka - Agumbe, Kudremukh, Pushpagiri, Talakaveri, Brahmagiri
+
+### Mineral, Power & Economic Resources of Karnataka
+
+- **Mineral Resources of Karnataka (Richest Archean Craton / Dharwar Craton Geological Formations):** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Metallic Minerals:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Iron Ore** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Extensive Banded Iron Formations / BIF - Magnetite & Hematite; Major Belts: Bellary-Hospet-Sandur Sector / High Grade Hematite, Kudremukh / Magnetite deposits, Kemmangundi / Bababudan Hills in Chikmagalur / Historic Feeder to Bhadravathi Steel Plant, Chitradurga, Tumakuru
+  *Key Concepts & Entities*: Extensive Banded Iron Formations • BIF - Magnetite & Hematite • Major Belts: Bellary-Hospet-Sandur Sector • High Grade Hematite, Kudremukh • Magnetite deposits, Kemmangundi • Bababudan Hills in Chikmagalur • Historic Feeder to Bhadravathi Steel Plant, Chitradurga, Tumakuru
+
+- **Gold** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Karnataka produces over 99% of India's Primary Gold; Hutti Gold Mines in Raichur / Only active primary underground gold mining company in India; Historic Kolar Gold Fields / KGF in Champion Reefs - Extensively mined up to 3.2 km depth / Closed in 2001
+  *Key Concepts & Entities*: Karnataka produces over 99% of India's Primary Gold • Hutti Gold Mines in Raichur • Only active primary underground gold mining company in India • Historic Kolar Gold Fields • KGF in Champion Reefs - Extensively mined up to 3.2 km depth • Closed in 2001
+
+- **Manganese** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Associated with Iron Ore Formations; Sandur, Kumsi in Shivamogga, Belagavi, Uttara Kannada
+  *Key Concepts & Entities*: Associated with Iron Ore Formations • Sandur, Kumsi in Shivamogga, Belagavi, Uttara Kannada
+
+- **Copper** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Ingaldhal Mines in Chitradurga, Kalyadi in Hassan, Thinthini in Raichur
+  *Key Concepts & Entities*: Ingaldhal Mines in Chitradurga, Kalyadi in Hassan, Thinthini in Raichur
+
+- **Bauxite** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Aluminium Ore formed in Lateritic Caps; Belagavi / Supplies INDAL Smelter, Uttara Kannada, Dakshina Kannada
+  *Key Concepts & Entities*: Aluminium Ore formed in Lateritic Caps • Belagavi • Supplies INDAL Smelter, Uttara Kannada, Dakshina Kannada
+
+- **Chromite** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Byrapur in Hassan District
+  *Key Concepts & Entities*: Byrapur in Hassan District
+
+- **Non-Metallic & Industrial Minerals:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Limestone & Dolomite** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Extensive Bhima & Kaladgi Rock Basins; Major Cement Clusters in Kalaburagi / Sedam, Wadi, Malkhed, Bagalkote, Belagavi
+  *Key Concepts & Entities*: Extensive Bhima & Kaladgi Rock Basins • Major Cement Clusters in Kalaburagi • Sedam, Wadi, Malkhed, Bagalkote, Belagavi
+
+- **Granite & Dimensional Stones** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Ilkal Red Granite / Bagalkote, Ruby Red / Chamarajanagar, Bengaluru Grey Granite, Black Granite / Kanakapura
+  *Key Concepts & Entities*: Ilkal Red Granite • Bagalkote, Ruby Red • Chamarajanagar, Bengaluru Grey Granite, Black Granite • Kanakapura
+
+- **Silica Sand & Quartz** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Coastal Udupi & Dakshina Kannada, Belagavi
+  *Key Concepts & Entities*: Coastal Udupi & Dakshina Kannada, Belagavi
+
+- **Energy, Power Infrastructure & Industrial Corridors of Karnataka:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Hydroelectric Power** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  First State in Asia to harness Commercial Hydro Power: Shivanasamudra 1902; Mahatma Gandhi Sharavathi Hydroelectric Project at Jog Falls; Linganamakki Powerhouse, Supa Dam on Kali, Varahi Underground Powerhouse, Kadra & Kodasalli Projects, Almatti Dam Hydel Project
+  *Key Concepts & Entities*: First State in Asia to harness Commercial Hydro Power: Shivanasamudra 1902 • Mahatma Gandhi Sharavathi Hydroelectric Project at Jog Falls • Linganamakki Powerhouse, Supa Dam on Kali, Varahi Underground Powerhouse, Kadra & Kodasalli Projects, Almatti Dam Hydel Project
+
+- **Thermal Power Stations** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Raichur Thermal Power Station / RTPS / First Coal-Fired TPS in Karnataka; Bellary Thermal Power Station / BTPS at Kudatini; Yermarus Thermal Power Station / YTPS in Raichur
+  *Key Concepts & Entities*: Raichur Thermal Power Station • RTPS • First Coal-Fired TPS in Karnataka • Bellary Thermal Power Station • BTPS at Kudatini • Yermarus Thermal Power Station • YTPS in Raichur
+
+- **Nuclear Energy** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Kaiga Atomic Power Station in Uttara Kannada / 4 Units of Pressurised Heavy Water Reactors / PHWR / Indigenous Nuclear Technology
+  *Key Concepts & Entities*: Kaiga Atomic Power Station in Uttara Kannada • 4 Units of Pressurised Heavy Water Reactors • PHWR • Indigenous Nuclear Technology
+
+- **Renewable Energy Leadership (Karnataka is a National Leader in Clean Energy Generation):** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Solar Energy: Pavagada Solar Park / 'Shakti Sthala' in Tumakuru District / 2,050 MW Capacity / One of the Largest Ultra-Mega Solar Parks in the World; PM-KUSUM Decentralized Solarisation** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Wind Energy: Wind Power Farms in Kappatagudda / Gadag, Jogimatti / Chitradurga, Harapanahalli, Belagavi, Chikkaballapur** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **Major Industrial & Economic Hubs:** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+
+- **IT & Biotechnology Hub** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Bengaluru / 'Silicon Valley of India' / Electronic City, Whitefield; Mysore IT Hub
+  *Key Concepts & Entities*: Bengaluru • 'Silicon Valley of India' • Electronic City, Whitefield • Mysore IT Hub
+
+- **Heavy Engineering, Aerospace & Defence Corridor** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  HAL, BEL, BEML, ISRO, DRDO, Gas Turbine Research Establishment
+  *Key Concepts & Entities*: HAL, BEL, BEML, ISRO, DRDO, Gas Turbine Research Establishment
+
+- **Textile & Garment Clusters** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Ballari / Jeans Capital of India, Doddaballapura, Ilkal Sarees, Guledgudda Khana, Mysore Silk
+  *Key Concepts & Entities*: Ballari • Jeans Capital of India, Doddaballapura, Ilkal Sarees, Guledgudda Khana, Mysore Silk
+
+- **Automobile & Machinery Corridors** [KAS: Prelims-P1, Mains-GS2] [UPSC: Mains-GS1]
+  Bidadi / Toyota, Narasapura & Peenya Industrial Area / Largest MSME Industrial Estate in SE Asia
+  *Key Concepts & Entities*: Bidadi • Toyota, Narasapura & Peenya Industrial Area • Largest MSME Industrial Estate in SE Asia
+
+### 1. North-Eastern Transition Zone (Bidar, Kalaburagi / Pulses, Black Soil, Moderate Rainfall)
+
+*(Core Regional / Mapping Topic)*
+
+### 2. North-Eastern Dry Zone (Raichur, Yadgir, Kalaburagi / Cotton, Jowar, Deep Black Soils)
+
+*(Core Regional / Mapping Topic)*
+
+### 3. Northern Dry Zone (Vijayapura, Bagalkote, Gadag, Belagavi, Koppal, Ballari / Largest Zone, Low Rainfall, Bajra, Sunflower, Jowar)
+
+*(Core Regional / Mapping Topic)*
+
+### 4. Central Dry Zone (Chitradurga, Davanagere, Tumakuru / Millets, Groundnut, Maize)
+
+*(Core Regional / Mapping Topic)*
+
+### 5. Eastern Dry Zone (Bengaluru Urban & Rural, Kolar, Chikkaballapur, Ramanagara / Ragi, Mulberry / Sericulture, Vegetables)
+
+*(Core Regional / Mapping Topic)*
+
+### 6. Southern Dry Zone (Mysuru, Mandya, Chamarajanagar / Paddy, Sugarcane, Ragi, Cauvery Canal Irrigation)
+
+*(Core Regional / Mapping Topic)*
+
+### 7. Southern Transition Zone (Hassan, Mysuru, Shivamogga / Transitional Cropping, Ragi, Tobacco, Potato)
+
+*(Core Regional / Mapping Topic)*
+
+### 8. Northern Transition Zone (Dharwad, Belagavi, Haveri / High Agricultural Productivity, Cotton, Soybean, Wheat, Chilli)
+
+*(Core Regional / Mapping Topic)*
+
+### 9. Hilly / Malnad Zone (Uttara Kannada, Shivamogga, Chikmagalur, Hassan, Kodagu / Plantation Crops: Coffee, Arecanut, Pepper, Cardamom, Tea, Paddy)
+
+*(Core Regional / Mapping Topic)*
+
+### 10. Coastal Zone (Dakshina Kannada, Udupi, Uttara Kannada coastal strip / Coconut, Arecanut, Paddy, Cashew, Fisheries)
+
+*(Core Regional / Mapping Topic)*
+
+World Mapping & Geopolitical Locations `[UPSC: Prelims-GS1, Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Enclosed Seas, Marginal Seas & Bordering Nations (Mediterranean Sea, Black Sea, Caspian Sea, Red Sea, Baltic Sea, Persian Gulf, Aral Sea, Dead Sea)
+
+- **Enclosed Seas: Mediterranean, Black, Caspian & Baltic Basins** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Bordering nations, strategic straits, and maritime geography of major enclosed and marginal seas: Mediterranean Sea (surrounded by 21 nations across Europe, Asia, and Africa; connected to Atlantic via Strait of Gibraltar, to Red Sea via Suez Canal, to Sea of Marmara via Dardanelles; major marginal seas: Tyrrhenian, Adriatic, Ionian, Aegean, Ligurian; major islands: Sicily, Sardinia, Cyprus, Corsica, Crete); Black Sea (bordered by 6 nations: Turkey, Georgia, Russia, Ukraine, Romania, Bulgaria; connected to Sea of Azov via Kerch Strait, to Marmara via Bosphorus; Danube, Dnieper, and Don river inflows); Caspian Sea (world's largest inland water body / lake; bordered by TARIK nations: Turkmenistan, Azerbaijan, Russia, Iran, Kazakhstan; Volga and Ural rivers discharge); Baltic Sea (bordered by 9 nations: Sweden, Finland, Russia, Estonia, Latvia, Lithuania, Poland, Germany, Denmark; connected to North Sea through Danish Straits / Kattegat and Skagerrak).
+  *Key Concepts & Entities*: Mediterranean Sea 21 Bordering Nations • Black Sea & 6 Bordering Nations • Caspian Sea TARIK Nations • Baltic Sea 9 Bordering Nations • Sea of Azov & Kerch Strait • Aegean & Adriatic Marginal Seas
+
+- **Marginal Seas & Depressions: Red Sea, Persian Gulf & Dead Sea** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Spatial delineation and littoral states of critical Middle Eastern and Central Asian waters: Red Sea (rift basin bordered by 6 nations: Egypt, Sudan, Eritrea, Djibouti on west; Saudi Arabia, Yemen on east; northern forks: Gulf of Suez and Gulf of Aqaba; southern outlet: Bab-el-Mandeb); Persian Gulf / Arabian Gulf (surrounded by 8 littoral nations: Iran, Iraq, Kuwait, Saudi Arabia, Bahrain, Qatar, UAE, Oman; connected to Gulf of Oman and Arabian Sea through the narrow Strait of Hormuz; Tigris-Euphrates / Shatt al-Arab delta inflow); Dead Sea (hypersaline endorheic lake in Jordan Rift Valley bordered by Israel, West Bank, and Jordan; lowest land elevation on Earth -430m below sea level; high salinity ~34% preventing macroscopic aquatic life); Aral Sea (endangered hyper-saline remnant depression shared by Uzbekistan and Kazakhstan, desiccated due to diversion of Amu Darya and Syr Darya rivers).
+  *Key Concepts & Entities*: Red Sea Bordering Nations (Egypt, Sudan, Saudi) • Gulf of Aqaba & Gulf of Suez • Persian Gulf 8 Littoral Nations • Bab-el-Mandeb & Strait of Hormuz • Dead Sea Hypersaline Depression (-430m) • Aral Sea Remnant Basins
+
+### Strategic Maritime Straits, Canals & Chokepoints (Strait of Hormuz, Bab-el-Mandeb, Malacca Strait, Bosphorus & Dardanelles, Kerch Strait, Taiwan Strait, Suez Canal, Panama Canal)
+
+- **Global Maritime Chokepoints: Hormuz, Malacca, Bab-el-Mandeb & Turkish Straits** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Spatial geography, maritime jurisdictions, and strategic transit vulnerabilities: Strait of Hormuz (connects Persian Gulf to Gulf of Oman; separates Iran from Oman's Musandam Peninsula; world's most critical oil transit chokepoint handling ~20% of global petroleum); Strait of Malacca (narrow 800 km strait connecting Indian Ocean / Andaman Sea to South China Sea; separates Peninsular Malaysia from Indonesian island of Sumatra; shortest sea route between Middle East/India and East Asia; Singapore chokepoint); Bab-el-Mandeb / 'Gate of Tears' (separates Yemen on Arabian Peninsula from Djibouti and Eritrea in the Horn of Africa; connects Red Sea to Gulf of Aden; high piracy and Houthi maritime security threat); Turkish Straits: Bosphorus Strait (separates European and Asian parts of Istanbul, connects Black Sea to Sea of Marmara) and Dardanelles Strait (connects Sea of Marmara to Aegean Sea; Montreux Convention 1936 regulating naval transit).
+  *Key Concepts & Entities*: Strait of Hormuz (Musandam Peninsula & Iran) • Strait of Malacca (Malaysia-Sumatra-Singapore) • Bab-el-Mandeb (Yemen & Djibouti Chokepoint) • Bosphorus & Dardanelles (Turkish Straits) • Montreux Convention 1936 • Global Hydrocarbon Transit Routes
+
+- **Canals & Passages: Suez Canal, Panama Canal, Taiwan Strait & Gibraltar** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Man-made international canals and critical oceanic waterways: Suez Canal (193 km sea-level artificial waterway opened in 1869 across the Isthmus of Suez in Egypt, connecting Mediterranean Sea at Port Said to Red Sea at Port Tewfik/Suez; no locks required; enables direct transit between Europe and Asia bypassing Cape of Good Hope); Panama Canal (82 km artificial ship canal opened in 1914 across the Isthmus of Panama, connecting Atlantic Ocean at Colón to Pacific Ocean at Panama City; operates with a freshwater lock system lifting ships 26m to Gatun Lake; expanded Neopanamax locks 2016); Taiwan Strait / Formosa Strait (separates mainland China Fujian province from Taiwan; connects South China Sea with East China Sea); Strait of Gibraltar (connects Atlantic Ocean to Mediterranean Sea; separates Spain/Gibraltar in Europe from Morocco/Ceuta in Africa; 14 km width at narrowest point); Sunda Strait (between Java and Sumatra) and Lombok Strait (deepwater alternative between Bali and Lombok across the Wallace Line); Bering Strait (separates Chukchi Peninsula Russia from Seward Peninsula Alaska USA, connecting Arctic Ocean to Bering Sea).
+  *Key Concepts & Entities*: Suez Canal (Port Said to Suez) • Panama Canal & Gatun Lake Locks • Taiwan Strait (Formosa Strait) • Strait of Gibraltar (Europe-Africa Chokepoint) • Sunda & Lombok Straits (Indonesia) • Bering Strait (Russia-Alaska Boundary)
+
+### Places in News & Conflict Zones (West Asia / Levant: Gaza, West Bank, Golan Heights, Sinai; Sahel Region: Mali, Niger, Burkina Faso, Chad; Horn of Africa: Tigray, Somaliland; Eastern Europe: Donbas, Crimea, Zaporizhzhia; South China Sea)
+
+- **Geopolitical Flashpoints in News: West Asia, Sahel, South China Sea & Horn of Africa** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Geographical locations frequently appearing in contemporary international affairs and UPSC examinations: West Asia / Levant: Gaza Strip (Rafah crossing, Philadelphi Corridor, Khan Younis), West Bank (Jericho, Ramallah, Hebron, Green Line), Golan Heights (strategic plateau overlooking Sea of Galilee, Mount Hermon), Sinai Peninsula, and southern Lebanon (Blue Line, Litani River); Eastern Europe: Donbas region (Donetsk and Luhansk oblasts), Crimea (Sevastopol naval base, Kerch Strait Bridge), Zaporizhzhia (nuclear power plant on Dnipro river), Kherson, and Transnistria enclave in Moldova; South Caucasus: Nagorno-Karabakh (Artsakh enclave, Lachin Corridor, Zangezur Corridor between Azerbaijan and Nakhchivan); Sahel Belt: Coup belt across Mali, Niger, Burkina Faso, Chad, and Sudan (Darfur region, Port Sudan on Red Sea); Horn of Africa: Tigray region in Ethiopia, Grand Ethiopian Renaissance Dam (GERD on Blue Nile), Somaliland port of Berbera, Bab-el-Mandeb maritime corridor; South China Sea: Nine-Dash Line, Spratly Islands (Mischief Reef, Fiery Cross Reef), Paracel Islands (Woody Island), and Scarborough Shoal.
+  *Key Concepts & Entities*: Gaza Strip (Rafah & Philadelphi Corridor) • Golan Heights & Litani River (Lebanon) • Donbas, Crimea & Zaporizhzhia (Dnipro River) • Nagorno-Karabakh (Lachin & Zangezur Corridors) • Sahel Belt (Mali, Niger, Burkina Faso, Sudan) • Grand Ethiopian Renaissance Dam (GERD) • South China Sea (Nine-Dash Line & Spratly Islands)
+
+### International Land Borders, Landlocked Nations & Disputed Boundary Lines (Radcliffe Line, McMahon Line, Durand Line, 38th Parallel, 49th Parallel, Kuril Islands, Senkaku/Diaoyu, Spratly/Paracel)
+
+- **International Boundary Lines, Landlocked States & Cartographic Disputes** [UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]
+  Spatial mapping of world borders, demarcation lines, and geographical classifications: Iconic International Boundary Lines: 49th Parallel (demarcates the long undefended border between United States and Canada from Lake of the Woods to Strait of Georgia), 38th Parallel / DMZ (demarcates North Korea and South Korea along the Demilitarized Zone), 17th Parallel (historical partition line of North and South Vietnam), Radcliffe Line (demarcation between India and Pakistan / Bangladesh established in 1947), McMahon Line (disputed boundary line between India's Arunachal Pradesh and Tibet agreed at 1914 Simla Convention), Durand Line (border between Pakistan and Afghanistan drawn in 1893), Line of Control (LoC in Jammu & Kashmir), Line of Actual Control (LAC between India and China across Ladakh, Middle, and Eastern sectors); Landlocked Nations: Mapping of the world's 44 landlocked states (largest by area Kazakhstan, most populous Ethiopia); Doubly Landlocked Countries (landlocked nations completely surrounded by other landlocked nations: only two in the world: Liechtenstein in Europe and Uzbekistan in Central Asia); Tri-points and enclaves (Cooch Behar historical enclaves, Kalapani-Lipulekh tripoint India-Nepal-China).
+  *Key Concepts & Entities*: 49th Parallel (US-Canada Border) • 38th Parallel (Korean DMZ) • Radcliffe Line & McMahon Line • Durand Line (Pakistan-Afghanistan) • 44 Landlocked Countries (Kazakhstan & Ethiopia) • Doubly Landlocked (Liechtenstein & Uzbekistan) • Line of Control (LoC) & Line of Actual Control (LAC)
+
+Indian Mapping & Spatial Geography `[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Indian River Systems & Tributaries Spatial Layout (Indus Basin, Ganga Basin, Brahmaputra Basin, Peninsular Rivers: Godavari, Krishna, Cauvery, Mahanadi, Narmada, Tapi - Left & Right Bank Tributaries, North-to-South & West-to-East Ordering)
+
+*(Core Regional / Mapping Topic)*
+
+### Himalayan Ranges, Mountain Passes & Glaciers (Karakoram, Ladakh, Zanskar, Great Himalayas, Pir Panjal, Dhauladhar, Shiwaliks; Passes: Zoji La, Khardung La, Rohtang, Shipki La, Lipulekh, Nathu La, Jelep La, Bomdi La; Glaciers: Siachen, Gangotri, Zemu)
+
+*(Core Regional / Mapping Topic)*
+
+### Protected Areas & Biogeography Spatial Layout (North-to-South and West-to-East Sequential Ordering of National Parks, Tiger Reserves, Ramsar Wetlands, Biosphere Reserves & Wildlife Corridors in India)
+
+*(Core Regional / Mapping Topic)*
+
+### Peninsular Hills, Plateaus & Mountain Passes (Aravalli, Vindhya, Satpura, Western Ghats / Sahyadri, Eastern Ghats, Nilgiri Hills, Anaimalai, Cardamom Hills; Thal Ghat, Bhor Ghat, Palghat Gap, Shencottah Gap; Anamudi & Doddabetta Peaks)
+
+*(Core Regional / Mapping Topic)*
+
+### Coastal Features, Island Territories & Maritime Channels (10 Degree Channel: Andaman & Nicobar, 9 Degree Channel: Minicoy & Lakshadweep, 8 Degree Channel: Minicoy & Maldives, Palk Strait, Gulf of Mannar, Rann of Kutch, Sir Creek, Konkan & Coromandel Coast)
+
+*(Core Regional / Mapping Topic)*
+
+### Major Sea Ports, National Waterways, Dedicated Freight Corridors & Industrial Transport Corridors (Major 13 Ports, NW-1 to NW-5, Western & Eastern DFC, Golden Quadrilateral & Strategic Expressways)
+
+*(Core Regional / Mapping Topic)*
+
+Karnataka Mapping & Spatial Geography `[UPSC: Prelims-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]`
+
+### Karnataka River Basins, Tributaries, Waterfalls & Major Dams Spatial Distribution (Krishna, Cauvery, Godavari, Pennar, West-Flowing Rivers: Sharavathi, Bedthi, Netravathi; Waterfalls: Jog, Shivanasamudra, Gokak, Magod, Abbey; Dams: KRS, Almatti, Tungabhadra, Linganamakki)
+
+*(Core Regional / Mapping Topic)*
+
+### Western Ghats Mountain Peaks & Elevations Descending Order in Karnataka (Mullayanagiri 1930m, Bababudangiri 1895m, Kudremukh 1894m, Pushpagiri / Kumara Parvatha 1712m, Tadiandamol 1748m, Biligirirangana Hills)
+
+*(Core Regional / Mapping Topic)*
+
+### 10 Agro-Climatic Zones, District Boundaries, National Parks & Mineral Belts of Karnataka (Coastal, Hilly/Malnad, Northern Dry, Central Dry, Southern Dry; Sandur/Bellary Iron Ore, Kolar Gold, Hassan Chromite; Bandipur, Nagarhole, Kudremukh, Anshi, Bannerghatta)
+
+*(Core Regional / Mapping Topic)*
 
 ==================================================
 4. INDIAN SOCIETY & SOCIAL JUSTICE `[UPSC: Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS1]`
@@ -1371,7 +2359,7 @@ Case Studies `[UPSC: Mains-GS4] [KAS: Mains-GS4]`
 - Crisis Management & Public Resource Allocation (Ethical Resource Distribution - Disaster Response Ethics, Triage in Emergency Healthcare, Vulnerable Section Prioritisation)
 
 ==================================================
-12. GENERAL MENTAL ABILITY, QUANTITATIVE APTITUDE & COMPREHENSION `[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]`
+12. GENERAL MENTAL ABILITY, QUANTITATIVE APTITUDE & COMPREHENSION [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]
 ==================================================
 
 General Mental Ability, Quantitative Aptitude & Comprehension
@@ -1380,26 +2368,241 @@ General Mental Ability, Quantitative Aptitude & Comprehension
 - Quantitative Aptitude & Basic Numeracy
 - General Mental Ability & Logical Reasoning
 
-Reading Comprehension & Interpersonal Skills `[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: English] [Banking: English]`
+Reading Comprehension & Interpersonal Skills [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]
 
-- Reading Comprehension & Inference (Passage Analysis - Central Idea Identification, Author's Tone, Main Thesis vs Supporting Evidence; Inference & Assumption Testing - Logical Inferences, Implicit Assumptions, Direct & Indirect Conclusions; Passages Types - Economic, Philosophical, Scientific, Environmental, Social, Geopolitical Passages)
-- Critical Reasoning & Analytical Ability (Logical Arguments - Strengthening & Weakening Arguments, Evaluating Premise & Conclusion, Paradox Resolution)
-- Interpersonal & Communication Skills (Verbal Reasoning - Statement-Argument, Statement-Assumption, Course of Action, Cause & Effect)
+### Reading Comprehension & Inference
+*(Passage Analysis - Central Idea Identification, Author's Tone, Main Thesis vs Supporting Evidence; Inference & Assumption Testing - Logical Inferences, Implicit Assumptions, Direct & Indirect Conclusions; Passages Types - Economic, Philosophical, Scientific, Environmental, Social, Geopolitical Passages)*
 
-Quantitative Aptitude & Basic Numeracy `[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [Banking: Quant]`
+- **Unified Core Topic**: Direct passage analysis, premise-conclusion evaluation, implicit assumptions, crucial takeaways, and logical corollaries across economic, philosophical, scientific, environmental, social, and geopolitical texts.
 
-- Number Systems & Basic Arithmetic (Fundamentals of Numbers - Types of Numbers: Natural, Integers, Rational, Prime; Divisibility Rules, Unit Digit Calculations; Factors, Multiples & Remainders - LCM & HCF, Remainder Theorems, Number of Factors, Trailing Zeros)
-- Percentages, Averages & Ratio-Proportion (Proportional Math - Percentages & Percentage Change, Averages & Weighted Averages, Mixtures & Alligations, Ratio & Proportion, Partnerships)
-- Profit, Loss, Interest & Discount (Commercial Mathematics - Cost Price, Selling Price, Profit & Loss Percentage, Marked Price & Discounts, Simple Interest, Compound Interest & Compounding Frequency)
-- Time, Work, Speed & Distance (Time & Motion Kinetics - Time & Work, Pipes & Cisterns, Speed-Time-Distance, Relative Speed, Problems on Trains, Boats & Streams)
-- Permutation, Combination & Probability (Combinatorics - Fundamental Counting Principle, Factorials, Permutations / Arrangements, Combinations / Selections; Probability Science - Sample Space, Events, Independent & Mutually Exclusive Events, Conditional Probability)
-- Mensuration & Geometry (Spatial Measurement - 2D Geometrical Shapes: Triangles, Circles, Quadrilaterals; Perimeter & Area; 3D Solids: Cubes, Cuboids, Cylinders, Cones, Spheres; Surface Area & Volume)
+### Critical Reasoning & Analytical Ability
+*(Logical Arguments - Strengthening & Weakening Arguments, Evaluating Premise & Conclusion, Paradox Resolution)*
 
-General Mental Ability & Logical Reasoning `[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [Banking: Reasoning]`
+- **Strengthening & Weakening Logical Arguments** [UPSC: Prelims-CSAT] [KAS: Prelims-P2] [BANKING: Critical-Reasoning]
+  Evaluating arguments by introducing new evidence that bolsters or undermines the author's stated conclusion; identifying flaws in logic, counter-evidence, and ungrounded leaps.
+  *Key Concepts & Entities*: Strengthen Argument • Weaken Argument • Flaws in Reasoning • Counter Evidence • Premise Support
 
-- Logical & Analytical Reasoning (Deductive Logic - Syllogisms / Venn Diagram & Rules Method, Logical Deductions; Spatial & Relational Logic - Linear & Circular Seating Arrangements, Blood Relations & Family Trees, Direction Sense & Compass Problems, Clocks & Calendar Calculations)
-- Data Interpretation & Data Sufficiency (Data Formats - Bar Charts, Pie Charts, Line Graphs, Data Tables, Mixed Graphs; Data Sufficiency - Evaluating Sufficiency of Given Statements to Answer Questions)
-- Problem Solving & Pattern Recognition (Coding, Series & Puzzles - Coding-Decoding, Number Series, Letter Series, Matrix & Grid Puzzles, Ranking & Ordering, Cube Folding & Dice)
+- **Paradox Resolution & Premise Consistency** [UPSC: Prelims-CSAT] [KAS: Prelims-P2] [BANKING: Critical-Reasoning]
+  Resolving apparent contradictions or counterintuitive statistical paradoxes in verbal statements; checking consistency and validity among interdependent premises.
+  *Key Concepts & Entities*: Paradox Resolution • Apparent Contradiction • Premise Consistency • Logical Reconciliation
+
+### Interpersonal & Communication Skills
+*(Verbal Reasoning - Statement-Argument, Statement-Assumption, Course of Action, Cause & Effect)*
+
+- **Statement-Assumption, Argument & Course of Action** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Verbal-Reasoning] [BANKING: Reasoning]
+  Evaluating strong vs weak arguments, determining valid assumptions underlying policy statements, and selecting feasible, balanced, and non-drastic courses of action.
+  *Key Concepts & Entities*: Statement and Arguments • Statement and Assumptions • Statement and Conclusions • Course of Action • Strong vs Weak Arguments
+
+- **Cause and Effect Analysis** [UPSC: Prelims-CSAT] [KAS: Prelims-P2] [SSC: Verbal-Reasoning] [BANKING: Reasoning]
+  Determining whether two related events represent an independent cause, principal effect, common cause, or coincidental correlation.
+  *Key Concepts & Entities*: Cause and Effect • Principal Cause • Independent Cause • Common Cause Effect
+
+- **Administrative Decision Making & Situational Judgement** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1]
+  Handling administrative ethical dilemmas, public service conflicts of interest, disaster emergency response prioritization, stakeholder negotiation, and ethical balance.
+  *Key Concepts & Entities*: Administrative Decision Making • Situational Judgement • Crisis Management • Public Service Ethics • Conflict Resolution
+
+Quantitative Aptitude & Basic Numeracy [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]
+
+### Number Systems & Basic Arithmetic
+*(Fundamentals of Numbers - Types of Numbers: Natural, Integers, Rational, Prime; Divisibility Rules, Unit Digit Calculations; Factors, Multiples & Remainders - LCM & HCF, Remainder Theorems, Number of Factors, Trailing Zeros)*
+
+- **Number Classification & Divisibility Rules** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Classification of numbers (natural, integers, rational, irrational, prime, composite, co-prime); divisibility tests for 2 through 19, 72, 88, 99; properties of consecutive integers.
+  *Key Concepts & Entities*: Natural Numbers • Integers • Prime Numbers • Co-prime Numbers • Divisibility Rules for 7, 11, 13, 72, 88 • Consecutive Integers
+
+- **Remainders, Unit Digits & Factorial Arithmetic** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Remainder theorems (Euler's totient, Fermat's Little theorem, Wilson's theorem, polynomial remainders), cyclicity of powers and unit digit calculation, trailing zeros in factorials.
+  *Key Concepts & Entities*: Remainder Theorems • Euler Totient Function • Fermat's Little Theorem • Unit Digit Cyclicity • Trailing Zeros in n! • Highest Power of Prime dividing n!
+
+- **LCM, HCF, Factors & Multiples** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Highest Common Factor (HCF), Least Common Multiple (LCM), product rule, number of factors/divisors, sum of divisors, bells tolling / circular track meeting times.
+  *Key Concepts & Entities*: LCM and HCF • Prime Factorization • Total Number of Factors • Sum and Product of Factors • Word Problems on HCF & LCM
+
+- **Fractions, Decimals, Surds & Indices** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Operations on recurring decimals, continued fractions, surds simplification, laws of indices, ascending/descending comparison of exponents and irrational roots.
+  *Key Concepts & Entities*: Recurring Decimals • Continued Fractions • Surds Simplification • Laws of Indices • Exponent Comparison
+
+- **Algebraic Identities & Linear / Quadratic Equations** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Standard polynomial identities, roots of quadratic equations, nature of roots (discriminant), simultaneous linear equations, word problems involving unknown variables.
+  *Key Concepts & Entities*: Algebraic Identities • Linear Equations in Two Variables • Quadratic Equations • Nature of Roots • Algebraic Word Problems
+
+- **Progressions & Number Sequences (AP & GP)** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Arithmetic Progression (AP) nth term and sum of n terms, Geometric Progression (GP) nth term and finite/infinite series sums, harmonic progression basics.
+  *Key Concepts & Entities*: Arithmetic Progression (AP) • Geometric Progression (GP) • nth Term Formula • Sum of n Terms • Infinite GP Series
+
+### Percentages, Averages & Ratio-Proportion
+*(Proportional Math - Percentages & Percentage Change, Averages & Weighted Averages, Mixtures & Alligations, Ratio & Proportion, Partnerships)*
+
+- **Percentages, Successive Change & Base Effects** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Percentage calculation, percentage increase/decrease, formula for successive percentage changes (a + b + ab/100), base shift concepts, population depreciation/growth over years.
+  *Key Concepts & Entities*: Percentage Calculations • Successive Percentage Change • Base Shift Concept • Population Growth & Depreciation • Pass/Fail Exam Cutoffs
+
+- **Averages, Weighted Averages & Alligations** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Arithmetic mean, weighted averages, effect of inclusion/exclusion/replacement on group averages, alligation rule and multi-mixture blending.
+  *Key Concepts & Entities*: Arithmetic Average • Weighted Average • Change in Average on Replacement • Mixtures and Alligations • Alligation Cross Method
+
+- **Ratio, Proportion, Variation & Partnerships** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Compound ratios, mean/third/fourth proportional, direct and inverse variation, capital-time profit sharing in business partnerships, coin denomination word problems.
+  *Key Concepts & Entities*: Direct & Inverse Proportion • Mean Proportional • Business Partnerships • Profit Sharing Ratio • Coin Counting Puzzles
+
+- **Problems on Ages** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Formulation of simultaneous linear equations based on chronological age relations (past, present, future age ratios and differentials).
+  *Key Concepts & Entities*: Age Word Problems • Past Present Future Age Ratios • Age Difference Invariance
+
+### Profit, Loss, Interest & Discount
+*(Commercial Mathematics - Cost Price, Selling Price, Profit & Loss Percentage, Marked Price & Discounts, Simple Interest, Compound Interest & Compounding Frequency)*
+
+- **Profit, Loss, Marked Price & Dishonest Dealers** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Cost price, selling price, profit/loss percentage, marked price, trade discounts, successive discounts equivalent single discount, faulty weights and dishonest seller calculations.
+  *Key Concepts & Entities*: Cost Price and Selling Price • Profit and Loss Percentage • Marked Price and Discount • Successive Discounts • Dishonest Dealer & Faulty Weights
+
+- **Simple Interest & Installments** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Principles of Simple Interest (SI = P*R*T/100), interest calculations with variable rates and fractional years, finding sum and principal, simple interest installments and loan amortization.
+  *Key Concepts & Entities*: Simple Interest (SI) • Principal and Amount • Variable Rates of Simple Interest • Simple Interest Installments • SI Word Problems
+
+- **Compound Interest & Periodical Compounding** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Compound Interest (CI) with annual, semi-annual, and quarterly compounding; difference between CI and SI for 2 & 3 years; compounding growth in population/depreciation; equal annual installments (EMI).
+  *Key Concepts & Entities*: Compound Interest (CI) • Compounding Frequency (Half-yearly, Quarterly) • Difference between CI and SI Formula • Population Compounding & Depreciation • Equal Annual Installments (EMI)
+
+### Time, Work, Speed & Distance
+*(Time & Motion Kinetics - Time & Work, Pipes & Cisterns, Speed-Time-Distance, Relative Speed, Problems on Trains, Boats & Streams)*
+
+- **Time & Work, Pipes & Cisterns, Wages** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Unitary work method, individual vs combined efficiency, alternate day work cycles, inlet/outlet pipes with negative work rates, division of wages based on work contribution.
+  *Key Concepts & Entities*: Time and Work Efficiency • Man-Hours Work Formula • Alternate Working Days • Pipes and Cisterns • Work and Wages Division
+
+- **Speed, Time & Distance, Problems on Trains** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Speed conversions (km/h to m/s), average speed for harmonic journeys, relative speed of objects moving in same vs opposite directions, train crossing a pole/platform/another train.
+  *Key Concepts & Entities*: Speed-Time-Distance Formula • Average Speed for Round Trips • Relative Speed • Train Crossing Moving Objects • Train Crossing Bridges and Platforms
+
+- **Boats, Streams, Races & Circular Motion** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Speed in still water vs stream velocity, upstream and downstream speed, linear races with distance/time head starts, circular track meeting times and lead laps.
+  *Key Concepts & Entities*: Upstream and Downstream Speed • Boats and Streams Formula • Linear Races Head Starts • Dead Heats • Circular Track Motion
+
+### Permutation, Combination & Probability
+*(Combinatorics - Fundamental Counting Principle, Factorials, Permutations / Arrangements, Combinations / Selections; Probability Science - Sample Space, Events, Independent & Mutually Exclusive Events, Conditional Probability)*
+
+- **Fundamental Counting Principle & Permutations** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Multiplication and addition principles of counting, factorials, permutations of n distinct objects, arrangements with repetition, arrangements with restrictions, circular permutations.
+  *Key Concepts & Entities*: Fundamental Principle of Counting • Factorial Properties • Permutations nPr • Arrangements with Restricted Positions • Circular Permutations (n-1)!
+
+- **Combinations, Selections & Geometric Combinatorics** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Selection formula nCr, committee/team formation with conditions, distribution of identical items into distinct groups, number of diagonals in polygons, triangles formed by points.
+  *Key Concepts & Entities*: Combinations nCr • Committee Formation Constraints • Geometric Selections (Lines, Triangles, Diagonals) • Handshake Problems • Partitioning into Groups
+
+- **Probability, Independent Events & Conditional Odds** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Classical definition of probability, sample spaces (coins, dice, deck of 52 cards, balls from urns), addition theorem P(A u B), mutually exclusive vs independent events, conditional probability P(A|B).
+  *Key Concepts & Entities*: Classical Probability • Sample Space & Favourable Outcomes • Dice and Coin Probability • Playing Cards & Urns • Independent Events • Conditional Probability
+
+- **Set Theory, Venn Diagrams & Maxima-Minima** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Two-set and three-set Venn diagrams, union and intersection formulas, survey data deductions, determining maximum and minimum overlap among groups.
+  *Key Concepts & Entities*: Two-set Venn Diagram • Three-set Venn Diagram • Set Union & Intersection • Maxima and Minima in Overlapping Sets • Survey Data Analysis
+
+### Mensuration & Geometry
+*(Spatial Measurement - 2D Geometrical Shapes: Triangles, Circles, Quadrilaterals; Perimeter & Area; 3D Solids: Cubes, Cuboids, Cylinders, Cones, Spheres; Surface Area & Volume)*
+
+- **2D Geometry & Mensuration (Lines, Triangles, Quadrilaterals, Circles)** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Angle properties, Pythagoras theorem, triangle congruence & similarity, area of triangles (Heron's formula), rectangles, rhombuses, trapezoids, circles (arcs, sectors, segments), inscribed/circumscribed shapes.
+  *Key Concepts & Entities*: Pythagorean Triples • Triangle Area (Heron's Formula) • Circles, Sectors and Arcs • Quadrilaterals & Parallelograms • Regular Polygons • Inscribed & Circumscribed Circles
+
+- **3D Mensuration (Cubes, Cuboids, Cylinders, Cones, Spheres)** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant] [BANKING: Quant]
+  Total surface area, lateral surface area, volume of standard 3D solids (cube, cuboid, cylinder, cone, sphere, hemisphere, frustum), melting and recasting solids into new shapes.
+  *Key Concepts & Entities*: Cube and Cuboid Volume & Surface Area • Cylinder and Cone Mensuration • Sphere and Hemisphere Properties • Melting & Recasting Metal Shapes • Water Level Rise in Containers
+
+General Mental Ability & Logical Reasoning [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]
+
+### Logical & Analytical Reasoning
+*(Deductive Logic - Syllogisms / Venn Diagram & Rules Method, Logical Deductions; Spatial & Relational Logic - Linear & Circular Seating Arrangements, Blood Relations & Family Trees, Direction Sense & Compass Problems, Clocks & Calendar Calculations)*
+
+- **Syllogisms & Categorical Propositions** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Deductive categorical syllogisms (All A are B, Some A are B, No A is B, Some A are not B), Euler/Venn diagram representation, 'Only a few', possibility conclusions, reverse syllogisms.
+  *Key Concepts & Entities*: Categorical Propositions • Standard Syllogism Deductions • Possibility Cases in Syllogisms • Venn Diagram Method for Syllogisms • Only a Few / Some Not Rules
+
+- **Linear, Circular & Complex Seating Arrangements** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Linear row seating (unidirectional and bidirectional facing), circular table arrangements (inward, outward, mixed facing), rectangular/polygonal seating with multi-variable attributes.
+  *Key Concepts & Entities*: Linear Row Arrangements • Circular Seating Arrangements (Inward/Outward) • Multi-variable Seating Puzzles • Double Row Parallel Arrangements
+
+- **Blood Relations & Coded Family Trees** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Deciphering kinship relations from direct descriptive statements, generation tree diagramming, coded blood relations, paternal vs maternal lineages.
+  *Key Concepts & Entities*: Family Tree Generation Diagrams • Direct Statement Kinship • Coded Blood Relations • Paternal vs Maternal Relations
+
+- **Direction Sense, Cardinal Movements & Shadows** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  8-point compass directions (North, South, East, West, NE, NW, SE, SW), distance tracking via Pythagoras theorem, angular clockwise/counter-clockwise turns, sunrise and sunset shadow directions.
+  *Key Concepts & Entities*: Cardinal & Intercardinal Directions • Pythagoras Distance Calculation • Angular Turns (Clockwise/Anti-clockwise) • Sunrise and Sunset Shadow Logic
+
+- **Clocks: Angles, Coincidence & Faulty Clocks** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Angle between hour hand and minute hand at any given time, times when hands coincide (0 deg), form a right angle (90 deg), or are in opposite directions (180 deg), fast and slow gaining/losing clocks.
+  *Key Concepts & Entities*: Angle Between Clock Hands Formula • Coincidence of Clock Hands • Opposite Hands (180 Degrees) • Right Angles in Clocks • Gaining and Losing Time (Faulty Clocks)
+
+- **Calendars: Odd Days, Leap Years & Repetition** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Counting odd days in normal and leap years, century odd days (100, 200, 300, 400 years), finding the exact day of the week for historical dates, repetition of annual calendar cycles.
+  *Key Concepts & Entities*: Odd Days Calculation • Leap Year & Solar Year Rules • Century Leap Days • Day Determination for Past/Future Dates • Calendar Repetition Cycle
+
+### Data Interpretation & Data Sufficiency
+*(Data Formats - Bar Charts, Pie Charts, Line Graphs, Data Tables, Mixed Graphs; Data Sufficiency - Evaluating Sufficiency of Given Statements to Answer Questions)*
+
+- **Tabular DI & Missing Data Tables** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Single & multi-variable numerical data tables, missing value deductions based on conditional row/column totals, percentages, ratios, and averages.
+  *Key Concepts & Entities*: Tabular Data Interpretation • Missing Data Tables • Row-Column Aggregates • Multi-Variable Matrix • Table Percentage Growth
+
+- **Bar Charts (Simple, Grouped & Stacked)** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Horizontal and vertical bar charts, clustered/grouped bar charts, subdivided/stacked component bar charts, and cumulative percentage bar graphs.
+  *Key Concepts & Entities*: Single Bar Chart • Grouped / Clustered Bars • Stacked / Subdivided Bar Charts • Percentage Component Bar Chart • Comparative YoY Growth
+
+- **Line Graphs & Multi-Series Trend Curves** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Single and multi-line graphs, continuous time-series trend analysis, YoY & CAGR growth curves, intersecting lines and break-even comparison points.
+  *Key Concepts & Entities*: Line Graph • Multi-Line Comparison • Continuous Time Series • YoY Trend Curves • Intersecting Data Lines
+
+- **Pie Charts (Percentage & Degree Distribution)** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Single circular distribution charts, percentage-based vs degree-based (360 deg) sector angle conversions, dual/comparative pie charts across years or categories.
+  *Key Concepts & Entities*: Single Pie Chart • Degree to Percentage Conversion (3.6 deg = 1%) • Dual Comparative Pie Charts • Sector Value Calculations • Multi-Tier Circular Distribution
+
+- **Mixed Graphs & Multi-Axis Combinations** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Hybrid multi-format visualizations (Bar + Line combo charts, Table + Pie chart combinations), dual vertical axis (Y1 and Y2) with different units and scales.
+  *Key Concepts & Entities*: Mixed Charts (Bar + Line) • Dual Y-Axis Plots • Table and Pie Combinations • Volume vs Percentage Mix • Hybrid Multi-Layer Graphs
+
+- **Caselet DI & Textual Paragraph Data** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Unstructured paragraph caselets, converting complex textual descriptions into structured tables or mathematical models, variable-driven algebraic caselets.
+  *Key Concepts & Entities*: Caselet DI (Paragraph Data) • Tabular Structuring of Text • Variable-Driven Caselets • Arithmetic Word Caselets
+
+- **Venn Diagram-Based DI & Set Caselets** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Visual and numerical representation of datasets using 2-set, 3-set, and 4-set Venn diagrams; calculating exclusive category values ('Only A', 'Only B and C'), total intersections, survey data analysis, and maxima/minima in set overlaps.
+  *Key Concepts & Entities*: Venn Diagram Data Interpretation • 2-Set Venn Calculations • 3-Set Venn Overlaps • Exclusive Regions ('Only A') • Survey Dataset Deductions • Overlap Maxima and Minima
+
+- **Radar, Spider & Scatter Plots** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: DI] [BANKING: DI]
+  Multi-dimensional radial spider/web charts, triangular coordinate plots, scatter plots showing distribution and correlation between two quantitative variables.
+  *Key Concepts & Entities*: Radar / Spider Chart • Radial Axis Grid • Triangular Coordinate Charts • Scatter Plots • Multi-Dimensional Performance Mapping
+
+- **Data Sufficiency (Arithmetic, Algebraic & Logical Statements)** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Determining whether Statement 1 alone, Statement 2 alone, both statements together, or neither statement is sufficient to answer questions in algebra, geometry, order/ranking, or kinship.
+  *Key Concepts & Entities*: Two-Statement Data Sufficiency • Three-Statement Data Sufficiency • Sufficiency Decision Matrix (A/B/C/D/E) • Arithmetic & Algebraic DS • Reasoning & Direction DS
+
+### Problem Solving & Pattern Recognition
+*(Coding, Series & Puzzles - Coding-Decoding, Number Series, Letter Series, Matrix & Grid Puzzles, Ranking & Ordering, Cube Folding & Dice)*
+
+- **Number, Letter & Alphanumeric Symbol Series** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Arithmetic, geometric, alternating, square/cube, difference-of-differences numerical series; alphabetical step series, alphanumeric sequence with symbols and conditional filters.
+  *Key Concepts & Entities*: Difference of Differences Series • Alternating Number Series • Square and Cube Series • Alphabet Progression Series • Alpha-Numeric Symbol Sequences
+
+- **Coding-Decoding & Substitution Logic** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Letter-to-letter shifting (forward/reverse alphabetical positions), letter-to-number substitution, symbol coding, fictitious language / Chinese coding, matrix coordinate coding.
+  *Key Concepts & Entities*: Letter Positional Shifting • Reverse Alphabet Coding • Fictitious Language Coding (Word Substitution) • Matrix Coding & Decryption
+
+- **Order, Ranking & Comparative Inequalities** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Calculating total people in a queue from left/right ranks, interchanging positions, overlapping ranking, chain inequalities (A > B >= C = D) and deduced relations.
+  *Key Concepts & Entities*: Single-Row Position Ranking • Interchanging Positions in Queue • Overlapping vs Non-overlapping Ranks • Coded Inequalities
+
+- **Cubes & Dice (Opposite Faces, Nets & Painted Slices)** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Standard vs ordinary dice, identifying opposite faces from 2 or more dice positions, unfolded dice nets folding rules, painted cube slicing (faces painted on 3, 2, 1, 0 sides).
+  *Key Concepts & Entities*: Standard vs Non-Standard Dice • Adjacent and Opposite Faces of Dice • Unfolded Dice Nets • Painted Cube Slicing Formulas n^3
+
+- **Non-Verbal Reasoning & Visual Patterns** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  Horizontal and vertical mirror images, water reflections, paper folding and punch hole patterns, embedded figures, figure matrix completion, geometric figure series.
+  *Key Concepts & Entities*: Mirror Images & Inversions • Water Reflection Logic • Paper Folding & Hole Punching • Embedded Hidden Figures • Figure Matrix & Series Completion
+
+- **Mathematical Operators & Cryptarithmetic Puzzles** [UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Reasoning] [BANKING: Reasoning]
+  BODMAS evaluation after interchanging signs and numbers, balancing equations, alphabetic cryptarithmetic arithmetic puzzles (letter substitution for digits 0-9).
+  *Key Concepts & Entities*: BODMAS Sign Interchange • Balancing Equations • Symbolic Math Operators • Cryptarithmetic Letter Puzzles
 
 ==================================================
 13. EDUCATIONAL PSYCHOLOGY, CHILD DEVELOPMENT & TEACHING PEDAGOGY `[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]`

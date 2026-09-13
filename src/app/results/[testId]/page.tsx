@@ -142,7 +142,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         <h2 style={{ fontWeight: 700, fontSize: '16px' }}>📝 Review</h2>
                         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
                             {/* Language switcher */}
-                            {(session?.config?.exam_id?.startsWith('kpsc') || session?.config?.exam_id?.startsWith('kea') || session?.config?.exam_id === 'upsc-cse') && (
+                            {(session?.config?.exam_id?.startsWith('kpsc') || session?.config?.exam_id?.startsWith('kea') || session?.config?.exam_id?.startsWith('ksp') || session?.config?.exam_id === 'upsc-cse') && (
                                 <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
                                     {(['en', 'kn'] as const).map((l) => (
                                         <button

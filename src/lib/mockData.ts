@@ -109,10 +109,37 @@ export const EXAMS: Exam[] = [
         description_kn: 'ಪೊಲೀಸ್ ಕಾನ್ಸ್ಟೇಬಲ್ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆ',
         languages: ['en', 'kn'],
         negative_marking: 0.25,
-        subjects: ['General Knowledge', 'General Science', 'Indian Constitution', 'Indian & Karnataka History', 'Geography', 'Mental Ability', 'Current Affairs'],
-        subjects_kn: ['ಸಾಮಾನ್ಯ ಜ್ಞಾನ', 'ದೈನಂದಿನ ವಿಜ್ಞಾನ', 'ಭಾರತದ ಸಂವಿಧಾನ', 'ಇತಿಹಾಸ', 'ಭೂಗೋಳಶಾಸ್ತ್ರ', 'ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ', 'ಪ್ರಚಲಿತ ಘಟನೆಗಳು'],
+        subjects: [
+            'History',
+            'Science, Technology & Defence',
+            'Indian Polity, Constitution & Governance',
+            'General Mental Ability, Quantitative Aptitude & Comprehension',
+            'Geography & Earth Systems',
+            'Environment, Ecology & Disaster Management',
+            'Art, Culture & Heritage',
+            'Indian Economy & Development',
+            'Ethics, Integrity & Aptitude',
+            'Indian Society & Social Justice',
+            'International Relations & Global Institutions',
+            'Internal Security'
+        ],
+        subjects_kn: [
+            'ಇತಿಹಾಸ',
+            'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ',
+            'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ',
+            'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ',
+            'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು',
+            'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ',
+            'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ',
+            'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ',
+            'ನೈತಿಕತೆ, ಸಮಗ್ರತೆ ಮತ್ತು ಯೋಗ್ಯತೆ',
+            'ಭಾರತೀಯ ಸಮಾಜ ಮತ್ತು ಸಾಮಾಜಿಕ ನ್ಯಾಯ',
+            'ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು',
+            'ಆಂತರಿಕ ಭದ್ರತೆ'
+        ],
         icon: '🚔',
-        color: '#082C54'
+        color: '#082C54',
+        badge: '2026 PYQ'
     },
     {
         id: 'kpsc-group-c',

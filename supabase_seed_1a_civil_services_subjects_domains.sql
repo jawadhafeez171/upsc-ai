@@ -1,5 +1,5 @@
 -- =========================================================================
--- SUPABASE SEED 1A: CIVIL SERVICES (SUBJECTS & DOMAINS) (119 NODES)
+-- SUPABASE SEED 1A: CIVIL SERVICES (SUBJECTS & DOMAINS) (123 NODES)
 -- =========================================================================
 
 BEGIN;
@@ -67,7 +67,7 @@ INSERT INTO public.knowledge_nodes (
     (
         'art_culture_heritage', 'art_culture_heritage', 'Art, Culture & Heritage', 1,
         'Subject', 'ART, CULTURE & HERITAGE', 'art_culture_heritage', NULL,
-        ARRAY['art_culture_heritage.indian_architecture_sculpture', 'art_culture_heritage.indian_paintings_visual_arts', 'art_culture_heritage.performing_arts', 'art_culture_heritage.indian_literature_languages', 'art_culture_heritage.schools_of_indian_philosophy', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage']::text[], ARRAY[]::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_architecture_sculpture', 'art_culture_heritage.indian_paintings_visual_arts', 'art_culture_heritage.performing_arts', 'art_culture_heritage.indian_literature_languages', 'art_culture_heritage.schools_of_indian_philosophy', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage', 'art_culture_heritage.art_culture_of_karnataka', 'art_culture_heritage.martial_arts_traditional_sports_calendars', 'art_culture_heritage.cultural_institutions_numismatics_initiatives']::text[], ARRAY[]::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['ART', 'CULTURE', 'HERITAGE']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
@@ -95,7 +95,7 @@ INSERT INTO public.knowledge_nodes (
     (
         'art_culture_heritage.indian_literature_languages', 'indian_literature_languages', 'Indian Literature & Languages', 2,
         'Domain', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage',
-        ARRAY['art_culture_heritage.indian_literature_languages.vedic_epic_puranic_literature', 'art_culture_heritage.indian_literature_languages.classical_religious_texts', 'art_culture_heritage.indian_literature_languages.medieval_bhakti-sufi_literature', 'art_culture_heritage.indian_literature_languages.scientific_astronomical_legal_treatises']::text[], ARRAY['art_culture_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_literature_languages.vedic_epic_puranic_literature', 'art_culture_heritage.indian_literature_languages.classical_religious_texts', 'art_culture_heritage.indian_literature_languages.medieval_bhakti-sufi_literature', 'art_culture_heritage.indian_literature_languages.scientific_astronomical_legal_treatises', 'art_culture_heritage.indian_literature_languages.classical_languages_of_india_scripts']::text[], ARRAY['art_culture_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indian', 'Literature', 'Languages']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
@@ -109,28 +109,28 @@ INSERT INTO public.knowledge_nodes (
     (
         'art_culture_heritage.fairs_festivals_crafts_unesco_heritage', 'fairs_festivals_crafts_unesco_heritage', 'Fairs, Festivals, Crafts & UNESCO Heritage', 2,
         'Domain', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage',
-        ARRAY['art_culture_heritage.fairs_festivals_crafts_unesco_heritage.traditional_handicrafts_textiles', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.unesco_world_heritage_sites_intangible_cultural_heritage']::text[], ARRAY['art_culture_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.fairs_festivals_crafts_unesco_heritage.traditional_handicrafts_textiles', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.unesco_world_heritage_sites_intangible_cultural_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.major_fairs_religious_cultural_festivals']::text[], ARRAY['art_culture_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Fairs', 'Festivals', 'Crafts', 'UNESCO', 'Heritage']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems', 'geography_earth_systems', 'Geography & Earth Systems', 1,
         'Subject', 'GEOGRAPHY & EARTH SYSTEMS', 'geography_earth_systems', NULL,
-        ARRAY['geography_earth_systems.physical_geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics', 'geography_earth_systems.oceanography_marine_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture', 'geography_earth_systems.economic_resource_geography', 'geography_earth_systems.human_geography_population_settlements', 'geography_earth_systems.geography_of_karnataka', 'geography_earth_systems.world_mapping_geopolitical_locations', 'geography_earth_systems.indian_mapping_spatial_geography', 'geography_earth_systems.karnataka_mapping_state_geography']::text[], ARRAY[]::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.physical_geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics', 'geography_earth_systems.oceanography_marine_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture', 'geography_earth_systems.human_geography_population_settlements', 'geography_earth_systems.economic_resource_geography', 'geography_earth_systems.geography_of_the_world', 'geography_earth_systems.world_mapping_geopolitical_locations', 'geography_earth_systems.indian_mapping_spatial_geography', 'geography_earth_systems.geography_of_karnataka', 'geography_earth_systems.karnataka_mapping_state_geography']::text[], ARRAY[]::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['GEOGRAPHY', 'EARTH', 'SYSTEMS']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.physical_geography_earth_systems', 'physical_geography_earth_systems', 'Physical Geography & Earth Systems (Geomorphology)', 2,
         'Domain', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems',
-        ARRAY['geography_earth_systems.physical_geography_earth_systems.earths_origin_internal_structure', 'geography_earth_systems.physical_geography_earth_systems.continental_drift_plate_tectonics', 'geography_earth_systems.physical_geography_earth_systems.earthquakes_tsunamis_volcanism', 'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.earth_and_the_solar_system', 'geography_earth_systems.physical_geography_earth_systems.earths_origin_internal_structure', 'geography_earth_systems.physical_geography_earth_systems.continental_drift_plate_tectonics', 'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution', 'geography_earth_systems.physical_geography_earth_systems.rocks_formation_and_classification', 'geography_earth_systems.physical_geography_earth_systems.earthquakes', 'geography_earth_systems.physical_geography_earth_systems.volcanoes', 'geography_earth_systems.physical_geography_earth_systems.tsunamis']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Physical', 'Geography', 'Earth', 'Systems', 'Geomorphology']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
-        'geography_earth_systems.climatology_atmospheric_dynamics', 'climatology_atmospheric_dynamics', 'Climatology & Atmospheric Dynamics', 2,
+        'geography_earth_systems.climatology_atmospheric_dynamics', 'climatology_atmospheric_dynamics', 'Climatology', 2,
         'Domain', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems',
-        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.atmosphere_structure_heat_budget', 'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts', 'geography_earth_systems.climatology_atmospheric_dynamics.air_masses_fronts_cyclogenesis', 'geography_earth_systems.climatology_atmospheric_dynamics.world_climate_regions']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.atmosphere_structure_heat_budget', 'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts', 'geography_earth_systems.climatology_atmospheric_dynamics.air_masses_fronts_cyclogenesis', 'geography_earth_systems.climatology_atmospheric_dynamics.world_climate_regions', 'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_moisture_condensation_precipitation', 'geography_earth_systems.climatology_atmospheric_dynamics.hydrological_cycle_and_water_balance', 'geography_earth_systems.climatology_atmospheric_dynamics.groundwater_hydrology_and_aquifers']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Climatology', 'Atmospheric', 'Dynamics']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
@@ -151,14 +151,14 @@ INSERT INTO public.knowledge_nodes (
     (
         'geography_earth_systems.economic_resource_geography', 'economic_resource_geography', 'Economic & Resource Geography', 2,
         'Domain', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems',
-        ARRAY['geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources', 'geography_earth_systems.economic_resource_geography.location_factors_of_primary_secondary_tertiary_industries']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources', 'geography_earth_systems.economic_resource_geography.location_factors_of_primary_secondary_tertiary_industries', 'geography_earth_systems.economic_resource_geography.agricultural_geography_and_food_security']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Economic', 'Resource', 'Geography']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.human_geography_population_settlements', 'human_geography_population_settlements', 'Human Geography & Population Settlements', 2,
         'Domain', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems',
-        ARRAY['geography_earth_systems.human_geography_population_settlements.global_indian_demographic_trends', 'geography_earth_systems.human_geography_population_settlements.human_settlements_urban_systems']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.human_geography_population_settlements.global_indian_demographic_trends', 'geography_earth_systems.human_geography_population_settlements.human_settlements_urban_systems', 'geography_earth_systems.human_geography_population_settlements.tribal_demographics_and_cultural_anthropology']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Human', 'Geography', 'Population', 'Settlements']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
@@ -773,8 +773,8 @@ INSERT INTO public.knowledge_nodes (
     (
         'geography_earth_systems.world_mapping_geopolitical_locations', 'world_mapping_geopolitical_locations', 'World Mapping & Geopolitical Locations', 2,
         'Domain', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems',
-        ARRAY['geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations', 'geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals', 'geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones', 'geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage', 'geography_earth_systems.world_mapping_geopolitical_locations.mountain_ranges_peaks_plateaus_world', 'geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY['World Map', 'Geopolitics', 'Strategic Locations', 'Places in News']::text[], ARRAY['World', 'Mapping', 'Geopolitical', 'Locations', 'Seas', 'Straits', 'Conflict Zones', 'Rivers', 'Mountains']::text[],
+        ARRAY['geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations', 'geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals', 'geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones', 'geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', 'Spatial mapping of global strategic chokepoints, enclosed & marginal seas, international boundary lines, disputed zones, and places in geopolitical news.', ARRAY['World Map', 'Geopolitics', 'Strategic Locations', 'Places in News']::text[], ARRAY['World', 'Mapping', 'Geopolitical', 'Locations', 'Seas', 'Straits', 'Conflict Zones', 'Rivers', 'Mountains']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET
@@ -812,6 +812,34 @@ INSERT INTO public.knowledge_nodes (
         'Domain', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems',
         ARRAY['geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs', 'geography_earth_systems.karnataka_mapping_state_geography.western_ghats_peaks_elevations', 'geography_earth_systems.karnataka_mapping_state_geography.agro_climatic_zones_mineral_belts']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY['Karnataka Map', 'Krishna Basin Karnataka', 'Cauvery Basin', 'Western Ghats Karnataka', 'Mullayanagiri']::text[], ARRAY['Karnataka', 'Mapping', 'Rivers', 'Waterfalls', 'Peaks', 'Mullayanagiri', 'Agro-Climatic Zones', 'Districts']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.art_culture_of_karnataka', 'art_culture_of_karnataka', 'Art, Architecture & Cultural Heritage of Karnataka', 2,
+        'Domain', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage',
+        ARRAY['art_culture_heritage.art_culture_of_karnataka.karnataka_temple_architecture_sculpture', 'art_culture_heritage.art_culture_of_karnataka.performing_arts_theatre_folk_traditions_of_karnataka', 'art_culture_heritage.art_culture_of_karnataka.karnataka_paintings_crafts_gi_heritage', 'art_culture_heritage.art_culture_of_karnataka.vachana_haridasa_bhakti_movements_of_karnataka']::text[], ARRAY['art_culture_heritage']::text[], '{"kas": ["Prelims-P1", "Mains-GS1"], "upsc": ["Prelims-GS1", "Mains-GS1"]}'::jsonb,
+        '[KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Art', 'Architecture', 'Cultural', 'Heritage', 'Karnataka']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.martial_arts_traditional_sports_calendars', 'martial_arts_traditional_sports_calendars', 'Martial Arts, Traditional Sports & Indian Calendar Systems', 2,
+        'Domain', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage',
+        ARRAY['art_culture_heritage.martial_arts_traditional_sports_calendars.martial_arts_and_traditional_sports_of_india', 'art_culture_heritage.martial_arts_traditional_sports_calendars.indian_calendar_systems_eras_national_symbols']::text[], ARRAY['art_culture_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Martial', 'Arts', 'Traditional', 'Sports', 'Indian', 'Calendar', 'Systems']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.cultural_institutions_numismatics_initiatives', 'cultural_institutions_numismatics_initiatives', 'Cultural Institutions, Numismatics & Heritage Governance', 2,
+        'Domain', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage',
+        ARRAY['art_culture_heritage.cultural_institutions_numismatics_initiatives.national_cultural_institutions_and_bodies', 'art_culture_heritage.cultural_institutions_numismatics_initiatives.ancient_and_medieval_indian_coinage_numismatics', 'art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards']::text[], ARRAY['art_culture_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Cultural', 'Institutions', 'Numismatics', 'Heritage', 'Governance']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world', 'geography_of_the_world', 'Geography of the World', 2,
+        'Domain', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_united_states', 'geography_earth_systems.geography_of_the_world.regional_geography_canada', 'geography_earth_systems.geography_of_the_world.regional_geography_russia_central_asia', 'geography_earth_systems.geography_of_the_world.regional_geography_china_east_asia', 'geography_earth_systems.geography_of_the_world.regional_geography_japan', 'geography_earth_systems.geography_of_the_world.regional_geography_south_asia', 'geography_earth_systems.geography_of_the_world.regional_geography_south_east_asia', 'geography_earth_systems.geography_of_the_world.regional_geography_new_zealand', 'geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica']::text[], ARRAY['geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Comprehensive regional, physical, continental, and economic geography of the world, structured by continents with dedicated standalone sections for United States, Canada, Russia & Central Asia, China & East Asia, Japan, South Asia, South-East Asia, New Zealand, Europe, Africa, South America, Australia/Oceania, and Antarctica.', ARRAY['Regional Geography of United States', 'Regional Geography of Canada', 'Regional Geography of Russia & Central Asia', 'Regional Geography of China & East Asia', 'Regional Geography of Japan', 'Regional Geography of South Asia', 'Regional Geography of South-East Asia', 'Regional Geography of New Zealand', 'Continental Geography of Europe, Africa, Americas & Oceania']::text[], ARRAY['Geography', 'World', 'Comprehensive', 'regional', 'physical', 'continental', 'economic', 'geography', 'US', 'Canada', 'Russia', 'China', 'Japan', 'South', 'Asia', 'Southeast', 'New', 'Zealand', 'Continents']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (

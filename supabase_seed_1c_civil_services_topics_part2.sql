@@ -1,5 +1,5 @@
 -- =========================================================================
--- SUPABASE SEED 1C: CIVIL SERVICES (TOPICS PART 2) (203 NODES)
+-- SUPABASE SEED 1C: CIVIL SERVICES (TOPICS PART 2) (216 NODES)
 -- =========================================================================
 
 BEGIN;
@@ -8,111 +8,6 @@ INSERT INTO public.knowledge_nodes (
     id, slug, name, level, level_name, subject, subject_id, parent_id,
     children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
 ) VALUES
-    (
-        'indian_economy_development.monetary_policy_banking_architecture.monetary_policy_framework_rbi_operations', 'monetary_policy_framework_rbi_operations', 'Monetary Policy Framework & RBI Operations (Flexible Inflation Targeting Framework / 4% +/- 2%, Monetary Policy Committee / MPC - Composition & Voting, Policy Rates - Repo Rate, Standing Deposit Facility / SDF, Marginal Standing Facility / MSF, Reverse Repo; Reserve Ratios - Cash Reserve Ratio / CRR, Statutory Liquidity Ratio / SLR; Quantitative Tools - Open Market Operations / OMO, Operation Twist, Long-Term Repo Operations / LTRO; Qualitative Tools - Margin Requirements, Moral Suasion)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Monetary', 'Policy', 'Framework', 'RBI', 'Operations', 'Flexible', 'Inflation', 'Targeting', 'Committee', 'MPC', 'Composition', 'Voting', 'Rates', 'Repo', 'Rate', 'Standing', 'Deposit', 'Facility', 'SDF', 'Marginal', 'MSF', 'Reverse', 'Reserve', 'Ratios', 'Cash', 'Ratio', 'CRR', 'Statutory', 'Liquidity', 'SLR', 'Quantitative', 'Tools', 'Open', 'Market', 'OMO', 'Operation', 'Twist', 'Long', 'Term', 'LTRO', 'Qualitative', 'Margin', 'Requirements', 'Moral', 'Suasion']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.monetary_policy_banking_architecture.money_supply_liquidity', 'money_supply_liquidity', 'Money Supply & Liquidity (Monetary Aggregates - Reserve Money / M0, Narrow Money / M1, Intermediate Money / M2, Broad Money / M3; Money Multiplier Effect, Velocity of Money)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Money', 'Supply', 'Liquidity', 'Monetary', 'Aggregates', 'Reserve', 'Narrow', 'Intermediate', 'Broad', 'Multiplier', 'Effect', 'Velocity']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework', 'banking_structure_regulatory_framework', 'Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Banking', 'Structure', 'Regulatory', 'Framework', 'Scheduled', 'Commercial', 'Banks', 'Public', 'Sector', 'Private', 'Foreign', 'Differentiated', 'Small', 'Finance', 'SFBs', 'Payments', 'Regional', 'Rural', 'RRBs', 'Cooperative', 'Primary', 'Agricultural', 'Credit', 'Societies', 'PACS', 'Urban', 'UCBs', 'regulated', 'Dual', 'Control', 'Regulation', 'Amendment', 'Act', '2020']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.monetary_policy_banking_architecture.non-performing_assets_resolution_architecture', 'non-performing_assets_resolution_architecture', 'Non-Performing Assets & Resolution Architecture (Gross vs Net NPAs, Special Mention Accounts / SMA-0, 1, 2, Stressed Assets; Twin Balance Sheet Syndrome; Insolvency and Bankruptcy Code / IBC 2016 - National Company Law Tribunal / NCLT, Insolvency and Bankruptcy Board of India / IBBI, Committee of Creditors; Bad Bank - National Asset Reconstruction Company Limited / NARCL & India Debt Resolution Company Limited / IDRCL; Prompt Corrective Action / PCA Framework, BASEL III Norms - Capital Adequacy Ratio / CRAR, Tier 1 & Tier 2 Capital)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Non', 'Performing', 'Assets', 'Resolution', 'Architecture', 'Gross', 'Net', 'NPAs', 'Special', 'Mention', 'Accounts', 'SMA', 'Stressed', 'Twin', 'Balance', 'Sheet', 'Syndrome', 'Insolvency', 'Bankruptcy', 'Code', 'IBC', '2016', 'National', 'Company', 'Law', 'Tribunal', 'NCLT', 'Board', 'India', 'IBBI', 'Committee', 'Creditors', 'Bad', 'Bank', 'Asset', 'Reconstruction', 'Limited', 'NARCL', 'Debt', 'IDRCL', 'Prompt', 'Corrective', 'Action', 'PCA', 'Framework', 'BASEL', 'III', 'Norms', 'Capital', 'Adequacy', 'Ratio', 'CRAR', 'Tier']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.monetary_policy_banking_architecture.non-banking_financial_institutions_capital_markets', 'non-banking_financial_institutions_capital_markets', 'Non-Banking Financial Institutions & Capital Markets (Non-Banking Financial Companies / NBFCs - Systemically Important NBFCs, Scale-Based Regulatory Framework; Primary vs Secondary Markets, Initial Public Offerings / IPOs, SEBI Regulatory Framework, Stock Exchanges - BSE, NSE, Algorithmic & High-Frequency Trading, Mutual Funds & Systematic Investment Plans / SIPs, Credit Rating Agencies / CRAs)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Non', 'Banking', 'Financial', 'Institutions', 'Capital', 'Markets', 'Companies', 'NBFCs', 'Systemically', 'Important', 'Scale', 'Based', 'Regulatory', 'Framework', 'Primary', 'Secondary', 'Initial', 'Public', 'Offerings', 'IPOs', 'SEBI', 'Stock', 'Exchanges', 'BSE', 'NSE', 'Algorithmic', 'High', 'Frequency', 'Trading', 'Mutual', 'Funds', 'Systematic', 'Investment', 'Plans', 'SIPs', 'Credit', 'Rating', 'Agencies', 'CRAs']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect', 'union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect', 'Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Union', 'Budget', 'Public', 'Finance', 'Architecture', 'Constitutional', 'Provisions', 'Article', '112', 'Annual', 'Financial', 'Statement', 'Structure', 'Consolidated', 'Fund', 'India', '266', 'Contingency', '267', 'Account', 'Revenue', 'Receipts', 'Capital', 'Expenditure', 'Capex', 'Multiplier', 'Effect']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.fiscal_policy_public_finance_taxation.deficit_concepts_fiscal_discipline', 'deficit_concepts_fiscal_discipline', 'Deficit Concepts & Fiscal Discipline (Revenue Deficit / Effective Revenue Deficit, Fiscal Deficit - Borrowing Requirement of Government, Primary Deficit; Fiscal Responsibility and Budget Management / FRBM Act 2003 - N.K. Singh Committee Recommendations, Debt-to-GDP Ratio Targets, Escape Clauses)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Deficit', 'Concepts', 'Fiscal', 'Discipline', 'Revenue', 'Effective', 'Borrowing', 'Requirement', 'Government', 'Primary', 'Responsibility', 'Budget', 'Management', 'FRBM', 'Act', '2003', 'N.K.', 'Singh', 'Committee', 'Recommendations', 'Debt', 'GDP', 'Ratio', 'Targets', 'Escape', 'Clauses']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.fiscal_policy_public_finance_taxation.direct_taxation_reforms', 'direct_taxation_reforms', 'Direct Taxation & Reforms (Income Tax Slabs & New Tax Regime, Corporate Tax Reforms - Reduction to 22% / 15% for new manufacturing units, Minimum Alternate Tax / MAT, Equalisation Levy / Google Tax, Faceless Assessment & Taxpayer''s Charter, Base Erosion and Profit Shifting / BEPS, Double Tax Avoidance Agreements / DTAA, General Anti-Avoidance Rules / GAAR)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Direct', 'Taxation', 'Reforms', 'Income', 'Tax', 'Slabs', 'New', 'Regime', 'Corporate', 'Reduction', '22%', '15%', 'new', 'manufacturing', 'units', 'Minimum', 'Alternate', 'MAT', 'Equalisation', 'Levy', 'Google', 'Faceless', 'Assessment', 'Taxpayer''s', 'Charter', 'Base', 'Erosion', 'Profit', 'Shifting', 'BEPS', 'Double', 'Avoidance', 'Agreements', 'DTAA', 'General', 'Anti', 'Rules', 'GAAR']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.fiscal_policy_public_finance_taxation.indirect_taxation_gst_architecture', 'indirect_taxation_gst_architecture', 'Indirect Taxation & GST Architecture (Goods and Services Tax / GST - 101st Constitutional Amendment Act, Destination-based Consumption Tax, Subsumed Taxes; Dual GST Model - CGST, SGST, IGST; GST Council Article 279A - Composition & Decision Mechanism; Inverted Duty Structure, Input Tax Credit / ITC Fraud, E-Way Bill, GST Compensation Cess Mechanism)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indirect', 'Taxation', 'GST', 'Architecture', 'Goods', 'Services', 'Tax', '101st', 'Constitutional', 'Amendment', 'Act', 'Destination', 'based', 'Consumption', 'Subsumed', 'Taxes', 'Dual', 'Model', 'CGST', 'SGST', 'IGST', 'Council', 'Article', '279A', 'Composition', 'Decision', 'Mechanism', 'Inverted', 'Duty', 'Structure', 'Input', 'Credit', 'ITC', 'Fraud', 'Way', 'Bill', 'Compensation', 'Cess']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.fiscal_policy_public_finance_taxation.public_debt_fiscal_federalism', 'public_debt_fiscal_federalism', 'Public Debt & Fiscal Federalism (Internal vs External Public Debt, Sovereign Green Bonds, Ways and Means Advances / WMA; Finance Commission Article 280 - Terms of Reference, Vertical vs Horizontal Devolution Criteria, Post-Devolution Revenue Deficit Grants, Performance-linked Incentives)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Public', 'Debt', 'Fiscal', 'Federalism', 'Internal', 'External', 'Sovereign', 'Green', 'Bonds', 'Ways', 'Means', 'Advances', 'WMA', 'Finance', 'Commission', 'Article', '280', 'Terms', 'Reference', 'Vertical', 'Horizontal', 'Devolution', 'Criteria', 'Post', 'Revenue', 'Deficit', 'Grants', 'Performance', 'linked', 'Incentives']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.agriculture_food_management_subsidies.cropping_patterns_agrarian_systems', 'cropping_patterns_agrarian_systems', 'Cropping Patterns & Agrarian Systems (Kharif, Rabi & Zaid Seasons; Crop Diversity - Cereals, Pulses, Oilseeds, Commercial Crops; Millets / Shree Anna - Climate Resilient Crops, International Year of Millets 2023; Precision Farming & Zero Budget Natural Farming / ZBNF)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Cropping', 'Patterns', 'Agrarian', 'Systems', 'Kharif', 'Rabi', 'Zaid', 'Seasons', 'Crop', 'Diversity', 'Cereals', 'Pulses', 'Oilseeds', 'Commercial', 'Crops', 'Millets', 'Shree', 'Anna', 'Climate', 'Resilient', 'International', 'Year', '2023', 'Precision', 'Farming', 'Zero', 'Budget', 'Natural', 'ZBNF']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.agriculture_food_management_subsidies.irrigation_infrastructure_water_productivity', 'irrigation_infrastructure_water_productivity', 'Irrigation Infrastructure & Water Productivity (Types - Surface, Groundwater, Canal Irrigation; Micro-Irrigation - Drip & Sprinkler Systems; Pradhan Mantri Krishi Sinchayee Yojana / PMKSY - Per Drop More Crop, Har Khet Ko Pani; Command Area Development; Groundwater Overexploitation & Atal Bhujal Yojana)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Irrigation', 'Infrastructure', 'Water', 'Productivity', 'Types', 'Surface', 'Groundwater', 'Canal', 'Micro', 'Drip', 'Sprinkler', 'Systems', 'Pradhan', 'Mantri', 'Krishi', 'Sinchayee', 'Yojana', 'PMKSY', 'Per', 'Drop', 'Crop', 'Har', 'Khet', 'Pani', 'Command', 'Area', 'Development', 'Overexploitation', 'Atal', 'Bhujal']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.agriculture_food_management_subsidies.farm_inputs_credit_crop_insurance', 'farm_inputs_credit_crop_insurance', 'Farm Inputs, Credit & Crop Insurance (Fertilizer Architecture - Urea, DAP, MOP; Nutrient Based Subsidy / NBS Scheme, Nano Urea & Nano DAP, Direct Benefit Transfer / DBT in Fertilizers; Institutional Credit - Priority Sector Lending / PSL Norms, Kisan Credit Card / KCC, Interest Subvention Scheme; Pradhan Mantri Fasal Bima Yojana / PMFBY - Yield Index vs Weather Index, PM KISAN / Income Support Scheme)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Farm', 'Inputs', 'Credit', 'Crop', 'Insurance', 'Fertilizer', 'Architecture', 'Urea', 'DAP', 'MOP', 'Nutrient', 'Based', 'Subsidy', 'NBS', 'Scheme', 'Nano', 'Direct', 'Benefit', 'Transfer', 'DBT', 'Fertilizers', 'Institutional', 'Priority', 'Sector', 'Lending', 'PSL', 'Norms', 'Kisan', 'Card', 'KCC', 'Interest', 'Subvention', 'Pradhan', 'Mantri', 'Fasal', 'Bima', 'Yojana', 'PMFBY', 'Yield', 'Index', 'Weather', 'KISAN', 'Income', 'Support']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.agriculture_food_management_subsidies.agricultural_pricing_market_reforms', 'agricultural_pricing_market_reforms', 'Agricultural Pricing & Market Reforms (Minimum Support Price / MSP - Comprehensive Cost C2 + 50% vs A2+FL; Commission for Agricultural Costs and Prices / CACP; PM-AASHA Scheme; Market Architecture - Agricultural Produce Market Committees / APMC, Model APMC Act, Electronic National Agriculture Market / e-NAM, Farmer Producer Organisations / FPOs, Contract Farming Regulations)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Agricultural', 'Pricing', 'Market', 'Reforms', 'Minimum', 'Support', 'Price', 'MSP', 'Comprehensive', 'Cost', '50%', 'A2+FL', 'Commission', 'Costs', 'Prices', 'CACP', 'AASHA', 'Scheme', 'Architecture', 'Produce', 'Committees', 'APMC', 'Model', 'Act', 'Electronic', 'National', 'Agriculture', 'NAM', 'Farmer', 'Producer', 'Organisations', 'FPOs', 'Contract', 'Farming', 'Regulations']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'indian_economy_development.agriculture_food_management_subsidies.food_processing_supply_chain_logistics', 'food_processing_supply_chain_logistics', 'Food Processing & Supply Chain Logistics (Mega Food Parks Scheme, PM Formalisation of Micro food processing Enterprises / PMFME, Operation Greens / TOP to TOTAL, Pradhan Mantri Kisan SAMPADA Yojana; Cold Chain Infrastructure, Post-Harvest Losses, Food Quality Standards / FSSAI)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Food', 'Processing', 'Supply', 'Chain', 'Logistics', 'Mega', 'Parks', 'Scheme', 'Formalisation', 'Micro', 'food', 'processing', 'Enterprises', 'PMFME', 'Operation', 'Greens', 'TOP', 'TOTAL', 'Pradhan', 'Mantri', 'Kisan', 'SAMPADA', 'Yojana', 'Cold', 'Infrastructure', 'Post', 'Harvest', 'Losses', 'Quality', 'Standards', 'FSSAI']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
     (
         'indian_economy_development.agriculture_food_management_subsidies.buffer_stocking_public_distribution_system', 'buffer_stocking_public_distribution_system', 'Buffer Stocking & Public Distribution System (Food Corporation of India / FCI - Procurement, Storage & Distribution, Economic Cost of Foodgrains, Open Market Sale Scheme / OMSS; National Food Security Act / NFSA 2013 - Targeted Public Distribution System / TPDS, Antyodaya Anna Yojana / AAY, Priority Households; One Nation One Ration Card / ONORC, Direct Benefit Transfer / DBT in Food Subsidy, Food Subsidy Bill Reforms)', 3,
         'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
@@ -182,30 +77,7 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.external_sector_balance_of_payments_foreign_trade']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Balance', 'Payments', 'Architecture', 'BOP', 'Structure', 'Current', 'Account', 'Merchandise', 'Trade', 'Invisibles', 'Services', 'Transfers', 'Income', 'Capital', 'Foreign', 'Direct', 'Investment', 'FDI', 'Portfolio', 'FPI', 'External', 'Commercial', 'Borrowings', 'ECBs', 'NRI', 'Deposits', 'Assistance', 'Deficit', 'CAD', 'Sustainable', 'Thresholds']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    )
-ON CONFLICT (id) DO UPDATE SET
-    slug = EXCLUDED.slug,
-    name = EXCLUDED.name,
-    level = EXCLUDED.level,
-    level_name = EXCLUDED.level_name,
-    subject = EXCLUDED.subject,
-    subject_id = EXCLUDED.subject_id,
-    parent_id = EXCLUDED.parent_id,
-    children_ids = EXCLUDED.children_ids,
-    ancestor_ids = EXCLUDED.ancestor_ids,
-    exam_tags = EXCLUDED.exam_tags,
-    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
-    description = EXCLUDED.description,
-    entities = EXCLUDED.entities,
-    keywords = EXCLUDED.keywords,
-    stream = EXCLUDED.stream,
-    streams = EXCLUDED.streams,
-    updated_at = NOW();
-
-INSERT INTO public.knowledge_nodes (
-    id, slug, name, level, level_name, subject, subject_id, parent_id,
-    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
-) VALUES
+    ),
     (
         'indian_economy_development.external_sector_balance_of_payments_foreign_trade.foreign_exchange_currency_dynamics', 'foreign_exchange_currency_dynamics', 'Foreign Exchange & Currency Dynamics (Foreign Exchange Reserves - Components: Foreign Currency Assets, Gold, SDRs, Reserve Tranche Position in IMF; Exchange Rate Regimes - Clean vs Dirty Float, Nominal Effective Exchange Rate / NEER vs Real Effective Exchange Rate / REER; Currency Convertibility - Full Current Account Convertibility / Article VIII of IMF, Tarapore Committee Recommendations on Capital Account Convertibility; Internationalisation of Indian Rupee - Vostro Accounts, Rupee-denominated Trade Settlement)', 3,
         'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.external_sector_balance_of_payments_foreign_trade',
@@ -310,7 +182,30 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['environment_ecology_disaster_management', 'environment_ecology_disaster_management.fundamental_ecology_ecosystem_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P2", "Mains-GS3"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P2, Mains-GS3] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Biogeochemical', 'Cycles', 'Gaseous', 'Carbon', 'Cycle', 'Nitrogen', 'Fixation', 'Nitrification', 'Assimilation', 'Ammonification', 'Denitrification', 'Sedimentary', 'Phosphorus', 'Sulphur', 'Water', 'Hydrological']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    ),
+    )
+ON CONFLICT (id) DO UPDATE SET
+    slug = EXCLUDED.slug,
+    name = EXCLUDED.name,
+    level = EXCLUDED.level,
+    level_name = EXCLUDED.level_name,
+    subject = EXCLUDED.subject,
+    subject_id = EXCLUDED.subject_id,
+    parent_id = EXCLUDED.parent_id,
+    children_ids = EXCLUDED.children_ids,
+    ancestor_ids = EXCLUDED.ancestor_ids,
+    exam_tags = EXCLUDED.exam_tags,
+    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
+    description = EXCLUDED.description,
+    entities = EXCLUDED.entities,
+    keywords = EXCLUDED.keywords,
+    stream = EXCLUDED.stream,
+    streams = EXCLUDED.streams,
+    updated_at = NOW();
+
+INSERT INTO public.knowledge_nodes (
+    id, slug, name, level, level_name, subject, subject_id, parent_id,
+    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
+) VALUES
     (
         'environment_ecology_disaster_management.fundamental_ecology_ecosystem_dynamics.ecological_interactions_principles', 'ecological_interactions_principles', 'Ecological Interactions & Principles (Symbiotic Interactions - Mutualism, Commensalism; Antagonistic Interactions - Parasitism, Predation, Amensalism, Competition; Gause''s Competitive Exclusion Principle; Ecological Succession - Primary vs Secondary Succession, Seral Stages, Pioneer Species vs Climax Community; Ecological Concepts - Niche / Fundamental vs Realised Niche, Habitat, Ecotone & Edge Effect, Carrying Capacity, Homeostasis)', 3,
         'Topic', 'Environment, Ecology & Disaster Management', 'environment_ecology_disaster_management', 'environment_ecology_disaster_management.fundamental_ecology_ecosystem_dynamics',
@@ -380,30 +275,7 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['environment_ecology_disaster_management', 'environment_ecology_disaster_management.environmental_pollution_waste_management_remediation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P2", "Mains-GS3"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P2, Mains-GS3] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Waste', 'Management', 'Architecture', 'Solid', 'Rules', '2016', 'Source', 'Segregation', 'Energy', 'Sanitary', 'Landfills', 'Plastic', '2021', '2022', 'Amendments', 'Ban', 'Single', 'Use', 'Plastics', 'SUPs', 'Extended', 'Producer', 'Responsibility', 'EPR', 'Framework', 'Solar', 'Modules', 'Inclusion', 'Biomedical', 'Hazardous', 'Other', 'Wastes', 'Construction', 'Demolition', 'C&D']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    )
-ON CONFLICT (id) DO UPDATE SET
-    slug = EXCLUDED.slug,
-    name = EXCLUDED.name,
-    level = EXCLUDED.level,
-    level_name = EXCLUDED.level_name,
-    subject = EXCLUDED.subject,
-    subject_id = EXCLUDED.subject_id,
-    parent_id = EXCLUDED.parent_id,
-    children_ids = EXCLUDED.children_ids,
-    ancestor_ids = EXCLUDED.ancestor_ids,
-    exam_tags = EXCLUDED.exam_tags,
-    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
-    description = EXCLUDED.description,
-    entities = EXCLUDED.entities,
-    keywords = EXCLUDED.keywords,
-    stream = EXCLUDED.stream,
-    streams = EXCLUDED.streams,
-    updated_at = NOW();
-
-INSERT INTO public.knowledge_nodes (
-    id, slug, name, level, level_name, subject, subject_id, parent_id,
-    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
-) VALUES
+    ),
     (
         'environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.environmental_remediation_technologies', 'environmental_remediation_technologies', 'Environmental Remediation Technologies (Bioremediation - In-situ: Bioventing, Biosparging; Ex-situ: Bioreactors; Phytoremediation - Phytoextraction, Phytodegradation, Rhizofiltration; Mycoremediation, Oilzapper Microbial Technology for Marine Oil Spills)', 3,
         'Topic', 'Environment, Ecology & Disaster Management', 'environment_ecology_disaster_management', 'environment_ecology_disaster_management.environmental_pollution_waste_management_remediation',
@@ -508,7 +380,30 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['environment_ecology_disaster_management', 'environment_ecology_disaster_management.institutional_legal_operational_framework']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P2", "Mains-GS3"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P2, Mains-GS3] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Early', 'Warning', 'Infrastructure', 'Forecasting', 'India', 'Meteorological', 'Department', 'IMD', 'Doppler', 'Weather', 'Radars', 'Colour', 'Coded', 'Warnings', 'Green', 'Yellow', 'Orange', 'Red', 'Indian', 'National', 'Centre', 'Ocean', 'Information', 'Services', 'INCOIS', 'Tsunami', 'State', 'Central', 'Water', 'Commission', 'CWC', 'Flood', 'Stations', 'Space', 'Research', 'Organisation', 'ISRO', 'Disaster', 'Management', 'Support', 'Programme']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    ),
+    )
+ON CONFLICT (id) DO UPDATE SET
+    slug = EXCLUDED.slug,
+    name = EXCLUDED.name,
+    level = EXCLUDED.level,
+    level_name = EXCLUDED.level_name,
+    subject = EXCLUDED.subject,
+    subject_id = EXCLUDED.subject_id,
+    parent_id = EXCLUDED.parent_id,
+    children_ids = EXCLUDED.children_ids,
+    ancestor_ids = EXCLUDED.ancestor_ids,
+    exam_tags = EXCLUDED.exam_tags,
+    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
+    description = EXCLUDED.description,
+    entities = EXCLUDED.entities,
+    keywords = EXCLUDED.keywords,
+    stream = EXCLUDED.stream,
+    streams = EXCLUDED.streams,
+    updated_at = NOW();
+
+INSERT INTO public.knowledge_nodes (
+    id, slug, name, level, level_name, subject, subject_id, parent_id,
+    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
+) VALUES
     (
         'environment_ecology_disaster_management.risk_reduction_resilience_global_conventions.global_frameworks_protocols', 'global_frameworks_protocols', 'Global Frameworks & Protocols (Yokohama Strategy 1994, Hyogo Framework for Action 2005–2015; Sendai Framework for Disaster Risk Reduction 2015–2030 - Four Priorities for Action: Understanding Disaster Risk, Strengthening Disaster Risk Governance, Investing in Disaster Risk Reduction for Resilience, Enhancing Disaster Preparedness for Effective Response and to ''Build Back Better'')', 3,
         'Topic', 'Environment, Ecology & Disaster Management', 'environment_ecology_disaster_management', 'environment_ecology_disaster_management.risk_reduction_resilience_global_conventions',
@@ -578,30 +473,7 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['science_technology_defence', 'science_technology_defence.biotechnology_health_life_sciences']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P2", "Mains-GS3"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P2, Mains-GS3] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Genomics', 'Genetics', 'Gene', 'Editing', 'Molecular', 'Biology', 'Foundations', 'DNA', 'RNA', 'Plasmids', 'Chromosomes', 'Tools', 'Techniques', 'CRISPR', 'Cas9', 'TALENs', 'Zinc', 'Finger', 'Nucleases', 'Genome', 'Sequencing', 'Initiatives', 'Human', 'Project', 'India', 'Earth', 'BioGenome', 'Advanced', 'Genetic', 'Therapies', 'Therapy', 'Somatic', 'Germline', 'Three', 'Parent', 'Babies', 'Mitochondrial', 'Replacement']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    )
-ON CONFLICT (id) DO UPDATE SET
-    slug = EXCLUDED.slug,
-    name = EXCLUDED.name,
-    level = EXCLUDED.level,
-    level_name = EXCLUDED.level_name,
-    subject = EXCLUDED.subject,
-    subject_id = EXCLUDED.subject_id,
-    parent_id = EXCLUDED.parent_id,
-    children_ids = EXCLUDED.children_ids,
-    ancestor_ids = EXCLUDED.ancestor_ids,
-    exam_tags = EXCLUDED.exam_tags,
-    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
-    description = EXCLUDED.description,
-    entities = EXCLUDED.entities,
-    keywords = EXCLUDED.keywords,
-    stream = EXCLUDED.stream,
-    streams = EXCLUDED.streams,
-    updated_at = NOW();
-
-INSERT INTO public.knowledge_nodes (
-    id, slug, name, level, level_name, subject, subject_id, parent_id,
-    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
-) VALUES
+    ),
     (
         'science_technology_defence.biotechnology_health_life_sciences.cell_biology_reproductive_technology', 'cell_biology_reproductive_technology', 'Cell Biology & Reproductive Technology (Stem Cell Science - Embryonic Stem Cells, Induced Pluripotent Stem Cells / iPSCs, Cord Blood Banking; Assisted Reproductive Technologies - In Vitro Fertilization / IVF, Surrogacy Regulation, Amniocentesis, Pre-implantation Genetic Diagnosis)', 3,
         'Topic', 'Science, Technology & Defence', 'science_technology_defence', 'science_technology_defence.biotechnology_health_life_sciences',
@@ -706,7 +578,30 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['science_technology_defence', 'science_technology_defence.nuclear_technology_energy']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P2", "Mains-GS3"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P2, Mains-GS3] [SSC: GA]', '', ARRAY[]::text[], ARRAY['International', 'Nuclear', 'Governance', 'Treaties', 'Global', 'Regulatory', 'Framework', 'IAEA', 'Non', 'Proliferation', 'Treaty', 'NPT', 'Comprehensive', 'Test', 'Ban', 'CTBT', 'Export', 'Control', 'Regimes', 'Suppliers', 'Group', 'NSG', 'Missile', 'Technology', 'Regime', 'MTCR', 'Australia', 'Wassenaar', 'Arrangement']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    ),
+    )
+ON CONFLICT (id) DO UPDATE SET
+    slug = EXCLUDED.slug,
+    name = EXCLUDED.name,
+    level = EXCLUDED.level,
+    level_name = EXCLUDED.level_name,
+    subject = EXCLUDED.subject,
+    subject_id = EXCLUDED.subject_id,
+    parent_id = EXCLUDED.parent_id,
+    children_ids = EXCLUDED.children_ids,
+    ancestor_ids = EXCLUDED.ancestor_ids,
+    exam_tags = EXCLUDED.exam_tags,
+    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
+    description = EXCLUDED.description,
+    entities = EXCLUDED.entities,
+    keywords = EXCLUDED.keywords,
+    stream = EXCLUDED.stream,
+    streams = EXCLUDED.streams,
+    updated_at = NOW();
+
+INSERT INTO public.knowledge_nodes (
+    id, slug, name, level, level_name, subject, subject_id, parent_id,
+    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
+) VALUES
     (
         'science_technology_defence.nanoscience_advanced_materials.nanotechnology_applications', 'nanotechnology_applications', 'Nanotechnology Applications (Synthesis & Materials - Nanoparticles, Carbon Nanotubes / CNTs, Quantum Dots, Nano-emulsions; Sectoral Applications - Nano-fertilizers / Nano Urea, Targeted Drug Delivery, Nano-sensors, National Nano Mission)', 3,
         'Topic', 'Science, Technology & Defence', 'science_technology_defence', 'science_technology_defence.nanoscience_advanced_materials',
@@ -776,30 +671,7 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['internal_security', 'internal_security.terrorism_insurgencies_cross-border_security']::text[], '{"upsc": ["Mains-GS3"], "kas": ["Prelims-P2", "Mains-GS3"]}'::jsonb,
         '[UPSC: Mains-GS3] [KAS: Prelims-P2, Mains-GS3]', '', ARRAY[]::text[], ARRAY['Insurgency', 'North', 'East', 'India', 'Historical', 'Drivers', 'Ethnic', 'Sub', 'nationalism', 'Influx', 'Illegal', 'Immigrants', 'Porous', 'International', 'Borders', 'Geographic', 'Isolation', 'Nagaland', 'Naga', 'National', 'Council', 'NNC', 'NSCN', 'Framework', 'Agreement', '2015', 'Peace', 'Talks', 'Assam', 'United', 'Liberation', 'Front', 'Asom', 'ULFA', 'Pro', 'talks', 'Accord', '2023', 'Bodo', 'Accords', '2020', 'Manipur', 'Conflict', 'Insurgent', 'Groups', 'Meitei', 'UNLF', 'Kuki', 'Militancy', 'Suspension', 'Operations', 'SoO', 'Agreements', 'Bru', 'Reang', 'Settlement', 'Karbi', 'Anglong', '2021']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    )
-ON CONFLICT (id) DO UPDATE SET
-    slug = EXCLUDED.slug,
-    name = EXCLUDED.name,
-    level = EXCLUDED.level,
-    level_name = EXCLUDED.level_name,
-    subject = EXCLUDED.subject,
-    subject_id = EXCLUDED.subject_id,
-    parent_id = EXCLUDED.parent_id,
-    children_ids = EXCLUDED.children_ids,
-    ancestor_ids = EXCLUDED.ancestor_ids,
-    exam_tags = EXCLUDED.exam_tags,
-    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
-    description = EXCLUDED.description,
-    entities = EXCLUDED.entities,
-    keywords = EXCLUDED.keywords,
-    stream = EXCLUDED.stream,
-    streams = EXCLUDED.streams,
-    updated_at = NOW();
-
-INSERT INTO public.knowledge_nodes (
-    id, slug, name, level, level_name, subject, subject_id, parent_id,
-    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
-) VALUES
+    ),
     (
         'internal_security.terrorism_insurgencies_cross-border_security.religious_political_radicalisation', 'religious_political_radicalisation', 'Religious & Political Radicalisation (Online Radicalisation Models, Lone-Wolf Attacks, ISIS / Al-Qaeda in Indian Subcontinent / AQIS propaganda; Counter-Radicalisation Strategies - Police Community Outreach, Cyber Patrols, Islamic Scholars Collaboration)', 3,
         'Topic', 'Internal Security', 'internal_security', 'internal_security.terrorism_insurgencies_cross-border_security',
@@ -904,7 +776,30 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['internal_security', 'internal_security.security_forces_intelligence_agencies_statutory_mandates']::text[], '{"upsc": ["Mains-GS3"], "kas": ["Prelims-P2", "Mains-GS3"]}'::jsonb,
         '[UPSC: Mains-GS3] [KAS: Prelims-P2, Mains-GS3]', '', ARRAY[]::text[], ARRAY['Armed', 'Forces', 'Special', 'Powers', 'Act', 'AFSPA', '1958', 'Declaration', 'Disturbed', 'Area', 'Section', 'Arrest', 'without', 'Warrant', 'Fire', 'upon', 'Suspects', 'Search', 'Premises', 'Legal', 'Safeguards', 'Prior', 'Central', 'Sanction', 'Prosecution', 'Supreme', 'Court', '1997', 'Guidelines', 'Naga', 'People''s', 'Movement', 'Human', 'Rights', 'Case', 'Justice', 'Jeevan', 'Reddy', 'Committee', '2005', 'Recommendations', 'Progressive', 'Phased', 'Revocation', 'Assam', 'Nagaland', 'Manipur']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    ),
+    )
+ON CONFLICT (id) DO UPDATE SET
+    slug = EXCLUDED.slug,
+    name = EXCLUDED.name,
+    level = EXCLUDED.level,
+    level_name = EXCLUDED.level_name,
+    subject = EXCLUDED.subject,
+    subject_id = EXCLUDED.subject_id,
+    parent_id = EXCLUDED.parent_id,
+    children_ids = EXCLUDED.children_ids,
+    ancestor_ids = EXCLUDED.ancestor_ids,
+    exam_tags = EXCLUDED.exam_tags,
+    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
+    description = EXCLUDED.description,
+    entities = EXCLUDED.entities,
+    keywords = EXCLUDED.keywords,
+    stream = EXCLUDED.stream,
+    streams = EXCLUDED.streams,
+    updated_at = NOW();
+
+INSERT INTO public.knowledge_nodes (
+    id, slug, name, level, level_name, subject, subject_id, parent_id,
+    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
+) VALUES
     (
         'ethics_integrity_aptitude.ethics_human_interface.essence_determinants_consequences_of_ethics', 'essence_determinants_consequences_of_ethics', 'Essence, Determinants & Consequences of Ethics (Fundamentals of Ethics - Definition of Morality, Ethics, Values, Norms; Moral Relativism vs Absolutism; Determinants of Ethical Action - Object, Intention, Circumstance, Conscience, Intuition; Consequences of Ethics - Individual Peace, Social Harmony, Institutional Efficiency, Good Governance)', 3,
         'Topic', 'Ethics, Integrity & Aptitude', 'ethics_integrity_aptitude', 'ethics_integrity_aptitude.ethics_human_interface',
@@ -974,30 +869,7 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['ethics_integrity_aptitude', 'ethics_integrity_aptitude.emotional_intelligence_moral_thinkers']::text[], '{"upsc": ["Mains-GS4"], "kas": ["Mains-GS4"]}'::jsonb,
         '[UPSC: Mains-GS4] [KAS: Mains-GS4]', '', ARRAY[]::text[], ARRAY['Utilities', 'Emotional', 'Intelligence', 'Governance', 'Administrative', 'Applications', 'Stress', 'Management', 'Conflict', 'Resolution', 'Public', 'Crisis', 'Leadership', 'Team', 'Building', 'Negotiation']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    )
-ON CONFLICT (id) DO UPDATE SET
-    slug = EXCLUDED.slug,
-    name = EXCLUDED.name,
-    level = EXCLUDED.level,
-    level_name = EXCLUDED.level_name,
-    subject = EXCLUDED.subject,
-    subject_id = EXCLUDED.subject_id,
-    parent_id = EXCLUDED.parent_id,
-    children_ids = EXCLUDED.children_ids,
-    ancestor_ids = EXCLUDED.ancestor_ids,
-    exam_tags = EXCLUDED.exam_tags,
-    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
-    description = EXCLUDED.description,
-    entities = EXCLUDED.entities,
-    keywords = EXCLUDED.keywords,
-    stream = EXCLUDED.stream,
-    streams = EXCLUDED.streams,
-    updated_at = NOW();
-
-INSERT INTO public.knowledge_nodes (
-    id, slug, name, level, level_name, subject, subject_id, parent_id,
-    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
-) VALUES
+    ),
     (
         'ethics_integrity_aptitude.emotional_intelligence_moral_thinkers.contributions_of_moral_thinkers_philosophers', 'contributions_of_moral_thinkers_philosophers', 'Contributions of Moral Thinkers & Philosophers (Indian Moral Thinkers & Traditions - Kautilya Arthashastra Ethics, Thirukkural Principles, Swami Vivekananda''s Practical Vedanta, Aurobindo, Rabindranath Tagore, Buddha, Mahavira; Western Moral Philosophers - Socrates, Plato''s Cardinal Virtues, Aristotle''s Virtue Ethics & Golden Mean, Immanuel Kant''s Categorical Imperative & Deontology, J.S. Mill & Jeremy Bentham''s Utilitarianism, John Rawls'' Theory of Justice & Veil of Ignorance, Thomas Hobbes, John Locke, Jean-Jacques Rousseau)', 3,
         'Topic', 'Ethics, Integrity & Aptitude', 'ethics_integrity_aptitude', 'ethics_integrity_aptitude.emotional_intelligence_moral_thinkers',
@@ -1071,106 +943,36 @@ INSERT INTO public.knowledge_nodes (
     (
         'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.critical_reasoning_analytical_ability', 'critical_reasoning_analytical_ability', 'Critical Reasoning & Analytical Ability (Logical Arguments - Strengthening & Weakening Arguments, Evaluating Premise & Conclusion, Paradox Resolution)', 3,
         'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.critical_reasoning_analytical_ability.strengthening_weakening_arguments', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.critical_reasoning_analytical_ability.paradox_resolution_evaluating_premises']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
         '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Critical', 'Reasoning', 'Analytical', 'Ability', 'Logical', 'Arguments', 'Strengthening', 'Weakening', 'Evaluating', 'Premise', 'Conclusion', 'Paradox', 'Resolution']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.interpersonal_communication_skills', 'interpersonal_communication_skills', 'Interpersonal & Communication Skills (Verbal Reasoning - Statement-Argument, Statement-Assumption, Course of Action, Cause & Effect)', 3,
         'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.interpersonal_communication_skills.statement_arguments_assumptions_conclusions', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.interpersonal_communication_skills.cause_and_effect_reasoning', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills.interpersonal_communication_skills.administrative_decision_making_crisis_management']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
         '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Interpersonal', 'Communication', 'Skills', 'Verbal', 'Reasoning', 'Statement', 'Argument', 'Assumption', 'Course', 'Action', 'Cause', 'Effect']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic', 'number_systems_basic_arithmetic', 'Number Systems & Basic Arithmetic (Fundamentals of Numbers - Types of Numbers: Natural, Integers, Rational, Prime; Divisibility Rules, Unit Digit Calculations; Factors, Multiples & Remainders - LCM & HCF, Remainder Theorems, Number of Factors, Trailing Zeros)', 3,
         'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic.number_types_divisibility_rules', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic.remainders_unit_digit_factorials_cyclicity', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic.lcm_hcf_factors_multiples', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic.fractions_decimals_surds_indices', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic.algebraic_identities_linear_quadratic_equations', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.number_systems_basic_arithmetic.progressions_sequences_ap_gp']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
         '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Number', 'Systems', 'Basic', 'Arithmetic', 'Fundamentals', 'Numbers', 'Types', 'Natural', 'Integers', 'Rational', 'Prime', 'Divisibility', 'Rules', 'Unit', 'Digit', 'Calculations', 'Factors', 'Multiples', 'Remainders', 'LCM', 'HCF', 'Remainder', 'Theorems', 'Trailing', 'Zeros']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion', 'percentages_averages_ratio-proportion', 'Percentages, Averages & Ratio-Proportion (Proportional Math - Percentages & Percentage Change, Averages & Weighted Averages, Mixtures & Alligations, Ratio & Proportion, Partnerships)', 3,
         'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.percentages_successive_change', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.averages_weighted_averages_alligation', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_variations_partnerships', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.problems_on_ages']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
         '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Percentages', 'Averages', 'Ratio', 'Proportion', 'Proportional', 'Math', 'Percentage', 'Change', 'Weighted', 'Mixtures', 'Alligations', 'Partnerships']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount', 'profit_loss_interest_discount', 'Profit, Loss, Interest & Discount (Commercial Mathematics - Cost Price, Selling Price, Profit & Loss Percentage, Marked Price & Discounts, Simple Interest, Compound Interest & Compounding Frequency)', 3,
         'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.profit_loss_marked_price_discounts', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_interest_installments', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.compound_interest_installments']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
         '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Profit', 'Loss', 'Interest', 'Discount', 'Commercial', 'Mathematics', 'Cost', 'Price', 'Selling', 'Percentage', 'Marked', 'Discounts', 'Simple', 'Compound', 'Compounding', 'Frequency']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance', 'time_work_speed_distance', 'Time, Work, Speed & Distance (Time & Motion Kinetics - Time & Work, Pipes & Cisterns, Speed-Time-Distance, Relative Speed, Problems on Trains, Boats & Streams)', 3,
-        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
-        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Time', 'Work', 'Speed', 'Distance', 'Motion', 'Kinetics', 'Pipes', 'Cisterns', 'Relative', 'Problems', 'Trains', 'Boats', 'Streams']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability', 'permutation_combination_probability', 'Permutation, Combination & Probability (Combinatorics - Fundamental Counting Principle, Factorials, Permutations / Arrangements, Combinations / Selections; Probability Science - Sample Space, Events, Independent & Mutually Exclusive Events, Conditional Probability)', 3,
-        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
-        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Permutation', 'Combination', 'Probability', 'Combinatorics', 'Fundamental', 'Counting', 'Principle', 'Factorials', 'Permutations', 'Arrangements', 'Combinations', 'Selections', 'Science', 'Sample', 'Space', 'Events', 'Independent', 'Mutually', 'Exclusive', 'Conditional']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry', 'mensuration_geometry', 'Mensuration & Geometry (Spatial Measurement - 2D Geometrical Shapes: Triangles, Circles, Quadrilaterals; Perimeter & Area; 3D Solids: Cubes, Cuboids, Cylinders, Cones, Spheres; Surface Area & Volume)', 3,
-        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
-        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Mensuration', 'Geometry', 'Spatial', 'Measurement', 'Geometrical', 'Shapes', 'Triangles', 'Circles', 'Quadrilaterals', 'Perimeter', 'Area', 'Solids', 'Cubes', 'Cuboids', 'Cylinders', 'Cones', 'Spheres', 'Surface', 'Volume']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'logical_analytical_reasoning', 'Logical & Analytical Reasoning (Deductive Logic - Syllogisms / Venn Diagram & Rules Method, Logical Deductions; Spatial & Relational Logic - Linear & Circular Seating Arrangements, Blood Relations & Family Trees, Direction Sense & Compass Problems, Clocks & Calendar Calculations)', 3,
-        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
-        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Logical', 'Analytical', 'Reasoning', 'Deductive', 'Logic', 'Syllogisms', 'Venn', 'Diagram', 'Rules', 'Method', 'Deductions', 'Spatial', 'Relational', 'Linear', 'Circular', 'Seating', 'Arrangements', 'Blood', 'Relations', 'Family', 'Trees', 'Direction', 'Sense', 'Compass', 'Problems', 'Clocks', 'Calendar', 'Calculations']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'data_interpretation_data_sufficiency', 'Data Interpretation & Data Sufficiency (Data Formats - Bar Charts, Pie Charts, Line Graphs, Data Tables, Mixed Graphs; Data Sufficiency - Evaluating Sufficiency of Given Statements to Answer Questions)', 3,
-        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
-        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Data', 'Interpretation', 'Sufficiency', 'Formats', 'Bar', 'Charts', 'Pie', 'Line', 'Graphs', 'Tables', 'Mixed', 'Evaluating', 'Given', 'Statements', 'Answer', 'Questions']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'problem_solving_pattern_recognition', 'Problem Solving & Pattern Recognition (Coding, Series & Puzzles - Coding-Decoding, Number Series, Letter Series, Matrix & Grid Puzzles, Ranking & Ordering, Cube Folding & Dice)', 3,
-        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning',
-        ARRAY[]::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
-        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Problem', 'Solving', 'Pattern', 'Recognition', 'Coding', 'Series', 'Puzzles', 'Decoding', 'Number', 'Letter', 'Matrix', 'Grid', 'Ranking', 'Ordering', 'Cube', 'Folding', 'Dice']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations', 'enclosed_seas_bordering_nations', 'Enclosed Seas, Marginal Seas & Bordering Nations (Mediterranean Sea, Black Sea, Caspian Sea, Red Sea, Baltic Sea, Persian Gulf, Aral Sea, Dead Sea)', 3,
-        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Mediterranean Sea', 'Black Sea', 'Caspian Sea', 'Red Sea', 'Baltic Sea', 'Persian Gulf', 'Aral Sea']::text[], ARRAY['Enclosed', 'Seas', 'Bordering', 'Countries', 'Mediterranean', 'Black Sea', 'Caspian', 'Red Sea', 'Persian Gulf']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals', 'strategic_straits_chokepoints_canals', 'Strategic Maritime Straits, Canals & Chokepoints (Strait of Hormuz, Bab-el-Mandeb, Malacca Strait, Bosphorus & Dardanelles, Kerch Strait, Taiwan Strait, Suez Canal, Panama Canal)', 3,
-        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Strait of Hormuz', 'Bab-el-Mandeb', 'Malacca Strait', 'Bosphorus', 'Dardanelles', 'Kerch Strait', 'Taiwan Strait', 'Suez Canal']::text[], ARRAY['Straits', 'Chokepoints', 'Canals', 'Hormuz', 'Bab el Mandeb', 'Malacca', 'Bosphorus', 'Suez Canal', 'Panama']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones', 'places_in_news_conflict_zones', 'Places in News & Conflict Zones (West Asia / Levant: Gaza, West Bank, Golan Heights, Sinai; Sahel Region: Mali, Niger, Burkina Faso, Chad; Horn of Africa: Tigray, Somaliland; Eastern Europe: Donbas, Crimea, Zaporizhzhia; South China Sea)', 3,
-        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Gaza', 'Golan Heights', 'Sahel', 'Tigray', 'Donbas', 'Zaporizhzhia', 'South China Sea', 'Crimea']::text[], ARRAY['Places in News', 'Conflict Zones', 'Gaza', 'Golan', 'Sahel', 'Tigray', 'Donbas', 'Levant', 'South China Sea']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage', 'major_world_rivers_lakes_drainage', 'Major World Rivers, Lakes & Drainage Basins (Nile, Amazon, Congo, Danube, Rhine, Volga, Mekong, Tigris-Euphrates, Lake Victoria, Lake Baikal, Great Lakes of North America, Rift Valley Lakes)', 3,
-        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Nile River', 'Amazon River', 'Danube River', 'Mekong River', 'Lake Victoria', 'Lake Baikal', 'Great Lakes']::text[], ARRAY['Rivers', 'Lakes', 'Drainage', 'Nile', 'Amazon', 'Danube', 'Mekong', 'Baikal', 'Great Lakes', 'World Geography']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET
@@ -1197,16 +999,72 @@ INSERT INTO public.knowledge_nodes (
     children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
 ) VALUES
     (
-        'geography_earth_systems.world_mapping_geopolitical_locations.mountain_ranges_peaks_plateaus_world', 'mountain_ranges_peaks_plateaus_world', 'Global Mountain Ranges, Continental Summits, Major Plateaus & Deserts (Alps, Andes, Rockies, Atlas, Urals, Anatolian Plateau, Tibetan Plateau, Atacama, Namib, Kalahari, Gobi)', 3,
+        'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance', 'time_work_speed_distance', 'Time, Work, Speed & Distance (Time & Motion Kinetics - Time & Work, Pipes & Cisterns, Speed-Time-Distance, Relative Speed, Problems on Trains, Boats & Streams)', 3,
+        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.time_and_work_pipes_and_cisterns', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_trains', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.boats_streams_races_circular_tracks']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Time', 'Work', 'Speed', 'Distance', 'Motion', 'Kinetics', 'Pipes', 'Cisterns', 'Relative', 'Problems', 'Trains', 'Boats', 'Streams']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability', 'permutation_combination_probability', 'Permutation, Combination & Probability (Combinatorics - Fundamental Counting Principle, Factorials, Permutations / Arrangements, Combinations / Selections; Probability Science - Sample Space, Events, Independent & Mutually Exclusive Events, Conditional Probability)', 3,
+        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.fundamental_counting_principle_permutations', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.probability_events_conditional_bayes', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.set_theory_venn_diagrams_max_min']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Permutation', 'Combination', 'Probability', 'Combinatorics', 'Fundamental', 'Counting', 'Principle', 'Factorials', 'Permutations', 'Arrangements', 'Combinations', 'Selections', 'Science', 'Sample', 'Space', 'Events', 'Independent', 'Mutually', 'Exclusive', 'Conditional']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry', 'mensuration_geometry', 'Mensuration & Geometry (Spatial Measurement - 2D Geometrical Shapes: Triangles, Circles, Quadrilaterals; Perimeter & Area; 3D Solids: Cubes, Cuboids, Cylinders, Cones, Spheres; Surface Area & Volume)', 3,
+        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy',
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry.2d_geometry_mensuration_triangles_circles_polygons', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.mensuration_geometry.3d_mensuration_solids_surface_area_volume']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Mensuration', 'Geometry', 'Spatial', 'Measurement', 'Geometrical', 'Shapes', 'Triangles', 'Circles', 'Quadrilaterals', 'Perimeter', 'Area', 'Solids', 'Cubes', 'Cuboids', 'Cylinders', 'Cones', 'Spheres', 'Surface', 'Volume']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning', 'logical_analytical_reasoning', 'Logical & Analytical Reasoning (Deductive Logic - Syllogisms / Venn Diagram & Rules Method, Logical Deductions; Spatial & Relational Logic - Linear & Circular Seating Arrangements, Blood Relations & Family Trees, Direction Sense & Compass Problems, Clocks & Calendar Calculations)', 3,
+        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning',
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.syllogisms_venn_logical_deductions', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.linear_circular_complex_seating_arrangements', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.blood_relations_family_trees_coded_relations', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.direction_distance_sense_shadows', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.clocks_angle_coincidence_faulty_clocks', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.calendar_odd_days_leap_years_repetition']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Logical', 'Analytical', 'Reasoning', 'Deductive', 'Logic', 'Syllogisms', 'Venn', 'Diagram', 'Rules', 'Method', 'Deductions', 'Spatial', 'Relational', 'Linear', 'Circular', 'Seating', 'Arrangements', 'Blood', 'Relations', 'Family', 'Trees', 'Direction', 'Sense', 'Compass', 'Problems', 'Clocks', 'Calendar', 'Calculations']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency', 'data_interpretation_data_sufficiency', 'Data Interpretation & Data Sufficiency (Data Formats - Bar Charts, Pie Charts, Line Graphs, Data Tables, Mixed Graphs; Data Sufficiency - Evaluating Sufficiency of Given Statements to Answer Questions)', 3,
+        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning',
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.tabular_di_and_missing_data_tables', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.bar_charts_simple_grouped_stacked', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.line_graphs_multiseries_trends', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.pie_charts_percentage_degree_distribution', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.mixed_graphs_multiaxis_combinations', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.caselet_di_paragraph_data', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.venn_diagram_based_di_and_set_caselets', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.radar_spider_scatter_plots', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.data_interpretation_data_sufficiency.data_sufficiency_evaluating_statements']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Data', 'Interpretation', 'Sufficiency', 'Formats', 'Bar', 'Charts', 'Pie', 'Line', 'Graphs', 'Tables', 'Mixed', 'Evaluating', 'Given', 'Statements', 'Answer', 'Questions']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition', 'problem_solving_pattern_recognition', 'Problem Solving & Pattern Recognition (Coding, Series & Puzzles - Coding-Decoding, Number Series, Letter Series, Matrix & Grid Puzzles, Ranking & Ordering, Cube Folding & Dice)', 3,
+        'Topic', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning',
+        ARRAY['general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.number_letter_alphanumeric_series', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_matrix_substitution', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.order_ranking_comparative_arrangements', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.cubes_dice_folding_nets_painting', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.non_verbal_reasoning_mirror_water_figure_completion', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.mathematical_operators_symbolic_logic']::text[], ARRAY['general_mental_ability_quantitative_aptitude_comprehension', 'general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning']::text[], '{"upsc": ["Prelims-CSAT"], "kas": ["Prelims-P2", "Mains-GS1"], "ssc": ["Quant", "Reasoning"]}'::jsonb,
+        '[UPSC: Prelims-CSAT] [KAS: Prelims-P2, Mains-GS1] [SSC: Quant/Reasoning] [Banking]', '', ARRAY[]::text[], ARRAY['Problem', 'Solving', 'Pattern', 'Recognition', 'Coding', 'Series', 'Puzzles', 'Decoding', 'Number', 'Letter', 'Matrix', 'Grid', 'Ranking', 'Ordering', 'Cube', 'Folding', 'Dice']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations', 'enclosed_seas_bordering_nations', 'Enclosed Seas, Marginal Seas & Bordering Nations (Mediterranean Sea, Black Sea, Caspian Sea, Red Sea, Baltic Sea, Persian Gulf, Aral Sea, Dead Sea)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Alps', 'Andes', 'Rockies', 'Atlas Mountains', 'Tibetan Plateau', 'Anatolian Plateau', 'Atacama Desert']::text[], ARRAY['Mountains', 'Plateaus', 'Deserts', 'Alps', 'Andes', 'Rockies', 'Tibet', 'Atacama', 'World Relief']::text[],
+        ARRAY['geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations.mediterranean_black_and_caspian_seas_mapping', 'geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations.red_sea_persian_gulf_baltic_and_dead_sea_mapping']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Mediterranean Sea', 'Black Sea', 'Caspian Sea', 'Red Sea', 'Baltic Sea', 'Persian Gulf', 'Aral Sea']::text[], ARRAY['Enclosed', 'Seas', 'Bordering', 'Countries', 'Mediterranean', 'Black Sea', 'Caspian', 'Red Sea', 'Persian Gulf']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals', 'strategic_straits_chokepoints_canals', 'Strategic Maritime Straits, Canals & Chokepoints (Strait of Hormuz, Bab-el-Mandeb, Malacca Strait, Bosphorus & Dardanelles, Kerch Strait, Taiwan Strait, Suez Canal, Panama Canal)', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
+        ARRAY['geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals.global_maritime_chokepoints_hormuz_malacca_bab_el_mandeb', 'geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals.strategic_canals_suez_panama_taiwan_strait_mapping']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Strait of Hormuz', 'Bab-el-Mandeb', 'Malacca Strait', 'Bosphorus', 'Dardanelles', 'Kerch Strait', 'Taiwan Strait', 'Suez Canal']::text[], ARRAY['Straits', 'Chokepoints', 'Canals', 'Hormuz', 'Bab el Mandeb', 'Malacca', 'Bosphorus', 'Suez Canal', 'Panama']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones', 'places_in_news_conflict_zones', 'Places in News & Conflict Zones (West Asia / Levant: Gaza, West Bank, Golan Heights, Sinai; Sahel Region: Mali, Niger, Burkina Faso, Chad; Horn of Africa: Tigray, Somaliland; Eastern Europe: Donbas, Crimea, Zaporizhzhia; South China Sea)', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
+        ARRAY['geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones.geopolitical_conflict_zones_and_flashpoints_in_news']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Gaza', 'Golan Heights', 'Sahel', 'Tigray', 'Donbas', 'Zaporizhzhia', 'South China Sea', 'Crimea']::text[], ARRAY['Places in News', 'Conflict Zones', 'Gaza', 'Golan', 'Sahel', 'Tigray', 'Donbas', 'Levant', 'South China Sea']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories', 'international_land_borders_disputed_territories', 'International Land Borders, Landlocked Nations & Disputed Boundary Lines (Radcliffe Line, McMahon Line, Durand Line, 38th Parallel, 49th Parallel, Kuril Islands, Senkaku/Diaoyu, Spratly/Paracel)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories.international_boundary_lines_and_landlocked_countries_mapping']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.world_mapping_geopolitical_locations']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1] [SSC: GA]', '', ARRAY['Radcliffe Line', 'McMahon Line', 'Durand Line', 'Landlocked Countries', 'Disputed Islands']::text[], ARRAY['Borders', 'Boundary Lines', 'Landlocked', 'Durand Line', 'McMahon Line', 'Radcliffe', 'Disputed Territories']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
@@ -1274,12 +1132,268 @@ INSERT INTO public.knowledge_nodes (
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
+        'art_culture_heritage.indian_literature_languages.classical_languages_of_india_scripts', 'classical_languages_of_india_scripts', 'Classical Languages of India & Evolution of Scripts', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_literature_languages',
+        ARRAY['art_culture_heritage.indian_literature_languages.classical_languages_of_india_scripts.classical_languages_of_india_criteria_recognition', 'art_culture_heritage.indian_literature_languages.classical_languages_of_india_scripts.evolution_of_ancient_indian_scripts_brahmi_kharosthi']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_literature_languages']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Classical', 'Languages', 'India', 'Evolution', 'Scripts']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.major_fairs_religious_cultural_festivals', 'major_fairs_religious_cultural_festivals', 'Major Fairs & Religious Cultural Festivals of India', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage',
+        ARRAY['art_culture_heritage.fairs_festivals_crafts_unesco_heritage.major_fairs_religious_cultural_festivals.major_religious_cultural_fairs_festivals_india']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Major', 'Fairs', 'Religious', 'Cultural', 'Festivals', 'India']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.art_culture_of_karnataka.karnataka_temple_architecture_sculpture', 'karnataka_temple_architecture_sculpture', 'Karnataka Temple Architecture & Sculptural Evolution', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka',
+        ARRAY['art_culture_heritage.art_culture_of_karnataka.karnataka_temple_architecture_sculpture.badami_chalukya_architecture_aihole_badami_pattadakal', 'art_culture_heritage.art_culture_of_karnataka.karnataka_temple_architecture_sculpture.hoysala_architecture_sculpture_belur_halebidu_somanathapura', 'art_culture_heritage.art_culture_of_karnataka.karnataka_temple_architecture_sculpture.vijayanagara_architecture_hampi_unesco_monuments', 'art_culture_heritage.art_culture_of_karnataka.karnataka_temple_architecture_sculpture.rashtrakuta_kadamba_ganga_bahmani_architecture']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka']::text[], '{"kas": ["Prelims-P1", "Mains-GS1"], "upsc": ["Prelims-GS1", "Mains-GS1"]}'::jsonb,
+        '[KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Karnataka', 'Temple', 'Architecture', 'Sculptural', 'Evolution']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.art_culture_of_karnataka.performing_arts_theatre_folk_traditions_of_karnataka', 'performing_arts_theatre_folk_traditions_of_karnataka', 'Performing Arts, Theatre & Folk Traditions of Karnataka', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka',
+        ARRAY['art_culture_heritage.art_culture_of_karnataka.performing_arts_theatre_folk_traditions_of_karnataka.yakshagana_theatre_tradition_coastal_malnad', 'art_culture_heritage.art_culture_of_karnataka.performing_arts_theatre_folk_traditions_of_karnataka.karnataka_folk_dances_dollu_kunitha_veeragase_kamsale', 'art_culture_heritage.art_culture_of_karnataka.performing_arts_theatre_folk_traditions_of_karnataka.puppetry_traditions_togalu_gombeyaata_karnataka']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka']::text[], '{"kas": ["Prelims-P1", "Mains-GS1"], "upsc": ["Prelims-GS1", "Mains-GS1"]}'::jsonb,
+        '[KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Performing', 'Arts', 'Theatre', 'Folk', 'Traditions', 'Karnataka']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.art_culture_of_karnataka.karnataka_paintings_crafts_gi_heritage', 'karnataka_paintings_crafts_gi_heritage', 'Karnataka Paintings, Traditional Crafts & GI Heritage', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka',
+        ARRAY['art_culture_heritage.art_culture_of_karnataka.karnataka_paintings_crafts_gi_heritage.mysore_traditional_paintings_gesso_work', 'art_culture_heritage.art_culture_of_karnataka.karnataka_paintings_crafts_gi_heritage.gi_tagged_handicrafts_and_textiles_of_karnataka']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka']::text[], '{"kas": ["Prelims-P1", "Mains-GS1"], "upsc": ["Prelims-GS1", "Mains-GS1"]}'::jsonb,
+        '[KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Karnataka', 'Paintings', 'Traditional', 'Crafts', 'GI', 'Heritage']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.art_culture_of_karnataka.vachana_haridasa_bhakti_movements_of_karnataka', 'vachana_haridasa_bhakti_movements_of_karnataka', 'Vachana & Haridasa Bhakti Movements of Karnataka', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka',
+        ARRAY['art_culture_heritage.art_culture_of_karnataka.vachana_haridasa_bhakti_movements_of_karnataka.vachana_movement_basaveshwara_anubhava_mantapa', 'art_culture_heritage.art_culture_of_karnataka.vachana_haridasa_bhakti_movements_of_karnataka.haridasa_movement_purandara_dasa_kanaka_dasa']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.art_culture_of_karnataka']::text[], '{"kas": ["Prelims-P1", "Mains-GS1"], "upsc": ["Prelims-GS1", "Mains-GS1"]}'::jsonb,
+        '[KAS: Prelims-P1, Mains-GS1] [UPSC: Prelims-GS1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Vachana', 'Haridasa', 'Bhakti', 'Movements', 'Karnataka']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    )
+ON CONFLICT (id) DO UPDATE SET
+    slug = EXCLUDED.slug,
+    name = EXCLUDED.name,
+    level = EXCLUDED.level,
+    level_name = EXCLUDED.level_name,
+    subject = EXCLUDED.subject,
+    subject_id = EXCLUDED.subject_id,
+    parent_id = EXCLUDED.parent_id,
+    children_ids = EXCLUDED.children_ids,
+    ancestor_ids = EXCLUDED.ancestor_ids,
+    exam_tags = EXCLUDED.exam_tags,
+    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
+    description = EXCLUDED.description,
+    entities = EXCLUDED.entities,
+    keywords = EXCLUDED.keywords,
+    stream = EXCLUDED.stream,
+    streams = EXCLUDED.streams,
+    updated_at = NOW();
+
+INSERT INTO public.knowledge_nodes (
+    id, slug, name, level, level_name, subject, subject_id, parent_id,
+    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
+) VALUES
+    (
+        'art_culture_heritage.martial_arts_traditional_sports_calendars.martial_arts_and_traditional_sports_of_india', 'martial_arts_and_traditional_sports_of_india', 'Traditional Martial Arts & Indigenous Sports of India', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.martial_arts_traditional_sports_calendars',
+        ARRAY['art_culture_heritage.martial_arts_traditional_sports_calendars.martial_arts_and_traditional_sports_of_india.traditional_indian_martial_arts_forms', 'art_culture_heritage.martial_arts_traditional_sports_calendars.martial_arts_and_traditional_sports_of_india.indigenous_sports_and_animal_sports_of_india']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.martial_arts_traditional_sports_calendars']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Traditional', 'Martial', 'Arts', 'Indigenous', 'Sports', 'India']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.martial_arts_traditional_sports_calendars.indian_calendar_systems_eras_national_symbols', 'indian_calendar_systems_eras_national_symbols', 'Indian Calendar Systems, Historical Eras & National Symbols', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.martial_arts_traditional_sports_calendars',
+        ARRAY['art_culture_heritage.martial_arts_traditional_sports_calendars.indian_calendar_systems_eras_national_symbols.indian_calendar_systems_and_historical_eras', 'art_culture_heritage.martial_arts_traditional_sports_calendars.indian_calendar_systems_eras_national_symbols.national_symbols_insignia_and_heritage_emblems']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.martial_arts_traditional_sports_calendars']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indian', 'Calendar', 'Systems', 'Historical', 'Eras', 'National', 'Symbols']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.cultural_institutions_numismatics_initiatives.national_cultural_institutions_and_bodies', 'national_cultural_institutions_and_bodies', 'Premier National Cultural Institutions, Akademis & Museums', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.cultural_institutions_numismatics_initiatives',
+        ARRAY['art_culture_heritage.cultural_institutions_numismatics_initiatives.national_cultural_institutions_and_bodies.premier_cultural_institutions_akademis_asi', 'art_culture_heritage.cultural_institutions_numismatics_initiatives.national_cultural_institutions_and_bodies.national_museums_galleries_and_libraries']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.cultural_institutions_numismatics_initiatives']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Premier', 'National', 'Cultural', 'Institutions', 'Akademis', 'Museums']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.cultural_institutions_numismatics_initiatives.ancient_and_medieval_indian_coinage_numismatics', 'ancient_and_medieval_indian_coinage_numismatics', 'Ancient & Medieval Indian Coinage (Numismatics)', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.cultural_institutions_numismatics_initiatives',
+        ARRAY['art_culture_heritage.cultural_institutions_numismatics_initiatives.ancient_and_medieval_indian_coinage_numismatics.ancient_indian_coinage_punch_marked_to_guptas', 'art_culture_heritage.cultural_institutions_numismatics_initiatives.ancient_and_medieval_indian_coinage_numismatics.medieval_coinage_south_india_sultanate_mughal']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.cultural_institutions_numismatics_initiatives']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Ancient', 'Medieval', 'Indian', 'Coinage', 'Numismatics']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards', 'government_heritage_conservation_schemes_awards', 'Government Heritage Conservation Schemes & Cultural Awards', 3,
+        'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.cultural_institutions_numismatics_initiatives',
+        ARRAY['art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards.cultural_heritage_schemes_and_initiatives', 'art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards.national_cultural_awards_and_honours']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.cultural_institutions_numismatics_initiatives']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Government', 'Heritage', 'Conservation', 'Schemes', 'Cultural', 'Awards']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.physical_geography_earth_systems.earth_and_the_solar_system', 'earth_and_the_solar_system', 'Earth and The Solar System', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.earth_and_the_solar_system.origin_of_earth_universe_solar_system', 'geography_earth_systems.physical_geography_earth_systems.earth_and_the_solar_system.earths_shape_dimensions_geoid']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Earth', 'Solar', 'System']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.physical_geography_earth_systems.rocks_formation_and_classification', 'rocks_formation_and_classification', 'Rocks: Formation and Classification', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.rocks_formation_and_classification.mineral_groups_and_physical_properties', 'geography_earth_systems.physical_geography_earth_systems.rocks_formation_and_classification.igneous_sedimentary_metamorphic_rocks_cycle']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Rocks', 'Formation', 'Classification']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.physical_geography_earth_systems.earthquakes', 'earthquakes', 'Earthquakes: Mechanics, Seismic Waves & Hazard Zones', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.earthquakes.earthquake_mechanics_waves_and_seismic_zones']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Earthquakes', 'Mechanics', 'Seismic', 'Waves', 'Hazard', 'Zones']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.physical_geography_earth_systems.volcanoes', 'volcanoes', 'Volcanoes: Volcanism, Intrusive & Extrusive Landforms', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.volcanoes.volcanic_forms_intrusive_plutonic_and_extrusive']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Volcanoes', 'Volcanism', 'Intrusive', 'Extrusive', 'Landforms']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.physical_geography_earth_systems.tsunamis', 'tsunamis', 'Tsunamis: Generation, Shoaling & Early Warning Systems', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.tsunamis.tsunami_generation_shoaling_and_early_warning']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Tsunamis', 'Generation', 'Shoaling', 'Early', 'Warning', 'Systems']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_moisture_condensation_precipitation', 'atmospheric_moisture_condensation_precipitation', 'Atmospheric Moisture, Condensation & Precipitation', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics',
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_moisture_condensation_precipitation.humidity_dew_point_condensation_forms_fog', 'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_moisture_condensation_precipitation.clouds_classification_and_rainfall_mechanisms']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Atmospheric', 'Moisture', 'Condensation', 'Precipitation']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.climatology_atmospheric_dynamics.hydrological_cycle_and_water_balance', 'hydrological_cycle_and_water_balance', 'Hydrological Cycle & Global Water Balance', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics',
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.hydrological_cycle_and_water_balance.global_hydrological_cycle_and_water_balance']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Hydrological', 'Cycle', 'Global', 'Water', 'Balance']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.climatology_atmospheric_dynamics.groundwater_hydrology_and_aquifers', 'groundwater_hydrology_and_aquifers', 'Groundwater Hydrology, Aquifers & Springs', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics',
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.groundwater_hydrology_and_aquifers.groundwater_hydrology_aquifers_and_springs']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Groundwater', 'Hydrology', 'Aquifers', 'Springs']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.human_geography_population_settlements.tribal_demographics_and_cultural_anthropology', 'tribal_demographics_and_cultural_anthropology', 'Tribal Demographics, PVTGs & Cultural Anthropology', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements',
+        ARRAY['geography_earth_systems.human_geography_population_settlements.tribal_demographics_and_cultural_anthropology.tribal_demographics_and_spatial_distribution_india', 'geography_earth_systems.human_geography_population_settlements.tribal_demographics_and_cultural_anthropology.particularly_vulnerable_tribal_groups_pvtgs_and_rights']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Spatial distribution, demographic profiles, linguistic classifications of Scheduled Tribes in India; Particularly Vulnerable Tribal Groups (PVTGs), Forest Rights Act, PESA, and tribal development policies.', ARRAY['Scheduled Tribes', 'PVTGs (Particularly Vulnerable Tribal Groups)', 'Forest Rights Act 2006', 'PESA Act 1996', 'Central Tribal Belt', 'North-Eastern Tribes']::text[], ARRAY['Tribal', 'Demographics', 'PVTGs', 'Cultural', 'Anthropology', 'Spatial', 'distribution', 'demographic', 'profiles', 'linguistic', 'classifications', 'Scheduled', 'Tribes', 'India', 'Particularly', 'Vulnerable', 'Groups', 'Forest', 'Rights', 'Act', 'PESA', 'tribal', 'development', 'policies', '2006', '1996', 'Central', 'Belt', 'North', 'Eastern']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.economic_resource_geography.agricultural_geography_and_food_security', 'agricultural_geography_and_food_security', 'Agricultural Geography, Cropping Patterns & Food Security', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.economic_resource_geography',
+        ARRAY['geography_earth_systems.economic_resource_geography.agricultural_geography_and_food_security.cropping_patterns_major_food_commercial_crops_india', 'geography_earth_systems.economic_resource_geography.agricultural_geography_and_food_security.agricultural_revolutions_land_reforms_food_security']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.economic_resource_geography']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Cropping patterns, agro-climatic zones, Green/White/Blue revolutions, irrigation infrastructure, land reforms, Public Distribution System, and National Food Security.', ARRAY['Agro-Climatic Zones', 'Cropping Patterns', 'Green Revolution', 'Food Corporation of India', 'PDS & NFSA 2013', 'Land Reforms']::text[], ARRAY['Agricultural', 'Geography', 'Cropping', 'Patterns', 'Food', 'Security', 'patterns', 'agro', 'climatic', 'zones', 'Green', 'White', 'Blue', 'revolutions', 'irrigation', 'infrastructure', 'land', 'reforms', 'Public', 'Distribution', 'System', 'National', 'Agro', 'Climatic', 'Zones', 'Revolution', 'Corporation', 'India', 'PDS', 'NFSA', '2013', 'Land', 'Reforms']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_united_states', 'regional_geography_united_states', 'Regional Geography of United States: Physiography, Agricultural & Industrial Belts', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_united_states.us_physical_relief_drainage_and_climate', 'geography_earth_systems.geography_of_the_world.regional_geography_united_states.us_economic_agricultural_and_industrial_belts']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Comprehensive physical relief, drainage (Mississippi-Missouri, Colorado, Great Lakes), agricultural belts (Corn Belt, Wheat Belt, Cotton Belt), and industrial manufacturing/tech complexes (Rust Belt, Silicon Valley, Texas Sunbelt).', ARRAY['Appalachian Mountains', 'Rocky Mountains', 'Mississippi-Missouri Drainage', 'Great Lakes', 'Corn Belt & Wheat Belt', 'American Manufacturing Belt (Rust Belt)', 'Silicon Valley']::text[], ARRAY['Regional', 'Geography', 'United', 'States', 'Physiography', 'Agricultural', 'Industrial', 'Belts', 'Comprehensive', 'physical', 'relief', 'drainage', 'Mississippi', 'Missouri', 'Colorado', 'Great', 'Lakes', 'agricultural', 'belts', 'Corn', 'Belt', 'Wheat', 'Cotton', 'industrial', 'manufacturing', 'tech', 'complexes', 'Rust', 'Silicon', 'Valley', 'Texas', 'Sunbelt', 'Appalachian', 'Mountains', 'Rocky', 'Drainage', 'American', 'Manufacturing']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_canada', 'regional_geography_canada', 'Regional Geography of Canada: Canadian Shield, Prairies & Energy Wealth', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_canada.canadian_shield_drainage_and_arctic_tundra', 'geography_earth_systems.geography_of_the_world.regional_geography_canada.canadian_prairies_resources_and_economy']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Laurentian Canadian Shield topography, glacial lake systems, St. Lawrence Seaway, Canadian Prairies grain belt, Athabasca oil sands, and mineral resources.', ARRAY['Canadian Shield (Laurentian Plateau)', 'St. Lawrence Seaway', 'Canadian Prairies (Alberta, Saskatchewan, Manitoba)', 'Athabasca Oil Sands', 'Sudbury Nickel Basin', 'Arctic Archipelago']::text[], ARRAY['Regional', 'Geography', 'Canada', 'Canadian', 'Shield', 'Prairies', 'Energy', 'Wealth', 'Laurentian', 'topography', 'glacial', 'lake', 'systems', 'St', 'Lawrence', 'Seaway', 'grain', 'belt', 'Athabasca', 'oil', 'sands', 'mineral', 'resources', 'Plateau', 'Alberta', 'Saskatchewan', 'Manitoba', 'Oil', 'Sands', 'Sudbury', 'Nickel', 'Basin', 'Arctic', 'Archipelago']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_russia_central_asia', 'regional_geography_russia_central_asia', 'Regional Geography of Russia & Central Asia: Siberia, Steppes & Hydrocarbon Basins', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_russia_central_asia.russia_physical_divisions_siberia_and_drainage', 'geography_earth_systems.geography_of_the_world.regional_geography_russia_central_asia.central_asian_steppes_and_resource_geography']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Ural divide, West Siberian Plain, major north-flowing rivers (Ob, Yenisey, Lena), Lake Baikal, Central Asian steppes, Fergana Valley, and Caspian hydrocarbon basins.', ARRAY['Ural Mountains', 'West Siberian Plain', 'Lake Baikal', 'Volga River Basin', 'Fergana Valley', 'Central Asian Steppes', 'Caspian Energy Basin']::text[], ARRAY['Regional', 'Geography', 'Russia', 'Central', 'Asia', 'Siberia', 'Steppes', 'Hydrocarbon', 'Basins', 'Ural', 'divide', 'West', 'Siberian', 'Plain', 'major', 'north', 'flowing', 'rivers', 'Ob', 'Yenisey', 'Lena', 'Lake', 'Baikal', 'Asian', 'steppes', 'Fergana', 'Valley', 'Caspian', 'hydrocarbon', 'basins', 'Mountains', 'Volga', 'River', 'Basin', 'Energy']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_china_east_asia', 'regional_geography_china_east_asia', 'Regional Geography of China & East Asia: Relief, River Basins & Industrial Clusters', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_china_east_asia.china_physical_relief_drainage_and_basins', 'geography_earth_systems.geography_of_the_world.regional_geography_china_east_asia.china_economic_geography_and_industrial_regions']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Tibetan Plateau, major river systems (Yangtze, Huang He / Yellow River, Pearl River), Sichuan Red Basin, agricultural zoning, and coastal Special Economic Zones (SEZs).', ARRAY['Tibetan Plateau', 'Yangtze River (Chang Jiang)', 'Yellow River (Huang He)', 'Sichuan Red Basin', 'Pearl River Delta SEZ', 'Yangtze River Delta', 'Bayan Obo Rare Earths']::text[], ARRAY['Regional', 'Geography', 'China', 'East', 'Asia', 'Relief', 'River', 'Basins', 'Industrial', 'Clusters', 'Tibetan', 'Plateau', 'major', 'river', 'systems', 'Yangtze', 'Huang', 'He', 'Yellow', 'Pearl', 'Sichuan', 'Red', 'Basin', 'agricultural', 'zoning', 'coastal', 'Special', 'Economic', 'Zones', 'SEZs', 'Chang', 'Jiang', 'Delta', 'SEZ', 'Bayan', 'Obo', 'Rare', 'Earths']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_japan', 'regional_geography_japan', 'Regional Geography of Japan: Archipelago Tectonics & Tokaido Industrial Megalopolis', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_japan.japan_archipelago_physiography_and_volcanism', 'geography_earth_systems.geography_of_the_world.regional_geography_japan.japan_economic_geography_and_industrial_belts']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Island geography (Honshu, Hokkaido, Kyushu, Shikoku), tectonic volcanism, Ring of Fire seismicity, Kanto Plain, Tokaido Megalopolis manufacturing belts, and marine fishing grounds.', ARRAY['Japanese Archipelago (4 Main Islands)', 'Mount Fuji & Japanese Alps', 'Kanto Plain', 'Tokaido Megalopolis (Keihin, Hanshin, Chukyo)', 'Kuroshio & Oyashio Fisheries', 'Ring of Fire Seismicity']::text[], ARRAY['Regional', 'Geography', 'Japan', 'Archipelago', 'Tectonics', 'Tokaido', 'Industrial', 'Megalopolis', 'Island', 'geography', 'Honshu', 'Hokkaido', 'Kyushu', 'Shikoku', 'tectonic', 'volcanism', 'Ring', 'Fire', 'seismicity', 'Kanto', 'Plain', 'manufacturing', 'belts', 'marine', 'fishing', 'grounds', 'Japanese', 'Main', 'Islands', 'Mount', 'Fuji', 'Alps', 'Keihin', 'Hanshin', 'Chukyo', 'Kuroshio', 'Oyashio', 'Fisheries', 'Seismicity']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_south_asia', 'regional_geography_south_asia', 'Regional Geography of South Asia: Subcontinent Relief, Drainage & Climate Vulnerability', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_south_asia.south_asian_subcontinent_physiography_and_drainage', 'geography_earth_systems.geography_of_the_world.regional_geography_south_asia.south_asian_climate_agriculture_and_resources']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Physiography of South Asian subcontinent (Himalayas, Hindu Kush, Indo-Gangetic-Brahmaputra plain, Thar Desert), monsoon climate dynamics, transboundary river treaties, and climate vulnerability.', ARRAY['Himalayan-Hindu Kush Barrier', 'Indus & Ganga-Brahmaputra Basins', 'Thar Desert & Chagai Hills', 'South Asian Monsoon', 'Transboundary River Treaties', 'Bay of Bengal Cyclone Vulnerability']::text[], ARRAY['Regional', 'Geography', 'South', 'Asia', 'Subcontinent', 'Relief', 'Drainage', 'Climate', 'Vulnerability', 'Physiography', 'Asian', 'subcontinent', 'Himalayas', 'Hindu', 'Kush', 'Indo', 'Gangetic', 'Brahmaputra', 'plain', 'Thar', 'Desert', 'monsoon', 'climate', 'dynamics', 'transboundary', 'river', 'treaties', 'vulnerability', 'Himalayan', 'Barrier', 'Indus', 'Ganga', 'Basins', 'Chagai', 'Hills', 'Monsoon', 'Transboundary', 'River', 'Treaties', 'Bay', 'Bengal', 'Cyclone']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_south_east_asia', 'regional_geography_south_east_asia', 'Regional Geography of South-East Asia: Mainland River Systems & Insular Archipelagos', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_south_east_asia.mainland_indochina_physiography_and_rivers', 'geography_earth_systems.geography_of_the_world.regional_geography_south_east_asia.insular_southeast_asia_archipelago_and_resources']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Mainland Indochina rivers (Mekong, Irrawaddy, Chao Phraya, Red River), maritime archipelagos (Indonesia, Philippines, Malaysia), volcanic arcs, Sunda Shelf, and tropical agricultural/mineral resources.', ARRAY['Mekong River Basin', 'Tonle Sap Lake', 'Indonesian Archipelago (Java, Sumatra, Borneo)', 'Sunda Shelf & Sahul Shelf', 'Pacific Ring of Fire Volcanism', 'Palm Oil & Rubber Belts']::text[], ARRAY['Regional', 'Geography', 'South', 'East', 'Asia', 'Mainland', 'River', 'Systems', 'Insular', 'Archipelagos', 'Indochina', 'rivers', 'Mekong', 'Irrawaddy', 'Chao', 'Phraya', 'Red', 'maritime', 'archipelagos', 'Indonesia', 'Philippines', 'Malaysia', 'volcanic', 'arcs', 'Sunda', 'Shelf', 'tropical', 'agricultural', 'mineral', 'resources', 'Basin', 'Tonle', 'Sap', 'Lake', 'Indonesian', 'Archipelago', 'Java', 'Sumatra', 'Borneo', 'Sahul', 'Pacific', 'Ring', 'Fire', 'Volcanism', 'Palm', 'Oil', 'Rubber', 'Belts']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_new_zealand', 'regional_geography_new_zealand', 'Regional Geography of New Zealand: Southern Alps, Volcanic Zones & Pastoral Economy', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_new_zealand.new_zealand_north_and_south_island_physiography', 'geography_earth_systems.geography_of_the_world.regional_geography_new_zealand.new_zealand_climate_pastoral_economy_and_resources']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'North and South Islands separated by Cook Strait; Southern Alps and fiordlands; Taupo Volcanic Zone and geothermal features; Canterbury Plains; temperate maritime climate and dairy/pastoral economy.', ARRAY['Cook Strait', 'Southern Alps & Mount Cook (Aoraki)', 'Taupo Volcanic Zone & Rotorua', 'Canterbury Plains', 'Fiordland (Milford Sound)', 'Fonterra & Dairy Pastoral Economy']::text[], ARRAY['Regional', 'Geography', 'New', 'Zealand', 'Southern', 'Alps', 'Volcanic', 'Zones', 'Pastoral', 'Economy', 'North', 'South', 'Islands', 'separated', 'Cook', 'Strait', 'fiordlands', 'Taupo', 'Zone', 'geothermal', 'features', 'Canterbury', 'Plains', 'temperate', 'maritime', 'climate', 'dairy', 'pastoral', 'economy', 'Mount', 'Aoraki', 'Rotorua', 'Fiordland', 'Milford', 'Sound', 'Fonterra', 'Dairy']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica', 'regional_geography_europe_africa_americas_oceania_antarctica', 'Continental Geography: Europe, Africa, South America, Australia & Antarctica', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.geography_of_the_world',
+        ARRAY['geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica.europe_regional_physiography_and_river_basins', 'geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica.africa_regional_physiography_rift_valley_and_basins', 'geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica.south_america_regional_physiography_and_biomes', 'geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica.australia_oceania_and_antarctica_geography']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.geography_of_the_world']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', 'Continental physical features, river basins, plateaus, and biomes: Europe (North European Plain, Rhine, Danube, Alps); Africa (Rift Valley, Nile, Congo, Sahara); South America (Andes, Amazon, Pampas, Atacama); Australia (Great Dividing Range, Murray-Darling, Great Barrier Reef); Antarctica (ice sheet, Transantarctic Mountains).', ARRAY['East African Rift Valley', 'Amazon Basin & Andes Mountains', 'Rhine & Danube River Systems', 'Great Dividing Range & Outback', 'Antarctic Ice Sheet & Vinson Massif', 'Pampas, Selvas & Llanos Biomes']::text[], ARRAY['Continental', 'Geography', 'Europe', 'Africa', 'South', 'America', 'Australia', 'Antarctica', 'physical', 'features', 'river', 'basins', 'plateaus', 'biomes', 'North', 'European', 'Plain', 'Rhine', 'Danube', 'Alps', 'Rift', 'Valley', 'Nile', 'Congo', 'Sahara', 'Andes', 'Amazon', 'Pampas', 'Atacama', 'Great', 'Dividing', 'Range', 'Murray', 'Darling', 'Barrier', 'Reef', 'ice', 'sheet', 'Transantarctic', 'Mountains', 'East', 'African', 'Basin', 'River', 'Systems', 'Outback', 'Antarctic', 'Ice', 'Sheet', 'Vinson', 'Massif', 'Selvas', 'Llanos', 'Biomes']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
         'inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.dyslexia_dyscalculia_dysgraphia_dyspraxia_identification', 'dyslexia_dyscalculia_dysgraphia_dyspraxia_identification', 'Specific Learning Disabilities: Dyslexia, Dyscalculia, Dysgraphia, Dyspraxia', 3,
         'Topic', 'INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS', 'inclusive_education_diverse_learners_special_needs', 'inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders',
         ARRAY[]::text[], ARRAY['inclusive_education_diverse_learners_special_needs', 'inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders']::text[], '{"teaching": ["KARTET", "GPSTR", "HSTR", "CTET"], "kset": ["Paper-1"], "ugc_net": ["Paper-1"]}'::jsonb,
         '[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]', '', ARRAY[]::text[], ARRAY['SPECIFIC LEARNING DISABILITIES: DYSLEXIA, DYSCALCULIA, DYSGRAPHIA, DYSPRAXIA']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    ),
+    )
+ON CONFLICT (id) DO UPDATE SET
+    slug = EXCLUDED.slug,
+    name = EXCLUDED.name,
+    level = EXCLUDED.level,
+    level_name = EXCLUDED.level_name,
+    subject = EXCLUDED.subject,
+    subject_id = EXCLUDED.subject_id,
+    parent_id = EXCLUDED.parent_id,
+    children_ids = EXCLUDED.children_ids,
+    ancestor_ids = EXCLUDED.ancestor_ids,
+    exam_tags = EXCLUDED.exam_tags,
+    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
+    description = EXCLUDED.description,
+    entities = EXCLUDED.entities,
+    keywords = EXCLUDED.keywords,
+    stream = EXCLUDED.stream,
+    streams = EXCLUDED.streams,
+    updated_at = NOW();
+
+INSERT INTO public.knowledge_nodes (
+    id, slug, name, level, level_name, subject, subject_id, parent_id,
+    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
+) VALUES
     (
         'inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders.adhd_attention_deficit_hyperactivity_disorder_classroom_interventions', 'adhd_attention_deficit_hyperactivity_disorder_classroom_interventions', 'ADHD (Attention Deficit Hyperactivity Disorder) & Behavioral Interventions', 3,
         'Topic', 'INCLUSIVE_EDUCATION_DIVERSE_LEARNERS_SPECIAL_NEEDS', 'inclusive_education_diverse_learners_special_needs', 'inclusive_education_diverse_learners_special_needs.learning_disabilities_and_neurodevelopmental_disorders',
@@ -1370,30 +1484,7 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['pedagogical_strategies_curriculum_assessment', 'pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction']::text[], '{"teaching": ["KARTET", "GPSTR", "HSTR", "CTET"], "kset": ["Paper-1"], "ugc_net": ["Paper-1"]}'::jsonb,
         '[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]', '', ARRAY[]::text[], ARRAY['ASSESSMENT FOR, OF & AS LEARNING: FORMATIVE VS SUMMATIVE ASSESSMENT']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    )
-ON CONFLICT (id) DO UPDATE SET
-    slug = EXCLUDED.slug,
-    name = EXCLUDED.name,
-    level = EXCLUDED.level,
-    level_name = EXCLUDED.level_name,
-    subject = EXCLUDED.subject,
-    subject_id = EXCLUDED.subject_id,
-    parent_id = EXCLUDED.parent_id,
-    children_ids = EXCLUDED.children_ids,
-    ancestor_ids = EXCLUDED.ancestor_ids,
-    exam_tags = EXCLUDED.exam_tags,
-    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
-    description = EXCLUDED.description,
-    entities = EXCLUDED.entities,
-    keywords = EXCLUDED.keywords,
-    stream = EXCLUDED.stream,
-    streams = EXCLUDED.streams,
-    updated_at = NOW();
-
-INSERT INTO public.knowledge_nodes (
-    id, slug, name, level, level_name, subject, subject_id, parent_id,
-    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
-) VALUES
+    ),
     (
         'pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction.continuous_and_comprehensive_evaluation_cce_scholastic_co-scholastic', 'continuous_and_comprehensive_evaluation_cce_scholastic_co-scholastic', 'Continuous and Comprehensive Evaluation (CCE): Scholastic & Co-Scholastic Aspects', 3,
         'Topic', 'PEDAGOGICAL_STRATEGIES_CURRICULUM_ASSESSMENT', 'pedagogical_strategies_curriculum_assessment', 'pedagogical_strategies_curriculum_assessment.assessment_evaluation_cce_and_test_construction',
@@ -1477,7 +1568,30 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['subject_specific_pedagogies', 'subject_specific_pedagogies.pedagogy_of_science_and_environmental_studies']::text[], '{"teaching": ["KARTET", "GPSTR", "HSTR", "CTET"], "kset": ["Paper-1"], "ugc_net": ["Paper-1"]}'::jsonb,
         '[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]', '', ARRAY[]::text[], ARRAY['SCIENCE LABORATORIES, SCIENCE KITS, EXHIBITIONS & HANDS-ON INQUIRY']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    ),
+    )
+ON CONFLICT (id) DO UPDATE SET
+    slug = EXCLUDED.slug,
+    name = EXCLUDED.name,
+    level = EXCLUDED.level,
+    level_name = EXCLUDED.level_name,
+    subject = EXCLUDED.subject,
+    subject_id = EXCLUDED.subject_id,
+    parent_id = EXCLUDED.parent_id,
+    children_ids = EXCLUDED.children_ids,
+    ancestor_ids = EXCLUDED.ancestor_ids,
+    exam_tags = EXCLUDED.exam_tags,
+    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
+    description = EXCLUDED.description,
+    entities = EXCLUDED.entities,
+    keywords = EXCLUDED.keywords,
+    stream = EXCLUDED.stream,
+    streams = EXCLUDED.streams,
+    updated_at = NOW();
+
+INSERT INTO public.knowledge_nodes (
+    id, slug, name, level, level_name, subject, subject_id, parent_id,
+    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
+) VALUES
     (
         'subject_specific_pedagogies.pedagogy_of_social_sciences.nature_of_social_sciences_critical_thinking_source_method_role_play', 'nature_of_social_sciences_critical_thinking_source_method_role_play', 'Nature of Social Sciences: Source Method, Critical Inquiry & Role Play', 3,
         'Topic', 'SUBJECT_SPECIFIC_PEDAGOGIES', 'subject_specific_pedagogies', 'subject_specific_pedagogies.pedagogy_of_social_sciences',
@@ -1568,30 +1682,7 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['national_policies_and_higher_education_research_aptitude', 'national_policies_and_higher_education_research_aptitude.research_methodology_kset_ugc_net_paper1']::text[], '{"teaching": ["KARTET", "GPSTR", "HSTR", "CTET"], "kset": ["Paper-1"], "ugc_net": ["Paper-1"]}'::jsonb,
         '[Teaching: KARTET, GPSTR, HSTR, CTET] [KSET: Paper-1] [UGC-NET: Paper-1]', '', ARRAY[]::text[], ARRAY['THESIS & RESEARCH ARTICLE WRITING: STRUCTURE, ABSTRACT, METHODOLOGY & PEER REVIEW']::text[],
         'civil_services', ARRAY['civil_services']::text[]
-    )
-ON CONFLICT (id) DO UPDATE SET
-    slug = EXCLUDED.slug,
-    name = EXCLUDED.name,
-    level = EXCLUDED.level,
-    level_name = EXCLUDED.level_name,
-    subject = EXCLUDED.subject,
-    subject_id = EXCLUDED.subject_id,
-    parent_id = EXCLUDED.parent_id,
-    children_ids = EXCLUDED.children_ids,
-    ancestor_ids = EXCLUDED.ancestor_ids,
-    exam_tags = EXCLUDED.exam_tags,
-    raw_exam_tag_string = EXCLUDED.raw_exam_tag_string,
-    description = EXCLUDED.description,
-    entities = EXCLUDED.entities,
-    keywords = EXCLUDED.keywords,
-    stream = EXCLUDED.stream,
-    streams = EXCLUDED.streams,
-    updated_at = NOW();
-
-INSERT INTO public.knowledge_nodes (
-    id, slug, name, level, level_name, subject, subject_id, parent_id,
-    children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
-) VALUES
+    ),
     (
         'national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance.higher_education_regulatory_bodies_ugc_aicte_ncte_naac_nirf', 'higher_education_regulatory_bodies_ugc_aicte_ncte_naac_nirf', 'Regulatory & Quality Assurance Bodies: UGC, AICTE, NCTE, NAAC, NIRF & ABC (Academic Bank of Credits)', 3,
         'Topic', 'NATIONAL_POLICIES_AND_HIGHER_EDUCATION_RESEARCH_APTITUDE', 'national_policies_and_higher_education_research_aptitude', 'national_policies_and_higher_education_research_aptitude.higher_education_system_and_governance',

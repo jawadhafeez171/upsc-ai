@@ -1,0 +1,2913 @@
+[
+  {
+    "qnum": 1,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.indian_freedom_struggle.revolutionary_movements",
+    "candidates": [
+      [
+        28,
+        "history.indian_freedom_struggle",
+        2,
+        "Indian Freedom Struggle"
+      ],
+      [
+        28,
+        "history.indian_freedom_struggle.foundation_of_inc_moderate_phase.foundation_of_indian_national_congress",
+        4,
+        "Foundation of Indian National Congress"
+      ],
+      [
+        28,
+        "history.indian_freedom_struggle.gandhian_era_early_satyagrahas_non-cooperation_movement.early_indian_satyagrahas",
+        4,
+        "Early Indian Satyagrahas"
+      ],
+      [
+        28,
+        "history.indian_freedom_struggle.swarajists_revolutionary_nationalism_phase_ii_left-wing_upsurge.growth_of_socialist_communist_working_class_movements",
+        4,
+        "Growth of Socialist, Communist & Working Class Movements"
+      ],
+      [
+        28,
+        "history.indian_freedom_struggle.constitutional_impasse_1937_elections_pre-war_politics.1937_provincial_elections_congress_ministries",
+        4,
+        "1937 Provincial Elections & Congress Ministries"
+      ]
+    ],
+    "curr_subt": "Madam Bhikaji Cama & Paris Indian Society (Stuttgart Socialist Congress 1907)",
+    "question_text": "Consider the following statements related to Madam Bhikaji Cama:\nA. Sh"
+  },
+  {
+    "qnum": 2,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.indian_freedom_struggle.constitutional_development",
+    "candidates": [
+      [
+        28,
+        "history.indian_freedom_struggle.swadeshi_movement_extremism_revolutionary_nationalism_phase_i.constitutional_reforms_political_realignment",
+        4,
+        "Constitutional Reforms & Political Realignment"
+      ],
+      [
+        23,
+        "history.ancient_india.religious_movements_buddhism.buddhist_councils",
+        4,
+        "Buddhist Councils"
+      ],
+      [
+        23,
+        "history.ancient_india.religious_movements_jainism.jain_councils_schism",
+        4,
+        "Jain Councils & Schism"
+      ],
+      [
+        23,
+        "history.medieval_india.sur_empire_interregnum.sher_shah_suri_administrative_reforms",
+        4,
+        "Sher Shah Suri & Administrative Reforms"
+      ],
+      [
+        23,
+        "history.modern_india.socio-religious_reform_movements.bengal_eastern_india_reforms",
+        4,
+        "Bengal & Eastern India Reforms"
+      ]
+    ],
+    "curr_subt": "Morley-Minto Reforms (Indian Councils Act 1909) & Communal Electorates",
+    "question_text": "With reference to Indian History, Morley-Minto reforms 1909 resulted i"
+  },
+  {
+    "qnum": 3,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.indian_freedom_struggle.pre_independence_politics",
+    "candidates": [
+      [
+        23,
+        "history.modern_india.socio-religious_reform_movements.muslim_parsi_sikh_reform_movements",
+        4,
+        "Muslim, Parsi & Sikh Reform Movements"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle",
+        2,
+        "Indian Freedom Struggle"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle.revolt_of_1857",
+        3,
+        "Revolt of 1857"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle.growth_of_modern_nationalism_early_political_associations",
+        3,
+        "Growth of Modern Nationalism & Early Political Associations"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle.foundation_of_inc_moderate_phase",
+        3,
+        "Foundation of INC & Moderate Phase (1885–1905)"
+      ]
+    ],
+    "curr_subt": "Lahore Resolution 1940 (Pakistan Resolution) & Muslim League",
+    "question_text": "Select the incorrect statement about Lahore Resolution."
+  },
+  {
+    "qnum": 4,
+    "status": "EXACT_MATCH",
+    "curr_nid": "history.medieval_india.mughal_empire",
+    "new_nid": "history.medieval_india.mughal_empire",
+    "node_level": 3,
+    "node_name": "Mughal Empire",
+    "subject": "History",
+    "question_text": "Consider the following statements with reference to Mina Bazar:\n1. Hum"
+  },
+  {
+    "qnum": 5,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.medieval_india.maratha_empire",
+    "candidates": [
+      [
+        28,
+        "history.medieval_india.delhi_sultanate.sultanate_administration_economy_culture",
+        4,
+        "Sultanate Administration, Economy & Culture"
+      ],
+      [
+        28,
+        "history.medieval_india.mughal_empire.mughal_administration_economy_culture",
+        4,
+        "Mughal Administration, Economy & Culture"
+      ],
+      [
+        28,
+        "history.medieval_india.maratha_empire_regional_states.chhatrapati_shivaji_maharaj_early_maratha_state",
+        4,
+        "Chhatrapati Shivaji Maharaj & Early Maratha State"
+      ],
+      [
+        23,
+        "history.ancient_india.mauryan_empire.mauryan_administration_economy",
+        4,
+        "Mauryan Administration & Economy"
+      ],
+      [
+        23,
+        "history.ancient_india.gupta_empire.gupta_administration_society_economy",
+        4,
+        "Gupta Administration, Society & Economy"
+      ]
+    ],
+    "curr_subt": "Chhatrapati Shivaji Maharaj Administration & Dadaji Kondadev Tutelage",
+    "question_text": "Which of the following statements are correct in relation to Shivaji?\n"
+  },
+  {
+    "qnum": 6,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.indian_freedom_struggle.constitutional_development",
+    "candidates": [
+      [
+        28,
+        "history.indian_freedom_struggle.simon_commission_nehru_report_civil_disobedience_movement",
+        3,
+        "Simon Commission, Nehru Report & Civil Disobedience Movement (1927–1934)"
+      ],
+      [
+        28,
+        "history.indian_freedom_struggle.simon_commission_nehru_report_civil_disobedience_movement.simon_commission_the_nehru_report",
+        4,
+        "Simon Commission & The Nehru Report"
+      ],
+      [
+        23,
+        "history.post-independence_india.linguistic_reorganisation_of_states_national_consolidation.linguistic_demands_commissions",
+        4,
+        "Linguistic Demands & Commissions"
+      ],
+      [
+        23,
+        "history.post-independence_india.linguistic_reorganisation_of_states_national_consolidation.states_reorganisation_commission_implementation",
+        4,
+        "States Reorganisation Commission & Implementation"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle",
+        2,
+        "Indian Freedom Struggle"
+      ]
+    ],
+    "curr_subt": "Simon Commission (Indian Statutory Commission 1927) & Boycott",
+    "question_text": "Consider the following statements about Indian Statutory Commission:\nA"
+  },
+  {
+    "qnum": 7,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.history_of_karnataka.freedom_movement_in_karnataka",
+    "candidates": [
+      [
+        28,
+        "history.history_of_karnataka.wodeyars_of_mysore_hyder-tipu_era",
+        3,
+        "Wodeyars of Mysore & Hyder-Tipu Era"
+      ],
+      [
+        28,
+        "history.history_of_karnataka.socio-religious_cultural_movements_in_karnataka",
+        3,
+        "Socio-Religious & Cultural Movements in Karnataka"
+      ],
+      [
+        28,
+        "history.history_of_karnataka.armed_resistance_freedom_movement_in_karnataka",
+        3,
+        "Armed Resistance & Freedom Movement in Karnataka"
+      ],
+      [
+        28,
+        "history.history_of_karnataka.karnataka_unification_movement_post-independence_social_transformation",
+        3,
+        "Karnataka Unification Movement (Ekikarana) & Post-Independence Social Transformation"
+      ],
+      [
+        28,
+        "history.history_of_karnataka.wodeyars_of_mysore_hyder-tipu_era.early_wodeyar_dynasty_of_mysore",
+        4,
+        "Early Wodeyar Dynasty of Mysore"
+      ]
+    ],
+    "curr_subt": "National Movement in Princely Mysore (Praja Mitra Mandali & Mysore Congress)",
+    "question_text": "The National Movement in the princely state of Mysore has been divided"
+  },
+  {
+    "qnum": 8,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.history_of_karnataka.revolts_against_british_rule",
+    "candidates": [
+      [
+        28,
+        "history.history_of_karnataka.vijayanagara_empire_nayaka_kingdoms",
+        3,
+        "Vijayanagara Empire & Nayaka Kingdoms"
+      ],
+      [
+        28,
+        "history.history_of_karnataka.vijayanagara_empire_nayaka_kingdoms.vijayanagara_empire",
+        4,
+        "Vijayanagara Empire"
+      ],
+      [
+        28,
+        "history.history_of_karnataka.vijayanagara_empire_nayaka_kingdoms.post-vijayanagara_nayaka_kingdoms",
+        4,
+        "Post-Vijayanagara Nayaka Kingdoms"
+      ],
+      [
+        23,
+        "history.medieval_india.vijayanagara_empire_deccan_sultanates",
+        3,
+        "Vijayanagara Empire & Deccan Sultanates"
+      ],
+      [
+        23,
+        "history.medieval_india.vijayanagara_empire_deccan_sultanates.vijayanagara_empire",
+        4,
+        "Vijayanagara Empire"
+      ]
+    ],
+    "curr_subt": "Nagar Peasant Revolt 1830-31 (Budi Basappa & Shivarama)",
+    "question_text": "\"Nagar revolt was due to the faulty system of renting out large tracts"
+  },
+  {
+    "qnum": 9,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.architecture_sculpture_monuments.cave_architecture_rock_cut",
+    "candidates": [
+      [
+        23,
+        "art_culture_heritage.indian_architecture_sculpture.mauryan_art_pillars",
+        3,
+        "Mauryan Art & Pillars (Ashokan Pillars, Stupas, Sanchi, Bharhut, Rock-Cut Caves - Barabar)"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_architecture_sculpture.post-mauryan_caves_sculpture",
+        3,
+        "Post-Mauryan Caves & Sculpture (Karle, Bhaja, Kanheri, Gandhara, Mathura & Amaravati Schools of Art)"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_paintings_visual_arts.ancient_medieval_murals",
+        3,
+        "Ancient & Medieval Murals (Ajanta Caves, Ellora, Bagh Caves, Sittanavasal, Lepakshi)"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_literature_languages.classical_religious_texts",
+        3,
+        "Classical & Religious Texts (Buddhist Canon - Tripitakas, Jatakas; Jain Canon - Agamas; Sangam Literature - Ettuthokai, Pattupattu, Silappatikaram, Manimekalai)"
+      ],
+      [
+        23,
+        "art_culture_heritage.schools_of_indian_philosophy.heterodox_nastika_systems",
+        3,
+        "Heterodox / Nastika Systems (Carvaka / Lokayata Materialism, Ajivika Determinism, Jain Philosophy - Anekantavada, Syadvada, Buddhist Philosophy - Pratityasamutpada, Anatta, Shunyata)"
+      ]
+    ],
+    "curr_subt": "Ajanta Caves Buddhist Murals (Mahayana & Hinayana Phases)",
+    "question_text": "To which sect Ajanta's most of the paintings belong?"
+  },
+  {
+    "qnum": 10,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.modern_india.socio_religious_reform_movements",
+    "candidates": [
+      [
+        20,
+        "history.modern_india",
+        2,
+        "Modern India"
+      ],
+      [
+        20,
+        "history.modern_india.advent_of_european_traders_anglo-french_rivalry",
+        3,
+        "Advent of European Traders & Anglo-French Rivalry"
+      ],
+      [
+        20,
+        "history.modern_india.british_conquest_consolidation_of_india",
+        3,
+        "British Conquest & Consolidation of India"
+      ],
+      [
+        20,
+        "history.modern_india.british_expansionist_policies_administrative_machinery",
+        3,
+        "British Expansionist Policies & Administrative Machinery"
+      ],
+      [
+        20,
+        "history.modern_india.economic_impact_of_british_rule",
+        3,
+        "Economic Impact of British Rule"
+      ]
+    ],
+    "curr_subt": "Raja Ram Mohan Roy (Tuhfat-ul-Muwahhidin, Brahmo Samaj & Atmiya Sabha)",
+    "question_text": "Consider the following statements about Rajaram Mohan Roy :\nStatements"
+  },
+  {
+    "qnum": 11,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.indian_freedom_struggle.revolutionary_movements",
+    "candidates": [
+      [
+        20,
+        "history.indian_freedom_struggle",
+        2,
+        "Indian Freedom Struggle"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle.revolt_of_1857",
+        3,
+        "Revolt of 1857"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle.growth_of_modern_nationalism_early_political_associations",
+        3,
+        "Growth of Modern Nationalism & Early Political Associations"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle.foundation_of_inc_moderate_phase",
+        3,
+        "Foundation of INC & Moderate Phase (1885–1905)"
+      ],
+      [
+        20,
+        "history.indian_freedom_struggle.swadeshi_movement_extremism_revolutionary_nationalism_phase_i",
+        3,
+        "Swadeshi Movement, Extremism & Revolutionary Nationalism Phase I (1905–1918)"
+      ]
+    ],
+    "curr_subt": "Santi Ghose & Suniti Choudhury (Comilla District Magistrate Assassination)",
+    "question_text": "Who amongst the following women revolutionaries at the age of 15-years"
+  },
+  {
+    "qnum": 12,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_executive.state_executive_governor_chief_minister",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.salient_features_amendments_basic_structure",
+        2,
+        "Salient Features, Amendments & Basic Structure"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.historical_background_making_of_the_constitution.government_of_india_acts",
+        3,
+        "Government of India Acts (1858, 1892, Indian Councils Act 1909 / Morley-Minto, GOI Act 1919 / Montagu-Chelmsford, GOI Act 1935, Indian Independence Act 1947)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.salient_features_amendments_basic_structure.major_constitutional_amendments",
+        3,
+        "Major Constitutional Amendments (42nd, 44th, 73rd, 74th, 86th, 101st GST, 103rd EWS, 104th, 105th, 106th Nari Shakti Vandan)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.fundamental_rights_-_part_iii_articles_12-35",
+        3,
+        "Fundamental Rights - Part III / Articles 12-35 (Right to Equality 14-18, Right to Freedom 19-22, Against Exploitation 23-24, Freedom of Religion 25-28, Cultural & Educational 29-30, Constitutional Remedies 32; Judicial Review & Writs - Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo-Warranto)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
+        3,
+        "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)"
+      ]
+    ],
+    "curr_subt": "Article 164(1A) & 91st Constitutional Amendment (15% Council Cap)",
+    "question_text": "Which of the following is not related to Article 164 (1A)?\nI. It was i"
+  },
+  {
+    "qnum": 13,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy",
+    "candidates": [
+      [
+        28,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.fundamental_rights_-_part_iii_articles_12-35",
+        3,
+        "Fundamental Rights - Part III / Articles 12-35 (Right to Equality 14-18, Right to Freedom 19-22, Against Exploitation 23-24, Freedom of Religion 25-28, Cultural & Educational 29-30, Constitutional Remedies 32; Judicial Review & Writs - Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo-Warranto)"
+      ],
+      [
+        28,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
+        3,
+        "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)"
+      ],
+      [
+        28,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.fundamental_duties_-_part_iv-a_article_51a",
+        3,
+        "Fundamental Duties - Part IV-A / Article 51A (Swaran Singh Committee, 42nd & 86th Amendments, Enforceability & Moral Obligation)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.structure_composition",
+        3,
+        "Structure & Composition (Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad; Qualification & Disqualification - Article 102, Representation of the People Act 1951, Anti-Defection Law / 10th Schedule)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.legislative_procedure_bills",
+        3,
+        "Legislative Procedure & Bills (Ordinary Bills, Money Bills Article 110, Financial Bills, Constitutional Amendment Bills, Joint Sitting Article 108)"
+      ]
+    ],
+    "curr_subt": "Article 38(2) - Minimizing Inequalities in Income and Status (44th Amendment)",
+    "question_text": "Which of the following Articles directs the State to introduce the Sch"
+  },
+  {
+    "qnum": 14,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs",
+    "new_nid": "geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs",
+    "node_level": 3,
+    "node_name": "Karnataka River Basins, Tributaries, Waterfalls & Major Dams Spatial Distribution (Krishna, Cauvery, Godavari, Pennar, West-Flowing Rivers: Sharavathi, Bedthi, Netravathi; Waterfalls: Jog, Shivanasamudra, Gokak, Magod, Abbey; Dams: KRS, Almatti, Tungabhadra, Linganamakki)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "Consider the following statements:\nA. Moyar river flows in borders of "
+  },
+  {
+    "qnum": 15,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.climatology_meteorology.atmospheric_composition_structure",
+    "candidates": [
+      [
+        23,
+        "geography_earth_systems.climatology_atmospheric_dynamics",
+        2,
+        "Climatology & Atmospheric Dynamics"
+      ],
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.earths_origin_internal_structure",
+        3,
+        "Earth's Origin & Internal Structure (Crust, Mantle, Core, Discontinuities - Mohorovicic, Gutenberg, Seismic Waves P & S)"
+      ],
+      [
+        23,
+        "geography_earth_systems.climatology_atmospheric_dynamics.atmosphere_structure_heat_budget",
+        3,
+        "Atmosphere Structure & Heat Budget (Troposphere, Stratosphere, Mesosphere, Thermosphere; Insolation, Terrestrial Radiation, Atmospheric Heat Budget)"
+      ],
+      [
+        23,
+        "geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts",
+        3,
+        "Atmospheric Pressure & Global Wind Belts (Pressure Belts - Equatorial Low, Subtropical High, Subpolar Low; Planetary Winds - Trade Winds, Westerlies, Polar Easterlies; Jet Streams)"
+      ],
+      [
+        23,
+        "geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india",
+        3,
+        "Physiographic Divisions of India (Himalayan Mountain System, Northern Great Plains, Peninsular Plateau, Coastal Plains, Lakshadweep & Andaman Nicobar Islands)"
+      ]
+    ],
+    "curr_subt": "Atmospheric Structure - Homosphere vs Heterosphere Divisions",
+    "question_text": "Consider the following statements regards to atmosphere:\nA. Homosphere"
+  },
+  {
+    "qnum": 16,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+    "node_level": 3,
+    "node_name": "International Land Borders, Landlocked Nations & Disputed Boundary Lines (Radcliffe Line, McMahon Line, Durand Line, 38th Parallel, 49th Parallel, Kuril Islands, Senkaku/Diaoyu, Spratly/Paracel)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "Consider the following countries:\nA. Finland\nB. Norway\nC. Armenia\nD. K"
+  },
+  {
+    "qnum": 17,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+    "node_level": 3,
+    "node_name": "Major World Rivers, Lakes & Drainage Basins (Nile, Amazon, Congo, Danube, Rhine, Volga, Mekong, Tigris-Euphrates, Lake Victoria, Lake Baikal, Great Lakes of North America, Rift Valley Lakes)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "How many of the following pairs are correctly matched?\nRiver | City\nA."
+  },
+  {
+    "qnum": 18,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.information_communication_technology_cybersecurity.quantum_computing",
+    "candidates": [
+      [
+        23,
+        "science_technology_defence.space_technology_astronomy.indian_space_programme_isro_missions",
+        3,
+        "Indian Space Programme & ISRO Missions (Lunar Exploration - Chandrayaan-1, 2, 3, LuPEX; Planetary & Solar Missions - Mangalyaan / MOM, Aditya-L1, Shukrayaan; Human Spaceflight Programme - Gaganyaan, Bharatiya Antariksha Station; Space Astronomy Observatories - AstroSat, XPoSat)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.artificial_intelligence_robotics",
+        3,
+        "Artificial Intelligence & Robotics (Core AI Paradigms - Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing; Generative AI & Frontier Models - Large Language Models / LLMs, Multimodal AI, Deepfakes, Synthetic Media; Robotics & Autonomous Systems - Humanoid Robotics, Swarm Robotics, Autonomous Vehicles; AI Ethics & Global Governance - AI Bias, Responsible AI, Bletchley Declaration, IndiaAI Mission)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.high-performance_quantum_computing",
+        3,
+        "High-Performance & Quantum Computing (High-Performance Computing - Supercomputing Architecture, National Supercomputing Mission, PARAM Siddhi, Pratyush, Mihir; Quantum Information Science - Qubits, Quantum Entanglement, Superposition, National Quantum Mission; Semiconductor Ecosystem - Microprocessors - Shakti & Vega, Wafer Fabrication, India Semiconductor Mission / ISM)"
+      ],
+      [
+        23,
+        "science_technology_defence.nuclear_technology_energy.international_nuclear_governance_treaties",
+        3,
+        "International Nuclear Governance & Treaties (Global Regulatory Framework - IAEA, Non-Proliferation Treaty / NPT, Comprehensive Nuclear-Test-Ban Treaty / CTBT; Export Control Regimes - Nuclear Suppliers Group / NSG, Missile Technology Control Regime / MTCR, Australia Group, Wassenaar Arrangement)"
+      ],
+      [
+        23,
+        "science_technology_defence.nanoscience_advanced_materials.nanotechnology_applications",
+        3,
+        "Nanotechnology Applications (Synthesis & Materials - Nanoparticles, Carbon Nanotubes / CNTs, Quantum Dots, Nano-emulsions; Sectoral Applications - Nano-fertilizers / Nano Urea, Targeted Drug Delivery, Nano-sensors, National Nano Mission)"
+      ]
+    ],
+    "curr_subt": "Quantum Principles (Superposition & Entanglement) & National Quantum Mission",
+    "question_text": "Consider the following statements:\nA. Superposition and Entanglement a"
+  },
+  {
+    "qnum": 19,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.cultural_institutions_awards.national_civilian_awards",
+    "candidates": [
+      [
+        23,
+        "art_culture_heritage.performing_arts.classical_dance_traditions",
+        3,
+        "Classical Dance Traditions (Bharatanatyam, Kathak, Kathakali, Kuchipudi, Manipuri, Mohiniyattam, Odissi, Sattriya)"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_literature_languages.vedic_epic_puranic_literature",
+        3,
+        "Vedic, Epic & Puranic Literature (Rigveda, Samaveda, Yajurveda, Atharvaveda, Upanishads, Mahabharata, Ramayana, Puranas)"
+      ]
+    ],
+    "curr_subt": "Bharat Ratna Award Criteria, Regulations & Historical Recipients",
+    "question_text": "How many of the following statements regarding the Bharat Ratna award "
+  },
+  {
+    "qnum": 20,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.global_institutions_agreements_treaties.regional_groupings",
+    "candidates": [
+      [
+        23,
+        "international_relations_global_institutions.indias_foreign_policy_bilateral_relations.relations_with_major_global_powers",
+        3,
+        "Relations with Major Global Powers (United States, Russia, China, European Union, Japan, Australia)"
+      ],
+      [
+        23,
+        "international_relations_global_institutions.regional_multilateral_groupings.indo-pacific_trans-regional_alliances",
+        3,
+        "Indo-Pacific & Trans-Regional Alliances (QUAD, I2U2, BRICS, Shanghai Cooperation Organisation / SCO, G20, Global South Alliances)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties",
+        2,
+        "Global Institutions, Agreements & Treaties"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
+        3,
+        "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.global_climate_maritime_frameworks",
+        3,
+        "Global Climate & Maritime Frameworks (UNFCCC Climate Architecture, UNCLOS Maritime Law, Global Tax Regimes)"
+      ]
+    ],
+    "curr_subt": "Chip 4 / Fab 4 Alliance (US, Japan, South Korea, Taiwan Semiconductor Alliance)",
+    "question_text": "The \"Chip 4\" or \"Fab 4\" alliance includes four of the world's top prod"
+  },
+  {
+    "qnum": 21,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.global_institutions_agreements_treaties.maritime_security_treaties",
+    "candidates": [
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties",
+        2,
+        "Global Institutions, Agreements & Treaties"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
+        3,
+        "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.global_climate_maritime_frameworks",
+        3,
+        "Global Climate & Maritime Frameworks (UNFCCC Climate Architecture, UNCLOS Maritime Law, Global Tax Regimes)"
+      ]
+    ],
+    "curr_subt": "Djibouti Code of Conduct (DCoC/Jeddah Amendment) & Piracy Suppression",
+    "question_text": "Which of the following statements correctly describe the Djibouti Code"
+  },
+  {
+    "qnum": 22,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.growth_development_macroeconomics.world_development_reports",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development",
+        1,
+        "Indian Economy & Development"
+      ],
+      [
+        23,
+        "indian_economy_development.economy_development_of_karnataka",
+        2,
+        "Economy & Development of Karnataka"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.growth_development_dynamics",
+        3,
+        "Growth & Development Dynamics (Economic Growth vs Economic Development, Potential GDP & Output Gap, Business Cycles - Recession, Depression, Stagflation, Reflation, Middle-Income Trap)"
+      ],
+      [
+        23,
+        "indian_economy_development.agriculture_food_management_subsidies.irrigation_infrastructure_water_productivity",
+        3,
+        "Irrigation Infrastructure & Water Productivity (Types - Surface, Groundwater, Canal Irrigation; Micro-Irrigation - Drip & Sprinkler Systems; Pradhan Mantri Krishi Sinchayee Yojana / PMKSY - Per Drop More Crop, Har Khet Ko Pani; Command Area Development; Groundwater Overexploitation & Atal Bhujal Yojana)"
+      ],
+      [
+        23,
+        "indian_economy_development.infrastructure_energy_investment_models.energy_transition_power_sector_architecture",
+        3,
+        "Energy Transition & Power Sector Architecture (Primary Energy Mix - Coal, Oil, Natural Gas, Renewables; Power Generation, Transmission & Distribution; Power Grid Architecture - One Sun, One World, One Grid / OSOWOG, National Grid; Financial Stress in DISCOMs - Ujjwal DISCOM Assurance Yojana / UDAY, Revamped Distribution Sector Scheme / RDSS; Renewable Energy Targets - 500 GW Non-Fossil Capacity by 2030, National Solar Mission, PM-KUSUM Scheme, Offshore Wind Energy Policy, National Green Hydrogen Mission / 5 MMT Target by 2030)"
+      ]
+    ],
+    "curr_subt": "World Bank World Development Report 2024 (Middle-Income Trap & 3i Strategy)",
+    "question_text": "Consider the following statements in relation to World Development Rep"
+  },
+  {
+    "qnum": 23,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.monetary_policy_banking_architecture.financial_markets_regulatory_bodies",
+    "candidates": [
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.monetary_policy_framework_rbi_operations",
+        3,
+        "Monetary Policy Framework & RBI Operations (Flexible Inflation Targeting Framework / 4% +/- 2%, Monetary Policy Committee / MPC - Composition & Voting, Policy Rates - Repo Rate, Standing Deposit Facility / SDF, Marginal Standing Facility / MSF, Reverse Repo; Reserve Ratios - Cash Reserve Ratio / CRR, Statutory Liquidity Ratio / SLR; Quantitative Tools - Open Market Operations / OMO, Operation Twist, Long-Term Repo Operations / LTRO; Qualitative Tools - Margin Requirements, Moral Suasion)"
+      ],
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.money_supply_liquidity",
+        3,
+        "Money Supply & Liquidity (Monetary Aggregates - Reserve Money / M0, Narrow Money / M1, Intermediate Money / M2, Broad Money / M3; Money Multiplier Effect, Velocity of Money)"
+      ],
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+        3,
+        "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)"
+      ],
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.non-performing_assets_resolution_architecture",
+        3,
+        "Non-Performing Assets & Resolution Architecture (Gross vs Net NPAs, Special Mention Accounts / SMA-0, 1, 2, Stressed Assets; Twin Balance Sheet Syndrome; Insolvency and Bankruptcy Code / IBC 2016 - National Company Law Tribunal / NCLT, Insolvency and Bankruptcy Board of India / IBBI, Committee of Creditors; Bad Bank - National Asset Reconstruction Company Limited / NARCL & India Debt Resolution Company Limited / IDRCL; Prompt Corrective Action / PCA Framework, BASEL III Norms - Capital Adequacy Ratio / CRAR, Tier 1 & Tier 2 Capital)"
+      ],
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.non-banking_financial_institutions_capital_markets",
+        3,
+        "Non-Banking Financial Institutions & Capital Markets (Non-Banking Financial Companies / NBFCs - Systemically Important NBFCs, Scale-Based Regulatory Framework; Primary vs Secondary Markets, Initial Public Offerings / IPOs, SEBI Regulatory Framework, Stock Exchanges - BSE, NSE, Algorithmic & High-Frequency Trading, Mutual Funds & Systematic Investment Plans / SIPs, Credit Rating Agencies / CRAs)"
+      ]
+    ],
+    "curr_subt": "Money Market (RBI) vs Capital Market (SEBI) Regulatory Jurisdictions",
+    "question_text": "Which of the following statement/statements are correct?\nA. The money "
+  },
+  {
+    "qnum": 24,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_society_social_justice.poverty_inequality_social_development.multidimensional_poverty_indices",
+    "candidates": [
+      [
+        23,
+        "indian_society_social_justice.poverty_inequality_developmental_challenges",
+        2,
+        "Poverty, Inequality & Developmental Challenges"
+      ],
+      [
+        23,
+        "indian_society_social_justice.issues_relating_to_poverty_hunger",
+        2,
+        "Issues Relating to Poverty & Hunger"
+      ],
+      [
+        23,
+        "indian_society_social_justice.population_dynamics_demographic_issues.migration_patterns",
+        3,
+        "Migration Patterns (Internal Migration - Rural to Urban, Rural to Rural; International Emigration, Remittances, Brain Drain)"
+      ],
+      [
+        23,
+        "indian_society_social_justice.poverty_inequality_developmental_challenges.poverty_concepts_measurement",
+        3,
+        "Poverty Concepts & Measurement (Absolute vs Relative Poverty, Poverty Line Committees - Tendulkar, Rangarajan, Multidimensional Poverty Index / MPI)"
+      ],
+      [
+        23,
+        "indian_society_social_justice.urbanisation_urban_social_issues.urban_social_problems",
+        3,
+        "Urban Social Problems (Urban Poverty, Crime, Housing Shortages, Environmental Degradation, Water Scarcity, Traffic Congestion)"
+      ]
+    ],
+    "curr_subt": "National Multidimensional Poverty Index (MPI) by NITI Aayog & UNDP",
+    "question_text": "Consider the following statement/statements:\nA. NITI Aayog in collabor"
+  },
+  {
+    "qnum": 25,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_society_social_justice.skill_development_employment_generation.global_skilling_initiatives",
+    "candidates": [
+      [
+        23,
+        "indian_society_social_justice.social_sector_development.education_sector_reforms",
+        3,
+        "Education Sector Reforms (National Education Policy / NEP 2020, Right to Education / RTE Act, Higher Education Governance, Digital Education Initiatives)"
+      ]
+    ],
+    "curr_subt": "Reskilling Revolution Initiative by World Economic Forum (WEF)",
+    "question_text": "Launched in 2020, the Reskilling Revolution aims to empower one billio"
+  },
+  {
+    "qnum": 26,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.fiscal_policy_public_finance.fiscal_deficits_budgeting",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation",
+        2,
+        "Fiscal Policy, Public Finance & Taxation"
+      ],
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+        3,
+        "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)"
+      ],
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.non-banking_financial_institutions_capital_markets",
+        3,
+        "Non-Banking Financial Institutions & Capital Markets (Non-Banking Financial Companies / NBFCs - Systemically Important NBFCs, Scale-Based Regulatory Framework; Primary vs Secondary Markets, Initial Public Offerings / IPOs, SEBI Regulatory Framework, Stock Exchanges - BSE, NSE, Algorithmic & High-Frequency Trading, Mutual Funds & Systematic Investment Plans / SIPs, Credit Rating Agencies / CRAs)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect",
+        3,
+        "Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.deficit_concepts_fiscal_discipline",
+        3,
+        "Deficit Concepts & Fiscal Discipline (Revenue Deficit / Effective Revenue Deficit, Fiscal Deficit - Borrowing Requirement of Government, Primary Deficit; Fiscal Responsibility and Budget Management / FRBM Act 2003 - N.K. Singh Committee Recommendations, Debt-to-GDP Ratio Targets, Escape Clauses)"
+      ]
+    ],
+    "curr_subt": "Fiscal Deficit, Revenue Deficit and Primary Deficit Concepts",
+    "question_text": "Consider the following statements:\nA. Revenue deficit is fiscal defici"
+  },
+  {
+    "qnum": 27,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.geomorphology_landforms_tectonics.karst_landforms_groundwater",
+    "candidates": [
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.earthquakes_tsunamis_volcanism",
+        3,
+        "Earthquakes, Tsunamis & Volcanism (Epicentre, Focus, Richter Scale, Volcanic Landforms - Intrusive & Extrusive, Caldera, Shield, Composite)"
+      ],
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution",
+        3,
+        "Geomorphic Processes & Landform Evolution (Weathering - Physical, Chemical, Biological; Mass Wasting; Fluvial, Glacial, Aeolian, Karst & Coastal Landforms)"
+      ]
+    ],
+    "curr_subt": "Karst Depositional Landforms (Stalactites, Stalagmites & Pillars)",
+    "question_text": "Which of the following features are associated with karst topography?\n"
+  },
+  {
+    "qnum": 28,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.geomorphology_landforms_tectonics.aeolian_landforms_wind_action",
+    "candidates": [
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.earthquakes_tsunamis_volcanism",
+        3,
+        "Earthquakes, Tsunamis & Volcanism (Epicentre, Focus, Richter Scale, Volcanic Landforms - Intrusive & Extrusive, Caldera, Shield, Composite)"
+      ],
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution",
+        3,
+        "Geomorphic Processes & Landform Evolution (Weathering - Physical, Chemical, Biological; Mass Wasting; Fluvial, Glacial, Aeolian, Karst & Coastal Landforms)"
+      ]
+    ],
+    "curr_subt": "Aeolian Depositional Landforms (Sand Dunes, Loess, Barchans) vs Erosional (Inselbergs)",
+    "question_text": "Which of the following Land forms are formed by wind deposition?\nA. In"
+  },
+  {
+    "qnum": 29,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.agriculture_food_management.minimum_support_price_msp",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.national_income_aggregates",
+        3,
+        "National Income Aggregates (Gross Domestic Product / GDP - Constant vs Current Prices, Gross National Product / GNP, Net National Product / NNP at Factor Cost vs Market Price, Gross Value Added / GVA)"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.methodologies_deflators",
+        3,
+        "Methodologies & Deflators (Output / Production Method, Income Method, Expenditure Method / Consumption + Investment + Government + Net Exports, GDP Deflator vs Consumer Price Index / CPI & Wholesale Price Index / WPI)"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.inflation_metrics_control",
+        3,
+        "Inflation Metrics & Control (Headline vs Core Inflation, Demand-Pull vs Cost-Push Inflation, CPI-Combined, CPI-IW, CPI-AL, WPI Indices, Base Effect, Producer Price Index / PPI)"
+      ],
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.niti_aayog_transformational_governance",
+        3,
+        "NITI Aayog & Transformational Governance (Think Tank Mandate, Cooperative & Competitive Federalism, Governing Council, Aspirational Districts Programme / ADP, Aspirational Blocks Programme, Composite Water Management Index, SDG India Index, Export Preparedness Index)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.direct_taxation_reforms",
+        3,
+        "Direct Taxation & Reforms (Income Tax Slabs & New Tax Regime, Corporate Tax Reforms - Reduction to 22% / 15% for new manufacturing units, Minimum Alternate Tax / MAT, Equalisation Levy / Google Tax, Faceless Assessment & Taxpayer's Charter, Base Erosion and Profit Shifting / BEPS, Double Tax Avoidance Agreements / DTAA, General Anti-Avoidance Rules / GAAR)"
+      ]
+    ],
+    "curr_subt": "Minimum Support Price (MSP) Mechanism, CACP Mandate & Swaminathan Formula",
+    "question_text": "Consider the following statement/statements about Minimum Support Pric"
+  },
+  {
+    "qnum": 30,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.global_institutions_agreements_treaties.un_peacekeeping_missions",
+    "candidates": [
+      [
+        28,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
+        3,
+        "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)"
+      ],
+      [
+        23,
+        "international_relations_global_institutions.indias_foreign_policy_bilateral_relations.relations_with_major_global_powers",
+        3,
+        "Relations with Major Global Powers (United States, Russia, China, European Union, Japan, Australia)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties",
+        2,
+        "Global Institutions, Agreements & Treaties"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.global_climate_maritime_frameworks",
+        3,
+        "Global Climate & Maritime Frameworks (UNFCCC Climate Architecture, UNCLOS Maritime Law, Global Tax Regimes)"
+      ]
+    ],
+    "curr_subt": "United Nations Peacekeeping Forces (Blue Helmets Mandate & Principles)",
+    "question_text": "Which of the following best describes the Blue Helmet?"
+  },
+  {
+    "qnum": 31,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.comparative_constitutions_political_systems.french_semi_presidential_system",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance",
+        1,
+        "Indian Polity, Constitution & Governance"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.indian_judiciary_judicial_system",
+        2,
+        "Indian Judiciary & Judicial System"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.local_governance",
+        2,
+        "Local Governance (Panchayati Raj & Municipalities)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.good_governance_administrative_reforms",
+        2,
+        "Good Governance & Administrative Reforms"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.e-governance_models_digital_public_infrastructure",
+        2,
+        "E-Governance Models & Digital Public Infrastructure"
+      ]
+    ],
+    "curr_subt": "French Semi-Presidential System & Cohabitation Governance",
+    "question_text": "Consider the following statements:\nA. Cohabitation is a term used in F"
+  },
+  {
+    "qnum": 32,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+    "node_level": 3,
+    "node_name": "Places in News & Conflict Zones (West Asia / Levant: Gaza, West Bank, Golan Heights, Sinai; Sahel Region: Mali, Niger, Burkina Faso, Chad; Horn of Africa: Tigray, Somaliland; Eastern Europe: Donbas, Crimea, Zaporizhzhia; South China Sea)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "How many of the following statement/statements is/are correct?\nA. The "
+  },
+  {
+    "qnum": 33,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.monetary_policy_banking_architecture.central_bank_digital_currency_cbdc",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.industrial_policy_manufacturing_services.public_sector_enterprises_disinvestment",
+        3,
+        "Public Sector Enterprises & Disinvestment (Central Public Sector Enterprises / CPSEs - Maharatna, Navratna, Miniratna Classification Criteria; New Public Sector Enterprise Policy 2021 - Strategic vs Non-Strategic Sectors; Disinvestment Modes - Minority Stake Sale, Strategic Disinvestment, Asset Monetisation / National Monetisation Pipeline / NMP, Department of Investment and Public Asset Management / DIPAM)"
+      ],
+      [
+        23,
+        "indian_economy_development.industrial_policy_manufacturing_services.services_sector_logistics_transformation",
+        3,
+        "Services Sector & Logistics Transformation (Services Growth Driver - IT-BPM, Financial Services, Global Capability Centers / GCCs, Medical Tourism, Education Services; Logistics Ecosystem - National Logistics Policy / NLP, Unified Logistics Interface Platform / ULIP, PM Gati Shakti National Master Plan - Multi-modal Connectivity, Reduction of Logistics Cost from 14% to Global Benchmarks)"
+      ],
+      [
+        23,
+        "indian_economy_development.external_sector_balance_of_payments_foreign_trade.foreign_trade_policy_international_agreements",
+        3,
+        "Foreign Trade Policy & International Agreements (Foreign Trade Policy 2023 - Target of $2 Trillion Exports by 2030, Four Pillars: Incentive to Remission, Export Promotion through Collaboration, Districts as Export Hubs, E-Commerce Exports; Trade Instruments - RoDTEP, RoSCTL, Duty Drawback; Free Trade Agreements / FTAs - Comprehensive Economic Partnership Agreements / CEPA with UAE, ECTA with Australia, Trade & Economic Partnership Agreement / TEPA with EFTA, European Union FTA negotiations; Trade Remedies - Anti-Dumping Duty, Countervailing Duty / CVD, Safeguard Duty; Global Supply Chain Realignment - China+1 Strategy, Supply Chain Resilience Initiative / SCRI)"
+      ],
+      [
+        23,
+        "indian_economy_development.economy_development_of_karnataka.regional_imbalances_nanjundappa_committee_kalyana_karnataka_development.recommendations_special_development_plan_sdp",
+        4,
+        "Recommendations & Special Development Plan / SDP (Cumulative SDP Allocation Framework for Targeted Capital Infusion into Education, Healthcare, Irrigation, Connectivity & Industrial Decentralisation; Establishment of High Court Benches at Dharwad & Kalaburagi; Establishment of New Universities in Backward Districts; Ongoing Institutional Monitoring of Nanjundappa Committee Mandates)."
+      ],
+      [
+        20,
+        "indian_economy_development.monetary_policy_banking_architecture",
+        2,
+        "Monetary Policy & Banking Architecture"
+      ]
+    ],
+    "curr_subt": "Global Central Bank Digital Currencies (e-Krona, Sand Dollar, e-Naira)",
+    "question_text": "Which of the following Digital currencies are correctly matched with t"
+  },
+  {
+    "qnum": 34,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+    "node_level": 3,
+    "node_name": "Places in News & Conflict Zones (West Asia / Levant: Gaza, West Bank, Golan Heights, Sinai; Sahel Region: Mali, Niger, Burkina Faso, Chad; Horn of Africa: Tigray, Somaliland; Eastern Europe: Donbas, Crimea, Zaporizhzhia; South China Sea)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "UK handed over Chagos Archipelago to which one of the following countr"
+  },
+  {
+    "qnum": 35,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.literature_languages.classical_languages_of_india",
+    "candidates": [
+      [
+        23,
+        "art_culture_heritage.indian_literature_languages",
+        2,
+        "Indian Literature & Languages"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_architecture_sculpture.colonial_modern_architecture",
+        3,
+        "Colonial & Modern Architecture (Indo-Saracenic Architecture, Neo-Gothic Style, Neo-Classical Style, Lutyens' Delhi)"
+      ],
+      [
+        23,
+        "art_culture_heritage.performing_arts.classical_dance_traditions",
+        3,
+        "Classical Dance Traditions (Bharatanatyam, Kathak, Kathakali, Kuchipudi, Manipuri, Mohiniyattam, Odissi, Sattriya)"
+      ],
+      [
+        23,
+        "art_culture_heritage.performing_arts.indian_classical_music_systems",
+        3,
+        "Indian Classical Music Systems (Hindustani Music - Dhrupad, Khayal, Thumri, Tappa; Carnatic Music - Kriti, Varnam, Ragam Tanam Pallavi)"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_literature_languages.classical_religious_texts",
+        3,
+        "Classical & Religious Texts (Buddhist Canon - Tripitakas, Jatakas; Jain Canon - Agamas; Sangam Literature - Ettuthokai, Pattupattu, Silappatikaram, Manimekalai)"
+      ]
+    ],
+    "curr_subt": "Classical Language Status Criteria & New Inclusions (Pali, Prakrit, Marathi, Assamese, Bengali)",
+    "question_text": "Which of the following languages are conferred classical language stat"
+  },
+  {
+    "qnum": 36,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.global_institutions_agreements_treaties.nato_plus_alliances",
+    "candidates": [
+      [
+        28,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
+        3,
+        "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)"
+      ],
+      [
+        28,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.global_climate_maritime_frameworks",
+        3,
+        "Global Climate & Maritime Frameworks (UNFCCC Climate Architecture, UNCLOS Maritime Law, Global Tax Regimes)"
+      ],
+      [
+        23,
+        "international_relations_global_institutions.indias_foreign_policy_bilateral_relations.relations_with_major_global_powers",
+        3,
+        "Relations with Major Global Powers (United States, Russia, China, European Union, Japan, Australia)"
+      ],
+      [
+        23,
+        "international_relations_global_institutions.regional_multilateral_groupings.indo-pacific_trans-regional_alliances",
+        3,
+        "Indo-Pacific & Trans-Regional Alliances (QUAD, I2U2, BRICS, Shanghai Cooperation Organisation / SCO, G20, Global South Alliances)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties",
+        2,
+        "Global Institutions, Agreements & Treaties"
+      ]
+    ],
+    "curr_subt": "NATO Plus Security Architecture (Australia, NZ, Japan, South Korea, Israel)",
+    "question_text": "Which of the following countries are members of 'NATO Plus'?\nA. USA\nB."
+  },
+  {
+    "qnum": 37,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+    "node_level": 3,
+    "node_name": "International Land Borders, Landlocked Nations & Disputed Boundary Lines (Radcliffe Line, McMahon Line, Durand Line, 38th Parallel, 49th Parallel, Kuril Islands, Senkaku/Diaoyu, Spratly/Paracel)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "How many of the following countries share a territorial land border wi"
+  },
+  {
+    "qnum": 38,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.constitutional_framework_evolution.citizenship_act_provisions",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.transparency_accountability_citizen_charters.right_to_information_act_2005",
+        3,
+        "Right to Information Act 2005 (RTI Architecture, Exemptions Section 8, Information Commissions, Judicial & Legislative Accountability)"
+      ]
+    ],
+    "curr_subt": "Citizenship Act 1955 Section 6A (Assam Accord Constitutionality Verdict)",
+    "question_text": "Recently the Supreme court upheld the 1955 Citizenship Act provisions:"
+  },
+  {
+    "qnum": 39,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_executive.president_of_india_powers_impeachment",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive.union_executive",
+        3,
+        "Union Executive (President - Election, Impeachment, Powers - Executive, Legislative, Financial, Judicial, Veto, Ordinance, Pardoning 72; Vice-President; Prime Minister & Council of Ministers - Collective Responsibility, Cabinet Committees)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.legislative_procedure_bills",
+        3,
+        "Legislative Procedure & Bills (Ordinary Bills, Money Bills Article 110, Financial Bills, Constitutional Amendment Bills, Joint Sitting Article 108)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.role_of_civil_services_in_a_democracy.civil_services_dynamics",
+        3,
+        "Civil Services Dynamics (Bureaucracy & Development, Politicization of Civil Services, Specialist vs Generalist Debate, Administrative Ethics)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.governance_administration_public_policy_in_karnataka.constitutional_administrative_structure_of_karnataka.state_legislature_special_constitutional_status",
+        4,
+        "State Legislature & Special Constitutional Status"
+      ]
+    ],
+    "curr_subt": "Presidential Impeachment Procedure (Article 61 & Special Majority Rules)",
+    "question_text": "The impeachment process of President of India\nI. The charge shall be p"
+  },
+  {
+    "qnum": 40,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.special_provisions_for_states_and_tribal_areas.fifth_and_sixth_schedules_scheduled_tribal_areas",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.historical_background_making_of_the_constitution.government_of_india_acts",
+        3,
+        "Government of India Acts (1858, 1892, Indian Councils Act 1909 / Morley-Minto, GOI Act 1919 / Montagu-Chelmsford, GOI Act 1935, Indian Independence Act 1947)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.structure_composition",
+        3,
+        "Structure & Composition (Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad; Qualification & Disqualification - Article 102, Representation of the People Act 1951, Anti-Defection Law / 10th Schedule)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.federal_structure_center-state_relations_devolution.legislative_administrative_relations",
+        3,
+        "Legislative & Administrative Relations (Seventh Schedule - Union, State, Concurrent Lists; Residuary Powers; Emergency Provisions Articles 352, 356, 360)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.federal_structure_center-state_relations_devolution.federal_dynamics_dispute_resolution",
+        3,
+        "Federal Dynamics & Dispute Resolution (Cooperative & Competitive Federalism, Inter-State Councils Article 263, Zonal Councils, Inter-State River Water Disputes Article 262)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.local_governance.73rd_74th_constitutional_amendment_acts",
+        3,
+        "73rd & 74th Constitutional Amendment Acts (Three-Tier Panchayati Raj System, Gram Sabha, Urban Local Bodies - Municipal Corporations, Councils, Nagar Panchayats)"
+      ]
+    ],
+    "curr_subt": "Sixth Schedule Autonomous District Councils (Assam, Meghalaya, Tripura, Mizoram)",
+    "question_text": "Which of the following provisions are correct regarding Sixth Schedule"
+  },
+  {
+    "qnum": 41,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.monetary_policy_banking_architecture.insurance_sector_reforms_penetration",
+    "candidates": [
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+        3,
+        "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)"
+      ],
+      [
+        23,
+        "indian_economy_development.external_sector_balance_of_payments_foreign_trade",
+        2,
+        "External Sector, Balance of Payments & Foreign Trade"
+      ],
+      [
+        23,
+        "indian_economy_development.agriculture_food_management_subsidies.farm_inputs_credit_crop_insurance",
+        3,
+        "Farm Inputs, Credit & Crop Insurance (Fertilizer Architecture - Urea, DAP, MOP; Nutrient Based Subsidy / NBS Scheme, Nano Urea & Nano DAP, Direct Benefit Transfer / DBT in Fertilizers; Institutional Credit - Priority Sector Lending / PSL Norms, Kisan Credit Card / KCC, Interest Subvention Scheme; Pradhan Mantri Fasal Bima Yojana / PMFBY - Yield Index vs Weather Index, PM KISAN / Income Support Scheme)"
+      ],
+      [
+        23,
+        "indian_economy_development.industrial_policy_manufacturing_services.manufacturing_initiatives_make_in_india",
+        3,
+        "Manufacturing Initiatives & Make in India (Make in India 2.0; Production Linked Incentive / PLI Schemes across 14 Champion Sectors; National Capital Goods Policy; Phased Manufacturing Programme / PMP; Ease of Doing Business Reforms - Single Window Clearance, National Single Window System / NSWS, Decriminalisation of Minor Offenses)"
+      ],
+      [
+        23,
+        "indian_economy_development.industrial_policy_manufacturing_services.msme_sector_architecture",
+        3,
+        "MSME Sector Architecture (Revised MSME Definition 2020 - Composite Criteria of Investment & Annual Turnover for Micro, Small, Medium Enterprises; Udyam Registration Portal; Credit Guarantee Schemes - CGTMSE, Emergency Credit Line Guarantee Scheme / ECLGS; Schemes - RAMP, CHAMPIONS Portal, TReDS / Trade Receivables Discounting System, Public Procurement Policy for MSMEs)"
+      ]
+    ],
+    "curr_subt": "Insurance Penetration & FDI Limits in Insurance Sector (74% FDI)",
+    "question_text": "Consider the following statements:\nA. In India in FY23, the insurance "
+  },
+  {
+    "qnum": 42,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.development_processes_and_welfare_schemes.northeast_special_schemes",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.role_of_civil_services_in_a_democracy.civil_services_dynamics",
+        3,
+        "Civil Services Dynamics (Bureaucracy & Development, Politicization of Civil Services, Specialist vs Generalist Debate, Administrative Ethics)"
+      ]
+    ],
+    "curr_subt": "PM-DevINE (Prime Minister's Development Initiative for North-East Region)",
+    "question_text": "What is the name of the scheme launched to fund infrastructure and soc"
+  },
+  {
+    "qnum": 43,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_legislature.parliamentary_procedures_devices",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive.union_executive",
+        3,
+        "Union Executive (President - Election, Impeachment, Powers - Executive, Legislative, Financial, Judicial, Veto, Ordinance, Pardoning 72; Vice-President; Prime Minister & Council of Ministers - Collective Responsibility, Cabinet Committees)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive.state_executive",
+        3,
+        "State Executive (Governor - Appointment, Constitutional Role, Discretionary Powers, Ordinance Power 213; Chief Minister & State Council of Ministers)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.structure_composition",
+        3,
+        "Structure & Composition (Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad; Qualification & Disqualification - Article 102, Representation of the People Act 1951, Anti-Defection Law / 10th Schedule)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.legislative_procedure_bills",
+        3,
+        "Legislative Procedure & Bills (Ordinary Bills, Money Bills Article 110, Financial Bills, Constitutional Amendment Bills, Joint Sitting Article 108)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.federal_structure_center-state_relations_devolution.legislative_administrative_relations",
+        3,
+        "Legislative & Administrative Relations (Seventh Schedule - Union, State, Concurrent Lists; Residuary Powers; Emergency Provisions Articles 352, 356, 360)"
+      ]
+    ],
+    "curr_subt": "Legislative Powers of Lok Sabha vs Rajya Sabha on Ordinary vs Money Bills",
+    "question_text": "Consider the following statements:\nA. The Lok Sabha cannot override th"
+  },
+  {
+    "qnum": 44,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_legislature.state_legislative_council_powers",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive",
+        2,
+        "Union Executive & State Executive"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures",
+        2,
+        "Parliament & State Legislatures"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.federal_structure_center-state_relations_devolution",
+        2,
+        "Federal Structure, Center-State Relations & Devolution"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.historical_background_making_of_the_constitution.government_of_india_acts",
+        3,
+        "Government of India Acts (1858, 1892, Indian Councils Act 1909 / Morley-Minto, GOI Act 1919 / Montagu-Chelmsford, GOI Act 1935, Indian Independence Act 1947)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
+        3,
+        "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)"
+      ]
+    ],
+    "curr_subt": "State Legislative Council (Article 169 Abolition/Creation & Permanent Nature)",
+    "question_text": "Which of the following statements is/are correct?\nA. Legislative Counc"
+  },
+  {
+    "qnum": 45,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_legislature.parliamentary_procedures_devices",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.structure_composition",
+        3,
+        "Structure & Composition (Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad; Qualification & Disqualification - Article 102, Representation of the People Act 1951, Anti-Defection Law / 10th Schedule)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures.legislative_procedure_bills",
+        3,
+        "Legislative Procedure & Bills (Ordinary Bills, Money Bills Article 110, Financial Bills, Constitutional Amendment Bills, Joint Sitting Article 108)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.local_governance.73rd_74th_constitutional_amendment_acts",
+        3,
+        "73rd & 74th Constitutional Amendment Acts (Three-Tier Panchayati Raj System, Gram Sabha, Urban Local Bodies - Municipal Corporations, Councils, Nagar Panchayats)"
+      ]
+    ],
+    "curr_subt": "Lapsing of Bills on Dissolution of Lok Sabha (Article 107 Rules)",
+    "question_text": "A bill lapses when\nA. It is pending in the Rajya Sabha but not passed "
+  },
+  {
+    "qnum": 46,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels",
+    "new_nid": "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels",
+    "node_level": 3,
+    "node_name": "Coastal Features, Island Territories & Maritime Channels (10 Degree Channel: Andaman & Nicobar, 9 Degree Channel: Minicoy & Lakshadweep, 8 Degree Channel: Minicoy & Maldives, Palk Strait, Gulf of Mannar, Rann of Kutch, Sir Creek, Konkan & Coromandel Coast)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "Match the older names of Andaman and Nicobar Islands with the newer on"
+  },
+  {
+    "qnum": 47,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.information_communication_technology_cybersecurity.wireless_communication_technologies",
+    "candidates": [
+      [
+        23,
+        "science_technology_defence",
+        1,
+        "Science, Technology & Defence"
+      ],
+      [
+        23,
+        "science_technology_defence.space_technology_astronomy",
+        2,
+        "Space Technology & Astronomy"
+      ],
+      [
+        23,
+        "science_technology_defence.biotechnology_health_life_sciences",
+        2,
+        "Biotechnology, Health & Life Sciences"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security",
+        2,
+        "Information & Communication Technology (ICT), AI & Cyber Security"
+      ],
+      [
+        23,
+        "science_technology_defence.defence_technology",
+        2,
+        "Defence Technology"
+      ]
+    ],
+    "curr_subt": "Gi-Fi (Gigabit Wireless Fidelity) 60 GHz Millimeter Wave Technology",
+    "question_text": "Consider the following statements about Gi-Fi (Gigabit Fidelity) techn"
+  },
+  {
+    "qnum": 48,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.information_communication_technology_cybersecurity.cyber_threats_and_malware",
+    "candidates": [
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.cyber_security_threats_digital_governance",
+        3,
+        "Cyber Security, Threats & Digital Governance (Vector Threats & Exploits - Malware, Ransomware, Phishing, Zero-Day Exploits, Pegasus / Spyware; Critical Information Infrastructure & Defense - CERT-In, NCIIPC, Cyber Swachhta Kendra; Digital Privacy & Legislation - Digital Personal Data Protection Act 2023, IT Act 2000)"
+      ]
+    ],
+    "curr_subt": "Malware, Botnets and Ransomware Variants (Stuxnet, Mirai, Snowblind, Ryuk)",
+    "question_text": "The terms Snowblind, Mirai, Stuxnet and Ryuk are associated with:"
+  },
+  {
+    "qnum": 49,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.cultural_institutions_awards.sports_achievements_and_history",
+    "candidates": [
+      [
+        23,
+        "art_culture_heritage.indian_architecture_sculpture",
+        2,
+        "Indian Architecture & Sculpture"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_paintings_visual_arts",
+        2,
+        "Indian Paintings & Visual Arts"
+      ],
+      [
+        23,
+        "art_culture_heritage.indian_literature_languages",
+        2,
+        "Indian Literature & Languages"
+      ],
+      [
+        23,
+        "art_culture_heritage.schools_of_indian_philosophy",
+        2,
+        "Schools of Indian Philosophy"
+      ],
+      [
+        23,
+        "art_culture_heritage.performing_arts.indian_classical_music_systems",
+        3,
+        "Indian Classical Music Systems (Hindustani Music - Dhrupad, Khayal, Thumri, Tappa; Carnatic Music - Kriti, Varnam, Ragam Tanam Pallavi)"
+      ]
+    ],
+    "curr_subt": "Indian Men's Field Hockey Olympic Gold Medals Record (8 Olympic Golds)",
+    "question_text": "Consider the following statements:\nA. India has won a total eight (8) "
+  },
+  {
+    "qnum": 50,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.fiscal_policy_public_finance.finance_commission_devolution_criteria",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation",
+        2,
+        "Fiscal Policy, Public Finance & Taxation"
+      ],
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.evolution_of_planning_in_india",
+        3,
+        "Evolution of Planning in India (Harrod-Domar & Mahalanobis Strategies, Indicative Planning, Five-Year Plans 1st to 12th, Structural Weaknesses of Planning Commission)"
+      ],
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+        3,
+        "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect",
+        3,
+        "Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.public_debt_fiscal_federalism",
+        3,
+        "Public Debt & Fiscal Federalism (Internal vs External Public Debt, Sovereign Green Bonds, Ways and Means Advances / WMA; Finance Commission Article 280 - Terms of Reference, Vertical vs Horizontal Devolution Criteria, Post-Devolution Revenue Deficit Grants, Performance-linked Incentives)"
+      ]
+    ],
+    "curr_subt": "15th Finance Commission Horizontal Tax Devolution Criteria & Weights",
+    "question_text": "Consider the following statements in relation to criteria used in hori"
+  },
+  {
+    "qnum": 51,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.monetary_policy_banking_architecture.deficit_financing_monetary_effects",
+    "candidates": [
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.money_supply_liquidity",
+        3,
+        "Money Supply & Liquidity (Monetary Aggregates - Reserve Money / M0, Narrow Money / M1, Intermediate Money / M2, Broad Money / M3; Money Multiplier Effect, Velocity of Money)"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting",
+        2,
+        "Macroeconomic Fundamentals & National Income Accounting"
+      ],
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth",
+        2,
+        "Planning, Mobilisation of Resources & Inclusive Growth"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.growth_development_dynamics",
+        3,
+        "Growth & Development Dynamics (Economic Growth vs Economic Development, Potential GDP & Output Gap, Business Cycles - Recession, Depression, Stagflation, Reflation, Middle-Income Trap)"
+      ],
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.inclusive_growth_inequality_dynamics",
+        3,
+        "Inclusive Growth & Inequality Dynamics (Multidimensional Poverty Index / NITI Aayog MPI, Gini Coefficient & Lorenz Curve, Jobless Growth, Female Labour Force Participation Rate / FLFPR, Formalisation of Informal Economy, Financial Inclusion - PM Jan Dhan Yojana / PMJDY, JAM Trinity)"
+      ]
+    ],
+    "curr_subt": "Economic & Inflationary Impacts of Deficit Financing & Money Supply Growth",
+    "question_text": "Consider the following statements related to the effects of deficit fi"
+  },
+  {
+    "qnum": 52,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.national_income_accounting_growth_development.classification_of_economic_goods",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.indirect_taxation_gst_architecture",
+        3,
+        "Indirect Taxation & GST Architecture (Goods and Services Tax / GST - 101st Constitutional Amendment Act, Destination-based Consumption Tax, Subsumed Taxes; Dual GST Model - CGST, SGST, IGST; GST Council Article 279A - Composition & Decision Mechanism; Inverted Duty Structure, Input Tax Credit / ITC Fraud, E-Way Bill, GST Compensation Cess Mechanism)"
+      ],
+      [
+        23,
+        "indian_economy_development.industrial_policy_manufacturing_services.manufacturing_initiatives_make_in_india",
+        3,
+        "Manufacturing Initiatives & Make in India (Make in India 2.0; Production Linked Incentive / PLI Schemes across 14 Champion Sectors; National Capital Goods Policy; Phased Manufacturing Programme / PMP; Ease of Doing Business Reforms - Single Window Clearance, National Single Window System / NSWS, Decriminalisation of Minor Offenses)"
+      ],
+      [
+        23,
+        "indian_economy_development.industrial_policy_manufacturing_services.public_sector_enterprises_disinvestment",
+        3,
+        "Public Sector Enterprises & Disinvestment (Central Public Sector Enterprises / CPSEs - Maharatna, Navratna, Miniratna Classification Criteria; New Public Sector Enterprise Policy 2021 - Strategic vs Non-Strategic Sectors; Disinvestment Modes - Minority Stake Sale, Strategic Disinvestment, Asset Monetisation / National Monetisation Pipeline / NMP, Department of Investment and Public Asset Management / DIPAM)"
+      ],
+      [
+        23,
+        "indian_economy_development.economy_development_of_karnataka.regional_imbalances_nanjundappa_committee_kalyana_karnataka_development.classification_of_175_taluks_in_karnataka_39_most_backward_taluks_40_more_backward_taluks_35_backward_taluks_61_relatively_developed_taluks_overwhelming_concentration_of_backward_taluks_in_north_karnataka_districts",
+        4,
+        "Classification of 175 Taluks in Karnataka: 39 Most Backward Taluks, 40 More Backward Taluks, 35 Backward Taluks, 61 Relatively Developed Taluks; Overwhelming Concentration of Backward Taluks in North Karnataka districts (Kalaburagi, Raichur, Bidar, Koppal, Yadgir, Vijayapura, Bagalkote)."
+      ]
+    ],
+    "curr_subt": "Classification of Goods (Public, Private, Common Resources, Club Goods)",
+    "question_text": "Consider the different types of goods and related examples given in Li"
+  },
+  {
+    "qnum": 53,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.agriculture_food_management.agricultural_trade_and_exports",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.external_sector_balance_of_payments_foreign_trade",
+        2,
+        "External Sector, Balance of Payments & Foreign Trade"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.methodologies_deflators",
+        3,
+        "Methodologies & Deflators (Output / Production Method, Income Method, Expenditure Method / Consumption + Investment + Government + Net Exports, GDP Deflator vs Consumer Price Index / CPI & Wholesale Price Index / WPI)"
+      ],
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+        3,
+        "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)"
+      ],
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.non-performing_assets_resolution_architecture",
+        3,
+        "Non-Performing Assets & Resolution Architecture (Gross vs Net NPAs, Special Mention Accounts / SMA-0, 1, 2, Stressed Assets; Twin Balance Sheet Syndrome; Insolvency and Bankruptcy Code / IBC 2016 - National Company Law Tribunal / NCLT, Insolvency and Bankruptcy Board of India / IBBI, Committee of Creditors; Bad Bank - National Asset Reconstruction Company Limited / NARCL & India Debt Resolution Company Limited / IDRCL; Prompt Corrective Action / PCA Framework, BASEL III Norms - Capital Adequacy Ratio / CRAR, Tier 1 & Tier 2 Capital)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.public_debt_fiscal_federalism",
+        3,
+        "Public Debt & Fiscal Federalism (Internal vs External Public Debt, Sovereign Green Bonds, Ways and Means Advances / WMA; Finance Commission Article 280 - Terms of Reference, Vertical vs Horizontal Devolution Criteria, Post-Devolution Revenue Deficit Grants, Performance-linked Incentives)"
+      ]
+    ],
+    "curr_subt": "Trends in India's Agricultural Exports and Trade Balance Performance",
+    "question_text": "Consider the following statements:\nA. During the period from 2016-17 t"
+  },
+  {
+    "qnum": 54,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.indian_mapping_spatial_geography.infrastructure_ports_transport_corridors",
+    "new_nid": "geography_earth_systems.indian_mapping_spatial_geography.infrastructure_ports_transport_corridors",
+    "node_level": 3,
+    "node_name": "Major Sea Ports, National Waterways, Dedicated Freight Corridors & Industrial Transport Corridors (Major 13 Ports, NW-1 to NW-5, Western & Eastern DFC, Golden Quadrilateral & Strategic Expressways)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "To travel from Karnataka to Mizoram by walking, the minimum number of "
+  },
+  {
+    "qnum": 55,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.oceanography_marine_ecosystems.ocean_currents_dynamics",
+    "candidates": [
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution",
+        3,
+        "Geomorphic Processes & Landform Evolution (Weathering - Physical, Chemical, Biological; Mass Wasting; Fluvial, Glacial, Aeolian, Karst & Coastal Landforms)"
+      ],
+      [
+        23,
+        "geography_earth_systems.climatology_atmospheric_dynamics.world_climate_regions",
+        3,
+        "World Climate Regions (Equatorial, Tropical Monsoon, Savanna, Mediterranean, Steppe, Taiga, Tundra, Desert Climates)"
+      ],
+      [
+        23,
+        "geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics",
+        3,
+        "Ocean Water Dynamics (Temperature & Salinity Distribution, Ocean Currents - Warm & Cold Currents, Thermohaline Circulation, Tides - Spring & Neap Tides)"
+      ],
+      [
+        23,
+        "geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india",
+        3,
+        "Physiographic Divisions of India (Himalayan Mountain System, Northern Great Plains, Peninsular Plateau, Coastal Plains, Lakshadweep & Andaman Nicobar Islands)"
+      ],
+      [
+        23,
+        "geography_earth_systems.indian_physical_geography_monsoon_architecture.indian_monsoon_climate_dynamics",
+        3,
+        "Indian Monsoon & Climate Dynamics (South-West & North-East Monsoons, Mechanism of Monsoon - ITCZ Shift, Jet Streams, El Niño, La Niña, Indian Ocean Dipole / IOD, Western Disturbances)"
+      ]
+    ],
+    "curr_subt": "Cold Currents vs Warm Currents Characteristics and Coastal Climate Impacts",
+    "question_text": "Consider the following statement/statements about ocean currents:\nA. C"
+  },
+  {
+    "qnum": 56,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.climatology_meteorology.polar_vortex_jet_streams",
+    "candidates": [
+      [
+        23,
+        "geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts",
+        3,
+        "Atmospheric Pressure & Global Wind Belts (Pressure Belts - Equatorial Low, Subtropical High, Subpolar Low; Planetary Winds - Trade Winds, Westerlies, Polar Easterlies; Jet Streams)"
+      ],
+      [
+        23,
+        "geography_earth_systems.indian_physical_geography_monsoon_architecture.indian_monsoon_climate_dynamics",
+        3,
+        "Indian Monsoon & Climate Dynamics (South-West & North-East Monsoons, Mechanism of Monsoon - ITCZ Shift, Jet Streams, El Niño, La Niña, Indian Ocean Dipole / IOD, Western Disturbances)"
+      ]
+    ],
+    "curr_subt": "Polar Vortex Mechanics, Stratospheric Warming and Jet Stream Weakening",
+    "question_text": "Which of the following statement/statements are correct about the Pola"
+  },
+  {
+    "qnum": 57,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.climatology_meteorology.fujiwhara_effect_tropical_cyclones",
+    "candidates": [],
+    "curr_subt": "Fujiwhara Effect - Binary Interaction of Two Spinning Cyclonic Storms",
+    "question_text": "Which option correctly defines the following?\nWhen two hurricanes spin"
+  },
+  {
+    "qnum": 58,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.geography_of_karnataka.irrigation_and_tank_systems",
+    "candidates": [
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka",
+        2,
+        "Geography of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.physiography_relief_divisions_of_karnataka",
+        3,
+        "Physiography & Relief Divisions of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.drainage_systems_river_basins_of_karnataka",
+        3,
+        "Drainage Systems & River Basins of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.climate_rainfall_agro-climatic_zones_of_karnataka",
+        3,
+        "Climate, Rainfall & Agro-Climatic Zones of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.soils_natural_vegetation_of_karnataka",
+        3,
+        "Soils & Natural Vegetation of Karnataka"
+      ]
+    ],
+    "curr_subt": "Tank Irrigation Distribution & Historical Decline in Karnataka",
+    "question_text": "Consider the following statement/statements:\nA. The actual area irriga"
+  },
+  {
+    "qnum": 59,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.ancient_india.satavahana_dynasty_administration",
+    "candidates": [
+      [
+        28,
+        "history.ancient_india.indus_valley_civilization.major_urban_centers_findings",
+        4,
+        "Major Urban Centers & Findings"
+      ],
+      [
+        28,
+        "history.ancient_india.mauryan_empire.mauryan_administration_economy",
+        4,
+        "Mauryan Administration & Economy"
+      ],
+      [
+        28,
+        "history.ancient_india.gupta_empire.gupta_administration_society_economy",
+        4,
+        "Gupta Administration, Society & Economy"
+      ],
+      [
+        28,
+        "history.ancient_india.post-gupta_period_harshavardhana.harshavardhanas_reign_administration",
+        4,
+        "Harshavardhana's Reign & Administration"
+      ],
+      [
+        23,
+        "history.medieval_india.delhi_sultanate.sultanate_administration_economy_culture",
+        4,
+        "Sultanate Administration, Economy & Culture"
+      ]
+    ],
+    "curr_subt": "Town and Urban Administration under Satavahanas (Nigama Sabha)",
+    "question_text": "The Town Administrations during the period of Satavahanas was in the h"
+  },
+  {
+    "qnum": 60,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "history.medieval_india.chola_empire_local_administration",
+    "candidates": [
+      [
+        23,
+        "history.ancient_india.south_indian_kingdoms.imperial_chola_empire",
+        4,
+        "Imperial Chola Empire"
+      ],
+      [
+        20,
+        "history.medieval_india",
+        2,
+        "Medieval India"
+      ],
+      [
+        20,
+        "history.medieval_india.early_medieval_period_tripartite_struggle",
+        3,
+        "Early Medieval Period & Tripartite Struggle"
+      ],
+      [
+        20,
+        "history.medieval_india.delhi_sultanate",
+        3,
+        "Delhi Sultanate"
+      ],
+      [
+        20,
+        "history.medieval_india.vijayanagara_empire_deccan_sultanates",
+        3,
+        "Vijayanagara Empire & Deccan Sultanates"
+      ]
+    ],
+    "curr_subt": "Chola Local Self-Government & Landlord Assemblies (Ur, Sabha, Nagaram)",
+    "question_text": "During the period of Cholas, the landlords established local community"
+  },
+  {
+    "qnum": 61,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.indian_philosophy_religions.buddhist_councils_and_sects",
+    "candidates": [
+      [
+        23,
+        "art_culture_heritage.indian_literature_languages.classical_religious_texts",
+        3,
+        "Classical & Religious Texts (Buddhist Canon - Tripitakas, Jatakas; Jain Canon - Agamas; Sangam Literature - Ettuthokai, Pattupattu, Silappatikaram, Manimekalai)"
+      ],
+      [
+        23,
+        "art_culture_heritage.schools_of_indian_philosophy.heterodox_nastika_systems",
+        3,
+        "Heterodox / Nastika Systems (Carvaka / Lokayata Materialism, Ajivika Determinism, Jain Philosophy - Anekantavada, Syadvada, Buddhist Philosophy - Pratityasamutpada, Anatta, Shunyata)"
+      ]
+    ],
+    "curr_subt": "Fourth Buddhist Council (Kundalvana, Kashmir) & Mahayana-Hinayana Schism",
+    "question_text": "In which Buddhist Council were the two groups Buddhist i.e. the Mahaya"
+  },
+  {
+    "qnum": 62,
+    "status": "EXACT_MATCH",
+    "curr_nid": "history.ancient_india.mauryan_empire.ashokas_dhamma_inscriptions",
+    "new_nid": "history.ancient_india.mauryan_empire.ashokas_dhamma_inscriptions",
+    "node_level": 4,
+    "node_name": "Ashoka's Dhamma & Inscriptions",
+    "subject": "History",
+    "question_text": "Consider the following statements regarding Ashoka's inscription:\n1. T"
+  },
+  {
+    "qnum": 63,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.information_communication_technology_cybersecurity.blockchain_platforms",
+    "candidates": [
+      [
+        23,
+        "science_technology_defence",
+        1,
+        "Science, Technology & Defence"
+      ],
+      [
+        23,
+        "science_technology_defence.space_technology_astronomy",
+        2,
+        "Space Technology & Astronomy"
+      ],
+      [
+        23,
+        "science_technology_defence.biotechnology_health_life_sciences",
+        2,
+        "Biotechnology, Health & Life Sciences"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security",
+        2,
+        "Information & Communication Technology (ICT), AI & Cyber Security"
+      ],
+      [
+        23,
+        "science_technology_defence.defence_technology",
+        2,
+        "Defence Technology"
+      ]
+    ],
+    "curr_subt": "Vishvasya-Blockchain Technology Stack by MeitY for Trusted Digital Services",
+    "question_text": "Recently, the Government of India launched Vishvasya. What is it relat"
+  },
+  {
+    "qnum": 64,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.global_institutions_agreements_treaties.trade_pacts_tepa",
+    "candidates": [
+      [
+        28,
+        "international_relations_global_institutions.global_institutions_agreements_treaties",
+        2,
+        "Global Institutions, Agreements & Treaties"
+      ],
+      [
+        28,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
+        3,
+        "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.global_climate_maritime_frameworks",
+        3,
+        "Global Climate & Maritime Frameworks (UNFCCC Climate Architecture, UNCLOS Maritime Law, Global Tax Regimes)"
+      ]
+    ],
+    "curr_subt": "India-EFTA Trade and Economic Partnership Agreement (TEPA)",
+    "question_text": "Consider the following statements:\nA. The European Free Trade Associat"
+  },
+  {
+    "qnum": 65,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.elections_and_electoral_reforms.evm_vvpat_mechanisms",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.transparency_accountability_citizen_charters.right_to_information_act_2005",
+        3,
+        "Right to Information Act 2005 (RTI Architecture, Exemptions Section 8, Information Commissions, Judicial & Legislative Accountability)"
+      ]
+    ],
+    "curr_subt": "Electronic Voting Machines (EVM) and VVPAT Verification Architecture",
+    "question_text": "Which of the following statement/statements are correct about Electron"
+  },
+  {
+    "qnum": 66,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.global_issues_contemporary_world_order.peace_processes",
+    "candidates": [
+      [
+        23,
+        "international_relations_global_institutions.indias_foreign_policy_bilateral_relations.relations_with_immediate_neighbours",
+        3,
+        "Relations with Immediate Neighbours (Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka, Maldives, Myanmar, Afghanistan)"
+      ]
+    ],
+    "curr_subt": "Afghanistan Peace Formats (Doha Process, Istanbul Process & Moscow Format)",
+    "question_text": "The Doha process, Istanbul process and Moscow format are related to?\nA"
+  },
+  {
+    "qnum": 67,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.federal_structure_center_state_relations.seventh_schedule_distribution_of_powers",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive",
+        2,
+        "Union Executive & State Executive"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.parliament_state_legislatures",
+        2,
+        "Parliament & State Legislatures"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.federal_structure_center-state_relations_devolution",
+        2,
+        "Federal Structure, Center-State Relations & Devolution"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.salient_features_amendments_basic_structure.preamble",
+        3,
+        "Preamble (Sovereign, Socialist, Secular, Democratic, Republic, Justice, Liberty, Equality, Fraternity)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
+        3,
+        "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)"
+      ]
+    ],
+    "curr_subt": "Seventh Schedule Legislative Lists (Union List, State List & Concurrent List Subjects)",
+    "question_text": "Consider the 3 lists come under the Constitution of India and the rela"
+  },
+  {
+    "qnum": 68,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.macroeconomics_growth_stability.twin_deficit_problem",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting",
+        2,
+        "Macroeconomic Fundamentals & National Income Accounting"
+      ],
+      [
+        23,
+        "indian_economy_development.external_sector_balance_of_payments_foreign_trade",
+        2,
+        "External Sector, Balance of Payments & Foreign Trade"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.national_income_aggregates",
+        3,
+        "National Income Aggregates (Gross Domestic Product / GDP - Constant vs Current Prices, Gross National Product / GNP, Net National Product / NNP at Factor Cost vs Market Price, Gross Value Added / GVA)"
+      ],
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.non-performing_assets_resolution_architecture",
+        3,
+        "Non-Performing Assets & Resolution Architecture (Gross vs Net NPAs, Special Mention Accounts / SMA-0, 1, 2, Stressed Assets; Twin Balance Sheet Syndrome; Insolvency and Bankruptcy Code / IBC 2016 - National Company Law Tribunal / NCLT, Insolvency and Bankruptcy Board of India / IBBI, Committee of Creditors; Bad Bank - National Asset Reconstruction Company Limited / NARCL & India Debt Resolution Company Limited / IDRCL; Prompt Corrective Action / PCA Framework, BASEL III Norms - Capital Adequacy Ratio / CRAR, Tier 1 & Tier 2 Capital)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect",
+        3,
+        "Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)"
+      ]
+    ],
+    "curr_subt": "Twin Deficit Hypothesis (Fiscal Deficit and Current Account / Trade Deficit Coexistence)",
+    "question_text": "Consider the following statements:\nA. The coexistence of budget defici"
+  },
+  {
+    "qnum": 69,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.monetary_policy_banking_architecture.money_market_instruments",
+    "candidates": [
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.monetary_policy_framework_rbi_operations",
+        3,
+        "Monetary Policy Framework & RBI Operations (Flexible Inflation Targeting Framework / 4% +/- 2%, Monetary Policy Committee / MPC - Composition & Voting, Policy Rates - Repo Rate, Standing Deposit Facility / SDF, Marginal Standing Facility / MSF, Reverse Repo; Reserve Ratios - Cash Reserve Ratio / CRR, Statutory Liquidity Ratio / SLR; Quantitative Tools - Open Market Operations / OMO, Operation Twist, Long-Term Repo Operations / LTRO; Qualitative Tools - Margin Requirements, Moral Suasion)"
+      ],
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.money_supply_liquidity",
+        3,
+        "Money Supply & Liquidity (Monetary Aggregates - Reserve Money / M0, Narrow Money / M1, Intermediate Money / M2, Broad Money / M3; Money Multiplier Effect, Velocity of Money)"
+      ],
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+        3,
+        "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)"
+      ],
+      [
+        28,
+        "indian_economy_development.monetary_policy_banking_architecture.non-banking_financial_institutions_capital_markets",
+        3,
+        "Non-Banking Financial Institutions & Capital Markets (Non-Banking Financial Companies / NBFCs - Systemically Important NBFCs, Scale-Based Regulatory Framework; Primary vs Secondary Markets, Initial Public Offerings / IPOs, SEBI Regulatory Framework, Stock Exchanges - BSE, NSE, Algorithmic & High-Frequency Trading, Mutual Funds & Systematic Investment Plans / SIPs, Credit Rating Agencies / CRAs)"
+      ],
+      [
+        23,
+        "indian_economy_development",
+        1,
+        "Indian Economy & Development"
+      ]
+    ],
+    "curr_subt": "Indian Money Market Instruments (Treasury Bills, Repos, Commercial Papers)",
+    "question_text": "Consider the following (markets) related to Indian money markets :\nA. "
+  },
+  {
+    "qnum": 70,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.national_income_accounting_growth_development.gdp_deflator_inflation_indices",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.methodologies_deflators",
+        3,
+        "Methodologies & Deflators (Output / Production Method, Income Method, Expenditure Method / Consumption + Investment + Government + Net Exports, GDP Deflator vs Consumer Price Index / CPI & Wholesale Price Index / WPI)"
+      ]
+    ],
+    "curr_subt": "GDP Deflator (Nominal GDP / Real GDP × 100) vs CPI/WPI Differences",
+    "question_text": "Consider the following statements related to GDP Deflator:\nA. GDP defl"
+  },
+  {
+    "qnum": 71,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.fiscal_policy_public_finance.cess_and_surcharges_federal_finance",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+        3,
+        "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect",
+        3,
+        "Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.indirect_taxation_gst_architecture",
+        3,
+        "Indirect Taxation & GST Architecture (Goods and Services Tax / GST - 101st Constitutional Amendment Act, Destination-based Consumption Tax, Subsumed Taxes; Dual GST Model - CGST, SGST, IGST; GST Council Article 279A - Composition & Decision Mechanism; Inverted Duty Structure, Input Tax Credit / ITC Fraud, E-Way Bill, GST Compensation Cess Mechanism)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.public_debt_fiscal_federalism",
+        3,
+        "Public Debt & Fiscal Federalism (Internal vs External Public Debt, Sovereign Green Bonds, Ways and Means Advances / WMA; Finance Commission Article 280 - Terms of Reference, Vertical vs Horizontal Devolution Criteria, Post-Devolution Revenue Deficit Grants, Performance-linked Incentives)"
+      ],
+      [
+        23,
+        "indian_economy_development.external_sector_balance_of_payments_foreign_trade.foreign_exchange_currency_dynamics",
+        3,
+        "Foreign Exchange & Currency Dynamics (Foreign Exchange Reserves - Components: Foreign Currency Assets, Gold, SDRs, Reserve Tranche Position in IMF; Exchange Rate Regimes - Clean vs Dirty Float, Nominal Effective Exchange Rate / NEER vs Real Effective Exchange Rate / REER; Currency Convertibility - Full Current Account Convertibility / Article VIII of IMF, Tarapore Committee Recommendations on Capital Account Convertibility; Internationalisation of Indian Rupee - Vostro Accounts, Rupee-denominated Trade Settlement)"
+      ]
+    ],
+    "curr_subt": "Cess and Surcharges Exclusion from Divisible Tax Pool under Article 270",
+    "question_text": "Consider the following statements:\nStatement-I: In India's federal fin"
+  },
+  {
+    "qnum": 72,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_society_social_justice.welfare_schemes_vulnerable_sections.women_empowerment_mission_shakti",
+    "candidates": [
+      [
+        23,
+        "indian_society_social_justice.welfare_schemes_for_vulnerable_sections",
+        2,
+        "Welfare Schemes for Vulnerable Sections"
+      ],
+      [
+        23,
+        "indian_society_social_justice.welfare_schemes_for_vulnerable_sections.protection_of_marginalised_groups",
+        3,
+        "Protection of Marginalised Groups (Schemes & Acts for SC/ST, Women, Children, Elderly, Disabled / Divyangjan, Transgenders, Minorities)"
+      ],
+      [
+        23,
+        "indian_society_social_justice.welfare_schemes_for_vulnerable_sections.institutional_safeguards",
+        3,
+        "Institutional Safeguards (National Commissions, Social Welfare Boards, Rights-based Approach to Welfare)"
+      ]
+    ],
+    "curr_subt": "Mission Shakti Umbrella Scheme (Sambal & Samarthya Sub-schemes)",
+    "question_text": "Consider the following statements in relation to 'Mission Shakti' sche"
+  },
+  {
+    "qnum": 73,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+    "node_level": 3,
+    "node_name": "Strategic Maritime Straits, Canals & Chokepoints (Strait of Hormuz, Bab-el-Mandeb, Malacca Strait, Bosphorus & Dardanelles, Kerch Strait, Taiwan Strait, Suez Canal, Panama Canal)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "'Darien Gap' was in news recently, which is located in:\nA. Panama\nB. C"
+  },
+  {
+    "qnum": 74,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.nuclear_technology_energy.small_modular_reactors",
+    "candidates": [
+      [
+        28,
+        "science_technology_defence.nuclear_technology_energy.nuclear_energy_programme_reactors",
+        3,
+        "Nuclear Energy Programme & Reactors (India's Three-Stage Nuclear Power Programme - Stage 1: PHWR & Natural Uranium, Stage 2: Fast Breeder Reactor / PFBR & Plutonium, Stage 3: Thorium-based Reactors; Reactor Installations - Kudankulam, Kakrapar, Kalpakkam / PFBR, KAMINI)"
+      ],
+      [
+        23,
+        "science_technology_defence.space_technology_astronomy.launch_vehicles_propulsion_systems",
+        3,
+        "Launch Vehicles & Propulsion Systems (Historical Launchers - SLV-3, ASLV; Operational Workhorses - PSLV, GSLV Mk II, LVM3 / GSLV Mk III, SSLV; Next-Gen Propulsion & Reusable Tech - RLV-TD, NGLV, Scramjet Engine Technology)"
+      ],
+      [
+        23,
+        "science_technology_defence.space_technology_astronomy.orbits_satellite_navigation_applications",
+        3,
+        "Orbits, Satellite Navigation & Applications (Satellite Orbits - LEO, MEO, GEO/GSO, Sun-Synchronous Orbit, Molniya Orbit; Orbital Mechanics & Transfer Dynamics - Lagrange Points L1–L5, Gravity Assist, Hohmann Transfer; Regional & Global Navigation Systems - NavIC / IRNSS, GAGAN, GPS, GLONASS, Galileo)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.artificial_intelligence_robotics",
+        3,
+        "Artificial Intelligence & Robotics (Core AI Paradigms - Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing; Generative AI & Frontier Models - Large Language Models / LLMs, Multimodal AI, Deepfakes, Synthetic Media; Robotics & Autonomous Systems - Humanoid Robotics, Swarm Robotics, Autonomous Vehicles; AI Ethics & Global Governance - AI Bias, Responsible AI, Bletchley Declaration, IndiaAI Mission)"
+      ],
+      [
+        23,
+        "science_technology_defence.defence_technology.missile_systems_artillery",
+        3,
+        "Missile Systems & Artillery (Integrated Guided Missile Development Programme - IGMDP: Prithvi, Agni Series I–V, Trishul, Akash, Nag; Cruise & Hypersonic Systems - BrahMos, Nirbhay, Hypersonic Technology Demonstrator Vehicle / HSTDV; Air Defence & Artillery - S-400 Triumf, VSHORADS, Ballistic Missile Defence / BMD, Pinaka Rocket System)"
+      ]
+    ],
+    "curr_subt": "Small Modular Reactors (SMRs) Capabilities & Passive Safety Systems",
+    "question_text": "How many of the following statement/statements is/are correct about th"
+  },
+  {
+    "qnum": 75,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.space_technology_astronomy.joint_satellite_missions",
+    "candidates": [
+      [
+        28,
+        "science_technology_defence.space_technology_astronomy.indian_space_programme_isro_missions",
+        3,
+        "Indian Space Programme & ISRO Missions (Lunar Exploration - Chandrayaan-1, 2, 3, LuPEX; Planetary & Solar Missions - Mangalyaan / MOM, Aditya-L1, Shukrayaan; Human Spaceflight Programme - Gaganyaan, Bharatiya Antariksha Station; Space Astronomy Observatories - AstroSat, XPoSat)"
+      ],
+      [
+        28,
+        "science_technology_defence.space_technology_astronomy.orbits_satellite_navigation_applications",
+        3,
+        "Orbits, Satellite Navigation & Applications (Satellite Orbits - LEO, MEO, GEO/GSO, Sun-Synchronous Orbit, Molniya Orbit; Orbital Mechanics & Transfer Dynamics - Lagrange Points L1–L5, Gravity Assist, Hohmann Transfer; Regional & Global Navigation Systems - NavIC / IRNSS, GAGAN, GPS, GLONASS, Galileo)"
+      ],
+      [
+        28,
+        "science_technology_defence.space_technology_astronomy.deep_space_observatories_cosmology_astrophysics",
+        3,
+        "Deep Space Observatories, Cosmology & Astrophysics (Space & Ground Telescopes - James Webb Space Telescope, Hubble, Thirty Meter Telescope, Square Kilometre Array; Cosmic Phenomena & Astrophysics - Black Holes, Dark Matter & Dark Energy, Gravitational Waves & LIGO India, Exoplanets, Solar Flares & Coronal Mass Ejections)"
+      ],
+      [
+        28,
+        "science_technology_defence.space_technology_astronomy.space_governance_commercialization_space_environment",
+        3,
+        "Space Governance, Commercialization & Space Environment (Space Debris & Sustainability - Kessler Syndrome, Project NETRA, IADC Guidelines; Space Law & Regulatory Bodies - Outer Space Treaty 1967, Artemis Accords, IN-SPACe, NewSpace India Limited)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.artificial_intelligence_robotics",
+        3,
+        "Artificial Intelligence & Robotics (Core AI Paradigms - Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing; Generative AI & Frontier Models - Large Language Models / LLMs, Multimodal AI, Deepfakes, Synthetic Media; Robotics & Autonomous Systems - Humanoid Robotics, Swarm Robotics, Autonomous Vehicles; AI Ethics & Global Governance - AI Bias, Responsible AI, Bletchley Declaration, IndiaAI Mission)"
+      ]
+    ],
+    "curr_subt": "SVOM (Space Variable Objects Monitor) Satellite - French-Chinese Astrophysics Mission",
+    "question_text": "Space Variable Objects Monitor (SVOM) satellite developed jointly by:"
+  },
+  {
+    "qnum": 76,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+    "node_level": 3,
+    "node_name": "Enclosed Seas, Marginal Seas & Bordering Nations (Mediterranean Sea, Black Sea, Caspian Sea, Red Sea, Baltic Sea, Persian Gulf, Aral Sea, Dead Sea)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "Consider the following countries:\nA. Egypt\nB. Israel\nC. Jordan\nD. Saud"
+  },
+  {
+    "qnum": 77,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.cultural_institutions_awards.unesco_creative_cities_network",
+    "candidates": [
+      [
+        23,
+        "art_culture_heritage.fairs_festivals_crafts_unesco_heritage",
+        2,
+        "Fairs, Festivals, Crafts & UNESCO Heritage"
+      ],
+      [
+        23,
+        "art_culture_heritage.fairs_festivals_crafts_unesco_heritage.unesco_world_heritage_sites_intangible_cultural_heritage",
+        3,
+        "UNESCO World Heritage Sites & Intangible Cultural Heritage (Kumbh Mela, Yoga, Vedic Chanting, Ramlila, Chhau Dance, Mudiyettu, Durga Puja, Garba)"
+      ]
+    ],
+    "curr_subt": "UNESCO Creative Cities Network - Gwalior (Music) & Kozhikode (Literature)",
+    "question_text": "Which of the Indian cities are included in UNESCO Creative Cities Netw"
+  },
+  {
+    "qnum": 78,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "environment_ecology_disaster_management.environmental_pollution_degradation.electric_mobility_initiatives",
+    "candidates": [
+      [
+        23,
+        "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.aquatic_ecosystems_coastal_conservation",
+        3,
+        "Aquatic Ecosystems & Coastal Conservation (Wetland Ecology - Wetland Classification, Ecological Services, Ramsar Convention on Wetlands 1971, Montreux Record / Keoladeo & Loktak Lake, Amrit Dharohar Initiative; Mangrove Ecosystems - Halophytes, Pneumatophores / Stilt Roots, Sundarbans, Bhitarkanika, MISHTI Scheme; Coral Reef Ecosystems - Fringing, Barrier, Atoll Reefs; Coral Bleaching - Thermal Stress, Zooxanthellae Expulsion, Ocean Acidification)"
+      ],
+      [
+        23,
+        "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.air_pollution_atmospheric_quality",
+        3,
+        "Air Pollution & Atmospheric Quality (Major Pollutants - PM2.5, PM10, SO2, NO2, CO, Ozone / O3, Lead, Ammonia; National Air Quality Index / AQI; National Clean Air Programme / NCAP; Commission for Air Quality Management / CAQM in NCR; Stubble Burning / Parali Issue & Bio-decomposers; Vehicular Emissions - Bharat Stage VI / BS-VI Emission Norms, EV Transition / FAME Scheme; Industrial Pollution - Flue Gas Desulfurization / FGD, Fly Ash Management Rules; Acid Rain Dynamics & Photochemical Smog)"
+      ],
+      [
+        23,
+        "environment_ecology_disaster_management.climate_change_science_carbon_markets_global_conventions.carbon_markets_economic_instruments",
+        3,
+        "Carbon Markets & Economic Instruments (Carbon Pricing - Carbon Tax vs Cap-and-Trade Systems; Carbon Credits & Offsets, Article 6 of Paris Agreement / Article 6.2 Bilateral vs Article 6.4 Multilateral Mechanism; Carbon Credit Trading Scheme / CCTS in India under Energy Conservation Amendment Act 2022; EU Carbon Border Adjustment Mechanism / CBAM & Impact on Exports)"
+      ],
+      [
+        23,
+        "environment_ecology_disaster_management.institutional_legal_operational_framework.operational_capacity_building_agencies",
+        3,
+        "Operational & Capacity Building Agencies (National Disaster Response Force / NDRF - Specialised Multi-disciplinary Force, Standard Operating Procedures; State Disaster Response Force / SDRF; National Institute of Disaster Management / NIDM - Human Resource Development, Research, Capacity Building; Civil Defence & Home Guards; Aapda Mitra Scheme / Community Volunteer Training)"
+      ]
+    ],
+    "curr_subt": "PM E-DRIVE Scheme (Electric Two-Wheelers, E-Ambulance, E-Trucks Subsidies)",
+    "question_text": "Consider the following with reference to PM E-DRIVE:\nA. e-two-wheeler\n"
+  },
+  {
+    "qnum": 79,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.statutory_regulatory_quasi_judicial_bodies.serious_fraud_investigation_office",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.good_governance_administrative_reforms.administrative_reforms_commissions_of_karnataka",
+        3,
+        "Administrative Reforms Commissions of Karnataka (KARC-I under Harnahalli Ramaswamy; KARC-II under T.M. Vijay Bhaskar - 100+ Transformative Recommendations: Rationalisation of Departmental Directorates, Digital File Movement via e-Office, Cadre Management, Outsourcing Non-Core Activities, Performance Appraisal & Citizen-Centric Restructuring)"
+      ]
+    ],
+    "curr_subt": "Serious Fraud Investigation Office (SFIO) under Companies Act 2013",
+    "question_text": "Consider the following statements with reference to Serious Fraud Inve"
+  },
+  {
+    "qnum": 80,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.economy_development_of_karnataka.industrial_infrastructure_karnataka",
+    "candidates": [
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka",
+        2,
+        "Economy & Development of Karnataka"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.macroeconomic_profile_state_finances_of_karnataka",
+        3,
+        "Macroeconomic Profile & State Finances of Karnataka"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.agriculture_allied_sectors_rural_transformation_in_karnataka",
+        3,
+        "Agriculture, Allied Sectors & Rural Transformation in Karnataka"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.flagship_welfare_guarantee_schemes_of_karnataka",
+        3,
+        "Flagship Welfare & Guarantee Schemes of Karnataka (Pancha Guarantees)"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.regional_imbalances_nanjundappa_committee_kalyana_karnataka_development",
+        3,
+        "Regional Imbalances, Nanjundappa Committee & Kalyana Karnataka Development"
+      ]
+    ],
+    "curr_subt": "Registered Vehicle Scrapping Facilities (RVSF) in Karnataka (Nelamangala, Koratagere)",
+    "question_text": "Consider the following places which are having operational Registered "
+  },
+  {
+    "qnum": 81,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_society_social_justice.social_movements_contemporary_issues.global_gender_movements",
+    "candidates": [
+      [
+        23,
+        "indian_society_social_justice.role_of_women_womens_movements",
+        2,
+        "Role of Women & Women's Movements"
+      ],
+      [
+        23,
+        "indian_society_social_justice.social_institutions.marriage_institutions",
+        3,
+        "Marriage Institutions (Traditional Patterns, Inter-caste & Inter-religious Marriages, Modern Legislative Reforms)"
+      ],
+      [
+        23,
+        "indian_society_social_justice.role_of_women_womens_movements.women_organisations_movements",
+        3,
+        "Women Organisations & Movements (Historical Reformers, Pre-Independence Movement, Post-Independence Feminist Waves, Self-Help Groups / SHGs)"
+      ],
+      [
+        23,
+        "indian_society_social_justice.social_sector_development.health_sector_reforms",
+        3,
+        "Health Sector Reforms (National Health Policy, Ayushman Bharat / PM-JAY, Health Infrastructure Deficit, Universal Health Coverage)"
+      ],
+      [
+        23,
+        "indian_society_social_justice.social_sector_development.education_sector_reforms",
+        3,
+        "Education Sector Reforms (National Education Policy / NEP 2020, Right to Education / RTE Act, Higher Education Governance, Digital Education Initiatives)"
+      ]
+    ],
+    "curr_subt": "4B Movement - South Korean Feminist Radical Reform Movement",
+    "question_text": "4B (Four Nos) movement was in news recently, originally it was started"
+  },
+  {
+    "qnum": 82,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.space_technology_astronomy.gaganyaan_human_spaceflight",
+    "candidates": [
+      [
+        28,
+        "science_technology_defence.space_technology_astronomy.indian_space_programme_isro_missions",
+        3,
+        "Indian Space Programme & ISRO Missions (Lunar Exploration - Chandrayaan-1, 2, 3, LuPEX; Planetary & Solar Missions - Mangalyaan / MOM, Aditya-L1, Shukrayaan; Human Spaceflight Programme - Gaganyaan, Bharatiya Antariksha Station; Space Astronomy Observatories - AstroSat, XPoSat)"
+      ],
+      [
+        23,
+        "science_technology_defence.biotechnology_health_life_sciences.genomics_genetics_gene_editing",
+        3,
+        "Genomics, Genetics & Gene Editing (Molecular Biology Foundations - DNA, RNA, Plasmids, Chromosomes; Gene Editing Tools & Techniques - CRISPR-Cas9, TALENs, Zinc Finger Nucleases; Genome Sequencing Initiatives - Human Genome Project, Genome India Project, Earth BioGenome; Advanced Genetic Therapies - Gene Therapy, Somatic vs Germline Editing, Three-Parent Babies / Mitochondrial Replacement Therapy)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.artificial_intelligence_robotics",
+        3,
+        "Artificial Intelligence & Robotics (Core AI Paradigms - Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing; Generative AI & Frontier Models - Large Language Models / LLMs, Multimodal AI, Deepfakes, Synthetic Media; Robotics & Autonomous Systems - Humanoid Robotics, Swarm Robotics, Autonomous Vehicles; AI Ethics & Global Governance - AI Bias, Responsible AI, Bletchley Declaration, IndiaAI Mission)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.high-performance_quantum_computing",
+        3,
+        "High-Performance & Quantum Computing (High-Performance Computing - Supercomputing Architecture, National Supercomputing Mission, PARAM Siddhi, Pratyush, Mihir; Quantum Information Science - Qubits, Quantum Entanglement, Superposition, National Quantum Mission; Semiconductor Ecosystem - Microprocessors - Shakti & Vega, Wafer Fabrication, India Semiconductor Mission / ISM)"
+      ],
+      [
+        23,
+        "science_technology_defence.nanoscience_advanced_materials.nanotechnology_applications",
+        3,
+        "Nanotechnology Applications (Synthesis & Materials - Nanoparticles, Carbon Nanotubes / CNTs, Quantum Dots, Nano-emulsions; Sectoral Applications - Nano-fertilizers / Nano Urea, Targeted Drug Delivery, Nano-sensors, National Nano Mission)"
+      ]
+    ],
+    "curr_subt": "Gaganyaan Human Spaceflight Mission (LVM3, HLVM3 Crew Module Architecture)",
+    "question_text": "Which of the following statements is/are incorrect?\nA. The Gaganyaan P"
+  },
+  {
+    "qnum": 83,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.employment_skill_development_labour_reforms.employment_surveys_and_data",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.inclusive_growth_inequality_dynamics",
+        3,
+        "Inclusive Growth & Inequality Dynamics (Multidimensional Poverty Index / NITI Aayog MPI, Gini Coefficient & Lorenz Curve, Jobless Growth, Female Labour Force Participation Rate / FLFPR, Formalisation of Informal Economy, Financial Inclusion - PM Jan Dhan Yojana / PMJDY, JAM Trinity)"
+      ],
+      [
+        23,
+        "indian_economy_development.industrial_policy_manufacturing_services.industrial_policy_structural_evolution",
+        3,
+        "Industrial Policy & Structural Evolution (Industrial Policy Resolutions 1948, 1956 / License Raj, 1991 Industrial Policy Liberalisation; Index of Industrial Production / IIP - Eight Core Industries / 40.27% weightage: Refinery Products, Electricity, Steel, Coal, Crude Oil, Natural Gas, Cement, Fertilizers; Annual Survey of Industries / ASI)"
+      ],
+      [
+        23,
+        "indian_economy_development.economy_development_of_karnataka.3_yuva_nidhi_scheme",
+        3,
+        "3. Yuva Nidhi Scheme (Unemployment Financial Assistance Scheme for Educated Youth: ₹3,000 per month for Unemployed Graduates and ₹1,500 per month for Unemployed Diploma Holders for up to 2 years)."
+      ]
+    ],
+    "curr_subt": "All-India Quarterly Establishment-based Employment Survey (AQEES) by Labour Bureau",
+    "question_text": "Consider the following statement/statements about All India Quarterly "
+  },
+  {
+    "qnum": 84,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.monetary_policy_banking_architecture.bond_yields_interest_rates",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.national_income_aggregates",
+        3,
+        "National Income Aggregates (Gross Domestic Product / GDP - Constant vs Current Prices, Gross National Product / GNP, Net National Product / NNP at Factor Cost vs Market Price, Gross Value Added / GVA)"
+      ],
+      [
+        23,
+        "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.growth_development_dynamics",
+        3,
+        "Growth & Development Dynamics (Economic Growth vs Economic Development, Potential GDP & Output Gap, Business Cycles - Recession, Depression, Stagflation, Reflation, Middle-Income Trap)"
+      ],
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.inclusive_growth_inequality_dynamics",
+        3,
+        "Inclusive Growth & Inequality Dynamics (Multidimensional Poverty Index / NITI Aayog MPI, Gini Coefficient & Lorenz Curve, Jobless Growth, Female Labour Force Participation Rate / FLFPR, Formalisation of Informal Economy, Financial Inclusion - PM Jan Dhan Yojana / PMJDY, JAM Trinity)"
+      ],
+      [
+        23,
+        "indian_economy_development.agriculture_food_management_subsidies.agricultural_pricing_market_reforms",
+        3,
+        "Agricultural Pricing & Market Reforms (Minimum Support Price / MSP - Comprehensive Cost C2 + 50% vs A2+FL; Commission for Agricultural Costs and Prices / CACP; PM-AASHA Scheme; Market Architecture - Agricultural Produce Market Committees / APMC, Model APMC Act, Electronic National Agriculture Market / e-NAM, Farmer Producer Organisations / FPOs, Contract Farming Regulations)"
+      ],
+      [
+        23,
+        "indian_economy_development.external_sector_balance_of_payments_foreign_trade.foreign_exchange_currency_dynamics",
+        3,
+        "Foreign Exchange & Currency Dynamics (Foreign Exchange Reserves - Components: Foreign Currency Assets, Gold, SDRs, Reserve Tranche Position in IMF; Exchange Rate Regimes - Clean vs Dirty Float, Nominal Effective Exchange Rate / NEER vs Real Effective Exchange Rate / REER; Currency Convertibility - Full Current Account Convertibility / Article VIII of IMF, Tarapore Committee Recommendations on Capital Account Convertibility; Internationalisation of Indian Rupee - Vostro Accounts, Rupee-denominated Trade Settlement)"
+      ]
+    ],
+    "curr_subt": "Bond Prices and Bond Yields Inverse Relationship & Coupon Dynamics",
+    "question_text": "How many of the following statements is/are incorrect?\nA. The yield of"
+  },
+  {
+    "qnum": 85,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_executive.presidential_veto_powers",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance",
+        1,
+        "Indian Polity, Constitution & Governance"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.indian_judiciary_judicial_system",
+        2,
+        "Indian Judiciary & Judicial System"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.historical_background_making_of_the_constitution.government_of_india_acts",
+        3,
+        "Government of India Acts (1858, 1892, Indian Councils Act 1909 / Morley-Minto, GOI Act 1919 / Montagu-Chelmsford, GOI Act 1935, Indian Independence Act 1947)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.salient_features_amendments_basic_structure.salient_features_of_the_indian_constitution",
+        3,
+        "Salient Features of the Indian Constitution (Written, Rigid vs Flexible, Federal with Unitary Bias, Parliamentary Form, Integrated Judiciary)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive.union_executive",
+        3,
+        "Union Executive (President - Election, Impeachment, Powers - Executive, Legislative, Financial, Judicial, Veto, Ordinance, Pardoning 72; Vice-President; Prime Minister & Council of Ministers - Collective Responsibility, Cabinet Committees)"
+      ]
+    ],
+    "curr_subt": "Pocket Veto Powers of Indian President (Article 111) vs US President",
+    "question_text": "Which of the following is correct regarding the 'Pocket Veto Power of "
+  },
+  {
+    "qnum": 86,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.development_processes_and_welfare_schemes.border_area_development",
+    "candidates": [],
+    "curr_subt": "Vibrant Villages Programme (VVP) for Northern Border Villages Transformation",
+    "question_text": "Consider the following statements about Vibrant Villages Programme :\nA"
+  },
+  {
+    "qnum": 87,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_society_social_justice.education_sector_reforms_nep_2020.foreign_university_campuses",
+    "candidates": [],
+    "curr_subt": "Foreign University Campuses in GIFT City Gujarat (Deakin University & Wollongong)",
+    "question_text": "Which of the following statements is/are incorrect?\nA. Deakin's new un"
+  },
+  {
+    "qnum": 88,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.infrastructure_energy_transport.biofuels_renewable_energy",
+    "candidates": [
+      [
+        23,
+        "indian_economy_development",
+        1,
+        "Indian Economy & Development"
+      ],
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.evolution_of_planning_in_india",
+        3,
+        "Evolution of Planning in India (Harrod-Domar & Mahalanobis Strategies, Indicative Planning, Five-Year Plans 1st to 12th, Structural Weaknesses of Planning Commission)"
+      ],
+      [
+        23,
+        "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.niti_aayog_transformational_governance",
+        3,
+        "NITI Aayog & Transformational Governance (Think Tank Mandate, Cooperative & Competitive Federalism, Governing Council, Aspirational Districts Programme / ADP, Aspirational Blocks Programme, Composite Water Management Index, SDG India Index, Export Preparedness Index)"
+      ],
+      [
+        23,
+        "indian_economy_development.monetary_policy_banking_architecture.non-performing_assets_resolution_architecture",
+        3,
+        "Non-Performing Assets & Resolution Architecture (Gross vs Net NPAs, Special Mention Accounts / SMA-0, 1, 2, Stressed Assets; Twin Balance Sheet Syndrome; Insolvency and Bankruptcy Code / IBC 2016 - National Company Law Tribunal / NCLT, Insolvency and Bankruptcy Board of India / IBBI, Committee of Creditors; Bad Bank - National Asset Reconstruction Company Limited / NARCL & India Debt Resolution Company Limited / IDRCL; Prompt Corrective Action / PCA Framework, BASEL III Norms - Capital Adequacy Ratio / CRAR, Tier 1 & Tier 2 Capital)"
+      ],
+      [
+        23,
+        "indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect",
+        3,
+        "Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)"
+      ]
+    ],
+    "curr_subt": "Biofuel Initiatives in India (SATAT, EBP, GOBARdhan, PM-JI-VAN)",
+    "question_text": "How many of the following Indian government schemes are directly assoc"
+  },
+  {
+    "qnum": 89,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.architecture_sculpture_monuments.ahom_dynasty_burial_architecture",
+    "candidates": [
+      [
+        23,
+        "art_culture_heritage",
+        1,
+        "Art, Culture & Heritage"
+      ],
+      [
+        23,
+        "art_culture_heritage.fairs_festivals_crafts_unesco_heritage",
+        2,
+        "Fairs, Festivals, Crafts & UNESCO Heritage"
+      ],
+      [
+        23,
+        "art_culture_heritage.fairs_festivals_crafts_unesco_heritage.unesco_world_heritage_sites_intangible_cultural_heritage",
+        3,
+        "UNESCO World Heritage Sites & Intangible Cultural Heritage (Kumbh Mela, Yoga, Vedic Chanting, Ramlila, Chhau Dance, Mudiyettu, Durga Puja, Garba)"
+      ]
+    ],
+    "curr_subt": "Charaideo Moidams of Ahom Dynasty (Assam) - UNESCO World Heritage Site 2024",
+    "question_text": "Consider the following statements :\nA. Moidams the Mound-Burial System"
+  },
+  {
+    "qnum": 90,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "science_technology_defence.information_communication_technology_cybersecurity.artificial_intelligence_ethics_governance",
+    "candidates": [
+      [
+        23,
+        "science_technology_defence.space_technology_astronomy.space_governance_commercialization_space_environment",
+        3,
+        "Space Governance, Commercialization & Space Environment (Space Debris & Sustainability - Kessler Syndrome, Project NETRA, IADC Guidelines; Space Law & Regulatory Bodies - Outer Space Treaty 1967, Artemis Accords, IN-SPACe, NewSpace India Limited)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.artificial_intelligence_robotics",
+        3,
+        "Artificial Intelligence & Robotics (Core AI Paradigms - Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing; Generative AI & Frontier Models - Large Language Models / LLMs, Multimodal AI, Deepfakes, Synthetic Media; Robotics & Autonomous Systems - Humanoid Robotics, Swarm Robotics, Autonomous Vehicles; AI Ethics & Global Governance - AI Bias, Responsible AI, Bletchley Declaration, IndiaAI Mission)"
+      ],
+      [
+        23,
+        "science_technology_defence.information_communication_technology_ai_cyber_security.cyber_security_threats_digital_governance",
+        3,
+        "Cyber Security, Threats & Digital Governance (Vector Threats & Exploits - Malware, Ransomware, Phishing, Zero-Day Exploits, Pegasus / Spyware; Critical Information Infrastructure & Defense - CERT-In, NCIIPC, Cyber Swachhta Kendra; Digital Privacy & Legislation - Digital Personal Data Protection Act 2023, IT Act 2000)"
+      ],
+      [
+        23,
+        "science_technology_defence.nuclear_technology_energy.international_nuclear_governance_treaties",
+        3,
+        "International Nuclear Governance & Treaties (Global Regulatory Framework - IAEA, Non-Proliferation Treaty / NPT, Comprehensive Nuclear-Test-Ban Treaty / CTBT; Export Control Regimes - Nuclear Suppliers Group / NSG, Missile Technology Control Regime / MTCR, Australia Group, Wassenaar Arrangement)"
+      ]
+    ],
+    "curr_subt": "Bletchley Declaration on Frontier AI Safety & International AI Governance",
+    "question_text": "Which of the following best describes the Bletchley Declaration?"
+  },
+  {
+    "qnum": 91,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_economy_development.economy_development_of_karnataka.one_district_one_product_karnataka",
+    "candidates": [
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka",
+        2,
+        "Economy & Development of Karnataka"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.macroeconomic_profile_state_finances_of_karnataka",
+        3,
+        "Macroeconomic Profile & State Finances of Karnataka"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.agriculture_allied_sectors_rural_transformation_in_karnataka",
+        3,
+        "Agriculture, Allied Sectors & Rural Transformation in Karnataka"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.flagship_welfare_guarantee_schemes_of_karnataka",
+        3,
+        "Flagship Welfare & Guarantee Schemes of Karnataka (Pancha Guarantees)"
+      ],
+      [
+        28,
+        "indian_economy_development.economy_development_of_karnataka.regional_imbalances_nanjundappa_committee_kalyana_karnataka_development",
+        3,
+        "Regional Imbalances, Nanjundappa Committee & Kalyana Karnataka Development"
+      ]
+    ],
+    "curr_subt": "One District One Product (ODOP) Products of Karnataka (Ballari Jeans, Koppal Fig, Tumakuru Coconut)",
+    "question_text": "Match the following One District One Product (ODOP) with the respectiv"
+  },
+  {
+    "qnum": 92,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "art_culture_heritage.cultural_institutions_awards.sports_paralympic_achievements",
+    "candidates": [],
+    "curr_subt": "Paris 2024 Paralympic Games - India's Record Medal Tally (29 Medals)",
+    "question_text": "Consider the following statements:\nA. The 2024 Paralympic Games was he"
+  },
+  {
+    "qnum": 93,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.geomorphology_landforms_tectonics.volcanic_intrusive_landforms",
+    "candidates": [
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.earthquakes_tsunamis_volcanism",
+        3,
+        "Earthquakes, Tsunamis & Volcanism (Epicentre, Focus, Richter Scale, Volcanic Landforms - Intrusive & Extrusive, Caldera, Shield, Composite)"
+      ],
+      [
+        23,
+        "geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution",
+        3,
+        "Geomorphic Processes & Landform Evolution (Weathering - Physical, Chemical, Biological; Mass Wasting; Fluvial, Glacial, Aeolian, Karst & Coastal Landforms)"
+      ]
+    ],
+    "curr_subt": "Intrusive Volcanic Landforms (Sills, Dykes, Laccoliths, Batholiths)",
+    "question_text": "Match the following:\nVolcanic Landform | Description\nA. Sills | a. Wal"
+  },
+  {
+    "qnum": 94,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "geography_earth_systems.geography_of_karnataka.wildlife_sanctuaries_national_parks_karnataka",
+    "candidates": [
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka",
+        2,
+        "Geography of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.physiography_relief_divisions_of_karnataka",
+        3,
+        "Physiography & Relief Divisions of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.drainage_systems_river_basins_of_karnataka",
+        3,
+        "Drainage Systems & River Basins of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.climate_rainfall_agro-climatic_zones_of_karnataka",
+        3,
+        "Climate, Rainfall & Agro-Climatic Zones of Karnataka"
+      ],
+      [
+        28,
+        "geography_earth_systems.geography_of_karnataka.soils_natural_vegetation_of_karnataka",
+        3,
+        "Soils & Natural Vegetation of Karnataka"
+      ]
+    ],
+    "curr_subt": "Protected Areas of Karnataka by Area (Kali Tiger Reserve)",
+    "question_text": "Which of the following protected areas of Karnataka is having highest "
+  },
+  {
+    "qnum": 95,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.ramsar_wetlands_karnataka",
+    "candidates": [
+      [
+        28,
+        "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.aquatic_ecosystems_coastal_conservation",
+        3,
+        "Aquatic Ecosystems & Coastal Conservation (Wetland Ecology - Wetland Classification, Ecological Services, Ramsar Convention on Wetlands 1971, Montreux Record / Keoladeo & Loktak Lake, Amrit Dharohar Initiative; Mangrove Ecosystems - Halophytes, Pneumatophores / Stilt Roots, Sundarbans, Bhitarkanika, MISHTI Scheme; Coral Reef Ecosystems - Fringing, Barrier, Atoll Reefs; Coral Bleaching - Thermal Stress, Zooxanthellae Expulsion, Ocean Acidification)"
+      ],
+      [
+        20,
+        "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas",
+        2,
+        "Biodiversity, Wildlife Conservation & Protected Areas"
+      ],
+      [
+        20,
+        "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.biodiversity_fundamentals_patterns",
+        3,
+        "Biodiversity Fundamentals & Patterns (Three Levels - Genetic Diversity, Species Diversity, Ecosystem Diversity; Gradients of Biodiversity - Latitudinal Gradient, Species-Area Relationship / Alexander von Humboldt; Global Biodiversity Hotspots - Norman Myers Criteria: Western Ghats & Sri Lanka, Eastern Himalayas, Indo-Burma, Sundaland; Mega-Biodiverse Countries)"
+      ],
+      [
+        20,
+        "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.in-situ_conservation_architecture",
+        3,
+        "In-Situ Conservation Architecture (Protected Area Network under Wildlife Protection Act 1972 - National Parks: Highest Protection, No Human Rights / Grazing; Wildlife Sanctuaries: Limited Human Activities Allowed; Conservation Reserves & Community Reserves; Biosphere Reserves - UNESCO Man and the Biosphere / MAB Programme: Core, Buffer & Transition Zones / 12 of 18 in WNBR network; Tiger Reserves / Project Tiger 1973 & National Tiger Conservation Authority / NTCA, M-STrIPES Monitoring; Elephant Reserves / Project Elephant 1992, MIKE Programme, Elephant Corridors; Marine Protected Areas / MPAs)"
+      ],
+      [
+        20,
+        "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.ex-situ_conservation_botanical_science",
+        3,
+        "Ex-Situ Conservation & Botanical Science (Botanical Gardens, Zoological Parks, Seed Banks, Gene Banks, Cryopreservation, Captive Breeding Programmes)"
+      ]
+    ],
+    "curr_subt": "Ramsar Sites of Karnataka Designated in 2024 (Aghanashini, Ankasamudra, Magadi Kere)",
+    "question_text": "Which of the following waterbodies of Karnataka are included in the Ra"
+  },
+  {
+    "qnum": 96,
+    "status": "EXACT_MATCH",
+    "curr_nid": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+    "new_nid": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+    "node_level": 3,
+    "node_name": "International Land Borders, Landlocked Nations & Disputed Boundary Lines (Radcliffe Line, McMahon Line, Durand Line, 38th Parallel, 49th Parallel, Kuril Islands, Senkaku/Diaoyu, Spratly/Paracel)",
+    "subject": "Geography & Earth Systems",
+    "question_text": "Which of the following countries share border with Israel?\nA. Lebanon\n"
+  },
+  {
+    "qnum": 97,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_judiciary.judicial_review_powers",
+    "candidates": [
+      [
+        23,
+        "indian_polity_constitution_governance.indian_judiciary_judicial_system",
+        2,
+        "Indian Judiciary & Judicial System"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.statutory_regulatory_quasi-judicial_bodies",
+        2,
+        "Statutory, Regulatory & Quasi-Judicial Bodies"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.fundamental_rights_-_part_iii_articles_12-35",
+        3,
+        "Fundamental Rights - Part III / Articles 12-35 (Right to Equality 14-18, Right to Freedom 19-22, Against Exploitation 23-24, Freedom of Religion 25-28, Cultural & Educational 29-30, Constitutional Remedies 32; Judicial Review & Writs - Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo-Warranto)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive.union_executive",
+        3,
+        "Union Executive (President - Election, Impeachment, Powers - Executive, Legislative, Financial, Judicial, Veto, Ordinance, Pardoning 72; Vice-President; Prime Minister & Council of Ministers - Collective Responsibility, Cabinet Committees)"
+      ],
+      [
+        23,
+        "indian_polity_constitution_governance.union_executive_state_executive.state_executive",
+        3,
+        "State Executive (Governor - Appointment, Constitutional Role, Discretionary Powers, Ordinance Power 213; Chief Minister & State Council of Ministers)"
+      ]
+    ],
+    "curr_subt": "Judicial Review Power of Supreme Court (Article 32 & 136) and High Courts (Article 226)",
+    "question_text": "Consider the following statements:\nA. The power of Judicial Review in "
+  },
+  {
+    "qnum": 98,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "indian_polity_constitution_governance.union_and_state_legislature.sessions_prorogation_adjournment",
+    "candidates": [],
+    "curr_subt": "Prorogation vs Adjournment Sine Die vs Dissolution Procedures",
+    "question_text": "Consider the following statements :\nA. 'Prorogation' postpones a joint"
+  },
+  {
+    "qnum": 99,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.global_institutions_agreements_treaties.brics_and_new_development_bank",
+    "candidates": [
+      [
+        23,
+        "international_relations_global_institutions.regional_multilateral_groupings.indo-pacific_trans-regional_alliances",
+        3,
+        "Indo-Pacific & Trans-Regional Alliances (QUAD, I2U2, BRICS, Shanghai Cooperation Organisation / SCO, G20, Global South Alliances)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties",
+        2,
+        "Global Institutions, Agreements & Treaties"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
+        3,
+        "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)"
+      ],
+      [
+        20,
+        "international_relations_global_institutions.global_institutions_agreements_treaties.global_climate_maritime_frameworks",
+        3,
+        "Global Climate & Maritime Frameworks (UNFCCC Climate Architecture, UNCLOS Maritime Law, Global Tax Regimes)"
+      ]
+    ],
+    "curr_subt": "16th BRICS Summit in Kazan (Russia) & New Development Bank Structure",
+    "question_text": "Consider the following statements:\nA. India attended the 16th BRICS Su"
+  },
+  {
+    "qnum": 100,
+    "status": "NEEDS_UPDATE",
+    "curr_nid": "international_relations_global_institutions.bilateral_relations.diplomatic_civilian_awards",
+    "candidates": [],
+    "curr_subt": "Grand Order of the Chain of the Yellow Star (Suriname's Highest Award to President Murmu)",
+    "question_text": "Which of the following countries conferred its highest civilian honour"
+  }
+]

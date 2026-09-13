@@ -1,5 +1,5 @@
 -- =========================================================================
--- SUPABASE SEED 1B: CIVIL SERVICES (TOPICS PART 1) (202 NODES)
+-- SUPABASE SEED 1B: CIVIL SERVICES (TOPICS PART 1) (216 NODES)
 -- =========================================================================
 
 BEGIN;
@@ -505,77 +505,77 @@ INSERT INTO public.knowledge_nodes (
     (
         'art_culture_heritage.indian_architecture_sculpture.harappan_architecture_town_planning', 'harappan_architecture_town_planning', 'Harappan Architecture & Town Planning (Citadel, Great Bath, Granaries, Drainage System)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_architecture_sculpture.harappan_architecture_town_planning.harappan_citadel_lower_town_drainage_systems', 'art_culture_heritage.indian_architecture_sculpture.harappan_architecture_town_planning.harappan_sculptures_dancing_girl_priest_king']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Harappan', 'Architecture', 'Town', 'Planning', 'Citadel', 'Great', 'Bath', 'Granaries', 'Drainage', 'System']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_architecture_sculpture.mauryan_art_pillars', 'mauryan_art_pillars', 'Mauryan Art & Pillars (Ashokan Pillars, Stupas, Sanchi, Bharhut, Rock-Cut Caves - Barabar)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_architecture_sculpture.mauryan_art_pillars.ashokan_pillars_capitals_lion_capital_sarnath', 'art_culture_heritage.indian_architecture_sculpture.mauryan_art_pillars.mauryan_rock_cut_caves_barabar_didarganj_yakshi']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Mauryan', 'Art', 'Pillars', 'Ashokan', 'Stupas', 'Sanchi', 'Bharhut', 'Rock', 'Cut', 'Caves', 'Barabar']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_architecture_sculpture.post-mauryan_caves_sculpture', 'post-mauryan_caves_sculpture', 'Post-Mauryan Caves & Sculpture (Karle, Bhaja, Kanheri, Gandhara, Mathura & Amaravati Schools of Art)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_architecture_sculpture.post-mauryan_caves_sculpture.gandhara_mathura_amaravati_sculptural_schools', 'art_culture_heritage.indian_architecture_sculpture.post-mauryan_caves_sculpture.stupa_architecture_sanchi_chaityas_viharas']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Post', 'Mauryan', 'Caves', 'Sculpture', 'Karle', 'Bhaja', 'Kanheri', 'Gandhara', 'Mathura', 'Amaravati', 'Schools', 'Art']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_architecture_sculpture.temple_architecture_styles', 'temple_architecture_styles', 'Temple Architecture Styles (Nagara Style - Odisha, Khajuraho, Solanki; Dravida Style - Pallava, Chola, Vijayanagara; Vesara / Chalukyan Style - Badami, Pattadakal, Hoysala)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_architecture_sculpture.temple_architecture_styles.nagara_temple_style_odisha_khajuraho_solanki', 'art_culture_heritage.indian_architecture_sculpture.temple_architecture_styles.dravida_temple_style_pallava_chola_nayaka', 'art_culture_heritage.indian_architecture_sculpture.temple_architecture_styles.vesara_hybrid_style_chalukya_rashtrakuta']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Temple', 'Architecture', 'Styles', 'Nagara', 'Style', 'Odisha', 'Khajuraho', 'Solanki', 'Dravida', 'Pallava', 'Chola', 'Vijayanagara', 'Vesara', 'Chalukyan', 'Badami', 'Pattadakal', 'Hoysala']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_architecture_sculpture.indo-islamic_architecture', 'indo-islamic_architecture', 'Indo-Islamic Architecture (Imperial / Delhi Sultanate Style, Provincial Styles, Mughal Architecture - Taj Mahal, Fatehpur Sikri, Red Fort)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_architecture_sculpture.indo-islamic_architecture.delhi_sultanate_architecture_mamluk_to_lodi', 'art_culture_heritage.indian_architecture_sculpture.indo-islamic_architecture.mughal_architecture_humayun_to_shah_jahan']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indo', 'Islamic', 'Architecture', 'Imperial', 'Delhi', 'Sultanate', 'Style', 'Provincial', 'Styles', 'Mughal', 'Taj', 'Mahal', 'Fatehpur', 'Sikri', 'Red', 'Fort']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_architecture_sculpture.colonial_modern_architecture', 'colonial_modern_architecture', 'Colonial & Modern Architecture (Indo-Saracenic Architecture, Neo-Gothic Style, Neo-Classical Style, Lutyens'' Delhi)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_architecture_sculpture.colonial_modern_architecture.colonial_indo_saracenic_neo_gothic_architecture', 'art_culture_heritage.indian_architecture_sculpture.colonial_modern_architecture.modern_post_independence_architecture_lutyens_corbusier']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_architecture_sculpture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Colonial', 'Modern', 'Architecture', 'Indo', 'Saracenic', 'Neo', 'Gothic', 'Style', 'Classical', 'Lutyens', 'Delhi']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_paintings_visual_arts.prehistoric_rock_art', 'prehistoric_rock_art', 'Prehistoric Rock Art (Bhimbetka, Lakhudiyar, Kupgallu)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_paintings_visual_arts.prehistoric_rock_art.prehistoric_rock_art_bhimbetka_lakhudiyar']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Prehistoric', 'Rock', 'Art', 'Bhimbetka', 'Lakhudiyar', 'Kupgallu']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_paintings_visual_arts.ancient_medieval_murals', 'ancient_medieval_murals', 'Ancient & Medieval Murals (Ajanta Caves, Ellora, Bagh Caves, Sittanavasal, Lepakshi)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_paintings_visual_arts.ancient_medieval_murals.classical_murals_ajanta_ellora_bagh_sittanavasal']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Ancient', 'Medieval', 'Murals', 'Ajanta', 'Caves', 'Ellora', 'Bagh', 'Sittanavasal', 'Lepakshi']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_paintings_visual_arts.miniature_painting_traditions', 'miniature_painting_traditions', 'Miniature Painting Traditions (Pala & Jain Manuscript Paintings, Mughal School, Rajasthani Schools - Mewar, Marwar, Kishangarh Bani Thani, Pahari Schools - Basohli, Kangra)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_paintings_visual_arts.miniature_painting_traditions.mughal_miniature_painting_traditions', 'art_culture_heritage.indian_paintings_visual_arts.miniature_painting_traditions.rajasthani_miniatures_mewar_kishangarh_bundi', 'art_culture_heritage.indian_paintings_visual_arts.miniature_painting_traditions.pahari_and_deccani_miniature_schools']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Miniature', 'Painting', 'Traditions', 'Pala', 'Jain', 'Manuscript', 'Paintings', 'Mughal', 'School', 'Rajasthani', 'Schools', 'Mewar', 'Marwar', 'Kishangarh', 'Bani', 'Thani', 'Pahari', 'Basohli', 'Kangra']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_paintings_visual_arts.folk_regional_painting_styles', 'folk_regional_painting_styles', 'Folk & Regional Painting Styles (Madhubani / Mithila, Kalamkari, Pattachitra, Warli, Tanjore Paintings, Phad, Gond, Cheriyal)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_paintings_visual_arts.folk_regional_painting_styles.madhubani_pattachitra_kalamkari_folk_paintings', 'art_culture_heritage.indian_paintings_visual_arts.folk_regional_painting_styles.tribal_and_ritual_paintings_warli_gond_pithora']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_paintings_visual_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Folk', 'Regional', 'Painting', 'Styles', 'Madhubani', 'Mithila', 'Kalamkari', 'Pattachitra', 'Warli', 'Tanjore', 'Paintings', 'Phad', 'Gond', 'Cheriyal']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.performing_arts.classical_dance_traditions', 'classical_dance_traditions', 'Classical Dance Traditions (Bharatanatyam, Kathak, Kathakali, Kuchipudi, Manipuri, Mohiniyattam, Odissi, Sattriya)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.performing_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.performing_arts.classical_dance_traditions.classical_dances_bharatanatyam_odissi_kuchipudi', 'art_culture_heritage.performing_arts.classical_dance_traditions.classical_dances_kathak_kathakali_mohiniyattam', 'art_culture_heritage.performing_arts.classical_dance_traditions.classical_dances_manipuri_sattriya_chhau']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Classical', 'Dance', 'Traditions', 'Bharatanatyam', 'Kathak', 'Kathakali', 'Kuchipudi', 'Manipuri', 'Mohiniyattam', 'Odissi', 'Sattriya']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     )
@@ -605,49 +605,49 @@ INSERT INTO public.knowledge_nodes (
     (
         'art_culture_heritage.performing_arts.folk_dances_of_india', 'folk_dances_of_india', 'Folk Dances of India (Bhangra, Ghoomar, Chhau, Garba, Lavani, Yakshagana, Bihu, Rouf, Koodiyattam)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.performing_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.performing_arts.folk_dances_of_india.major_regional_folk_dances_north_south_west_east']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Folk', 'Dances', 'India', 'Bhangra', 'Ghoomar', 'Chhau', 'Garba', 'Lavani', 'Yakshagana', 'Bihu', 'Rouf', 'Koodiyattam']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.performing_arts.indian_classical_music_systems', 'indian_classical_music_systems', 'Indian Classical Music Systems (Hindustani Music - Dhrupad, Khayal, Thumri, Tappa; Carnatic Music - Kriti, Varnam, Ragam Tanam Pallavi)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.performing_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.performing_arts.indian_classical_music_systems.hindustani_classical_music_thaats_gharanas_forms', 'art_culture_heritage.performing_arts.indian_classical_music_systems.carnatic_classical_music_melakarta_trinity_forms']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indian', 'Classical', 'Music', 'Systems', 'Hindustani', 'Dhrupad', 'Khayal', 'Thumri', 'Tappa', 'Carnatic', 'Kriti', 'Varnam', 'Ragam', 'Tanam', 'Pallavi']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.performing_arts.musical_instruments_folk_music', 'musical_instruments_folk_music', 'Musical Instruments & Folk Music (Stringed / Tat, Wind / Sushira, Percussion / Avanaddha, Solid / Ghana; Baul, Bihu, Pandavani, Bhatiali)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.performing_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.performing_arts.musical_instruments_folk_music.fourfold_classification_of_indian_musical_instruments']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Musical', 'Instruments', 'Folk', 'Music', 'Stringed', 'Tat', 'Wind', 'Sushira', 'Percussion', 'Avanaddha', 'Solid', 'Ghana', 'Baul', 'Bihu', 'Pandavani', 'Bhatiali']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.performing_arts.traditional_theatre_forms_puppetry', 'traditional_theatre_forms_puppetry', 'Traditional Theatre Forms & Puppetry (Yakshagana, Nautanki, Jatra, Bhavai, Tamasha, Dashavatar, Bhand Pather; String, Glove, Rod & Shadow Puppetry)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.performing_arts',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.performing_arts.traditional_theatre_forms_puppetry.traditional_theatre_and_puppetry_forms_of_india']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.performing_arts']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Traditional', 'Theatre', 'Forms', 'Puppetry', 'Yakshagana', 'Nautanki', 'Jatra', 'Bhavai', 'Tamasha', 'Dashavatar', 'Bhand', 'Pather', 'String', 'Glove', 'Rod', 'Shadow']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_literature_languages.vedic_epic_puranic_literature', 'vedic_epic_puranic_literature', 'Vedic, Epic & Puranic Literature (Rigveda, Samaveda, Yajurveda, Atharvaveda, Upanishads, Mahabharata, Ramayana, Puranas)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_literature_languages',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_literature_languages']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_literature_languages.vedic_epic_puranic_literature.vedic_corpus_samhitas_upanishads_darshana']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_literature_languages']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Vedic', 'Epic', 'Puranic', 'Literature', 'Rigveda', 'Samaveda', 'Yajurveda', 'Atharvaveda', 'Upanishads', 'Mahabharata', 'Ramayana', 'Puranas']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_literature_languages.classical_religious_texts', 'classical_religious_texts', 'Classical & Religious Texts (Buddhist Canon - Tripitakas, Jatakas; Jain Canon - Agamas; Sangam Literature - Ettuthokai, Pattupattu, Silappatikaram, Manimekalai)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_literature_languages',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_literature_languages']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_literature_languages.classical_religious_texts.classical_sanskrit_literature_kalidasa_bhasa', 'art_culture_heritage.indian_literature_languages.classical_religious_texts.sangam_literature_corpus_tamil_classics']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_literature_languages']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Classical', 'Religious', 'Texts', 'Buddhist', 'Canon', 'Tripitakas', 'Jatakas', 'Jain', 'Agamas', 'Sangam', 'Literature', 'Ettuthokai', 'Pattupattu', 'Silappatikaram', 'Manimekalai']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.indian_literature_languages.medieval_bhakti-sufi_literature', 'medieval_bhakti-sufi_literature', 'Medieval & Bhakti-Sufi Literature (Kabir, Tulsidas, Surdas, Guru Nanak, Amir Khusrau, Alvars & Nayanars Compositions)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.indian_literature_languages',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_literature_languages']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.indian_literature_languages.medieval_bhakti-sufi_literature.bhakti_and_sufi_literary_traditions_vernacular']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.indian_literature_languages']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Medieval', 'Bhakti', 'Sufi', 'Literature', 'Kabir', 'Tulsidas', 'Surdas', 'Guru', 'Nanak', 'Amir', 'Khusrau', 'Alvars', 'Nayanars', 'Compositions']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
@@ -661,120 +661,120 @@ INSERT INTO public.knowledge_nodes (
     (
         'art_culture_heritage.schools_of_indian_philosophy.orthodox_astika_systems', 'orthodox_astika_systems', 'Orthodox / Astika Systems (Samkhya - Kapila, Yoga - Patanjali, Nyaya - Gautama, Vaisheshika - Kanada, Mimamsa - Jaimini, Vedanta - Shankara, Ramanuja, Madhva)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.schools_of_indian_philosophy',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.schools_of_indian_philosophy']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.schools_of_indian_philosophy.orthodox_astika_systems.six_orthodox_schools_shad_darshana_philosophy']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.schools_of_indian_philosophy']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Orthodox', 'Astika', 'Systems', 'Samkhya', 'Kapila', 'Yoga', 'Patanjali', 'Nyaya', 'Gautama', 'Vaisheshika', 'Kanada', 'Mimamsa', 'Jaimini', 'Vedanta', 'Shankara', 'Ramanuja', 'Madhva']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.schools_of_indian_philosophy.heterodox_nastika_systems', 'heterodox_nastika_systems', 'Heterodox / Nastika Systems (Carvaka / Lokayata Materialism, Ajivika Determinism, Jain Philosophy - Anekantavada, Syadvada, Buddhist Philosophy - Pratityasamutpada, Anatta, Shunyata)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.schools_of_indian_philosophy',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.schools_of_indian_philosophy']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.schools_of_indian_philosophy.heterodox_nastika_systems.heterodox_traditions_buddhism_jainism_charvaka_ajivika']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.schools_of_indian_philosophy']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Heterodox', 'Nastika', 'Systems', 'Carvaka', 'Lokayata', 'Materialism', 'Ajivika', 'Determinism', 'Jain', 'Philosophy', 'Anekantavada', 'Syadvada', 'Buddhist', 'Pratityasamutpada', 'Anatta', 'Shunyata']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.traditional_handicrafts_textiles', 'traditional_handicrafts_textiles', 'Traditional Handicrafts & Textiles (Kanjeevaram, Banarasi, Ikat, Chanderi, Pashmina, Chikankari, Zardozi, Terracotta, Bidriware)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.fairs_festivals_crafts_unesco_heritage.traditional_handicrafts_textiles.traditional_indian_textiles_embroidery_gi_tags', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.traditional_handicrafts_textiles.traditional_metal_clay_stone_wood_crafts']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Traditional', 'Handicrafts', 'Textiles', 'Kanjeevaram', 'Banarasi', 'Ikat', 'Chanderi', 'Pashmina', 'Chikankari', 'Zardozi', 'Terracotta', 'Bidriware']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.unesco_world_heritage_sites_intangible_cultural_heritage', 'unesco_world_heritage_sites_intangible_cultural_heritage', 'UNESCO World Heritage Sites & Intangible Cultural Heritage (Kumbh Mela, Yoga, Vedic Chanting, Ramlila, Chhau Dance, Mudiyettu, Durga Puja, Garba)', 3,
         'Topic', 'Art, Culture & Heritage', 'art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage',
-        ARRAY[]::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['art_culture_heritage.fairs_festivals_crafts_unesco_heritage.unesco_world_heritage_sites_intangible_cultural_heritage.unesco_cultural_world_heritage_sites_india', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage.unesco_world_heritage_sites_intangible_cultural_heritage.unesco_intangible_cultural_heritage_ich_india']::text[], ARRAY['art_culture_heritage', 'art_culture_heritage.fairs_festivals_crafts_unesco_heritage']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['UNESCO', 'World', 'Heritage', 'Sites', 'Intangible', 'Cultural', 'Kumbh', 'Mela', 'Yoga', 'Vedic', 'Chanting', 'Ramlila', 'Chhau', 'Dance', 'Mudiyettu', 'Durga', 'Puja', 'Garba']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.physical_geography_earth_systems.earths_origin_internal_structure', 'earths_origin_internal_structure', 'Earth''s Origin & Internal Structure (Crust, Mantle, Core, Discontinuities - Mohorovicic, Gutenberg, Seismic Waves P & S)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.earths_origin_internal_structure.earths_internal_layers_crust_mantle_core', 'geography_earth_systems.physical_geography_earth_systems.earths_origin_internal_structure.seismic_discontinuities_wave_shadow_zones', 'geography_earth_systems.physical_geography_earth_systems.earths_origin_internal_structure.geological_time_scale_and_stratigraphy']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Earth''s', 'Origin', 'Internal', 'Structure', 'Crust', 'Mantle', 'Core', 'Discontinuities', 'Mohorovicic', 'Gutenberg', 'Seismic', 'Waves']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.physical_geography_earth_systems.continental_drift_plate_tectonics', 'continental_drift_plate_tectonics', 'Continental Drift & Plate Tectonics (Pangaea, Plate Boundaries - Divergent, Convergent, Transform, Sea Floor Spreading, Ring of Fire)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.continental_drift_plate_tectonics.continental_drift_theory_and_paleomagnetism', 'geography_earth_systems.physical_geography_earth_systems.continental_drift_plate_tectonics.seafloor_spreading_and_magnetic_striping', 'geography_earth_systems.physical_geography_earth_systems.continental_drift_plate_tectonics.plate_tectonics_boundary_types_and_ring_of_fire']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Continental', 'Drift', 'Plate', 'Tectonics', 'Pangaea', 'Boundaries', 'Divergent', 'Convergent', 'Transform', 'Sea', 'Floor', 'Spreading', 'Ring', 'Fire']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
-        'geography_earth_systems.physical_geography_earth_systems.earthquakes_tsunamis_volcanism', 'earthquakes_tsunamis_volcanism', 'Earthquakes, Tsunamis & Volcanism (Epicentre, Focus, Richter Scale, Volcanic Landforms - Intrusive & Extrusive, Caldera, Shield, Composite)', 3,
-        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Earthquakes', 'Tsunamis', 'Volcanism', 'Epicentre', 'Focus', 'Richter', 'Scale', 'Volcanic', 'Landforms', 'Intrusive', 'Extrusive', 'Caldera', 'Shield', 'Composite']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution', 'geomorphic_processes_landform_evolution', 'Geomorphic Processes & Landform Evolution (Weathering - Physical, Chemical, Biological; Mass Wasting; Fluvial, Glacial, Aeolian, Karst & Coastal Landforms)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution.weathering_processes_and_mass_wasting', 'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution.fluvial_cycle_erosional_depositional_landforms', 'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution.glacial_erosional_and_depositional_landforms', 'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution.aeolian_arid_erosional_depositional_landforms', 'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution.karst_topography_limestone_caves_speleothems', 'geography_earth_systems.physical_geography_earth_systems.geomorphic_processes_landform_evolution.coastal_erosional_and_depositional_landforms']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.physical_geography_earth_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Geomorphic', 'Processes', 'Landform', 'Evolution', 'Weathering', 'Physical', 'Chemical', 'Biological', 'Mass', 'Wasting', 'Fluvial', 'Glacial', 'Aeolian', 'Karst', 'Coastal', 'Landforms']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.climatology_atmospheric_dynamics.atmosphere_structure_heat_budget', 'atmosphere_structure_heat_budget', 'Atmosphere Structure & Heat Budget (Troposphere, Stratosphere, Mesosphere, Thermosphere; Insolation, Terrestrial Radiation, Atmospheric Heat Budget)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.atmosphere_structure_heat_budget.atmospheric_layers_composition_lapse_rates', 'geography_earth_systems.climatology_atmospheric_dynamics.atmosphere_structure_heat_budget.solar_insolation_heat_budget_albedo', 'geography_earth_systems.climatology_atmospheric_dynamics.atmosphere_structure_heat_budget.temperature_inversion_phenomena_and_types']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Atmosphere', 'Structure', 'Heat', 'Budget', 'Troposphere', 'Stratosphere', 'Mesosphere', 'Thermosphere', 'Insolation', 'Terrestrial', 'Radiation', 'Atmospheric']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts', 'atmospheric_pressure_global_wind_belts', 'Atmospheric Pressure & Global Wind Belts (Pressure Belts - Equatorial Low, Subtropical High, Subpolar Low; Planetary Winds - Trade Winds, Westerlies, Polar Easterlies; Jet Streams)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts.pressure_belts_tricellular_circulation_hadley', 'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts.coriolis_force_geostrophic_winds_jet_streams', 'geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts.planetary_winds_and_local_regional_winds']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Atmospheric', 'Pressure', 'Global', 'Wind', 'Belts', 'Equatorial', 'Low', 'Subtropical', 'High', 'Subpolar', 'Planetary', 'Winds', 'Trade', 'Westerlies', 'Polar', 'Easterlies', 'Jet', 'Streams']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.climatology_atmospheric_dynamics.air_masses_fronts_cyclogenesis', 'air_masses_fronts_cyclogenesis', 'Air Masses, Fronts & Cyclogenesis (Air Mass Types, Fronts - Warm, Cold, Occluded; Tropical Cyclones vs Temperate / Extra-Tropical Cyclones, Eye of Cyclone)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.air_masses_fronts_cyclogenesis.air_masses_and_frontal_frontogenesis_types', 'geography_earth_systems.climatology_atmospheric_dynamics.air_masses_fronts_cyclogenesis.temperate_wave_cyclones_vs_tropical_cyclones']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Air', 'Masses', 'Fronts', 'Cyclogenesis', 'Mass', 'Types', 'Warm', 'Cold', 'Occluded', 'Tropical', 'Cyclones', 'Temperate', 'Extra', 'Eye', 'Cyclone']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.climatology_atmospheric_dynamics.world_climate_regions', 'world_climate_regions', 'World Climate Regions (Equatorial, Tropical Monsoon, Savanna, Mediterranean, Steppe, Taiga, Tundra, Desert Climates)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.climatology_atmospheric_dynamics.world_climate_regions.koppen_climate_classification_and_biomes']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.climatology_atmospheric_dynamics']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['World', 'Climate', 'Regions', 'Equatorial', 'Tropical', 'Monsoon', 'Savanna', 'Mediterranean', 'Steppe', 'Taiga', 'Tundra', 'Desert', 'Climates']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.oceanography_marine_systems.ocean_floor_relief_features', 'ocean_floor_relief_features', 'Ocean Floor Relief & Features (Continental Shelf, Slope, Abyssal Plains, Oceanic Trenches, Mid-Oceanic Ridges)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.oceanography_marine_systems.ocean_floor_relief_features.ocean_bottom_relief_shelf_slope_abyssal_plains', 'geography_earth_systems.oceanography_marine_systems.ocean_floor_relief_features.submarine_canyons_trenches_mid_oceanic_ridges']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Ocean', 'Floor', 'Relief', 'Features', 'Continental', 'Shelf', 'Slope', 'Abyssal', 'Plains', 'Oceanic', 'Trenches', 'Mid', 'Ridges']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics', 'ocean_water_dynamics', 'Ocean Water Dynamics (Temperature & Salinity Distribution, Ocean Currents - Warm & Cold Currents, Thermohaline Circulation, Tides - Spring & Neap Tides)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics.ocean_temperature_salinity_density_stratification', 'geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics.ocean_waves_mechanics_and_wave_energy', 'geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics.tides_mechanics_types_and_amphidromic_systems', 'geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics.ocean_currents_gyres_and_thermohaline_circulation', 'geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics.enso_dynamics_and_indian_ocean_dipole']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Ocean', 'Water', 'Dynamics', 'Temperature', 'Salinity', 'Distribution', 'Currents', 'Warm', 'Cold', 'Thermohaline', 'Circulation', 'Tides', 'Spring', 'Neap']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.oceanography_marine_systems.marine_ecosystems_conservation', 'marine_ecosystems_conservation', 'Marine Ecosystems & Conservation (Coral Reefs - Fringing, Barrier, Atoll; Coral Bleaching, Blue Carbon, Ocean Acidification, EEZ, Marine Protected Areas)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.oceanography_marine_systems.marine_ecosystems_conservation.coral_reefs_ecosystems_darwin_subsidence_bleaching', 'geography_earth_systems.oceanography_marine_systems.marine_ecosystems_conservation.marine_resources_unclos_zones_blue_economy']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.oceanography_marine_systems']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Marine', 'Ecosystems', 'Conservation', 'Coral', 'Reefs', 'Fringing', 'Barrier', 'Atoll', 'Bleaching', 'Blue', 'Carbon', 'Ocean', 'Acidification', 'EEZ', 'Protected', 'Areas']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india', 'physiographic_divisions_of_india', 'Physiographic Divisions of India (Himalayan Mountain System, Northern Great Plains, Peninsular Plateau, Coastal Plains, Lakshadweep & Andaman Nicobar Islands)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india.himalayan_mountain_system_divisions_passes', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india.northern_great_plains_morphology', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india.peninsular_plateau_hills_western_eastern_ghats', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india.coastal_plains_and_island_territories_of_india']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Physiographic', 'Divisions', 'India', 'Himalayan', 'Mountain', 'System', 'Northern', 'Great', 'Plains', 'Peninsular', 'Plateau', 'Coastal', 'Lakshadweep', 'Andaman', 'Nicobar', 'Islands']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india', 'drainage_systems_of_india', 'Drainage Systems of India (Himalayan Rivers - Indus, Ganga, Brahmaputra; Peninsular Rivers - Narmada, Tapi, Godavari, Krishna, Kaveri, Mahanadi; River Interlinking)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.himalayan_river_systems_indus_ganga_brahmaputra', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.peninsular_river_systems_east_and_west_flowing', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.river_interlinking_water_disputes_watershed']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Drainage', 'Systems', 'India', 'Himalayan', 'Rivers', 'Indus', 'Ganga', 'Brahmaputra', 'Peninsular', 'Narmada', 'Tapi', 'Godavari', 'Krishna', 'Kaveri', 'Mahanadi', 'River', 'Interlinking']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'geography_earth_systems.indian_physical_geography_monsoon_architecture.indian_monsoon_climate_dynamics', 'indian_monsoon_climate_dynamics', 'Indian Monsoon & Climate Dynamics (South-West & North-East Monsoons, Mechanism of Monsoon - ITCZ Shift, Jet Streams, El Niño, La Niña, Indian Ocean Dipole / IOD, Western Disturbances)', 3,
+        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture',
+        ARRAY['geography_earth_systems.indian_physical_geography_monsoon_architecture.indian_monsoon_climate_dynamics.southwest_and_northeast_monsoon_progression', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.indian_monsoon_climate_dynamics.upper_air_jet_streams_and_teleconnections_monsoon', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.indian_monsoon_climate_dynamics.western_disturbances_and_extreme_weather_events']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indian', 'Monsoon', 'Climate', 'Dynamics', 'South', 'West', 'North', 'East', 'Monsoons', 'Mechanism', 'ITCZ', 'Shift', 'Jet', 'Streams', 'Niño', 'Niña', 'Ocean', 'Dipole', 'IOD', 'Western', 'Disturbances']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET
@@ -801,44 +801,37 @@ INSERT INTO public.knowledge_nodes (
     children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
 ) VALUES
     (
-        'geography_earth_systems.indian_physical_geography_monsoon_architecture.indian_monsoon_climate_dynamics', 'indian_monsoon_climate_dynamics', 'Indian Monsoon & Climate Dynamics (South-West & North-East Monsoons, Mechanism of Monsoon - ITCZ Shift, Jet Streams, El Niño, La Niña, Indian Ocean Dipole / IOD, Western Disturbances)', 3,
-        'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indian', 'Monsoon', 'Climate', 'Dynamics', 'South', 'West', 'North', 'East', 'Monsoons', 'Mechanism', 'ITCZ', 'Shift', 'Jet', 'Streams', 'Niño', 'Niña', 'Ocean', 'Dipole', 'IOD', 'Western', 'Disturbances']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
         'geography_earth_systems.indian_physical_geography_monsoon_architecture.soils_natural_vegetation_of_india', 'soils_natural_vegetation_of_india', 'Soils & Natural Vegetation of India (Soil Types - Alluvial, Black / Regur, Red, Laterite, Arid, Saline; Forest Types - Tropical Evergreen, Deciduous, Thorn, Montane, Mangroves)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.indian_physical_geography_monsoon_architecture.soils_natural_vegetation_of_india.major_soil_types_of_india_and_land_degradation', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.soils_natural_vegetation_of_india.natural_vegetation_and_forest_types_of_india', 'geography_earth_systems.indian_physical_geography_monsoon_architecture.soils_natural_vegetation_of_india.india_state_of_forest_report_isfr_and_conservation']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.indian_physical_geography_monsoon_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Soils', 'Natural', 'Vegetation', 'India', 'Soil', 'Types', 'Alluvial', 'Black', 'Regur', 'Red', 'Laterite', 'Arid', 'Saline', 'Forest', 'Tropical', 'Evergreen', 'Deciduous', 'Thorn', 'Montane', 'Mangroves']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources', 'global_indian_distribution_of_natural_resources', 'Global & Indian Distribution of Natural Resources (Mineral Resources - Iron Ore, Bauxite, Copper, Coal, Petroleum, Natural Gas, Uranium; Water Resources, Land & Soil Resources)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.economic_resource_geography',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.economic_resource_geography']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources.metallic_and_non_metallic_mineral_belts', 'geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources.energy_resources_fossil_fuels_nuclear_renewables', 'geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources.water_resources_multipurpose_dams_and_irrigation']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.economic_resource_geography']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Global', 'Indian', 'Distribution', 'Natural', 'Resources', 'Mineral', 'Iron', 'Ore', 'Bauxite', 'Copper', 'Coal', 'Petroleum', 'Gas', 'Uranium', 'Water', 'Land', 'Soil']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.economic_resource_geography.location_factors_of_primary_secondary_tertiary_industries', 'location_factors_of_primary_secondary_tertiary_industries', 'Location Factors of Primary, Secondary & Tertiary Industries (Raw Material, Power, Labour, Market, Transport; Iron & Steel, Cotton Textile, Petrochemical, Pharmaceutical, IT Industries)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.economic_resource_geography',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.economic_resource_geography']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.economic_resource_geography.location_factors_of_primary_secondary_tertiary_industries.industrial_location_theories_and_weberian_model', 'geography_earth_systems.economic_resource_geography.location_factors_of_primary_secondary_tertiary_industries.heavy_metallurgical_and_engineering_industries', 'geography_earth_systems.economic_resource_geography.location_factors_of_primary_secondary_tertiary_industries.textile_chemical_and_agro_processing_industries', 'geography_earth_systems.economic_resource_geography.location_factors_of_primary_secondary_tertiary_industries.knowledge_based_high_tech_and_footloose_industries']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.economic_resource_geography']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Location', 'Factors', 'Primary', 'Secondary', 'Tertiary', 'Industries', 'Raw', 'Material', 'Power', 'Labour', 'Market', 'Transport', 'Iron', 'Steel', 'Cotton', 'Textile', 'Petrochemical', 'Pharmaceutical']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.human_geography_population_settlements.global_indian_demographic_trends', 'global_indian_demographic_trends', 'Global & Indian Demographic Trends (Population Distribution, Density, Growth Models - Demographic Transition Theory, Migration Types & Push-Pull Factors)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.human_geography_population_settlements.global_indian_demographic_trends.demographic_attributes_and_population_dynamics', 'geography_earth_systems.human_geography_population_settlements.global_indian_demographic_trends.theories_of_population_and_demographic_transition', 'geography_earth_systems.human_geography_population_settlements.global_indian_demographic_trends.migration_patterns_determinants_and_consequences']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Global', 'Indian', 'Demographic', 'Trends', 'Population', 'Distribution', 'Density', 'Growth', 'Models', 'Transition', 'Theory', 'Migration', 'Types', 'Push', 'Pull', 'Factors']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
     (
         'geography_earth_systems.human_geography_population_settlements.human_settlements_urban_systems', 'human_settlements_urban_systems', 'Human Settlements & Urban Systems (Rural Settlement Types - Clustered, Dispersed; Urban Classification, Conurbations, Megalopolis, Functional Classification of Towns)', 3,
         'Topic', 'Geography & Earth Systems', 'geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements',
-        ARRAY[]::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        ARRAY['geography_earth_systems.human_geography_population_settlements.human_settlements_urban_systems.rural_settlement_morphology_and_classification', 'geography_earth_systems.human_geography_population_settlements.human_settlements_urban_systems.urbanization_processes_hierarchy_and_functional_towns', 'geography_earth_systems.human_geography_population_settlements.human_settlements_urban_systems.urban_morphology_land_use_models_and_challenges']::text[], ARRAY['geography_earth_systems', 'geography_earth_systems.human_geography_population_settlements']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS1"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS1] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Human', 'Settlements', 'Urban', 'Systems', 'Rural', 'Settlement', 'Types', 'Clustered', 'Dispersed', 'Classification', 'Conurbations', 'Megalopolis', 'Functional', 'Towns']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     ),
@@ -974,6 +967,13 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['indian_society_social_justice', 'indian_society_social_justice.social_institutions']::text[], '{"upsc": ["Mains-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS1"]}'::jsonb,
         '[UPSC: Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Kinship', 'Family', 'Systems', 'Joint', 'Nuclear', 'Matrilineal', 'Patrilineal', 'Changing', 'Structures']::text[],
         'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_society_social_justice.social_institutions.marriage_institutions', 'marriage_institutions', 'Marriage Institutions (Traditional Patterns, Inter-caste & Inter-religious Marriages, Modern Legislative Reforms)', 3,
+        'Topic', 'Indian Society & Social Justice', 'indian_society_social_justice', 'indian_society_social_justice.social_institutions',
+        ARRAY[]::text[], ARRAY['indian_society_social_justice', 'indian_society_social_justice.social_institutions']::text[], '{"upsc": ["Mains-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS1"]}'::jsonb,
+        '[UPSC: Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Marriage', 'Institutions', 'Traditional', 'Patterns', 'Inter', 'caste', 'religious', 'Marriages', 'Modern', 'Legislative', 'Reforms']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET
     slug = EXCLUDED.slug,
@@ -998,13 +998,6 @@ INSERT INTO public.knowledge_nodes (
     id, slug, name, level, level_name, subject, subject_id, parent_id,
     children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
 ) VALUES
-    (
-        'indian_society_social_justice.social_institutions.marriage_institutions', 'marriage_institutions', 'Marriage Institutions (Traditional Patterns, Inter-caste & Inter-religious Marriages, Modern Legislative Reforms)', 3,
-        'Topic', 'Indian Society & Social Justice', 'indian_society_social_justice', 'indian_society_social_justice.social_institutions',
-        ARRAY[]::text[], ARRAY['indian_society_social_justice', 'indian_society_social_justice.social_institutions']::text[], '{"upsc": ["Mains-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS1"]}'::jsonb,
-        '[UPSC: Mains-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS1]', '', ARRAY[]::text[], ARRAY['Marriage', 'Institutions', 'Traditional', 'Patterns', 'Inter', 'caste', 'religious', 'Marriages', 'Modern', 'Legislative', 'Reforms']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
     (
         'indian_society_social_justice.social_institutions.caste_system_varna', 'caste_system_varna', 'Caste System & Varna (Origins, Jati Hierarchy, Caste Mobility, Sanskritisation, Caste in Modern Politics, Affirmative Action)', 3,
         'Topic', 'Indian Society & Social Justice', 'indian_society_social_justice', 'indian_society_social_justice.social_institutions',
@@ -1172,6 +1165,13 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['indian_polity_constitution_governance', 'indian_polity_constitution_governance.historical_background_making_of_the_constitution']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Constituent', 'Assembly', 'Drafting', 'Process', 'Objectives', 'Resolution', 'Committees', 'Debates', 'Enactment', 'Adoption']::text[],
         'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_polity_constitution_governance.salient_features_amendments_basic_structure.salient_features_of_the_indian_constitution', 'salient_features_of_the_indian_constitution', 'Salient Features of the Indian Constitution (Written, Rigid vs Flexible, Federal with Unitary Bias, Parliamentary Form, Integrated Judiciary)', 3,
+        'Topic', 'Indian Polity, Constitution & Governance', 'indian_polity_constitution_governance', 'indian_polity_constitution_governance.salient_features_amendments_basic_structure',
+        ARRAY[]::text[], ARRAY['indian_polity_constitution_governance', 'indian_polity_constitution_governance.salient_features_amendments_basic_structure']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Salient', 'Features', 'Indian', 'Constitution', 'Written', 'Rigid', 'Flexible', 'Federal', 'Unitary', 'Bias', 'Parliamentary', 'Form', 'Integrated', 'Judiciary']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET
     slug = EXCLUDED.slug,
@@ -1196,13 +1196,6 @@ INSERT INTO public.knowledge_nodes (
     id, slug, name, level, level_name, subject, subject_id, parent_id,
     children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
 ) VALUES
-    (
-        'indian_polity_constitution_governance.salient_features_amendments_basic_structure.salient_features_of_the_indian_constitution', 'salient_features_of_the_indian_constitution', 'Salient Features of the Indian Constitution (Written, Rigid vs Flexible, Federal with Unitary Bias, Parliamentary Form, Integrated Judiciary)', 3,
-        'Topic', 'Indian Polity, Constitution & Governance', 'indian_polity_constitution_governance', 'indian_polity_constitution_governance.salient_features_amendments_basic_structure',
-        ARRAY[]::text[], ARRAY['indian_polity_constitution_governance', 'indian_polity_constitution_governance.salient_features_amendments_basic_structure']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Salient', 'Features', 'Indian', 'Constitution', 'Written', 'Rigid', 'Flexible', 'Federal', 'Unitary', 'Bias', 'Parliamentary', 'Form', 'Integrated', 'Judiciary']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
     (
         'indian_polity_constitution_governance.salient_features_amendments_basic_structure.preamble', 'preamble', 'Preamble (Sovereign, Socialist, Secular, Democratic, Republic, Justice, Liberty, Equality, Fraternity)', 3,
         'Topic', 'Indian Polity, Constitution & Governance', 'indian_polity_constitution_governance', 'indian_polity_constitution_governance.salient_features_amendments_basic_structure',
@@ -1370,6 +1363,13 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['indian_polity_constitution_governance', 'indian_polity_constitution_governance.transparency_accountability_citizen_charters']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Right', 'Information', 'Act', '2005', 'RTI', 'Architecture', 'Exemptions', 'Section', 'Commissions', 'Judicial', 'Legislative', 'Accountability']::text[],
         'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_polity_constitution_governance.transparency_accountability_citizen_charters.accountability_tools_social_audit', 'accountability_tools_social_audit', 'Accountability Tools & Social Audit (Citizen''s Charters, Social Audit Mechanisms, Whistleblower Protection, Lokpal & Lokayuktas Act 2013)', 3,
+        'Topic', 'Indian Polity, Constitution & Governance', 'indian_polity_constitution_governance', 'indian_polity_constitution_governance.transparency_accountability_citizen_charters',
+        ARRAY[]::text[], ARRAY['indian_polity_constitution_governance', 'indian_polity_constitution_governance.transparency_accountability_citizen_charters']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Accountability', 'Tools', 'Social', 'Audit', 'Citizen''s', 'Charters', 'Mechanisms', 'Whistleblower', 'Protection', 'Lokpal', 'Lokayuktas', 'Act', '2013']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET
     slug = EXCLUDED.slug,
@@ -1394,13 +1394,6 @@ INSERT INTO public.knowledge_nodes (
     id, slug, name, level, level_name, subject, subject_id, parent_id,
     children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
 ) VALUES
-    (
-        'indian_polity_constitution_governance.transparency_accountability_citizen_charters.accountability_tools_social_audit', 'accountability_tools_social_audit', 'Accountability Tools & Social Audit (Citizen''s Charters, Social Audit Mechanisms, Whistleblower Protection, Lokpal & Lokayuktas Act 2013)', 3,
-        'Topic', 'Indian Polity, Constitution & Governance', 'indian_polity_constitution_governance', 'indian_polity_constitution_governance.transparency_accountability_citizen_charters',
-        ARRAY[]::text[], ARRAY['indian_polity_constitution_governance', 'indian_polity_constitution_governance.transparency_accountability_citizen_charters']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS2"], "kas": ["Prelims-P1", "Mains-GS2"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS2] [KAS: Prelims-P1, Mains-GS2] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Accountability', 'Tools', 'Social', 'Audit', 'Citizen''s', 'Charters', 'Mechanisms', 'Whistleblower', 'Protection', 'Lokpal', 'Lokayuktas', 'Act', '2013']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
     (
         'indian_polity_constitution_governance.e-governance_models_digital_public_infrastructure.digital_india_public_infrastructure', 'digital_india_public_infrastructure', 'Digital India & Public Infrastructure (Aadhaar / India Stack, UPI, DigiLocker, COWIN, e-RUPI, Open Network for Digital Commerce / ONDC)', 3,
         'Topic', 'Indian Polity, Constitution & Governance', 'indian_polity_constitution_governance', 'indian_polity_constitution_governance.e-governance_models_digital_public_infrastructure',
@@ -1568,6 +1561,13 @@ INSERT INTO public.knowledge_nodes (
         ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['NITI', 'Aayog', 'Transformational', 'Governance', 'Think', 'Tank', 'Mandate', 'Cooperative', 'Competitive', 'Federalism', 'Governing', 'Council', 'Aspirational', 'Districts', 'Programme', 'ADP', 'Blocks', 'Composite', 'Water', 'Management', 'Index', 'SDG', 'India', 'Export', 'Preparedness']::text[],
         'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.mobilisation_of_resources_capital_formation', 'mobilisation_of_resources_capital_formation', 'Mobilisation of Resources & Capital Formation (Domestic Resource Mobilisation - Savings Rate, Gross Fixed Capital Formation / GFCF, Financial vs Physical Savings, Foreign Capital Inflows)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Mobilisation', 'Resources', 'Capital', 'Formation', 'Domestic', 'Resource', 'Savings', 'Rate', 'Gross', 'Fixed', 'GFCF', 'Financial', 'Physical', 'Foreign', 'Inflows']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET
     slug = EXCLUDED.slug,
@@ -1593,17 +1593,115 @@ INSERT INTO public.knowledge_nodes (
     children_ids, ancestor_ids, exam_tags, raw_exam_tag_string, description, entities, keywords, stream, streams
 ) VALUES
     (
-        'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.mobilisation_of_resources_capital_formation', 'mobilisation_of_resources_capital_formation', 'Mobilisation of Resources & Capital Formation (Domestic Resource Mobilisation - Savings Rate, Gross Fixed Capital Formation / GFCF, Financial vs Physical Savings, Foreign Capital Inflows)', 3,
-        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth',
-        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
-        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Mobilisation', 'Resources', 'Capital', 'Formation', 'Domestic', 'Resource', 'Savings', 'Rate', 'Gross', 'Fixed', 'GFCF', 'Financial', 'Physical', 'Foreign', 'Inflows']::text[],
-        'civil_services', ARRAY['civil_services']::text[]
-    ),
-    (
         'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth.inclusive_growth_inequality_dynamics', 'inclusive_growth_inequality_dynamics', 'Inclusive Growth & Inequality Dynamics (Multidimensional Poverty Index / NITI Aayog MPI, Gini Coefficient & Lorenz Curve, Jobless Growth, Female Labour Force Participation Rate / FLFPR, Formalisation of Informal Economy, Financial Inclusion - PM Jan Dhan Yojana / PMJDY, JAM Trinity)', 3,
         'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth',
         ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.planning_mobilisation_of_resources_inclusive_growth']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
         '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Inclusive', 'Growth', 'Inequality', 'Dynamics', 'Multidimensional', 'Poverty', 'Index', 'NITI', 'Aayog', 'MPI', 'Gini', 'Coefficient', 'Lorenz', 'Curve', 'Jobless', 'Female', 'Labour', 'Force', 'Participation', 'Rate', 'FLFPR', 'Formalisation', 'Informal', 'Economy', 'Financial', 'Inclusion', 'Jan', 'Dhan', 'Yojana', 'PMJDY', 'JAM', 'Trinity']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.monetary_policy_banking_architecture.monetary_policy_framework_rbi_operations', 'monetary_policy_framework_rbi_operations', 'Monetary Policy Framework & RBI Operations (Flexible Inflation Targeting Framework / 4% +/- 2%, Monetary Policy Committee / MPC - Composition & Voting, Policy Rates - Repo Rate, Standing Deposit Facility / SDF, Marginal Standing Facility / MSF, Reverse Repo; Reserve Ratios - Cash Reserve Ratio / CRR, Statutory Liquidity Ratio / SLR; Quantitative Tools - Open Market Operations / OMO, Operation Twist, Long-Term Repo Operations / LTRO; Qualitative Tools - Margin Requirements, Moral Suasion)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Monetary', 'Policy', 'Framework', 'RBI', 'Operations', 'Flexible', 'Inflation', 'Targeting', 'Committee', 'MPC', 'Composition', 'Voting', 'Rates', 'Repo', 'Rate', 'Standing', 'Deposit', 'Facility', 'SDF', 'Marginal', 'MSF', 'Reverse', 'Reserve', 'Ratios', 'Cash', 'Ratio', 'CRR', 'Statutory', 'Liquidity', 'SLR', 'Quantitative', 'Tools', 'Open', 'Market', 'OMO', 'Operation', 'Twist', 'Long', 'Term', 'LTRO', 'Qualitative', 'Margin', 'Requirements', 'Moral', 'Suasion']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.monetary_policy_banking_architecture.money_supply_liquidity', 'money_supply_liquidity', 'Money Supply & Liquidity (Monetary Aggregates - Reserve Money / M0, Narrow Money / M1, Intermediate Money / M2, Broad Money / M3; Money Multiplier Effect, Velocity of Money)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Money', 'Supply', 'Liquidity', 'Monetary', 'Aggregates', 'Reserve', 'Narrow', 'Intermediate', 'Broad', 'Multiplier', 'Effect', 'Velocity']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework', 'banking_structure_regulatory_framework', 'Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Banking', 'Structure', 'Regulatory', 'Framework', 'Scheduled', 'Commercial', 'Banks', 'Public', 'Sector', 'Private', 'Foreign', 'Differentiated', 'Small', 'Finance', 'SFBs', 'Payments', 'Regional', 'Rural', 'RRBs', 'Cooperative', 'Primary', 'Agricultural', 'Credit', 'Societies', 'PACS', 'Urban', 'UCBs', 'regulated', 'Dual', 'Control', 'Regulation', 'Amendment', 'Act', '2020']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.monetary_policy_banking_architecture.non-performing_assets_resolution_architecture', 'non-performing_assets_resolution_architecture', 'Non-Performing Assets & Resolution Architecture (Gross vs Net NPAs, Special Mention Accounts / SMA-0, 1, 2, Stressed Assets; Twin Balance Sheet Syndrome; Insolvency and Bankruptcy Code / IBC 2016 - National Company Law Tribunal / NCLT, Insolvency and Bankruptcy Board of India / IBBI, Committee of Creditors; Bad Bank - National Asset Reconstruction Company Limited / NARCL & India Debt Resolution Company Limited / IDRCL; Prompt Corrective Action / PCA Framework, BASEL III Norms - Capital Adequacy Ratio / CRAR, Tier 1 & Tier 2 Capital)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Non', 'Performing', 'Assets', 'Resolution', 'Architecture', 'Gross', 'Net', 'NPAs', 'Special', 'Mention', 'Accounts', 'SMA', 'Stressed', 'Twin', 'Balance', 'Sheet', 'Syndrome', 'Insolvency', 'Bankruptcy', 'Code', 'IBC', '2016', 'National', 'Company', 'Law', 'Tribunal', 'NCLT', 'Board', 'India', 'IBBI', 'Committee', 'Creditors', 'Bad', 'Bank', 'Asset', 'Reconstruction', 'Limited', 'NARCL', 'Debt', 'IDRCL', 'Prompt', 'Corrective', 'Action', 'PCA', 'Framework', 'BASEL', 'III', 'Norms', 'Capital', 'Adequacy', 'Ratio', 'CRAR', 'Tier']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.monetary_policy_banking_architecture.non-banking_financial_institutions_capital_markets', 'non-banking_financial_institutions_capital_markets', 'Non-Banking Financial Institutions & Capital Markets (Non-Banking Financial Companies / NBFCs - Systemically Important NBFCs, Scale-Based Regulatory Framework; Primary vs Secondary Markets, Initial Public Offerings / IPOs, SEBI Regulatory Framework, Stock Exchanges - BSE, NSE, Algorithmic & High-Frequency Trading, Mutual Funds & Systematic Investment Plans / SIPs, Credit Rating Agencies / CRAs)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.monetary_policy_banking_architecture']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Non', 'Banking', 'Financial', 'Institutions', 'Capital', 'Markets', 'Companies', 'NBFCs', 'Systemically', 'Important', 'Scale', 'Based', 'Regulatory', 'Framework', 'Primary', 'Secondary', 'Initial', 'Public', 'Offerings', 'IPOs', 'SEBI', 'Stock', 'Exchanges', 'BSE', 'NSE', 'Algorithmic', 'High', 'Frequency', 'Trading', 'Mutual', 'Funds', 'Systematic', 'Investment', 'Plans', 'SIPs', 'Credit', 'Rating', 'Agencies', 'CRAs']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect', 'union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect', 'Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Union', 'Budget', 'Public', 'Finance', 'Architecture', 'Constitutional', 'Provisions', 'Article', '112', 'Annual', 'Financial', 'Statement', 'Structure', 'Consolidated', 'Fund', 'India', '266', 'Contingency', '267', 'Account', 'Revenue', 'Receipts', 'Capital', 'Expenditure', 'Capex', 'Multiplier', 'Effect']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.fiscal_policy_public_finance_taxation.deficit_concepts_fiscal_discipline', 'deficit_concepts_fiscal_discipline', 'Deficit Concepts & Fiscal Discipline (Revenue Deficit / Effective Revenue Deficit, Fiscal Deficit - Borrowing Requirement of Government, Primary Deficit; Fiscal Responsibility and Budget Management / FRBM Act 2003 - N.K. Singh Committee Recommendations, Debt-to-GDP Ratio Targets, Escape Clauses)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Deficit', 'Concepts', 'Fiscal', 'Discipline', 'Revenue', 'Effective', 'Borrowing', 'Requirement', 'Government', 'Primary', 'Responsibility', 'Budget', 'Management', 'FRBM', 'Act', '2003', 'N.K.', 'Singh', 'Committee', 'Recommendations', 'Debt', 'GDP', 'Ratio', 'Targets', 'Escape', 'Clauses']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.fiscal_policy_public_finance_taxation.direct_taxation_reforms', 'direct_taxation_reforms', 'Direct Taxation & Reforms (Income Tax Slabs & New Tax Regime, Corporate Tax Reforms - Reduction to 22% / 15% for new manufacturing units, Minimum Alternate Tax / MAT, Equalisation Levy / Google Tax, Faceless Assessment & Taxpayer''s Charter, Base Erosion and Profit Shifting / BEPS, Double Tax Avoidance Agreements / DTAA, General Anti-Avoidance Rules / GAAR)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Direct', 'Taxation', 'Reforms', 'Income', 'Tax', 'Slabs', 'New', 'Regime', 'Corporate', 'Reduction', '22%', '15%', 'new', 'manufacturing', 'units', 'Minimum', 'Alternate', 'MAT', 'Equalisation', 'Levy', 'Google', 'Faceless', 'Assessment', 'Taxpayer''s', 'Charter', 'Base', 'Erosion', 'Profit', 'Shifting', 'BEPS', 'Double', 'Avoidance', 'Agreements', 'DTAA', 'General', 'Anti', 'Rules', 'GAAR']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.fiscal_policy_public_finance_taxation.indirect_taxation_gst_architecture', 'indirect_taxation_gst_architecture', 'Indirect Taxation & GST Architecture (Goods and Services Tax / GST - 101st Constitutional Amendment Act, Destination-based Consumption Tax, Subsumed Taxes; Dual GST Model - CGST, SGST, IGST; GST Council Article 279A - Composition & Decision Mechanism; Inverted Duty Structure, Input Tax Credit / ITC Fraud, E-Way Bill, GST Compensation Cess Mechanism)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Indirect', 'Taxation', 'GST', 'Architecture', 'Goods', 'Services', 'Tax', '101st', 'Constitutional', 'Amendment', 'Act', 'Destination', 'based', 'Consumption', 'Subsumed', 'Taxes', 'Dual', 'Model', 'CGST', 'SGST', 'IGST', 'Council', 'Article', '279A', 'Composition', 'Decision', 'Mechanism', 'Inverted', 'Duty', 'Structure', 'Input', 'Credit', 'ITC', 'Fraud', 'Way', 'Bill', 'Compensation', 'Cess']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.fiscal_policy_public_finance_taxation.public_debt_fiscal_federalism', 'public_debt_fiscal_federalism', 'Public Debt & Fiscal Federalism (Internal vs External Public Debt, Sovereign Green Bonds, Ways and Means Advances / WMA; Finance Commission Article 280 - Terms of Reference, Vertical vs Horizontal Devolution Criteria, Post-Devolution Revenue Deficit Grants, Performance-linked Incentives)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.fiscal_policy_public_finance_taxation']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Public', 'Debt', 'Fiscal', 'Federalism', 'Internal', 'External', 'Sovereign', 'Green', 'Bonds', 'Ways', 'Means', 'Advances', 'WMA', 'Finance', 'Commission', 'Article', '280', 'Terms', 'Reference', 'Vertical', 'Horizontal', 'Devolution', 'Criteria', 'Post', 'Revenue', 'Deficit', 'Grants', 'Performance', 'linked', 'Incentives']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.agriculture_food_management_subsidies.cropping_patterns_agrarian_systems', 'cropping_patterns_agrarian_systems', 'Cropping Patterns & Agrarian Systems (Kharif, Rabi & Zaid Seasons; Crop Diversity - Cereals, Pulses, Oilseeds, Commercial Crops; Millets / Shree Anna - Climate Resilient Crops, International Year of Millets 2023; Precision Farming & Zero Budget Natural Farming / ZBNF)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Cropping', 'Patterns', 'Agrarian', 'Systems', 'Kharif', 'Rabi', 'Zaid', 'Seasons', 'Crop', 'Diversity', 'Cereals', 'Pulses', 'Oilseeds', 'Commercial', 'Crops', 'Millets', 'Shree', 'Anna', 'Climate', 'Resilient', 'International', 'Year', '2023', 'Precision', 'Farming', 'Zero', 'Budget', 'Natural', 'ZBNF']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.agriculture_food_management_subsidies.irrigation_infrastructure_water_productivity', 'irrigation_infrastructure_water_productivity', 'Irrigation Infrastructure & Water Productivity (Types - Surface, Groundwater, Canal Irrigation; Micro-Irrigation - Drip & Sprinkler Systems; Pradhan Mantri Krishi Sinchayee Yojana / PMKSY - Per Drop More Crop, Har Khet Ko Pani; Command Area Development; Groundwater Overexploitation & Atal Bhujal Yojana)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Irrigation', 'Infrastructure', 'Water', 'Productivity', 'Types', 'Surface', 'Groundwater', 'Canal', 'Micro', 'Drip', 'Sprinkler', 'Systems', 'Pradhan', 'Mantri', 'Krishi', 'Sinchayee', 'Yojana', 'PMKSY', 'Per', 'Drop', 'Crop', 'Har', 'Khet', 'Pani', 'Command', 'Area', 'Development', 'Overexploitation', 'Atal', 'Bhujal']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.agriculture_food_management_subsidies.farm_inputs_credit_crop_insurance', 'farm_inputs_credit_crop_insurance', 'Farm Inputs, Credit & Crop Insurance (Fertilizer Architecture - Urea, DAP, MOP; Nutrient Based Subsidy / NBS Scheme, Nano Urea & Nano DAP, Direct Benefit Transfer / DBT in Fertilizers; Institutional Credit - Priority Sector Lending / PSL Norms, Kisan Credit Card / KCC, Interest Subvention Scheme; Pradhan Mantri Fasal Bima Yojana / PMFBY - Yield Index vs Weather Index, PM KISAN / Income Support Scheme)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Farm', 'Inputs', 'Credit', 'Crop', 'Insurance', 'Fertilizer', 'Architecture', 'Urea', 'DAP', 'MOP', 'Nutrient', 'Based', 'Subsidy', 'NBS', 'Scheme', 'Nano', 'Direct', 'Benefit', 'Transfer', 'DBT', 'Fertilizers', 'Institutional', 'Priority', 'Sector', 'Lending', 'PSL', 'Norms', 'Kisan', 'Card', 'KCC', 'Interest', 'Subvention', 'Pradhan', 'Mantri', 'Fasal', 'Bima', 'Yojana', 'PMFBY', 'Yield', 'Index', 'Weather', 'KISAN', 'Income', 'Support']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.agriculture_food_management_subsidies.agricultural_pricing_market_reforms', 'agricultural_pricing_market_reforms', 'Agricultural Pricing & Market Reforms (Minimum Support Price / MSP - Comprehensive Cost C2 + 50% vs A2+FL; Commission for Agricultural Costs and Prices / CACP; PM-AASHA Scheme; Market Architecture - Agricultural Produce Market Committees / APMC, Model APMC Act, Electronic National Agriculture Market / e-NAM, Farmer Producer Organisations / FPOs, Contract Farming Regulations)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Agricultural', 'Pricing', 'Market', 'Reforms', 'Minimum', 'Support', 'Price', 'MSP', 'Comprehensive', 'Cost', '50%', 'A2+FL', 'Commission', 'Costs', 'Prices', 'CACP', 'AASHA', 'Scheme', 'Architecture', 'Produce', 'Committees', 'APMC', 'Model', 'Act', 'Electronic', 'National', 'Agriculture', 'NAM', 'Farmer', 'Producer', 'Organisations', 'FPOs', 'Contract', 'Farming', 'Regulations']::text[],
+        'civil_services', ARRAY['civil_services']::text[]
+    ),
+    (
+        'indian_economy_development.agriculture_food_management_subsidies.food_processing_supply_chain_logistics', 'food_processing_supply_chain_logistics', 'Food Processing & Supply Chain Logistics (Mega Food Parks Scheme, PM Formalisation of Micro food processing Enterprises / PMFME, Operation Greens / TOP to TOTAL, Pradhan Mantri Kisan SAMPADA Yojana; Cold Chain Infrastructure, Post-Harvest Losses, Food Quality Standards / FSSAI)', 3,
+        'Topic', 'Indian Economy & Development', 'indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies',
+        ARRAY[]::text[], ARRAY['indian_economy_development', 'indian_economy_development.agriculture_food_management_subsidies']::text[], '{"upsc": ["Prelims-GS1", "Mains-GS3"], "kas": ["Prelims-P1", "Mains-GS1"], "ssc": ["GA"]}'::jsonb,
+        '[UPSC: Prelims-GS1, Mains-GS3] [KAS: Prelims-P1, Mains-GS1] [SSC: GA]', '', ARRAY[]::text[], ARRAY['Food', 'Processing', 'Supply', 'Chain', 'Logistics', 'Mega', 'Parks', 'Scheme', 'Formalisation', 'Micro', 'food', 'processing', 'Enterprises', 'PMFME', 'Operation', 'Greens', 'TOP', 'TOTAL', 'Pradhan', 'Mantri', 'Kisan', 'SAMPADA', 'Yojana', 'Cold', 'Infrastructure', 'Post', 'Harvest', 'Losses', 'Quality', 'Standards', 'FSSAI']::text[],
         'civil_services', ARRAY['civil_services']::text[]
     )
 ON CONFLICT (id) DO UPDATE SET

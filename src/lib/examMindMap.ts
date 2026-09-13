@@ -728,7 +728,6 @@ export function getExamMindMap(examId: string): MindMapNode {
         // 5. KSP PSI (POLICE SUB-INSPECTOR)
         // ═══════════════════════════════════════════════════════════════
         case 'ksp-psi':
-        case 'ksp-pc':
             return {
                 id: 'psi-root',
                 label: 'KSP Police Sub-Inspector (PSI) Examination',
@@ -840,6 +839,120 @@ export function getExamMindMap(examId: string): MindMapNode {
                                 children: [
                                     { id: 'psi-p2-reasoning', label: 'Logical & Analytical Reasoning Drills', label_kn: 'ತಾರ್ಕಿಕ ಸಾಮರ್ಥ್ಯ', category: 'topic', entities: ['Statement & Conclusions', 'Seating Arrangements', 'Clock & Calendar Calculations'] }
                                 ]
+                            }
+                        ]
+                    }
+                ]
+            };
+
+        // ═══════════════════════════════════════════════════════════════
+        // 6. KSP POLICE CONSTABLE (PC)
+        // ═══════════════════════════════════════════════════════════════
+        case 'ksp-pc':
+            return {
+                id: 'pc-root',
+                label: 'KSP Police Constable (PC - Civil & CAR/DAR)',
+                label_kn: 'ಕರ್ನಾಟಕ ರಾಜ್ಯ ಪೊಲೀಸ್ ಕಾನ್ಸ್ಟೇಬಲ್ (ಸಿವಿಲ್ & ಸಿಎಆರ್/ಡಿಎಆರ್)',
+                category: 'exam',
+                color: '#082C54',
+                children: [
+                    {
+                        id: 'pc-written',
+                        label: 'Stage 1: Objective Written Examination',
+                        label_kn: 'ಹಂತ ೧: ವಸ್ತುನಿಷ್ಠ ಲಿಖಿತ ಪರೀಕ್ಷೆ',
+                        category: 'paper',
+                        badge: '100 Questions · 100 Marks · 90 Mins',
+                        weightage: 'Very High',
+                        color: '#0D9488',
+                        children: [
+                            {
+                                id: 'pc-gk-hist',
+                                label: 'Indian History & Freedom Struggle (ಇತಿಹಾಸ)',
+                                label_kn: 'ಭಾರತ & ಕರ್ನಾಟಕ ಇತಿಹಾಸ',
+                                category: 'domain',
+                                weightage: 'Very High',
+                                description: 'Ancient, Medieval, Modern Indian Freedom Movement, and Karnataka Dynasties (Kadambas, Chalukyas, Vijayanagara, Wodeyars).',
+                                entities: ['Vijayanagara Empire & Hampi', 'Mysore Wodeyars & Dewans', '1857 Revolt & Karnataka Rebellions', 'National Movement & Unification of Karnataka'],
+                                children: [
+                                    { id: 'pc-hist-mod', label: 'Modern India & National Movement', label_kn: 'ಆಧುನಿಕ ಭಾರತ ಮತ್ತು ರಾಷ್ಟ್ರೀಯ ಚಳವಳಿ', category: 'topic', entities: ['Gandhian Era', 'Quit India Movement', 'Social Reform Movements'] }
+                                ]
+                            },
+                            {
+                                id: 'pc-polity',
+                                label: 'Indian Constitution & Governance (ಭಾರತೀಯ ಸಂವಿಧಾನ)',
+                                label_kn: 'ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ',
+                                category: 'domain',
+                                weightage: 'High',
+                                description: 'Preamble, Fundamental Rights, DPSP, Parliament, Executive, Judiciary, and Police Acts.',
+                                entities: ['Articles 12-35 (Fundamental Rights)', 'Articles 36-51 (DPSP)', 'President & Governor Roles', 'Karnataka Police Act 1963 & IPC/CrPC/BNS Basics'],
+                                children: [
+                                    { id: 'pc-pol-fr', label: 'Fundamental Rights & Writs', label_kn: 'ಮೂಲಭೂತ ಹಕ್ಕುಗಳು ಮತ್ತು ರಿಟ್‌ಗಳು', category: 'topic', entities: ['Article 32 & 226 Writs', 'Right to Equality', 'Right to Life & Personal Liberty'] }
+                                ]
+                            },
+                            {
+                                id: 'pc-science',
+                                label: 'General Science & Everyday Technology (ಸಾಮಾನ್ಯ ವಿಜ್ಞಾನ)',
+                                label_kn: 'ದೈನಂದಿನ ವಿಜ್ಞಾನ & ತಂತ್ರಜ್ಞಾನ',
+                                category: 'domain',
+                                weightage: 'High',
+                                description: 'Physics concepts in daily life, Chemistry basics, Human Biology, Nutrition, and Health.',
+                                entities: ['Newtonian Laws & Motion', 'Human Body Systems & Diseases', 'Vitamins & Deficiency Disorders', 'ISRO Satellite Launches & Space Technology'],
+                                children: [
+                                    { id: 'pc-sci-bio', label: 'Human Physiology & Nutrition', label_kn: 'ಮಾನವ ಶರೀರಶಾಸ್ತ್ರ ಮತ್ತು ಪೋಷಕಾಂಶಗಳು', category: 'topic', entities: ['Blood Circulation & Blood Groups', 'Infectious & Non-infectious Diseases', 'Endocrine Glands'] }
+                                ]
+                            },
+                            {
+                                id: 'pc-gma',
+                                label: 'Mental Ability & Quantitative Aptitude (ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ)',
+                                label_kn: 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ & ಗಣಿತ',
+                                category: 'domain',
+                                weightage: 'High',
+                                description: 'Coding-decoding, number series, blood relations, direction sense, and basic arithmetic.',
+                                entities: ['Number & Letter Series', 'Coding-Decoding', 'Blood Relations & Direction Sense', 'Time & Work, Speed & Distance, Percentages'],
+                                children: [
+                                    { id: 'pc-gma-reasoning', label: 'Logical & Analytical Reasoning', label_kn: 'ತಾರ್ಕಿಕ ಸಾಮರ್ಥ್ಯ', category: 'topic', entities: ['Analogy', 'Venn Diagrams', 'Seating Arrangements'] }
+                                ]
+                            },
+                            {
+                                id: 'pc-geo-env',
+                                label: 'Geography, Karnataka Resources & Environment (ಭೂಗೋಳ & ಪರಿಸರ)',
+                                label_kn: 'ಭೂಗೋಳ ಮತ್ತು ಪರಿಸರ ವ್ಯವಸ್ಥೆ',
+                                category: 'domain',
+                                weightage: 'High',
+                                description: 'Rivers of Karnataka, National Parks, Mineral distribution, Census 2011, and Climate.',
+                                entities: ['Krishna & Cauvery River Basins', 'Karnataka Census 2011 Demographics', 'Western Ghats Biodiversity & Wildlife Sanctuaries', 'Dams & Hydroelectric Projects in Karnataka'],
+                                children: [
+                                    { id: 'pc-geo-rivers', label: 'Karnataka River Systems & Irrigation', label_kn: 'ಕರ್ನಾಟಕದ ನದಿ ವ್ಯವಸ್ಥೆ', category: 'topic', entities: ['Krishna, Tungabhadra, Cauvery', 'East & West Flowing Rivers', 'Major Reservoirs (KRS, Almatti)'] }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 'pc-pet',
+                        label: 'Stage 2: Physical Standard & Endurance Test (ET & PST)',
+                        label_kn: 'ಹಂತ ೨: ದೈಹಿಕ ಸಾಮರ್ಥ್ಯ & ಮಾನದಂಡ ಪರೀಕ್ಷೆ',
+                        category: 'paper',
+                        badge: 'Qualifying Standard',
+                        weightage: 'High',
+                        color: '#EA580C',
+                        children: [
+                            {
+                                id: 'pc-pst-standards',
+                                label: 'Physical Standard Test (PST)',
+                                label_kn: 'ದೈಹಿಕ ಗುಣಮಟ್ಟ ಪರೀಕ್ಷೆ (PST)',
+                                category: 'domain',
+                                weightage: 'High',
+                                description: 'Height, chest measurements for male and female candidates.',
+                                entities: ['Men: Height Minimum 168 cm, Chest 86 cm (5 cm expansion)', 'Women: Height Minimum 157 cm, Weight 45 kg', 'Tribal Candidates Height Relaxation (155 cm)']
+                            },
+                            {
+                                id: 'pc-et-events',
+                                label: 'Endurance Test Events (ET)',
+                                label_kn: 'ದೈಹಿಕ ಸಹಿಷ್ಣುತಾ ಪರೀಕ್ಷೆ (ET)',
+                                category: 'domain',
+                                weightage: 'High',
+                                description: 'Running, high jump, long jump, and shot put standards.',
+                                entities: ['Men: 1600m Run in 6 mins 30 secs', 'Men: Long Jump 3.80m or High Jump 1.20m', 'Men: Shot Put (7.26 kg) 5.60m', 'Women: 400m Run in 2 mins, Long Jump 2.50m or High Jump 0.90m']
                             }
                         ]
                     }

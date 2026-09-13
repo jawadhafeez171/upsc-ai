@@ -103,6 +103,55 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     const shuffled = combined.sort(() => Math.random() - 0.5);
                     selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
                 }
+            } else if (config.exam_id === 'ksp-pc') {
+                let query = supabase.from('pc_pyq').select('*');
+                if (config.paper_code && config.paper_code !== 'all') {
+                    query = query.eq('paper_code', config.paper_code);
+                }
+                if (config.mode === 'subject' && config.subject) {
+                    query = query.or(`subject.eq."${config.subject}",subject_kannada.eq."${config.subject}"`);
+                }
+                if (config.difficulty && config.difficulty !== 'mixed') {
+                    query = query.eq('difficulty', config.difficulty);
+                }
+                const { data } = await query;
+                if (data && data.length > 0) {
+                    selectedRawQuestions = data;
+                } else {
+                    // Fallback to local JSON files if offline or network failure
+                    try {
+                        let localPool: any[] = [];
+                        if (!config.paper_code || config.paper_code === 'all' || config.paper_code === 'hk') {
+                            const hkMod = await import('@/data/upsc_pyq/pc/hk_dar_pc_2026_sept.json');
+                            const hkItems = (hkMod.default || hkMod).map((q: any) => ({
+                                ...q,
+                                id: `pc-hk-2026-q${q.question_number}`,
+                                paper_code: 'hk',
+                                exam_id: 'ksp-pc'
+                            }));
+                            localPool = [...localPool, ...hkItems];
+                        }
+                        if (!config.paper_code || config.paper_code === 'all' || config.paper_code === 'nhk') {
+                            const nhkMod = await import('@/data/upsc_pyq/pc/nhk_dar_pc_2026_sept.json');
+                            const nhkItems = (nhkMod.default || nhkMod).map((q: any) => ({
+                                ...q,
+                                id: `pc-nhk-2026-q${q.question_number}`,
+                                paper_code: 'nhk',
+                                exam_id: 'ksp-pc'
+                            }));
+                            localPool = [...localPool, ...nhkItems];
+                        }
+                        if (config.mode === 'subject' && config.subject) {
+                            localPool = localPool.filter((q: any) => q.subject === config.subject || q.subject_kannada === config.subject);
+                        }
+                        if (config.difficulty && config.difficulty !== 'mixed') {
+                            localPool = localPool.filter((q: any) => q.difficulty === config.difficulty);
+                        }
+                        selectedRawQuestions = localPool;
+                    } catch (e) {
+                        console.error('Local JSON fallback error for ksp-pc:', e);
+                    }
+                }
             } else if (config.exam_id === 'kpsc-kas') {
                 let query = supabase.from('kas_questions').select('*');
                 if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
@@ -122,7 +171,16 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
 
             if (selectedRawQuestions.length > 0) {
                 let sortedQuestions = [...selectedRawQuestions];
-                if (config.exam_id === 'kpsc-kas') {
+                if (config.exam_id === 'ksp-pc') {
+                    if (config.mode === 'yearwise' || (config.paper_code && config.paper_code !== 'all')) {
+                        sortedQuestions.sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
+                    } else {
+                        sortedQuestions = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
+                    }
+                    if (config.question_count && config.question_count < sortedQuestions.length) {
+                        sortedQuestions = sortedQuestions.slice(0, config.question_count);
+                    }
+                } else if (config.exam_id === 'kpsc-kas') {
                     sortedQuestions.sort((a, b) => {
                         const numA = parseInt(a.id.match(/-q(\d+)$/)?.[1] || '0', 10);
                         const numB = parseInt(b.id.match(/-q(\d+)$/)?.[1] || '0', 10);
@@ -143,8 +201,31 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 }
 
                 const formattedQs: Question[] = sortedQuestions.map((dbq) => {
-                    // CSAT Question Format (from csat_pyq or 2020_csat.json)
-                    if (dbq.question_english) {
+                    // Police Constable (PC) CAR/DAR Question Format (from pc_pyq or JSON)
+                    if (dbq.option_1_english || dbq.paper_code || dbq.exam_id === 'ksp-pc') {
+                        const optionsList = [
+                            { id: '1', text: dbq.option_1_english || '', text_kn: dbq.option_1_kannada || undefined },
+                            { id: '2', text: dbq.option_2_english || '', text_kn: dbq.option_2_kannada || undefined },
+                            { id: '3', text: dbq.option_3_english || '', text_kn: dbq.option_3_kannada || undefined },
+                            { id: '4', text: dbq.option_4_english || '', text_kn: dbq.option_4_kannada || undefined }
+                        ];
+                        const rawAns = String(dbq.key_answer || '1').trim();
+                        return {
+                            id: dbq.id || `pc-${dbq.paper_code || 'car'}-2026-q${dbq.question_number || 1}`,
+                            exam_id: 'ksp-pc',
+                            subject: dbq.subject || 'General Knowledge',
+                            difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
+                            text: dbq.question_english || '',
+                            text_kn: dbq.question_kannada || undefined,
+                            options: optionsList,
+                            correct: rawAns,
+                            explanation: dbq.explanation_english || 'No explanation available.',
+                            explanation_kn: dbq.explanation_kannada || undefined,
+                            image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
+                            subject_kannada: dbq.subject_kannada || undefined,
+                            sub_topic_kannada: dbq.sub_topic_kannada || undefined
+                        };
+                    } else if (dbq.question_english) {
                         const optionsList = [
                             { id: 'a', text: dbq.option_a_english || '', text_hi: dbq.option_a_hindi || undefined },
                             { id: 'b', text: dbq.option_b_english || '', text_hi: dbq.option_b_hindi || undefined },
@@ -373,7 +454,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                                 </button>
                             ))}
                         </div>
-                    ) : (activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea')) ? (
+                    ) : (activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea') || activeSession?.config?.exam_id?.startsWith('ksp')) ? (
                         <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
                             {(['en', 'kn'] as const).map((l) => (
                                 <button

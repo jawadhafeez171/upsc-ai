@@ -41,6 +41,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
     const [paper, setPaper] = useState<number | 'all'>('all');
+    const [paperCode, setPaperCode] = useState<'all' | 'hk' | 'nhk'>('all');
     const [month, setMonth] = useState<string | 'all'>('all');
     const [count, setCount] = useState(25);
     const [customCount, setCustomCount] = useState('');
@@ -105,6 +106,20 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         const [{ count: c1 }, { count: c2, error: c2Err }] = await Promise.all([q1, q2]);
                         qCount = (c1 || 0) + (c2 !== null && !c2Err ? c2 : 80);
                     }
+                } else if (examId === 'ksp-pc') {
+                    let query = supabase.from('pc_pyq').select('id', { count: 'exact', head: true });
+                    if (paperCode !== 'all') query = query.eq('paper_code', paperCode);
+                    if (mode === 'subject' && subject) {
+                        query = query.or(`subject.eq."${subject}",subject_kannada.eq."${subject}"`);
+                    }
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+
+                    const { count: pcCount, error: pcErr } = await query;
+                    if (!pcErr && pcCount !== null) {
+                        qCount = pcCount;
+                    } else {
+                        qCount = paperCode === 'all' ? 200 : 100;
+                    }
                 } else if (examId === 'kpsc-kas') {
                     let query = supabase.from('kas_questions').select('id', { count: 'exact', head: true });
                     if (mode === 'subject' && subject) query = query.eq('subject', subject);
@@ -128,7 +143,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             setLoading(false);
         }
         loadExamData();
-    }, [examId, mode, subject, difficulty, year, paper, month]);
+    }, [examId, mode, subject, difficulty, year, paper, paperCode, month]);
 
     if (loading) {
         return <div style={{ padding: '100px 20px', textAlign: 'center', color: 'var(--text-muted)' }}>Loading examination details...</div>;
@@ -156,9 +171,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             difficulty,
             question_count: finalCount,
             language: testLang,
-            year: examId === 'upsc-cse' || examId === 'kpsc-kas' ? year : undefined,
-            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : undefined,
-            month: examId === 'kpsc-kas' ? month : undefined
+            year: examId === 'upsc-cse' || examId === 'kpsc-kas' ? year : examId === 'ksp-pc' ? 2026 : undefined,
+            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : undefined,
+            month: examId === 'kpsc-kas' ? month : examId === 'ksp-pc' ? 'September' : undefined,
+            paper_code: examId === 'ksp-pc' ? paperCode : undefined
         };
 
         const sessionId = `session_${Date.now()}`;
@@ -379,8 +395,75 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 </button>
                             </div>
 
+                            {/* KSP Police Constable Paper & Region Selector */}
+                            {examId === 'ksp-pc' && (
+                                <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                                    <div>
+                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                            <span>🚔 SELECT POLICE CONSTABLE CADRE / REGION PAPER:</span>
+                                        </label>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                            <button
+                                                onClick={() => setPaperCode('all')}
+                                                style={{
+                                                    padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
+                                                    fontSize: '12.5px', fontWeight: 700,
+                                                    background: paperCode === 'all' ? '#082C54' : 'var(--bg-primary)',
+                                                    color: paperCode === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                    border: paperCode === 'all' ? '1.5px solid #082C54' : '1px solid var(--border)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                🌟 All Papers (HK + NHK — 200 Qs)
+                                            </button>
+                                            <button
+                                                onClick={() => setPaperCode('hk')}
+                                                style={{
+                                                    padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
+                                                    fontSize: '12.5px', fontWeight: 700,
+                                                    background: paperCode === 'hk' ? '#082C54' : 'var(--bg-primary)',
+                                                    color: paperCode === 'hk' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                    border: paperCode === 'hk' ? '1.5px solid #082C54' : '1px solid var(--border)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                🏛️ HK CAR/DAR 2026 (Hyderabad-Karnataka — 100 Qs)
+                                            </button>
+                                            <button
+                                                onClick={() => setPaperCode('nhk')}
+                                                style={{
+                                                    padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
+                                                    fontSize: '12.5px', fontWeight: 700,
+                                                    background: paperCode === 'nhk' ? '#082C54' : 'var(--bg-primary)',
+                                                    color: paperCode === 'nhk' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                    border: paperCode === 'nhk' ? '1.5px solid #082C54' : '1px solid var(--border)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                🏢 NHK CAR/DAR 2026 (Non-HK State-wide — 100 Qs)
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                            <span>📅 EXAMINATION SESSION:</span>
+                                        </label>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                                            <div style={{
+                                                padding: '6px 14px', borderRadius: '9px', fontSize: '12px', fontWeight: 700,
+                                                background: 'rgba(8, 44, 84, 0.1)', color: '#082C54',
+                                                border: '1px solid rgba(8, 44, 84, 0.25)', display: 'inline-flex', alignItems: 'center', gap: '6px'
+                                            }}>
+                                                <span>🔥 September 2026 Official Key Validated</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
                             {/* Year-Wise & Paper-Wise Filters */}
-                            {(mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas') && (
+                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas') && (
                                 <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                     {/* Paper Selector */}
                                     <div>
