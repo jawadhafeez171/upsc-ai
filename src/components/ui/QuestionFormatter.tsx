@@ -188,79 +188,143 @@ function preProcessQuestionText(text: string): string {
 
     const intermediateText = processedLines.join('\n');
 
-    // 2. Check if List I and List II are present in the text
-    const hasList1 = /(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i.test(intermediateText);
-    const hasList2 = /(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i.test(intermediateText);
-    
-    if (hasList1 && hasList2 && !intermediateText.includes('|')) {
+    // 2. Check if List I and List II (or Column I / Column II or ಪಟ್ಟಿ-I / ಪಟ್ಟಿ-II) are present in the text
+    const list1Regex = /(?:List\s*[-–—]?\s*(?:I|1|A)\b|Column\s*[-–—]?\s*(?:I|1|A)\b|ಪಟ್ಟಿ\s*[-–—]?\s*(?:I|1|A)\b)/i;
+    const list2Regex = /(?:List\s*[-–—]?\s*(?:II|2|B)\b|Column\s*[-–—]?\s*(?:II|2|B)\b|ಪಟ್ಟಿ\s*[-–—]?\s*(?:II|2|B)\b)/i;
+
+    if (list1Regex.test(intermediateText) && list2Regex.test(intermediateText)) {
         const lines = intermediateText.split('\n');
-        let list1Items: string[] = [];
-        let list2Items: string[] = [];
-        let list1Header = 'List I';
-        let list2Header = 'List II';
-        let otherLinesBefore: string[] = [];
-        let otherLinesAfter: string[] = [];
-        let state: 'before' | 'list1' | 'list2' | 'after' = 'before';
-        
-        for (let line of lines) {
-            const trimmed = line.trim();
-            if (trimmed === '') {
-                if (state === 'before') {
-                    otherLinesBefore.push(line);
-                } else if (state === 'after') {
-                    otherLinesAfter.push(line);
-                }
-                continue;
-            }
-            
-            const isL1 = /^(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i.test(trimmed);
-            const isL2 = /^(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i.test(trimmed);
-            
-            if (isL1) {
-                state = 'list1';
-                const match = trimmed.match(/^(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b)/i);
-                if (match) list1Header = match[1];
-                
-                const rest = trimmed.replace(/^(List\s*-?\s*I\b|ಪಟ್ಟಿ\s*-?\s*I\b):?\s*/i, '');
-                list1Items = rest.split(/,\s*(?=[A-Z]\.\s|[A-Z]\s)/i).map(x => x.trim()).filter(Boolean);
-            } else if (isL2) {
-                state = 'list2';
-                const match = trimmed.match(/^(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b)/i);
-                if (match) list2Header = match[1];
-                
-                const rest = trimmed.replace(/^(List\s*-?\s*II\b|ಪಟ್ಟಿ\s*-?\s*II\b):?\s*/i, '');
-                list2Items = rest.split(/,\s*(?=[I|V|X]+\.\s|[I|V|X]+\s)/i).map(x => x.trim()).filter(Boolean);
-            } else {
-                if (state === 'before') {
-                    otherLinesBefore.push(line);
-                } else {
-                    state = 'after';
-                    otherLinesAfter.push(line);
+
+        // Case A: Inline list header on a single line, e.g.:
+        // "List-I (Place) - List-II (Headquarters)" or "List-I | List-II"
+        // and subsequent rows: "a. Foo - i. Bar"
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (list1Regex.test(line) && list2Regex.test(line) && (line.includes(' - ') || line.includes(' | '))) {
+                const separator = line.includes(' | ') ? ' | ' : ' - ';
+                const headerParts = line.split(separator).map(s => s.trim()).filter(Boolean);
+                if (headerParts.length === 2) {
+                    const h1 = headerParts[0].replace(/^[-–—:\s]+|[-–—:\s]+$/g, '');
+                    const h2 = headerParts[1].replace(/^[-–—:\s]+|[-–—:\s]+$/g, '');
+
+                    const rows: string[][] = [];
+                    let j = i + 1;
+                    while (j < lines.length) {
+                        const rowLine = lines[j].trim();
+                        if (!rowLine) {
+                            j++;
+                            continue;
+                        }
+                        if (/^(?:Codes?|Code|ಸಂಕೇತಗಳು?|ಆಯ್ಕೆಗಳು?|Options?|Select|Choose)\b/i.test(rowLine)) {
+                            break;
+                        }
+                        if (rowLine.includes(' - ') || rowLine.includes(' | ')) {
+                            const rowSep = rowLine.includes(' | ') ? ' | ' : ' - ';
+                            const rParts = rowLine.split(rowSep).map(s => s.trim()).filter(Boolean);
+                            if (rParts.length >= 2) {
+                                rows.push([rParts[0], rParts.slice(1).join(' - ')]);
+                                j++;
+                                continue;
+                            }
+                        }
+                        break;
+                    }
+
+                    if (rows.length >= 2) {
+                        const before = lines.slice(0, i);
+                        const after = lines.slice(j);
+                        const tableLines = [
+                            `${h1} | ${h2}`,
+                            `--- | ---`,
+                            ...rows.map(r => `${r[0]} | ${r[1]}`)
+                        ];
+                        return [...before, '', ...tableLines, '', ...after].join('\n');
+                    }
                 }
             }
         }
-        
-        if (list1Items.length > 0 || list2Items.length > 0) {
+
+        // Case B: Sequential blocks (List I followed by its items, then List II followed by its items)
+        // e.g. Match List - I with List - II:
+        // List - I
+        // (a) De Almeida ...
+        // List - II
+        // (i) Discovered sea route ...
+        let state: 'before' | 'list1' | 'list2' | 'after' = 'before';
+        let h1 = 'List I';
+        let h2 = 'List II';
+        const list1Items: string[] = [];
+        const list2Items: string[] = [];
+        const beforeLines: string[] = [];
+        const afterLines: string[] = [];
+
+        const isL1Header = (str: string) => list1Regex.test(str) && !list2Regex.test(str);
+        const isL2Header = (str: string) => list2Regex.test(str) && !list1Regex.test(str);
+        const isEndMarker = (str: string) => /^(?:Codes?|Code|ಸಂಕೇತಗಳು?|ಆಯ್ಕೆಗಳು?|ಉತ್ತರಗಳು?|Options?|Select|Choose|Which|Match\s+the\s+codes)\b/i.test(str) ||
+            /^(?:\(?[a-d1-4]\)?\s*[-–—:]\s*\(?[i|v|x|\d]+)/i.test(str);
+
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            const trimmed = line.trim();
+
+            if (state === 'before') {
+                if (isL1Header(trimmed)) {
+                    state = 'list1';
+                    h1 = trimmed.replace(/[:\.\-]+$/, '').trim() || 'List I';
+                } else {
+                    beforeLines.push(line);
+                }
+            } else if (state === 'list1') {
+                if (isL2Header(trimmed)) {
+                    state = 'list2';
+                    h2 = trimmed.replace(/[:\.\-]+$/, '').trim() || 'List II';
+                } else if (!trimmed) {
+                    continue;
+                } else {
+                    // Check if line starts with a bullet marker: (a), a., 1., (1), etc.
+                    const isBullet = /^(?:\([a-zA-Z0-9ivxIVX]+\)|[a-zA-Z0-9ivxIVX]+[\.\)]|\d+\))\s*/.test(trimmed);
+                    if (isBullet || list1Items.length === 0) {
+                        list1Items.push(trimmed);
+                    } else {
+                        // Append continuation lines to the previous item
+                        list1Items[list1Items.length - 1] += ' ' + trimmed;
+                    }
+                }
+            } else if (state === 'list2') {
+                if (!trimmed) {
+                    continue;
+                }
+                if (isEndMarker(trimmed)) {
+                    state = 'after';
+                    afterLines.push(line);
+                } else {
+                    const isBullet = /^(?:\([a-zA-Z0-9ivxIVX]+\)|[a-zA-Z0-9ivxIVX]+[\.\)]|\d+\))\s*/.test(trimmed);
+                    if (isBullet || list2Items.length === 0) {
+                        list2Items.push(trimmed);
+                    } else {
+                        list2Items[list2Items.length - 1] += ' ' + trimmed;
+                    }
+                }
+            } else if (state === 'after') {
+                afterLines.push(line);
+            }
+        }
+
+        if (list1Items.length > 0 && list2Items.length > 0) {
             const maxLen = Math.max(list1Items.length, list2Items.length);
-            const tableLines: string[] = [];
-            tableLines.push(`${list1Header} | ${list2Header}`);
-            tableLines.push(`--- | ---`);
-            for (let i = 0; i < maxLen; i++) {
-                const item1 = list1Items[i] || '';
-                const item2 = list2Items[i] || '';
+            const tableLines = [
+                `${h1} | ${h2}`,
+                `--- | ---`
+            ];
+            for (let k = 0; k < maxLen; k++) {
+                const item1 = list1Items[k] || '';
+                const item2 = list2Items[k] || '';
                 tableLines.push(`${item1} | ${item2}`);
             }
-            
-            return [
-                ...otherLinesBefore,
-                '',
-                ...tableLines,
-                '',
-                ...otherLinesAfter
-            ].join('\n');
+            return [...beforeLines, '', ...tableLines, '', ...afterLines].join('\n');
         }
     }
-    
+
     return intermediateText;
 }
 
@@ -303,13 +367,14 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                     <th 
                                         key={`th-${cellIdx}`} 
                                         style={{ 
-                                            padding: '10px 14px', 
+                                            padding: '12px 16px', 
                                             textAlign: 'left', 
                                             fontWeight: 800, 
-                                            fontSize: '12.5px',
+                                            fontSize: '13px',
                                             textTransform: 'uppercase',
                                             letterSpacing: '0.04em',
                                             color: 'var(--text-primary)',
+                                            width: colCount === 2 ? '50%' : undefined,
                                             borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
                                         }}
                                     >
@@ -333,10 +398,12 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                     <td 
                                         key={`td-${cellIdx}`} 
                                         style={{ 
-                                            padding: '11px 14px', 
-                                            color: cellIdx === 0 && /^\d+\.?$/.test(cell.trim()) ? 'var(--brand-orange)' : 'var(--text-secondary)',
-                                            fontWeight: cellIdx === 0 ? 700 : 500,
-                                            lineHeight: 1.5,
+                                            padding: '12px 16px', 
+                                            verticalAlign: 'top',
+                                            width: colCount === 2 ? '50%' : undefined,
+                                            color: 'var(--text-primary)',
+                                            fontWeight: 500,
+                                            lineHeight: 1.6,
                                             borderRight: cellIdx < colCount - 1 ? '1px solid var(--border)' : 'none'
                                         }}
                                     >
