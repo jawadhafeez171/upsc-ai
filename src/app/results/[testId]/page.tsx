@@ -200,7 +200,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                         </div>
                                         <div style={{ flex: 1 }}>
                                             <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}</div>
-                                            {(q.passage || q.passage_kn) && (
+                                            {(q.passage || q.passage_kn || q.passage_hi) && (
                                                 <div style={{ marginTop: '6px', marginBottom: '8px' }}>
                                                     <PassageCard
                                                         passage={q.passage}

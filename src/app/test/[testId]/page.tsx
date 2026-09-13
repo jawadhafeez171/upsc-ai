@@ -10,17 +10,99 @@ import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionForm
 import PassageCard from '@/components/ui/PassageCard';
 import { isValidImageUrl } from '@/lib/imageUtils';
 
+const CSAT_EN_PATTERNS = [
+    /With reference to the above passage/i,
+    /Based on the above passage/i,
+    /On the basis of the above passage/i,
+    /Which one of the following/i,
+    /Which of the following/i,
+    /In the context of the above passage/i,
+    /In the context of India/i,
+    /According to the above passage/i,
+    /According to the passage/i,
+    /The author's central focus/i,
+    /What is the most logical/i
+];
+
+const CSAT_HI_PATTERNS = [
+    /उपर्युक्त (?:परिच्छेद|गद्यांश)/,
+    /इस (?:परिच्छेद|गद्यांश) से/,
+    /निम्नलिखित में से कौन-सा|निम्नलिखित में से कौन सा|निम्नलिखित में से कौन से/,
+    /निम्न कथनों में से/,
+    /उपर्युक्त में से कौन-सा|उपर्युक्त में से कौन सा|उपर्युक्त में से कौन से/,
+    /भारत के संदर्भ में/,
+    /लेखक के अनुसार/,
+    /इस परिच्छेद का मुख्य/,
+    /परिच्छेद द्वारा संप्रेषित/
+];
+
+function processCsatQuestion(q: any): any {
+    if (q.passage_english && q.passage_english.trim()) {
+        return q;
+    }
+    const qe = q.question_english || '';
+    const qh = q.question_hindi || '';
+
+    if (qe.includes('Passage') || qe.includes('Directions')) {
+        const linesE = qe.trim().split('\n');
+        let splitEIdx = -1;
+        for (let i = 0; i < linesE.length; i++) {
+            if (CSAT_EN_PATTERNS.some((p) => p.test(linesE[i]))) {
+                splitEIdx = i;
+                break;
+            }
+        }
+
+        const linesH = qh.trim().split('\n');
+        let splitHIdx = -1;
+        for (let i = 0; i < linesH.length; i++) {
+            if (CSAT_HI_PATTERNS.some((p) => p.test(linesH[i]))) {
+                splitHIdx = i;
+                break;
+            }
+        }
+
+        if (splitEIdx !== -1) {
+            const passE = linesE.slice(0, splitEIdx).join('\n').trim();
+            const stmtE = linesE.slice(splitEIdx).join('\n').trim();
+            const passH = splitHIdx !== -1 ? linesH.slice(0, splitHIdx).join('\n').trim() : '';
+            const stmtH = splitHIdx !== -1 ? linesH.slice(splitHIdx).join('\n').trim() : qh;
+
+            return {
+                ...q,
+                passage_english: passE,
+                question_english: stmtE,
+                passage_hindi: passH,
+                question_hindi: stmtH
+            };
+        }
+    }
+    return q;
+}
+
+function cleanPassageKey(rawPassage: string): string {
+    return rawPassage
+        .replace(/^Directions[^\n]*\n?/im, '')
+        .replace(/^Read the following[^\n]*\n?/im, '')
+        .replace(/^निम्नलिखित प्रश्नांश[^\n]*\n?/im, '')
+        .replace(/^नीचे दिए गए[^\n]*\n?/im, '')
+        .trim()
+        .slice(0, 80);
+}
+
 // Helper functions for question grouping and shuffle preservation
 function assignQuestionGroups(rawQuestions: any[]): any[] {
     const passageMap = new Map<string, { groupId: string; count: number; firstQNum: number }>();
 
     for (const q of rawQuestions) {
-        const passage = (q.passage_english || q.passage_kannada || '').trim();
+        const passage = (q.passage_english || q.passage_kannada || q.passage_hindi || '').trim();
         if (passage.length > 10) {
-            const key = `${q.paper_code || 'car'}_${passage.slice(0, 80)}`;
+            const cleanKey = cleanPassageKey(passage);
+            const prefix = q.paper_code || q.exam_id || 'q';
+            const key = `${prefix}_${cleanKey}`;
             if (!passageMap.has(key)) {
                 passageMap.set(key, {
-                    groupId: `grp_${q.paper_code || 'car'}_${q.question_number || Math.random().toString(36).substring(2, 6)}`,
+                    groupId: `grp_${prefix}_${q.question_number || Math.random().toString(36).substring(2, 6)}`,
                     count: 0,
                     firstQNum: q.question_number || 0
                 });
@@ -30,9 +112,11 @@ function assignQuestionGroups(rawQuestions: any[]): any[] {
     }
 
     return rawQuestions.map((q) => {
-        const passage = (q.passage_english || q.passage_kannada || '').trim();
+        const passage = (q.passage_english || q.passage_kannada || q.passage_hindi || '').trim();
         if (passage.length > 10) {
-            const key = `${q.paper_code || 'car'}_${passage.slice(0, 80)}`;
+            const cleanKey = cleanPassageKey(passage);
+            const prefix = q.paper_code || q.exam_id || 'q';
+            const key = `${prefix}_${cleanKey}`;
             const grp = passageMap.get(key);
             if (grp && grp.count > 1) {
                 return {
@@ -122,9 +206,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     if (config.year && config.year !== 'all') query = query.eq('year', config.year);
                     const { data, error } = await query;
 
+                    let rawPool: any[] = [];
                     if (!error && data && data.length > 0) {
-                        const shuffled = [...data].sort(() => Math.random() - 0.5);
-                        selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
+                        rawPool = data;
                     } else {
                         // Local fallback for CSAT 2020
                         try {
@@ -141,11 +225,24 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             if (config.difficulty && config.difficulty !== 'mixed') {
                                 filtered = filtered.filter((q: any) => q.difficulty?.toLowerCase() === config.difficulty);
                             }
-                            const shuffled = filtered.sort(() => Math.random() - 0.5);
-                            selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
+                            rawPool = filtered;
                         } catch (err) {
                             console.error('CSAT fallback error:', err);
                         }
+                    }
+
+                    // Process CSAT passages and preserve question groups
+                    const processed = rawPool.map(processCsatQuestion);
+                    const grouped = assignQuestionGroups(processed);
+
+                    if (config.mode === 'yearwise' || (config.year && config.year !== 'all' && config.mode !== 'subject')) {
+                        selectedRawQuestions = [...grouped].sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
+                    } else {
+                        selectedRawQuestions = groupPreservingShuffle(grouped);
+                    }
+
+                    if (config.question_count && config.question_count < selectedRawQuestions.length) {
+                        selectedRawQuestions = safeSliceQuestions(selectedRawQuestions, config.question_count);
                     }
                 } else if (config.paper === 1) {
                     let query = supabase.from('upsc_questions').select('*').gt('year', 0);
@@ -170,17 +267,20 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         q2 = q2.eq('year', config.year);
                     }
                     const [{ data: d1 }, { data: d2 }] = await Promise.all([q1, q2]);
-                    let combined = [...(d1 || [])];
-                    if (d2 && d2.length > 0) {
-                        combined = [...combined, ...d2];
-                    } else {
+                    let csatData = d2;
+                    if (!csatData || csatData.length === 0) {
                         try {
                             const csatModule = await import('@/data/upsc_pyq/csat/2020_csat.json');
-                            combined = [...combined, ...(csatModule.default || csatModule)];
+                            csatData = [...(csatModule.default || csatModule)];
                         } catch (e) {}
                     }
-                    const shuffled = combined.sort(() => Math.random() - 0.5);
-                    selectedRawQuestions = shuffled.slice(0, Math.min(config.question_count || 25, shuffled.length));
+                    const processedCsat = (csatData || []).map(processCsatQuestion);
+                    const groupedCsat = assignQuestionGroups(processedCsat);
+                    let combined = [...(d1 || []), ...groupedCsat];
+                    selectedRawQuestions = groupPreservingShuffle(combined);
+                    if (config.question_count && config.question_count < selectedRawQuestions.length) {
+                        selectedRawQuestions = safeSliceQuestions(selectedRawQuestions, config.question_count);
+                    }
                 }
             } else if (config.exam_id === 'ksp-pc') {
                 let query = supabase.from('pc_pyq').select('*');
@@ -262,6 +362,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     if (config.question_count && config.question_count < sortedQuestions.length) {
                         sortedQuestions = safeSliceQuestions(sortedQuestions, config.question_count);
                     }
+                } else if (config.exam_id === 'upsc-cse' && config.paper === 2) {
+                    // CSAT: preserve the groupPreservingShuffle and sorted order
+                    sortedQuestions = selectedRawQuestions;
                 } else if (config.exam_id === 'kpsc-kas') {
                     sortedQuestions.sort((a, b) => {
                         const numA = parseInt(a.id.match(/-q(\d+)$/)?.[1] || '0', 10);
@@ -332,6 +435,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             explanation: dbq.explanation_english || 'No explanation available.',
                             explanation_hi: dbq.explanation_hindi || undefined,
                             image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
+                            passage: dbq.passage_english?.trim() || undefined,
+                            passage_hi: dbq.passage_hindi?.trim() || undefined,
+                            group_id: dbq.group_id || undefined,
+                            group_label: dbq.group_label || undefined,
                             subject_kannada: dbq.subject_kannada || undefined,
                             sub_topic_kannada: dbq.sub_topic_kannada || undefined
                         };
@@ -582,7 +689,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         </div>
 
                         {/* Common Passage / Directions Card */}
-                        {(question.passage || question.passage_kn) && (
+                        {(question.passage || question.passage_kn || question.passage_hi) && (
                             <PassageCard
                                 passage={question.passage}
                                 passage_kn={question.passage_kn}

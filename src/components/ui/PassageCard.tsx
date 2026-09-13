@@ -32,10 +32,17 @@ export default function PassageCard({
     if (!text) return null;
 
     const isKannada = activeLang === 'kn' && !!passage_kn;
-    const title = isKannada ? 'ನಿರ್ದೇಶನಗಳು / ಸಂದರ್ಭ' : 'Directions / Context';
+    const isHindi = activeLang === 'hi' && !!passage_hi;
+    const title = isKannada 
+        ? 'ನಿರ್ದೇಶನಗಳು / ಸಂದರ್ಭ' 
+        : isHindi 
+            ? 'निर्देश / संदर्भ' 
+            : 'Directions / Context';
     const groupBadgeText = isKannada && group_label 
         ? group_label.replace('Linked Questions', 'ಸಂಬಂಧಿತ ಪ್ರಶ್ನೆಗಳು') 
-        : group_label;
+        : isHindi && group_label
+            ? group_label.replace('Linked Questions', 'संबद्ध प्रश्न')
+            : group_label;
 
     return (
         <div
