@@ -7,7 +7,86 @@ import { Clock, Flag, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
 import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
+import PassageCard from '@/components/ui/PassageCard';
 import { isValidImageUrl } from '@/lib/imageUtils';
+
+// Helper functions for question grouping and shuffle preservation
+function assignQuestionGroups(rawQuestions: any[]): any[] {
+    const passageMap = new Map<string, { groupId: string; count: number; firstQNum: number }>();
+
+    for (const q of rawQuestions) {
+        const passage = (q.passage_english || q.passage_kannada || '').trim();
+        if (passage.length > 10) {
+            const key = `${q.paper_code || 'car'}_${passage.slice(0, 80)}`;
+            if (!passageMap.has(key)) {
+                passageMap.set(key, {
+                    groupId: `grp_${q.paper_code || 'car'}_${q.question_number || Math.random().toString(36).substring(2, 6)}`,
+                    count: 0,
+                    firstQNum: q.question_number || 0
+                });
+            }
+            passageMap.get(key)!.count++;
+        }
+    }
+
+    return rawQuestions.map((q) => {
+        const passage = (q.passage_english || q.passage_kannada || '').trim();
+        if (passage.length > 10) {
+            const key = `${q.paper_code || 'car'}_${passage.slice(0, 80)}`;
+            const grp = passageMap.get(key);
+            if (grp && grp.count > 1) {
+                return {
+                    ...q,
+                    group_id: grp.groupId,
+                    group_label: `Linked Questions (${grp.count} Qs)`
+                };
+            }
+        }
+        return q;
+    });
+}
+
+function groupPreservingShuffle(questions: any[]): any[] {
+    const blocks: any[][] = [];
+    const groupMap = new Map<string, any[]>();
+
+    for (const q of questions) {
+        if (q.group_id) {
+            if (!groupMap.has(q.group_id)) {
+                const block: any[] = [];
+                groupMap.set(q.group_id, block);
+                blocks.push(block);
+            }
+            groupMap.get(q.group_id)!.push(q);
+        } else {
+            blocks.push([q]);
+        }
+    }
+
+    for (const block of blocks) {
+        if (block.length > 1) {
+            block.sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
+        }
+    }
+
+    const shuffledBlocks = [...blocks].sort(() => Math.random() - 0.5);
+    return shuffledBlocks.flat();
+}
+
+function safeSliceQuestions(questions: any[], maxCount: number): any[] {
+    if (!maxCount || questions.length <= maxCount) return questions;
+
+    let sliced = questions.slice(0, maxCount);
+    const lastQ = sliced[sliced.length - 1];
+
+    if (lastQ?.group_id) {
+        const remainingInGroup = questions.slice(maxCount).filter((q) => q.group_id === lastQ.group_id);
+        if (remainingInGroup.length > 0) {
+            sliced = [...sliced, ...remainingInGroup];
+        }
+    }
+    return sliced;
+}
 
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
@@ -172,13 +251,16 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             if (selectedRawQuestions.length > 0) {
                 let sortedQuestions = [...selectedRawQuestions];
                 if (config.exam_id === 'ksp-pc') {
+                    // Group linked questions sharing common passages
+                    selectedRawQuestions = assignQuestionGroups(selectedRawQuestions);
+
                     if (config.mode === 'yearwise' || (config.paper_code && config.paper_code !== 'all')) {
-                        sortedQuestions.sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
+                        sortedQuestions = [...selectedRawQuestions].sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
                     } else {
-                        sortedQuestions = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
+                        sortedQuestions = groupPreservingShuffle(selectedRawQuestions);
                     }
                     if (config.question_count && config.question_count < sortedQuestions.length) {
-                        sortedQuestions = sortedQuestions.slice(0, config.question_count);
+                        sortedQuestions = safeSliceQuestions(sortedQuestions, config.question_count);
                     }
                 } else if (config.exam_id === 'kpsc-kas') {
                     sortedQuestions.sort((a, b) => {
@@ -222,6 +304,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             explanation: dbq.explanation_english || 'No explanation available.',
                             explanation_kn: dbq.explanation_kannada || undefined,
                             image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
+                            passage: dbq.passage_english?.trim() || undefined,
+                            passage_kn: dbq.passage_kannada?.trim() || undefined,
+                            group_id: dbq.group_id || undefined,
+                            group_label: dbq.group_label || undefined,
                             subject_kannada: dbq.subject_kannada || undefined,
                             sub_topic_kannada: dbq.sub_topic_kannada || undefined
                         };
@@ -494,6 +580,18 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             <span className="tag chip-sky">{lang === 'kn' && question.subject_kannada ? question.subject_kannada : question.subject}</span>
                             <span className={`tag badge-${question.difficulty}`}>{question.difficulty}</span>
                         </div>
+
+                        {/* Common Passage / Directions Card */}
+                        {(question.passage || question.passage_kn) && (
+                            <PassageCard
+                                passage={question.passage}
+                                passage_kn={question.passage_kn}
+                                passage_hi={question.passage_hi}
+                                group_label={question.group_label}
+                                activeLang={lang}
+                            />
+                        )}
+
                         <div style={{ fontWeight: 600, marginBottom: '24px' }}>
                             <QuestionFormatter text={qText} />
                             {isValidImageUrl(question.image_url) && (
@@ -556,7 +654,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                                     padding: '8px 14px', fontSize: '13px', fontWeight: 600,
                                     background: currentAnswer?.marked_for_review ? 'var(--accent-peach)' : 'var(--bg-secondary)',
                                     color: 'var(--text-primary)', border: 'none',
-                                }}>
+                                    }}>
                                     <Flag size={13} /> {currentAnswer?.marked_for_review ? 'Marked' : 'Mark'}
                                 </button>
                                 {currentIdx === questions.length - 1 && (
@@ -576,13 +674,32 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                                     fontWeight: 700, fontSize: '11px', transition: 'all 0.15s',
                                     background: i === currentIdx ? 'var(--brand-orange)' : getNavBg(q),
                                     color: i === currentIdx ? 'white' : 'var(--text-primary)',
-                                }}>{i + 1}</button>
+                                    position: 'relative'
+                                }}>
+                                    {i + 1}
+                                    {q.group_id && (
+                                        <span
+                                            style={{
+                                                position: 'absolute',
+                                                bottom: '2px',
+                                                left: '50%',
+                                                transform: 'translateX(-50%)',
+                                                width: '12px',
+                                                height: '2.5px',
+                                                borderRadius: '2px',
+                                                background: i === currentIdx ? 'white' : 'var(--brand-orange)'
+                                            }}
+                                            title={q.group_label || 'Linked question'}
+                                        />
+                                    )}
+                                </button>
                             ))}
                         </div>
                         <div style={{ marginTop: '16px', fontSize: '11px', display: 'flex', flexDirection: 'column', gap: '6px', color: 'var(--text-muted)' }}>
                             <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 10, height: 10, borderRadius: '4px', background: 'var(--accent-sage)' }} /> Answered</div>
                             <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 10, height: 10, borderRadius: '4px', background: 'var(--accent-peach)' }} /> Marked</div>
                             <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 10, height: 10, borderRadius: '4px', background: 'var(--bg-secondary)' }} /> Not visited</div>
+                            <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 12, height: 3, borderRadius: '2px', background: 'var(--brand-orange)' }} /> Linked Passage</div>
                         </div>
                         <button onClick={handleSubmit} className="btn btn-primary" style={{ width: '100%', marginTop: '16px', padding: '10px' }}>
                             Submit Test

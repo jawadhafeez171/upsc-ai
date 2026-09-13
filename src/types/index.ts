@@ -24,6 +24,11 @@ export interface Question {
     explanation_kn?: string;
     explanation_hi?: string;
     image_url?: string;
+    passage?: string;
+    passage_kn?: string;
+    passage_hi?: string;
+    group_id?: string;
+    group_label?: string;
     subject_kannada?: string;
     sub_topic_kannada?: string;
 }
