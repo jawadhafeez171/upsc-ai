@@ -718,34 +718,48 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             )}
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                            {question.options.map((opt) => {
+                        {(() => {
+                            const isShortOptions = (question.options?.length || 0) <= 4 && question.options?.every((opt) => {
                                 const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
-                                const isSelected = currentAnswer?.selected === opt.id;
-                                return (
-                                    <button key={opt.id} onClick={() => selectOption(opt.id)} style={{
-                                        display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px',
-                                        borderRadius: '14px', cursor: 'pointer', textAlign: 'left', width: '100%',
-                                        border: isSelected ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
-                                        background: isSelected ? 'rgba(37, 99, 235, 0.12)' : 'var(--bg-card-solid)',
-                                        color: 'var(--text-primary)', transition: 'all 0.2s ease',
-                                        boxShadow: isSelected ? '0 4px 16px rgba(37,99,235,0.2)' : '0 2px 8px rgba(0,0,0,0.04)',
-                                    }}>
-                                        <div style={{
-                                            width: 34, height: 34, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                            fontSize: '14px', fontWeight: 800, flexShrink: 0,
-                                            background: isSelected ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
-                                            color: isSelected ? 'white' : 'var(--text-primary)',
-                                            border: isSelected ? 'none' : '1px solid var(--border)',
-                                            boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                                        }}>{opt.id.toUpperCase()}</div>
-                                        <div style={{ flexGrow: 1, lineHeight: 1.6 }}>
-                                            <OptionFormatter text={optText} />
-                                        </div>
-                                    </button>
-                                );
-                            })}
-                        </div>
+                                return (optText?.trim().length || 0) <= 36 && !optText?.includes('\n');
+                            });
+
+                            return (
+                                <div style={{
+                                    display: isShortOptions ? 'grid' : 'flex',
+                                    gridTemplateColumns: isShortOptions ? 'repeat(auto-fit, minmax(280px, 1fr))' : undefined,
+                                    flexDirection: isShortOptions ? undefined : 'column',
+                                    gap: '12px'
+                                }}>
+                                    {question.options.map((opt) => {
+                                        const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
+                                        const isSelected = currentAnswer?.selected === opt.id;
+                                        return (
+                                            <button key={opt.id} onClick={() => selectOption(opt.id)} style={{
+                                                display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px',
+                                                borderRadius: '14px', cursor: 'pointer', textAlign: 'left', width: '100%',
+                                                border: isSelected ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
+                                                background: isSelected ? 'rgba(37, 99, 235, 0.12)' : 'var(--bg-card-solid)',
+                                                color: 'var(--text-primary)', transition: 'all 0.2s ease',
+                                                boxShadow: isSelected ? '0 4px 16px rgba(37,99,235,0.2)' : '0 2px 8px rgba(0,0,0,0.04)',
+                                            }}>
+                                                <div style={{
+                                                    width: 34, height: 34, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                    fontSize: '14px', fontWeight: 800, flexShrink: 0,
+                                                    background: isSelected ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
+                                                    color: isSelected ? 'white' : 'var(--text-primary)',
+                                                    border: isSelected ? 'none' : '1px solid var(--border)',
+                                                    boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
+                                                }}>{opt.id.toUpperCase()}</div>
+                                                <div style={{ flexGrow: 1, lineHeight: 1.6 }}>
+                                                    <OptionFormatter text={optText} />
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            );
+                        })()}
 
                         <div className="test-controls" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '24px', gap: '8px', flexWrap: 'wrap' }}>
                             <div style={{ display: 'flex', gap: '6px' }}>

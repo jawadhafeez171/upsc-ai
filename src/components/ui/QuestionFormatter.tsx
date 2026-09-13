@@ -27,6 +27,44 @@ const renderKaTeXHtml = (expr: string, displayMode: boolean = false): string => 
     }
 };
 
+const NEGATIVE_KEYWORDS_REGEX = /\b(NOT correct|not correct|incorrectly|incorrect|not true|not valid|neither|except)\b|(ಸರಿಯಲ್ಲ|ತಪ್ಪಾಗಿದೆ|ತಪ್ಪು|ಸರಿಯಲ್ಲದ)|(सही नहीं|गलत|अवैध|असंगत)/gi;
+
+function renderHighlightedModifiers(str: string): React.ReactNode {
+    if (!str || typeof str !== 'string') return str;
+    const matches = str.match(NEGATIVE_KEYWORDS_REGEX);
+    if (!matches) return str;
+
+    const parts = str.split(NEGATIVE_KEYWORDS_REGEX).filter(Boolean);
+    return (
+        <>
+            {parts.map((token, i) => {
+                const isNegative = /^(NOT correct|not correct|incorrectly|incorrect|not true|not valid|neither|except|ಸರಿಯಲ್ಲ|ತಪ್ಪಾಗಿದೆ|ತಪ್ಪು|ಸರಿಯಲ್ಲದ|सही नहीं|गलत|अवैध|असंगत)$/i.test(token.trim());
+                if (isNegative) {
+                    return (
+                        <mark
+                            key={i}
+                            style={{
+                                background: 'rgba(225, 29, 72, 0.14)',
+                                color: '#E11D48',
+                                border: '1px solid rgba(225, 29, 72, 0.3)',
+                                borderRadius: '5px',
+                                padding: '1px 6px',
+                                fontWeight: 800,
+                                letterSpacing: '0.02em',
+                                display: 'inline-block',
+                                margin: '0 2px'
+                            }}
+                        >
+                            {token}
+                        </mark>
+                    );
+                }
+                return <span key={i}>{token}</span>;
+            })}
+        </>
+    );
+}
+
 // Utility to clean replacement characters, garbled unicode, and parse bolding & LaTeX
 export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
     if (!lineText) return '';
@@ -103,7 +141,7 @@ export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
                     );
                 }
 
-                return <span key={index}>{part}</span>;
+                return <span key={index}>{renderHighlightedModifiers(part)}</span>;
             })}
         </>
     );
@@ -433,31 +471,143 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
             const trimmed = line.trim();
             if (trimmed !== '') {
                 const isBullet = /^[•*-]\s/.test(trimmed);
-                const isStatementLabel = /^(S[1-4]|Statement\s*[-I|V|X0-9]*|Conclusion\s*[-I|V|X0-9]*|Question|Statements|Conclusions):/i.test(trimmed);
-                const isListItem = /^[A-D]\.\s/.test(trimmed) || 
-                                   /^[0-9]+\.\s/.test(trimmed) || 
-                                   /^(IX|IV|V?I{1,3})\.\s/i.test(trimmed) ||
-                                   /^(Assertion\s*\(A\)|Reason\s*\(R\)|Statement\s*[-I|V|X0-9]+):/i.test(trimmed) ||
-                                   /^S[1-4]:/i.test(trimmed);
-                
-                const isPrompt = /^(Which of the statements?|Which of the pairs?|Which of the above|Which one of the|What are the|What is the|How many of the|In which of the|Select the correct|Choose the correct|उपर्युक्त|निम्नलिखित|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ|ಮೇಲಿನವುಗಳಲ್ಲಿ)/i.test(trimmed);
-
                 let contentText = line;
                 if (isBullet) {
                     contentText = line.replace(/^\s*[•*-]\s/, '');
                 }
 
+                // 1. Assertion & Reason questions
+                const arMatch = trimmed.match(/^(Assertion\s*\([A-Z]\)|Reason\s*\([A-Z]\)|ಪ್ರತಿಪಾದನೆ\s*\([A-Z]\)|ಕಾರಣ\s*\([A-Z]\)|अभिकथन\s*\([A-Z]\)|कारण\s*\([A-Z]\)):\s*(.*)/i);
+                if (arMatch) {
+                    const rawLabel = arMatch[1];
+                    const arBody = arMatch[2];
+                    const isAssertion = /Assertion|ಪ್ರತಿಪಾದನೆ|अभिकथन/i.test(rawLabel);
+                    const borderColor = isAssertion ? '#2563EB' : '#F59E0B';
+                    const bgBadge = isAssertion ? 'rgba(37, 99, 235, 0.12)' : 'rgba(245, 158, 11, 0.12)';
+                    const textBadge = isAssertion ? '#2563EB' : '#D97706';
+
+                    elements.push(
+                        <div
+                            key={`ar-${idx}`}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                                gap: '12px',
+                                padding: '12px 16px',
+                                margin: '8px 0',
+                                borderRadius: '10px',
+                                background: 'var(--bg-secondary)',
+                                border: '1px solid var(--border)',
+                                borderLeft: `4px solid ${borderColor}`,
+                                boxShadow: 'var(--shadow-sm)'
+                            }}
+                        >
+                            <span
+                                style={{
+                                    padding: '2px 8px',
+                                    borderRadius: '6px',
+                                    fontSize: '11px',
+                                    fontWeight: 800,
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.04em',
+                                    background: bgBadge,
+                                    color: textBadge,
+                                    flexShrink: 0,
+                                    marginTop: '2px'
+                                }}
+                            >
+                                {rawLabel}
+                            </span>
+                            <div style={{ flex: 1, fontSize: '14.5px', lineHeight: 1.6, color: 'var(--text-primary)', fontWeight: 500 }}>
+                                {parseTextWithFormatting(arBody)}
+                            </div>
+                        </div>
+                    );
+                    return;
+                }
+
+                // 2. Interrogative Action / Closing Prompt
+                const isPrompt = /^(Which of the statements?|Which of the pairs?|Which of the above|Which one of the|What are the|What is the|How many of the|In which of the|Select the correct|Choose the correct|Find out the|Identify the|उपर्युक्त|निम्नलिखित|ಮೇಲಿನ ಹೇಳಿಕೆಗಳಲ್ಲಿ|ಮೇಲಿನವುಗಳಲ್ಲಿ)/i.test(trimmed);
+                if (isPrompt) {
+                    elements.push(
+                        <div
+                            key={`prompt-${idx}`}
+                            style={{
+                                marginTop: '16px',
+                                marginBottom: '10px',
+                                paddingTop: '12px',
+                                borderTop: '1px dashed var(--border)',
+                                fontSize: '15px',
+                                fontWeight: 700,
+                                lineHeight: 1.6,
+                                color: 'var(--text-primary)'
+                            }}
+                        >
+                            {parseTextWithFormatting(trimmed)}
+                        </div>
+                    );
+                    return;
+                }
+
+                // 3. Numbered Statement Item
+                const stmtMatch = trimmed.match(/^(?:([0-9]+)\.\s+|(?:\(([0-9]+|[a-zA-Z]|(?:ix|iv|v?i{1,3}))\))\s+|([A-D])\.\s+|((?:IX|IV|V?I{1,3}))\.\s+|(S[1-9]|Statement\s*[-I|V|X0-9]+|Conclusion\s*[-I|V|X0-9]+):\s*)(.*)/i);
+                if (stmtMatch) {
+                    const badge = stmtMatch[1] || stmtMatch[2] || stmtMatch[3] || stmtMatch[4] || stmtMatch[5];
+                    const stmtBody = stmtMatch[6];
+                    elements.push(
+                        <div
+                            key={`stmt-${idx}`}
+                            style={{
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                                gap: '12px',
+                                padding: '9px 14px',
+                                margin: '6px 0',
+                                borderRadius: '10px',
+                                background: 'var(--bg-secondary)',
+                                border: '1px solid var(--border)',
+                                boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
+                                transition: 'all 0.15s ease'
+                            }}
+                        >
+                            <div
+                                style={{
+                                    minWidth: '24px',
+                                    height: '24px',
+                                    padding: '0 6px',
+                                    borderRadius: '6px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    fontSize: '11.5px',
+                                    fontWeight: 800,
+                                    background: 'var(--bg-tertiary)',
+                                    color: 'var(--text-primary)',
+                                    border: '1px solid var(--border)',
+                                    flexShrink: 0,
+                                    marginTop: '1px'
+                                }}
+                            >
+                                {badge}
+                            </div>
+                            <div style={{ flex: 1, fontSize: '14.5px', lineHeight: 1.6, color: 'var(--text-secondary)' }}>
+                                {parseTextWithFormatting(stmtBody)}
+                            </div>
+                        </div>
+                    );
+                    return;
+                }
+
+                // 4. Default Premise / Paragraph Line
                 elements.push(
                     <p 
                         key={`line-${idx}`} 
                         style={{ 
-                            margin: isPrompt ? '14px 0 6px 0' : isStatementLabel ? '6px 0 6px 0' : '0 0 10px 0',
-                            paddingLeft: isListItem && !isStatementLabel ? '22px' : '0',
-                            textIndent: isListItem && !isStatementLabel ? '-22px' : '0',
+                            margin: '0 0 10px 0',
                             lineHeight: 1.65,
-                            color: isPrompt ? 'var(--text-primary)' : isStatementLabel ? 'var(--text-primary)' : isListItem ? 'var(--text-secondary)' : 'var(--text-primary)',
+                            color: 'var(--text-primary)',
                             fontSize: '15px',
-                            fontWeight: isPrompt ? 700 : isStatementLabel ? 600 : isListItem ? 500 : 500
+                            fontWeight: 500
                         }}
                     >
                         {isBullet ? <span style={{ marginRight: '8px', color: 'var(--brand-orange)', fontWeight: 'bold' }}>•</span> : null}
@@ -465,7 +615,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                     </p>
                 );
             } else {
-                elements.push(<div key={`space-${idx}`} style={{ height: '8px' }} />);
+                elements.push(<div key={`space-${idx}`} style={{ height: '6px' }} />);
             }
         }
     });

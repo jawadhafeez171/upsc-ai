@@ -226,49 +226,64 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
 
                                     {isOpen && (
                                         <div style={{ padding: '0 14px 14px 38px' }}>
-                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '14px' }}>
-                                                {q.options.map((opt) => {
+                                            {(() => {
+                                                const isShortOptions = (q.options?.length || 0) <= 4 && q.options?.every((opt) => {
                                                     const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
-                                                    const isCorrectOpt = opt.id === q.correct;
-                                                    const isSelectedOpt = opt.id === a?.selected;
-                                                    let bg = 'var(--bg-card-solid)';
-                                                    let border = '1px solid var(--border)';
-                                                    let badgeBg = 'var(--bg-tertiary)';
-                                                    let badgeCol = 'var(--text-primary)';
+                                                    return (optText?.trim().length || 0) <= 36 && !optText?.includes('\n');
+                                                });
 
-                                                    if (isCorrectOpt) {
-                                                        bg = 'rgba(16, 185, 129, 0.12)';
-                                                        border = '1px solid #10B981';
-                                                        badgeBg = '#10B981';
-                                                        badgeCol = 'white';
-                                                    } else if (isSelectedOpt) {
-                                                        bg = 'rgba(225, 29, 72, 0.12)';
-                                                        border = '1px solid #E11D48';
-                                                        badgeBg = '#E11D48';
-                                                        badgeCol = 'white';
-                                                    }
+                                                return (
+                                                    <div style={{
+                                                        display: isShortOptions ? 'grid' : 'flex',
+                                                        gridTemplateColumns: isShortOptions ? 'repeat(auto-fit, minmax(280px, 1fr))' : undefined,
+                                                        flexDirection: isShortOptions ? undefined : 'column',
+                                                        gap: '8px',
+                                                        marginBottom: '14px'
+                                                    }}>
+                                                        {q.options.map((opt) => {
+                                                            const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
+                                                            const isCorrectOpt = opt.id === q.correct;
+                                                            const isSelectedOpt = opt.id === a?.selected;
+                                                            let bg = 'var(--bg-card-solid)';
+                                                            let border = '1px solid var(--border)';
+                                                            let badgeBg = 'var(--bg-tertiary)';
+                                                            let badgeCol = 'var(--text-primary)';
 
-                                                    return (
-                                                        <div key={opt.id} style={{
-                                                            padding: '12px 16px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '12px',
-                                                            background: bg, border: border, transition: 'all 0.15s'
-                                                        }}>
-                                                            <div style={{
-                                                                width: 30, height: 30, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                                fontSize: '13px', fontWeight: 800, flexShrink: 0,
-                                                                background: badgeBg, color: badgeCol, border: isCorrectOpt || isSelectedOpt ? 'none' : '1px solid var(--border)'
-                                                            }}>
-                                                                {opt.id.toUpperCase()}
-                                                            </div>
-                                                            <div style={{ flex: 1 }}>
-                                                                <OptionFormatter text={optText} />
-                                                            </div>
-                                                            {isCorrectOpt && <span style={{ fontSize: '16px' }}>✅</span>}
-                                                            {isSelectedOpt && !isCorrectOpt && <span style={{ fontSize: '16px' }}>❌</span>}
-                                                        </div>
-                                                    );
-                                                })}
-                                            </div>
+                                                            if (isCorrectOpt) {
+                                                                bg = 'rgba(16, 185, 129, 0.12)';
+                                                                border = '1px solid #10B981';
+                                                                badgeBg = '#10B981';
+                                                                badgeCol = 'white';
+                                                            } else if (isSelectedOpt) {
+                                                                bg = 'rgba(225, 29, 72, 0.12)';
+                                                                border = '1px solid #E11D48';
+                                                                badgeBg = '#E11D48';
+                                                                badgeCol = 'white';
+                                                            }
+
+                                                            return (
+                                                                <div key={opt.id} style={{
+                                                                    padding: '12px 16px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '12px',
+                                                                    background: bg, border: border, transition: 'all 0.15s'
+                                                                }}>
+                                                                    <div style={{
+                                                                        width: 30, height: 30, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                                        fontSize: '13px', fontWeight: 800, flexShrink: 0,
+                                                                        background: badgeBg, color: badgeCol, border: isCorrectOpt || isSelectedOpt ? 'none' : '1px solid var(--border)'
+                                                                    }}>
+                                                                        {opt.id.toUpperCase()}
+                                                                    </div>
+                                                                    <div style={{ flex: 1 }}>
+                                                                        <OptionFormatter text={optText} />
+                                                                    </div>
+                                                                    {isCorrectOpt && <span style={{ fontSize: '16px' }}>✅</span>}
+                                                                    {isSelectedOpt && !isCorrectOpt && <span style={{ fontSize: '16px' }}>❌</span>}
+                                                                </div>
+                                                            );
+                                                        })}
+                                                    </div>
+                                                );
+                                            })()}
                                             <div style={{ background: 'var(--bg-card)', borderRadius: '12px', padding: '16px', border: '1px solid var(--border)', boxShadow: 'var(--shadow-sm)' }}>
                                                 <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>💡 Explanation</div>
                                                 <div>
