@@ -1,0 +1,33 @@
+{
+  "total_files_scanned": 27,
+  "total_files_updated": 17,
+  "total_questions_migrated": 76,
+  "by_file": {
+    "2019.json": 2,
+    "2020.json": 1,
+    "2021.json": 5,
+    "2022.json": 8,
+    "2023.json": 7,
+    "2024.json": 8,
+    "2025.json": 6,
+    "kas_april_p1_2015.json": 5,
+    "kas_april_p2_2015.json": 3,
+    "kas_aug_p1_2017.json": 1,
+    "kas_aug_p1_2024.json": 7,
+    "kas_aug_p2_2024.json": 1,
+    "kas_dec_p1_2011.json": 4,
+    "kas_dec_p1_2024.json": 10,
+    "kas_dec_p2_2011.json": 3,
+    "kas_dec_p2_2024.json": 3,
+    "kas_p1_2020.json": 2
+  },
+  "by_category": {
+    "Seas, Straits & Water Bodies": 13,
+    "Protected Areas & Biogeography": 4,
+    "Rivers & Drainage": 16,
+    "Mountains, Passes & Plateaus": 7,
+    "Places in News & Conflict Zones": 17,
+    "Minerals, Ports & Infrastructure": 5,
+    "International Borders & Boundaries": 7
+  }
+}

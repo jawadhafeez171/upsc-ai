@@ -1,0 +1,681 @@
+{
+  "total_geo": 242,
+  "total_mapping": 75,
+  "questions": [
+    {
+      "file": "2019.json",
+      "q_num": 32,
+      "node_id": "science_technology_defence.space_technology_satellite_missions.earth_observation_remote_sensing_satellites",
+      "subject": "Science, Technology & Defence",
+      "domain": "Space Technology & Satellite Applications",
+      "sub_topic": "Earth Observation & Remote Sensing Applications: Vegetation Chlorophyll, GHGs & Land Surface Temp",
+      "question_en": "For the measurement/estimation of which of the following are satellite images/remote sensing data used?\n1. Chlorophyll c"
+    },
+    {
+      "file": "2019.json",
+      "q_num": 36,
+      "node_id": "geography_earth_systems.world_physical_regional_geography.major_seas_gulfs_straits_oceanic_features",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Physical & Regional Geography",
+      "sub_topic": "Marginal Seas & Bordering Countries: Adriatic, Black, Caspian, Mediterranean & Red Seas",
+      "question_en": "Consider the following pairs:\nSea Bordering country\n1. Adriatic Sea : Albania\n2. Black Sea : Croatia\n3. Caspian Sea : Ka"
+    },
+    {
+      "file": "2020.json",
+      "q_num": 73,
+      "node_id": "geography_earth_systems.indian_geography.cauvery_basin_protected_areas",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Drainage Basins & Protected Area Mapping",
+      "sub_topic": "Cauvery River Basin & Overlapping National Parks and Wildlife Sanctuaries",
+      "question_en": "Which of the following Protected Areas are located in Cauvery basin?\n1. Nagarhole National Park\n2. Papikonda National Pa"
+    },
+    {
+      "file": "2021.json",
+      "q_num": 49,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "subject": "Art, Culture & Heritage",
+      "domain": "Indian Architecture & Rock-Cut Monuments",
+      "sub_topic": "Ajanta Caves Location on Waghora River Gorge",
+      "question_en": "Which one of the following statements is correct?"
+    },
+    {
+      "file": "2021.json",
+      "q_num": 53,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Indus River Basin & Confluence of Tributaries (Sutlej)",
+      "question_en": "With reference to the Indus river system, of the following four rivers, three of them pour into one of them which joins "
+    },
+    {
+      "file": "2021.json",
+      "q_num": 54,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Saline Lakes of Rajasthan (Didwana, Kuchaman, Sargol, Khatu)",
+      "question_en": "With reference to India, Didwana, Kuchaman, Sargol and Khatu are the names of"
+    },
+    {
+      "file": "2021.json",
+      "q_num": 55,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Eastern Ghats Originating Rivers (Nagavali & Vamsadhara)",
+      "question_en": "Consider the following rivers :\n1. Brahmani\n2. Nagavali\n3. Subarnarekha\n4. Vamsadhara\nWhich of the above rise from the E"
+    },
+    {
+      "file": "2021.json",
+      "q_num": 56,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+      "subject": "Geography & Earth Systems",
+      "domain": "Oceanography & Law of the Sea",
+      "sub_topic": "International Seabed Authority (ISA) & Polymetallic Nodules",
+      "question_en": "Consider the following statements :\n1. The Global Ocean Commission grants licences for seabed exploration and mining in "
+    },
+    {
+      "file": "2022.json",
+      "q_num": 21,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "subject": "Environment, Ecology & Disaster Management",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Agricultural Greenhouse Gas Emissions (Paddy Cultivation, Methanogenesis & Nitrous Oxide)",
+      "question_en": "Among the following crops, which one is the most important anthropogenic source of both methane and nitrous oxide ?"
+    },
+    {
+      "file": "2022.json",
+      "q_num": 22,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.himalayan_mountain_ranges_passes_glaciers",
+      "subject": "Indian Economy & Development",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "System of Rice Intensification (SRI) - Alternate Wetting & Drying, Seed & Water Conservation",
+      "question_en": "\"System of Rice Intensification\" of cultivation, in which alternate wetting and drying of rice fields is practised, resu"
+    },
+    {
+      "file": "2022.json",
+      "q_num": 23,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Lake Faguibine (Mali, West Africa) - Sahel Desiccation & Desertification",
+      "question_en": "Which one of the following lakes of West Africa has become dry and turned into a desert ?"
+    },
+    {
+      "file": "2022.json",
+      "q_num": 24,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Fluvial Canyon Formations - Gandikota Gorge & Pennar River (Andhra Pradesh)",
+      "question_en": "Gandikota canyon of South India was created by which one of the following rivers ?"
+    },
+    {
+      "file": "2022.json",
+      "q_num": 28,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Monazite Placer Deposits, Rare Earth Elements & Atomic Energy Act Regulatory Framework",
+      "question_en": "With reference to India, consider the following statements :\n1. Monazite is a source of rare earths.\n2. Monazite contain"
+    },
+    {
+      "file": "2022.json",
+      "q_num": 81,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Cloud Radiative Forcing - High Cirrus (Warming) vs Low Stratocumulus (Cooling Albedo)",
+      "question_en": "Consider the following statements :\n1. High clouds primarily reflect solar radiation and cool the surface of the Earth.\n"
+    },
+    {
+      "file": "2022.json",
+      "q_num": 91,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Art, Culture & Heritage",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Ashokan Major Rock Edicts - Geographical Sites (Dhauli, Erragudi, Jaugada, Kalsi)",
+      "question_en": "Consider the following pairs :\nSite of Ashoka's major rock edicts          Location in the State of\n1. Dhauli          -"
+    },
+    {
+      "file": "2022.json",
+      "q_num": 98,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Science, Technology & Defence",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Nanoparticles in Nature, Cosmetics (Titanium Dioxide, Zinc Oxide) & Nanotoxicity Concerns",
+      "question_en": "Consider the following statements :\n1. Other than those made by humans, nanoparticles do not exist in nature.\n2. Nanopar"
+    },
+    {
+      "file": "2023.json",
+      "q_num": 5,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Marine Geomorphology & Emergence: Genesis of the Rann of Kutch",
+      "question_en": "Which one of the following is the best example of repeated falls in sea level, giving rise to present-day extensive mars"
+    },
+    {
+      "file": "2023.json",
+      "q_num": 8,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Congo River Basin: Watershed Geography & Riparian Nations",
+      "question_en": "Which one of the following is a part of the Congo Basin?"
+    },
+    {
+      "file": "2023.json",
+      "q_num": 10,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.infrastructure_ports_transport_corridors",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Major Road Corridors: Golden Quadrilateral, Trilateral Highway & BCIM",
+      "question_en": "With reference to India's projects on connectivity, consider the following statements :\n1. East-West Corridor under Gold"
+    },
+    {
+      "file": "2023.json",
+      "q_num": 61,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Geopolitics of Eastern Europe: Bordering Nations of Ukraine",
+      "question_en": "Consider the following countries :\n1. Bulgaria\n2. Czech Republic\n3. Hungary\n4. Latvia\n5. Lithuania\n6. Romania\nHow many o"
+    },
+    {
+      "file": "2023.json",
+      "q_num": 93,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "International Relations & Global Institutions",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Global Conflict Zones: North Kivu (DRC), Nagorno-Karabakh & Ukraine Oblasts",
+      "question_en": "Consider the following pairs :\nRegions often mentioned in news Country where it is located\n1. North Kivu and Ituri : Syr"
+    },
+    {
+      "file": "2023.json",
+      "q_num": 97,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "International Relations & Global Institutions",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Regional Conflict Hotspots: Donbas (Ukraine), Kachin (Myanmar) & Tigray (Ethiopia)",
+      "question_en": "Consider the following pairs :\nArea of conflict mentioned in news : Country where it is located\n1. Donbas : Syria\n2. Kac"
+    },
+    {
+      "file": "2023.json",
+      "q_num": 98,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "International Relations & Global Institutions",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "The Sahel Coup Belt: Military Takeovers in Mali, Guinea, Chad, Sudan & Burkina Faso",
+      "question_en": "In the recent years Chad, Guinea, Mali and Sudan caught the international attention for which one of the following reaso"
+    },
+    {
+      "file": "2024.json",
+      "q_num": 6,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Ganga River Drainage System & Tributaries",
+      "question_en": "With reference to the Himalayan rivers joining the Ganga downstream of Prayagraj from West to East, which one of the fol"
+    },
+    {
+      "file": "2024.json",
+      "q_num": 8,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "European Marginal Seas & Bordering Nations (North Sea)",
+      "question_en": "Consider the following countries :\n1. Finland\n2. Germany\n3. Norway\n4. Russia\nHow many of the above countries have a bord"
+    },
+    {
+      "file": "2024.json",
+      "q_num": 9,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.river_systems_tributaries_spatial_ordering",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Physiographic Features & Waterfalls of India",
+      "question_en": "Consider the following information :\n1. Dhuandhar | Malwa | Narmada\n2. Hundru | Chota Nagpur | Subarnarekha\n3. Gersoppa "
+    },
+    {
+      "file": "2024.json",
+      "q_num": 10,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.mountain_ranges_peaks_plateaus_world",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Types of Mountains & Global Orogenic Belts",
+      "question_en": "Consider the following information :\n1. Central Asia | Vosges | Fold mountain\n2. Europe | Alps | Block mountain\n3. North"
+    },
+    {
+      "file": "2024.json",
+      "q_num": 79,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Longest International Land Boundaries (Canada-USA)",
+      "question_en": "The longest border between any two countries in the world is between :"
+    },
+    {
+      "file": "2024.json",
+      "q_num": 88,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Sumed Pipeline (Suez-Mediterranean Pipeline)",
+      "question_en": "Consider the following statements :\nStatement-I :\nSumed pipeline is a strategic route for Persian Gulf oil and natural g"
+    },
+    {
+      "file": "2024.json",
+      "q_num": 89,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Red Sea Hydrology, Climate & River Inflows",
+      "question_en": "Consider the following statements :\n1. The Red Sea receives very little precipitation in any form.\n2. No water enters th"
+    },
+    {
+      "file": "2024.json",
+      "q_num": 91,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "International Relations & Global Institutions",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Sahel Region Political Instability & Military Coups",
+      "question_en": "Consider the following statements :\nStatement-I :\nThere is instability and worsening security situation in the Sahel reg"
+    },
+    {
+      "file": "2025.json",
+      "q_num": 21,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Landlocked Countries of Europe",
+      "question_en": "Consider the following countries :\nI. Austria\nII. Bulgaria\nIII. Croatia\nIV. Serbia\nV. Sweden\nVI. North Macedonia\nHow man"
+    },
+    {
+      "file": "2025.json",
+      "q_num": 22,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "South America: Landlocked States (Bolivia & Paraguay)",
+      "question_en": "Consider the following countries :\nI. Bolivia\nII. Brazil\nIII. Colombia\nIV. Ecuador\nV. Paraguay\nVI. Venezuela\nAndes mount"
+    },
+    {
+      "file": "2025.json",
+      "q_num": 23,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Major Global Lakes & Lagoons (Tanganyika, Tonle Sap, Patos)",
+      "question_en": "Consider the following water bodies :\nI. Lake Tanganyika\nII. Lake Tonle Sap\nIII. Patos Lagoon\nThrough how many of them d"
+    },
+    {
+      "file": "2025.json",
+      "q_num": 52,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.infrastructure_ports_transport_corridors",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "State Capitals & Historical Geographical Landmarks of India",
+      "question_en": "Consider the following pairs :\n\nState : Description\nI. Arunachal Pradesh : The capital is named after a fort, and the St"
+    },
+    {
+      "file": "2025.json",
+      "q_num": 77,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Bering Strait, International Date Line & Siberian-Alaskan Proximity",
+      "question_en": "Consider the following statements :\nI. Anadyr in Siberia and Nome in Alaska are a few kilometers from each other, but wh"
+    },
+    {
+      "file": "2025.json",
+      "q_num": 80,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "European Regional Geography: Islands & Historical Provinces",
+      "question_en": "Consider the following pairs :\n\nRegion : Country\nI. Mallorca : Italy\nII. Normandy : Spain\nIII. Sardinia : France\n\nIn how"
+    },
+    {
+      "file": "kas_april_p1_2015.json",
+      "q_num": 34,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Great Lakes of North America (Lake Superior, Michigan, Huron, Erie & Ontario - Glacial Freshwater System)",
+      "question_en": "The great five lakes of USA Canada are marked as 1, 2, 3, 4, 5 in the map - Identify them:"
+    },
+    {
+      "file": "kas_april_p1_2015.json",
+      "q_num": 39,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.strategic_straits_chokepoints_canals",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Trans-Continental Railway Corridors (Canadian Pacific Railway Connecting Vancouver on Pacific Coast to Montreal / Saint John)",
+      "question_en": "The Canadian Pacific Railway, One of the longest railway lines of the world run from"
+    },
+    {
+      "file": "kas_april_p1_2015.json",
+      "q_num": 77,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Geopolitical Uprisings in West Asia & North Africa (Arab Spring Pro-Democracy Wave Originating in Tunisia in Dec 2010)",
+      "question_en": "The recent mass uprising known as the Arab Spring first began in which of the following countries?"
+    },
+    {
+      "file": "kas_april_p1_2015.json",
+      "q_num": 85,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Global Terrorist Networks & Insurgencies (Boko Haram Militant Extremist Group Operating in Northeastern Nigeria)",
+      "question_en": "Boko Haram is a terrorist group of"
+    },
+    {
+      "file": "kas_april_p1_2015.json",
+      "q_num": 86,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Maritime Boundary Disputes in East Asia (Yeonpyeong Island Dispute in Yellow Sea between North Korea & South Korea)",
+      "question_en": "Yeonpyeong Island is a source of dispute between which two countries?"
+    },
+    {
+      "file": "kas_april_p2_2015.json",
+      "q_num": 43,
+      "node_id": "geography_earth_systems.karnataka_mapping_state_geography.agro_climatic_zones_mineral_belts",
+      "subject": "Environment, Ecology & Disaster Management",
+      "domain": "Protected Areas of Karnataka",
+      "sub_topic": "Protected Areas of Karnataka: National Parks and Wildlife Sanctuaries",
+      "question_en": "The total numbers of National Parks and Sanctuaries in Karnataka are"
+    },
+    {
+      "file": "kas_april_p2_2015.json",
+      "q_num": 50,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout",
+      "subject": "Environment, Ecology & Disaster Management",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Recognized Biodiversity Hotspots in India",
+      "question_en": "In India the area declared as a 'Biodiversity hot spot' is"
+    },
+    {
+      "file": "kas_april_p2_2015.json",
+      "q_num": 68,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout",
+      "subject": "Environment, Ecology & Disaster Management",
+      "domain": "Protected Areas & Spatial Mapping",
+      "sub_topic": "Spatial Geography of Biosphere Reserves in India",
+      "question_en": "Biosphere Reserves have been established to conserve biodiversity and genetic integrity of plants, animals and microorga"
+    },
+    {
+      "file": "kas_aug_p1_2017.json",
+      "q_num": 12,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Major Inland Waterways of the World (Rhine Waterway in Western Europe - World's Most Heavily Navigated Commercial River)",
+      "question_en": "Which is the world's most heavily used inland waterway?"
+    },
+    {
+      "file": "kas_aug_p1_2024.json",
+      "q_num": 46,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "East African Wildlife Ecosystems & Great Migration (Serengeti National Park in Tanzania & Masai Mara in Kenya)",
+      "question_en": "The great annual migration of two millions ungulates and wild beasts happens between Serengeti and Maasai Mara National "
+    },
+    {
+      "file": "kas_aug_p1_2024.json",
+      "q_num": 47,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Major Rivers of the World and Respective Countries (Mahaweli Ganga - Sri Lanka, Irrawaddy - Myanmar, Mekong)",
+      "question_en": "Which of the following pairs of country and river is correctly matched?\nRiver | Country\nA. Mahaweli Ganga (Great Sandy R"
+    },
+    {
+      "file": "kas_aug_p1_2024.json",
+      "q_num": 51,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Marginal Seas of the Southern Ocean & Antarctica (Ross Sea, Weddell Sea, Bellingshausen Sea)",
+      "question_en": "Which of the following statements are true?\nA. Ross Sea and Weddell Sea are part of Antarctic region.\nB. Ross Sea and We"
+    },
+    {
+      "file": "kas_aug_p1_2024.json",
+      "q_num": 53,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.himalayan_mountain_ranges_passes_glaciers",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Himalayan Mountain Passes & Longitudinal Ranges (Banihal Pass in Pir Panjal, Rohtang Pass, Zoji La)",
+      "question_en": "Which of the following Passes are located in middle Himalayas/lesser Himalayas?\nA. Banihal Pass\nB. Pir Panjal Pass\nC. Si"
+    },
+    {
+      "file": "kas_aug_p1_2024.json",
+      "q_num": 59,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Prominent Mountain Peaks of South India (Anamudi in Annamalai Hills, Doddabetta in Nilgiris, Mullayanagiri in Baba Budangiri)",
+      "question_en": "Match List-I with List-II and select the correct answer from the options given below :\nList-I (Mountain Chain) | List-II"
+    },
+    {
+      "file": "kas_aug_p1_2024.json",
+      "q_num": 61,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Meghalaya Plateau Hills & Capital Locations (Shillong situated in Khasi Hills)",
+      "question_en": "Shillong is situated in which of the following hills?"
+    },
+    {
+      "file": "kas_aug_p1_2024.json",
+      "q_num": 74,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Nagorno-Karabakh / Artsakh Conflict (Armenia vs Azerbaijan Territorial Dispute in South Caucasus)",
+      "question_en": "Consider the following statements regarding Nagorno-Karabakh region conflicts.\nA. It is area of contention between Azerb"
+    },
+    {
+      "file": "kas_dec_p1_2011.json",
+      "q_num": 26,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Arab Spring Pro-Democracy Movements in North Africa & Middle East (Overthrow of Authoritarian Regimes in Egypt & Tunisia in 2011)",
+      "question_en": "In the year 2011, pro-democratic forces were first successful in ending the dictatorial rule in the following African co"
+    },
+    {
+      "file": "kas_dec_p1_2011.json",
+      "q_num": 27,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Geopolitical Crises in the Levant (Syrian Civil War and Humanitarian Conflict in Middle-East Post-2011)",
+      "question_en": "The following country in the Middle-East faced serious internal political and humanitarian problems in Jan-Feb, 2012 cal"
+    },
+    {
+      "file": "kas_dec_p1_2011.json",
+      "q_num": 60,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Zonal Biogeography of Africa (North-South Transect along 20-30°E: Mediterranean -> Sahara Desert -> Sahel/Savanna -> Tropical Forest -> Kalahari)",
+      "question_en": "In Africa, if one traverses from North to South between 20° to 30° East longitudes, the correct sequence of broad natura"
+    },
+    {
+      "file": "kas_dec_p1_2011.json",
+      "q_num": 61,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Global Limnology and Great Lakes (Lake Superior - USA/Canada, Lake Baikal - Russia, Lake Victoria - East Africa, Lake Titicaca - Peru/Bolivia)",
+      "question_en": "Match list I (Lakes) with List II (Countries) and select the correct answer from the codes given:\n\nList I (Lakes) | List"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 16,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Land Borders of the Russian Federation (14 Bordering Nations - Finland, Norway, Kazakhstan, North Korea, Belarus, etc.)",
+      "question_en": "Consider the following countries:\nA. Finland\nB. Norway\nC. Armenia\nD. Kazakhstan\nE. North Korea\nHow many of the above cou"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 17,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.major_world_rivers_lakes_drainage",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Famous World Rivers & Capital Cities (Tiber - Rome, Danube - Vienna/Budapest/Belgrade, Tagus - Lisbon, Spree - Berlin)",
+      "question_en": "How many of the following pairs are correctly matched?\nRiver | City\nA. Tiber | Lisbon\nB. Danube | Vienna\nC. Tagus | Rome"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 32,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Golan Heights Geopolitical Conflict (Syrian Plateau Captured & Occupied by Israel in 1967 Six-Day War & UNDOF Zone)",
+      "question_en": "How many of the following statement/statements is/are correct?\nA. The Golan Heights is a disputed area between Turkey an"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 34,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Chagos Archipelago Sovereignty Handover to Mauritius (BIOT, Diego Garcia Strategic Military Base Agreement)",
+      "question_en": "UK handed over Chagos Archipelago to which one of the following country recently?"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 37,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Territorial Land Borders of Iran (7 Land Neighbours - Armenia, Azerbaijan, Turkmenistan, Afghanistan, Pakistan, Iraq, Turkey)",
+      "question_en": "How many of the following countries share a territorial land border with Iran?\nA. Turkmenistan\nB. Turkey\nC. Syria\nD. Leb"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 46,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Renaming of Andaman and Nicobar Islands (Ross -> Netaji Subhash Chandra Bose Island, Neil -> Shaheed Island, Havelock -> Swaraj Island)",
+      "question_en": "Match the older names of Andaman and Nicobar Islands with the newer ones.\nOld Names | New Names\nI. Ross Island | A. Sri "
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 54,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Spatial Geography of Indian States (Minimum Route & Contiguous States Crossing from Karnataka to Mizoram: AP, Odisha, WB, Assam)",
+      "question_en": "To travel from Karnataka to Mizoram by walking, the minimum number of states you have to pass through would be (excludin"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 73,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Darien Gap (Pan-American Highway Discontinuity & Dense Tropical Jungle Migration Route between Panama and Colombia)",
+      "question_en": "'Darien Gap' was in news recently, which is located in:\nA. Panama\nB. Colombia\nC. Venezuela\nD. Ecuador\nChoose the correct"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 76,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Gulf of Aqaba Littoral States (Four Coastal Nations - Egypt, Israel, Jordan, Saudi Arabia & Port of Eilat/Aqaba)",
+      "question_en": "Consider the following countries:\nA. Egypt\nB. Israel\nC. Jordan\nD. Saudi Arabia\nHow many of the above countries have a bo"
+    },
+    {
+      "file": "kas_dec_p1_2024.json",
+      "q_num": 96,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.international_land_borders_disputed_territories",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Geographical Land Borders of Israel (Direct Neighbouring Nations - Lebanon, Syria, Jordan, Egypt)",
+      "question_en": "Which of the following countries share border with Israel?\nA. Lebanon\nB. Syria\nC. Jordan\nD. Saudi Arabia\nE. Egypt\nF. Ira"
+    },
+    {
+      "file": "kas_dec_p2_2011.json",
+      "q_num": 5,
+      "node_id": "geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs",
+      "subject": "Geography & Earth Systems",
+      "domain": "Karnataka Mapping & Spatial Geography",
+      "sub_topic": "Tubewells / Borewells as the Dominant Source of Net Irrigated Land in Karnataka",
+      "question_en": "During 2008-09, the largest area in Karnataka was irrigated by"
+    },
+    {
+      "file": "kas_dec_p2_2011.json",
+      "q_num": 11,
+      "node_id": "geography_earth_systems.karnataka_mapping_state_geography.agro_climatic_zones_mineral_belts",
+      "subject": "Geography & Earth Systems",
+      "domain": "Karnataka Mapping & Spatial Geography",
+      "sub_topic": "Village / Rural Roads Constituting the Longest Road Length in Karnataka Road Network",
+      "question_en": "Karnataka's road length (in kms) in 2009-10 was longest by"
+    },
+    {
+      "file": "kas_dec_p2_2011.json",
+      "q_num": 36,
+      "node_id": "geography_earth_systems.karnataka_mapping_state_geography.agro_climatic_zones_mineral_belts",
+      "subject": "Geography & Earth Systems",
+      "domain": "Karnataka Mapping & Spatial Geography",
+      "sub_topic": "Provisional Total Population of Karnataka in Census 2011 (~6.11 Crore / 61,130,704)",
+      "question_en": "According to the Census of India 2011, the provisional population total of Karnataka is"
+    },
+    {
+      "file": "kas_dec_p2_2024.json",
+      "q_num": 20,
+      "node_id": "science_technology_defence.space_technology_astronomy.chandrayaan_lunar_missions",
+      "subject": "Science, Technology & Defence",
+      "domain": "Lunar Exploration & ISRO Planetary Missions",
+      "sub_topic": "Chandrayaan-2 CLASS Payload - Lunar Surface Sodium (Na) Abundance Mapping",
+      "question_en": "India's Chandrayaan-2 has mapped the abundance of which element for the first time?"
+    },
+    {
+      "file": "kas_dec_p2_2024.json",
+      "q_num": 27,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout",
+      "subject": "Environment, Ecology & Disaster Management",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Ramsar Sites of India and Respective States",
+      "question_en": "Match the following Ramsar site and the States:\nRamsar sites: A. Rudra Sagar Lake, B. Bakhira Wildlife Sanctuary, C. Sul"
+    },
+    {
+      "file": "kas_dec_p2_2024.json",
+      "q_num": 41,
+      "node_id": "geography_earth_systems.karnataka_mapping_state_geography.river_basins_waterfalls_reservoirs",
+      "subject": "Geography & Earth Systems",
+      "domain": "Karnataka Mapping & Spatial Geography",
+      "sub_topic": "Iruppu Falls (Lakshmana Tirtha River, Brahmagiri Hills, Kodagu)",
+      "question_en": "Identify the waterfall:\nThe waterfall runs down through the Bhramagiri hills located in Kutta village of Kodagu. It is a"
+    },
+    {
+      "file": "kas_p1_2020.json",
+      "q_num": 78,
+      "node_id": "geography_earth_systems.indian_mapping_spatial_geography.coastal_features_islands_maritime_channels",
+      "subject": "Geography & Earth Systems",
+      "domain": "Indian Mapping & Spatial Geography",
+      "sub_topic": "Coastal Geomorphology (Compound Coastlines Displaying Both Emergence and Submergence Features)",
+      "question_en": "__________ represent the features of both emergence and submergence."
+    },
+    {
+      "file": "kas_p1_2020.json",
+      "q_num": 93,
+      "node_id": "geography_earth_systems.world_mapping_geopolitical_locations.places_in_news_conflict_zones",
+      "subject": "Geography & Earth Systems",
+      "domain": "World Mapping & Geopolitical Locations",
+      "sub_topic": "Global Humanitarian & Rescue Organizations (The White Helmets / Syria Civil Defence Volunteers in Conflict Zones)",
+      "question_en": "The White Helmets is"
+    }
+  ]
+}

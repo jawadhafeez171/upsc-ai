@@ -1,12 +1,12 @@
 [
   {
     "question_number": 1,
-    "node_id": "indian_polity_constitution_governance.fundamental_rights.aadhaar_judgment_privacy",
+    "node_id": "indian_polity_constitution_governance.e-governance_models_digital_public_infrastructure.digital_india_public_infrastructure",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Fundamental Rights, Privacy & Aadhaar Architecture",
     "domain_hindi": "मूल अधिकार, निजता एवं आधार संरचना",
-    "sub_topic": "Supreme Court Aadhaar Judgment (Justice K.S. Puttaswamy Case) & Data Sharing Regulations",
+    "sub_topic": "Digital India & Public Infrastructure (Aadhaar / India Stack, UPI, DigiLocker, COWIN, e-RUPI, Open Network for Digital Commerce / ONDC)",
     "sub_topic_hindi": "सर्वोच्च न्यायालय का आधार निर्णय (न्यायमूर्ति के.एस. पुट्टास्वामी मामला) एवं डेटा साझाकरण विनियम",
     "difficulty": "medium",
     "tags": [
@@ -33,16 +33,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 2,
-    "node_id": "indian_polity_constitution_governance.union_legislature.rajya_sabha_powers_vs_lok_sabha",
+    "node_id": "indian_polity_constitution_governance.parliament_state_legislatures.structure_composition",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Union Legislature (Parliament of India)",
     "domain_hindi": "केंद्रीय विधायिका (भारतीय संसद)",
-    "sub_topic": "Relative Powers & Jurisdiction of Rajya Sabha vs Lok Sabha (Article 368 vs Money Bills)",
+    "sub_topic": "Structure & Composition (Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad; Qualification & Disqualification - Article 102, Representation of the People Act 1951, Anti-Defection Law / 10th Schedule)",
     "sub_topic_hindi": "राज्य सभा बनाम लोक सभा की सापेक्ष शक्तियां एवं क्षेत्राधिकार (अनुच्छेद 368 बनाम धन विधेयक)",
     "difficulty": "easy",
     "tags": [
@@ -70,16 +71,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 3,
-    "node_id": "indian_polity_constitution_governance.government_schemes_development.mplads_guidelines_monitoring",
+    "node_id": "indian_polity_constitution_governance.e-governance_models_digital_public_infrastructure.e-governance_applications",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Government Schemes, Social Sector & Development Interventions",
     "domain_hindi": "सरकारी योजनाएं, सामाजिक क्षेत्र एवं विकासात्मक हस्तक्षेप",
-    "sub_topic": "Member of Parliament Local Area Development Scheme (MPLADS) Operational Guidelines",
+    "sub_topic": "E-Governance Applications (e-Seva, UMANG, PRAGATI Platform, Direct Benefit Transfer / DBT, Open Government Data)",
     "sub_topic_hindi": "संसद सदस्य स्थानीय क्षेत्र विकास योजना (MPLADS) परिचालन दिशानिर्देश",
     "difficulty": "medium",
     "tags": [
@@ -106,16 +108,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 4,
-    "node_id": "indian_polity_constitution_governance.fundamental_rights.right_to_equality_article_17",
+    "node_id": "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.fundamental_rights_-_part_iii_articles_12-35",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Fundamental Rights (Part III)",
     "domain_hindi": "मूल अधिकार (भाग III)",
-    "sub_topic": "Right to Equality & Abolition of Untouchability (Articles 14–18 / Article 17)",
+    "sub_topic": "Fundamental Rights - Part III / Articles 12-35 (Right to Equality 14-18, Right to Freedom 19-22, Against Exploitation 23-24, Freedom of Religion 25-28, Cultural & Educational 29-30, Constitutional Remedies 32; Judicial Review & Writs - Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo-Warranto)",
     "sub_topic_hindi": "समता का अधिकार एवं अस्पृश्यता का उन्मूलन (अनुच्छेद 14-18 / अनुच्छेद 17)",
     "difficulty": "easy",
     "tags": [
@@ -142,16 +145,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 5,
-    "node_id": "indian_polity_constitution_governance.dpsp.separation_of_judiciary_article_50",
+    "node_id": "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Directive Principles of State Policy (Part IV)",
     "domain_hindi": "राज्य की नीति के निदेशक तत्व (भाग IV)",
-    "sub_topic": "Separation of Judiciary from the Executive (Article 50)",
+    "sub_topic": "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)",
     "sub_topic_hindi": "कार्यपालिका से न्यायपालिका का पृथक्करण (अनुच्छेद 50)",
     "difficulty": "easy",
     "tags": [
@@ -179,16 +183,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 6,
-    "node_id": "indian_economy_development.fiscal_policy_public_finance_taxation.frbm_act_budget_documents",
+    "node_id": "indian_economy_development.fiscal_policy_public_finance_taxation.deficit_concepts_fiscal_discipline",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Fiscal Policy, Public Finance & Taxation",
     "domain_hindi": "राजकोषीय नीति, लोक वित्त एवं कराधान",
-    "sub_topic": "Fiscal Responsibility and Budget Management (FRBM) Act 2003 & Macroeconomic Framework Statement",
+    "sub_topic": "Deficit Concepts & Fiscal Discipline (Revenue Deficit / Effective Revenue Deficit, Fiscal Deficit - Borrowing Requirement of Government, Primary Deficit; Fiscal Responsibility and Budget Management / FRBM Act 2003 - N.K. Singh Committee Recommendations, Debt-to-GDP Ratio Targets, Escape Clauses)",
     "sub_topic_hindi": "राजकोषीय उत्तरदायित्व एवं बजट प्रबंधन (FRBM) अधिनियम 2003 एवं वृहद आर्थिक रूपरेखा विवरण",
     "difficulty": "easy",
     "tags": [
@@ -215,16 +220,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 7,
-    "node_id": "indian_polity_constitution_governance.constitutional_framework.constitutionalism_limited_government",
+    "node_id": "indian_polity_constitution_governance.historical_background_making_of_the_constitution.government_of_india_acts",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Constitutional Framework & Political Theory",
     "domain_hindi": "संवैधानिक ढांचा एवं राजनीतिक सिद्धांत",
-    "sub_topic": "Constitutionalism, Limited Government & Rule of Law",
+    "sub_topic": "Government of India Acts (1858, 1892, Indian Councils Act 1909 / Morley-Minto, GOI Act 1919 / Montagu-Chelmsford, GOI Act 1935, Indian Independence Act 1947)",
     "sub_topic_hindi": "संविधानवाद, सीमित सरकार एवं विधि का शासन",
     "difficulty": "easy",
     "tags": [
@@ -251,16 +257,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 8,
-    "node_id": "indian_polity_constitution_governance.constitutional_philosophy.udhr_principles_indian_constitution",
+    "node_id": "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Constitutional Philosophy, Preamble & Human Rights",
     "domain_hindi": "संवैधानिक दर्शन, उद्देशिका एवं मानवाधिकार",
-    "sub_topic": "Universal Declaration of Human Rights (UDHR) 1948 in Indian Constitution",
+    "sub_topic": "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)",
     "sub_topic_hindi": "भारतीय संविधान में मानव अधिकारों की सार्वभौम घोषणा (UDHR) 1948",
     "difficulty": "medium",
     "tags": [
@@ -288,16 +295,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 9,
-    "node_id": "indian_polity_constitution_governance.judiciary_legal_aid.nalsa_free_legal_aid_eligibility",
+    "node_id": "indian_polity_constitution_governance.federal_structure_center-state_relations_devolution.financial_relations_tax_devolution",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Judiciary & Legal Aid Architecture",
     "domain_hindi": "न्यायपालिका एवं विधिक सहायता संरचना",
-    "sub_topic": "Legal Services Authorities Act 1987 & NALSA Eligibility Criteria",
+    "sub_topic": "Financial Relations & Tax Devolution (Distribution of Revenues, Goods & Services Tax / GST Council Article 279A, Finance Commission Article 280, Grants-in-Aid)",
     "sub_topic_hindi": "विधिक सेवा प्राधिकरण अधिनियम 1987 एवं नालसा (NALSA) पात्रता मानदंड",
     "difficulty": "medium",
     "tags": [
@@ -324,16 +332,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 10,
-    "node_id": "international_relations_global_institutions.multilateral_declarations.global_agreements_alma_ata_talanoa",
+    "node_id": "international_relations_global_institutions.global_institutions_agreements_treaties.global_climate_maritime_frameworks",
     "subject": "International Relations & Global Institutions",
     "subject_hindi": "अंतर्राष्ट्रीय संबंध एवं वैश्विक संस्थाएं",
     "domain": "Multilateral Declarations, Conventions & Climate Coalitions",
     "domain_hindi": "बहुपक्षीय घोषणाएं, अभिसमय एवं जलवायु गठबंधन",
-    "sub_topic": "Global Declarations & Agreements (Alma-Ata Declaration & Talanoa Dialogue)",
+    "sub_topic": "Global Climate & Maritime Frameworks (UNFCCC Climate Architecture, UNCLOS Maritime Law, Global Tax Regimes)",
     "sub_topic_hindi": "वैश्विक घोषणाएं एवं समझौते (अल्मा-आटा घोषणा एवं तलानोआ संवाद)",
     "difficulty": "medium",
     "tags": [
@@ -360,16 +369,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 11,
-    "node_id": "indian_polity_constitution_governance.system_of_government.parliamentary_system_collective_responsibility",
+    "node_id": "indian_polity_constitution_governance.union_executive_state_executive.union_executive",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "System of Government & Executive Accountability",
     "domain_hindi": "शासन प्रणाली एवं कार्यपालिका का उत्तरदायित्व",
-    "sub_topic": "Parliamentary System & Collective Responsibility of Executive to Legislature",
+    "sub_topic": "Union Executive (President - Election, Impeachment, Powers - Executive, Legislative, Financial, Judicial, Veto, Ordinance, Pardoning 72; Vice-President; Prime Minister & Council of Ministers - Collective Responsibility, Cabinet Committees)",
     "sub_topic_hindi": "संसदीय प्रणाली एवं विधायिका के प्रति कार्यपालिका का सामूहिक उत्तरदायित्व",
     "difficulty": "easy",
     "tags": [
@@ -396,16 +406,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 12,
-    "node_id": "indian_polity_constitution_governance.dpsp.welfare_state_philosophy",
+    "node_id": "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Directive Principles of State Policy (Part IV)",
     "domain_hindi": "राज्य की नीति के निदेशक तत्व (भाग IV)",
-    "sub_topic": "Welfare State Philosophy in Directive Principles of State Policy",
+    "sub_topic": "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)",
     "sub_topic_hindi": "राज्य की नीति के निदेशक तत्वों में कल्याणकारी राज्य का दर्शन",
     "difficulty": "easy",
     "tags": [
@@ -432,16 +443,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 13,
-    "node_id": "indian_polity_constitution_governance.constitutional_framework.basic_structure_and_judicial_review",
+    "node_id": "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.fundamental_rights_-_part_iii_articles_12-35",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Constitutional Framework, Basic Structure & Judicial Review",
     "domain_hindi": "संवैधानिक ढांचा, मूल संरचना एवं न्यायिक पुनरावलोकन",
-    "sub_topic": "Basic Structure Doctrine (Kesavananda Bharati) & Scope of Judicial Review",
+    "sub_topic": "Fundamental Rights - Part III / Articles 12-35 (Right to Equality 14-18, Right to Freedom 19-22, Against Exploitation 23-24, Freedom of Religion 25-28, Cultural & Educational 29-30, Constitutional Remedies 32; Judicial Review & Writs - Habeas Corpus, Mandamus, Prohibition, Certiorari, Quo-Warranto)",
     "sub_topic_hindi": "मूल संरचना सिद्धांत (केशवानंद भारती) एवं न्यायिक पुनरावलोकन का दायरा",
     "difficulty": "medium",
     "tags": [
@@ -468,16 +480,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 14,
-    "node_id": "indian_polity_constitution_governance.political_ideologies.gandhism_vs_marxism_stateless_society",
+    "node_id": "indian_polity_constitution_governance.good_governance_administrative_reforms.citizen_service_guarantees_redressal_platforms",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Political Ideologies & Philosophy",
     "domain_hindi": "राजनीतिक विचारधाराएं एवं दर्शन",
-    "sub_topic": "Comparative Political Ideologies: Gandhian vs Marxist Conception of Stateless Society",
+    "sub_topic": "Citizen Service Guarantees & Redressal Platforms (Karnataka Guarantee of Services to Citizens Act 2011 / 'Sakala Act' / Mission Sakala - Statutory Guarantee of Time-Bound Delivery of 1,000+ Government Services, Mandatory Delay Compensations, Sakala Mission Directorate; Janaspandana / Integrated Public Grievance Redressal System / IPGRS; Bapuji Seva Kendra / BSK at Grama Panchayat level; Grama One / Karnataka One / Bangalore One Integrated Citizen Service Centers)",
     "sub_topic_hindi": "तुलनात्मक राजनीतिक विचारधाराएं: राज्यविहीन समाज की गांधीवादी बनाम मार्क्सवादी अवधारणा",
     "difficulty": "medium",
     "tags": [
@@ -504,16 +517,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 15,
-    "node_id": "indian_polity_constitution_governance.civil_services.bureaucracy_role_public_policy_implementation",
+    "node_id": "indian_polity_constitution_governance.role_of_civil_services_in_a_democracy.civil_services_dynamics",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Civil Services & Public Administration",
     "domain_hindi": "लोक सेवाएं एवं लोक प्रशासन",
-    "sub_topic": "Role and Characteristics of Civil Services / Bureaucracy in Public Policy Implementation",
+    "sub_topic": "Civil Services Dynamics (Bureaucracy & Development, Politicization of Civil Services, Specialist vs Generalist Debate, Administrative Ethics)",
     "sub_topic_hindi": "लोक नीति कार्यान्वयन में लोक सेवाओं / नौकरशाही की भूमिका एवं लक्षण",
     "difficulty": "easy",
     "tags": [
@@ -540,16 +554,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 16,
-    "node_id": "indian_polity_constitution_governance.constitutional_philosophy.preamble_legal_status_enforceability",
+    "node_id": "indian_polity_constitution_governance.salient_features_amendments_basic_structure.basic_structure_doctrine",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Constitutional Philosophy & Preamble",
     "domain_hindi": "संवैधानिक दर्शन एवं उद्देशिका",
-    "sub_topic": "Preamble Legal Status, Enforceability & Interpretative Role (LIC of India & Kesavananda Case)",
+    "sub_topic": "Basic Structure Doctrine (Kesavananda Bharati Case 1973, Minerva Mills Case, Evolution & Core Principles)",
     "sub_topic_hindi": "उद्देशिका की विधिक स्थिति, प्रवर्तनीयता एवं व्याख्यात्मक भूमिका (एलआईसी ऑफ इंडिया एवं केशवानंद मामला)",
     "difficulty": "medium",
     "tags": [
@@ -576,16 +591,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 17,
-    "node_id": "international_relations_global_institutions.global_institutions.imf_quota_reserve_tranche_position",
+    "node_id": "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
     "subject": "International Relations & Global Institutions",
     "subject_hindi": "अंतर्राष्ट्रीय संबंध एवं वैश्विक संस्थाएं",
     "domain": "Global Financial Architecture & Multilateral Bodies",
     "domain_hindi": "वैश्विक वित्तीय संरचना एवं बहुपक्षीय निकाय",
-    "sub_topic": "International Monetary Fund (IMF) Quota & Reserve Tranche Position (Gold Tranche)",
+    "sub_topic": "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)",
     "sub_topic_hindi": "अंतर्राष्ट्रीय मुद्रा कोष (आईएमएफ) कोटा एवं आरक्षित अंश स्थिति (गोल्ड ट्रैंच)",
     "difficulty": "easy",
     "tags": [
@@ -613,16 +629,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 18,
-    "node_id": "indian_polity_constitution_governance.dpsp.enforceability_and_governance_article_37",
+    "node_id": "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties.directive_principles_of_state_policy_-_part_iv_articles_36-51",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Directive Principles of State Policy (Part IV)",
     "domain_hindi": "राज्य की नीति के निदेशक तत्व (भाग IV)",
-    "sub_topic": "Justiciability & Enforceability of Directive Principles (Article 37)",
+    "sub_topic": "Directive Principles of State Policy - Part IV / Articles 36-51 (Socialistic, Gandhian, Liberal-Intellectual Principles; Fundamental Rights vs DPSP Conflict & Harmony)",
     "sub_topic_hindi": "निदेशक तत्वों की वादयोग्यता एवं प्रवर्तनीयता (अनुच्छेद 37)",
     "difficulty": "easy",
     "tags": [
@@ -650,16 +667,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 19,
-    "node_id": "indian_polity_constitution_governance.union_executive.minister_appointment_and_rpa_disqualifications",
+    "node_id": "indian_polity_constitution_governance.union_executive_state_executive.state_executive",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Union and State Executives & Elections",
     "domain_hindi": "संघ एवं राज्य कार्यपालिका तथा निर्वाचन",
-    "sub_topic": "Appointment of Non-Legislator as Minister & RPA 1951 Disqualification Provisions (Section 8)",
+    "sub_topic": "State Executive (Governor - Appointment, Constitutional Role, Discretionary Powers, Ordinance Power 213; Chief Minister & State Council of Ministers)",
     "sub_topic_hindi": "गैर-विधायक की मंत्री के रूप में नियुक्ति एवं लोक प्रतिनिधित्व अधिनियम 1951 अयोग्यता प्रावधान (धारा 8)",
     "difficulty": "hard",
     "tags": [
@@ -687,16 +705,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 20,
-    "node_id": "indian_polity_constitution_governance.union_legislature.parliament_sessions_summoning_article_85",
+    "node_id": "indian_polity_constitution_governance.parliament_state_legislatures.structure_composition",
     "subject": "Indian Polity, Constitution & Governance",
     "subject_hindi": "भारतीय राजव्यवस्था, संविधान एवं शासन",
     "domain": "Union Legislature (Parliament of India)",
     "domain_hindi": "केंद्रीय विधायिका (भारतीय संसद)",
-    "sub_topic": "Summoning, Prorogation, Venue & Maximum Recess of Parliamentary Sessions (Article 85)",
+    "sub_topic": "Structure & Composition (Lok Sabha, Rajya Sabha, Vidhan Sabha, Vidhan Parishad; Qualification & Disqualification - Article 102, Representation of the People Act 1951, Anti-Defection Law / 10th Schedule)",
     "sub_topic_hindi": "संसदीय सत्रों का आहूत करना, सत्रावसान, स्थान एवं अधिकतम अंतराल (अनुच्छेद 85)",
     "difficulty": "medium",
     "tags": [
@@ -724,16 +743,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 21,
-    "node_id": "history.modern_india.colonial_economic_terminology_aurang_banian_mirasidar",
+    "node_id": "history.modern_india.economic_impact_of_british_rule.colonial_land_revenue_systems",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India & Colonial Administrative Terminology",
     "domain_hindi": "आधुनिक भारत एवं औपनिवेशिक प्रशासनिक शब्दावली",
-    "sub_topic": "Colonial Economic Terminology & Commercial Agents (Aurang, Banian, Mirasidar)",
+    "sub_topic": "Colonial Land Revenue Systems",
     "sub_topic_hindi": "औपनिवेशिक आर्थिक शब्दावली एवं वाणिज्यिक एजेंट (औरंग, बनियान, मीरासीदार)",
     "difficulty": "hard",
     "tags": [
@@ -761,16 +781,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 22,
-    "node_id": "history.ancient_india.buddhism_schisms_sthaviravadins_mahasanghikas",
+    "node_id": "history.ancient_india.religious_movements_buddhism.buddhist_councils",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Ancient India - Religious Movements",
     "domain_hindi": "प्राचीन भारत - धार्मिक आंदोलन",
-    "sub_topic": "Buddhist Councils, Schisms & Sects (Theravada/Sthaviravada, Mahasanghika, Lokottaravada)",
+    "sub_topic": "Buddhist Councils",
     "sub_topic_hindi": "बौद्ध संगीतियां, विभाजन एवं संप्रदाय (थेरवाद/स्थविरवाद, महासांघिक, लोकोत्तरवाद)",
     "difficulty": "hard",
     "tags": [
@@ -798,16 +819,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 23,
-    "node_id": "history.modern_india.deindustrialization_ruin_of_handicrafts",
+    "node_id": "history.modern_india.economic_impact_of_british_rule.deindustrialisation_commercialisation",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - Economic Impact of British Rule",
     "domain_hindi": "आधुनिक भारत - ब्रिटिश शासन का आर्थिक प्रभाव",
-    "sub_topic": "De-industrialization & Ruin of Traditional Indian Handicrafts and Handlooms",
+    "sub_topic": "Deindustrialisation & Commercialisation",
     "sub_topic_hindi": "वि-औद्योगीकरण एवं पारंपरिक भारतीय हस्तशिल्प और हथकरघा का पतन",
     "difficulty": "easy",
     "tags": [
@@ -834,16 +856,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 24,
-    "node_id": "history.medieval_india.early_medieval_dynasties_chronology_pallavas_palas_cholas",
+    "node_id": "history.medieval_india.early_medieval_period_tripartite_struggle.tripartite_struggle_for_kannauj",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Medieval & Early Medieval India",
     "domain_hindi": "मध्यकालीन एवं प्रारंभिक मध्यकालीन भारत",
-    "sub_topic": "Early Medieval Dynasties Chronology (Pallavas, Palas, Gurjara-Pratiharas, Imperial Cholas)",
+    "sub_topic": "Tripartite Struggle for Kannauj",
     "sub_topic_hindi": "पूर्व मध्यकालीन राजवंशों का कालक्रम (पल्लव, पाल, गुर्जर-प्रतिहार, चोल)",
     "difficulty": "hard",
     "tags": [
@@ -871,16 +894,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 25,
-    "node_id": "history.medieval_india.trade_commerce_hundi_bill_of_exchange",
+    "node_id": "history.world_history.interwar_period_great_depression_rise_of_fascism_and_nazism.the_great_depression_economic_collapse",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Medieval India - Trade, Commerce & Banking",
     "domain_hindi": "मध्यकालीन भारत - व्यापार, वाणिज्य एवं बैंकिंग",
-    "sub_topic": "Indigenous Credit Instruments & Financial Mechanism: The Hundi (Bill of Exchange)",
+    "sub_topic": "The Great Depression & Economic Collapse",
     "sub_topic_hindi": "स्वदेशी साख उपकरण एवं वित्तीय प्रणाली: हुंडी (विनिमय पत्र)",
     "difficulty": "easy",
     "tags": [
@@ -907,16 +931,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 26,
-    "node_id": "history.modern_india.swadeshi_literature_sakharam_deuskar_desher_katha",
+    "node_id": "history.indian_freedom_struggle.swadeshi_movement_extremism_revolutionary_nationalism_phase_i.revolutionary_activities_phase_i_domestic_abroad",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - Swadeshi Movement & Nationalist Literature",
     "domain_hindi": "आधुनिक भारत - स्वदेशी आंदोलन एवं राष्ट्रवादी साहित्य",
-    "sub_topic": "Sakharam Ganesh Deuskar, 'Desher Katha' & Economic Critique in Bengal",
+    "sub_topic": "Revolutionary Activities Phase I: Domestic & Abroad",
     "sub_topic_hindi": "सखाराम गणेश देउस्कर, 'देशेर कथा' एवं बंगाल में आर्थिक आलोचना",
     "difficulty": "hard",
     "tags": [
@@ -944,16 +969,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 27,
-    "node_id": "history.indian_freedom_struggle.gandhi_irwin_pact_1931_terms",
+    "node_id": "history.indian_freedom_struggle.simon_commission_nehru_report_civil_disobedience_movement.round_table_conferences_pacts",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - Indian Freedom Struggle (1919-1947)",
     "domain_hindi": "आधुनिक भारत - भारतीय स्वतंत्रता संग्राम (1919-1947)",
-    "sub_topic": "Delhi Pact / Gandhi-Irwin Pact 1931 Terms & Round Table Conference Agreement",
+    "sub_topic": "Round Table Conferences & Pacts",
     "sub_topic_hindi": "दिल्ली समझौता / गांधी-इरविन समझौता 1931 की शर्तें एवं गोलमेज सम्मेलन सहमति",
     "difficulty": "medium",
     "tags": [
@@ -980,16 +1006,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 28,
-    "node_id": "history.modern_india.dalit_reform_movements_gopal_baba_walangkar",
+    "node_id": "history.modern_india.socio-religious_reform_movements.western_central_india_reforms",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - Socio-Religious Reform Movements & Dalit Assertion",
     "domain_hindi": "आधुनिक भारत - सामाजिक-धार्मिक सुधार आंदोलन एवं दलित चेतना",
-    "sub_topic": "Gopal Baba Walangkar, Anti-Caste Movement & 'Vital-Vidhuvansak'",
+    "sub_topic": "Western & Central India Reforms",
     "sub_topic_hindi": "गोपाल बाबा वलंगकर, जाति-विरोधी आंदोलन एवं 'विटाल-विध्वंसक'",
     "difficulty": "hard",
     "tags": [
@@ -1016,16 +1043,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 29,
-    "node_id": "history.ancient_india.gupta_agrarian_system_land_measurements_kulyavapa",
+    "node_id": "history.ancient_india.gupta_empire.gupta_administration_society_economy",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Ancient India - Gupta & Post-Gupta Administration and Agrarian System",
     "domain_hindi": "प्राचीन भारत - गुप्त एवं उत्तर-गुप्त प्रशासन तथा कृषि व्यवस्था",
-    "sub_topic": "Agrarian Terminology & Land Measurement Units (Kulyavapa, Dronavapa, Nivartana)",
+    "sub_topic": "Gupta Administration, Society & Economy",
     "sub_topic_hindi": "कृषि शब्दावली एवं भूमि माप इकाइयां (कुल्यवाप, द्रोणवाप, निवर्तन)",
     "difficulty": "hard",
     "tags": [
@@ -1053,16 +1081,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 30,
-    "node_id": "history.ancient_india.ashokan_edicts_dhamma_tolerance_rock_edict_xii",
+    "node_id": "history.ancient_india.mauryan_empire.ashokas_dhamma_inscriptions",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Ancient India - Mauryan Empire & Inscriptions",
     "domain_hindi": "प्राचीन भारत - मौर्य साम्राज्य एवं अभिलेख",
-    "sub_topic": "Ashokan Edicts, Dhamma & Religious Harmony (Major Rock Edict XII)",
+    "sub_topic": "Ashoka's Dhamma & Inscriptions",
     "sub_topic_hindi": "अशोक के अभिलेख, धम्म एवं धार्मिक सद्भाव (प्रमुख शिलालेख XII)",
     "difficulty": "easy",
     "tags": [
@@ -1090,16 +1119,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 31,
-    "node_id": "art_culture_heritage.buddhism_jainism_philosophy.mahayana_paramitas_bodhisattva_path",
+    "node_id": "art_culture_heritage.schools_of_indian_philosophy.heterodox_nastika_systems.heterodox_traditions_buddhism_jainism_charvaka_ajivika",
     "subject": "Art, Culture & Heritage",
     "subject_hindi": "कला, संस्कृति एवं विरासत",
     "domain": "Buddhism, Jainism & Indian Philosophy",
     "domain_hindi": "बौद्ध धर्म, जैन धर्म एवं भारतीय दर्शन",
-    "sub_topic": "Bodhisattva Doctrine & The Six/Ten Paramitas (Perfections) in Mahayana Buddhism",
+    "sub_topic": "Heterodox Traditions: Buddhism, Jainism, Charvaka & Ajivika",
     "sub_topic_hindi": "महायान बौद्ध धर्म में बोधिसत्व सिद्धांत एवं षड्/दश पारमिताएं (पूर्णताएं)",
     "difficulty": "medium",
     "tags": [
@@ -1127,16 +1157,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 32,
-    "node_id": "history.modern_india.rakhmabai_case_women_rights_age_of_consent",
+    "node_id": "history.modern_india.socio-religious_reform_movements.bengal_eastern_india_reforms",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - Socio-Religious Reform & Women's Rights",
     "domain_hindi": "आधुनिक भारत - सामाजिक-धार्मिक सुधार एवं महिला अधिकार",
-    "sub_topic": "Rakhmabai Case 1884, Restitution of Conjugal Rights & Age of Consent Act 1891",
+    "sub_topic": "Bengal & Eastern India Reforms",
     "sub_topic_hindi": "रखमाबाई मामला 1884, दाम्पत्य अधिकारों की पुनर्स्थापना एवं सहमति आयु अधिनियम 1891",
     "difficulty": "medium",
     "tags": [
@@ -1163,16 +1194,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 33,
-    "node_id": "history.modern_india.indigo_cultivation_decline_synthetic_dyes",
+    "node_id": "history.modern_india.economic_impact_of_british_rule.deindustrialisation_commercialisation",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - Commercial Agriculture & Peasant Struggles",
     "domain_hindi": "आधुनिक भारत - वाणिज्यिक कृषि एवं कृषक संघर्ष",
-    "sub_topic": "Indigo Plantations Decline & Competition from German Synthetic Dyes",
+    "sub_topic": "Deindustrialisation & Commercialisation",
     "sub_topic_hindi": "नील की खेती का पतन एवं जर्मन सिंथेटिक रंगों से प्रतिस्पर्धा",
     "difficulty": "easy",
     "tags": [
@@ -1199,16 +1231,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 34,
-    "node_id": "history.modern_india.lord_wellesley_fort_william_college_civil_services",
+    "node_id": "history.modern_india.british_expansionist_policies_administrative_machinery.administrative_judicial_police_systems",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - British Administrative Reforms & Education",
     "domain_hindi": "आधुनिक भारत - ब्रिटिश प्रशासनिक सुधार एवं शिक्षा",
-    "sub_topic": "Lord Wellesley & Establishment of Fort William College (1800) for Civil Servants Training",
+    "sub_topic": "Administrative, Judicial & Police Systems",
     "sub_topic_hindi": "लॉर्ड वेलेस्ली एवं सिविल सेवकों के प्रशिक्षण हेतु फोर्ट विलियम कॉलेज (1800) की स्थापना",
     "difficulty": "easy",
     "tags": [
@@ -1235,16 +1268,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 35,
-    "node_id": "history.modern_india.tribal_revolts_birsa_munda_ulgulan",
+    "node_id": "history.modern_india.early_peasant_tribal_civil_uprisings.tribal_movements_insurrections",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Modern India - Tribal & Peasant Uprisings",
     "domain_hindi": "आधुनिक भारत - जनजातीय एवं कृषक विद्रोह",
-    "sub_topic": "Birsa Munda & The Ulgulan (The Great Tumult) Rebellion of 1899-1900",
+    "sub_topic": "Tribal Movements & Insurrections",
     "sub_topic_hindi": "बिरसा मुंडा एवं उलगुलान (महान हलचल) विद्रोह 1899-1900",
     "difficulty": "easy",
     "tags": [
@@ -1272,16 +1306,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 36,
-    "node_id": "art_culture_heritage.ancient_literature.sanskrit_scholars_panini_kalidasa_chronology",
-    "subject": "Art, Culture & Heritage",
+    "node_id": "history.ancient_india.gupta_empire.classical_age_of_literature_science_art",
+    "subject": "History",
     "subject_hindi": "कला, संस्कृति एवं विरासत",
     "domain": "Ancient Indian Literature, Sanskrit Grammar & Court Litterateurs",
     "domain_hindi": "प्राचीन भारतीय साहित्य, संस्कृत व्याकरण एवं दरबारी साहित्यकार",
-    "sub_topic": "Classical Sanskrit Scholars & Chronology (Panini, Amarasimha, Kalidasa, Harshavardhana)",
+    "sub_topic": "Classical Age of Literature, Science & Art",
     "sub_topic_hindi": "शास्त्रीय संस्कृत विद्वान एवं कालक्रम (पाणिनि, अमरसिंह, कालिदास, हर्षवर्धन)",
     "difficulty": "hard",
     "tags": [
@@ -1309,16 +1344,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 37,
-    "node_id": "science_technology_defence.biotechnology_genetics.pronuclear_transfer_mitochondrial_diseases",
+    "node_id": "science_technology_defence.biotechnology_health_life_sciences.genomics_genetics_gene_editing",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Biotechnology, Genetics & Medical Advancements",
     "domain_hindi": "जैव प्रौद्योगिकी, आनुवंशिकी एवं चिकित्सा प्रगति",
-    "sub_topic": "Mitochondrial Replacement Therapy & Pronuclear Transfer (Three-Parent Baby)",
+    "sub_topic": "Genomics, Genetics & Gene Editing (Molecular Biology Foundations - DNA, RNA, Plasmids, Chromosomes; Gene Editing Tools & Techniques - CRISPR-Cas9, TALENs, Zinc Finger Nucleases; Genome Sequencing Initiatives - Human Genome Project, Genome India Project, Earth BioGenome; Advanced Genetic Therapies - Gene Therapy, Somatic vs Germline Editing, Three-Parent Babies / Mitochondrial Replacement Therapy)",
     "sub_topic_hindi": "माइटोकॉन्ड्रियल रिप्लेसमेंट थेरेपी एवं प्रोन्यूक्लियर ट्रांसफर (थ्री-पैरेंट बेबी)",
     "difficulty": "medium",
     "tags": [
@@ -1345,16 +1381,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 38,
-    "node_id": "science_technology_defence.emerging_technologies.artificial_intelligence_applications_capabilities",
+    "node_id": "science_technology_defence.information_communication_technology_ai_cyber_security.artificial_intelligence_robotics",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Emerging Technologies & Artificial Intelligence",
     "domain_hindi": "उभरती प्रौद्योगिकियां एवं कृत्रिम बुद्धिमत्ता",
-    "sub_topic": "Applications & Current Capabilities of Artificial Intelligence (AI)",
+    "sub_topic": "Artificial Intelligence & Robotics (Core AI Paradigms - Machine Learning, Deep Learning, Neural Networks, Computer Vision, Natural Language Processing; Generative AI & Frontier Models - Large Language Models / LLMs, Multimodal AI, Deepfakes, Synthetic Media; Robotics & Autonomous Systems - Humanoid Robotics, Swarm Robotics, Autonomous Vehicles; AI Ethics & Global Governance - AI Bias, Responsible AI, Bletchley Declaration, IndiaAI Mission)",
     "sub_topic_hindi": "कृत्रिम बुद्धिमत्ता (एआई) के अनुप्रयोग एवं वर्तमान क्षमताएं",
     "difficulty": "medium",
     "tags": [
@@ -1381,16 +1418,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 39,
-    "node_id": "science_technology_defence.information_communication_technology.visible_light_communication_lifi",
+    "node_id": "science_technology_defence.information_communication_technology_ai_cyber_security.telecommunications_wireless_infrastructure",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Information & Communication Technology (ICT)",
     "domain_hindi": "सूचना एवं संचार प्रौद्योगिकी (आईसीटी)",
-    "sub_topic": "Optical Wireless Communication: Visible Light Communication (VLC) & Li-Fi",
+    "sub_topic": "Telecommunications & Wireless Infrastructure (Cellular Network Evolution - 1G to 5G Architecture, 6G Research, Open RAN; Short & Long-Range Wireless Technologies - Wi-Fi 6/7, Li-Fi, Bluetooth, NFC, RFID, Optical Fiber Infrastructure)",
     "sub_topic_hindi": "ऑप्टिकल वायरलेस संचार: दृश्य प्रकाश संचार (VLC) एवं ली-फाई (Li-Fi)",
     "difficulty": "medium",
     "tags": [
@@ -1418,16 +1456,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 40,
-    "node_id": "science_technology_defence.emerging_technologies.blockchain_technology_distributed_ledger",
+    "node_id": "science_technology_defence.information_communication_technology_ai_cyber_security.emerging_web_frameworks_distributed_ledger_technology",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Emerging Technologies & Cryptography",
     "domain_hindi": "उभरती प्रौद्योगिकियां एवं क्रिप्टोग्राफी",
-    "sub_topic": "Distributed Ledger Technology (DLT) & Blockchain Architecture",
+    "sub_topic": "Emerging Web Frameworks & Distributed Ledger Technology (Blockchain & Web 3.0 - Decentralized Architecture, Cryptocurrencies, Central Bank Digital Currency / CBDC, Smart Contracts; Advanced Digital Paradigms - Internet of Things / IoT, Edge Computing, Big Data Analytics, Spatial Computing / Metaverse)",
     "sub_topic_hindi": "वितरित बहीखाता प्रौद्योगिकी (DLT) एवं ब्लॉकचेन संरचना",
     "difficulty": "easy",
     "tags": [
@@ -1455,16 +1494,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 41,
-    "node_id": "science_technology_defence.nanotechnology.carbon_nanotubes_properties_applications",
+    "node_id": "science_technology_defence.nanoscience_advanced_materials.nanotechnology_applications",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Nanotechnology & Advanced Materials",
     "domain_hindi": "नैनो प्रौद्योगिकी एवं उन्नत सामग्री",
-    "sub_topic": "Carbon Nanotubes (CNTs) Properties, Biomedical & Industrial Applications",
+    "sub_topic": "Nanotechnology Applications (Synthesis & Materials - Nanoparticles, Carbon Nanotubes / CNTs, Quantum Dots, Nano-emulsions; Sectoral Applications - Nano-fertilizers / Nano Urea, Targeted Drug Delivery, Nano-sensors, National Nano Mission)",
     "sub_topic_hindi": "कार्बन नैनोट्यूब (CNTs) गुण, बायोमेडिकल एवं औद्योगिक अनुप्रयोग",
     "difficulty": "medium",
     "tags": [
@@ -1491,16 +1531,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 42,
-    "node_id": "science_technology_defence.robotics_automation.drones_uav_applications",
+    "node_id": "science_technology_defence.defence_technology.military_aviation_unmanned_aerial_systems",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Robotics, Aviation & Drone Technology",
     "domain_hindi": "रोबोटिक्स, विमानन एवं ड्रोन प्रौद्योगिकी",
-    "sub_topic": "Unmanned Aerial Vehicles (UAVs) / Drones Multi-sectoral Applications",
+    "sub_topic": "Military Aviation & Unmanned Aerial Systems (UAVs) (Combat Aircraft & Helicopters - Tejas LCA, Advanced Medium Combat Aircraft / AMCA, Rafale, Prachand LCH; Unmanned Aerial Vehicles & Swarms - Rustom, Tapas-BH-201, Ghatak UCAV, Anti-Drone Systems, Swarm Drones)",
     "sub_topic_hindi": "मानवरहित हवाई वाहन (UAV) / ड्रोन के बहु-क्षेत्रीय अनुप्रयोग",
     "difficulty": "easy",
     "tags": [
@@ -1528,16 +1569,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 43,
-    "node_id": "science_technology_defence.space_science.gravitational_waves_lisa_elisa_mission",
+    "node_id": "science_technology_defence.space_technology_astronomy.deep_space_observatories_cosmology_astrophysics",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Space Science, Astronomy & Particle Physics",
     "domain_hindi": "अंतरिक्ष विज्ञान, खगोल विज्ञान एवं कण भौतिकी",
-    "sub_topic": "Gravitational Wave Detection & Space Interferometers (eLISA / LISA Mission)",
+    "sub_topic": "Deep Space Observatories, Cosmology & Astrophysics (Space & Ground Telescopes - James Webb Space Telescope, Hubble, Thirty Meter Telescope, Square Kilometre Array; Cosmic Phenomena & Astrophysics - Black Holes, Dark Matter & Dark Energy, Gravitational Waves & LIGO India, Exoplanets, Solar Flares & Coronal Mass Ejections)",
     "sub_topic_hindi": "गुरुत्वाकर्षण तरंग संसूचन एवं अंतरिक्ष व्यतिकरणमापी (eLISA / लीसा मिशन)",
     "difficulty": "medium",
     "tags": [
@@ -1566,16 +1608,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 44,
-    "node_id": "science_technology_defence.biotechnology_genetics.germline_genome_editing_crispr",
+    "node_id": "science_technology_defence.biotechnology_health_life_sciences.genomics_genetics_gene_editing",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Biotechnology & Genetic Engineering",
     "domain_hindi": "जैव प्रौद्योगिकी एवं आनुवंशिक इंजीनियरिंग",
-    "sub_topic": "Genome Editing, Germline Modification & CRISPR-Cas9 Technology",
+    "sub_topic": "Genomics, Genetics & Gene Editing (Molecular Biology Foundations - DNA, RNA, Plasmids, Chromosomes; Gene Editing Tools & Techniques - CRISPR-Cas9, TALENs, Zinc Finger Nucleases; Genome Sequencing Initiatives - Human Genome Project, Genome India Project, Earth BioGenome; Advanced Genetic Therapies - Gene Therapy, Somatic vs Germline Editing, Three-Parent Babies / Mitochondrial Replacement Therapy)",
     "sub_topic_hindi": "जीनोम संपादन, जर्मलाइन संशोधन एवं क्रिस्पर-कैस9 (CRISPR-Cas9) प्रौद्योगिकी",
     "difficulty": "hard",
     "tags": [
@@ -1603,16 +1646,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 45,
-    "node_id": "science_technology_defence.health_immunology.pneumococcal_conjugate_vaccine_pcv",
+    "node_id": "science_technology_defence.biotechnology_health_life_sciences.immunology_infectious_diseases_public_health",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Public Health, Immunology & Vaccines",
     "domain_hindi": "सार्वजनिक स्वास्थ्य, प्रतिरक्षा विज्ञान एवं टीके",
-    "sub_topic": "Pneumococcal Conjugate Vaccines (PCV), Universal Immunization Programme & Antimicrobial Resistance",
+    "sub_topic": "Immunology, Infectious Diseases & Public Health (Pathogens & Vectors - Viruses, Bacteria, Fungi, Protozoa, Prions; Zoonotic & Epidemic Diseases - COVID-19 / SARS-CoV-2, Dengue, Zika, Mpox, Ebola, Nipah, Malaria, Tuberculosis; Public Health Crises & Global Frameworks - Antimicrobial Resistance / AMR, Superbugs, One Health Approach, WHO Priority Pathogens)",
     "sub_topic_hindi": "न्यूमोकोकल कंज्युगेट वैक्सीन (PCV), सार्वभौमिक टीकाकरण कार्यक्रम एवं रोगाणुरोधी प्रतिरोध",
     "difficulty": "medium",
     "tags": [
@@ -1640,16 +1684,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 46,
-    "node_id": "science_technology_defence.cybersecurity.public_key_infrastructure_pki_cryptography",
+    "node_id": "science_technology_defence.information_communication_technology_ai_cyber_security.cyber_security_threats_digital_governance",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Cybersecurity & Digital Information Security",
     "domain_hindi": "साइबर सुरक्षा एवं डिजिटल सूचना सुरक्षा",
-    "sub_topic": "Public Key Infrastructure (PKI), Asymmetric Cryptography & Digital Security",
+    "sub_topic": "Cyber Security, Threats & Digital Governance (Vector Threats & Exploits - Malware, Ransomware, Phishing, Zero-Day Exploits, Pegasus / Spyware; Critical Information Infrastructure & Defense - CERT-In, NCIIPC, Cyber Swachhta Kendra; Digital Privacy & Legislation - Digital Personal Data Protection Act 2023, IT Act 2000)",
     "sub_topic_hindi": "पब्लिक की इंफ्रास्ट्रक्चर (PKI), असममित क्रिप्टोग्राफी एवं डिजिटल सुरक्षा",
     "difficulty": "easy",
     "tags": [
@@ -1677,16 +1722,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 47,
-    "node_id": "science_technology_defence.basic_sciences.plant_vs_animal_cell_structure",
+    "node_id": "science_technology_defence.biotechnology_health_life_sciences.cell_biology_reproductive_technology",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Basic Sciences - Cell Biology",
     "domain_hindi": "मूलभूत विज्ञान - कोशिका विज्ञान",
-    "sub_topic": "Cell Biology: Comparative Structure of Plant vs Animal Cells",
+    "sub_topic": "Cell Biology & Reproductive Technology (Stem Cell Science - Embryonic Stem Cells, Induced Pluripotent Stem Cells / iPSCs, Cord Blood Banking; Assisted Reproductive Technologies - In Vitro Fertilization / IVF, Surrogacy Regulation, Amniocentesis, Pre-implantation Genetic Diagnosis)",
     "sub_topic_hindi": "कोशिका विज्ञान: पादप बनाम जंतु कोशिका की संरचनात्मक तुलना",
     "difficulty": "easy",
     "tags": [
@@ -1715,16 +1761,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 48,
-    "node_id": "environment_ecology_disaster_management.pollution_control.benzene_pollution_sources_vocs",
+    "node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.air_pollution_atmospheric_quality",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Environmental Pollution & Hazardous Chemicals",
     "domain_hindi": "पर्यावरण प्रदूषण एवं खतरनाक रसायन",
-    "sub_topic": "Volatile Organic Compounds (VOCs) & Benzene Exposure Sources",
+    "sub_topic": "Air Pollution & Atmospheric Quality (Major Pollutants - PM2.5, PM10, SO2, NO2, CO, Ozone / O3, Lead, Ammonia; National Air Quality Index / AQI; National Clean Air Programme / NCAP; Commission for Air Quality Management / CAQM in NCR; Stubble Burning / Parali Issue & Bio-decomposers; Vehicular Emissions - Bharat Stage VI / BS-VI Emission Norms, EV Transition / FAME Scheme; Industrial Pollution - Flue Gas Desulfurization / FGD, Fly Ash Management Rules; Acid Rain Dynamics & Photochemical Smog)",
     "sub_topic_hindi": "वाष्पशील कार्बनिक यौगिक (VOCs) एवं बेंजीन प्रदूषण के स्रोत",
     "difficulty": "medium",
     "tags": [
@@ -1752,16 +1799,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 49,
-    "node_id": "indian_economy_development.external_sector.external_debt_vulnerability_financial_crisis_immunity",
+    "node_id": "indian_economy_development.external_sector_balance_of_payments_foreign_trade.foreign_exchange_currency_dynamics",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "External Sector & International Trade",
     "domain_hindi": "बाह्य क्षेत्र एवं अंतर्राष्ट्रीय व्यापार",
-    "sub_topic": "External Debt Vulnerability, Short-Term Debt Management & Capital Account Liberalization",
+    "sub_topic": "Foreign Exchange & Currency Dynamics (Foreign Exchange Reserves - Components: Foreign Currency Assets, Gold, SDRs, Reserve Tranche Position in IMF; Exchange Rate Regimes - Clean vs Dirty Float, Nominal Effective Exchange Rate / NEER vs Real Effective Exchange Rate / REER; Currency Convertibility - Full Current Account Convertibility / Article VIII of IMF, Tarapore Committee Recommendations on Capital Account Convertibility; Internationalisation of Indian Rupee - Vostro Accounts, Rupee-denominated Trade Settlement)",
     "sub_topic_hindi": "बाह्य ऋण संवेदनशीलता, अल्पावधि ऋण प्रबंधन एवं पूंजी खाता उदारीकरण",
     "difficulty": "medium",
     "tags": [
@@ -1788,16 +1836,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 50,
-    "node_id": "indian_economy_development.monetary_policy_banking_architecture.money_supply_aggregates_m3_cash_withdrawal",
+    "node_id": "indian_economy_development.monetary_policy_banking_architecture.money_supply_liquidity",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Monetary Policy & Banking Architecture",
     "domain_hindi": "मौद्रिक नीति एवं बैंकिंग संरचना",
-    "sub_topic": "Money Supply Aggregates (M1, M3) & Liquidity Dynamics of Cash Withdrawals",
+    "sub_topic": "Money Supply & Liquidity (Monetary Aggregates - Reserve Money / M0, Narrow Money / M1, Intermediate Money / M2, Broad Money / M3; Money Multiplier Effect, Velocity of Money)",
     "sub_topic_hindi": "मुद्रा आपूर्ति समुच्चय (M1, M3) एवं नकद निकासी की तरलता गतिशीलता",
     "difficulty": "easy",
     "tags": [
@@ -1825,16 +1874,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 51,
-    "node_id": "indian_economy_development.external_sector.fdi_characteristics_vs_fpi_non_debt_flows",
+    "node_id": "indian_economy_development.external_sector_balance_of_payments_foreign_trade.balance_of_payments_architecture",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Foreign Investment & External Sector",
     "domain_hindi": "विदेशी निवेश एवं बाह्य क्षेत्र",
-    "sub_topic": "Foreign Direct Investment (FDI) vs Foreign Portfolio Investment (FPI) Characteristics",
+    "sub_topic": "Balance of Payments Architecture (BOP Structure - Current Account: Merchandise Trade Balance, Invisibles: Services, Transfers, Income; Capital Account: Foreign Direct Investment / FDI, Foreign Portfolio Investment / FPI, External Commercial Borrowings / ECBs, NRI Deposits, External Assistance; Current Account Deficit / CAD & Sustainable Thresholds)",
     "sub_topic_hindi": "प्रत्यक्ष विदेशी निवेश (FDI) बनाम विदेशी पोर्टफोलियो निवेश (FPI) लक्षण",
     "difficulty": "easy",
     "tags": [
@@ -1862,16 +1912,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 52,
-    "node_id": "indian_economy_development.external_sector.india_trade_dynamics_merchandise_services",
+    "node_id": "indian_economy_development.external_sector_balance_of_payments_foreign_trade.balance_of_payments_architecture",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "External Sector & International Trade",
     "domain_hindi": "बाह्य क्षेत्र एवं अंतर्राष्ट्रीय व्यापार",
-    "sub_topic": "India's Merchandise & Services Trade Dynamics and Current Account Deficit Trends",
+    "sub_topic": "Balance of Payments Architecture (BOP Structure - Current Account: Merchandise Trade Balance, Invisibles: Services, Transfers, Income; Capital Account: Foreign Direct Investment / FDI, Foreign Portfolio Investment / FPI, External Commercial Borrowings / ECBs, NRI Deposits, External Assistance; Current Account Deficit / CAD & Sustainable Thresholds)",
     "sub_topic_hindi": "भारत का वस्तु एवं सेवा व्यापार गतिशीलता तथा चालू खाता घाटा प्रवृत्तियां",
     "difficulty": "hard",
     "tags": [
@@ -1899,16 +1950,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 53,
-    "node_id": "indian_economy_development.infrastructure_energy.crude_oil_benchmarks_wti_brent",
+    "node_id": "indian_economy_development.infrastructure_energy_investment_models.energy_transition_power_sector_architecture",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Global Commodities & Energy Markets",
     "domain_hindi": "वैश्विक वस्तुएं एवं ऊर्जा बाजार",
-    "sub_topic": "Global Crude Oil Benchmarks: West Texas Intermediate (WTI) & Brent Crude",
+    "sub_topic": "Energy Transition & Power Sector Architecture (Primary Energy Mix - Coal, Oil, Natural Gas, Renewables; Power Generation, Transmission & Distribution; Power Grid Architecture - One Sun, One World, One Grid / OSOWOG, National Grid; Financial Stress in DISCOMs - Ujjwal DISCOM Assurance Yojana / UDAY, Revamped Distribution Sector Scheme / RDSS; Renewable Energy Targets - 500 GW Non-Fossil Capacity by 2030, National Solar Mission, PM-KUSUM Scheme, Offshore Wind Energy Policy, National Green Hydrogen Mission / 5 MMT Target by 2030)",
     "sub_topic_hindi": "वैश्विक कच्चे तेल के मानक: वेस्ट टेक्सास इंटरमीडिएट (WTI) एवं ब्रेंट क्रूड",
     "difficulty": "easy",
     "tags": [
@@ -1936,16 +1988,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 54,
-    "node_id": "indian_economy_development.fiscal_policy_public_finance_taxation.non_financial_debt_structure",
+    "node_id": "indian_economy_development.fiscal_policy_public_finance_taxation.union_budget_public_finance_architecture_contingency_fund_article_267_public_account_article_266_revenue_receipts_vs_capital_receipts_revenue_expenditure_vs_capital_expenditure_capex_multiplier_effect",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Fiscal Policy, Debt Dynamics & Financial Sector",
     "domain_hindi": "राजकोषीय नीति, ऋण गतिशीलता एवं वित्तीय क्षेत्र",
-    "sub_topic": "Structure of National Debt: Financial Debt vs Non-Financial Debt",
+    "sub_topic": "Union Budget & Public Finance Architecture (Constitutional Provisions - Article 112 / Annual Financial Statement; Budget Structure - Consolidated Fund of India Article 266(1), Contingency Fund Article 267, Public Account Article 266(2); Revenue Receipts vs Capital Receipts, Revenue Expenditure vs Capital Expenditure / Capex Multiplier Effect)",
     "sub_topic_hindi": "राष्ट्रीय ऋण की संरचना: वित्तीय ऋण बनाम गैर-वित्तीय ऋण",
     "difficulty": "medium",
     "tags": [
@@ -1972,16 +2025,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 55,
-    "node_id": "science_technology_defence.nuclear_technology.iaea_safeguards_imported_uranium",
+    "node_id": "science_technology_defence.nuclear_technology_energy.nuclear_energy_programme_reactors",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Nuclear Technology & Strategic Agreements",
     "domain_hindi": "परमाणु प्रौद्योगिकी एवं रणनीतिक समझौते",
-    "sub_topic": "India's Civil Nuclear Agreement & IAEA Safeguards (Imported vs Indigenous Fuel)",
+    "sub_topic": "Nuclear Energy Programme & Reactors (India's Three-Stage Nuclear Power Programme - Stage 1: PHWR & Natural Uranium, Stage 2: Fast Breeder Reactor / PFBR & Plutonium, Stage 3: Thorium-based Reactors; Reactor Installations - Kudankulam, Kakrapar, Kalpakkam / PFBR, KAMINI)",
     "sub_topic_hindi": "भारत का असैन्य परमाणु समझौता एवं आईएईए सुरक्षा उपाय (आयातित बनाम स्वदेशी ईंधन)",
     "difficulty": "easy",
     "tags": [
@@ -2008,16 +2062,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 56,
-    "node_id": "international_relations_global_institutions.wto.trims_agreement_investment_measures",
+    "node_id": "international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform",
     "subject": "International Relations & Global Institutions",
     "subject_hindi": "अंतर्राष्ट्रीय संबंध एवं वैश्विक संस्थाएं",
     "domain": "World Trade Organization (WTO) & Global Trade Rules",
     "domain_hindi": "विश्व व्यापार संगठन (WTO) एवं वैश्विक व्यापार नियम",
-    "sub_topic": "WTO Agreement on Trade-Related Investment Measures (TRIMs)",
+    "sub_topic": "International Organisations & Reform (United Nations Security Council / UNSC Reforms, World Trade Organization / WTO & Dispute Settlement, International Monetary Fund / IMF, World Bank, World Health Organization / WHO)",
     "sub_topic_hindi": "व्यापार से संबंधित निवेश उपायों पर विश्व व्यापार संगठन का समझौता (TRIMs)",
     "difficulty": "medium",
     "tags": [
@@ -2044,16 +2099,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 57,
-    "node_id": "indian_economy_development.monetary_policy_banking_architecture.monetary_policy_stances_expansionary_tools",
+    "node_id": "indian_economy_development.monetary_policy_banking_architecture.monetary_policy_framework_rbi_operations",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Monetary Policy & Banking Architecture",
     "domain_hindi": "मौद्रिक नीति एवं बैंकिंग संरचना",
-    "sub_topic": "RBI Monetary Policy Stances (Expansionary vs Contractionary) & Policy Rates",
+    "sub_topic": "Monetary Policy Framework & RBI Operations (Flexible Inflation Targeting Framework / 4% +/- 2%, Monetary Policy Committee / MPC - Composition & Voting, Policy Rates - Repo Rate, Standing Deposit Facility / SDF, Marginal Standing Facility / MSF, Reverse Repo; Reserve Ratios - Cash Reserve Ratio / CRR, Statutory Liquidity Ratio / SLR; Quantitative Tools - Open Market Operations / OMO, Operation Twist, Long-Term Repo Operations / LTRO; Qualitative Tools - Margin Requirements, Moral Suasion)",
     "sub_topic_hindi": "आरबीआई मौद्रिक नीति रुख (विस्तारवादी बनाम संकुचनकारी) एवं नीतिगत दरें",
     "difficulty": "easy",
     "tags": [
@@ -2082,16 +2138,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 58,
-    "node_id": "indian_economy_development.economic_reforms_post_1991.structural_transformation_agriculture_employment",
+    "node_id": "indian_economy_development.agriculture_food_management_subsidies.buffer_stocking_public_distribution_system",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Economic Reforms, Structural Shift & Employment",
     "domain_hindi": "आर्थिक सुधार, संरचनात्मक परिवर्तन एवं रोजगार",
-    "sub_topic": "Structural Shifts in Indian Economy Post-1991 Liberalization (Agriculture & Rural Workforce)",
+    "sub_topic": "Buffer Stocking & Public Distribution System (Food Corporation of India / FCI - Procurement, Storage & Distribution, Economic Cost of Foodgrains, Open Market Sale Scheme / OMSS; National Food Security Act / NFSA 2013 - Targeted Public Distribution System / TPDS, Antyodaya Anna Yojana / AAY, Priority Households; One Nation One Ration Card / ONORC, Direct Benefit Transfer / DBT in Food Subsidy, Food Subsidy Bill Reforms)",
     "sub_topic_hindi": "1991 के उदारीकरण के बाद भारतीय अर्थव्यवस्था में संरचनात्मक परिवर्तन (कृषि एवं ग्रामीण कार्यबल)",
     "difficulty": "hard",
     "tags": [
@@ -2119,16 +2176,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 59,
-    "node_id": "agriculture_rural_economy.rural_credit.agricultural_credit_delivery_dccb_commercial_banks",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "indian_economy_development.monetary_policy_banking_architecture.banking_structure_regulatory_framework",
+    "subject": "Indian Economy & Development",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Rural Credit & Cooperative Banking Structure",
     "domain_hindi": "ग्रामीण साख एवं सहकारी बैंकिंग संरचना",
-    "sub_topic": "Short-Term Agricultural Credit Architecture: DCCBs, Commercial Banks & Cooperative Credit",
+    "sub_topic": "Banking Structure & Regulatory Framework (Scheduled Commercial Banks - Public Sector Banks, Private Banks, Foreign Banks; Differentiated Banks - Small Finance Banks / SFBs, Payments Banks; Regional Rural Banks / RRBs, Cooperative Banks - Primary Agricultural Credit Societies / PACS, Urban Cooperative Banks / UCBs regulated under Dual Control & Banking Regulation Amendment Act 2020)",
     "sub_topic_hindi": "अल्पावधि कृषि साख संरचना: डीसीसीबी, वाणिज्यिक बैंक एवं सहकारी साख",
     "difficulty": "hard",
     "tags": [
@@ -2156,16 +2214,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 60,
-    "node_id": "science_technology_defence.cybersecurity.cyber_insurance_individual_coverage",
+    "node_id": "science_technology_defence.information_communication_technology_ai_cyber_security.cyber_security_threats_digital_governance",
     "subject": "Science, Technology & Defence",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Cybersecurity & Consumer Protection",
     "domain_hindi": "साइबर सुरक्षा एवं उपभोक्ता संरक्षण",
-    "sub_topic": "Individual Cyber Insurance Policies & Coverage of Cyber Risks",
+    "sub_topic": "Cyber Security, Threats & Digital Governance (Vector Threats & Exploits - Malware, Ransomware, Phishing, Zero-Day Exploits, Pegasus / Spyware; Critical Information Infrastructure & Defense - CERT-In, NCIIPC, Cyber Swachhta Kendra; Digital Privacy & Legislation - Digital Personal Data Protection Act 2023, IT Act 2000)",
     "sub_topic_hindi": "व्यक्तिगत साइबर बीमा पॉलिसियां एवं साइबर जोखिमों का कवरेज",
     "difficulty": "easy",
     "tags": [
@@ -2193,16 +2252,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 61,
-    "node_id": "agriculture_rural_economy.capital_formation.public_investment_in_agriculture_vs_subsidies",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "indian_economy_development.agriculture_food_management_subsidies.agricultural_pricing_market_reforms",
+    "subject": "Indian Economy & Development",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Agricultural Infrastructure & Capital Formation",
     "domain_hindi": "कृषि आधारभूत संरचना एवं पूंजी निर्माण",
-    "sub_topic": "Public Capital Formation & Investment in Agriculture vs Subsidies / Price Support",
+    "sub_topic": "Agricultural Pricing & Market Reforms (Minimum Support Price / MSP - Comprehensive Cost C2 + 50% vs A2+FL; Commission for Agricultural Costs and Prices / CACP; PM-AASHA Scheme; Market Architecture - Agricultural Produce Market Committees / APMC, Model APMC Act, Electronic National Agriculture Market / e-NAM, Farmer Producer Organisations / FPOs, Contract Farming Regulations)",
     "sub_topic_hindi": "कृषि में सार्वजनिक पूंजी निर्माण एवं निवेश बनाम सब्सिडी / मूल्य समर्थन",
     "difficulty": "medium",
     "tags": [
@@ -2229,16 +2289,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 62,
-    "node_id": "indian_economy_development.financial_markets.interest_coverage_ratio_credit_risk",
+    "node_id": "indian_economy_development.monetary_policy_banking_architecture.non-performing_assets_resolution_architecture",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Corporate Finance, Banking & Debt Resolution",
     "domain_hindi": "कॉर्पोरेट वित्त, बैंकिंग एवं ऋण समाधान",
-    "sub_topic": "Financial Ratios & Credit Risk Assessment: Interest Coverage Ratio",
+    "sub_topic": "Non-Performing Assets & Resolution Architecture (Gross vs Net NPAs, Special Mention Accounts / SMA-0, 1, 2, Stressed Assets; Twin Balance Sheet Syndrome; Insolvency and Bankruptcy Code / IBC 2016 - National Company Law Tribunal / NCLT, Insolvency and Bankruptcy Board of India / IBBI, Committee of Creditors; Bad Bank - National Asset Reconstruction Company Limited / NARCL & India Debt Resolution Company Limited / IDRCL; Prompt Corrective Action / PCA Framework, BASEL III Norms - Capital Adequacy Ratio / CRAR, Tier 1 & Tier 2 Capital)",
     "sub_topic_hindi": "वित्तीय अनुपात एवं साख जोखिम मूल्यांकन: ब्याज आवरण अनुपात (इंटरेस्ट कवरेज रेशियो)",
     "difficulty": "easy",
     "tags": [
@@ -2266,16 +2327,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 63,
-    "node_id": "agriculture_rural_economy.price_policy.rice_price_influencing_government_policies",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "indian_economy_development.agriculture_food_management_subsidies.agricultural_pricing_market_reforms",
+    "subject": "Indian Economy & Development",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Agricultural Price Policy & Market Interventions",
     "domain_hindi": "कृषि मूल्य नीति एवं बाजार हस्तक्षेप",
-    "sub_topic": "Government Interventions & Rice Price Stabilization Policies (MSP, FCI Stocking, Consumer Subsidies)",
+    "sub_topic": "Agricultural Pricing & Market Reforms (Minimum Support Price / MSP - Comprehensive Cost C2 + 50% vs A2+FL; Commission for Agricultural Costs and Prices / CACP; PM-AASHA Scheme; Market Architecture - Agricultural Produce Market Committees / APMC, Model APMC Act, Electronic National Agriculture Market / e-NAM, Farmer Producer Organisations / FPOs, Contract Farming Regulations)",
     "sub_topic_hindi": "सरकारी हस्तक्षेप एवं चावल मूल्य स्थिरीकरण नीतियां (एमएसपी, एफसीआई भंडारण, उपभोक्ता सब्सिडी)",
     "difficulty": "easy",
     "tags": [
@@ -2304,16 +2366,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 64,
-    "node_id": "international_relations_global_institutions.bilateral_relations.india_sri_lanka_trade_trends",
+    "node_id": "international_relations_global_institutions.indias_foreign_policy_bilateral_relations.relations_with_immediate_neighbours",
     "subject": "International Relations & Global Institutions",
     "subject_hindi": "अंतर्राष्ट्रीय संबंध एवं वैश्विक संस्थाएं",
     "domain": "Bilateral Trade & Regional Geopolitics (India-Neighbourhood)",
     "domain_hindi": "द्विपक्षीय व्यापार एवं क्षेत्रीय भू-राजनीति (भारत-पड़ोस)",
-    "sub_topic": "India-Sri Lanka Bilateral Trade Agreements (ISFTA) & Merchandise Flow Trends",
+    "sub_topic": "Relations with Immediate Neighbours (Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka, Maldives, Myanmar, Afghanistan)",
     "sub_topic_hindi": "भारत-श्रीलंका द्विपक्षीय व्यापार समझौते (ISFTA) एवं वस्तु प्रवाह प्रवृत्तियां",
     "difficulty": "medium",
     "tags": [
@@ -2341,16 +2404,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 65,
-    "node_id": "international_relations_global_institutions.global_institutions.g20_grouping_membership",
+    "node_id": "international_relations_global_institutions.regional_multilateral_groupings.indo-pacific_trans-regional_alliances",
     "subject": "International Relations & Global Institutions",
     "subject_hindi": "अंतर्राष्ट्रीय संबंध एवं वैश्विक संस्थाएं",
     "domain": "Global Institutions, Multilateral Groupings & Summits",
     "domain_hindi": "वैश्विक संस्थाएं, बहुपक्षीय समूह एवं शिखर सम्मेलन",
-    "sub_topic": "Group of Twenty (G20) Membership & Architecture",
+    "sub_topic": "Indo-Pacific & Trans-Regional Alliances (QUAD, I2U2, BRICS, Shanghai Cooperation Organisation / SCO, G20, Global South Alliances)",
     "sub_topic_hindi": "ग्रुप ऑफ ट्वेंटी (G20) की सदस्यता एवं संरचना",
     "difficulty": "easy",
     "tags": [
@@ -2377,16 +2441,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 66,
-    "node_id": "agriculture_rural_economy.rural_credit.kisan_credit_card_scheme_purposes",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "indian_economy_development.agriculture_food_management_subsidies.farm_inputs_credit_crop_insurance",
+    "subject": "Indian Economy & Development",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Agricultural Credit & Financial Inclusion",
     "domain_hindi": "कृषि साख एवं वित्तीय समावेशन",
-    "sub_topic": "Kisan Credit Card (KCC) Scheme Coverage & Flexible Credit Entitlements",
+    "sub_topic": "Farm Inputs, Credit & Crop Insurance (Fertilizer Architecture - Urea, DAP, MOP; Nutrient Based Subsidy / NBS Scheme, Nano Urea & Nano DAP, Direct Benefit Transfer / DBT in Fertilizers; Institutional Credit - Priority Sector Lending / PSL Norms, Kisan Credit Card / KCC, Interest Subvention Scheme; Pradhan Mantri Fasal Bima Yojana / PMFBY - Yield Index vs Weather Index, PM KISAN / Income Support Scheme)",
     "sub_topic_hindi": "किसान क्रेडिट कार्ड (KCC) योजना का दायरा एवं लचीली साख पात्रताएं",
     "difficulty": "medium",
     "tags": [
@@ -2414,16 +2479,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 67,
-    "node_id": "indian_economy_development.inflation_price_indices.cpi_vs_wpi_weightage_comparison",
+    "node_id": "indian_economy_development.macroeconomic_fundamentals_national_income_accounting.inflation_metrics_control",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Inflation & Price Indices",
     "domain_hindi": "मुद्रास्फीति एवं मूल्य सूचकांक",
-    "sub_topic": "Comparison of Price Indices: Consumer Price Index (CPI) vs Wholesale Price Index (WPI)",
+    "sub_topic": "Inflation Metrics & Control (Headline vs Core Inflation, Demand-Pull vs Cost-Push Inflation, CPI-Combined, CPI-IW, CPI-AL, WPI Indices, Base Effect, Producer Price Index / PPI)",
     "sub_topic_hindi": "मूल्य सूचकांकों की तुलना: उपभोक्ता मूल्य सूचकांक (CPI) बनाम थोक मूल्य सूचकांक (WPI)",
     "difficulty": "medium",
     "tags": [
@@ -2452,16 +2518,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 68,
-    "node_id": "geography_earth_systems.world_geography.major_world_rivers_and_seas",
+    "node_id": "geography_earth_systems.geography_of_the_world.regional_geography_russia_central_asia.russia_physical_divisions_siberia_and_drainage",
     "subject": "Geography & Earth Systems",
     "subject_hindi": "भूगोल एवं पृथ्वी प्रणाली",
     "domain": "World Physical Geography & Drainage Systems",
     "domain_hindi": "विश्व का भौतिक भूगोल एवं अपवाह तंत्र",
-    "sub_topic": "Major World River Systems & Receiving Water Bodies (Mekong, Thames, Volga, Zambezi)",
+    "sub_topic": "Russia: Physical Divides, Siberian Drainage & Lake Baikal",
     "sub_topic_hindi": "विश्व के प्रमुख नदी तंत्र एवं उनके मुहाने/संगम (मेकांग, टेम्स, वोल्गा, जाम्बेजी)",
     "difficulty": "medium",
     "tags": [
@@ -2472,7 +2539,8 @@
       "Volga",
       "Zambezi",
       "World Geography",
-      "Drainage"
+      "Drainage",
+      "Mapping"
     ],
     "question_english": "Consider the following pairs :\nRiver Flows into\n1. Mekong Andaman Sea\n2. Thames Irish Sea\n3. Volga Caspian Sea\n4. Zambezi Indian Ocean\nWhich of the pairs given above is/are correctly matched ?",
     "question_hindi": "निम्नलिखित युग्मों पर विचार कीजिए :\nनदी में जाकर मिलती है\n1. मेकॉग — अण्डमान सागर\n2. थेम्स — आयरिश सागर\n3. वोल्या — कैस्पियन सागर\n4. जम्मेजी — हिन्द महासागर\nउपयुक्त युग्मों में से कौन-सा/से सही सुमेलित है/हैं ?",
@@ -2490,16 +2558,25 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": true,
+    "mapping": {
+      "region": "World",
+      "category": "Physical",
+      "spatial_skill": "Feature-State/Country Matching"
+    },
+    "secondary_node_ids": [
+      "geography_earth_systems.world_mapping_geopolitical_locations.enclosed_seas_bordering_nations"
+    ]
   },
   {
     "question_number": 69,
-    "node_id": "agriculture_rural_economy.price_policy.msp_coverage_procurement_mechanics",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "geography_earth_systems.economic_resource_geography.agricultural_geography_and_food_security.agricultural_revolutions_land_reforms_food_security",
+    "subject": "Geography & Earth Systems",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Agricultural Price Policy & Procurement Mechanism",
     "domain_hindi": "कृषि मूल्य नीति एवं अधिप्राप्ति तंत्र",
-    "sub_topic": "Minimum Support Price (MSP) Crops Coverage, CACP Recommendations & Procurement Operations",
+    "sub_topic": "Agricultural Revolutions, Land Reforms & Food Security Architecture",
     "sub_topic_hindi": "न्यूनतम समर्थन मूल्य (MSP) फसल कवरेज, सीएसीपी अनुशंसाएं एवं अधिप्राप्ति परिचालन",
     "difficulty": "medium",
     "tags": [
@@ -2527,16 +2604,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 70,
-    "node_id": "indian_economy_development.financial_markets.money_market_instruments_cp_cd_call_money",
+    "node_id": "indian_economy_development.monetary_policy_banking_architecture.monetary_policy_framework_rbi_operations",
     "subject": "Indian Economy & Development",
     "subject_hindi": "भारतीय अर्थव्यवस्था एवं विकास",
     "domain": "Financial Markets & Instruments",
     "domain_hindi": "वित्तीय बाजार एवं उपकरण",
-    "sub_topic": "Money Market Instruments: Commercial Papers, Certificates of Deposit & Call Money",
+    "sub_topic": "Monetary Policy Framework & RBI Operations (Flexible Inflation Targeting Framework / 4% +/- 2%, Monetary Policy Committee / MPC - Composition & Voting, Policy Rates - Repo Rate, Standing Deposit Facility / SDF, Marginal Standing Facility / MSF, Reverse Repo; Reserve Ratios - Cash Reserve Ratio / CRR, Statutory Liquidity Ratio / SLR; Quantitative Tools - Open Market Operations / OMO, Operation Twist, Long-Term Repo Operations / LTRO; Qualitative Tools - Margin Requirements, Moral Suasion)",
     "sub_topic_hindi": "मुद्रा बाजार उपकरण: वाणिज्यिक पत्र, जमा प्रमाण पत्र एवं मांग मुद्रा",
     "difficulty": "medium",
     "tags": [
@@ -2564,16 +2642,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 71,
-    "node_id": "history.ancient_india.ascetic_traditions_parivrajaka_shramana_upasaka",
+    "node_id": "history.ancient_india.persian_greek_invasions.achaemenid_persian_invasion",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Ancient India - Religious Traditions & Ascetic Orders",
     "domain_hindi": "प्राचीन भारत - धार्मिक परंपराएं एवं संन्यासी संप्रदाय",
-    "sub_topic": "Ascetic Traditions & Social Orders in Ancient India (Parivrajaka, Shramana, Upasaka)",
+    "sub_topic": "Achaemenid Persian Invasion",
     "sub_topic_hindi": "प्राचीन भारत में संन्यासी परंपराएं एवं सामाजिक व्यवस्थाएं (परिव्राजक, श्रमण, उपासक)",
     "difficulty": "easy",
     "tags": [
@@ -2601,16 +2680,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 72,
-    "node_id": "environment_ecology_disaster_management.wildlife_conservation.asian_elephant_ecology_project_elephant",
+    "node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.in-situ_conservation_architecture",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Wildlife Ecology, Mammals & Project Elephant",
     "domain_hindi": "वन्यजीव पारिस्थितिकी, स्तनधारी एवं प्रोजेक्ट एलिफेंट",
-    "sub_topic": "Asian Elephant (Elephas maximus) Ecology, Behaviour & Conservation Status in India",
+    "sub_topic": "In-Situ Conservation Architecture (Protected Area Network under Wildlife Protection Act 1972 - National Parks: Highest Protection, No Human Rights / Grazing; Wildlife Sanctuaries: Limited Human Activities Allowed; Conservation Reserves & Community Reserves; Biosphere Reserves - UNESCO Man and the Biosphere / MAB Programme: Core, Buffer & Transition Zones / 12 of 18 in WNBR network; Tiger Reserves / Project Tiger 1973 & National Tiger Conservation Authority / NTCA, M-STrIPES Monitoring; Elephant Reserves / Project Elephant 1992, MIKE Programme, Elephant Corridors; Marine Protected Areas / MPAs)",
     "sub_topic_hindi": "एशियाई हाथी (एलिफस मैक्सिमस) पारिस्थितिकी, व्यवहार एवं भारत में संरक्षण स्थिति",
     "difficulty": "medium",
     "tags": [
@@ -2638,16 +2718,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 73,
-    "node_id": "geography_earth_systems.indian_geography.cauvery_basin_protected_areas",
-    "subject": "Geography & Earth Systems",
+    "node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.in-situ_conservation_architecture",
+    "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "भूगोल एवं पृथ्वी प्रणाली",
-    "domain": "Indian Drainage Basins & Protected Area Mapping",
+    "domain": "Biodiversity & Wildlife Conservation (Protected Areas)",
     "domain_hindi": "भारतीय अपवाह द्रोणियां एवं संरक्षित क्षेत्र मानचित्रण",
-    "sub_topic": "Cauvery River Basin & Overlapping National Parks and Wildlife Sanctuaries",
+    "sub_topic": "In-Situ Conservation Architecture (Protected Area Network under Wildlife Protection Act 1972 - National Parks: Highest Protection, No Human Rights / Grazing; Wildlife Sanctuaries: Limited Human Activities Allowed; Conservation Reserves & Community Reserves; Biosphere Reserves - UNESCO Man and the Biosphere / MAB Programme: Core, Buffer & Transition Zones / 12 of 18 in WNBR network; Tiger Reserves / Project Tiger 1973 & National Tiger Conservation Authority / NTCA, M-STrIPES Monitoring; Elephant Reserves / Project Elephant 1992, MIKE Programme, Elephant Corridors; Marine Protected Areas / MPAs)",
     "sub_topic_hindi": "कावेरी नदी द्रोणी एवं संबंधित राष्ट्रीय उद्यान तथा वन्यजीव अभयारण्य",
     "difficulty": "hard",
     "tags": [
@@ -2658,7 +2739,8 @@
       "Sathyamangalam",
       "Wayanad",
       "Papikonda",
-      "Protected Areas"
+      "Protected Areas",
+      "Mapping"
     ],
     "question_english": "Which of the following Protected Areas are located in Cauvery basin?\n1. Nagarhole National Park\n2. Papikonda National Park\n3. Sathyamangalam Tiger Reserve\n4. Wayand Wildlife Sanctuary\nSelect the correct answer using the code given below:",
     "question_hindi": "निम्नलिखित में से कौन-सा ‘संरक्षित क्षेत्र’ कावेरी बेसिन में स्थित है ?\n1. नागरहेले राष्ट्रीय उद्यान\n2. पापिकोंडा राष्ट्रीय उद्यान\n3. सत्यमंगलम बाघ आरक्षित क्षेत्र\n4. वायनाड वन्यजीव अभयारण्य\nनीचे दिए गए कूट का प्रयोग कर सही उत्तर चुनिए :",
@@ -2676,16 +2758,25 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": true,
+    "mapping": {
+      "region": "India",
+      "category": "Environmental",
+      "spatial_skill": "Location Identification"
+    },
+    "secondary_node_ids": [
+      "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout"
+    ]
   },
   {
     "question_number": 74,
-    "node_id": "environment_ecology_disaster_management.biodiversity.indian_avian_species_birds",
+    "node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.biodiversity_fundamentals_patterns",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Biodiversity, Avian Fauna & Ornithology",
     "domain_hindi": "जैव विविधता, पक्षी वर्ग एवं पक्षी विज्ञान",
-    "sub_topic": "Indian Avian Biodiversity: Distinctive Bird Species of the Western Ghats & Subcontinent",
+    "sub_topic": "Biodiversity Fundamentals & Patterns (Three Levels - Genetic Diversity, Species Diversity, Ecosystem Diversity; Gradients of Biodiversity - Latitudinal Gradient, Species-Area Relationship / Alexander von Humboldt; Global Biodiversity Hotspots - Norman Myers Criteria: Western Ghats & Sri Lanka, Eastern Himalayas, Indo-Burma, Sundaland; Mega-Biodiverse Countries)",
     "sub_topic_hindi": "भारतीय पक्षी जैव विविधता: पश्चिमी घाट एवं उपमहाद्वीप के विशिष्ट पक्षी प्रजातियां",
     "difficulty": "easy",
     "tags": [
@@ -2713,16 +2804,25 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": true,
+    "mapping": {
+      "region": "India",
+      "category": "Physical",
+      "spatial_skill": "Location Identification"
+    },
+    "secondary_node_ids": [
+      "geography_earth_systems.indian_mapping_spatial_geography.peninsular_hills_plateaus_passes"
+    ]
   },
   {
     "question_number": 75,
-    "node_id": "environment_ecology_disaster_management.protected_areas.kanha_national_park_barasingha_conservation",
+    "node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.species_profiling_conservation_status",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Protected Areas & Endemic Species Conservation",
     "domain_hindi": "संरक्षित क्षेत्र एवं स्थानिक प्रजाति संरक्षण",
-    "sub_topic": "Hard-ground Barasingha (Swamp Deer) Conservation in Kanha National Park",
+    "sub_topic": "Species Profiling & Conservation Status (IUCN Red List Categories - Extinct / EX, Extinct in the Wild / EW, Critically Endangered / CR: Great Indian Bustard, Gharial, Jerdon's Courser, Pygmy Hog, Hangul; Endangered / EN: Royal Bengal Tiger, Asian Elephant, Snow Leopard, One-horned Rhinoceros, Lion-tailed Macaque, Gangetic Dolphin; Vulnerable / VU: Olive Ridley Turtle, Dugong, Nilgiri Tahr; Conservation Classifications - Keystone Species, Umbrella Species, Flagship Species, Indicator Species, Invasive Alien Species / Lantana camara, Prosopis juliflora, Water Hyacinth)",
     "sub_topic_hindi": "कान्हा राष्ट्रीय उद्यान में हार्ड-ग्राउंड बारहसिंगा (दलदली हिरण) का संरक्षण",
     "difficulty": "easy",
     "tags": [
@@ -2750,16 +2850,25 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": true,
+    "mapping": {
+      "region": "India",
+      "category": "Environmental",
+      "spatial_skill": "Location Identification"
+    },
+    "secondary_node_ids": [
+      "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout"
+    ]
   },
   {
     "question_number": 76,
-    "node_id": "environment_ecology_disaster_management.waste_management.steel_slag_utilization_circular_economy",
+    "node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.air_pollution_atmospheric_quality",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Circular Economy, Industrial Waste & Sustainable Materials",
     "domain_hindi": "चक्रीय अर्थव्यवस्था, औद्योगिक अपशिष्ट एवं सतत सामग्री",
-    "sub_topic": "Industrial By-products Utilization: Steel Slag in Construction & Agriculture",
+    "sub_topic": "Air Pollution & Atmospheric Quality (Major Pollutants - PM2.5, PM10, SO2, NO2, CO, Ozone / O3, Lead, Ammonia; National Air Quality Index / AQI; National Clean Air Programme / NCAP; Commission for Air Quality Management / CAQM in NCR; Stubble Burning / Parali Issue & Bio-decomposers; Vehicular Emissions - Bharat Stage VI / BS-VI Emission Norms, EV Transition / FAME Scheme; Industrial Pollution - Flue Gas Desulfurization / FGD, Fly Ash Management Rules; Acid Rain Dynamics & Photochemical Smog)",
     "sub_topic_hindi": "औद्योगिक उप-उत्पादों का उपयोग: निर्माण एवं कृषि में स्टील स्लैग",
     "difficulty": "easy",
     "tags": [
@@ -2787,16 +2896,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 77,
-    "node_id": "environment_ecology_disaster_management.wildlife_conservation.musk_deer_habitat_askot_gangotri",
+    "node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.species_profiling_conservation_status",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Himalayan Ecology & Endangered Fauna",
     "domain_hindi": "हिमालयी पारिस्थितिकी एवं लुप्तप्राय जीव-जंतु",
-    "sub_topic": "Himalayan Musk Deer (Moschus chrysogaster) Habitat & Protected Areas (Askot, Gangotri)",
+    "sub_topic": "Species Profiling & Conservation Status (IUCN Red List Categories - Extinct / EX, Extinct in the Wild / EW, Critically Endangered / CR: Great Indian Bustard, Gharial, Jerdon's Courser, Pygmy Hog, Hangul; Endangered / EN: Royal Bengal Tiger, Asian Elephant, Snow Leopard, One-horned Rhinoceros, Lion-tailed Macaque, Gangetic Dolphin; Vulnerable / VU: Olive Ridley Turtle, Dugong, Nilgiri Tahr; Conservation Classifications - Keystone Species, Umbrella Species, Flagship Species, Indicator Species, Invasive Alien Species / Lantana camara, Prosopis juliflora, Water Hyacinth)",
     "sub_topic_hindi": "हिमालयी कस्तूरी मृग (मोस्कस क्राइसोगास्टर) का आवास एवं संरक्षित क्षेत्र (अस्कोट, गंगोत्री)",
     "difficulty": "medium",
     "tags": [
@@ -2823,16 +2933,25 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": true,
+    "mapping": {
+      "region": "India",
+      "category": "Environmental",
+      "spatial_skill": "Location Identification"
+    },
+    "secondary_node_ids": [
+      "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout"
+    ]
   },
   {
     "question_number": 78,
-    "node_id": "environment_ecology_disaster_management.sustainable_development.green_road_construction_geotextiles",
+    "node_id": "environment_ecology_disaster_management.institutional_legal_operational_framework.early_warning_infrastructure_forecasting",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Sustainable Infrastructure & Green Technologies",
     "domain_hindi": "सतत आधारभूत संरचना एवं हरित प्रौद्योगिकियां",
-    "sub_topic": "Eco-friendly Road Construction Materials & Technologies (PMGSY Green Guidelines)",
+    "sub_topic": "Early Warning Infrastructure & Forecasting (India Meteorological Department / IMD - Doppler Weather Radars, Colour-Coded Weather Warnings: Green, Yellow, Orange, Red; Indian National Centre for Ocean Information Services / INCOIS - Tsunami & Ocean State Warning; Central Water Commission / CWC - Flood Forecasting Stations; Indian Space Research Organisation / ISRO - Disaster Management Support Programme)",
     "sub_topic_hindi": "पर्यावरण-अनुकूल सड़क निर्माण सामग्री एवं प्रौद्योगिकियां (पीएमजीएसवाई हरित दिशानिर्देश)",
     "difficulty": "medium",
     "tags": [
@@ -2861,16 +2980,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 79,
-    "node_id": "environment_ecology_disaster_management.pollution_control.coal_ash_thermal_power_emissions",
+    "node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.air_pollution_atmospheric_quality",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Industrial Pollution & Thermal Power Plants",
     "domain_hindi": "औद्योगिक प्रदूषण एवं ताप विद्युत संयंत्र",
-    "sub_topic": "Coal-Fired Thermal Power Plant Emissions & Fly Ash Heavy Metal Toxicity",
+    "sub_topic": "Air Pollution & Atmospheric Quality (Major Pollutants - PM2.5, PM10, SO2, NO2, CO, Ozone / O3, Lead, Ammonia; National Air Quality Index / AQI; National Clean Air Programme / NCAP; Commission for Air Quality Management / CAQM in NCR; Stubble Burning / Parali Issue & Bio-decomposers; Vehicular Emissions - Bharat Stage VI / BS-VI Emission Norms, EV Transition / FAME Scheme; Industrial Pollution - Flue Gas Desulfurization / FGD, Fly Ash Management Rules; Acid Rain Dynamics & Photochemical Smog)",
     "sub_topic_hindi": "कोयला आधारित ताप विद्युत संयंत्र उत्सर्जन एवं फ्लाई ऐश भारी धातु विषाक्तता",
     "difficulty": "easy",
     "tags": [
@@ -2898,16 +3018,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 80,
-    "node_id": "agriculture_rural_economy.soil_health.biochar_soil_fertility_carbon_sequestration",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.soils_natural_vegetation_of_india.major_soil_types_of_india_and_land_degradation",
+    "subject": "Geography & Earth Systems",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Soil Science & Sustainable Agronomy",
     "domain_hindi": "मृदा विज्ञान एवं सतत कृषि विज्ञान",
-    "sub_topic": "Biochar Agronomic Properties, Soil Fertility Enhancement & Carbon Sequestration",
+    "sub_topic": "Major Soil Groups of India: ICAR Classification & Land Degradation",
     "sub_topic_hindi": "बायोचार के कृषि संबंधी गुण, मृदा उर्वरता वृद्धि एवं कार्बन पृथक्करण",
     "difficulty": "easy",
     "tags": [
@@ -2935,16 +3056,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 81,
-    "node_id": "environment_ecology_disaster_management.environmental_law.wildlife_protection_act_1972_schedule_vi_plants",
+    "node_id": "environment_ecology_disaster_management.environmental_legislation_institutions_eia_in_india.core_environmental_legislation",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Environmental Legislation & Wildlife Laws",
     "domain_hindi": "पर्यावरण कानून एवं वन्यजीव विधान",
-    "sub_topic": "Wildlife Protection Act 1972: Schedule VI Specified Plants & Cultivation Restrictions",
+    "sub_topic": "Core Environmental Legislation (Wildlife Protection Act 1972 & Wildlife Protection Amendment Act 2022 - Rationalisation of Schedules from VI to IV, CITES Appendices Integration; Water Prevention and Control of Pollution Act 1974 & 2024 Amendment; Air Prevention and Control of Pollution Act 1981; Environment Protection Act 1986 / Umbrella Legislation Post-Bhopal Gas Tragedy; Forest Conservation Act 1980 & Van Sanrakshan Evam Samvardhan Adhiniyam 2023 / Forest Amendment Act; Biological Diversity Act 2002 & 2023 Amendment - Access and Benefit Sharing / ABS Mechanism; Forest Rights Act / FRA 2006 - Individual Forest Rights / IFR & Community Forest Rights / CFR)",
     "sub_topic_hindi": "वन्यजीव संरक्षण अधिनियम 1972: अनुसूची VI निर्दिष्ट पादप एवं खेती प्रतिबंध",
     "difficulty": "easy",
     "tags": [
@@ -2971,16 +3093,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 82,
-    "node_id": "history.ancient_india.gupta_period_maritime_ports_ghantasala_chaul",
+    "node_id": "history.ancient_india.gupta_empire.gupta_administration_society_economy",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Ancient India - Trade, Ports & Maritime Commerce",
     "domain_hindi": "प्राचीन भारत - व्यापार, पत्तन एवं समुद्री वाणिज्य",
-    "sub_topic": "Ancient Maritime Trade Ports & Emporiums during Gupta Era (Ghantasala, Kadura, Chaul)",
+    "sub_topic": "Gupta Administration, Society & Economy",
     "sub_topic_hindi": "गुप्त काल में प्राचीन समुद्री व्यापारिक पत्तन एवं व्यापार केंद्र (घंटासाला, कदूरा, चौल)",
     "difficulty": "medium",
     "tags": [
@@ -3009,16 +3132,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 83,
-    "node_id": "agriculture_rural_economy.sustainable_agriculture.zero_tillage_conservation_agriculture",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "geography_earth_systems.geography_of_the_world.regional_geography_new_zealand.new_zealand_climate_pastoral_economy_and_resources",
+    "subject": "Geography & Earth Systems",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Conservation Agriculture & Agronomic Practices",
     "domain_hindi": "संरक्षण कृषि एवं कृषि पद्धतियां",
-    "sub_topic": "Conservation Agriculture & Zero Tillage (No-Till) Farming Benefits",
+    "sub_topic": "New Zealand: Marine Climate, Pastoral Dairy Economy & Geothermal Energy",
     "sub_topic_hindi": "संरक्षण कृषि एवं शून्य जुताई (जीरो टिलेज) कृषि के लाभ",
     "difficulty": "easy",
     "tags": [
@@ -3046,16 +3170,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 84,
-    "node_id": "environment_ecology_disaster_management.renewable_energy.national_biofuels_policy_feedstocks",
+    "node_id": "environment_ecology_disaster_management.institutional_legal_operational_framework.early_warning_infrastructure_forecasting",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Renewable Energy & Biofuels Policy",
     "domain_hindi": "नवीकरणीय ऊर्जा एवं जैव ईंधन नीति",
-    "sub_topic": "National Policy on Biofuels 2018: Feedstocks & 1G/2G Ethanol Production",
+    "sub_topic": "Early Warning Infrastructure & Forecasting (India Meteorological Department / IMD - Doppler Weather Radars, Colour-Coded Weather Warnings: Green, Yellow, Orange, Red; Indian National Centre for Ocean Information Services / INCOIS - Tsunami & Ocean State Warning; Central Water Commission / CWC - Flood Forecasting Stations; Indian Space Research Organisation / ISRO - Disaster Management Support Programme)",
     "sub_topic_hindi": "राष्ट्रीय जैव ईंधन नीति 2018: कच्चा माल (फीडस्टॉक) एवं 1G/2G इथेनॉल उत्पादन",
     "difficulty": "medium",
     "tags": [
@@ -3082,16 +3207,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 85,
-    "node_id": "environment_ecology_disaster_management.climate_change.social_cost_of_carbon_concept",
+    "node_id": "environment_ecology_disaster_management.climate_change_science_carbon_markets_global_conventions.international_climate_architecture_treaties",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Climate Change Economics & Carbon Pricing",
     "domain_hindi": "जलवायु परिवर्तन अर्थशास्त्र एवं कार्बन मूल्य निर्धारण",
-    "sub_topic": "Economics of Climate Change: Concept of Social Cost of Carbon (SCC)",
+    "sub_topic": "International Climate Architecture & Treaties (United Nations Framework Convention on Climate Change / UNFCCC 1992 Earth Summit; Kyoto Protocol 1997 - Annex I vs Non-Annex I Parties, Clean Development Mechanism / CDM, Common But Differentiated Responsibilities and Respective Capabilities / CBDR-RC; Paris Agreement 2015 / COP21 - Nationally Determined Contributions / NDCs, Global Stocktake / GST, Long-Term Low Emission Development Strategies / LT-LEDS; Glasgow COP26 - India's Panchamrit Targets: Net-Zero by 2070, 500 GW Non-fossil Capacity, Mission LiFE; Sharm El-Sheikh COP27 & Dubai COP28 - Loss and Damage Fund, Global Renewables and Energy Efficiency Pledge)",
     "sub_topic_hindi": "जलवायु परिवर्तन का अर्थशास्त्र: कार्बन की सामाजिक लागत (SCC) की अवधारणा",
     "difficulty": "easy",
     "tags": [
@@ -3118,16 +3244,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 86,
-    "node_id": "agriculture_rural_economy.crop_production.pulses_cultivation_production_trends_india",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "geography_earth_systems.economic_resource_geography.agricultural_geography_and_food_security.cropping_patterns_major_food_commercial_crops_india",
+    "subject": "Geography & Earth Systems",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Agronomy & Major Crop Production Trends",
     "domain_hindi": "कृषि विज्ञान एवं प्रमुख फसल उत्पादन प्रवृत्तियां",
-    "sub_topic": "Pulses Cultivation in India: Agronomic Seasons, Gram/Urad Production Dynamics",
+    "sub_topic": "Cropping Patterns & Geographic Belts of Food & Commercial Crops",
     "sub_topic_hindi": "भारत में दलहन की खेती: कृषि ऋतुएं, चना/उड़द उत्पादन गतिशीलता",
     "difficulty": "hard",
     "tags": [
@@ -3155,16 +3282,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 87,
-    "node_id": "geography_earth_systems.indian_geography.cotton_crop_climatic_requirements",
+    "node_id": "geography_earth_systems.economic_resource_geography.agricultural_geography_and_food_security.cropping_patterns_major_food_commercial_crops_india",
     "subject": "Geography & Earth Systems",
     "subject_hindi": "भूगोल एवं पृथ्वी प्रणाली",
     "domain": "Economic Geography - Major Crops",
     "domain_hindi": "आर्थिक भूगोल - प्रमुख फसलें",
-    "sub_topic": "Agro-Climatic Requirements & Cultivation Characteristics of Cash Crops: Cotton",
+    "sub_topic": "Cropping Patterns & Geographic Belts of Food & Commercial Crops",
     "sub_topic_hindi": "नकदी फसलों की कृषि-जलवायु आवश्यकताएं एवं उत्पादन विशेषताएं: कपास",
     "difficulty": "easy",
     "tags": [
@@ -3192,16 +3320,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 88,
-    "node_id": "science_technology_defence.renewable_energy_tech.solar_water_pumping_systems",
-    "subject": "Science, Technology & Defence",
+    "node_id": "geography_earth_systems.geography_of_the_world.regional_geography_new_zealand.new_zealand_climate_pastoral_economy_and_resources",
+    "subject": "Geography & Earth Systems",
     "subject_hindi": "विज्ञान, प्रौद्योगिकी एवं रक्षा",
     "domain": "Renewable Energy Technology & Applications",
     "domain_hindi": "नवीकरणीय ऊर्जा प्रौद्योगिकी एवं अनुप्रयोग",
-    "sub_topic": "Solar Photovoltaic Water Pumping Systems: Working Principles & Motor Types",
+    "sub_topic": "New Zealand: Marine Climate, Pastoral Dairy Economy & Geothermal Energy",
     "sub_topic_hindi": "सौर फोटोवोल्टिक जल पंपिंग प्रणाली: कार्य सिद्धांत एवं मोटर प्रकार",
     "difficulty": "medium",
     "tags": [
@@ -3229,16 +3358,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 89,
-    "node_id": "agriculture_rural_economy.sustainable_agriculture.sustainable_sugarcane_initiative_ssi",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "geography_earth_systems.geography_of_the_world.regional_geography_south_asia.south_asian_climate_agriculture_and_resources",
+    "subject": "Geography & Earth Systems",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Agronomy & Advanced Farming Techniques",
     "domain_hindi": "कृषि विज्ञान एवं उन्नत कृषि तकनीकें",
-    "sub_topic": "Modern Sugarcane Agronomy: Sustainable Sugarcane Initiative (SSI) & Settling Transplanting",
+    "sub_topic": "South Asia: Monsoon Agriculture, Water Treaties & Natural Disasters",
     "sub_topic_hindi": "आधुनिक गन्ना कृषि विज्ञान: सस्टेनेबल शुगरकेन इनीशिएटिव (SSI) एवं पौध रोपण",
     "difficulty": "hard",
     "tags": [
@@ -3265,16 +3395,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 90,
-    "node_id": "agriculture_rural_economy.sustainable_agriculture.eco_friendly_agronomic_practices_tensiometer",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "indian_economy_development.agriculture_food_management_subsidies.cropping_patterns_agrarian_systems",
+    "subject": "Indian Economy & Development",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Sustainable & Climate-Resilient Agriculture",
     "domain_hindi": "सतत एवं जलवायु-अनुकूल कृषि",
-    "sub_topic": "Eco-Friendly Agronomic Practices: Crop Diversification, Legumes & Tensiometer Irrigation",
+    "sub_topic": "Cropping Patterns & Agrarian Systems (Kharif, Rabi & Zaid Seasons; Crop Diversity - Cereals, Pulses, Oilseeds, Commercial Crops; Millets / Shree Anna - Climate Resilient Crops, International Year of Millets 2023; Precision Farming & Zero Budget Natural Farming / ZBNF)",
     "sub_topic_hindi": "पर्यावरण-अनुकूल कृषि पद्धतियां: फसल विविधीकरण, दलहन संवर्धन एवं टेंसियोमीटर सिंचाई",
     "difficulty": "easy",
     "tags": [
@@ -3301,16 +3432,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 91,
-    "node_id": "agriculture_rural_economy.irrigation.fertigation_technology_micro_irrigation",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "indian_economy_development.agriculture_food_management_subsidies.irrigation_infrastructure_water_productivity",
+    "subject": "Indian Economy & Development",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Micro-irrigation & Nutrient Management",
     "domain_hindi": "सूक्ष्म सिंचाई एवं पोषक तत्व प्रबंधन",
-    "sub_topic": "Micro-irrigation & Fertigation Technology: Nutrient Use Efficiency & Water Management",
+    "sub_topic": "Irrigation Infrastructure & Water Productivity (Types - Surface, Groundwater, Canal Irrigation; Micro-Irrigation - Drip & Sprinkler Systems; Pradhan Mantri Krishi Sinchayee Yojana / PMKSY - Per Drop More Crop, Har Khet Ko Pani; Command Area Development; Groundwater Overexploitation & Atal Bhujal Yojana)",
     "sub_topic_hindi": "सूक्ष्म सिंचाई एवं फर्टिगेशन प्रौद्योगिकी: पोषक तत्व उपयोग दक्षता एवं जल प्रबंधन",
     "difficulty": "medium",
     "tags": [
@@ -3337,16 +3469,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 92,
-    "node_id": "geography_earth_systems.indian_geography.mineral_classification_major_vs_minor_mmdr",
+    "node_id": "geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources.metallic_and_non_metallic_mineral_belts",
     "subject": "Geography & Earth Systems",
     "subject_hindi": "भूगोल एवं पृथ्वी प्रणाली",
     "domain": "Mineral Resources & Mining Regulations",
     "domain_hindi": "खनिज संसाधन एवं खनन विनियम",
-    "sub_topic": "Classification of Minerals in India: Major vs Minor Minerals under MMDR Act",
+    "sub_topic": "Metallic & Non-Metallic Mineral Belts: India & Global Reserves",
     "sub_topic_hindi": "भारत में खनिजों का वर्गीकरण: एमएमडीआर अधिनियम के तहत मुख्य बनाम गौण खनिज",
     "difficulty": "hard",
     "tags": [
@@ -3375,16 +3508,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 93,
-    "node_id": "geography_earth_systems.oceanography.ocean_mean_temperature_monsoon_forecasting",
+    "node_id": "geography_earth_systems.oceanography_marine_systems.ocean_water_dynamics.ocean_currents_gyres_and_thermohaline_circulation",
     "subject": "Geography & Earth Systems",
     "subject_hindi": "भूगोल एवं पृथ्वी प्रणाली",
     "domain": "Climatology, Oceanography & Monsoon Dynamics",
     "domain_hindi": "जलवायु विज्ञान, समुद्र विज्ञान एवं मानसून गतिशीलता",
-    "sub_topic": "Ocean Mean Temperature (OMT) & Sea Surface Temperature (SST) in Monsoon Forecasting",
+    "sub_topic": "Ocean Currents: Global Gyres & Thermohaline Circulation",
     "sub_topic_hindi": "मानसून पूर्वानुमान में महासागरीय माध्य तापमान (OMT) एवं समुद्र सतह तापमान (SST)",
     "difficulty": "hard",
     "tags": [
@@ -3412,16 +3546,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 94,
-    "node_id": "agriculture_rural_economy.fertilizers_subsidies.fertilizer_pricing_urea_nbs_policy",
-    "subject": "Agriculture & Rural Economy",
+    "node_id": "indian_economy_development.agriculture_food_management_subsidies.farm_inputs_credit_crop_insurance",
+    "subject": "Indian Economy & Development",
     "subject_hindi": "कृषि एवं ग्रामीण अर्थव्यवस्था",
     "domain": "Agricultural Inputs, Fertilizers & Subsidies",
     "domain_hindi": "कृषि इनपुट, उर्वरक एवं सब्सिडी",
-    "sub_topic": "Fertilizer Policy in India: Nutrient Based Subsidy (NBS), Urea Pricing & Feedstocks",
+    "sub_topic": "Farm Inputs, Credit & Crop Insurance (Fertilizer Architecture - Urea, DAP, MOP; Nutrient Based Subsidy / NBS Scheme, Nano Urea & Nano DAP, Direct Benefit Transfer / DBT in Fertilizers; Institutional Credit - Priority Sector Lending / PSL Norms, Kisan Credit Card / KCC, Interest Subvention Scheme; Pradhan Mantri Fasal Bima Yojana / PMFBY - Yield Index vs Weather Index, PM KISAN / Income Support Scheme)",
     "sub_topic_hindi": "भारत में उर्वरक नीति: पोषक तत्व आधारित सब्सिडी (NBS), यूरिया मूल्य निर्धारण एवं कच्चा माल",
     "difficulty": "medium",
     "tags": [
@@ -3450,16 +3585,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 95,
-    "node_id": "environment_ecology_disaster_management.protected_areas.desert_national_park_great_indian_bustard",
+    "node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.species_profiling_conservation_status",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Protected Areas & Endangered Species",
     "domain_hindi": "संरक्षित क्षेत्र एवं लुप्तप्राय प्रजातियां",
-    "sub_topic": "Desert National Park: Habitat Features, Human Habitations & Great Indian Bustard",
+    "sub_topic": "Species Profiling & Conservation Status (IUCN Red List Categories - Extinct / EX, Extinct in the Wild / EW, Critically Endangered / CR: Great Indian Bustard, Gharial, Jerdon's Courser, Pygmy Hog, Hangul; Endangered / EN: Royal Bengal Tiger, Asian Elephant, Snow Leopard, One-horned Rhinoceros, Lion-tailed Macaque, Gangetic Dolphin; Vulnerable / VU: Olive Ridley Turtle, Dugong, Nilgiri Tahr; Conservation Classifications - Keystone Species, Umbrella Species, Flagship Species, Indicator Species, Invasive Alien Species / Lantana camara, Prosopis juliflora, Water Hyacinth)",
     "sub_topic_hindi": "राष्ट्रीय मरु उद्यान: आवास विशेषताएं, मानव बस्तियां एवं ग्रेट इंडियन बस्टर्ड",
     "difficulty": "medium",
     "tags": [
@@ -3487,16 +3623,25 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": true,
+    "mapping": {
+      "region": "India",
+      "category": "Environmental",
+      "spatial_skill": "Location Identification"
+    },
+    "secondary_node_ids": [
+      "geography_earth_systems.indian_mapping_spatial_geography.protected_areas_wildlife_corridors_spatial_layout"
+    ]
   },
   {
     "question_number": 96,
-    "node_id": "geography_earth_systems.indian_geography.siachen_glacier_nubra_valley_karakoram",
+    "node_id": "geography_earth_systems.geography_of_the_world.regional_geography_russia_central_asia.central_asian_steppes_and_resource_geography",
     "subject": "Geography & Earth Systems",
     "subject_hindi": "भूगोल एवं पृथ्वी प्रणाली",
     "domain": "Indian Physical Geography & Glaciology",
     "domain_hindi": "भारत का भौतिक भूगोल एवं हिमनद विज्ञान",
-    "sub_topic": "Karakoram Range Glaciology & Geomorphology: Siachen Glacier & Nubra Valley",
+    "sub_topic": "Central Asia: Steppes, Tian Shan-Pamirs & Caspian Energy Basins",
     "sub_topic_hindi": "काराकोरम श्रेणी हिमनद विज्ञान एवं भू-आकृति विज्ञान: सियाचिन हिमनद एवं नुब्रा घाटी",
     "difficulty": "easy",
     "tags": [
@@ -3524,16 +3669,25 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": true,
+    "mapping": {
+      "region": "India",
+      "category": "Physical",
+      "spatial_skill": "Location Identification"
+    },
+    "secondary_node_ids": [
+      "geography_earth_systems.indian_mapping_spatial_geography.himalayan_mountain_ranges_passes_glaciers"
+    ]
   },
   {
     "question_number": 97,
-    "node_id": "history.ancient_india.historical_geography_ancient_cities_identification",
+    "node_id": "history.post-independence_india.linguistic_reorganisation_of_states_national_consolidation.states_reorganisation_commission_implementation",
     "subject": "History",
     "subject_hindi": "इतिहास",
     "domain": "Ancient & Medieval Historical Geography",
     "domain_hindi": "प्राचीन एवं मध्यकालीन ऐतिहासिक भूगोल",
-    "sub_topic": "Ancient Historical Geography & City Identifications (Bhilsa, Dwarasamudra, Girnagar, Sthaneshwara)",
+    "sub_topic": "States Reorganisation Commission & Implementation",
     "sub_topic_hindi": "प्राचीन ऐतिहासिक भूगोल एवं नगर पहचान (भिलसा, द्वारसमुद्र, गिरिनगर, स्थानेश्वर)",
     "difficulty": "medium",
     "tags": [
@@ -3561,16 +3715,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 98,
-    "node_id": "environment_ecology_disaster_management.environmental_law.central_ground_water_authority_epa_1986",
+    "node_id": "environment_ecology_disaster_management.environmental_legislation_institutions_eia_in_india.core_environmental_legislation",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Water Resources & Environmental Governance",
     "domain_hindi": "जल संसाधन एवं पर्यावरण शासन",
-    "sub_topic": "Central Ground Water Authority (CGWA), Environment Protection Act & Groundwater Extraction",
+    "sub_topic": "Core Environmental Legislation (Wildlife Protection Act 1972 & Wildlife Protection Amendment Act 2022 - Rationalisation of Schedules from VI to IV, CITES Appendices Integration; Water Prevention and Control of Pollution Act 1974 & 2024 Amendment; Air Prevention and Control of Pollution Act 1981; Environment Protection Act 1986 / Umbrella Legislation Post-Bhopal Gas Tragedy; Forest Conservation Act 1980 & Van Sanrakshan Evam Samvardhan Adhiniyam 2023 / Forest Amendment Act; Biological Diversity Act 2002 & 2023 Amendment - Access and Benefit Sharing / ABS Mechanism; Forest Rights Act / FRA 2006 - Individual Forest Rights / IFR & Community Forest Rights / CFR)",
     "sub_topic_hindi": "केंद्रीय भूजल प्राधिकरण (CGWA), पर्यावरण संरक्षण अधिनियम एवं भूजल दोहन",
     "difficulty": "hard",
     "tags": [
@@ -3597,16 +3752,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 99,
-    "node_id": "geography_earth_systems.climatology.jet_streams_tropical_cyclones_eye",
+    "node_id": "geography_earth_systems.climatology_atmospheric_dynamics.atmospheric_pressure_global_wind_belts.coriolis_force_geostrophic_winds_jet_streams",
     "subject": "Geography & Earth Systems",
     "subject_hindi": "भूगोल एवं पृथ्वी प्रणाली",
     "domain": "Climatology & Atmospheric Dynamics",
     "domain_hindi": "जलवायु विज्ञान एवं वायुमंडलीय गतिशीलता",
-    "sub_topic": "Upper Atmospheric Circulations: Jet Streams & Tropical Cyclone Eye Structure",
+    "sub_topic": "Coriolis Force, Geostrophic Winds & Polar Jet Streams",
     "sub_topic_hindi": "ऊपरी वायुमंडलीय परिसंचरण: जेट धाराएं एवं उष्णकटिबंधीय चक्रवात वाताक्ष (आँख) संरचना",
     "difficulty": "medium",
     "tags": [
@@ -3634,16 +3790,17 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   },
   {
     "question_number": 100,
-    "node_id": "environment_ecology_disaster_management.wildlife_conservation.critical_tiger_habitats_nagarjunasagar_srisailam",
+    "node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.in-situ_conservation_architecture",
     "subject": "Environment, Ecology & Disaster Management",
     "subject_hindi": "पर्यावरण, पारिस्थितिकी एवं आपदा प्रबंधन",
     "domain": "Wildlife Conservation & Tiger Reserves",
     "domain_hindi": "वन्यजीव संरक्षण एवं बाघ अभयारण्य",
-    "sub_topic": "Tiger Conservation Architecture: Critical Tiger Habitats (CTH) & Nagarjunasagar-Srisailam",
+    "sub_topic": "In-Situ Conservation Architecture (Protected Area Network under Wildlife Protection Act 1972 - National Parks: Highest Protection, No Human Rights / Grazing; Wildlife Sanctuaries: Limited Human Activities Allowed; Conservation Reserves & Community Reserves; Biosphere Reserves - UNESCO Man and the Biosphere / MAB Programme: Core, Buffer & Transition Zones / 12 of 18 in WNBR network; Tiger Reserves / Project Tiger 1973 & National Tiger Conservation Authority / NTCA, M-STrIPES Monitoring; Elephant Reserves / Project Elephant 1992, MIKE Programme, Elephant Corridors; Marine Protected Areas / MPAs)",
     "sub_topic_hindi": "बाघ संरक्षण संरचना: क्रिटिकल टाइगर हैबिटेट (CTH) एवं नागार्जुनसागर-श्रीशैलम",
     "difficulty": "easy",
     "tags": [
@@ -3671,6 +3828,7 @@
     "year": 2020,
     "month": "October",
     "paper": 1,
-    "image_url": null
+    "image_url": null,
+    "is_mapping": false
   }
 ]

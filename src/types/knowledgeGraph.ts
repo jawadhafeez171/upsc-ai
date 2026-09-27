@@ -33,6 +33,8 @@ export interface KnowledgeNode {
     description?: string;
     entities: string[];
     keywords: string[];
+    isMappingFacet?: boolean;
+    canonicalParentId?: string;
 }
 
 export interface KnowledgeGraphStats {

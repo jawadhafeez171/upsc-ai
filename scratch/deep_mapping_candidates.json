@@ -1,0 +1,4530 @@
+[
+  {
+    "year": "2011",
+    "q_num": 4,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "India has experienced persistent and high food inflation in the recent past. What could be the reasons?\n1. Due to a grad"
+  },
+  {
+    "year": "2011",
+    "q_num": 20,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: western ghats"
+    ],
+    "question_en": "Three of the following criteria have contributed to the recognition of Western Ghats-Sri Lanka and Indo-Burma regions as"
+  },
+  {
+    "year": "2011",
+    "q_num": 24,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: himalayan"
+    ],
+    "question_en": "The Himalayan Range is very rich in species diversity. Which one among the following is the most appropriate reason for "
+  },
+  {
+    "year": "2011",
+    "q_num": 30,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to \"Aam Admi Bima Yojana\", consider the following statements:\n1. The member insured under the scheme must"
+  },
+  {
+    "year": "2011",
+    "q_num": 31,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: north sea"
+    ],
+    "question_en": "In the context of global oil prices, \"Brent crude oil\" is frequently referred to in the news. What does this term imply?"
+  },
+  {
+    "year": "2011",
+    "q_num": 41,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Among the following who are eligible to benefit from the \"Mahatma Gandhi National Rural Employment Guarantee Act\"?"
+  },
+  {
+    "year": "2011",
+    "q_num": 42,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to \"Look East Policy\" of India, consider the following statements:\n1. India wants to establish itself as "
+  },
+  {
+    "year": "2011",
+    "q_num": 43,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "When the annual Union Budget is not passed by the Lok Sabha,"
+  },
+  {
+    "year": "2011",
+    "q_num": 51,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "A sandy and saline area is the natural habitat of an Indian animal species. The animal has no predators in that area but"
+  },
+  {
+    "year": "2011",
+    "q_num": 56,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "India maintained its early cultural contacts and trade links with Southeast Asia across the Bay of Bengal. For this pre-"
+  },
+  {
+    "year": "2011",
+    "q_num": 76,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The 2004 Tsunami made people realize that mangroves can serve as a reliable safety hedge against coastal calamities. How"
+  },
+  {
+    "year": "2011",
+    "q_num": 79,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The \"Red Data Books\" published by the International Union for Conservation of Nature and Natural Resources (IUCN) contai"
+  },
+  {
+    "year": "2011",
+    "q_num": 83,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In India, which of the following have the highest share in the disbursement of credit to agriculture and allied activiti"
+  },
+  {
+    "year": "2011",
+    "q_num": 90,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Strait/Canal: malacca"
+    ],
+    "question_en": "Between India and East Asia, the navigation-time and distance can be greatly reduced by which of the following?\n1. Deepe"
+  },
+  {
+    "year": "2011",
+    "q_num": 97,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World River/Lake: mekong"
+    ],
+    "question_en": "The Brahmaputra, Irrawady and Mekong rivers originate in Tibet and flow through narrow and parallel mountain ranges in t"
+  },
+  {
+    "year": "2012",
+    "q_num": 5,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: himalayan"
+    ],
+    "question_en": "If National Water Mission is properly and completely implemented, how will it impact the country?\n1. Part of the water n"
+  },
+  {
+    "year": "2012",
+    "q_num": 6,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following provisions under the Directive Principles of State Policy as enshrined in the Constitution of Ind"
+  },
+  {
+    "year": "2012",
+    "q_num": 13,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "What is the role of ultraviolet (UV) radiation in the water purification systems?\n1. It inactivates/kills the harmful mi"
+  },
+  {
+    "year": "2012",
+    "q_num": 24,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "The Nagara, the Dravida and the Vesara are the"
+  },
+  {
+    "year": "2012",
+    "q_num": 26,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to National Rural Health Mission, which of the following are the jobs of 'ASHA', a trained, community hea"
+  },
+  {
+    "year": "2012",
+    "q_num": 30,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Which of the following special powers have been conferred on the Rajya Sabha by the Constitution of India?"
+  },
+  {
+    "year": "2012",
+    "q_num": 31,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "How does the National Rural Livelihood Mission seek to improve livelihood options of rural poor?\n1. By setting up a larg"
+  },
+  {
+    "year": "2012",
+    "q_num": 35,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Which of the following are the methods of Parliamentary control over public finance in India?\n1. Placing Annual Financia"
+  },
+  {
+    "year": "2012",
+    "q_num": 39,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In India, in the overall Index of Industrial Production, the Indices of Eight Core Industries have a combined weight of "
+  },
+  {
+    "year": "2012",
+    "q_num": 40,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which of the following provisions of the Constitution of India have a bearing on Education?\n1. Directive Principles of S"
+  },
+  {
+    "year": "2012",
+    "q_num": 43,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "A particular State in India has the following characteristics:\n1. It is located on the same latitude which passes throug"
+  },
+  {
+    "year": "2012",
+    "q_num": 57,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "A deadlock between the Lok Sabha and the Rajya Sabha calls for a joint sitting of the Parliament during the passage of\n1"
+  },
+  {
+    "year": "2012",
+    "q_num": 58,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "How do District Rural Development Agencies (DRDAs) help in the reduction of rural poverty in India?\n1. DRDAs act as Panc"
+  },
+  {
+    "year": "2012",
+    "q_num": 61,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "To meet its rapidly growing energy demand, some opine that India should pursue research and development on thorium as th"
+  },
+  {
+    "year": "2012",
+    "q_num": 62,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "The increasing amount of carbon dioxide in the air is slowly raising the temperature of the atmosphere, because it absor"
+  },
+  {
+    "year": "2012",
+    "q_num": 71,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "The Lahore Session of the Indian National Congress (1929) is very important in history, because\n1. the Congress passed a"
+  },
+  {
+    "year": "2012",
+    "q_num": 76,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Under which of the following circumstances may 'capital gains' arise?\n1. When there is an increase in the sales of a pro"
+  },
+  {
+    "year": "2012",
+    "q_num": 94,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The Millennium Ecosystem Assessment describes the following major categories of ecosystem services—provisioning, support"
+  },
+  {
+    "year": "2012",
+    "q_num": 97,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following:\n1. Black necked crane\n2. Cheetah\n3. Flying squirrel\n4. Snow leopard\nWhich of the above are natur"
+  },
+  {
+    "year": "2012",
+    "q_num": 98,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following agricultural practices:\n1. Contour bunding\n2. Relay cropping\n3. Zero tillage\nIn the context of gl"
+  },
+  {
+    "year": "2013",
+    "q_num": 1,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "What will follow if a Money Bill is substantially amended by the Rajya Sabha?"
+  },
+  {
+    "year": "2013",
+    "q_num": 3,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: atlas mountain"
+    ],
+    "question_en": "Which one of the following pairs is correctly matched? Geographical Region Feature"
+  },
+  {
+    "year": "2013",
+    "q_num": 7,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following:\n1. Star tortoise\n2. Monitor lizard\n3. Pygmy hog\n4. Spider monkey\nWhich of the above are naturall"
+  },
+  {
+    "year": "2013",
+    "q_num": 15,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: narmada"
+    ],
+    "question_en": "The Narmada river flows to the west, while most other large peninsular rivers flow to the east. Why?\n1. It occupies a li"
+  },
+  {
+    "year": "2013",
+    "q_num": 17,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: barail"
+    ],
+    "question_en": "Consider the following pairs :\n1. Nokrek Bio- sphere Reserve : Garo Hills\n2. Logtak (Loktak) Lake : Barail Range\n3. Namd"
+  },
+  {
+    "year": "2013",
+    "q_num": 18,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Consider the following :\n1. Electromagnetic radiation\n2. Geothermal energy\n3. Gravitational force\n4. Plate movements\n5. "
+  },
+  {
+    "year": "2013",
+    "q_num": 32,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ganga"
+    ],
+    "question_en": "Consider the following pairs :\nNational Park River flowing through the Park\n1. Corbett National Park : Ganga\n2. Kazirang"
+  },
+  {
+    "year": "2013",
+    "q_num": 35,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In which of the following States is lion-tailed macaque found in its natural habitat?\n1. Tamil Nadu\n2. Kerala\n3. Karnata"
+  },
+  {
+    "year": "2013",
+    "q_num": 57,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following historical places :\n1. Ajanta Caves\n2. Lepakshi Temple\n3. Sanchi Stupa\nWhich of the above places "
+  },
+  {
+    "year": "2013",
+    "q_num": 62,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: tapi"
+    ],
+    "question_en": "Which of the following statements regarding laterite soils of India are correct?\n1. They are generally red in colour.\n2."
+  },
+  {
+    "year": "2013",
+    "q_num": 63,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\n1. Natural gas occurs in the Gondwana beds.\n2. Mica occurs in abundance in Kodarma.\n"
+  },
+  {
+    "year": "2013",
+    "q_num": 79,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In the context of cultural history of India, a pose in dance and dramatics called Tribhanga has been a favourite of Indi"
+  },
+  {
+    "year": "2013",
+    "q_num": 95,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "The known forces of nature can be divided into four classes, viz., gravity, electromagnetism, weak nuclear force and str"
+  },
+  {
+    "year": "2013",
+    "q_num": 100,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which of the following grants/grant direct credit assistance to rural households?\n1. Regional Rural Banks\n2. National Ba"
+  },
+  {
+    "year": "2014",
+    "q_num": 2,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "If a wetland of international importance is brought under the 'Montreux Record', what does it imply?"
+  },
+  {
+    "year": "2014",
+    "q_num": 3,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: channel"
+    ],
+    "question_en": "Which one of the following pairs of islands is separated from each other by the 'Ten Degree Channel'?"
+  },
+  {
+    "year": "2014",
+    "q_num": 4,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following pairs:\nProgramme/Project : Ministry\n1. Drought-Prone Area Programme : Ministry of Agriculture\n2. "
+  },
+  {
+    "year": "2014",
+    "q_num": 5,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to Bombay Natural History Society (BNHS), consider the following statements:\n1. It is an autonomous organ"
+  },
+  {
+    "year": "2014",
+    "q_num": 14,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Other than poaching, what are the possible reasons for the decline in the population of Ganges River Dolphins?\n1. Constr"
+  },
+  {
+    "year": "2014",
+    "q_num": 15,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "International Borders & Boundaries",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "Border/Landlocked: radcliffe"
+    ],
+    "question_en": "The Radcliffe Committee was appointed to"
+  },
+  {
+    "year": "2014",
+    "q_num": 23,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "If you travel through the Himalayas, you are likely to see which of the following plants naturally growing there?\n1. Oak"
+  },
+  {
+    "year": "2014",
+    "q_num": 31,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The terms 'Marginal Standing Facility Rate' and 'Net Demand and Time Liabilities', sometimes appearing in news, are used"
+  },
+  {
+    "year": "2014",
+    "q_num": 32,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "What is/are the facility/facilities the beneficiaries can get from the services of Business Correspondent (Bank Saathi) "
+  },
+  {
+    "year": "2014",
+    "q_num": 36,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: darfur"
+    ],
+    "question_en": "Consider the following pairs:\nRegion often in news : Country\n1. Chechnya : Russian Federation\n2. Darfur : Mali\n3. Swat V"
+  },
+  {
+    "year": "2014",
+    "q_num": 41,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: gulf of mannar"
+    ],
+    "question_en": "Which of the following have coral reefs?\n1. Andaman and Nicobar Islands\n2. Gulf of Kachchh\n3. Gulf of Mannar\n4. Sunderba"
+  },
+  {
+    "year": "2014",
+    "q_num": 43,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "The seasonal reversal of winds is the typical characteristic of"
+  },
+  {
+    "year": "2014",
+    "q_num": 44,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the cultural history of India, the term 'Panchayatan' refers to"
+  },
+  {
+    "year": "2014",
+    "q_num": 45,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: barak"
+    ],
+    "question_en": "Consider the following rivers:\n1. Barak\n2. Lohit\n3. Subansiri\nWhich of the above flows/flow through Arunachal Pradesh?"
+  },
+  {
+    "year": "2014",
+    "q_num": 46,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "tributary_confluence",
+    "reasons": [
+      "Indian River: sutlej"
+    ],
+    "question_en": "Consider the following pairs :\nWetlands : Confluence of rivers\n1. Harike Wetlands : Confluence of Beas and Satluj/Sutlej"
+  },
+  {
+    "year": "2014",
+    "q_num": 48,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: cardamom hills"
+    ],
+    "question_en": "Consider the following pairs:\nHills : Region\n1. Cardamom Hills : Coromandel Coast\n2. Kaimur Hills : Konkan Coast\n3. Maha"
+  },
+  {
+    "year": "2014",
+    "q_num": 51,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "Turkey is located between"
+  },
+  {
+    "year": "2014",
+    "q_num": 56,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "What are the benefits of implementing the Integrated Watershed Development Programme?\n1. Prevention of soil runoff\n2. Li"
+  },
+  {
+    "year": "2014",
+    "q_num": 57,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which of the following are associated with 'Planning' in India?\n1. The Finance Commission\n2. The National Development Co"
+  },
+  {
+    "year": "2014",
+    "q_num": 60,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Which of the following are the discretionary powers given to the Governor of a State?\n1. Sending a report to the Preside"
+  },
+  {
+    "year": "2014",
+    "q_num": 69,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: coromandel"
+    ],
+    "question_en": "Consider the following pairs:\nRegion : Well-known for the production of\n1. Kinnaur : Areca nut\n2. Mewat : Mango\n3. Corom"
+  },
+  {
+    "year": "2014",
+    "q_num": 85,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ganga"
+    ],
+    "question_en": "With reference to the Indian history of art and culture, consider the following pairs:\nFamous work of sculpture : Site\n1"
+  },
+  {
+    "year": "2014",
+    "q_num": 87,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: coromandel"
+    ],
+    "question_en": "With reference to India's culture and tradition, what is 'Kalaripayattu'?"
+  },
+  {
+    "year": "2014",
+    "q_num": 89,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: zanskar"
+    ],
+    "question_en": "With reference to Buddhist history, tradition and culture in India, consider the following pairs:\nFamous shrine : Locati"
+  },
+  {
+    "year": "2014",
+    "q_num": 94,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In the context of food and nutritional security of India, enhancing the 'Seed Replacement Rates' of various crops helps "
+  },
+  {
+    "year": "2014",
+    "q_num": 96,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: river basin"
+    ],
+    "question_en": "Consider the following statements:\n1. Animal Welfare Board of India is established under the Environment (Protection) Ac"
+  },
+  {
+    "year": "2015",
+    "q_num": 12,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the International Union for Conservation of Nature and Natural Resources (IUCN) and the Convention on "
+  },
+  {
+    "year": "2015",
+    "q_num": 13,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The Fair and Remunerative Price (FRP) of sugarcane is approved by the"
+  },
+  {
+    "year": "2015",
+    "q_num": 15,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: nallamala"
+    ],
+    "question_en": "Consider the following pairs:\nPlace of Pilgrimage : Location\n1. Srisailam : Nallamala Hills\n2. Omkareshwar : Satmala Hil"
+  },
+  {
+    "year": "2015",
+    "q_num": 24,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In India, markets in agricultural products are regulated under the"
+  },
+  {
+    "year": "2015",
+    "q_num": 30,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "In the context of modern scientific research, consider the following statements about 'IceCube', a particle detector loc"
+  },
+  {
+    "year": "2015",
+    "q_num": 33,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: golan heights"
+    ],
+    "question_en": "The area known as 'Golan Heights' sometimes appears in the news in the context of the events related to"
+  },
+  {
+    "year": "2015",
+    "q_num": 36,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "tributary_confluence",
+    "reasons": [
+      "Indian River: tributaries"
+    ],
+    "question_en": "Consider the following rivers:\n1. Vamsadhara\n2. Indravati\n3. Pranahita\n4. Pennar\nWhich of the above are tributaries of G"
+  },
+  {
+    "year": "2015",
+    "q_num": 37,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "When a bill is referred to a joint sitting of both the Houses of the Parliament, it has to be passed by"
+  },
+  {
+    "year": "2015",
+    "q_num": 38,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: andaman"
+    ],
+    "question_en": "Which one of the following regions of India has a combination of mangrove forest, evergreen forest and deciduous forest?"
+  },
+  {
+    "year": "2015",
+    "q_num": 47,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "tributary_confluence",
+    "reasons": [
+      "Indian River: tributary"
+    ],
+    "question_en": "Who of the following founded a new city on the south bank of a tributary to river Krishna and undertook to rule his new "
+  },
+  {
+    "year": "2015",
+    "q_num": 64,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World River/Lake: mekong"
+    ],
+    "question_en": "In the Mekong-Ganga Cooperation, an initiative of six countries, which of the following is/are not a participant/partici"
+  },
+  {
+    "year": "2015",
+    "q_num": 69,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "In a particular region in India, the local people train the roots of living trees into robust bridges across the streams"
+  },
+  {
+    "year": "2015",
+    "q_num": 70,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Tides occur in the oceans and seas due to which among the following?\n1. Gravitational force of the Sun\n2. Gravitational "
+  },
+  {
+    "year": "2015",
+    "q_num": 75,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: konkan"
+    ],
+    "question_en": "Which one of the following was given classical language status recently?"
+  },
+  {
+    "year": "2015",
+    "q_num": 77,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "Which one of the following countries of South-West Asia does not open out to the Mediterranean Sea?"
+  },
+  {
+    "year": "2015",
+    "q_num": 80,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "\"Each day is more or less the same, the morning is clear and bright with a sea breeze; as the Sun climbs high in the sky"
+  },
+  {
+    "year": "2015",
+    "q_num": 90,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The substitution of steel for wooden ploughs in agricultural production is an example of"
+  },
+  {
+    "year": "2015",
+    "q_num": 96,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: himalayan"
+    ],
+    "question_en": "Kalamkari painting refers to"
+  },
+  {
+    "year": "2016",
+    "q_num": 1,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Which of the following statements is/are correct?\n1. A Bill pending in the Lok Sabha lapses on its prorogation.\n2. A Bil"
+  },
+  {
+    "year": "2016",
+    "q_num": 7,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which one of the following is a purpose of 'UDAY', a scheme of the Government?"
+  },
+  {
+    "year": "2016",
+    "q_num": 17,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the cultural history of medieval India, consider the following statements:\n1. Siddhas (Sittars) of Tam"
+  },
+  {
+    "year": "2016",
+    "q_num": 19,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: rohingya"
+    ],
+    "question_en": "Consider the following pairs:\nCommunity sometimes mentioned in the news : In the affairs of\n1. Kurd : Bangladesh\n2. Madh"
+  },
+  {
+    "year": "2016",
+    "q_num": 22,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In which of the following regions of India are you most likely to come across the 'Great Indian Hornbill' in its natural"
+  },
+  {
+    "year": "2016",
+    "q_num": 23,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: river basin"
+    ],
+    "question_en": "Which of the following are the key features of 'National Ganga River Basin Authority (NGRBA)'?\n1. River basin is the uni"
+  },
+  {
+    "year": "2016",
+    "q_num": 27,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The FAO accords the status of 'Globally Important Agricultural Heritage System (GIAHS)' to traditional agricultural syst"
+  },
+  {
+    "year": "2016",
+    "q_num": 28,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "tributary_confluence",
+    "reasons": [
+      "Indian River: tributary"
+    ],
+    "question_en": "Which of the following is/are tributary/tributaries of Brahmaputra?\n1. Dibang\n2. Kameng\n3. Lohit\nSelect the correct answ"
+  },
+  {
+    "year": "2016",
+    "q_num": 33,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which of the following best describes/describe the aim of 'Green India Mission' of the Government of India?\n1. Incorpora"
+  },
+  {
+    "year": "2016",
+    "q_num": 36,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "'Net metering' is sometimes seen in the news in the context of promoting the"
+  },
+  {
+    "year": "2016",
+    "q_num": 45,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: andaman"
+    ],
+    "question_en": "Recently, our scientists have discovered a new and distinct species of banana plant which attains a height of about 11 m"
+  },
+  {
+    "year": "2016",
+    "q_num": 50,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "With reference to the religious history of India, consider the following statements:\n1. The concept of Bodhisattva is ce"
+  },
+  {
+    "year": "2016",
+    "q_num": 63,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "'SWAYAM', an initiative of the Government of India, aims at"
+  },
+  {
+    "year": "2016",
+    "q_num": 68,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ganga"
+    ],
+    "question_en": "'Gadgil Committee Report' and 'Kasturirangan Committee Report', sometimes seen in the news, are related to"
+  },
+  {
+    "year": "2016",
+    "q_num": 74,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: godavari"
+    ],
+    "question_en": "In which of the following regions of India are shale gas resources found?\n1. Cambay Basin\n2. Cauvery Basin\n3. Krishna-Go"
+  },
+  {
+    "year": "2016",
+    "q_num": 85,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: godavari"
+    ],
+    "question_en": "Recently, linking of which of the following rivers was undertaken?"
+  },
+  {
+    "year": "2016",
+    "q_num": 89,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the cultural history of India, the memorizing of chronicles, dynastic histories and epic tales was the"
+  },
+  {
+    "year": "2016",
+    "q_num": 95,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "The Parliament of India acquires the power to legislate on any item in the State List in the national interest if a reso"
+  },
+  {
+    "year": "2016",
+    "q_num": 96,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: channel"
+    ],
+    "question_en": "Recently, which of the following States has explored the possibility of constructing an artificial inland port to be con"
+  },
+  {
+    "year": "2017",
+    "q_num": 1,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "With reference to the Parliament of India, consider the following statements:\n1. A private member's bill is a bill prese"
+  },
+  {
+    "year": "2017",
+    "q_num": 3,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "'Recognition of Prior Learning Scheme' is sometimes mentioned in the news with reference to"
+  },
+  {
+    "year": "2017",
+    "q_num": 4,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: western ghats"
+    ],
+    "question_en": "From the ecological point of view, which one of the following assumes importance in being a good link between the Easter"
+  },
+  {
+    "year": "2017",
+    "q_num": 24,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following statements:\n1. The Factories Act, 1881 was passed with a view to fix the wages of industrial work"
+  },
+  {
+    "year": "2017",
+    "q_num": 27,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: channel"
+    ],
+    "question_en": "The term 'Domestic Content Requirement' is sometimes seen in the news with reference to"
+  },
+  {
+    "year": "2017",
+    "q_num": 30,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "tributary_confluence",
+    "reasons": [
+      "Indian River: tributary"
+    ],
+    "question_en": "With reference to river Teesta, consider the following statements:\n1. The source of river Teesta is the same as that of "
+  },
+  {
+    "year": "2017",
+    "q_num": 33,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "What is/are the advantage/advantages of implementing the 'National Agriculture Market' scheme?\n1. It is a pan-India elec"
+  },
+  {
+    "year": "2017",
+    "q_num": 40,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "What is the purpose of setting up of Small Finance Banks (SFBs) in India?\n1. To supply credit to small business units\n2."
+  },
+  {
+    "year": "2017",
+    "q_num": 54,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "Mediterranean Sea is a border of which of the following countries?\n1. Jordan\n2. Iraq\n3. Lebanon\n4. Syria\nSelect the corr"
+  },
+  {
+    "year": "2017",
+    "q_num": 58,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: western ghats"
+    ],
+    "question_en": "Consider the following statements:\n1. In India, the Himalayas are spread over five States only.\n2. Western Ghats are spr"
+  },
+  {
+    "year": "2017",
+    "q_num": 67,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "If you want to see gharials in their natural habitat, which one of the following is the best place to visit?"
+  },
+  {
+    "year": "2017",
+    "q_num": 68,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following in respect of Indian Ocean Naval Symposium (IONS):\n1. Inaugural IONS was held in India in 2015 un"
+  },
+  {
+    "year": "2017",
+    "q_num": 86,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Right to vote and to be elected in India is a"
+  },
+  {
+    "year": "2017",
+    "q_num": 87,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "What is the purpose of 'evolved Laser Interferometer Space Antenna (eLISA)' project?"
+  },
+  {
+    "year": "2017",
+    "q_num": 89,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "What is the aim of the programme 'Unnat Bharat Abhiyan'?"
+  },
+  {
+    "year": "2017",
+    "q_num": 95,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Recently there was a proposal to translocate some of the lions from their natural habitat in Gujarat to which one of the"
+  },
+  {
+    "year": "2017",
+    "q_num": 98,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: nicobar"
+    ],
+    "question_en": "Which of the following is geographically closest to Great Nicobar?"
+  },
+  {
+    "year": "2018",
+    "q_num": 3,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "As per the NSSO 70th Round \"Situation Assessment Survey of Agricultural Households\", consider the following statements:\n"
+  },
+  {
+    "year": "2018",
+    "q_num": 13,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: black sea"
+    ],
+    "question_en": "Which of the following has/have shrunk immensely/dried up in the recent past due to human activities?\n1. Aral Sea\n2. Bla"
+  },
+  {
+    "year": "2018",
+    "q_num": 18,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: south sudan"
+    ],
+    "question_en": "Very recently, in which of the following countries have lakhs of people either suffered from severe famine/acute malnutr"
+  },
+  {
+    "year": "2018",
+    "q_num": 21,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following statements:\n1. As per the Right to Education (RTE) Act, to be eligible for appointment as a teach"
+  },
+  {
+    "year": "2018",
+    "q_num": 24,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: yemen"
+    ],
+    "question_en": "The term \"two-state solution\" is sometimes mentioned in the news in the context of the affairs of"
+  },
+  {
+    "year": "2018",
+    "q_num": 30,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "International Labour Organization's Conventions 138 and 182 are related to"
+  },
+  {
+    "year": "2018",
+    "q_num": 37,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: yemen"
+    ],
+    "question_en": "Consider the following pairs : Towns sometimes mentioned in news Country\n1. Aleppo Syria\n2. Kirkuk Yemen\n3. Mosul Palest"
+  },
+  {
+    "year": "2018",
+    "q_num": 44,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to cultural history of India, consider the following statements:\n1. Most of the Tyagaraja Kritis are devo"
+  },
+  {
+    "year": "2018",
+    "q_num": 48,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Increase in absolute and per capita real GNP do not connote a higher level of economic development, if"
+  },
+  {
+    "year": "2018",
+    "q_num": 60,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The term \"sixth mass extinction/sixth extinction\" is often mentioned in the news in the context of the discussion of"
+  },
+  {
+    "year": "2018",
+    "q_num": 62,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Consider the following phenomena:\n1. Light is affected by gravity.\n2. The Universe is constantly expanding.\n3. Matter wa"
+  },
+  {
+    "year": "2018",
+    "q_num": 63,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the Genetically Modified mustard (GM mustard) developed in India, consider the following statements:\n1"
+  },
+  {
+    "year": "2018",
+    "q_num": 72,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the cultural history of India, consider the following statements:\n1. White marble was used in making B"
+  },
+  {
+    "year": "2018",
+    "q_num": 82,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to agricultural soils, consider the following statements:\n1. A high content of organic matter in soil dra"
+  },
+  {
+    "year": "2018",
+    "q_num": 85,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: barren island"
+    ],
+    "question_en": "Consider the following statements:\n1. The Barren Island volcano is an active volcano located in the Indian territory.\n2."
+  },
+  {
+    "year": "2018",
+    "q_num": 90,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: crimea"
+    ],
+    "question_en": "Consider the following pairs:\nRegions sometimes mentioned in news Country\n1. Catalonia - Spain\n2. Crimea - Hungary\n3. Mi"
+  },
+  {
+    "year": "2018",
+    "q_num": 94,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Protected Areas & Biogeography",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Protected Area Location: wildlife sanctuary"
+    ],
+    "question_en": "In which one of the following States is Pakhui Wildlife Sanctuary located?"
+  },
+  {
+    "year": "2018",
+    "q_num": 100,
+    "current_node_id": "",
+    "current_subject": "",
+    "current_domain": "",
+    "current_subtopic": "",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to organic farming in India, consider the following statements:\n1. 'The National Programme for Organic Pr"
+  },
+  {
+    "year": "2019",
+    "q_num": 2,
+    "current_node_id": "history.post-independence_india.planned_economy_agrarian_reforms_industrial_transformation.agrarian_reforms_food_security",
+    "current_subject": "History",
+    "current_domain": "Post-Independence India",
+    "current_subtopic": "Land Reforms & Land Ceiling Legislation in Independent India",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to land reforms in independent India, which one of the following statements is correct?"
+  },
+  {
+    "year": "2019",
+    "q_num": 6,
+    "current_node_id": "history.modern_india.socio-religious_reform_movements_caste_movements.caste_backward_class_movements_dalit_assertion",
+    "current_subject": "History",
+    "current_domain": "Modern India",
+    "current_subtopic": "Socio-Political Movements: Anti-Untouchability League, Kisan Sabha & Self-Respect Movement",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: periyar"
+    ],
+    "question_en": "Consider the following pairs:\nMovement/Organization Leader\n1. All India Anti-Untouchability League : Mahatma Gandhi\n2. A"
+  },
+  {
+    "year": "2019",
+    "q_num": 11,
+    "current_node_id": "history.medieval_india.vijayanagara_bahmani_kingdoms.vijayanagara_art_architecture_cultural_zenith",
+    "current_subject": "History",
+    "current_domain": "Medieval India",
+    "current_subtopic": "Vijayanagara Temple Architecture: Kalyana Mandapas & Raya Gopurams",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Building 'Kalyana Mandapas' was a notable feature in the temple construction in the kingdom of"
+  },
+  {
+    "year": "2019",
+    "q_num": 22,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity_conservation_ecosystems_protected_areas.threatened_endangered_flagship_species",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biodiversity Conservation & Protected Area Network",
+    "current_subtopic": "Endemic & Flagship Species: Asiatic Lion, Double-Humped Camel & One-Horned Rhinoceros",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements:\n1. Asiatic lion is naturally found in India only.\n2. Double-humped camel is naturally"
+  },
+  {
+    "year": "2019",
+    "q_num": 23,
+    "current_node_id": "geography_earth_systems.indian_drainage_system_river_basins.peninsular_river_systems_godavari_krishna_cauvery",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Drainage System & Hydrology",
+    "current_subtopic": "Peninsular River Basins: Pandharpur (Bhima), Tiruchirappalli (Cauvery) & Hampi (Tungabhadra)",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: river basin"
+    ],
+    "question_en": "Consider the following pairs:\nFamous place River\n1. Pandharpur : Chandrabhaga\n2. Tiruchirappalli : Cauvery\n3. Hampi : Ma"
+  },
+  {
+    "year": "2019",
+    "q_num": 26,
+    "current_node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.waste_management_architecture",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Environmental Pollution & Waste Management",
+    "current_subtopic": "Waste-to-Energy Technologies: Pyrolysis & Plasma Gasification",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In the context of which one of the following are the terms 'pyrolysis and plasma gasification' mentioned?"
+  },
+  {
+    "year": "2019",
+    "q_num": 27,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity_conservation_ecosystems_protected_areas.biosphere_reserves_world_network_of_biosphere_reserves_wnbr",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biodiversity Conservation & Protected Area Network",
+    "current_subtopic": "Agasthyamala Biosphere Reserve: Neyyar, Peppara, Shendurney & KMTR",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: western ghats"
+    ],
+    "question_en": "Which of the following are in Agasthyamala Biosphere Reserve?"
+  },
+  {
+    "year": "2019",
+    "q_num": 29,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity_conservation_ecosystems_protected_areas.threatened_endangered_flagship_species",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biodiversity Conservation & Protected Area Network",
+    "current_subtopic": "Aquatic & Terrestrial Wildlife Habitats: Blue-Finned Mahseer, Irrawaddy Dolphin & Rusty-Spotted Cat",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World River/Lake: irrawaddy"
+    ],
+    "question_en": "Consider the following pairs:\nWildlife Naturally found in\n1. Blue-finned Mahseer : Cauvery River\n2. Irrawaddy Dolphin : "
+  },
+  {
+    "year": "2019",
+    "q_num": 31,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity_conservation_ecosystems_protected_areas.forest_ecosystems_flora_fauna_conservation",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biodiversity Conservation & Protected Area Network",
+    "current_subtopic": "Himalayan Nettle (Girardinia diversifolia) as Sustainable Textile Fibre Source",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: himalayan"
+    ],
+    "question_en": "Recently, there was a growing awareness in our country about the importance of Himalayan nettle (Girardinia diversifolia"
+  },
+  {
+    "year": "2019",
+    "q_num": 36,
+    "current_node_id": "geography_earth_systems.oceanography_marine_systems.ocean_floor_relief_features.ocean_bottom_relief_shelf_slope_abyssal_plains",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Oceanography & Marine Systems",
+    "current_subtopic": "Major Seas & Bordering Nations (Adriatic, Black, Caspian, Mediterranean, Red Sea)",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "Consider the following pairs:\nSea Bordering country\n1. Adriatic Sea : Albania\n2. Black Sea : Croatia\n3. Caspian Sea : Ka"
+  },
+  {
+    "year": "2019",
+    "q_num": 37,
+    "current_node_id": "indian_economy_development.agriculture_food_processing_farm_dynamics.agricultural_trade_exports_wto_agreement_on_agriculture",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Agriculture & Farm Dynamics",
+    "current_subtopic": "Global Agricultural Trade: India as World's Largest Rice Exporter",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Among the following, which one is the largest exporter of rice in the world in the last five years?"
+  },
+  {
+    "year": "2019",
+    "q_num": 38,
+    "current_node_id": "geography_earth_systems.indian_drainage_system_river_basins.himalayan_river_systems_indus_ganga_brahmaputra",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Drainage System & Hydrology",
+    "current_subtopic": "Himalayan Glaciers & River Origins: Bandarpunch (Yamuna), Bara Shigri (Chenab) & Siachen (Nubra)",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: chenab"
+    ],
+    "question_en": "Consider the following pairs:\nGlacier River\n1. Bandarpunch : Yamuna\n2. Bara Shigri : Chenab\n3. Milam : Mandakini\n4. Siac"
+  },
+  {
+    "year": "2019",
+    "q_num": 39,
+    "current_node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.soil_pollution_chemical_pesticides_biomagnification",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Environmental Pollution & Waste Management",
+    "current_subtopic": "Hazardous Chemical Pesticides in Agriculture: Carbofuran, Phorate, Methyl Parathion & Triazophos",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In India, the use of carbofuran, methyl parathion, phorate and triazophos is viewed with apprehension. These chemicals a"
+  },
+  {
+    "year": "2019",
+    "q_num": 40,
+    "current_node_id": "environment_ecology_disaster_management.environmental_conventions_treaties_protocols.ramsar_convention_on_wetlands_montreux_record",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Environmental Conventions, Treaties & Protocols",
+    "current_subtopic": "Ramsar Convention on Wetlands & Wetlands (Conservation and Management) Rules 2010/2017",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following statements:\n1. Under Ramsar Convention, it is mandatory on the part of the Government of India to"
+  },
+  {
+    "year": "2019",
+    "q_num": 41,
+    "current_node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.air_pollution_atmospheric_quality",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Environmental Pollution & Waste Management",
+    "current_subtopic": "Agricultural & Livestock Atmospheric Emissions: Nitrogen Oxides, Ammonia & Reactive Nitrogen",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements:\n1. Agricultural soils release nitrogen oxides into environment.\n2. Cattle release amm"
+  },
+  {
+    "year": "2019",
+    "q_num": 43,
+    "current_node_id": "science_technology_defence.energy_technologies_nuclear_renewable.hydrogen_energy_fuel_cells_green_hydrogen_mission",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Energy Technologies & Nuclear Dynamics",
+    "current_subtopic": "Hydrogen-Enriched Compressed Natural Gas (H-CNG) as Clean Alternative Transit Fuel",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In the context of proposals to the use of hydrogen-enriched CNG (H-CNG) as fuel for buses in public transport, consider "
+  },
+  {
+    "year": "2019",
+    "q_num": 61,
+    "current_node_id": "indian_economy_development.money_banking_financial_intermediation.banking_reforms_financial_inclusion",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Money, Banking & Financial Intermediation",
+    "current_subtopic": "Lead Bank Scheme & Implementation of Service Area Approach (1989)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "The Service Area Approach was implemented under the purview of"
+  },
+  {
+    "year": "2019",
+    "q_num": 74,
+    "current_node_id": "indian_economy_development.infrastructure_energy_transport_logistics.oil_natural_gas_strategic_petroleum_reserves",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Infrastructure, Energy & Transport Architecture",
+    "current_subtopic": "Petroleum and Natural Gas Regulatory Board (PNGRB): Mandate, Market Competition & Appellate Hierarchy",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements:\n1. Petroleum and Natural Gas Regulatory Board (PNGRB) is the first regulatory body se"
+  },
+  {
+    "year": "2019",
+    "q_num": 84,
+    "current_node_id": "indian_economy_development.agriculture_food_processing_farm_dynamics.agricultural_trade_exports_wto_agreement_on_agriculture",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Agriculture & Farm Dynamics",
+    "current_subtopic": "India's Agricultural Import Basket: Edible Oils Dominance & Import Bill Dynamics",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Among the agricultural commodities imported by India, which one of the following accounts for the highest imports in ter"
+  },
+  {
+    "year": "2019",
+    "q_num": 97,
+    "current_node_id": "science_technology_defence.space_technology_satellite_missions.astrophysics_gravitational_waves_black_holes_ligo",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Space Technology & Satellite Applications",
+    "current_subtopic": "Astrophysics & Gravitational Wave Astronomy: Binary Black Hole Mergers (LIGO-Virgo)",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Recently, scientists observed the merger of giant 'blackholes' billions of light-years away from the Earth. What is the "
+  },
+  {
+    "year": "2020",
+    "q_num": 31,
+    "current_node_id": "art_culture_heritage.buddhism_jainism_philosophy.mahayana_paramitas_bodhisattva_path",
+    "current_subject": "Art, Culture & Heritage",
+    "current_domain": "Buddhism, Jainism & Indian Philosophy",
+    "current_subtopic": "Bodhisattva Doctrine & The Six/Ten Paramitas (Perfections) in Mahayana Buddhism",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the cultural history of India, which one of the following is the correct description of the term 'para"
+  },
+  {
+    "year": "2020",
+    "q_num": 43,
+    "current_node_id": "science_technology_defence.space_science.gravitational_waves_lisa_elisa_mission",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Space Science, Astronomy & Particle Physics",
+    "current_subtopic": "Gravitational Wave Detection & Space Interferometers (eLISA / LISA Mission)",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "\"The experiment will employ a trio of spacecraft flying in formation in the shape of an equilateral triangle that has si"
+  },
+  {
+    "year": "2020",
+    "q_num": 58,
+    "current_node_id": "indian_economy_development.economic_reforms_post_1991.structural_transformation_agriculture_employment",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Economic Reforms, Structural Shift & Employment",
+    "current_subtopic": "Structural Shifts in Indian Economy Post-1991 Liberalization (Agriculture & Rural Workforce)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the Indian economy after the 1991 economic liberalization, consider the following statements :\n1. Work"
+  },
+  {
+    "year": "2020",
+    "q_num": 59,
+    "current_node_id": "agriculture_rural_economy.rural_credit.agricultural_credit_delivery_dccb_commercial_banks",
+    "current_subject": "Agriculture & Rural Economy",
+    "current_domain": "Rural Credit & Cooperative Banking Structure",
+    "current_subtopic": "Short-Term Agricultural Credit Architecture: DCCBs, Commercial Banks & Cooperative Credit",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\n1. In terms of short-term credit delivery to the agriculture sector, District Centra"
+  },
+  {
+    "year": "2020",
+    "q_num": 61,
+    "current_node_id": "agriculture_rural_economy.capital_formation.public_investment_in_agriculture_vs_subsidies",
+    "current_subject": "Agriculture & Rural Economy",
+    "current_domain": "Agricultural Infrastructure & Capital Formation",
+    "current_subtopic": "Public Capital Formation & Investment in Agriculture vs Subsidies / Price Support",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In India, which of the following can be considered as public investment in agriculture?\n1. Fixing Minimum Support Price "
+  },
+  {
+    "year": "2020",
+    "q_num": 66,
+    "current_node_id": "agriculture_rural_economy.rural_credit.kisan_credit_card_scheme_purposes",
+    "current_subject": "Agriculture & Rural Economy",
+    "current_domain": "Agricultural Credit & Financial Inclusion",
+    "current_subtopic": "Kisan Credit Card (KCC) Scheme Coverage & Flexible Credit Entitlements",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Under the Kisan Credit Card scheme, short-term credit support is given to farmers for which of the following purposes ?\n"
+  },
+  {
+    "year": "2020",
+    "q_num": 68,
+    "current_node_id": "geography_earth_systems.world_geography.major_world_rivers_and_seas",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "World Physical Geography & Drainage Systems",
+    "current_subtopic": "Major World River Systems & Receiving Water Bodies (Mekong, Thames, Volga, Zambezi)",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: caspian"
+    ],
+    "question_en": "Consider the following pairs :\nRiver Flows into\n1. Mekong Andaman Sea\n2. Thames Irish Sea\n3. Volga Caspian Sea\n4. Zambez"
+  },
+  {
+    "year": "2020",
+    "q_num": 71,
+    "current_node_id": "history.ancient_india.ascetic_traditions_parivrajaka_shramana_upasaka",
+    "current_subject": "History",
+    "current_domain": "Ancient India - Religious Traditions & Ascetic Orders",
+    "current_subtopic": "Ascetic Traditions & Social Orders in Ancient India (Parivrajaka, Shramana, Upasaka)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the cultural history of India, consider the following pairs :\n1. Parivrajaka Renunciant and Wanderer\n2"
+  },
+  {
+    "year": "2020",
+    "q_num": 73,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.in-situ_conservation_architecture",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biodiversity & Wildlife Conservation (Protected Areas)",
+    "current_subtopic": "Cauvery River Basin & Overlapping National Parks and Wildlife Sanctuaries",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: river basin"
+    ],
+    "question_en": "Which of the following Protected Areas are located in Cauvery basin?\n1. Nagarhole National Park\n2. Papikonda National Pa"
+  },
+  {
+    "year": "2020",
+    "q_num": 74,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity.indian_avian_species_birds",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biodiversity, Avian Fauna & Ornithology",
+    "current_subtopic": "Indian Avian Biodiversity: Distinctive Bird Species of the Western Ghats & Subcontinent",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: western ghats"
+    ],
+    "question_en": "With reference to India's biodiversity, Ceylon frogmouth, Coppersmith barbet, Gray- chinned minivet and White- throated "
+  },
+  {
+    "year": "2020",
+    "q_num": 76,
+    "current_node_id": "environment_ecology_disaster_management.waste_management.steel_slag_utilization_circular_economy",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Circular Economy, Industrial Waste & Sustainable Materials",
+    "current_subtopic": "Industrial By-products Utilization: Steel Slag in Construction & Agriculture",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Steel slag can be the material for which of the following?\n1. Construction of base road\n2. Improvement of agricultural s"
+  },
+  {
+    "year": "2020",
+    "q_num": 77,
+    "current_node_id": "environment_ecology_disaster_management.wildlife_conservation.musk_deer_habitat_askot_gangotri",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Himalayan Ecology & Endangered Fauna",
+    "current_subtopic": "Himalayan Musk Deer (Moschus chrysogaster) Habitat & Protected Areas (Askot, Gangotri)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which of the following are the most likely places to find the musk deer in its natural habitat?\n1. Askot Wildlife Sanctu"
+  },
+  {
+    "year": "2020",
+    "q_num": 78,
+    "current_node_id": "environment_ecology_disaster_management.sustainable_development.green_road_construction_geotextiles",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Sustainable Infrastructure & Green Technologies",
+    "current_subtopic": "Eco-friendly Road Construction Materials & Technologies (PMGSY Green Guidelines)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In rural road construction, the use of which of the following is preferred for ensuring environmental sustainability or "
+  },
+  {
+    "year": "2020",
+    "q_num": 94,
+    "current_node_id": "agriculture_rural_economy.fertilizers_subsidies.fertilizer_pricing_urea_nbs_policy",
+    "current_subject": "Agriculture & Rural Economy",
+    "current_domain": "Agricultural Inputs, Fertilizers & Subsidies",
+    "current_subtopic": "Fertilizer Policy in India: Nutrient Based Subsidy (NBS), Urea Pricing & Feedstocks",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to chemical fertilizers in India, consider the following statements:\n1. At present, the retail price of c"
+  },
+  {
+    "year": "2020",
+    "q_num": 95,
+    "current_node_id": "environment_ecology_disaster_management.protected_areas.desert_national_park_great_indian_bustard",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Protected Areas & Endangered Species",
+    "current_subtopic": "Desert National Park: Habitat Features, Human Habitations & Great Indian Bustard",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to India's Desert National Park, which of the following statements are correct?\n1. It is spread over two "
+  },
+  {
+    "year": "2020",
+    "q_num": 96,
+    "current_node_id": "geography_earth_systems.indian_geography.siachen_glacier_nubra_valley_karakoram",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Glaciology",
+    "current_subtopic": "Karakoram Range Glaciology & Geomorphology: Siachen Glacier & Nubra Valley",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: karakoram"
+    ],
+    "question_en": "Siachen Glacier is situated to the"
+  },
+  {
+    "year": "2021",
+    "q_num": 16,
+    "current_node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.e-waste_management_electronic_waste_generation_heavy_metals_toxicity_e-waste_management_rules_extended_producer_responsibility_epr_recycling_infrastructure",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Environmental Pollution, Waste Management & Remediation",
+    "current_subtopic": "R2 Code of Practices & Responsible E-Waste Recycling",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "'R2 Code of Practices' constitutes a tool available for promoting the adoption of"
+  },
+  {
+    "year": "2021",
+    "q_num": 19,
+    "current_node_id": "environment_ecology_disaster_management.climate_change_science_carbon_markets_global_conventions.carbon_sequestration_technologies_biological_blue_carbon_afforestation_soil_carbon_geological_direct_air_capture_dac_ccus",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Climate Change Science, Carbon Markets & Global Conventions",
+    "current_subtopic": "Blue Carbon & Ocean Coastal Sequestration",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "What is blue carbon?"
+  },
+  {
+    "year": "2021",
+    "q_num": 21,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas.medicinal_aromatic_plants_of_india_karnataka",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biodiversity, Wildlife Conservation & Protected Areas",
+    "current_subtopic": "Natural Mosquito Repellents & Citronella/Lemongrass",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which one of the following is used in preparing a natural mosquito repellent?"
+  },
+  {
+    "year": "2021",
+    "q_num": 32,
+    "current_node_id": "history.ancient_india.indus_valley_civilization",
+    "current_subject": "History",
+    "current_domain": "Ancient India & Early Civilizations",
+    "current_subtopic": "Dholavira Water Harvesting & Harappan Town Planning",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: channel"
+    ],
+    "question_en": "Which one of the following ancient towns is well-known for its elaborate system of water harvesting and management by bu"
+  },
+  {
+    "year": "2021",
+    "q_num": 44,
+    "current_node_id": "history.indian_freedom_struggle.gandhian_era_non-cooperation",
+    "current_subject": "History",
+    "current_domain": "Indian Freedom Struggle & Gandhian Literature",
+    "current_subtopic": "Mahatma Gandhi 'Songs from Prison' Translations",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ganga"
+    ],
+    "question_en": "Who among the following is associated with 'Songs from Prison', a translation of ancient Indian religious lyrics in Engl"
+  },
+  {
+    "year": "2021",
+    "q_num": 49,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.peninsular_river_systems_east_and_west_flowing",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Ajanta Caves Location on Waghora River Gorge",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: godavari"
+    ],
+    "question_en": "Which one of the following statements is correct?"
+  },
+  {
+    "year": "2021",
+    "q_num": 51,
+    "current_node_id": "indian_economy_development.agriculture_food_management_subsidies.sustainable_agriculture_organic_farming_zero_budget_natural_farming_zbnf_precision_farming_permaculture",
+    "current_subject": "Agriculture & Rural Economy",
+    "current_domain": "Agriculture, Food Management & Subsidies",
+    "current_subtopic": "Permaculture vs Conventional Chemical Farming",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "How is permaculture farming different from conventional chemical farming?\n1. Permaculture farming discourages monocultur"
+  },
+  {
+    "year": "2021",
+    "q_num": 53,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.himalayan_river_systems_indus_ganga_brahmaputra",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Indus River Basin & Confluence of Tributaries (Sutlej)",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "tributary_confluence",
+    "reasons": [
+      "Indian River: tributaries"
+    ],
+    "question_en": "With reference to the Indus river system, of the following four rivers, three of them pour into one of them which joins "
+  },
+  {
+    "year": "2021",
+    "q_num": 54,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india.peninsular_plateau_hills_western_eastern_ghats",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Saline Lakes of Rajasthan (Didwana, Kuchaman, Sargol, Khatu)",
+    "existing_is_mapping": true,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Existing is_mapping: true"
+    ],
+    "question_en": "With reference to India, Didwana, Kuchaman, Sargol and Khatu are the names of"
+  },
+  {
+    "year": "2021",
+    "q_num": 55,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.peninsular_river_systems_east_and_west_flowing",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Eastern Ghats Originating Rivers (Nagavali & Vamsadhara)",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: subarnarekha"
+    ],
+    "question_en": "Consider the following rivers :\n1. Brahmani\n2. Nagavali\n3. Subarnarekha\n4. Vamsadhara\nWhich of the above rise from the E"
+  },
+  {
+    "year": "2021",
+    "q_num": 56,
+    "current_node_id": "geography_earth_systems.oceanography_marine_systems.marine_ecosystems_conservation.marine_resources_unclos_zones_blue_economy",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Oceanography & Marine Systems",
+    "current_subtopic": "International Seabed Authority (ISA) & Polymetallic Nodules",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Existing is_mapping: true"
+    ],
+    "question_en": "Consider the following statements :\n1. The Global Ocean Commission grants licences for seabed exploration and mining in "
+  },
+  {
+    "year": "2021",
+    "q_num": 59,
+    "current_node_id": "indian_economy_development.agriculture_food_management_subsidies.sustainable_agriculture_organic_farming_zero_budget_natural_farming_zbnf_precision_farming_permaculture",
+    "current_subject": "Agriculture & Rural Economy",
+    "current_domain": "Agriculture, Food Management & Subsidies",
+    "current_subtopic": "Climate-Smart Agriculture, CCAFS, CGIAR & ICRISAT",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In the context of India's preparation for Climate-Smart Agriculture, consider the following statements :\n1. The 'Climate"
+  },
+  {
+    "year": "2021",
+    "q_num": 66,
+    "current_node_id": "science_technology_defence.biotechnology_health_life_sciences.reproductive_technologies_assisted_reproductive_technologies_art_ivf_surrogacy_laws_ethical_dimensions",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Biotechnology, Health & Life Sciences",
+    "current_subtopic": "Mitochondrial Replacement Therapy & Maternal Inheritance",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "In the context of hereditary diseases, consider the following statements:\n1. Passing on mitochondrial diseases from pare"
+  },
+  {
+    "year": "2021",
+    "q_num": 74,
+    "current_node_id": "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation.industrial_hazardous_waste_heavy_metals_toxic_chemicals_fly_ash_management_biomedical_waste",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Environmental Health & Materials Science",
+    "current_subtopic": "Bisphenol A (BPA) in Polycarbonate Plastics",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Bisphenol A (BPA), a cause of concern, is a structural/key component in the manufacture of which of the following kinds "
+  },
+  {
+    "year": "2021",
+    "q_num": 76,
+    "current_node_id": "science_technology_defence.space_technology_astronomy.fundamental_astronomy_astrophysics_stellar_evolution_black_holes_gravitational_waves_dark_matter_dark_energy",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Space Technology & Astronomy",
+    "current_subtopic": "Light-Year & Constancy of the Speed of Light",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Which one of the following is a reason why astronomical distances are measured in light-years?"
+  },
+  {
+    "year": "2021",
+    "q_num": 84,
+    "current_node_id": "indian_polity_constitution_governance.constitutional_statutory_bodies.statutory_regulatory_quasi-judicial_bodies_nhrc_ncw_ncpcr_ncbc_cic_cvc_cbi_lokpal_lokayuktas",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Vulnerable Sections & Tribal Governance",
+    "current_subtopic": "Forest Rights Act 2006 & Ministry of Tribal Affairs Nodal Role",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "At the national level, which ministry is the nodal agency to ensure effective implementation of the Scheduled Tribes and"
+  },
+  {
+    "year": "2021",
+    "q_num": 87,
+    "current_node_id": "indian_polity_constitution_governance.constitutional_framework_historical_evolution_features_preamble.salient_features_of_the_constitution_written_constitution_rigidity_flexibility_parliamentary_system_fundamental_rights",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Political Theory & Core Constitutional Concepts",
+    "current_subtopic": "Essential Four Elements Defining the 'State'",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which one of the following best defines the term 'State'?"
+  },
+  {
+    "year": "2022",
+    "q_num": 10,
+    "current_node_id": "indian_economy_development.public_finance.household_savings_internal_debt",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Public Debt & Deficit Financing",
+    "current_subtopic": "Household Financial Savings Channelling & Internal Debt (Dated Securities)",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: channel"
+    ],
+    "question_en": "With reference to the Indian economy, consider the following statements:\n1. A share of the household financial savings g"
+  },
+  {
+    "year": "2022",
+    "q_num": 11,
+    "current_node_id": "indian_polity_constitution_governance.judiciary.contempt_of_court_powers",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Judiciary & Constitutional Powers",
+    "current_subtopic": "Contempt of Court, Court of Record (Articles 129 & 215) & H.N. Sanyal Committee",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following statements:\n1. Pursuant to the report of H.N. Sanyal Committee, the Contempt of Courts Act, 1971 "
+  },
+  {
+    "year": "2022",
+    "q_num": 13,
+    "current_node_id": "indian_polity_constitution_governance.constitution.amendment_procedure_article_368",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Constitutional Framework & Amendment Procedure",
+    "current_subtopic": "Article 368 Amendment Procedure, Presidential Assent (24th Amendment) & Joint Sitting Bar",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following statements:\n1. A bill amending the Constitution requires a prior recommendation of the President "
+  },
+  {
+    "year": "2022",
+    "q_num": 15,
+    "current_node_id": "indian_polity_constitution_governance.parliament.lok_sabha_exclusive_powers",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Union Legislature & Parliamentary Powers",
+    "current_subtopic": "Exclusive Powers of Lok Sabha vs Joint Powers (No-Confidence Motion, Emergency & Impeachment)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Which of the following is/are the exclusive power(s) of Lok Sabha ?\n1. To ratify the declaration of Emergency\n2. To pass"
+  },
+  {
+    "year": "2022",
+    "q_num": 20,
+    "current_node_id": "indian_polity_constitution_governance.parliament.deputy_speaker_lok_sabha",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Legislative Presiding Officers",
+    "current_subtopic": "Constitutional & Procedural Framework of the Deputy Speaker of Lok Sabha (Article 93)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to Deputy Speaker of Lok Sabha, consider the following statements :\n1. As per the Rules of Procedure and "
+  },
+  {
+    "year": "2022",
+    "q_num": 21,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.peninsular_river_systems_east_and_west_flowing",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Agricultural Greenhouse Gas Emissions (Paddy Cultivation, Methanogenesis & Nitrous Oxide)",
+    "existing_is_mapping": true,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Among the following crops, which one is the most important anthropogenic source of both methane and nitrous oxide ?"
+  },
+  {
+    "year": "2022",
+    "q_num": 23,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Lake Faguibine (Mali, West Africa) - Sahel Desiccation & Desertification",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World River/Lake: lake victoria"
+    ],
+    "question_en": "Which one of the following lakes of West Africa has become dry and turned into a desert ?"
+  },
+  {
+    "year": "2022",
+    "q_num": 24,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india.peninsular_plateau_hills_western_eastern_ghats",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Fluvial Landforms - Gandikota Canyon & Pennar River Gorge",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: cauvery"
+    ],
+    "question_en": "Gandikota canyon of South India was created by which one of the following rivers ?"
+  },
+  {
+    "year": "2022",
+    "q_num": 25,
+    "current_node_id": "geography_earth_systems.indian_geography.himalayan_peaks_and_ranges",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Physiography of India",
+    "current_subtopic": "Himalayan Peaks & Physiographic Divisions (Garhwal, Kumaon, Garo Hills)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: himalayan"
+    ],
+    "question_en": "Consider the following pairs :\nPeak : Mountains\n1. Namcha Barwa : Garhwal Himalaya\n2. Nanda Devi : Kumaon Himalaya\n3. No"
+  },
+  {
+    "year": "2022",
+    "q_num": 26,
+    "current_node_id": "geography_earth_systems.world_geography.levant_regional_geography",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Regional & World Geography",
+    "current_subtopic": "Geographical Delimitation of the Levant (Eastern Mediterranean Coastal Region)",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "The term \"Levant\" often heard in the news roughly corresponds to which of the following regions ?"
+  },
+  {
+    "year": "2022",
+    "q_num": 28,
+    "current_node_id": "geography_earth_systems.economic_resource_geography.global_indian_distribution_of_natural_resources.energy_resources_fossil_fuels_nuclear_renewables",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Economic & Resource Geography",
+    "current_subtopic": "Monazite Placer Deposits, Thorium & Atomic Energy Minerals",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to India, consider the following statements :\n1. Monazite is a source of rare earths.\n2. Monazite contain"
+  },
+  {
+    "year": "2022",
+    "q_num": 38,
+    "current_node_id": "science_technology_defence.biotechnology.probiotics_and_microbiome",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Biotechnology & Nutrition Science",
+    "current_subtopic": "Probiotic Microorganisms (Bacteria, Yeasts), Gut Microbiome & Lactose Digestion",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements in respect of probiotics :\n1. Probiotics are made of both bacteria and yeast.\n2. The o"
+  },
+  {
+    "year": "2022",
+    "q_num": 45,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity.gucchi_himalayan_morels",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Forest Flora, Fungi & Himalayan Non-Timber Forest Products",
+    "current_subtopic": "Gucchi (Morchella esculenta) Wild Edible Fungus in Himalayan Coniferous Forests",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: himalayan"
+    ],
+    "question_en": "With reference to \"Gucchi\" sometimes mentioned in the news, consider the following statements :\n1. It is a fungus.\n2. It"
+  },
+  {
+    "year": "2022",
+    "q_num": 62,
+    "current_node_id": "geography_earth_systems.indian_geography.tea_producing_states_distribution",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Agricultural Geography of India",
+    "current_subtopic": "Tea Cultivation Distribution in India (Traditional vs Non-Traditional Growing States)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following States :\n1. Andhra Pradesh\n2. Kerala\n3. Himachal Pradesh\n4. Tripura\nHow many of the above are gen"
+  },
+  {
+    "year": "2022",
+    "q_num": 82,
+    "current_node_id": "international_relations_global_institutions.humanitarian_issues.refugee_settlements_africa",
+    "current_subject": "International Relations & Global Institutions",
+    "current_domain": "Global Humanitarian Issues & Refugee Settlements",
+    "current_subtopic": "Major Refugee Settlements in East Africa - Bidibidi (Uganda) & Dadaab (Kenya)",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: south sudan"
+    ],
+    "question_en": "Consider the following statements :\n1. Bidibidi is a large refugee settlement in north-western Kenya.\n2. Some people who"
+  },
+  {
+    "year": "2022",
+    "q_num": 85,
+    "current_node_id": "international_relations_global_institutions.maritime_law.unclos_maritime_zones",
+    "current_subject": "International Relations & Global Institutions",
+    "current_domain": "Law of the Sea & Maritime Jurisdictions",
+    "current_subtopic": "UNCLOS Provisions - 12 NM Territorial Sea, Innocent Passage Rights & 200 NM EEZ",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "With reference to the United Nations Convention on the Law of Sea, consider the following statements :\n1. A coastal stat"
+  },
+  {
+    "year": "2022",
+    "q_num": 86,
+    "current_node_id": "international_relations_global_institutions.geopolitical_conflicts.senkaku_islands_dispute",
+    "current_subject": "International Relations & Global Institutions",
+    "current_domain": "Geopolitical Flashpoints & Maritime Disputes",
+    "current_subtopic": "Senkaku/Diaoyu Islands Sovereignty Dispute in the East China Sea",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: south china sea"
+    ],
+    "question_en": "Which one of the following statements best reflects the issue with Senkaku Islands, sometimes mentioned in the news ?"
+  },
+  {
+    "year": "2022",
+    "q_num": 88,
+    "current_node_id": "geography_earth_systems.world_geography.regions_in_news_anatolia_catalonia",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "World Regional Geography & Places in News",
+    "current_subtopic": "Global Regions in News - Anatolia (Turkey), Amhara (Ethiopia), Cabo Delgado (Mozambique), Catalonia (Spain)",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: catalonia"
+    ],
+    "question_en": "Consider the following pairs :\nRegion often mentioned in news          Country\n1. Anatolia                 - Turkey\n2. A"
+  },
+  {
+    "year": "2022",
+    "q_num": 91,
+    "current_node_id": "history.ancient_india.sources_of_ancient_indian_history",
+    "current_subject": "History",
+    "current_domain": "Ancient India",
+    "current_subtopic": "Ashokan Major Rock Edicts - Geographical Sites (Dhauli, Jaugada, Kalsi)",
+    "existing_is_mapping": true,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Existing is_mapping: true"
+    ],
+    "question_en": "Consider the following pairs :\nSite of Ashoka's major rock edicts          Location in the State of\n1. Dhauli          -"
+  },
+  {
+    "year": "2023",
+    "q_num": 1,
+    "current_node_id": "geography_earth_systems.indian_geography.drainage_systems_and_lakes",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Drainage Systems & Wetlands",
+    "current_subtopic": "Indian River Systems & Associated Freshwater Lakes (Wular, Kolleru, Kanwar)",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: krishna river"
+    ],
+    "question_en": "Consider the following statements :\n1. Jhelum River passes through Wular Lake.\n2. Krishna River directly feeds Kolleru L"
+  },
+  {
+    "year": "2023",
+    "q_num": 4,
+    "current_node_id": "geography_earth_systems.economic_geography.agricultural_geography",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Global & Indian Agriculture",
+    "current_subtopic": "Comparative Agricultural Statistics: India vs China (Arable Land & Yields)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\n1. India has more arable area than China.\n2. The proportion of irrigated area is mor"
+  },
+  {
+    "year": "2023",
+    "q_num": 5,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.physiographic_divisions_of_india.coastal_plains_and_island_territories_of_india",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Marine Geomorphology & Emergence: Genesis of the Rann of Kutch",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: rann of kutch"
+    ],
+    "question_en": "Which one of the following is the best example of repeated falls in sea level, giving rise to present-day extensive mars"
+  },
+  {
+    "year": "2023",
+    "q_num": 8,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Congo River Basin: Watershed Geography & Riparian Nations",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World River/Lake: congo basin"
+    ],
+    "question_en": "Which one of the following is a part of the Congo Basin?"
+  },
+  {
+    "year": "2023",
+    "q_num": 9,
+    "current_node_id": "geography_earth_systems.indian_geography.physiography_of_india",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physiography & Hill Ranges",
+    "current_subtopic": "Peninsular Hill Ranges: Confluences of Western & Eastern Ghats and Satpuras",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: western ghats"
+    ],
+    "question_en": "Consider the following statements :\n1. Amarkantak Hills are at the confluence of Vindhya and Sahyadri Ranges.\n2. Biligir"
+  },
+  {
+    "year": "2023",
+    "q_num": 10,
+    "current_node_id": "indian_economy_development.infrastructure_energy_investment_models.physical_infrastructure_systems",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Infrastructure, Energy & Investment Models",
+    "current_subtopic": "Major Road Corridors: Golden Quadrilateral, Trilateral Highway & BCIM",
+    "existing_is_mapping": true,
+    "detected_category": "Minerals, Ports & Infrastructure",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Existing is_mapping: true"
+    ],
+    "question_en": "With reference to India's projects on connectivity, consider the following statements :\n1. East-West Corridor under Gold"
+  },
+  {
+    "year": "2023",
+    "q_num": 12,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity.faunal_diversity_and_biogeography",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Biogeography & Faunal Diversity",
+    "current_subtopic": "Mammalian Biogeography: Marsupials Distribution & Niches",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\nStatement-I :\nMarsupials are not naturally found in India.\nStatement-II :\nMarsupials"
+  },
+  {
+    "year": "2023",
+    "q_num": 14,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity.wildlife_behaviour_and_species",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Indian Wildlife & Behavioral Ecology",
+    "current_subtopic": "Behavioral Ecology: Nocturnal vs Diurnal Endemic Mammals of Western Ghats",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: western ghats"
+    ],
+    "question_en": "Consider the following fauna :\n1. Lion-tailed Macaque\n2. Malabar Civet\n3. Sambar Deer\nHow many of the above are generall"
+  },
+  {
+    "year": "2023",
+    "q_num": 26,
+    "current_node_id": "indian_economy_development.industry_and_services.msme_sector",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Industrial Policy & MSME Development",
+    "current_subtopic": "MSME Development Act: Revised Composite Criteria & PSL Targets",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which one of the following best describes the concept of 'Small Farmer Large Field'?"
+  },
+  {
+    "year": "2023",
+    "q_num": 29,
+    "current_node_id": "indian_economy_development.rural_development.self_help_groups_and_nabard",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Rural Finance & Microfinance Institutions",
+    "current_subtopic": "SHG-Bank Linkage Project: NABARD, Microfinance & Women Empowerment",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following :\n1. Demographic performance\n2. Forest and ecology\n3. Governance reforms\n4. Stable government\n5. "
+  },
+  {
+    "year": "2023",
+    "q_num": 31,
+    "current_node_id": "environment_ecology_disaster_management.water_resources.groundwater_depletion_india",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Water Resources & Sustainable Hydrology",
+    "current_subtopic": "Groundwater Overexploitation: Global Comparison & India Water Crisis",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "In essence, what does 'Due Process of Law' mean?"
+  },
+  {
+    "year": "2023",
+    "q_num": 38,
+    "current_node_id": "environment_ecology_disaster_management.environmental_legislation.wildlife_protection_act_protected_areas",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Environmental Legislation & Protected Areas",
+    "current_subtopic": "Wildlife Protection Act (1972): Conservation & Community Reserves Governance",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\nOnce the Central Government notifies an area as a 'Community Reserve'\n1. the Chief W"
+  },
+  {
+    "year": "2023",
+    "q_num": 44,
+    "current_node_id": "history.ancient_india.sangam_literature_and_culture",
+    "current_subject": "History",
+    "current_domain": "Sangam Literature, Traditions & Ethos",
+    "current_subtopic": "Sangam Heroic Traditions: The Ritual of Vattakirutal (Sallekhana-like Fast to Death)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which one of the following explains the practice of 'Vattakirutal' as mentioned in Sangam poems?"
+  },
+  {
+    "year": "2023",
+    "q_num": 47,
+    "current_node_id": "history.ancient_india.jainism_philosophy",
+    "current_subject": "History",
+    "current_domain": "Ancient Indian Philosophies: Jainism",
+    "current_subtopic": "Jaina Metaphysics: Jiva (Souls) in Inanimate Matter (Animism / Hylozoism)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "\"Souls are not only the property of animal and plant life, but also of rocks, running water and many other natural objec"
+  },
+  {
+    "year": "2023",
+    "q_num": 60,
+    "current_node_id": "science_technology_defence.clean_energy.green_hydrogen_economy",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Clean Energy & Decarbonization Technologies",
+    "current_subtopic": "Green Hydrogen Applications: CNG Blending, Fuel Cells & Industrial Heating",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to green hydrogen, consider the following statements :\n1. It can be used directly as a fuel for internal "
+  },
+  {
+    "year": "2023",
+    "q_num": 61,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Geopolitics of Eastern Europe: Bordering Nations of Ukraine",
+    "existing_is_mapping": true,
+    "detected_category": "International Borders & Boundaries",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "Border/Landlocked: bordering nations"
+    ],
+    "question_en": "Consider the following countries :\n1. Bulgaria\n2. Czech Republic\n3. Hungary\n4. Latvia\n5. Lithuania\n6. Romania\nHow many o"
+  },
+  {
+    "year": "2023",
+    "q_num": 70,
+    "current_node_id": "science_technology_defence.genetics.microsatellite_dna_markers",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Molecular Genetics & DNA Fingerprinting",
+    "current_subtopic": "Short Tandem Repeats (STRs) / Microsatellites in Evolutionary & Population Genetics",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "'Microsatellite DNA' is used in the case of which one of the following?"
+  },
+  {
+    "year": "2023",
+    "q_num": 74,
+    "current_node_id": "indian_society_social_justice.rural_development.self_help_groups_nrlm",
+    "current_subject": "Indian Society & Social Justice",
+    "current_domain": "Rural Livelihoods & Microcredit",
+    "current_subtopic": "Deendayal Antyodaya Yojana-NRLM & SHG Bank Linkage Evolution",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\n1. The Self-Help Group (SHG) programme was originally initiated by the State Bank of"
+  },
+  {
+    "year": "2023",
+    "q_num": 76,
+    "current_node_id": "environment_ecology_disaster_management.water_resources.global_groundwater_extraction",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Water Resources Management",
+    "current_subtopic": "Global Water Use: Agricultural Groundwater Extraction Rates in India",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\nStatement-I :\nAccording to the United Nations 'World Water Development Report, 2022'"
+  },
+  {
+    "year": "2023",
+    "q_num": 78,
+    "current_node_id": "international_relations_global_institutions.geopolitical_crises.horn_of_africa_somalia",
+    "current_subject": "International Relations & Global Institutions",
+    "current_domain": "Global Humanitarian Crises & Conflict Zones",
+    "current_subtopic": "Horn of Africa Humanitarian Crisis: Drought & Civil Conflict in Somalia",
+    "existing_is_mapping": false,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: somalia"
+    ],
+    "question_en": "Which one of the following countries has been suffering from decades of civil strife and food shortages and was in news "
+  },
+  {
+    "year": "2023",
+    "q_num": 93,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_russia_central_asia",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Global Conflict Zones: North Kivu (DRC), Nagorno-Karabakh & Ukraine Oblasts",
+    "existing_is_mapping": true,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: zaporizhzhia"
+    ],
+    "question_en": "Consider the following pairs :\nRegions often mentioned in news Country where it is located\n1. North Kivu and Ituri : Syr"
+  },
+  {
+    "year": "2023",
+    "q_num": 97,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_south_east_asia",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Regional Conflict Hotspots: Donbas (Ukraine), Kachin (Myanmar) & Tigray (Ethiopia)",
+    "existing_is_mapping": true,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: tigray"
+    ],
+    "question_en": "Consider the following pairs :\nArea of conflict mentioned in news : Country where it is located\n1. Donbas : Syria\n2. Kac"
+  },
+  {
+    "year": "2023",
+    "q_num": 98,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "The Sahel Coup Belt: Military Takeovers in Mali, Guinea, Chad, Sudan & Burkina Faso",
+    "existing_is_mapping": true,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: sahel"
+    ],
+    "question_en": "In the recent years Chad, Guinea, Mali and Sudan caught the international attention for which one of the following reaso"
+  },
+  {
+    "year": "2024",
+    "q_num": 5,
+    "current_node_id": "geography_earth_systems.economic_geography.agriculture_resources",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Economic & Human Geography",
+    "current_subtopic": "World Agricultural Commodities & Cocoa Production",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which of the following countries are well known as the two largest cocoa producers in the world ?"
+  },
+  {
+    "year": "2024",
+    "q_num": 6,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.himalayan_river_systems_indus_ganga_brahmaputra",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Ganga River Drainage System & Tributaries",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "tributary_confluence",
+    "reasons": [
+      "Indian River: tributaries"
+    ],
+    "question_en": "With reference to the Himalayan rivers joining the Ganga downstream of Prayagraj from West to East, which one of the fol"
+  },
+  {
+    "year": "2024",
+    "q_num": 8,
+    "current_node_id": "geography_earth_systems.oceanography_marine_systems.ocean_floor_relief_features.ocean_bottom_relief_shelf_slope_abyssal_plains",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Oceanography & Marine Systems",
+    "current_subtopic": "European Marginal Seas & Bordering Nations (North Sea)",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "World Sea: north sea"
+    ],
+    "question_en": "Consider the following countries :\n1. Finland\n2. Germany\n3. Norway\n4. Russia\nHow many of the above countries have a bord"
+  },
+  {
+    "year": "2024",
+    "q_num": 9,
+    "current_node_id": "geography_earth_systems.indian_physical_geography_monsoon_architecture.drainage_systems_of_india.peninsular_river_systems_east_and_west_flowing",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Indian Physical Geography & Monsoon Architecture",
+    "current_subtopic": "Physiographic Features & Waterfalls of India",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: narmada"
+    ],
+    "question_en": "Consider the following information :\n1. Dhuandhar | Malwa | Narmada\n2. Hundru | Chota Nagpur | Subarnarekha\n3. Gersoppa "
+  },
+  {
+    "year": "2024",
+    "q_num": 10,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Types of Mountains & Global Orogenic Belts",
+    "existing_is_mapping": true,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: andes"
+    ],
+    "question_en": "Consider the following information :\n1. Central Asia | Vosges | Fold mountain\n2. Europe | Alps | Block mountain\n3. North"
+  },
+  {
+    "year": "2024",
+    "q_num": 16,
+    "current_node_id": "environment_ecology_disaster_management.ecosystems.peatlands",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Ecosystems & Carbon Sinks",
+    "current_subtopic": "Tropical Peatlands & Congo Basin Carbon Sink",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World River/Lake: congo basin"
+    ],
+    "question_en": "One of the following regions has the world's largest tropical peatland, which holds about three years worth of global ca"
+  },
+  {
+    "year": "2024",
+    "q_num": 30,
+    "current_node_id": "environment_ecology_disaster_management.flora.endemic_trees_india",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Indian Flora & Forestry",
+    "current_subtopic": "Native & Endemic Flora of India (Red Sanders)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: eastern ghats"
+    ],
+    "question_en": "Consider the following :\n1. Cashew\n2. Papaya\n3. Red sanders\nHow many of the above trees are actually native to India ?"
+  },
+  {
+    "year": "2024",
+    "q_num": 34,
+    "current_node_id": "science_technology_defence.applied_physics.radar_systems",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Applied Physics & Radar Technology",
+    "current_subtopic": "Radar Applications (Meteorology, Wildlife Tracking)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following activities :\n1. Identification of narcotics on passengers at airports or in aircraft\n2. Monitorin"
+  },
+  {
+    "year": "2024",
+    "q_num": 45,
+    "current_node_id": "indian_economy_development.national_income.sectors_of_economy",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "National Income & Economic Structure",
+    "current_subtopic": "Economic Sectors Classification (Primary, Secondary, Tertiary)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to the sectors of the Indian economy, consider the following pairs :\n1. Storage of agricultural produce |"
+  },
+  {
+    "year": "2024",
+    "q_num": 46,
+    "current_node_id": "science_technology_defence.biofuels.sustainable_aviation_fuel",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Biofuels & Green Energy",
+    "current_subtopic": "Sustainable Aviation Fuel (SAF) & Biomass Feedstocks",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following materials :\n1. Agricultural residues\n2. Corn grain\n3. Wastewater treatment sludge\n4. Wood mill wa"
+  },
+  {
+    "year": "2024",
+    "q_num": 57,
+    "current_node_id": "history.modern_india.land_revenue_systems",
+    "current_subject": "History",
+    "current_domain": "Modern India",
+    "current_subtopic": "British Land Revenue Policies (Permanent Settlement & Ryotwari)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "With reference to revenue collection by Cornwallis, consider the following statements :\n1. Under the Ryotwari Settlement"
+  },
+  {
+    "year": "2024",
+    "q_num": 59,
+    "current_node_id": "international_relations_global_institutions.intergovernmental_bodies.grains_council",
+    "current_subject": "International Relations & Global Institutions",
+    "current_domain": "International Commodity Agreements & Bodies",
+    "current_subtopic": "International Grains Council (IGC) & Agricultural Trade",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\n1. India is a member of the International Grains Council.\n2. A country needs to be a"
+  },
+  {
+    "year": "2024",
+    "q_num": 60,
+    "current_node_id": "art_culture_heritage.performing_arts.unesco_intangible_heritage",
+    "current_subject": "Art, Culture & Heritage",
+    "current_domain": "Intangible Cultural Heritage",
+    "current_subtopic": "UNESCO Representative List of Intangible Heritage (Garba of Gujarat)",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which one of the following was the latest inclusion in the Intangible Cultural Heritage List of UNESCO ?"
+  },
+  {
+    "year": "2024",
+    "q_num": 68,
+    "current_node_id": "indian_polity_constitution_governance.parliament.money_bills",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Union Parliament & Legislative Procedure",
+    "current_subtopic": "Article 109 & Money Bill Passing Procedure",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Which of the following statements are correct in respect of a Money Bill in the Parliament ?\n1. Article 109 mentions spe"
+  },
+  {
+    "year": "2024",
+    "q_num": 72,
+    "current_node_id": "indian_polity_constitution_governance.constitutional_schedules.eighth_schedule",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Constitutional Schedules & Official Languages",
+    "current_subtopic": "Eighth Schedule Languages & 71st Constitutional Amendment",
+    "existing_is_mapping": false,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Coast/Island: konkan"
+    ],
+    "question_en": "The Constitution (71st Amendment) Act, 1992 amends the Eighth Schedule to the Constitution to include which of the follo"
+  },
+  {
+    "year": "2024",
+    "q_num": 79,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Longest International Land Boundaries (Canada-USA)",
+    "existing_is_mapping": true,
+    "detected_category": "International Borders & Boundaries",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "Border/Landlocked: longest border"
+    ],
+    "question_en": "The longest border between any two countries in the world is between :"
+  },
+  {
+    "year": "2024",
+    "q_num": 83,
+    "current_node_id": "indian_polity_constitution_governance.judiciary.writ_jurisdiction",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Constitutional Remedies & Judiciary",
+    "current_subtopic": "Writ of Prohibition & Judicial Oversight",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "spatial_ordering",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "A Writ of Prohibition is an order issued by the Supreme Court or High Courts to :"
+  },
+  {
+    "year": "2024",
+    "q_num": 88,
+    "current_node_id": "geography_earth_systems.oceanography_marine_systems.marine_ecosystems_conservation.marine_resources_unclos_zones_blue_economy",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Oceanography & Marine Systems",
+    "current_subtopic": "Sumed Pipeline (Suez-Mediterranean Pipeline)",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "Consider the following statements :\nStatement-I :\nSumed pipeline is a strategic route for Persian Gulf oil and natural g"
+  },
+  {
+    "year": "2024",
+    "q_num": 89,
+    "current_node_id": "geography_earth_systems.oceanography_marine_systems.ocean_floor_relief_features.ocean_bottom_relief_shelf_slope_abyssal_plains",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Oceanography & Marine Systems",
+    "current_subtopic": "Red Sea Hydrology, Climate & River Inflows",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: red sea"
+    ],
+    "question_en": "Consider the following statements :\n1. The Red Sea receives very little precipitation in any form.\n2. No water enters th"
+  },
+  {
+    "year": "2024",
+    "q_num": 91,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Sahel Region Political Instability & Military Coups",
+    "existing_is_mapping": true,
+    "detected_category": "Places in News & Conflict Zones",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Conflict/Place in News: sahel"
+    ],
+    "question_en": "Consider the following statements :\nStatement-I :\nThere is instability and worsening security situation in the Sahel reg"
+  },
+  {
+    "year": "2024",
+    "q_num": 94,
+    "current_node_id": "indian_polity_constitution_governance.parliament.lapsing_of_bills",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Parliamentary Procedure & Dissolution of House",
+    "current_subtopic": "Article 107, 108 & Lapsing of Bills upon Dissolution of Lok Sabha",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "With reference to the Indian Parliament, consider the following statements :\n1. A bill pending in the Lok Sabha lapses o"
+  },
+  {
+    "year": "2025",
+    "q_num": 5,
+    "current_node_id": "indian_economy_development.taxation.agricultural_income_tax",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Fiscal Policy & Direct Taxation",
+    "current_subtopic": "Income-tax Act 1961: Agricultural Income & Rural Land Exemption",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\nStatement I : In India, income from allied agricultural activities like poultry farm"
+  },
+  {
+    "year": "2025",
+    "q_num": 14,
+    "current_node_id": "history.ancient_india.pallava_dynasty",
+    "current_subject": "History",
+    "current_domain": "Ancient & Early Medieval South India",
+    "current_subtopic": "Pallava Dynasty: Mahendravarman I & Cultural Contributions",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Who among the following rulers in ancient India had assumed the titles 'Mattavilasa', 'Vichitrachitta' and 'Gunabhara'?"
+  },
+  {
+    "year": "2025",
+    "q_num": 17,
+    "current_node_id": "history.ancient_india.mahajanapadas_and_monarchies",
+    "current_subject": "History",
+    "current_domain": "Ancient India",
+    "current_subtopic": "Age of Mahajanapadas (600–322 BC): Capitals & Dynasties",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: godavari"
+    ],
+    "question_en": "With reference to ancient India (600–322 BC), consider the following pairs :\n\nTerritorial region : River flowing in the "
+  },
+  {
+    "year": "2025",
+    "q_num": 21,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Landlocked Countries of Europe",
+    "existing_is_mapping": true,
+    "detected_category": "International Borders & Boundaries",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "Border/Landlocked: landlocked"
+    ],
+    "question_en": "Consider the following countries :\nI. Austria\nII. Bulgaria\nIII. Croatia\nIV. Serbia\nV. Sweden\nVI. North Macedonia\nHow man"
+  },
+  {
+    "year": "2025",
+    "q_num": 22,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_europe_africa_americas_oceania_antarctica",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "South America: Landlocked States (Bolivia & Paraguay)",
+    "existing_is_mapping": true,
+    "detected_category": "International Borders & Boundaries",
+    "detected_region": "World",
+    "detected_skill": "bordering_nations",
+    "reasons": [
+      "Border/Landlocked: landlocked"
+    ],
+    "question_en": "Consider the following countries :\nI. Bolivia\nII. Brazil\nIII. Colombia\nIV. Ecuador\nV. Paraguay\nVI. Venezuela\nAndes mount"
+  },
+  {
+    "year": "2025",
+    "q_num": 23,
+    "current_node_id": "geography_earth_systems.geography_of_the_world.regional_geography_south_east_asia",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Geography of the World",
+    "current_subtopic": "Major Global Lakes & Lagoons (Tanganyika, Tonle Sap, Patos)",
+    "existing_is_mapping": true,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World River/Lake: lake tanganyika"
+    ],
+    "question_en": "Consider the following water bodies :\nI. Lake Tanganyika\nII. Lake Tonle Sap\nIII. Patos Lagoon\nThrough how many of them d"
+  },
+  {
+    "year": "2025",
+    "q_num": 24,
+    "current_node_id": "geography_earth_systems.economic_geography.agricultural_crops_india",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Agricultural Geography of India",
+    "current_subtopic": "Cash Crops & Spices: Turmeric Production & National Board",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements about turmeric during the year 2022–23 :\nI. India is the largest producer and exporter"
+  },
+  {
+    "year": "2025",
+    "q_num": 29,
+    "current_node_id": "geography_earth_systems.climatology.greenhouse_effect_heat_budget",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Climatology & Earth Energy Budget",
+    "current_subtopic": "Natural Greenhouse Effect & Global Mean Equilibrium Temperature",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements :\nI. Without the atmosphere, temperature would be well below freezing point everywhere"
+  },
+  {
+    "year": "2025",
+    "q_num": 30,
+    "current_node_id": "indian_society_social_justice.government_schemes.rashtriya_gokul_mission",
+    "current_subject": "Indian Society & Social Justice",
+    "current_domain": "Agriculture & Animal Husbandry Schemes",
+    "current_subtopic": "Rashtriya Gokul Mission: Indigenous Bovine Breeds & Sexed Semen",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements about the Rashtriya Gokul Mission :\nI. It is important for the upliftment of rural poo"
+  },
+  {
+    "year": "2025",
+    "q_num": 37,
+    "current_node_id": "environment_ecology_disaster_management.biodiversity.endangered_species_india",
+    "current_subject": "Environment, Ecology & Disaster Management",
+    "current_domain": "Endemic & Endangered Species of India",
+    "current_subtopic": "Peacock Tarantula (Poecilotheria metallica): Habitat & Conservation Status",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Regarding Peacock tarantula (Gooty tarantula), consider the following statements :\nI. It is an omnivorous crustacean.\nII"
+  },
+  {
+    "year": "2025",
+    "q_num": 52,
+    "current_node_id": "indian_economy_development.infrastructure_energy_investment_models.physical_infrastructure_systems",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Infrastructure, Energy & Investment Models",
+    "current_subtopic": "State Capitals & Historical Geographical Landmarks of India",
+    "existing_is_mapping": true,
+    "detected_category": "Protected Areas & Biogeography",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Protected Area Location: national park"
+    ],
+    "question_en": "Consider the following pairs :\n\nState : Description\nI. Arunachal Pradesh : The capital is named after a fort, and the St"
+  },
+  {
+    "year": "2025",
+    "q_num": 54,
+    "current_node_id": "indian_polity_constitution_governance.fundamental_duties.article_51a",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Constitutional Framework & Citizen Duties",
+    "current_subtopic": "Fundamental Duties (Article 51A) & Enforcement Mechanisms",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following statements :\nI. The Constitution of India explicitly mentions that in certain spheres the Governo"
+  },
+  {
+    "year": "2025",
+    "q_num": 60,
+    "current_node_id": "indian_economy_development.taxation.goods_and_services_tax",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Indirect Taxation & Fiscal Federalism",
+    "current_subtopic": "Goods and Services Tax (GST): Non-GST Petroleum Products & Council",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following activities :\nI. Production of crude oil\nII. Refining, storage and distribution of petroleum\nIII. "
+  },
+  {
+    "year": "2025",
+    "q_num": 66,
+    "current_node_id": "indian_economy_development.fiscal_federalism.finance_commission",
+    "current_subject": "Indian Economy & Development",
+    "current_domain": "Fiscal Federalism & Intergovernmental Transfers",
+    "current_subtopic": "15th Finance Commission: Tax Devolution Formula & Criteria Weights",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Which of the following statements with regard to recommendations of the 15th Finance Commission of India are correct?\nI."
+  },
+  {
+    "year": "2025",
+    "q_num": 77,
+    "current_node_id": "geography_earth_systems.oceanography_marine_systems.marine_ecosystems_conservation.marine_resources_unclos_zones_blue_economy",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Oceanography & Marine Systems",
+    "current_subtopic": "Bering Strait, International Date Line & Siberian-Alaskan Proximity",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Strait/Canal: bering strait"
+    ],
+    "question_en": "Consider the following statements :\nI. Anadyr in Siberia and Nome in Alaska are a few kilometers from each other, but wh"
+  },
+  {
+    "year": "2025",
+    "q_num": 78,
+    "current_node_id": "history.modern_india.caste_and_social_movements",
+    "current_subject": "History",
+    "current_domain": "Modern Indian Social Movements",
+    "current_subtopic": "Self-Respect Movement (1925) & Periyar E.V. Ramasamy",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Who among the following was the founder of the 'Self-Respect Movement'?"
+  },
+  {
+    "year": "2025",
+    "q_num": 80,
+    "current_node_id": "geography_earth_systems.oceanography_marine_systems.ocean_floor_relief_features.ocean_bottom_relief_shelf_slope_abyssal_plains",
+    "current_subject": "Geography & Earth Systems",
+    "current_domain": "Oceanography & Marine Systems",
+    "current_subtopic": "European Regional Geography: Islands & Historical Provinces",
+    "existing_is_mapping": true,
+    "detected_category": "Seas, Straits & Water Bodies",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Sea: mediterranean"
+    ],
+    "question_en": "Consider the following pairs :\n\nRegion : Country\nI. Mallorca : Italy\nII. Normandy : Spain\nIII. Sardinia : France\n\nIn how"
+  },
+  {
+    "year": "2025",
+    "q_num": 83,
+    "current_node_id": "science_technology_defence.space_technology.human_spaceflight_missions",
+    "current_subject": "Science, Technology & Defence",
+    "current_domain": "Space Technology & ISRO Missions",
+    "current_subtopic": "Human Spaceflight Missions (Gaganyaan, Axiom-4) & SpaDeX Docking",
+    "existing_is_mapping": false,
+    "detected_category": "Rivers & Drainage",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian River: ravi"
+    ],
+    "question_en": "Consider the following space missions :\nI. Axiom-4\nII. SpaDeX\nIII. Gaganyaan\nHow many of the space missions given above "
+  },
+  {
+    "year": "2025",
+    "q_num": 87,
+    "current_node_id": "indian_polity_constitution_governance.parliament.presiding_officers_speaker",
+    "current_subject": "Indian Polity, Constitution & Governance",
+    "current_domain": "Parliament of India",
+    "current_subtopic": "Office of the Speaker: Dissolution of Lok Sabha & Article 94",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "India",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "Indian Relief/Pass: pass"
+    ],
+    "question_en": "Consider the following statements :\nI. On the dissolution of the House of the People, the Speaker shall not vacate his/h"
+  },
+  {
+    "year": "2025",
+    "q_num": 97,
+    "current_node_id": "international_relations_global_institutions.multilateral_forums.brics_kazan_summit",
+    "current_subject": "International Relations & Global Institutions",
+    "current_domain": "Multilateral Summits & Geopolitics",
+    "current_subtopic": "16th BRICS Summit (Kazan 2024): Expansion & Kazan Declaration",
+    "existing_is_mapping": false,
+    "detected_category": "Mountains, Passes & Plateaus",
+    "detected_region": "World",
+    "detected_skill": "location_identification",
+    "reasons": [
+      "World Mountain: ural"
+    ],
+    "question_en": "Consider the following statements with regard to BRICS :\nI. 16th BRICS Summit was held under the Chairship of Russia in "
+  }
+]

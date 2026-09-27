@@ -10,6 +10,24 @@ export interface Option {
     text_hi?: string;
 }
 
+export type MappingRegion = 'India' | 'World' | 'Karnataka';
+export type MappingCategory = 
+    | 'Rivers & Drainage'
+    | 'Mountains, Passes & Plateaus'
+    | 'Seas, Straits & Water Bodies'
+    | 'Protected Areas & Biogeography'
+    | 'Places in News & Conflict Zones'
+    | 'Minerals, Ports & Infrastructure'
+    | 'International Borders & Boundaries';
+
+export interface MappingFacet {
+    is_mapping: boolean;
+    region: MappingRegion;
+    category: MappingCategory;
+    spatial_skill?: string;
+    has_image?: boolean;
+}
+
 export interface Question {
     id: string;
     exam_id: string;
@@ -31,6 +49,13 @@ export interface Question {
     group_label?: string;
     subject_kannada?: string;
     sub_topic_kannada?: string;
+    node_id?: string;
+    domain?: string;
+    sub_topic?: string;
+    tags?: string[];
+    is_mapping?: boolean;
+    mapping?: MappingFacet;
+    secondary_node_ids?: string[];
 }
 
 export interface Exam {
