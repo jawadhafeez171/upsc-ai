@@ -361,7 +361,11 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 </button>
 
                                 <button
-                                    onClick={() => { setMode('yearwise'); setSubject(''); }}
+                                    onClick={() => { 
+                                        setMode('yearwise'); 
+                                        setSubject(''); 
+                                        if (examId === 'kpsc-kas' && year === 'all') setYear(2024);
+                                    }}
                                     style={{
                                         padding: '16px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
                                         background: mode === 'yearwise' ? 'rgba(37, 99, 235, 0.08)' : 'var(--bg-primary)',
@@ -520,7 +524,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                         </label>
                                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                                             <button
-                                                onClick={() => setYear('all')}
+                                                type="button"
+                                                onClick={() => { setYear('all'); setMonth('all'); }}
                                                 style={{
                                                     padding: '6px 12px', borderRadius: '9px', cursor: 'pointer',
                                                     fontSize: '12px', fontWeight: 700,
@@ -533,14 +538,18 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                 All Years (2011–2024)
                                             </button>
                                             {(examId === 'kpsc-kas' 
-                                                ? [2024, 2020, 2017, 2015, 2014, 2012, 2011]
+                                                ? [2024, 2020, 2017, 2015, 2011]
                                                 : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
                                             ).map((yr) => {
                                                 const isSelected = year === yr;
                                                 return (
                                                     <button
                                                         key={yr}
-                                                        onClick={() => setYear(yr)}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setYear(yr);
+                                                            if (yr !== 2024) setMonth('all');
+                                                        }}
                                                         style={{
                                                             padding: '6px 12px', borderRadius: '9px', cursor: 'pointer',
                                                             fontSize: '12px', fontWeight: 700,
@@ -556,6 +565,88 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                             })}
                                         </div>
                                     </div>
+
+                                    {/* KPSC KAS 2024 Examination Session Selector */}
+                                    {examId === 'kpsc-kas' && year === 2024 && (
+                                        <div style={{ 
+                                            marginTop: '6px', 
+                                            padding: '16px', 
+                                            background: 'linear-gradient(135deg, rgba(255, 107, 43, 0.08) 0%, rgba(37, 99, 235, 0.05) 100%)', 
+                                            borderRadius: '14px', 
+                                            border: '1.5px solid rgba(255, 107, 43, 0.28)' 
+                                        }}>
+                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
+                                                <label style={{ fontSize: '12px', fontWeight: 800, color: 'var(--brand-orange)', display: 'flex', alignItems: 'center', gap: '6px', letterSpacing: '0.04em' }}>
+                                                    <span>🎯 SELECT 2024 EXAM SITTING / PAPER:</span>
+                                                </label>
+                                                <span style={{ fontSize: '11px', fontWeight: 700, padding: '3px 8px', borderRadius: '6px', background: 'rgba(255, 107, 43, 0.15)', color: 'var(--brand-orange)', border: '1px solid rgba(255, 107, 43, 0.3)' }}>
+                                                    2 Official Sittings in 2024
+                                                </span>
+                                            </div>
+                                            
+                                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setMonth('august')}
+                                                    style={{
+                                                        padding: '12px 14px', borderRadius: '10px', cursor: 'pointer', textAlign: 'left',
+                                                        background: month === 'august' ? 'rgba(255, 107, 43, 0.15)' : 'var(--bg-primary)',
+                                                        color: month === 'august' ? 'var(--brand-orange)' : 'var(--text-primary)',
+                                                        border: month === 'august' ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
+                                                        boxShadow: month === 'august' ? '0 2px 10px rgba(255, 107, 43, 0.2)' : 'none',
+                                                        transition: 'all 0.15s'
+                                                    }}
+                                                >
+                                                    <div style={{ fontSize: '13px', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
+                                                        <span>☀️ August 2024 Paper</span>
+                                                    </div>
+                                                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                                                        Original Exam (Aug 27, 2024)
+                                                    </div>
+                                                </button>
+
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setMonth('december')}
+                                                    style={{
+                                                        padding: '12px 14px', borderRadius: '10px', cursor: 'pointer', textAlign: 'left',
+                                                        background: month === 'december' ? 'rgba(37, 99, 235, 0.12)' : 'var(--bg-primary)',
+                                                        color: month === 'december' ? '#2563EB' : 'var(--text-primary)',
+                                                        border: month === 'december' ? '2px solid #2563EB' : '1px solid var(--border)',
+                                                        boxShadow: month === 'december' ? '0 2px 10px rgba(37, 99, 235, 0.2)' : 'none',
+                                                        transition: 'all 0.15s'
+                                                    }}
+                                                >
+                                                    <div style={{ fontSize: '13px', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
+                                                        <span>❄️ December 2024 Paper</span>
+                                                    </div>
+                                                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                                                        Re-Exam Sitting (Dec 29, 2024)
+                                                    </div>
+                                                </button>
+
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setMonth('all')}
+                                                    style={{
+                                                        padding: '12px 14px', borderRadius: '10px', cursor: 'pointer', textAlign: 'left',
+                                                        background: month === 'all' ? 'rgba(13, 148, 136, 0.12)' : 'var(--bg-primary)',
+                                                        color: month === 'all' ? 'var(--brand-teal)' : 'var(--text-primary)',
+                                                        border: month === 'all' ? '2px solid var(--brand-teal)' : '1px solid var(--border)',
+                                                        boxShadow: month === 'all' ? '0 2px 10px rgba(13, 148, 136, 0.2)' : 'none',
+                                                        transition: 'all 0.15s'
+                                                    }}
+                                                >
+                                                    <div style={{ fontSize: '13px', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
+                                                        <span>🌟 Both Papers Combined</span>
+                                                    </div>
+                                                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
+                                                        Aug + Dec (Combined Pool)
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             )}
 
@@ -676,7 +767,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             </div>
 
                             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '24px' }}>
-                                {QUESTION_COUNTS.map((c) => (
+                                {(availableQs >= 200 ? [...QUESTION_COUNTS, 200] : QUESTION_COUNTS).map((c) => (
                                     <button
                                         key={c}
                                         onClick={() => { setCount(c); setCustomCount(''); }}
@@ -688,7 +779,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                             border: count === c && !customCount ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
                                         }}
                                     >
-                                        {c} Qs
+                                        {c} Qs {c === 100 && availableQs === 100 ? '(Full Paper)' : c === 200 ? '(Full Exam)' : ''}
                                     </button>
                                 ))}
                             </div>
