@@ -7,7 +7,7 @@ export function middleware(req: NextRequest) {
     const { pathname } = req.nextUrl;
 
     // Define protected and auth routes
-    const isProtectedRoute = pathname.startsWith('/dashboard') || pathname.startsWith('/test/') || pathname.startsWith('/results/');
+    const isProtectedRoute = (pathname.startsWith('/dashboard') || pathname.startsWith('/test/') || pathname.startsWith('/results/')) && !pathname.startsWith('/test/demo');
     const isAuthRoute = pathname === '/login' || pathname === '/register';
 
     // Redirect unauthenticated users to login

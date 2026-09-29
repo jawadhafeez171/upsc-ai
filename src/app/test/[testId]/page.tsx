@@ -210,7 +210,31 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     }, [activeSession]);
 
     useEffect(() => {
-        if (!activeSession || activeSession.id !== testId) { router.push('/exams'); return; }
+        if (!activeSession || activeSession.id !== testId) {
+            if (testId === 'demo' || !activeSession) {
+                const fallbackSession: any = {
+                    id: testId,
+                    created_at: new Date().toISOString(),
+                    config: {
+                        exam_id: 'upsc-cse',
+                        mode: 'mock',
+                        paper: 1,
+                        language: 'en',
+                        difficulty: 'mixed',
+                        year: 'all',
+                        question_count: 25
+                    },
+                    status: 'in_progress',
+                    score: 0,
+                    total_marks: 50,
+                    questions: []
+                };
+                setActiveSession(fallbackSession);
+                return;
+            }
+            router.push('/exams');
+            return;
+        }
         async function fetchQuestions() {
             setLoading(true);
             const { config } = activeSession!;
