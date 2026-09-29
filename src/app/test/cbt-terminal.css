@@ -1,0 +1,300 @@
+/* CBT Terminal Aesthetic CSS - Matches Official NTA/UPSC/MockIQ Benchmark Exam Screen */
+
+:root {
+  --cbt-canvas: #f4f1ea;
+  --cbt-card: #ffffff;
+  --cbt-border: #1e1e1e;
+  --cbt-border-light: #d1cbbe;
+  --cbt-text: #111827;
+  --cbt-text-muted: #555e6c;
+  --cbt-yellow: #facc15;
+  --cbt-yellow-hover: #eab308;
+  --cbt-green: #16a34a;
+  --cbt-green-light: rgba(22, 163, 74, 0.12);
+  --cbt-red: #dc2626;
+  --cbt-red-light: rgba(220, 38, 38, 0.12);
+  --cbt-purple: #7c3aed;
+  --cbt-purple-light: rgba(124, 58, 237, 0.12);
+  --cbt-blue: #2563eb;
+  --cbt-gray: #e2e8f0;
+  --cbt-gray-dark: #64748b;
+  --cbt-font-mono: 'JetBrains Mono', 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.cbt-terminal-wrapper {
+  background-color: var(--cbt-canvas);
+  color: var(--cbt-text);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding-bottom: 40px;
+}
+
+/* Crisp Technical Box */
+.cbt-box {
+  background: var(--cbt-card);
+  border: 1.5px solid var(--cbt-border);
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.cbt-box-sm {
+  background: var(--cbt-card);
+  border: 1.5px solid var(--cbt-border);
+  border-radius: 4px;
+}
+
+/* Header Styles */
+.cbt-header {
+  background: #ffffff;
+  border-bottom: 2px solid var(--cbt-border);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.cbt-timer-badge {
+  background: var(--cbt-red);
+  color: #ffffff;
+  font-family: var(--cbt-font-mono);
+  font-weight: 800;
+  font-size: 14.5px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.35);
+}
+
+.cbt-sub-header {
+  background: #ebe6dc;
+  border-bottom: 1.5px solid var(--cbt-border);
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Option Row */
+.cbt-option-row {
+  background: #ffffff;
+  border: 1.5px solid var(--cbt-border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+}
+
+.cbt-option-row:hover:not(.eliminated) {
+  border-color: #000000;
+  background: #fdfcf7;
+  transform: translateY(-1px);
+}
+
+.cbt-option-row.selected {
+  border: 2px solid #000000;
+  background: #fefce8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.cbt-option-row.eliminated {
+  background: #f1f1ee;
+  border: 1.5px dashed #9ca3af;
+  opacity: 0.65;
+}
+
+.cbt-option-row.eliminated .cbt-option-text {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+/* Option Letter Badge */
+.cbt-option-badge {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid var(--cbt-border);
+  background: #f4f1ea;
+  color: #111827;
+  font-weight: 800;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.cbt-option-row.selected .cbt-option-badge {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+/* Strikethrough Eliminate Button */
+.cbt-eliminate-btn {
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #9ca3af;
+  background: #f8fafc;
+  color: #4b5563;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s;
+}
+
+.cbt-eliminate-btn:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+/* Palette Square Cells */
+.cbt-palette-cell {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid var(--cbt-border);
+  border-radius: 4px;
+  font-weight: 800;
+  font-size: 11.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--cbt-font-mono);
+}
+
+.cbt-palette-cell.state-answered {
+  background: var(--cbt-green);
+  color: #ffffff;
+  border-color: #15803d;
+}
+
+.cbt-palette-cell.state-unanswered {
+  background: var(--cbt-red);
+  color: #ffffff;
+  border-color: #b91c1c;
+}
+
+.cbt-palette-cell.state-marked {
+  background: var(--cbt-purple);
+  color: #ffffff;
+  border-color: #6d28d9;
+}
+
+.cbt-palette-cell.state-ans-marked {
+  background: var(--cbt-purple);
+  color: #ffffff;
+  border-color: #6d28d9;
+}
+
+/* Green corner triangle for Ans & Marked */
+.cbt-palette-cell.state-ans-marked::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 0;
+  border-color: transparent var(--cbt-green) transparent transparent;
+}
+
+.cbt-palette-cell.state-not-visited {
+  background: var(--cbt-gray);
+  color: #475569;
+  border-color: #cbd5e1;
+}
+
+.cbt-palette-cell.state-active {
+  box-shadow: 0 0 0 2.5px #000000, 0 0 0 4.5px var(--cbt-yellow);
+  z-index: 2;
+  transform: scale(1.08);
+}
+
+/* Range Scrubber */
+.cbt-scrubber-track {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border: 1px solid var(--cbt-border);
+  border-radius: 4px;
+}
+
+.cbt-scrubber-fill {
+  height: 100%;
+  background: #000000;
+  border-radius: 3px;
+}
+
+.cbt-scrubber-thumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background: var(--cbt-yellow);
+  border: 2px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Statement Box [1], [2], [3] */
+.cbt-statement-box {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.cbt-statement-num {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--cbt-border);
+  background: #f1ede4;
+  font-weight: 800;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Two-column exam grid */
+.cbt-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .cbt-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

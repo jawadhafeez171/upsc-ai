@@ -1,0 +1,532 @@
+[1] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q3
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.coding_decoding_letter_number', "GS question in GMA (hit 'james prinsep')", "Cross-subject mismatch: currently 'General Mental Ability, Quantitative Aptitude & Comprehension', expected 'History' (hit '\\b(mughal\\s+period|ahadis\\s+of\\s+the\\s+mughal|dutch\\s+trade\\s+in\\s+mughal|mature\\s+harappan|east\\s+india\\s+company)\\b')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_analytical_reasoning.coding_decoding_letter_number
+Text: Statement I : James Prinsep, an officer in the mint of the East India Company, deciphered Brahmi and
+--------------------------------------------------------------------------------
+[2] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q7
+Reasons: ["GS question in GMA (hit 'roaring forties')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations
+Text: Statement I : Roaring Forties are strong Westerly winds found in the Southern Hemisphere, generally 
+--------------------------------------------------------------------------------
+[3] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q10
+Reasons: ["Cross-subject mismatch: currently 'International Relations & Global Institutions', expected 'History' (hit '\\b(mughal\\s+period|ahadis\\s+of\\s+the\\s+mughal|dutch\\s+trade\\s+in\\s+mughal|mature\\s+harappan|east\\s+india\\s+company)\\b')"]
+Current Subj: International Relations & Global Institutions | Node: international_relations_global_institutions.global_institutions_agreements_treaties
+Text: Which one among the following regarding the Ahadis of the Mughal period is not true ?
+--------------------------------------------------------------------------------
+[4] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q48
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.classification_odd_one_out']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.classification_odd_one_out
+Text: Which of the following is not a characteristic of globalization ?
+--------------------------------------------------------------------------------
+[5] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q52
+Reasons: ["GS question in GMA (hit 'permanent settlement')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations
+Text: The Permanent Settlement was rarely extended to other regions because :
+--------------------------------------------------------------------------------
+[6] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q76
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.number_letter_symbol_series']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.number_letter_symbol_series
+Text: If every alternate letter of English Alphabet is written in lower-case (small letters) such that the
+--------------------------------------------------------------------------------
+[7] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q88
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.number_letter_symbol_series']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.number_letter_symbol_series
+Text: The right letters for question marks (?) in the following series are :
+A C B E C G D ? ?
+--------------------------------------------------------------------------------
+[8] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q102
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: There are 28 steps in a temple. In the time A, initially at the 28th step, comes down two steps, B, 
+--------------------------------------------------------------------------------
+[9] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q118
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: In a family, the age of father, mother, son and grandson are A, B, C and D respectively. Given that 
+--------------------------------------------------------------------------------
+[10] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q123
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree
+Text: If B's mother is A's mother's daughter, how is A related to B ?
+--------------------------------------------------------------------------------
+[11] File: CAPF_2014_Paper1_GS.json | Year: 2014 | Q125
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations
+Text: If GOLD is coded as EMJB, then code NMPR stands for what ?
+--------------------------------------------------------------------------------
+[12] File: CAPF_2015_Paper1_GS.json | Year: 2015 | Q32
+Reasons: ["GS question in GMA (hit 'administrative reforms commission')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: The 2nd Administrative Reforms Commission has produced Reports on :
+1. Ethics in Governance
+2. Local
+--------------------------------------------------------------------------------
+[13] File: CAPF_2015_Paper1_GS.json | Year: 2015 | Q89
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree
+Text: Match List I with List II and select the correct answer using the code given below the Lists :
+List-
+--------------------------------------------------------------------------------
+[14] File: CAPF_2015_Paper1_GS.json | Year: 2015 | Q90
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations
+Text: If in a certain language NEOMAN is coded as OGRQFT, then ZKCLUP is the code of :
+--------------------------------------------------------------------------------
+[15] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q1
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_deductive_reasoning.venn_diagrams_two_three_sets']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_deductive_reasoning.venn_diagrams_two_three_sets
+Text: Which one of the following figures correctly represents the relations between Jupiter, Mars and Plan
+--------------------------------------------------------------------------------
+[16] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q16
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_deductive_reasoning.venn_diagrams_two_three_sets']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.logical_deductive_reasoning.venn_diagrams_two_three_sets
+Text: The number of persons reading newspaper is shown in the following Venn Diagram (Survey of 50 persons
+--------------------------------------------------------------------------------
+[17] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q29
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.classification_odd_one_out']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.classification_odd_one_out
+Text: Which one of the following is different from the remaining three?
+--------------------------------------------------------------------------------
+[18] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q41
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: Which one of the following statements is not correct?
+--------------------------------------------------------------------------------
+[19] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q47
+Reasons: ["GS question in GMA (hit 'khadi and village industries')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following are the objectives of Khadi and Village Industries as envisaged by the Khadi 
+--------------------------------------------------------------------------------
+[20] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q48
+Reasons: ["GS question in GMA (hit 'circum-pacific belt')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following statements concerning circum-pacific belt are correct?
+1. It is a seismically
+--------------------------------------------------------------------------------
+[21] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q76
+Reasons: ["GS question in GMA (hit 'anglicists')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following is/are characteristic(s) of the debate between 'Anglicists' and 'Orientalists
+--------------------------------------------------------------------------------
+[22] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q104
+Reasons: ["GS question in GMA (hit 'meghnad badh kabya')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following statements about the Bengali literary epic, Meghnad Badh Kabya (1861), is/are
+--------------------------------------------------------------------------------
+[23] File: CAPF_2016_Paper1_GS.json | Year: 2016 | Q113
+Reasons: ["GS question in GMA (hit 'architecture of rome in the 15th century')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following statements about the new style of architecture of Rome in the 15th century is
+--------------------------------------------------------------------------------
+[24] File: CAPF_2017_Paper1_GS.json | Year: 2017 | Q19
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts', "GS question in GMA (hit 'us president in 2017 has signed an executive order')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: The US President in 2017 has signed an executive order for US withdrawal from a trade organization o
+--------------------------------------------------------------------------------
+[25] File: CAPF_2017_Paper1_GS.json | Year: 2017 | Q68
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae
+Text: The difference between the compound interest and the simple interest for 2 years on a sum of money i
+--------------------------------------------------------------------------------
+[26] File: CAPF_2017_Paper1_GS.json | Year: 2017 | Q123
+Reasons: ["GS question in GMA (hit 'circum-pacific belt')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Consider the following statements about the 'Ring of Fire':
+1. It is also known as the circum-Pacifi
+--------------------------------------------------------------------------------
+[27] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q19
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.number_letter_symbol_series']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.number_letter_symbol_series
+Text: Consider the following diagrams:
+
+Which one of the following is the missing number in the diagrams g
+--------------------------------------------------------------------------------
+[28] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q30
+Reasons: ["GS question in GMA (hit 'river basins of india')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.order_ranking_comparative_arrangements
+Text: Which one of the following major river basins of India is the shortest in length and smallest in ter
+--------------------------------------------------------------------------------
+[29] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q55
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: Consider an equilateral triangle ABC as given in the following diagram:
+
+Two people start at the sam
+--------------------------------------------------------------------------------
+[30] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q57
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: The ratio of ages of a man and his son is 3:1. After 15 years, the age ratio will be 2:1. What is th
+--------------------------------------------------------------------------------
+[31] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q82
+Reasons: ["GS question in GMA (hit 'constitution of india')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.order_ranking_comparative_arrangements
+Text: Which one of the following statements about the Constitution of India is correct?
+--------------------------------------------------------------------------------
+[32] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q93
+Reasons: ["Cross-subject mismatch: currently 'Indian Economy & Development', expected 'Indian Polity, Constitution & Governance' (hit '\\b(10th\\s+schedule\\s+of\\s+the\\s+constitution|lok\\s+sabha\\s+and\\s+the\\s+rajya\\s+sabha\\s+held\\s+joint)\\b')"]
+Current Subj: Indian Economy & Development | Node: indian_economy_development.planning_mobilisation_of_resources_inclusive_growth
+Text: Over which of the following, the Lok Sabha and the Rajya Sabha held joint sittings to resolve their 
+--------------------------------------------------------------------------------
+[33] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q95
+Reasons: ["GS question in GMA (hit 'constitution of india')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations
+Text: Which one of the following is the correct combination of languages included in the 8th Schedule of t
+--------------------------------------------------------------------------------
+[34] File: CAPF_2018_Paper1_GS.json | Year: 2018 | Q102
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree', "GS question in GMA (hit 'buddha')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree
+Text: Who among the following was Buddha's foster mother?
+--------------------------------------------------------------------------------
+[35] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q3
+Reasons: ["Cross-subject mismatch: currently 'Indian Economy & Development', expected 'Indian Polity, Constitution & Governance' (hit '\\b(10th\\s+schedule\\s+of\\s+the\\s+constitution|lok\\s+sabha\\s+and\\s+the\\s+rajya\\s+sabha\\s+held\\s+joint)\\b')"]
+Current Subj: Indian Economy & Development | Node: indian_economy_development.planning_mobilisation_of_resources_inclusive_growth
+Text: Which one of the following is NOT true of the 10th schedule of the Constitution of India pertaining 
+--------------------------------------------------------------------------------
+[36] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q11
+Reasons: ["GS question in GMA (hit 'law of diminishing returns')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: According to the Law of Diminishing Returns, in a production function when more and more units of th
+--------------------------------------------------------------------------------
+[37] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q30
+Reasons: ["Cross-subject mismatch: currently 'Indian Polity, Constitution & Governance', expected 'International Relations & Global Institutions' (hit '\\b(zayed\\s+medal\\s+is\\s+the\\s+top\\s+civilian)\\b')"]
+Current Subj: Indian Polity, Constitution & Governance | Node: indian_polity_constitution_governance.union_executive_state_executive
+Text: Zayed Medal is the top civilian honour of:
+--------------------------------------------------------------------------------
+[38] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q33
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: A snowboard pulled up by a tow rope travels at the rate of 5 m/s up a mountain. If 3000 watt of powe
+--------------------------------------------------------------------------------
+[39] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q34
+Reasons: ["GS question in GMA (hit 'electromagnetic wave')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which one of the following is NOT true for an electromagnetic wave?
+--------------------------------------------------------------------------------
+[40] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q79
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree
+Text: If M is brother of N, B is brother of N and M is brother of D, then which one of the following state
+--------------------------------------------------------------------------------
+[41] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q80
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations
+Text: If in a certain language GAMBLE is coded as FBLCKF, how is FLOWER coded in that language?
+--------------------------------------------------------------------------------
+[42] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q81
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.classification_odd_one_out']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.classification_odd_one_out
+Text: In this item, four words have been given, out of which three are alike in some manner and the fourth
+--------------------------------------------------------------------------------
+[43] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q83
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.percentages_profit_loss']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.percentages_profit_loss
+Text: If the numerator of a fraction is increased by 200% and the denominator is increased by 300%, the re
+--------------------------------------------------------------------------------
+[44] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q91
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree', "GS question in GMA (hit 'vasudeo balwant phadke')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree
+Text: Why was Vasudeo Balwant Phadke known in history?
+--------------------------------------------------------------------------------
+[45] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q114
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.mathematical_operations_symbol_substitution']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.mathematical_operations_symbol_substitution
+Text: If 2[3]4=22, 3[4]6=54, then 4[5]7=?
+[Note: the source page for this item was significantly degraded 
+--------------------------------------------------------------------------------
+[46] File: CAPF_2019_Paper1_GS.json | Year: 2019 | Q121
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: Which one of the following is the name given by Indian Railways to the indigenously manufactured Tra
+--------------------------------------------------------------------------------
+[47] File: CAPF_2020_Paper1_GS.json | Year: 2020 | Q111
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.algebra_linear_quadratic_equations']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.algebra_linear_quadratic_equations
+Text: In an exam, a candidate attempts 20 questions and scores 72 marks. If 5 marks are awarded for each c
+--------------------------------------------------------------------------------
+[48] File: CAPF_2020_Paper1_GS.json | Year: 2020 | Q116
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae
+Text: A sum triples in ten years under compound interest at a certain rate of interest, the interest being
+--------------------------------------------------------------------------------
+[49] File: CAPF_2020_Paper1_GS.json | Year: 2020 | Q118
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.mensuration_2d_3d']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.mensuration_2d_3d
+Text: A wire of length 6 m is stretched such that its radius is reduced by 20%. Which one of the following
+--------------------------------------------------------------------------------
+[50] File: CAPF_2020_Paper1_GS.json | Year: 2020 | Q120
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.number_systems_divisibility_remainders']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.number_systems_divisibility_remainders
+Text: A is the smallest positive integer which, when divided by 9 and 12, leaves a remainder of 8 in each 
+--------------------------------------------------------------------------------
+[51] File: CAPF_2021_Paper1_GS.json | Year: 2021 | Q1
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: The time elapsed between viewing a lightning flash and hearing the thunder of a cloud is 10 s. If th
+--------------------------------------------------------------------------------
+[52] File: CAPF_2021_Paper1_GS.json | Year: 2021 | Q40
+Reasons: ["Cross-subject mismatch: currently 'Geography & Earth Systems', expected 'History' (hit '\\b(mughal\\s+period|ahadis\\s+of\\s+the\\s+mughal|dutch\\s+trade\\s+in\\s+mughal|mature\\s+harappan|east\\s+india\\s+company)\\b')"]
+Current Subj: Geography & Earth Systems | Node: geography_earth_systems.physical_geography_earth_systems
+Text: Most of the mature Harappan sites in the region of Cholistan had been abandoned during
+--------------------------------------------------------------------------------
+[53] File: CAPF_2021_Paper1_GS.json | Year: 2021 | Q53
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.time_work_pipes_cisterns']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.time_work_pipes_cisterns
+Text: A and B together can finish a job in 20 days. B and C together can finish the same job in 30 days. I
+--------------------------------------------------------------------------------
+[54] File: CAPF_2021_Paper1_GS.json | Year: 2021 | Q77
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree
+Text: The average age of Raj and his father is 45 years. If the ages of the father and grandfather of Raj 
+--------------------------------------------------------------------------------
+[55] File: CAPF_2021_Paper1_GS.json | Year: 2021 | Q96
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae
+Text: The difference of compound interest and simple interest of a sum of money at the rate of 5% per year
+--------------------------------------------------------------------------------
+[56] File: CAPF_2021_Paper1_GS.json | Year: 2021 | Q101
+Reasons: ['Invalid node_id: geography_earth_systems.economic_human_geography']
+Current Subj: Geography & Earth Systems | Node: geography_earth_systems.economic_human_geography
+Text: Which one of the following is the only riverine major port in India?
+--------------------------------------------------------------------------------
+[57] File: CAPF_2021_Paper1_GS.json | Year: 2021 | Q118
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions', "GS question in GMA (hit 'offshore patrol vessel')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: Indian Coast Guard Offshore Patrol Vessel 'Sajag', which was commissioned in May 2021, was construct
+--------------------------------------------------------------------------------
+[58] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q4
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.profit_loss_interest_discount.simple_compound_interest_formulae
+Text: Suppose a bank gives an interest of 10% per annum compounded annually for a fixed deposit for a peri
+--------------------------------------------------------------------------------
+[59] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q5
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: A runner's average speed reduces by 25% every hour. If he runs 16 km in the first hour and he runs f
+--------------------------------------------------------------------------------
+[60] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q12
+Reasons: ["GS question in GMA (hit 'genetic materials in prokaryotes')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations
+Text: Which of the following combinations correctly represents the genetic materials in prokaryotes and eu
+--------------------------------------------------------------------------------
+[61] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q33
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.time_work_pipes_cisterns']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.time_work_pipes_cisterns
+Text: Suppose A and B can complete a work together in 10 days. If B alone can complete the work in 15 days
+--------------------------------------------------------------------------------
+[62] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q39
+Reasons: ["GS question in GMA (hit 'calcium oxide reacts with water')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations
+Text: Calcium oxide reacts with water to produce slaked lime. It is an example of
+--------------------------------------------------------------------------------
+[63] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q42
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: Two friends 10 km apart start running towards each other at speeds of 10 km/hr and 14 km/hr respecti
+--------------------------------------------------------------------------------
+[64] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q44
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.algebra_linear_quadratic_equations']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.algebra_linear_quadratic_equations
+Text: A test consists of 25 MCQs. Each correct answer gives +4 marks and incorrect answer gives -1 mark. I
+--------------------------------------------------------------------------------
+[65] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q54
+Reasons: ['Invalid node_id: indian_economy_development.poverty_inclusion_demographics_social_sector_initiatives']
+Current Subj: Indian Economy & Development | Node: indian_economy_development.poverty_inclusion_demographics_social_sector_initiatives
+Text: Which one of the following statements is not correct?
+--------------------------------------------------------------------------------
+[66] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q70
+Reasons: ["GS question in GMA (hit 'ek bharat shreshtha bharat')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following statements about 'Ek Bharat Shreshtha Bharat' programme is/are correct?
+1. It
+--------------------------------------------------------------------------------
+[67] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q75
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: Recently, with which one of the following countries did India sign the 'Comprehensive Economic Partn
+--------------------------------------------------------------------------------
+[68] File: CAPF_2022_Paper1_GS.json | Year: 2022 | Q117
+Reasons: ['Invalid node_id: geography_earth_systems.economic_human_geography']
+Current Subj: Geography & Earth Systems | Node: geography_earth_systems.economic_human_geography
+Text: Consider the following statements about the seaports in India:
+1. There are 4 major and 25 minor sea
+--------------------------------------------------------------------------------
+[69] File: CAPF_2023_Paper1_GS.json | Year: 2023 | Q1
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.blood_relations_family_tree
+Text: Pointing towards a photograph Mr. Ajit said, “She is my father’s wife’s son’s only sister.” What is 
+--------------------------------------------------------------------------------
+[70] File: CAPF_2023_Paper1_GS.json | Year: 2023 | Q34
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: A sound wave of frequency of 2 kHz has a wavelength of 35 cm in a given medium. How long will it tak
+--------------------------------------------------------------------------------
+[71] File: CAPF_2023_Paper1_GS.json | Year: 2023 | Q42
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: Car A takes 1 hour more than car B, which travels at a speed of 60 km per hour, to cover some fixed 
+--------------------------------------------------------------------------------
+[72] File: CAPF_2023_Paper1_GS.json | Year: 2023 | Q48
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: Which of the following statements about Quad is/are correct ?
+1. It is a group of four countries, na
+--------------------------------------------------------------------------------
+[73] File: CAPF_2023_Paper1_GS.json | Year: 2023 | Q71
+Reasons: ["GS question in GMA (hit 'resistance r is cut')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations
+Text: A wire of resistance R is cut into four equal parts. These parts are then connected in parallel. If 
+--------------------------------------------------------------------------------
+[74] File: CAPF_2023_Paper1_GS.json | Year: 2023 | Q91
+Reasons: ["GS question in GMA (hit 'vedic sacrifices')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Consider the following statements about the practice of Vedic sacrifices :
+1. The shrauta (Vedic sac
+--------------------------------------------------------------------------------
+[75] File: CAPF_2023_Paper1_GS.json | Year: 2023 | Q102
+Reasons: ["GS question in GMA (hit 'right to information act')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following statements about the Right to Information Act, 2005 is/are correct ?
+1. There
+--------------------------------------------------------------------------------
+[76] File: CAPF_2024_Paper1_GS.json | Year: 2024 | Q6
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: A canon shoots a ball upwards with an initial speed of 100 m/s. The total time of flight of the ball
+--------------------------------------------------------------------------------
+[77] File: CAPF_2024_Paper1_GS.json | Year: 2024 | Q22
+Reasons: ["GS question in GMA (hit 'gregor j. mendel')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: In which organism did Gregor J. Mendel conduct the experiment to explain principles of inheritance ?
+--------------------------------------------------------------------------------
+[78] File: CAPF_2024_Paper1_GS.json | Year: 2024 | Q50
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: The ratio of present ages (in years) of X to Y is equal to the ratio of present ages (in years) of Y
+--------------------------------------------------------------------------------
+[79] File: CAPF_2024_Paper1_GS.json | Year: 2024 | Q59
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: A train travelling at a speed of 60 km/hr crosses a platform in 20 seconds. The same train crosses a
+--------------------------------------------------------------------------------
+[80] File: CAPF_2024_Paper1_GS.json | Year: 2024 | Q60
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: In a partnership firm, A invests 1/6th of the total investment for 1/6th of the tenure. B invests 1/
+--------------------------------------------------------------------------------
+[81] File: CAPF_2024_Paper1_GS.json | Year: 2024 | Q78
+Reasons: ["Cross-subject mismatch: currently 'Indian Economy & Development', expected 'History' (hit '\\b(mughal\\s+period|ahadis\\s+of\\s+the\\s+mughal|dutch\\s+trade\\s+in\\s+mughal|mature\\s+harappan|east\\s+india\\s+company)\\b')"]
+Current Subj: Indian Economy & Development | Node: indian_economy_development.macroeconomic_fundamentals_national_income_accounting
+Text: Consider the following statements about the Dutch trade in Mughal period :
+1. The Dutch transported 
+--------------------------------------------------------------------------------
+[82] File: CAPF_2024_Paper1_GS.json | Year: 2024 | Q107
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: Consider the following statements :
+1. National Monetisation Pipeline estimates that for the period 
+--------------------------------------------------------------------------------
+[83] File: CAPF_2025_Paper1_GS.json | Year: 2025 | Q2
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts', "GS question in GMA (hit 'india-poland strategic partnership')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: India and Poland have agreed to implement the 'India-Poland Strategic Partnership' in terms of a Fiv
+--------------------------------------------------------------------------------
+[84] File: CAPF_2025_Paper1_GS.json | Year: 2025 | Q25
+Reasons: ["GS question in GMA (hit 'code on wages')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: The Code on Wages was notified by the Government of India in the year
+--------------------------------------------------------------------------------
+[85] File: CAPF_2025_Paper1_GS.json | Year: 2025 | Q26
+Reasons: ["Cross-subject mismatch: currently 'Indian Polity, Constitution & Governance', expected 'History' (hit '\\b(mughal\\s+period|ahadis\\s+of\\s+the\\s+mughal|dutch\\s+trade\\s+in\\s+mughal|mature\\s+harappan|east\\s+india\\s+company)\\b')"]
+Current Subj: Indian Polity, Constitution & Governance | Node: indian_polity_constitution_governance.union_executive_state_executive
+Text: Match List-I with List-II and select the answer using the code given below the Lists :
+List-I (Act o
+--------------------------------------------------------------------------------
+[86] File: CAPF_2025_Paper1_GS.json | Year: 2025 | Q56
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.algebra_linear_quadratic_equations']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.quantitative_aptitude_numerical_ability.algebra_linear_quadratic_equations
+Text: For any three natural numbers a, b and c, if (bc + 1)/(abc + a + c) = 11/43, then the value of abc i
+--------------------------------------------------------------------------------
+[87] File: CAPF_2025_Paper1_GS.json | Year: 2025 | Q61
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: P and Q are two points on a highway, 300 km apart. Two bikers A and B start at the same time from P 
+--------------------------------------------------------------------------------
+[88] File: CAPF_2025_Paper1_GS.json | Year: 2025 | Q80
+Reasons: ["GS question in GMA (hit 'raster data format')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following statements with reference to raster data format is/are correct?
+1. It has a s
+--------------------------------------------------------------------------------
+[89] File: CAPF_2025_Paper1_GS.json | Year: 2025 | Q82
+Reasons: ["Cross-subject mismatch: currently 'International Relations & Global Institutions', expected 'Geography & Earth Systems' (hit '\\b(bharatmala\\s+pariyojana)\\b')"]
+Current Subj: International Relations & Global Institutions | Node: international_relations_global_institutions.global_institutions_agreements_treaties
+Text: Which of the following are included in Bharatmala Pariyojana?
+1. Road connectivity to border areas
+2
+--------------------------------------------------------------------------------
+[90] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q5
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.percentages_averages_ratio-proportion.ratio_proportion_proportional_parts
+Text: Which of the following statements about the Black Swan Summit India, 2026 is/are correct?
+1. It was 
+--------------------------------------------------------------------------------
+[91] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q8
+Reasons: ['Invalid node_id: geography_earth_systems.economic_human_geography']
+Current Subj: Geography & Earth Systems | Node: geography_earth_systems.economic_human_geography
+Text: Consider the following statements with reference to the Promotion and Regulation of Online Gaming Ac
+--------------------------------------------------------------------------------
+[92] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q24
+Reasons: ['Invalid node_id: indian_economy_development.fiscal_policy_taxation_public_finance']
+Current Subj: Indian Economy & Development | Node: indian_economy_development.fiscal_policy_taxation_public_finance
+Text: Which one of the following systems has been adopted by the Government of India to improve cash manag
+--------------------------------------------------------------------------------
+[93] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q54
+Reasons: ["GS question in GMA (hit 'human rights')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following statements about human rights is/are correct?
+1. The first generation rights 
+--------------------------------------------------------------------------------
+[94] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q56
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: When A runs 5 km, B can run 2 km. Initially A was 750 m behind B and they were running in the same d
+--------------------------------------------------------------------------------
+[95] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q64
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning.problem_solving_pattern_recognition.coding_decoding_letter_number_operations
+Text: If ART is encoded as BQU, then TAR is encoded as
+--------------------------------------------------------------------------------
+[96] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q84
+Reasons: ["GS question in GMA (hit 'total electricity generation')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Consider the following statements :
+1. India's total electricity generation in the last four years (
+--------------------------------------------------------------------------------
+[97] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q85
+Reasons: ['Invalid node_id: geography_earth_systems.economic_human_geography']
+Current Subj: Geography & Earth Systems | Node: geography_earth_systems.economic_human_geography
+Text: Consider the following statements with respect to ports in India :
+1. There are 12 major ports in op
+--------------------------------------------------------------------------------
+[98] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q92
+Reasons: ["GS question in GMA (hit 'genetically modifying an organism')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: Which of the following is/are the basic step(s) in genetically modifying an organism?
+1. Identificat
+--------------------------------------------------------------------------------
+[99] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q112
+Reasons: ["GS question in GMA (hit 'resistors r1')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.permutation_combination_probability.combinations_selections_geometry_combinations
+Text: Which combination of three resistors R1, R2 and R3 has minimum total resistance? (Consider R1 = 1 Ω,
+--------------------------------------------------------------------------------
+[100] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q114
+Reasons: ['Invalid node_id: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions']
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy.time_work_speed_distance.speed_time_distance_unit_conversions
+Text: Velocity (m/s)-time (s) graph is plotted for the motion of two cars A and B for 10 s, when the cars 
+--------------------------------------------------------------------------------
+[101] File: CAPF_2026_Paper1_GS.json | Year: 2026 | Q116
+Reasons: ["GS question in GMA (hit 'uniform circular motion')"]
+Current Subj: General Mental Ability, Quantitative Aptitude & Comprehension | Node: general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning
+Text: For a particle in uniform circular motion (radius R and angular velocity ω), the magnitude and direc
+--------------------------------------------------------------------------------

@@ -42,6 +42,13 @@ const QUICK_LAUNCHES = [
     color: '#D97706'
   },
   {
+    title: 'UPSC CAPF (AC) 2014–2026',
+    desc: '1,625 Real Assistant Commandant Paper 1 PYQs (13 Years)',
+    badge: '🎖️ 13 Full Papers',
+    link: '/exams/upsc-capf',
+    color: '#0D5D56'
+  },
+  {
     title: 'KSP Police Constable 2026',
     desc: 'HK & State-wide NHK Official Key Validated Papers',
     badge: '🚔 200 Questions',
@@ -71,18 +78,19 @@ export default function HomePage() {
   // Demo Question State
   const [demoSelected, setDemoSelected] = useState<string | null>(null);
   const [demoLang, setDemoLang] = useState<'en' | 'kn'>('en');
-  const [totalQuestions, setTotalQuestions] = useState<number>(5841);
+  const [totalQuestions, setTotalQuestions] = useState<number>(7466);
 
   useEffect(() => {
     async function fetchTotalQuestions() {
       try {
-        const [q1, q2, q3, q4] = await Promise.all([
+        const [q1, q2, q3, q4, q5] = await Promise.all([
           supabase.from('upsc_questions').select('id', { count: 'exact', head: true }),
           supabase.from('csat_pyq').select('id', { count: 'exact', head: true }),
           supabase.from('kas_questions').select('id', { count: 'exact', head: true }),
-          supabase.from('pc_pyq').select('id', { count: 'exact', head: true })
+          supabase.from('pc_pyq').select('id', { count: 'exact', head: true }),
+          supabase.from('capf_pyq').select('id', { count: 'exact', head: true })
         ]);
-        const sum = (q1.count || 3321) + (q2.count || 1120) + (q3.count || 1200) + (q4.count || 200);
+        const sum = (q1.count || 3321) + (q2.count || 1120) + (q3.count || 1200) + (q4.count || 200) + (q5.count || 1625);
         setTotalQuestions(sum);
       } catch (e) {
         console.error('Error fetching question count:', e);
@@ -161,11 +169,13 @@ export default function HomePage() {
             }}>
               <span className="hero-sub-text-pill">🏛️ 4,440+ UPSC CSE & CSAT</span>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
+              <span className="hero-sub-text-pill">🎖️ 1,625 UPSC CAPF (2014–2026)</span>
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
               <span className="hero-sub-text-pill">🅺 1,200 KPSC KAS (2011–2024)</span>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
               <span className="hero-sub-text-pill">🚔 200 KSP Police Constable</span>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
-              <span className="hero-sub-text-pill">🌐 Kannada & English Native Rendering</span>
+              <span className="hero-sub-text-pill">🌐 Bilingual EN/KN/HI Support</span>
             </div>
 
           </div>

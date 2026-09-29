@@ -8,7 +8,7 @@ import { CheckCircle, XCircle, MinusCircle, ChevronDown, ChevronUp, RotateCcw, H
 import QuestionFormatter, { OptionFormatter, ExplanationFormatter } from '@/components/ui/QuestionFormatter';
 import PassageCard from '@/components/ui/PassageCard';
 import { isValidImageUrl } from '@/lib/imageUtils';
-type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'skipped';
+type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'skipped' | 'dropped';
 
 export default function ResultsPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
@@ -49,15 +49,18 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     const { questions, answers, score = 0, total_marks = 0, config } = session;
     const lang = activeLang;
     const pct = total_marks > 0 ? Math.round((score / total_marks) * 100) : 0;
-    const correct = questions.filter((q) => answers[q.id]?.is_correct === true).length;
+    const dropped = questions.filter((q) => q.correct?.toLowerCase() === 'x').length;
+    const correct = questions.filter((q) => answers[q.id]?.is_correct === true && q.correct?.toLowerCase() !== 'x').length;
     const incorrect = questions.filter((q) => answers[q.id]?.is_correct === false).length;
-    const skipped = questions.filter((q) => !answers[q.id]?.selected).length;
+    const skipped = questions.filter((q) => !answers[q.id]?.selected && q.correct?.toLowerCase() !== 'x').length;
 
     const filtered = questions.filter((q) => {
         const a = answers[q.id];
-        if (filter === 'correct') return a?.is_correct === true;
+        const isDropped = q.correct?.toLowerCase() === 'x';
+        if (filter === 'correct') return a?.is_correct === true || isDropped;
         if (filter === 'incorrect') return a?.is_correct === false;
-        if (filter === 'skipped') return !a?.selected;
+        if (filter === 'skipped') return !a?.selected && !isDropped;
+        if (filter === 'dropped') return isDropped;
         return true;
     });
 
@@ -95,11 +98,12 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         <div style={{ fontSize: '11px', color: 'var(--text-secondary)', fontWeight: 600 }}>Score</div>
                     </div>
                     <div style={{ fontSize: '15px', fontWeight: 600, marginBottom: '24px' }}>{score}/{total_marks} marks</div>
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '32px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', flexWrap: 'wrap' }}>
                         {[
                             { label: 'Correct', value: correct, emoji: '✅', color: 'var(--brand-teal)' },
                             { label: 'Wrong', value: incorrect, emoji: '❌', color: 'var(--brand-orange)' },
                             { label: 'Skipped', value: skipped, emoji: '⏭️', color: 'var(--text-muted)' },
+                            ...(dropped > 0 ? [{ label: 'Dropped (Bonus)', value: dropped, emoji: '🎁', color: '#F59E0B' }] : []),
                         ].map((s) => (
                             <div key={s.label} style={{ textAlign: 'center' }}>
                                 <div style={{ fontSize: '22px', fontWeight: 800, color: s.color }}>{s.value}</div>
@@ -143,38 +147,46 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         <h2 style={{ fontWeight: 700, fontSize: '16px' }}>📝 Review</h2>
                         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
                             {/* Language switcher */}
-                            {(session?.config?.exam_id?.startsWith('kpsc') || session?.config?.exam_id?.startsWith('kea') || session?.config?.exam_id?.startsWith('ksp') || session?.config?.exam_id === 'upsc-cse') && (
-                                <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
-                                    {(['en', 'kn'] as const).map((l) => (
-                                        <button
-                                            key={l}
-                                            onClick={() => setActiveLang(l)}
-                                            style={{
-                                                padding: '4px 10px',
-                                                borderRadius: '6px',
-                                                border: 'none',
-                                                fontSize: '11px',
-                                                fontWeight: 700,
-                                                cursor: 'pointer',
-                                                background: activeLang === l ? 'var(--brand-orange)' : 'transparent',
-                                                color: activeLang === l ? 'white' : 'var(--text-secondary)',
-                                                transition: 'all 0.15s'
-                                            }}
-                                        >
-                                            {l === 'en' ? '🇬🇧 EN' : '🇮🇳 KN'}
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
+                            {(() => {
+                                const isUpsc = session?.config?.exam_id === 'upsc-cse' || session?.config?.exam_id === 'upsc-capf';
+                                const isKarnataka = session?.config?.exam_id?.startsWith('kpsc') || session?.config?.exam_id?.startsWith('kea') || session?.config?.exam_id?.startsWith('ksp');
+                                if (!isUpsc && !isKarnataka) return null;
+                                const langOptions = isUpsc ? (['en', 'hi'] as const) : (['en', 'kn'] as const);
+                                return (
+                                    <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                                        {langOptions.map((l) => (
+                                            <button
+                                                key={l}
+                                                onClick={() => setActiveLang(l)}
+                                                style={{
+                                                    padding: '4px 10px',
+                                                    borderRadius: '6px',
+                                                    border: 'none',
+                                                    fontSize: '11px',
+                                                    fontWeight: 700,
+                                                    cursor: 'pointer',
+                                                    background: activeLang === l ? 'var(--brand-orange)' : 'transparent',
+                                                    color: activeLang === l ? 'white' : 'var(--text-secondary)',
+                                                    transition: 'all 0.15s'
+                                                }}
+                                            >
+                                                {l === 'en' ? '🇬🇧 EN' : l === 'hi' ? '🇮🇳 HI' : '🇮🇳 KN'}
+                                            </button>
+                                        ))}
+                                    </div>
+                                );
+                            })()}
 
-                            <div style={{ display: 'flex', gap: '4px' }}>
-                                {(['all', 'correct', 'incorrect', 'skipped'] as ReviewFilter[]).map((f) => (
+                            <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                                {((['all', 'correct', 'incorrect', 'skipped', ...(dropped > 0 ? ['dropped'] : [])]) as ReviewFilter[]).map((f) => (
                                     <button key={f} onClick={() => setFilter(f)} style={{
                                         padding: '5px 12px', borderRadius: '8px', border: 'none', cursor: 'pointer',
                                         fontWeight: 600, fontSize: '12px', textTransform: 'capitalize',
-                                        background: filter === f ? 'var(--brand-orange)' : 'var(--bg-secondary)',
+                                        background: filter === f ? (f === 'dropped' ? '#D97706' : 'var(--brand-orange)') : 'var(--bg-secondary)',
                                         color: filter === f ? 'white' : 'var(--text-secondary)', transition: 'all 0.15s',
-                                    }}>{f}</button>
+                                    }}>
+                                        {f === 'dropped' ? `🎁 Dropped (${dropped})` : f}
+                                    </button>
                                 ))}
                             </div>
                         </div>
@@ -183,8 +195,9 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                         {filtered.map((q, i) => {
                             const a = answers[q.id];
-                            const isCorrect = a?.is_correct;
-                            const wasSkipped = !a?.selected;
+                            const isDropped = q.correct?.toLowerCase() === 'x';
+                            const isCorrect = a?.is_correct || isDropped;
+                            const wasSkipped = !a?.selected && !isDropped;
                             const isOpen = expanded === q.id;
                             const qText = lang === 'kn' && q.text_kn ? q.text_kn : (lang === 'hi' && q.text_hi ? q.text_hi : q.text);
                             const expText = lang === 'kn' && q.explanation_kn ? q.explanation_kn : (lang === 'hi' && q.explanation_hi ? q.explanation_hi : q.explanation);
@@ -196,7 +209,15 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                         background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', color: 'var(--text-primary)',
                                     }}>
                                         <div style={{ flexShrink: 0, marginTop: '2px' }}>
-                                            {isCorrect ? <CheckCircle size={16} color="var(--brand-teal)" /> : wasSkipped ? <MinusCircle size={16} color="var(--text-muted)" /> : <XCircle size={16} color="var(--brand-orange)" />}
+                                            {isDropped ? (
+                                                <span style={{ fontSize: '15px', lineHeight: 1 }} title="Officially Dropped (Full credit awarded)">🎁</span>
+                                            ) : isCorrect ? (
+                                                <CheckCircle size={16} color="var(--brand-teal)" />
+                                            ) : wasSkipped ? (
+                                                <MinusCircle size={16} color="var(--text-muted)" />
+                                            ) : (
+                                                <XCircle size={16} color="var(--brand-orange)" />
+                                            )}
                                         </div>
                                         <div style={{ flex: 1 }}>
                                             <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}</div>
@@ -226,6 +247,27 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
 
                                     {isOpen && (
                                         <div style={{ padding: '0 14px 14px 38px' }}>
+                                            {isDropped && (
+                                                <div style={{
+                                                    padding: '10px 14px',
+                                                    marginBottom: '14px',
+                                                    borderRadius: '8px',
+                                                    background: 'rgba(245, 158, 11, 0.12)',
+                                                    border: '1px solid #F59E0B',
+                                                    color: '#D97706',
+                                                    display: 'flex',
+                                                    alignItems: 'flex-start',
+                                                    gap: '8px'
+                                                }}>
+                                                    <span style={{ fontSize: '16px', lineHeight: '18px' }}>⚠️</span>
+                                                    <div>
+                                                        <div style={{ fontWeight: 700, fontSize: '13px' }}>Official Commission Dropped Question (Answer Key: 'X')</div>
+                                                        <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '2px', lineHeight: 1.4 }}>
+                                                            This question was cancelled / invalidated by the official commission in the final published answer key. Full credit (+1.0) has been awarded with zero negative marking.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )}
                                             {(() => {
                                                 const isShortOptions = (q.options?.length || 0) <= 4 && q.options?.every((opt) => {
                                                     const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);

@@ -19,7 +19,7 @@ export const EXAMS: Exam[] = [
         name: 'UPSC CAPF (AC)',
         category: 'defence',
         description: 'Central Armed Police Forces — Assistant Commandant in BSF, CRPF, CISF, ITBP, SSB',
-        languages: ['en'],
+        languages: ['en', 'hi'],
         negative_marking: 0.33,
         subjects: ['General Science', 'Current Events', 'Indian Polity & Economy', 'History of India', 'Indian & World Geography', 'General Mental Ability', 'Essay, Precis & Comprehension'],
         icon: '🎖️',

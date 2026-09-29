@@ -3,12 +3,21 @@ import { use, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
-import { Clock, Flag, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
-import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
-import PassageCard from '@/components/ui/PassageCard';
 import { isValidImageUrl } from '@/lib/imageUtils';
+import '@/app/test/cbt-terminal.css';
+import ExamHeader from '@/components/test/ExamHeader';
+import ExamSubHeader from '@/components/test/ExamSubHeader';
+import QuickNavigator, { QuestionState } from '@/components/test/QuickNavigator';
+import CbtQuestionCard from '@/components/test/CbtQuestionCard';
+import ExamBottomNav from '@/components/test/ExamBottomNav';
+import CandidateInfoCard from '@/components/test/CandidateInfoCard';
+import QuestionPaletteSummary from '@/components/test/QuestionPaletteSummary';
+import QuestionPaletteGrid from '@/components/test/QuestionPaletteGrid';
+import ExamToolsCard from '@/components/test/ExamToolsCard';
+import { InstructionsModal, FullPaperModal, SubmitExamModal, ReportDiscrepancyModal } from '@/components/test/ExamModals';
 
 const CSAT_EN_PATTERNS = [
     /With reference to the above passage/i,
@@ -175,7 +184,7 @@ function safeSliceQuestions(questions: any[], maxCount: number): any[] {
 export default function TestPage({ params }: { params: Promise<{ testId: string }> }) {
     const { testId } = use(params);
     const router = useRouter();
-    const { activeSession, addCompletedSession, setActiveSession } = useAppStore();
+    const { activeSession, addCompletedSession, setActiveSession, user } = useAppStore();
 
     const [questions, setQuestions] = useState<Question[]>([]);
     const [answers, setAnswers] = useState<Record<string, { question_id: string; selected?: string; marked_for_review: boolean; is_correct?: boolean; time_spent: number }>>({});
@@ -184,6 +193,15 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const [loading, setLoading] = useState(true);
     const [activeLang, setActiveLang] = useState<'en' | 'kn' | 'hi'>('en');
     const [previewImage, setPreviewImage] = useState<string | null>(null);
+
+    // CBT Terminal Specific States
+    const [visitedQuestions, setVisitedQuestions] = useState<Set<string>>(new Set());
+    const [eliminatedOptions, setEliminatedOptions] = useState<Record<string, Record<string, boolean>>>({});
+    const [fontSizePercent, setFontSizePercent] = useState<number>(100);
+    const [showInstructions, setShowInstructions] = useState(false);
+    const [showFullPaper, setShowFullPaper] = useState(false);
+    const [showSubmitModal, setShowSubmitModal] = useState(false);
+    const [showDiscrepancy, setShowDiscrepancy] = useState(false);
 
     useEffect(() => {
         if (activeSession?.config?.language) {
@@ -331,6 +349,53 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         console.error('Local JSON fallback error for ksp-pc:', e);
                     }
                 }
+            } else if (config.exam_id === 'upsc-capf') {
+                let query = supabase.from('capf_pyq').select('*');
+                if (config.mode === 'subject' && config.subject) {
+                    query = query.or(`subject.eq."${config.subject}",subject_hindi.eq."${config.subject}"`);
+                }
+                if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                if (config.year && config.year !== 'all') query = query.eq('year', config.year);
+                const { data } = await query;
+                if (data && data.length > 0) {
+                    selectedRawQuestions = data;
+                } else {
+                    // Fallback to local JSON files if offline or network failure
+                    try {
+                        const capfFiles: Record<string, () => Promise<any>> = {
+                            '2014': () => import('@/data/upsc_capf/CAPF_2014_Paper1_GS.json'),
+                            '2015': () => import('@/data/upsc_capf/CAPF_2015_Paper1_GS.json'),
+                            '2016': () => import('@/data/upsc_capf/CAPF_2016_Paper1_GS.json'),
+                            '2017': () => import('@/data/upsc_capf/CAPF_2017_Paper1_GS.json'),
+                            '2018': () => import('@/data/upsc_capf/CAPF_2018_Paper1_GS.json'),
+                            '2019': () => import('@/data/upsc_capf/CAPF_2019_Paper1_GS.json'),
+                            '2020': () => import('@/data/upsc_capf/CAPF_2020_Paper1_GS.json'),
+                            '2021': () => import('@/data/upsc_capf/CAPF_2021_Paper1_GS.json'),
+                            '2022': () => import('@/data/upsc_capf/CAPF_2022_Paper1_GS.json'),
+                            '2023': () => import('@/data/upsc_capf/CAPF_2023_Paper1_GS.json'),
+                            '2024': () => import('@/data/upsc_capf/CAPF_2024_Paper1_GS.json'),
+                            '2025': () => import('@/data/upsc_capf/CAPF_2025_Paper1_GS.json'),
+                            '2026': () => import('@/data/upsc_capf/CAPF_2026_Paper1_GS.json'),
+                        };
+                        let pool: any[] = [];
+                        if (config.year && config.year !== 'all' && capfFiles[String(config.year)]) {
+                            const mod = await capfFiles[String(config.year)]();
+                            pool = mod.default || mod;
+                        } else {
+                            const allMods = await Promise.all(Object.values(capfFiles).map(fn => fn()));
+                            pool = allMods.flatMap(m => m.default || m);
+                        }
+                        if (config.mode === 'subject' && config.subject) {
+                            pool = pool.filter((q: any) => q.subject === config.subject || q.subject_hindi === config.subject);
+                        }
+                        if (config.difficulty && config.difficulty !== 'mixed') {
+                            pool = pool.filter((q: any) => q.difficulty === config.difficulty);
+                        }
+                        selectedRawQuestions = pool;
+                    } catch (e) {
+                        console.error('Local JSON fallback error for upsc-capf:', e);
+                    }
+                }
             } else if (config.exam_id === 'kpsc-kas') {
                 let query = supabase.from('kas_questions').select('*');
                 if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
@@ -422,11 +487,11 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             { id: 'd', text: dbq.option_d_english || '', text_hi: dbq.option_d_hindi || undefined }
                         ];
                         const rawAns = (dbq.key_answer || 'a').toLowerCase().trim();
-                        const correctChar = ['a', 'b', 'c', 'd'].includes(rawAns) ? rawAns : 'a';
+                        const correctChar = ['a', 'b', 'c', 'd', '1', '2', '3', '4', 'x'].includes(rawAns) ? rawAns : 'a';
                         return {
-                            id: dbq.id || `csat-${dbq.year || 2020}-q${dbq.question_number || 1}`,
-                            exam_id: 'upsc-cse',
-                            subject: dbq.domain || dbq.subject || 'CSAT Aptitude',
+                            id: dbq.id || `${config.exam_id || 'exam'}-${dbq.year || 2020}-q${dbq.question_number || 1}`,
+                            exam_id: dbq.exam_id || config.exam_id || 'upsc-cse',
+                            subject: dbq.subject || dbq.domain || 'General Studies',
                             difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
                             text: dbq.question_english,
                             text_hi: dbq.question_hindi || undefined,
@@ -467,7 +532,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         };
                     } else if (dbq.content_key) {
                         const rawAns = (dbq['Correct Answer'] || 'a').toLowerCase().trim();
-                        const correctChar = ['a', 'b', 'c', 'd'].includes(rawAns) ? rawAns : 'a';
+                        const correctChar = ['a', 'b', 'c', 'd', '1', '2', '3', '4', 'x'].includes(rawAns) ? rawAns : 'a';
                         const optionsList = [
                             { id: 'a', text: dbq.option_a_en, text_hi: dbq.option_a_hi !== 'None' ? dbq.option_a_hi : undefined },
                             { id: 'b', text: dbq.option_b_en, text_hi: dbq.option_b_hi !== 'None' ? dbq.option_b_hi : undefined },
@@ -544,42 +609,219 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         return () => clearInterval(timer);
     }, [loading, timeLeft]);
 
-    const formatTime = (s: number) => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, '0')}`;
+    // Track visited questions
+    useEffect(() => {
+        if (questions[currentIdx]?.id) {
+            setVisitedQuestions(prev => {
+                if (prev.has(questions[currentIdx].id)) return prev;
+                const next = new Set(prev);
+                next.add(questions[currentIdx].id);
+                return next;
+            });
+        }
+    }, [currentIdx, questions]);
+
+    const isCse = activeSession?.config?.exam_id === 'upsc-cse' || activeSession?.config?.exam_id === 'upsc-capf';
+    const isKarnataka = activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea') || activeSession?.config?.exam_id?.startsWith('ksp');
+    const supportedLangs: ('en' | 'kn' | 'hi')[] = isCse ? ['en', 'hi'] : (isKarnataka ? ['en', 'kn'] : ['en']);
+
+    const handleToggleLang = () => {
+        if (supportedLangs.length <= 1) return;
+        if (supportedLangs.includes('kn')) {
+            setActiveLang(prev => (prev === 'kn' ? 'en' : 'kn'));
+        } else if (supportedLangs.includes('hi')) {
+            setActiveLang(prev => (prev === 'hi' ? 'en' : 'hi'));
+        }
+    };
+
+    const getMarkingScheme = (examId?: string, paper?: number | string) => {
+        if (examId === 'upsc-cse' && (paper === 2 || paper === '2')) {
+            return { positive: 2.50, negative: 0.83 };
+        }
+        if (examId === 'upsc-cse' || examId === 'upsc-capf') {
+            return { positive: 2.00, negative: 0.66 };
+        }
+        if (examId?.startsWith('kpsc')) {
+            return { positive: 2.00, negative: 0.50 };
+        }
+        if (examId?.startsWith('ksp')) {
+            return { positive: 1.00, negative: 0.25 };
+        }
+        return { positive: 2.00, negative: 0.66 };
+    };
+
+    const marking = getMarkingScheme(activeSession?.config?.exam_id, activeSession?.config?.paper);
+
+    const handleZoomIn = () => setFontSizePercent(p => Math.min(130, p + 10));
+    const handleZoomOut = () => setFontSizePercent(p => Math.max(90, p - 10));
+    const handleZoomReset = () => setFontSizePercent(100);
+
+    const handleToggleEliminate = (optId: string) => {
+        const currentQ = questions[currentIdx];
+        if (!currentQ) return;
+        setEliminatedOptions(prev => {
+            const currentElims = { ...(prev[currentQ.id] || {}) };
+            currentElims[optId] = !currentElims[optId];
+            return { ...prev, [currentQ.id]: currentElims };
+        });
+    };
+
+    const handleSelectOption = (optId: string) => {
+        const currentQ = questions[currentIdx];
+        if (!currentQ) return;
+        if (eliminatedOptions[currentQ.id]?.[optId]) {
+            handleToggleEliminate(optId);
+        }
+        setAnswers(prev => ({
+            ...prev,
+            [currentQ.id]: {
+                question_id: currentQ.id,
+                selected: prev[currentQ.id]?.selected === optId ? undefined : optId,
+                is_correct: undefined,
+                marked_for_review: prev[currentQ.id]?.marked_for_review || false,
+                time_spent: prev[currentQ.id]?.time_spent || 0
+            }
+        }));
+    };
+
+    const handleClearResponse = () => {
+        const currentQ = questions[currentIdx];
+        if (!currentQ) return;
+        setAnswers(prev => {
+            const copy = { ...prev };
+            if (copy[currentQ.id]) {
+                copy[currentQ.id] = {
+                    ...copy[currentQ.id],
+                    selected: undefined
+                };
+            }
+            return copy;
+        });
+    };
+
+    const handleToggleMarkAndNext = () => {
+        const currentQ = questions[currentIdx];
+        if (!currentQ) return;
+        setAnswers(prev => ({
+            ...prev,
+            [currentQ.id]: {
+                question_id: currentQ.id,
+                selected: prev[currentQ.id]?.selected,
+                marked_for_review: !prev[currentQ.id]?.marked_for_review,
+                time_spent: prev[currentQ.id]?.time_spent || 0
+            }
+        }));
+        if (currentIdx < questions.length - 1) {
+            setCurrentIdx(i => i + 1);
+        }
+    };
+
+    const handleSaveAndNext = () => {
+        if (currentIdx < questions.length - 1) {
+            setCurrentIdx(i => i + 1);
+        } else {
+            setShowSubmitModal(true);
+        }
+    };
+
+    const handleJumpNextUnanswered = () => {
+        for (let i = 1; i <= questions.length; i++) {
+            const checkIdx = (currentIdx + i) % questions.length;
+            const qId = questions[checkIdx].id;
+            if (!answers[qId]?.selected) {
+                setCurrentIdx(checkIdx);
+                return;
+            }
+        }
+    };
 
     const handleSubmit = () => {
         if (questions.length === 0) return;
         let score = 0; let correctCount = 0;
         const checkedAnswers = { ...answers };
+        const posMarks = marking.positive;
+        const negMarks = marking.negative;
+
         questions.forEach((q) => {
             const ans = checkedAnswers[q.id];
-            if (ans && ans.selected) {
-                const isCorrect = ans.selected === q.correct;
+            const isDropped = q.correct?.toLowerCase() === 'x';
+            if (isDropped) {
+                score += posMarks;
+                correctCount++;
+                if (ans) {
+                    ans.is_correct = true;
+                } else {
+                    checkedAnswers[q.id] = { question_id: q.id, marked_for_review: false, time_spent: 0, is_correct: true };
+                }
+            } else if (ans && ans.selected) {
+                const isCorrect = ans.selected.toLowerCase() === q.correct?.toLowerCase();
                 ans.is_correct = isCorrect;
-                if (isCorrect) { score += 1; correctCount++; } else { score -= 0.33; }
+                if (isCorrect) { score += posMarks; correctCount++; } else { score -= negMarks; }
             } else {
                 checkedAnswers[q.id] = { question_id: q.id, marked_for_review: false, time_spent: 0, is_correct: undefined };
             }
         });
-        const sessionUpdate = { ...activeSession!, questions, answers: checkedAnswers, finished_at: new Date().toISOString(), status: 'completed' as const, score: Math.max(0, parseFloat(score.toFixed(2))), total_marks: questions.length };
+        const totalMarks = questions.length * posMarks;
+        const sessionUpdate = {
+            ...activeSession!,
+            questions,
+            answers: checkedAnswers,
+            finished_at: new Date().toISOString(),
+            status: 'completed' as const,
+            score: Math.max(0, parseFloat(score.toFixed(2))),
+            total_marks: totalMarks
+        };
         useAppStore.getState().syncProgress(correctCount * 10, sessionUpdate);
         addCompletedSession(sessionUpdate);
         router.push(`/results/${activeSession!.id}`);
     };
 
+    // Keyboard Shortcuts
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (showInstructions || showFullPaper || showSubmitModal || showDiscrepancy) return;
+            const targetTag = (e.target as HTMLElement)?.tagName?.toLowerCase();
+            if (targetTag === 'input' || targetTag === 'textarea' || targetTag === 'select') return;
+
+            const key = e.key.toLowerCase();
+            if (key === '1' || key === 'a') {
+                handleSelectOption('a');
+            } else if (key === '2' || key === 'b') {
+                handleSelectOption('b');
+            } else if (key === '3' || key === 'c') {
+                handleSelectOption('c');
+            } else if (key === '4' || key === 'd') {
+                handleSelectOption('d');
+            } else if (key === 'arrowright' || key === 'n') {
+                e.preventDefault();
+                handleSaveAndNext();
+            } else if (key === 'arrowleft' || key === 'p') {
+                e.preventDefault();
+                setCurrentIdx(i => Math.max(0, i - 1));
+            } else if (key === 'r' || key === 'm') {
+                e.preventDefault();
+                handleToggleMarkAndNext();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [currentIdx, questions, answers, showInstructions, showFullPaper, showSubmitModal, showDiscrepancy]);
+
     if (loading) return (
-        <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: 'var(--brand-orange)' }} />
-            <span style={{ fontSize: '15px' }}>Loading your test...</span>
+        <div style={{ padding: '80px', textAlign: 'center', color: '#6B7280', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: '#2563EB' }} />
+            <span style={{ fontSize: '15px', fontWeight: 600 }}>Loading CBT Assessment Terminal...</span>
         </div>
     );
 
     if (questions.length === 0) {
         return (
-            <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '80px 24px', textAlign: 'center', color: 'var(--text-muted)' }}>
-                <div style={{ maxWidth: '400px', margin: '0 auto', background: 'var(--bg-secondary)', padding: '32px', borderRadius: '16px', boxShadow: 'var(--shadow-card)' }}>
+            <div style={{ background: '#F4F1EA', minHeight: '85vh', padding: '80px 24px', textAlign: 'center', color: '#6B7280' }}>
+                <div className="cbt-box" style={{ maxWidth: '440px', margin: '0 auto', background: '#FFFFFF', padding: '32px' }}>
                     <div style={{ fontSize: '40px', marginBottom: '16px' }}>⚠️</div>
-                    <h3 style={{ color: 'var(--text-primary)', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>No Questions Found</h3>
-                    <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '24px' }}>
+                    <h3 style={{ color: '#111827', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>No Questions Found</h3>
+                    <p style={{ fontSize: '13.5px', color: '#4B5563', lineHeight: 1.5, marginBottom: '24px' }}>
                         No questions match this configuration. Make sure you run the seed script!
                     </p>
                     <button onClick={() => router.push('/exams')} className="btn btn-primary" style={{ width: '100%' }}>
@@ -591,256 +833,193 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     }
 
     const question = questions[currentIdx];
-    const lang = activeLang;
-    const qText = lang === 'kn' && question.text_kn ? question.text_kn : (lang === 'hi' && question.text_hi ? question.text_hi : question.text);
-    const currentAnswer = answers[question.id];
-    const isTimeLow = timeLeft < 60;
 
-    const selectOption = (optId: string) => {
-        setAnswers((prev) => ({ ...prev, [question.id]: { question_id: question.id, selected: optId, is_correct: undefined, marked_for_review: prev[question.id]?.marked_for_review || false, time_spent: 0 } }));
-    };
-    const toggleMark = () => {
-        setAnswers((prev) => ({ ...prev, [question.id]: { ...prev[question.id], question_id: question.id, marked_for_review: !prev[question.id]?.marked_for_review, time_spent: 0 } }));
-    };
-
-    const answered = Object.values(answers).filter((a) => a.selected).length;
-    const marked = Object.values(answers).filter((a) => a.marked_for_review).length;
-
-    const getNavBg = (q: typeof question) => {
+    // Compute status states
+    const questionStates: QuestionState[] = questions.map(q => {
         const a = answers[q.id];
-        if (!a || (!a.selected && !a.marked_for_review)) return 'var(--bg-secondary)';
-        if (a.marked_for_review) return 'var(--accent-peach)';
-        if (a.selected) return 'var(--accent-sage)';
-        return 'var(--bg-secondary)';
-    };
+        const isVisited = visitedQuestions.has(q.id);
+        if (!a && !isVisited) return 'not_visited';
+        if (a?.selected && a?.marked_for_review) return 'ans_and_marked';
+        if (a?.marked_for_review) return 'marked';
+        if (a?.selected) return 'answered';
+        if (isVisited) return 'unanswered';
+        return 'not_visited';
+    });
+
+    const answeredCount = questions.filter(q => answers[q.id]?.selected && !answers[q.id]?.marked_for_review).length;
+    const notAnsweredCount = questions.filter(q => visitedQuestions.has(q.id) && !answers[q.id]?.selected && !answers[q.id]?.marked_for_review).length;
+    const markedReviewCount = questions.filter(q => !answers[q.id]?.selected && answers[q.id]?.marked_for_review).length;
+    const ansAndReviewCount = questions.filter(q => answers[q.id]?.selected && answers[q.id]?.marked_for_review).length;
+    const notVisitedCount = questions.filter(q => !visitedQuestions.has(q.id) && !answers[q.id]?.selected && !answers[q.id]?.marked_for_review).length;
+
+    const candidateName = user?.name || 'Aspirant Candidate';
+    const candidateId = `UPS-${testId.slice(0, 6).toUpperCase()}`;
+    const targetExam = activeSession?.config?.exam_id === 'upsc-cse'
+        ? (activeSession?.config?.paper === 2 ? 'UPSC CSE (CSAT PAPER II)' : 'UPSC CSE (GS PAPER I)')
+        : (activeSession?.config?.exam_id === 'upsc-capf' ? 'UPSC CAPF (AC) PAPER I' : (activeSession?.config?.exam_id?.toUpperCase() || 'CIVIL SERVICES EXAM'));
+
+    const examTitle = targetExam;
+    const paperTitle = activeSession?.config?.paper === 2 ? 'Paper II (CSAT)' : 'Paper I (GS)';
 
     return (
-        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '24px 0' }}>
-            <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 24px' }}>
-                {/* Top bar */}
-                <div className="card" style={{ padding: '12px 20px', marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
-                    <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--text-secondary)' }}>
-                        Q {currentIdx + 1}/{questions.length}
-                        <span style={{ marginLeft: '10px', color: 'var(--text-muted)' }}>· {answered} answered</span>
+        <div className="cbt-terminal-wrapper">
+            {/* 1. Global Header Bar */}
+            <ExamHeader
+                examTitle={examTitle}
+                timeLeft={timeLeft}
+                activeLang={activeLang}
+                supportedLangs={supportedLangs}
+                onToggleLang={handleToggleLang}
+                onSubmitClick={() => setShowSubmitModal(true)}
+                candidateName={candidateName}
+            />
+
+            {/* 2. Sub-Header Toolbar */}
+            <ExamSubHeader
+                currentIdx={currentIdx}
+                totalQuestions={questions.length}
+                subject={activeLang === 'kn' && question.subject_kannada ? question.subject_kannada : (question.subject || 'General Studies')}
+                subTopic={activeLang === 'kn' && question.sub_topic_kannada ? question.sub_topic_kannada : question.sub_topic}
+                positiveMarks={marking.positive}
+                negativeDeduction={marking.negative}
+                fontSizePercent={fontSizePercent}
+                onZoomIn={handleZoomIn}
+                onZoomOut={handleZoomOut}
+                onZoomReset={handleZoomReset}
+            />
+
+            {/* 3. Main CBT Canvas */}
+            <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '16px 20px' }}>
+                <div className="cbt-main-grid">
+                    {/* Left Column: Test Flow & Questions */}
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        {/* Quick Question Navigator with dynamic scrubber */}
+                        <QuickNavigator
+                            totalQuestions={questions.length}
+                            currentIdx={currentIdx}
+                            markedCount={markedReviewCount + ansAndReviewCount}
+                            unansweredCount={notAnsweredCount}
+                            questionStates={questionStates}
+                            onSelectQuestion={(idx) => setCurrentIdx(idx)}
+                            onJumpNextUnanswered={handleJumpNextUnanswered}
+                        />
+
+                        {/* CBT Question Card with crisp statement boxes and elimination */}
+                        <CbtQuestionCard
+                            questionNumber={currentIdx + 1}
+                            question={question}
+                            activeLang={activeLang}
+                            supportedLangs={supportedLangs}
+                            onToggleLang={handleToggleLang}
+                            selectedOptionId={answers[question.id]?.selected}
+                            eliminatedOptionIds={eliminatedOptions[question.id] || {}}
+                            onSelectOption={handleSelectOption}
+                            onToggleEliminate={handleToggleEliminate}
+                            fontSizePercent={fontSizePercent}
+                            onReportDiscrepancy={() => setShowDiscrepancy(true)}
+                            onPreviewImage={(url) => setPreviewImage(url)}
+                        />
+
+                        {/* Bottom Action Bar */}
+                        <ExamBottomNav
+                            currentIdx={currentIdx}
+                            totalQuestions={questions.length}
+                            hasSelectedAnswer={!!answers[question.id]?.selected}
+                            isMarkedForReview={!!answers[question.id]?.marked_for_review}
+                            onPrev={() => setCurrentIdx(i => Math.max(0, i - 1))}
+                            onNext={handleSaveAndNext}
+                            onClearResponse={handleClearResponse}
+                            onToggleMarkAndNext={handleToggleMarkAndNext}
+                        />
                     </div>
 
-                    {/* Language switcher */}
-                    {activeSession?.config?.exam_id === 'upsc-cse' ? (
-                        <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
-                            {(['en', 'hi'] as const).map((l) => (
-                                <button
-                                    key={l}
-                                    onClick={() => setActiveLang(l)}
-                                    style={{
-                                        padding: '4px 10px',
-                                        borderRadius: '6px',
-                                        border: 'none',
-                                        fontSize: '11px',
-                                        fontWeight: 700,
-                                        cursor: 'pointer',
-                                        background: activeLang === l ? 'var(--brand-orange)' : 'transparent',
-                                        color: activeLang === l ? 'white' : 'var(--text-secondary)',
-                                        transition: 'all 0.15s'
-                                    }}
-                                >
-                                    {l === 'en' ? '🇬🇧 EN' : '🇮🇳 HI'}
-                                </button>
-                            ))}
-                        </div>
-                    ) : (activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea') || activeSession?.config?.exam_id?.startsWith('ksp')) ? (
-                        <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-secondary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
-                            {(['en', 'kn'] as const).map((l) => (
-                                <button
-                                    key={l}
-                                    onClick={() => setActiveLang(l)}
-                                    style={{
-                                        padding: '4px 10px',
-                                        borderRadius: '6px',
-                                        border: 'none',
-                                        fontSize: '11px',
-                                        fontWeight: 700,
-                                        cursor: 'pointer',
-                                        background: activeLang === l ? 'var(--brand-orange)' : 'transparent',
-                                        color: activeLang === l ? 'white' : 'var(--text-secondary)',
-                                        transition: 'all 0.15s'
-                                    }}
-                                >
-                                    {l === 'en' ? '🇬🇧 EN' : '🇮🇳 KN'}
-                                </button>
-                            ))}
-                        </div>
-                    ) : null}
+                    {/* Right Column: Palette & Sidebar Tools */}
+                    <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        {/* Candidate Information Card */}
+                        <CandidateInfoCard
+                            name={candidateName}
+                            candidateId={candidateId}
+                            targetExam={targetExam}
+                        />
 
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 700, fontSize: '16px', color: isTimeLow ? 'var(--accent-rose)' : 'var(--text-primary)' }}>
-                        <Clock size={15} /> {formatTime(timeLeft)}
-                    </div>
-                    <div style={{ display: 'flex', gap: '8px', fontSize: '12px', fontWeight: 600 }}>
-                        <span style={{ color: 'var(--brand-teal)' }}>✅ {answered}</span>
-                        <span style={{ color: 'var(--brand-orange)' }}>📌 {marked}</span>
-                    </div>
-                </div>
+                        {/* Question Palette Summary (2x2 Matrix) */}
+                        <QuestionPaletteSummary
+                            total={questions.length}
+                            answered={answeredCount}
+                            notAnswered={notAnsweredCount}
+                            markedReview={markedReviewCount}
+                            ansAndReview={ansAndReviewCount}
+                            notVisited={notVisitedCount}
+                        />
 
-                <div className="test-layout-grid">
-                    {/* Question */}
-                    <div className="card" style={{ padding: '24px' }}>
-                        <div style={{ display: 'flex', gap: '6px', marginBottom: '16px' }}>
-                            <span className="tag chip-sky">{lang === 'kn' && question.subject_kannada ? question.subject_kannada : question.subject}</span>
-                            <span className={`tag badge-${question.difficulty}`}>{question.difficulty}</span>
-                        </div>
+                        {/* 10-Column Question Palette Grid */}
+                        <QuestionPaletteGrid
+                            totalQuestions={questions.length}
+                            currentIdx={currentIdx}
+                            questionStates={questionStates}
+                            onSelectQuestion={(idx) => setCurrentIdx(idx)}
+                            paperTitle={paperTitle}
+                        />
 
-                        {/* Common Passage / Directions Card */}
-                        {(question.passage || question.passage_kn || question.passage_hi) && (
-                            <PassageCard
-                                passage={question.passage}
-                                passage_kn={question.passage_kn}
-                                passage_hi={question.passage_hi}
-                                group_label={question.group_label}
-                                activeLang={lang}
-                            />
-                        )}
-
-                        <div style={{ fontWeight: 600, marginBottom: '24px' }}>
-                            <QuestionFormatter text={qText} />
-                            {isValidImageUrl(question.image_url) && (
-                                <div
-                                    onClick={() => setPreviewImage(question.image_url!)}
-                                    title="Click to expand diagram"
-                                    style={{
-                                        marginTop: '16px', borderRadius: '12px', overflow: 'hidden',
-                                        border: '1px solid var(--border)', background: 'var(--bg-secondary)',
-                                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                                        padding: '16px', cursor: 'zoom-in', transition: 'all 0.2s'
-                                    }}
-                                >
-                                    <img src={question.image_url} alt="Question Diagram" style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'contain' }} />
-                                    <div style={{ fontSize: '11px', color: 'var(--brand-orange)', fontWeight: 600, marginTop: '8px' }}>🔍 Click to view full resolution</div>
-                                </div>
-                            )}
-                        </div>
-
-                        {(() => {
-                            const isShortOptions = (question.options?.length || 0) <= 4 && question.options?.every((opt) => {
-                                const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
-                                return (optText?.trim().length || 0) <= 36 && !optText?.includes('\n');
-                            });
-
-                            return (
-                                <div style={{
-                                    display: isShortOptions ? 'grid' : 'flex',
-                                    gridTemplateColumns: isShortOptions ? 'repeat(auto-fit, minmax(280px, 1fr))' : undefined,
-                                    flexDirection: isShortOptions ? undefined : 'column',
-                                    gap: '12px'
-                                }}>
-                                    {question.options.map((opt) => {
-                                        const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
-                                        const isSelected = currentAnswer?.selected === opt.id;
-                                        return (
-                                            <button key={opt.id} onClick={() => selectOption(opt.id)} style={{
-                                                display: 'flex', alignItems: 'center', gap: '14px', padding: '16px 20px',
-                                                borderRadius: '14px', cursor: 'pointer', textAlign: 'left', width: '100%',
-                                                border: isSelected ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
-                                                background: isSelected ? 'rgba(37, 99, 235, 0.12)' : 'var(--bg-card-solid)',
-                                                color: 'var(--text-primary)', transition: 'all 0.2s ease',
-                                                boxShadow: isSelected ? '0 4px 16px rgba(37,99,235,0.2)' : '0 2px 8px rgba(0,0,0,0.04)',
-                                            }}>
-                                                <div style={{
-                                                    width: 34, height: 34, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                    fontSize: '14px', fontWeight: 800, flexShrink: 0,
-                                                    background: isSelected ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
-                                                    color: isSelected ? 'white' : 'var(--text-primary)',
-                                                    border: isSelected ? 'none' : '1px solid var(--border)',
-                                                    boxShadow: '0 2px 6px rgba(0,0,0,0.06)',
-                                                }}>{opt.id.toUpperCase()}</div>
-                                                <div style={{ flexGrow: 1, lineHeight: 1.6 }}>
-                                                    <OptionFormatter text={optText} />
-                                                </div>
-                                            </button>
-                                        );
-                                    })}
-                                </div>
-                            );
-                        })()}
-
-                        <div className="test-controls" style={{ display: 'flex', justifyContent: 'space-between', marginTop: '24px', gap: '8px', flexWrap: 'wrap' }}>
-                            <div style={{ display: 'flex', gap: '6px' }}>
-                                <button onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))} disabled={currentIdx === 0} className="btn btn-secondary" style={{ padding: '8px 14px' }}>
-                                    <ChevronLeft size={14} /> Prev
-                                </button>
-                                <button onClick={() => setCurrentIdx((i) => Math.min(questions.length - 1, i + 1))} disabled={currentIdx === questions.length - 1} className="btn btn-secondary" style={{ padding: '8px 14px' }}>
-                                    Next <ChevronRight size={14} />
-                                </button>
-                            </div>
-                            <div style={{ display: 'flex', gap: '6px' }}>
-                                <button onClick={toggleMark} className="btn" style={{
-                                    padding: '8px 14px', fontSize: '13px', fontWeight: 600,
-                                    background: currentAnswer?.marked_for_review ? 'var(--accent-peach)' : 'var(--bg-secondary)',
-                                    color: 'var(--text-primary)', border: 'none',
-                                    }}>
-                                    <Flag size={13} /> {currentAnswer?.marked_for_review ? 'Marked' : 'Mark'}
-                                </button>
-                                {currentIdx === questions.length - 1 && (
-                                    <button onClick={handleSubmit} className="btn btn-primary" style={{ padding: '8px 18px' }}>Submit</button>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Navigator */}
-                    <div className="card" style={{ padding: '16px' }}>
-                        <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '10px', textTransform: 'uppercase' }}>Navigator</div>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(32px, 1fr))', gap: '4px' }}>
-                            {questions.map((q, i) => (
-                                <button key={q.id} onClick={() => setCurrentIdx(i)} style={{
-                                    height: 32, borderRadius: '8px', border: 'none', cursor: 'pointer',
-                                    fontWeight: 700, fontSize: '11px', transition: 'all 0.15s',
-                                    background: i === currentIdx ? 'var(--brand-orange)' : getNavBg(q),
-                                    color: i === currentIdx ? 'white' : 'var(--text-primary)',
-                                    position: 'relative'
-                                }}>
-                                    {i + 1}
-                                    {q.group_id && (
-                                        <span
-                                            style={{
-                                                position: 'absolute',
-                                                bottom: '2px',
-                                                left: '50%',
-                                                transform: 'translateX(-50%)',
-                                                width: '12px',
-                                                height: '2.5px',
-                                                borderRadius: '2px',
-                                                background: i === currentIdx ? 'white' : 'var(--brand-orange)'
-                                            }}
-                                            title={q.group_label || 'Linked question'}
-                                        />
-                                    )}
-                                </button>
-                            ))}
-                        </div>
-                        <div style={{ marginTop: '16px', fontSize: '11px', display: 'flex', flexDirection: 'column', gap: '6px', color: 'var(--text-muted)' }}>
-                            <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 10, height: 10, borderRadius: '4px', background: 'var(--accent-sage)' }} /> Answered</div>
-                            <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 10, height: 10, borderRadius: '4px', background: 'var(--accent-peach)' }} /> Marked</div>
-                            <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 10, height: 10, borderRadius: '4px', background: 'var(--bg-secondary)' }} /> Not visited</div>
-                            <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}><div style={{ width: 12, height: 3, borderRadius: '2px', background: 'var(--brand-orange)' }} /> Linked Passage</div>
-                        </div>
-                        <button onClick={handleSubmit} className="btn btn-primary" style={{ width: '100%', marginTop: '16px', padding: '10px' }}>
-                            Submit Test
-                        </button>
+                        {/* Exam Tools Card */}
+                        <ExamToolsCard
+                            onOpenFullPaper={() => setShowFullPaper(true)}
+                            onOpenInstructions={() => setShowInstructions(true)}
+                            onSubmitExam={() => setShowSubmitModal(true)}
+                        />
                     </div>
                 </div>
-
-                {/* Diagram Lightbox Preview Modal */}
-                {previewImage && (
-                    <div onClick={() => setPreviewImage(null)} style={{
-                        position: 'fixed', inset: 0, zIndex: 100, background: 'rgba(5, 8, 17, 0.88)',
-                        backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out'
-                    }}>
-                        <div style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh', textAlign: 'center' }}>
-                            <img src={previewImage} alt="Diagram Expanded View" style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: '16px', border: '1px solid var(--border)', boxShadow: '0 12px 40px rgba(0,0,0,0.6)' }} />
-                            <div style={{ textAlign: 'center', color: '#94A3B8', fontSize: '13px', marginTop: '12px', fontWeight: 500 }}>Click anywhere to close preview</div>
-                        </div>
-                    </div>
-                )}
             </div>
+
+            {/* 4. Modals */}
+            <InstructionsModal
+                isOpen={showInstructions}
+                onClose={() => setShowInstructions(false)}
+                examTitle={targetExam}
+                positiveMarks={marking.positive}
+                negativeDeduction={marking.negative}
+                durationMinutes={Math.round(questions.length * 1.2)}
+            />
+
+            <FullPaperModal
+                isOpen={showFullPaper}
+                onClose={() => setShowFullPaper(false)}
+                questions={questions}
+                answers={answers}
+                activeLang={activeLang}
+                onJumpToQuestion={(idx) => setCurrentIdx(idx)}
+            />
+
+            <SubmitExamModal
+                isOpen={showSubmitModal}
+                onClose={() => setShowSubmitModal(false)}
+                onConfirmSubmit={handleSubmit}
+                totalQuestions={questions.length}
+                answeredCount={answeredCount + ansAndReviewCount}
+                unansweredCount={notAnsweredCount + notVisitedCount}
+                markedReviewCount={markedReviewCount + ansAndReviewCount}
+                timeLeft={timeLeft}
+            />
+
+            <ReportDiscrepancyModal
+                isOpen={showDiscrepancy}
+                onClose={() => setShowDiscrepancy(false)}
+                questionNumber={currentIdx + 1}
+                questionId={question?.id || ''}
+            />
+
+            {/* Diagram Lightbox Preview */}
+            {previewImage && (
+                <div onClick={() => setPreviewImage(null)} style={{
+                    position: 'fixed', inset: 0, zIndex: 110, background: 'rgba(5, 8, 17, 0.88)',
+                    backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out'
+                }}>
+                    <div style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh', textAlign: 'center' }}>
+                        <img src={previewImage} alt="Diagram Expanded View" style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: '8px', border: '1.5px solid #1E1E1E', boxShadow: '0 12px 40px rgba(0,0,0,0.6)' }} />
+                        <div style={{ textAlign: 'center', color: '#94A3B8', fontSize: '13px', marginTop: '12px', fontWeight: 600 }}>Click anywhere to close preview</div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

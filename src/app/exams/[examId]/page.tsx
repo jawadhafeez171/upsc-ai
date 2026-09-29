@@ -106,6 +106,20 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         const [{ count: c1 }, { count: c2, error: c2Err }] = await Promise.all([q1, q2]);
                         qCount = (c1 || 0) + (c2 !== null && !c2Err ? c2 : 80);
                     }
+                } else if (examId === 'upsc-capf') {
+                    let query = supabase.from('capf_pyq').select('id', { count: 'exact', head: true });
+                    if (mode === 'subject' && subject) {
+                        query = query.or(`subject.eq."${subject}",subject_hindi.eq."${subject}"`);
+                    }
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                    if (year !== 'all') query = query.eq('year', year);
+
+                    const { count: capfCount, error: capfErr } = await query;
+                    if (!capfErr && capfCount !== null) {
+                        qCount = capfCount;
+                    } else {
+                        qCount = year === 'all' ? 1625 : 125;
+                    }
                 } else if (examId === 'ksp-pc') {
                     let query = supabase.from('pc_pyq').select('id', { count: 'exact', head: true });
                     if (paperCode !== 'all') query = query.eq('paper_code', paperCode);
@@ -171,8 +185,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             difficulty,
             question_count: finalCount,
             language: testLang,
-            year: examId === 'upsc-cse' || examId === 'kpsc-kas' ? year : examId === 'ksp-pc' ? 2026 : undefined,
-            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : undefined,
+            year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' ? year : examId === 'ksp-pc' ? 2026 : undefined,
+            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : (examId === 'upsc-capf' ? 1 : undefined),
             month: examId === 'kpsc-kas' ? month : examId === 'ksp-pc' ? 'September' : undefined,
             paper_code: examId === 'ksp-pc' ? paperCode : undefined
         };
@@ -467,7 +481,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             )}
 
                             {/* Year-Wise & Paper-Wise Filters */}
-                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas') && (
+                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf') && (
                                 <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                     {/* Paper Selector */}
                                     <div>
@@ -486,7 +500,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     transition: 'all 0.15s'
                                                 }}
                                             >
-                                                All Papers (Combined)
+                                                {examId === 'upsc-capf' ? 'All Papers (13 Years — 1,625 Qs)' : 'All Papers (Combined)'}
                                             </button>
                                             <button
                                                 onClick={() => setPaper(1)}
@@ -499,21 +513,27 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     transition: 'all 0.15s'
                                                 }}
                                             >
-                                                {examId === 'upsc-cse' ? 'Paper 1: General Studies (GS-1)' : 'Paper 1: General Studies & Humanities'}
+                                                {examId === 'upsc-capf' 
+                                                    ? 'Paper 1: General Ability & Intelligence (125 Qs / 250 Marks)' 
+                                                    : examId === 'upsc-cse' 
+                                                        ? 'Paper 1: General Studies (GS-1)' 
+                                                        : 'Paper 1: General Studies & Humanities'}
                                             </button>
-                                            <button
-                                                onClick={() => setPaper(2)}
-                                                style={{
-                                                    padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                    fontSize: '12.5px', fontWeight: 700,
-                                                    background: paper === 2 ? '#2563EB' : 'var(--bg-primary)',
-                                                    color: paper === 2 ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: paper === 2 ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                    transition: 'all 0.15s'
-                                                }}
-                                            >
-                                                {examId === 'upsc-cse' ? 'Paper 2: CSAT / Aptitude' : 'Paper 2: Science & Tech, Environment & GMA'}
-                                            </button>
+                                            {examId !== 'upsc-capf' && (
+                                                <button
+                                                    onClick={() => setPaper(2)}
+                                                    style={{
+                                                        padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                        fontSize: '12.5px', fontWeight: 700,
+                                                        background: paper === 2 ? '#2563EB' : 'var(--bg-primary)',
+                                                        color: paper === 2 ? '#FFFFFF' : 'var(--text-secondary)',
+                                                        border: paper === 2 ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                        transition: 'all 0.15s'
+                                                    }}
+                                                >
+                                                    {examId === 'upsc-cse' ? 'Paper 2: CSAT / Aptitude' : 'Paper 2: Science & Tech, Environment & GMA'}
+                                                </button>
+                                            )}
                                         </div>
                                     </div>
 
@@ -535,11 +555,13 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     transition: 'all 0.15s'
                                                 }}
                                             >
-                                                All Years (2011–2024)
+                                                {examId === 'upsc-capf' ? 'All Years (2014–2026)' : 'All Years (2011–2024)'}
                                             </button>
-                                            {(examId === 'kpsc-kas' 
-                                                ? [2024, 2020, 2017, 2015, 2011]
-                                                : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
+                                            {(examId === 'upsc-capf'
+                                                ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
+                                                : examId === 'kpsc-kas' 
+                                                    ? [2024, 2020, 2017, 2015, 2011]
+                                                    : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
                                             ).map((yr) => {
                                                 const isSelected = year === yr;
                                                 return (
@@ -559,7 +581,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                             transition: 'all 0.15s'
                                                         }}
                                                     >
-                                                        {yr} {yr === 2024 ? '🔥' : ''}
+                                                        {yr} {yr >= 2025 ? '🔥 Latest' : yr === 2024 ? '🔥' : ''}
                                                     </button>
                                                 );
                                             })}
@@ -767,7 +789,12 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             </div>
 
                             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '24px' }}>
-                                {(availableQs >= 200 ? [...QUESTION_COUNTS, 200] : QUESTION_COUNTS).map((c) => (
+                                {(examId === 'upsc-capf' 
+                                    ? [...QUESTION_COUNTS, 125] 
+                                    : availableQs >= 200 
+                                        ? [...QUESTION_COUNTS, 200] 
+                                        : QUESTION_COUNTS
+                                ).map((c) => (
                                     <button
                                         key={c}
                                         onClick={() => { setCount(c); setCustomCount(''); }}
@@ -779,7 +806,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                             border: count === c && !customCount ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
                                         }}
                                     >
-                                        {c} Qs {c === 100 && availableQs === 100 ? '(Full Paper)' : c === 200 ? '(Full Exam)' : ''}
+                                        {c} Qs {c === 125 && examId === 'upsc-capf' ? '(Full Paper)' : c === 100 && availableQs === 100 ? '(Full Paper)' : c === 200 ? '(Full Exam)' : ''}
                                     </button>
                                 ))}
                             </div>

@@ -95,7 +95,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                                     </span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>•</span>
                                     <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)' }}>
-                                        {exam.languages.includes('kn') ? 'English & Kannada' : 'English'}
+                                        {exam.languages.includes('kn') ? 'English & Kannada' : exam.languages.includes('hi') ? 'English & Hindi' : 'English'}
                                     </span>
                                 </div>
                             </div>

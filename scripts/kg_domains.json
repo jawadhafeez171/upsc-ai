@@ -1,0 +1,393 @@
+{
+  "history": {
+    "title": "History",
+    "domains": {
+      "history.ancient_india": {
+        "title": "Ancient India"
+      },
+      "history.medieval_india": {
+        "title": "Medieval India"
+      },
+      "history.modern_india": {
+        "title": "Modern India"
+      },
+      "history.indian_freedom_struggle": {
+        "title": "Indian Freedom Struggle"
+      },
+      "history.post-independence_india": {
+        "title": "Post-Independence India"
+      },
+      "history.world_history": {
+        "title": "World History"
+      },
+      "history.history_of_karnataka": {
+        "title": "History of Karnataka"
+      }
+    }
+  },
+  "art_culture_heritage": {
+    "title": "Art, Culture & Heritage",
+    "domains": {
+      "art_culture_heritage.indian_architecture_sculpture": {
+        "title": "Indian Architecture & Sculpture"
+      },
+      "art_culture_heritage.indian_paintings_visual_arts": {
+        "title": "Indian Paintings & Visual Arts"
+      },
+      "art_culture_heritage.performing_arts": {
+        "title": "Performing Arts (Dance, Music, Theatre & Puppetry)"
+      },
+      "art_culture_heritage.indian_literature_languages": {
+        "title": "Indian Literature & Languages"
+      },
+      "art_culture_heritage.schools_of_indian_philosophy": {
+        "title": "Schools of Indian Philosophy"
+      },
+      "art_culture_heritage.fairs_festivals_crafts_unesco_heritage": {
+        "title": "Fairs, Festivals, Crafts & UNESCO Heritage"
+      },
+      "art_culture_heritage.art_culture_of_karnataka": {
+        "title": "Art, Architecture & Cultural Heritage of Karnataka"
+      },
+      "art_culture_heritage.martial_arts_traditional_sports_calendars": {
+        "title": "Martial Arts, Traditional Sports & Indian Calendar Systems"
+      },
+      "art_culture_heritage.cultural_institutions_numismatics_initiatives": {
+        "title": "Cultural Institutions, Numismatics & Heritage Governance"
+      }
+    }
+  },
+  "geography_earth_systems": {
+    "title": "Geography & Earth Systems",
+    "domains": {
+      "geography_earth_systems.physical_geography_earth_systems": {
+        "title": "Physical Geography & Earth Systems (Geomorphology)"
+      },
+      "geography_earth_systems.climatology_atmospheric_dynamics": {
+        "title": "Climatology"
+      },
+      "geography_earth_systems.oceanography_marine_systems": {
+        "title": "Oceanography & Marine Systems"
+      },
+      "geography_earth_systems.indian_physical_geography_monsoon_architecture": {
+        "title": "Indian Physical Geography & Monsoon Architecture"
+      },
+      "geography_earth_systems.human_geography_population_settlements": {
+        "title": "Human Geography & Population Settlements"
+      },
+      "geography_earth_systems.economic_resource_geography": {
+        "title": "Economic & Resource Geography"
+      },
+      "geography_earth_systems.geography_of_the_world": {
+        "title": "Geography of the World"
+      },
+      "geography_earth_systems.world_mapping_geopolitical_locations": {
+        "title": "World Mapping & Geopolitical Locations"
+      },
+      "geography_earth_systems.indian_mapping_spatial_geography": {
+        "title": "Indian Mapping & Spatial Geography"
+      },
+      "geography_earth_systems.geography_of_karnataka": {
+        "title": "Geography of Karnataka"
+      },
+      "geography_earth_systems.karnataka_mapping_state_geography": {
+        "title": "Karnataka Mapping & Spatial Geography"
+      }
+    }
+  },
+  "indian_society_social_justice": {
+    "title": "Indian Society & Social Justice",
+    "domains": {
+      "indian_society_social_justice.salient_features_of_indian_society_diversity": {
+        "title": "Salient Features of Indian Society & Diversity"
+      },
+      "indian_society_social_justice.social_institutions": {
+        "title": "Social Institutions (Family, Marriage, Caste & Tribe)"
+      },
+      "indian_society_social_justice.role_of_women_womens_movements": {
+        "title": "Role of Women & Women's Movements"
+      },
+      "indian_society_social_justice.population_dynamics_demographic_issues": {
+        "title": "Population Dynamics & Demographic Issues"
+      },
+      "indian_society_social_justice.poverty_inequality_developmental_challenges": {
+        "title": "Poverty, Inequality & Developmental Challenges"
+      },
+      "indian_society_social_justice.urbanisation_urban_social_issues": {
+        "title": "Urbanisation & Urban Social Issues"
+      },
+      "indian_society_social_justice.social_empowerment_communalism_regionalism_secularism": {
+        "title": "Social Empowerment, Communalism, Regionalism & Secularism"
+      },
+      "indian_society_social_justice.welfare_schemes_for_vulnerable_sections": {
+        "title": "Welfare Schemes for Vulnerable Sections"
+      },
+      "indian_society_social_justice.social_sector_development": {
+        "title": "Social Sector Development (Health & Education)"
+      },
+      "indian_society_social_justice.issues_relating_to_poverty_hunger": {
+        "title": "Issues Relating to Poverty & Hunger"
+      }
+    }
+  },
+  "indian_polity_constitution_governance": {
+    "title": "Indian Polity, Constitution & Governance",
+    "domains": {
+      "indian_polity_constitution_governance.historical_background_making_of_the_constitution": {
+        "title": "Historical Background & Making of the Constitution"
+      },
+      "indian_polity_constitution_governance.salient_features_amendments_basic_structure": {
+        "title": "Salient Features, Amendments & Basic Structure"
+      },
+      "indian_polity_constitution_governance.fundamental_rights_dpsp_fundamental_duties": {
+        "title": "Fundamental Rights, DPSP & Fundamental Duties"
+      },
+      "indian_polity_constitution_governance.union_executive_state_executive": {
+        "title": "Union Executive & State Executive"
+      },
+      "indian_polity_constitution_governance.parliament_state_legislatures": {
+        "title": "Parliament & State Legislatures"
+      },
+      "indian_polity_constitution_governance.indian_judiciary_judicial_system": {
+        "title": "Indian Judiciary & Judicial System"
+      },
+      "indian_polity_constitution_governance.federal_structure_center-state_relations_devolution": {
+        "title": "Federal Structure, Center-State Relations & Devolution"
+      },
+      "indian_polity_constitution_governance.local_governance": {
+        "title": "Local Governance (Panchayati Raj & Municipalities)"
+      },
+      "indian_polity_constitution_governance.statutory_regulatory_quasi-judicial_bodies": {
+        "title": "Statutory, Regulatory & Quasi-Judicial Bodies"
+      },
+      "indian_polity_constitution_governance.good_governance_administrative_reforms": {
+        "title": "Good Governance & Administrative Reforms"
+      },
+      "indian_polity_constitution_governance.transparency_accountability_citizen_charters": {
+        "title": "Transparency, Accountability & Citizen Charters"
+      },
+      "indian_polity_constitution_governance.e-governance_models_digital_public_infrastructure": {
+        "title": "E-Governance Models & Digital Public Infrastructure"
+      },
+      "indian_polity_constitution_governance.role_of_civil_services_in_a_democracy": {
+        "title": "Role of Civil Services in a Democracy"
+      },
+      "indian_polity_constitution_governance.governance_administration_public_policy_in_karnataka": {
+        "title": "Governance, Administration & Public Policy in Karnataka"
+      },
+      "indian_polity_constitution_governance.karnataka_gram_swaraj_panchayat_raj_system": {
+        "title": "Karnataka Gram Swaraj & Panchayat Raj System"
+      }
+    }
+  },
+  "international_relations_global_institutions": {
+    "title": "International Relations & Global Institutions",
+    "domains": {
+      "international_relations_global_institutions.indias_foreign_policy_bilateral_relations": {
+        "title": "India's Foreign Policy & Bilateral Relations"
+      },
+      "international_relations_global_institutions.regional_multilateral_groupings": {
+        "title": "Regional & Multilateral Groupings"
+      },
+      "international_relations_global_institutions.global_institutions_agreements_treaties": {
+        "title": "Global Institutions, Agreements & Treaties"
+      },
+      "international_relations_global_institutions.indian_diaspora": {
+        "title": "Indian Diaspora"
+      }
+    }
+  },
+  "indian_economy_development": {
+    "title": "Indian Economy & Development",
+    "domains": {
+      "indian_economy_development.macroeconomic_fundamentals_national_income_accounting": {
+        "title": "Macroeconomic Fundamentals & National Income Accounting"
+      },
+      "indian_economy_development.planning_mobilisation_of_resources_inclusive_growth": {
+        "title": "Planning, Mobilisation of Resources & Inclusive Growth"
+      },
+      "indian_economy_development.monetary_policy_banking_architecture": {
+        "title": "Monetary Policy & Banking Architecture"
+      },
+      "indian_economy_development.fiscal_policy_public_finance_taxation": {
+        "title": "Fiscal Policy, Public Finance & Taxation"
+      },
+      "indian_economy_development.agriculture_food_management_subsidies": {
+        "title": "Agriculture, Food Management & Subsidies"
+      },
+      "indian_economy_development.industrial_policy_manufacturing_services": {
+        "title": "Industrial Policy, Manufacturing & Services"
+      },
+      "indian_economy_development.infrastructure_energy_investment_models": {
+        "title": "Infrastructure, Energy & Investment Models"
+      },
+      "indian_economy_development.external_sector_balance_of_payments_foreign_trade": {
+        "title": "External Sector, Balance of Payments & Foreign Trade"
+      },
+      "indian_economy_development.economy_development_of_karnataka": {
+        "title": "Economy & Development of Karnataka"
+      }
+    }
+  },
+  "environment_ecology_disaster_management": {
+    "title": "Environment, Ecology & Disaster Management",
+    "domains": {
+      "environment_ecology_disaster_management.fundamental_ecology_ecosystem_dynamics": {
+        "title": "Fundamental Ecology & Ecosystem Dynamics"
+      },
+      "environment_ecology_disaster_management.biodiversity_wildlife_conservation_protected_areas": {
+        "title": "Biodiversity, Wildlife Conservation & Protected Areas"
+      },
+      "environment_ecology_disaster_management.environmental_pollution_waste_management_remediation": {
+        "title": "Environmental Pollution, Waste Management & Remediation"
+      },
+      "environment_ecology_disaster_management.climate_change_science_carbon_markets_global_conventions": {
+        "title": "Climate Change Science, Carbon Markets & Global Conventions"
+      },
+      "environment_ecology_disaster_management.environmental_legislation_institutions_eia_in_india": {
+        "title": "Environmental Legislation, Institutions & EIA in India"
+      },
+      "environment_ecology_disaster_management.hazard_profiles_disaster_vulnerability_in_india": {
+        "title": "Hazard Profiles & Disaster Vulnerability in India"
+      },
+      "environment_ecology_disaster_management.institutional_legal_operational_framework": {
+        "title": "Institutional, Legal & Operational Framework"
+      },
+      "environment_ecology_disaster_management.risk_reduction_resilience_global_conventions": {
+        "title": "Risk Reduction, Resilience & Global Conventions"
+      }
+    }
+  },
+  "science_technology_defence": {
+    "title": "Science, Technology & Defence",
+    "domains": {
+      "science_technology_defence.space_technology_astronomy": {
+        "title": "Space Technology & Astronomy"
+      },
+      "science_technology_defence.biotechnology_health_life_sciences": {
+        "title": "Biotechnology, Health & Life Sciences"
+      },
+      "science_technology_defence.information_communication_technology_ai_cyber_security": {
+        "title": "Information & Communication Technology (ICT), AI & Cyber Security"
+      },
+      "science_technology_defence.defence_technology": {
+        "title": "Defence Technology"
+      },
+      "science_technology_defence.nuclear_technology_energy": {
+        "title": "Nuclear Technology & Energy"
+      },
+      "science_technology_defence.nanoscience_advanced_materials": {
+        "title": "Nanoscience & Advanced Materials"
+      },
+      "science_technology_defence.applied_fundamental_sciences": {
+        "title": "Applied & Fundamental Sciences"
+      }
+    }
+  },
+  "internal_security": {
+    "title": "Internal Security",
+    "domains": {
+      "internal_security.linkages_between_development_extremism": {
+        "title": "Linkages between Development & Extremism (LWE)"
+      },
+      "internal_security.terrorism_insurgencies_cross-border_security": {
+        "title": "Terrorism, Insurgencies & Cross-Border Security"
+      },
+      "internal_security.border_management_coastal_security": {
+        "title": "Border Management & Coastal Security"
+      },
+      "internal_security.transnational_organised_crime_illicit_financial_flows": {
+        "title": "Transnational Organised Crime & Illicit Financial Flows"
+      },
+      "internal_security.cyber_warfare_critical_infrastructure_digital_security": {
+        "title": "Cyber Warfare, Critical Infrastructure & Digital Security"
+      },
+      "internal_security.security_forces_intelligence_agencies_statutory_mandates": {
+        "title": "Security Forces, Intelligence Agencies & Statutory Mandates"
+      }
+    }
+  },
+  "ethics_integrity_aptitude": {
+    "title": "Ethics, Integrity & Aptitude",
+    "domains": {
+      "ethics_integrity_aptitude.ethics_human_interface": {
+        "title": "Ethics & Human Interface (Essence, determinants and consequences of Ethics in human actions; Dimensions of ethics; Ethics in private and public relationships; Human Values – lessons from the lives and teachings of great leaders, reformers and administrators; Role of family, society and educational institutions in inculcating values)"
+      },
+      "ethics_integrity_aptitude.attitude_aptitude": {
+        "title": "Attitude & Aptitude"
+      },
+      "ethics_integrity_aptitude.emotional_intelligence_moral_thinkers": {
+        "title": "Emotional Intelligence & Moral Thinkers"
+      },
+      "ethics_integrity_aptitude.probity_in_governance_public_service_values": {
+        "title": "Probity in Governance & Public Service Values"
+      },
+      "ethics_integrity_aptitude.case_studies": {
+        "title": "Case Studies"
+      }
+    }
+  },
+  "general_mental_ability_quantitative_aptitude_comprehension": {
+    "title": "General Mental Ability, Quantitative Aptitude & Comprehension",
+    "domains": {
+      "general_mental_ability_quantitative_aptitude_comprehension.reading_comprehension_interpersonal_skills": {
+        "title": "Reading Comprehension & Interpersonal Skills"
+      },
+      "general_mental_ability_quantitative_aptitude_comprehension.quantitative_aptitude_basic_numeracy": {
+        "title": "Quantitative Aptitude & Basic Numeracy"
+      },
+      "general_mental_ability_quantitative_aptitude_comprehension.general_mental_ability_logical_reasoning": {
+        "title": "General Mental Ability & Logical Reasoning"
+      }
+    }
+  },
+  "educational_psychology_child_development_teaching_pedagogy": {
+    "title": "Educational Psychology, Child Development & Teaching Pedagogy",
+    "domains": {
+      "educational_psychology_child_development_teaching_pedagogy.child_development_growth_dynamics": {
+        "title": "Child Development & Growth Dynamics"
+      },
+      "educational_psychology_child_development_teaching_pedagogy.theories_of_learning_cognition_intelligence": {
+        "title": "Theories of Learning, Cognition & Intelligence"
+      },
+      "educational_psychology_child_development_teaching_pedagogy.inclusive_education_diverse_learners_special_needs": {
+        "title": "Inclusive Education, Diverse Learners & Special Needs (CWSN)"
+      },
+      "educational_psychology_child_development_teaching_pedagogy.pedagogical_strategies_curriculum_classroom_management": {
+        "title": "Pedagogical Strategies, Curriculum & Classroom Management"
+      },
+      "educational_psychology_child_development_teaching_pedagogy.educational_assessment_evaluation_measurement": {
+        "title": "Educational Assessment, Evaluation & Measurement"
+      },
+      "educational_psychology_child_development_teaching_pedagogy.national_educational_policies_legal_frameworks_teacher_aptitude": {
+        "title": "National Educational Policies, Legal Frameworks & Teacher Aptitude"
+      }
+    }
+  },
+  "language_proficiency_grammar_communication": {
+    "title": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+    "domains": {
+      "language_proficiency_grammar_communication.general_kannada_grammar_structure": {
+        "title": "General Kannada Grammar & Structure (ಕನ್ನಡ ವ್ಯಾಕರಣ)"
+      },
+      "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms": {
+        "title": "Kannada Vocabulary, Usage & Idioms (ಶಬ್ದ ಸಂಪತ್ತು ಮತ್ತು ನುಡಿಗಟ್ಟುಗಳು)"
+      },
+      "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards": {
+        "title": "Kannada Literature, Authors & Sahitya Academy Awards (ಕನ್ನಡ ಸಾಹಿತ್ಯ ಪರಿಚಯ)"
+      },
+      "language_proficiency_grammar_communication.translation_precis_writing": {
+        "title": "Translation & Precis Writing (ಭಾಷಾಂತರ ಮತ್ತು ಸಂಕ್ಷೇಪಣ)"
+      },
+      "language_proficiency_grammar_communication.general_english_grammar_syntax": {
+        "title": "General English Grammar & Syntax"
+      },
+      "language_proficiency_grammar_communication.english_vocabulary_idioms_phrasal_verbs": {
+        "title": "English Vocabulary, Idioms & Phrasal Verbs"
+      },
+      "language_proficiency_grammar_communication.reading_comprehension_sentence_correction_verbal_ability": {
+        "title": "Reading Comprehension, Sentence Correction & Verbal Ability"
+      }
+    }
+  }
+}
