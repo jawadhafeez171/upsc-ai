@@ -65,6 +65,38 @@ function renderHighlightedModifiers(str: string): React.ReactNode {
     );
 }
 
+const SUPERSCRIPTS: Record<string, string> = {
+    '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴',
+    '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹',
+    '+': '⁺', '-': '⁻', '=': '⁼', '(': '⁽', ')': '⁾',
+    'n': 'ⁿ', 'i': 'ⁱ', 'k': 'ᵏ', 'm': 'ᵐ', 'x': 'ˣ', 'y': 'ʸ'
+};
+
+export function formatMathTypography(raw: string): string {
+    if (!raw || typeof raw !== 'string') return raw;
+
+    // 1. Units like m^3, m^2, cm^2, km^2, mm^2, ft^2
+    let res = raw.replace(/\b(m|cm|km|mm|ft)\^([23])\b/g, (_m, u, p) => u + (p === '2' ? '²' : '³'));
+
+    // 2. Caret with parenthesized content: ^(2k), ^(m+1), ^(10)
+    res = res.replace(/\^\(([^)]+)\)/g, (_m, p1) => {
+        return p1.split('').map((c: string) => SUPERSCRIPTS[c] || c).join('');
+    });
+
+    // 3. Caret with numeric or single variable exponent: ^50, ^2, ^m, ^n, ^333
+    res = res.replace(/\^([0-9]+|[a-zA-Z])(?![a-zA-Z0-9])/g, (_m, p1) => {
+        return p1.split('').map((c: string) => SUPERSCRIPTS[c] || c).join('');
+    });
+
+    // 4. Multiplication ' x ' between numbers/superscripts/dots/variables
+    res = res.replace(/(?<=[0-9⁰¹²³⁴⁵⁶⁷⁸⁹ᵐⁿᵏˣʸ\.\)]|\b[a-zA-Z]\b|(?:cm|m|km|mm|ft))\s+[xX]\s+(?=[0-9⁰¹²³⁴⁵⁶⁷⁸⁹ᵐⁿᵏˣʸ\.\(]|\b[a-zA-Z]\b)/g, ' × ');
+
+    // 5. Expressions like 2(5)x1 -> 2(5) × 1
+    res = res.replace(/(?<=\))\s*x\s*(?=[0-9])/gi, ' × ');
+
+    return res;
+}
+
 // Utility to clean replacement characters, garbled unicode, and parse bolding & LaTeX
 export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
     if (!lineText) return '';
@@ -141,7 +173,9 @@ export const parseTextWithFormatting = (lineText: string): React.ReactNode => {
                     );
                 }
 
-                return <span key={index}>{renderHighlightedModifiers(part)}</span>;
+                // Plain text: format mathematical typography (exponents, multiplication, units)
+                const formattedPart = formatMathTypography(part);
+                return <span key={index}>{renderHighlightedModifiers(formattedPart)}</span>;
             })}
         </>
     );
