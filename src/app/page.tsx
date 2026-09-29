@@ -1,7 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
+import { supabase } from '@/lib/supabase';
 import { ArrowRight, Zap, BarChart2, Globe, RotateCcw, Target, Trophy, Sparkles, CheckCircle2 } from 'lucide-react';
 import { EXAMS } from '@/lib/mockData';
 import { t } from '@/lib/i18n';
@@ -21,30 +22,30 @@ const FEATURES = [
 const QUICK_LAUNCHES = [
   {
     title: 'KPSC KAS 2024 Prelims',
-    desc: 'Paper 1 & Paper 2 Full 200 Questions',
-    badge: '🔥 Latest Paper',
+    desc: 'Paper 1 & Paper 2 (August & December Sittings)',
+    badge: '🔥 Latest Papers',
     link: '/exams/kpsc-kas',
     color: '#2563EB'
   },
   {
-    title: 'KPSC KAS 2020 Prelims',
-    desc: 'Paper 1 & Paper 2 Full 200 Questions',
-    badge: '📜 Historical PYQ',
-    link: '/exams/kpsc-kas',
+    title: 'UPSC CSE GS-1 (1995–2024)',
+    desc: '3,320+ Curated General Studies Prelims PYQs',
+    badge: '🏛️ Premier Exam',
+    link: '/exams/upsc-cse',
     color: '#0D9488'
   },
   {
-    title: 'Karnataka GK & Administration',
-    desc: 'History, Geography & State Economy Drill',
-    badge: '🎯 State Special',
-    link: '/exams/kpsc-kas',
+    title: 'UPSC CSAT Paper 2 (2013–2026)',
+    desc: '1,120 Real Aptitude, GMA & Reading Comprehension Qs',
+    badge: '🧠 CSAT Archive',
+    link: '/exams/upsc-cse',
     color: '#D97706'
   },
   {
-    title: 'Daily 10-Question Challenge',
-    desc: 'Mixed GS & Current Affairs Practice',
-    badge: '⚡ Quick 5-Min Test',
-    link: '/exams/kpsc-kas',
+    title: 'KSP Police Constable 2026',
+    desc: 'HK & State-wide NHK Official Key Validated Papers',
+    badge: '🚔 200 Questions',
+    link: '/exams/ksp-pc',
     color: '#8B5CF6'
   }
 ];
@@ -70,6 +71,25 @@ export default function HomePage() {
   // Demo Question State
   const [demoSelected, setDemoSelected] = useState<string | null>(null);
   const [demoLang, setDemoLang] = useState<'en' | 'kn'>('en');
+  const [totalQuestions, setTotalQuestions] = useState<number>(5841);
+
+  useEffect(() => {
+    async function fetchTotalQuestions() {
+      try {
+        const [q1, q2, q3, q4] = await Promise.all([
+          supabase.from('upsc_questions').select('id', { count: 'exact', head: true }),
+          supabase.from('csat_pyq').select('id', { count: 'exact', head: true }),
+          supabase.from('kas_questions').select('id', { count: 'exact', head: true }),
+          supabase.from('pc_pyq').select('id', { count: 'exact', head: true })
+        ]);
+        const sum = (q1.count || 3321) + (q2.count || 1120) + (q3.count || 1200) + (q4.count || 200);
+        setTotalQuestions(sum);
+      } catch (e) {
+        console.error('Error fetching question count:', e);
+      }
+    }
+    fetchTotalQuestions();
+  }, []);
 
   return (
     <div style={{ background: 'var(--bg-primary)', paddingBottom: '80px' }}>
@@ -95,7 +115,7 @@ export default function HomePage() {
               color: '#FFFFFF', marginBottom: '28px', backdropFilter: 'blur(12px)',
               boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)'
             }}>
-              <Sparkles size={14} style={{ color: '#F43F5E' }} /> 1,200+ Verified KPSC & UPSC PYQs (2011 - 2024)
+              <Sparkles size={14} style={{ color: '#F43F5E' }} /> {totalQuestions.toLocaleString()}+ Verified UPSC, KPSC & Police PYQs (2011–2026)
             </div>
 
             {/* Creative Lab Bold Headline */}
@@ -121,7 +141,7 @@ export default function HomePage() {
                 background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
                 boxShadow: '0 8px 24px rgba(37, 99, 235, 0.4)'
               }}>
-                Browse All 1,200 Questions <ArrowRight size={18} />
+                Browse All {totalQuestions.toLocaleString()} Questions <ArrowRight size={18} />
               </Link>
               {!user && (
                 <Link href="/register" className="btn btn-secondary btn-lg" style={{
@@ -139,11 +159,13 @@ export default function HomePage() {
               display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', flexWrap: 'wrap',
               paddingTop: '24px', borderTop: '1px solid rgba(255, 255, 255, 0.12)'
             }}>
-              <span className="hero-sub-text-pill">KPSC KAS 2011–2024</span>
+              <span className="hero-sub-text-pill">🏛️ 4,440+ UPSC CSE & CSAT</span>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
-              <span className="hero-sub-text-pill">UPSC CSE GS Paper 1 & 2</span>
+              <span className="hero-sub-text-pill">🅺 1,200 KPSC KAS (2011–2024)</span>
               <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
-              <span className="hero-sub-text-pill">Kannada & English Native Rendering</span>
+              <span className="hero-sub-text-pill">🚔 200 KSP Police Constable</span>
+              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
+              <span className="hero-sub-text-pill">🌐 Kannada & English Native Rendering</span>
             </div>
 
           </div>
