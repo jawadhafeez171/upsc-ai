@@ -108,18 +108,22 @@ export default function RegisterPage() {
             </div>
 
             {/* Right Form Panel */}
-            <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 24px' }}>
-                <div style={{ width: '100%', maxWidth: '400px' }} className="fade-in-up">
-                    <div style={{ marginBottom: '32px' }}>
-                        <h1 style={{ fontSize: '28px', fontWeight: 800, letterSpacing: '-0.5px', marginBottom: '6px' }}>Create account</h1>
-                        <p style={{ color: 'var(--text-secondary)', fontSize: '14px' }}>Free mock tests. No credit card needed.</p>
+            <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 24px', background: 'var(--bg-primary)' }}>
+                <div style={{ width: '100%', maxWidth: '420px', padding: '36px', borderRadius: '8px', border: '1.5px solid var(--border)', background: 'var(--bg-card)', boxShadow: 'var(--shadow-card)' }} className="fade-in-up">
+                    <div style={{ marginBottom: '28px' }}>
+                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 800, color: '#111827', background: '#FEF08A', border: '1px solid #1E1E1E', borderRadius: '4px', padding: '3px 8px', marginBottom: '12px' }}>
+                            NEW ASPIRANT
+                        </div>
+                        <h1 style={{ fontSize: '26px', fontWeight: 900, letterSpacing: '-0.5px', marginBottom: '6px' }}>Create account</h1>
+                        <p style={{ color: 'var(--text-secondary)', fontSize: '13.5px' }}>Free mock tests. No credit card needed.</p>
                     </div>
 
                     {error && (
                         <div style={{
-                            background: 'rgba(244,63,94,0.08)', border: '1px solid rgba(244,63,94,0.25)',
-                            borderRadius: '10px', padding: '12px 16px', marginBottom: '20px',
-                            fontSize: '14px', color: '#F43F5E',
+                            background: '#FEF2F2', border: '1.5px solid #DC2626',
+                            borderRadius: '6px', padding: '12px 16px', marginBottom: '20px',
+                            fontSize: '13.5px', color: '#DC2626', fontWeight: 600,
+                            boxShadow: '1px 1px 0px var(--border)'
                         }}>
                             ⚠️ {error}
                         </div>
@@ -129,7 +133,7 @@ export default function RegisterPage() {
                         onClick={handleGoogleLogin}
                         disabled={loading}
                         className="btn btn-secondary"
-                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px' }}
+                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px', borderRadius: '6px' }}
                     >
                         <GoogleIcon />
                         Continue with Google
@@ -137,25 +141,25 @@ export default function RegisterPage() {
 
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
                         <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
-                        <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>or sign up with email</span>
+                        <span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 600 }}>or sign up with email</span>
                         <div style={{ flex: 1, height: '1px', background: 'var(--border)' }} />
                     </div>
 
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <User size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Full Name
                             </label>
-                            <input className="input" type="text" placeholder="Arjun Sharma" value={name} onChange={(e) => setName(e.target.value)} required autoComplete="name" />
+                            <input className="input" type="text" placeholder="Arjun Sharma" value={name} onChange={(e) => setName(e.target.value)} required autoComplete="name" style={{ borderRadius: '6px' }} />
                         </div>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Mail size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Email
                             </label>
-                            <input className="input" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
+                            <input className="input" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" style={{ borderRadius: '6px' }} />
                         </div>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Lock size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Password
                             </label>
                             <div style={{ position: 'relative' }}>
@@ -166,7 +170,7 @@ export default function RegisterPage() {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required autoComplete="new-password"
-                                    style={{ paddingRight: '44px' }}
+                                    style={{ paddingRight: '44px', borderRadius: '6px' }}
                                 />
                                 <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
                                     {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -174,24 +178,24 @@ export default function RegisterPage() {
                             </div>
                         </div>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Lock size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Confirm Password
                             </label>
-                            <input className="input" type={showPass ? 'text' : 'password'} placeholder="Repeat password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required autoComplete="new-password" />
+                            <input className="input" type={showPass ? 'text' : 'password'} placeholder="Repeat password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required autoComplete="new-password" style={{ borderRadius: '6px' }} />
                         </div>
                         <button
                             type="submit"
                             className="btn btn-primary"
-                            style={{ padding: '14px', fontSize: '15px', marginTop: '4px', width: '100%' }}
+                            style={{ padding: '12px', fontSize: '14px', marginTop: '4px', width: '100%', borderRadius: '6px' }}
                             disabled={loading}
                         >
                             {loading ? '⏳ Creating account…' : <><ArrowRight size={16} /> Create Account</>}
                         </button>
                     </form>
 
-                    <p style={{ textAlign: 'center', marginTop: '28px', fontSize: '13px', color: 'var(--text-muted)' }}>
+                    <p style={{ textAlign: 'center', marginTop: '24px', fontSize: '13px', color: 'var(--text-muted)' }}>
                         Already have an account?{' '}
-                        <Link href="/login" style={{ color: 'var(--brand-orange)', fontWeight: 600, textDecoration: 'none' }}>Sign In</Link>
+                        <Link href="/login" style={{ color: 'var(--brand-orange)', fontWeight: 700, textDecoration: 'none' }}>Sign In</Link>
                     </p>
                 </div>
             </div>

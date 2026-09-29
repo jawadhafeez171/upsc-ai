@@ -67,9 +67,10 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 key={exam.id} 
                 className="card"
                 style={{
-                    borderRadius: '18px', padding: '24px',
+                    borderRadius: '8px', padding: '24px',
                     display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
-                    border: '1px solid var(--border)',
+                    border: '1.5px solid var(--border)',
+                    boxShadow: 'var(--shadow-card)',
                     transition: 'all 0.2s',
                     position: 'relative', overflow: 'hidden'
                 }}
@@ -79,9 +80,10 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                     <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '14px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                             <div style={{ 
-                                width: '46px', height: '46px', borderRadius: '12px', 
-                                background: 'var(--bg-tertiary)', border: '1px solid var(--border)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px' 
+                                width: '44px', height: '44px', borderRadius: '8px', 
+                                background: 'var(--bg-tertiary)', border: '1.5px solid var(--border)',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px',
+                                boxShadow: '1px 1px 0px var(--border)'
                             }}>
                                 {exam.icon}
                             </div>
@@ -90,7 +92,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                                     {displayName}
                                 </h2>
                                 <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
-                                    <span style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', color: 'var(--brand-orange)' }}>
+                                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--brand-orange)' }}>
                                         {exam.category}
                                     </span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>•</span>
@@ -103,9 +105,9 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
 
                         {exam.badge && (
                             <span style={{ 
-                                fontSize: '11px', fontWeight: 800, padding: '3px 8px', borderRadius: '6px',
-                                background: 'rgba(255, 107, 43, 0.12)', color: 'var(--brand-orange)',
-                                border: '1px solid rgba(255, 107, 43, 0.25)'
+                                fontSize: '11px', fontWeight: 800, padding: '3px 8px', borderRadius: '4px',
+                                background: '#FEF08A', color: '#111827',
+                                border: '1px solid #1E1E1E', boxShadow: '1px 1px 0px var(--border)'
                             }}>
                                 {exam.badge}
                             </span>
@@ -123,7 +125,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             <span 
                                 key={idx}
                                 style={{
-                                    fontSize: '11.5px', fontWeight: 600, padding: '3px 9px', borderRadius: '6px',
+                                    fontSize: '11.5px', fontWeight: 700, padding: '3px 9px', borderRadius: '4px',
                                     background: 'var(--bg-tertiary)', color: 'var(--text-secondary)',
                                     border: '1px solid var(--border)'
                                 }}
@@ -132,7 +134,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             </span>
                         ))}
                         {(displaySubjects || []).length > 4 && (
-                            <span style={{ fontSize: '11.5px', fontWeight: 600, padding: '3px 8px', borderRadius: '6px', color: 'var(--text-muted)' }}>
+                            <span style={{ fontSize: '11.5px', fontWeight: 700, padding: '3px 8px', borderRadius: '4px', color: 'var(--text-muted)' }}>
                                 +{(displaySubjects || []).length - 4} more
                             </span>
                         )}
@@ -140,18 +142,19 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 </div>
 
                 {/* Action Buttons: About & Practice */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', borderTop: '1px solid var(--border)', paddingTop: '16px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', borderTop: '1.5px solid var(--border)', paddingTop: '16px' }}>
                     <Link 
                         href={`/exams/${exam.id}?tab=about`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '10px 12px', borderRadius: '10px',
-                            background: 'var(--bg-tertiary)', color: 'var(--text-primary)',
-                            border: '1px solid var(--border)', fontSize: '13px', fontWeight: 700,
-                            textDecoration: 'none', transition: 'all 0.15s'
+                            padding: '10px 12px', borderRadius: '6px',
+                            background: '#FFFFFF', color: '#111827',
+                            border: '1.5px solid var(--border)', fontSize: '13px', fontWeight: 700,
+                            textDecoration: 'none', transition: 'all 0.15s',
+                            boxShadow: '1.5px 1.5px 0px var(--border)'
                         }}
                     >
-                        <Info size={14} color="var(--brand-teal)" />
+                        <Info size={14} color="#2563EB" />
                         About Exam
                     </Link>
 
@@ -159,14 +162,15 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         href={`/exams/${exam.id}?tab=practice`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '10px 12px', borderRadius: '10px',
-                            background: 'var(--brand-orange)', color: '#FFFFFF',
+                            padding: '10px 12px', borderRadius: '6px',
+                            background: '#111827', color: '#FFFFFF',
                             fontSize: '13px', fontWeight: 700, textDecoration: 'none',
-                            boxShadow: '0 2px 8px rgba(255, 107, 43, 0.3)',
+                            border: '1.5px solid var(--border)',
+                            boxShadow: '1.5px 1.5px 0px var(--border)',
                             transition: 'all 0.15s'
                         }}
                     >
-                        <Zap size={14} />
+                        <Zap size={14} color="#FACC15" />
                         Practice
                     </Link>
                 </div>
@@ -182,11 +186,12 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                     <div style={{ 
                         display: 'inline-flex', alignItems: 'center', gap: '8px', 
-                        fontSize: '12.5px', fontWeight: 700, color: 'var(--brand-orange)', 
-                        background: 'rgba(255, 107, 43, 0.1)', border: '1px solid rgba(255, 107, 43, 0.25)', 
-                        borderRadius: '999px', padding: '6px 16px', marginBottom: '14px' 
+                        fontSize: '12px', fontWeight: 800, color: '#111827', 
+                        background: '#FEF08A', border: '1.5px solid #1E1E1E', 
+                        borderRadius: '999px', padding: '6px 16px', marginBottom: '14px',
+                        boxShadow: '1.5px 1.5px 0px #1E1E1E'
                     }}>
-                        <Award size={15} />
+                        <Award size={15} color="#2563EB" />
                         COMPREHENSIVE EXAM CATALOG
                     </div>
                     <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 900, letterSpacing: '-0.02em', color: 'var(--text-primary)', marginBottom: '12px' }}>
@@ -201,8 +206,8 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 <div style={{ 
                     display: 'flex', justifyContent: 'space-between', gap: '16px', 
                     marginBottom: '36px', flexWrap: 'wrap', alignItems: 'center',
-                    background: 'var(--bg-card)', padding: '16px 20px', borderRadius: '18px',
-                    border: '1px solid var(--border)', boxShadow: 'var(--shadow-sm)'
+                    background: 'var(--bg-card)', padding: '16px 20px', borderRadius: '8px',
+                    border: '1.5px solid var(--border)', boxShadow: 'var(--shadow-card)'
                 }}>
                     {/* Category Filter Pills */}
                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -213,12 +218,12 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                                     key={f.key}
                                     onClick={() => setFilter(f.key)}
                                     style={{
-                                        padding: '7px 16px', borderRadius: '12px', cursor: 'pointer',
+                                        padding: '7px 16px', borderRadius: '6px', cursor: 'pointer',
                                         fontWeight: 700, fontSize: '13px', fontFamily: 'inherit',
-                                        background: isActive ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
-                                        color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
-                                        border: isActive ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
-                                        boxShadow: isActive ? '0 2px 8px rgba(255,107,43,0.3)' : 'none',
+                                        background: isActive ? '#111827' : '#FFFFFF',
+                                        color: isActive ? '#FFFFFF' : '#111827',
+                                        border: '1.5px solid var(--border)',
+                                        boxShadow: isActive ? '1.5px 1.5px 0px var(--border)' : 'none',
                                         transition: 'all 0.2s',
                                     }}
                                 >
@@ -239,7 +244,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="input"
-                            style={{ paddingLeft: '40px', height: '42px', width: '100%', borderRadius: '10px', fontSize: '13.5px' }}
+                            style={{ paddingLeft: '40px', height: '42px', width: '100%', borderRadius: '6px', fontSize: '13.5px' }}
                         />
                     </div>
                 </div>

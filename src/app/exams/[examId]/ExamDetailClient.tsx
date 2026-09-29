@@ -69,17 +69,19 @@ export default function ExamDetailClient({ examId, initialExam }: { examId: stri
 
                         {/* Mode */}
                         <div style={{ marginBottom: '24px' }}>
-                            <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Mode</div>
+                            <div style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Mode</div>
                             <div className="exam-config-grid">
                                 {([['full', '📋 Full Mock', 'All subjects combined'], ['subject', '🎯 Subject Focus', 'Pick one topic']] as const).map(([m, label, desc]) => (
                                     <button key={m} onClick={() => setMode(m)} style={{
-                                        padding: '12px', borderRadius: '10px',
-                                        border: 'none', cursor: 'pointer', textAlign: 'left',
-                                        background: mode === m ? 'var(--accent-peach)' : 'var(--bg-secondary)',
+                                        padding: '12px', borderRadius: '6px',
+                                        border: '1.5px solid var(--border)', cursor: 'pointer', textAlign: 'left',
+                                        background: mode === m ? '#111827' : 'var(--bg-secondary)',
+                                        color: mode === m ? '#FFFFFF' : 'var(--text-primary)',
+                                        boxShadow: mode === m ? '1.5px 1.5px 0px var(--border)' : 'none',
                                         transition: 'all 0.15s',
                                     }}>
-                                        <div style={{ fontWeight: 700, color: 'var(--text-primary)', fontSize: '13.5px' }}>{label}</div>
-                                        <div style={{ fontSize: '11px', color: 'var(--text-secondary)', marginTop: '2px' }}>{desc}</div>
+                                        <div style={{ fontWeight: 800, fontSize: '13.5px' }}>{label}</div>
+                                        <div style={{ fontSize: '11px', color: mode === m ? '#D1D5DB' : 'var(--text-secondary)', marginTop: '2px' }}>{desc}</div>
                                     </button>
                                 ))}
                             </div>
@@ -88,14 +90,16 @@ export default function ExamDetailClient({ examId, initialExam }: { examId: stri
                         {/* Subject */}
                         {mode === 'subject' && (
                             <div style={{ marginBottom: '24px' }}>
-                                <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Topic</div>
+                                <div style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Topic</div>
                                 <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                                     {(exam.topics || []).map((s: string) => (
                                         <button key={s} onClick={() => setSubject(s)} style={{
-                                            padding: '6px 12px', borderRadius: '8px', border: 'none', cursor: 'pointer',
-                                            fontWeight: 600, fontSize: '13px',
-                                            background: subject === s ? 'var(--accent-sage)' : 'var(--bg-secondary)',
-                                            color: 'var(--text-primary)', transition: 'all 0.15s',
+                                            padding: '6px 12px', borderRadius: '4px', border: '1px solid var(--border)', cursor: 'pointer',
+                                            fontWeight: 700, fontSize: '12.5px',
+                                            background: subject === s ? '#111827' : 'var(--bg-secondary)',
+                                            color: subject === s ? '#FFFFFF' : 'var(--text-primary)',
+                                            boxShadow: subject === s ? '1px 1px 0px var(--border)' : 'none',
+                                            transition: 'all 0.15s',
                                         }}>{s}</button>
                                     ))}
                                 </div>
@@ -104,14 +108,16 @@ export default function ExamDetailClient({ examId, initialExam }: { examId: stri
 
                         {/* Difficulty */}
                         <div style={{ marginBottom: '24px' }}>
-                            <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Difficulty</div>
+                            <div style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Difficulty</div>
                             <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                                 {DIFFICULTIES.map((d) => (
                                     <button key={d} onClick={() => setDifficulty(d)} style={{
-                                        padding: '6px 14px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '13px',
-                                        border: 'none',
-                                        background: difficulty === d ? 'var(--accent-lavender)' : 'var(--bg-secondary)',
-                                        color: 'var(--text-primary)', textTransform: 'capitalize', transition: 'all 0.15s',
+                                        padding: '6px 14px', borderRadius: '4px', cursor: 'pointer', fontWeight: 700, fontSize: '13px',
+                                        border: '1px solid var(--border)',
+                                        background: difficulty === d ? '#111827' : 'var(--bg-secondary)',
+                                        color: difficulty === d ? '#FFFFFF' : 'var(--text-primary)',
+                                        boxShadow: difficulty === d ? '1px 1px 0px var(--border)' : 'none',
+                                        textTransform: 'capitalize', transition: 'all 0.15s',
                                     }}>{d === 'mixed' ? '🎲 Mixed' : d === 'easy' ? '🟢 Easy' : d === 'medium' ? '🟡 Medium' : '🔴 Hard'}</button>
                                 ))}
                             </div>
@@ -119,16 +125,18 @@ export default function ExamDetailClient({ examId, initialExam }: { examId: stri
 
                         {/* Question Count */}
                         <div style={{ marginBottom: '20px' }}>
-                            <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>
+                            <div style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>
                                 Questions <span style={{ fontWeight: 500, textTransform: 'lowercase', color: 'var(--text-muted)' }}>({availableQs} available)</span>
                             </div>
                             <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '10px' }}>
                                 {QUESTION_COUNTS.map((c) => (
                                     <button key={c} onClick={() => { setCount(c); setCustomCount(''); }} style={{
-                                        padding: '6px 14px', borderRadius: '8px', cursor: 'pointer', fontWeight: 700, fontSize: '13px',
-                                        border: 'none',
-                                        background: count === c && !customCount ? 'var(--accent-sky)' : 'var(--bg-secondary)',
-                                        color: 'var(--text-primary)', transition: 'all 0.15s',
+                                        padding: '6px 14px', borderRadius: '4px', cursor: 'pointer', fontWeight: 800, fontSize: '13px',
+                                        border: '1px solid var(--border)',
+                                        background: count === c && !customCount ? '#111827' : 'var(--bg-secondary)',
+                                        color: count === c && !customCount ? '#FFFFFF' : 'var(--text-primary)',
+                                        boxShadow: count === c && !customCount ? '1px 1px 0px var(--border)' : 'none',
+                                        transition: 'all 0.15s',
                                         opacity: c > availableQs ? 0.4 : 1,
                                     }} disabled={c > availableQs}>{c}</button>
                                 ))}
@@ -141,14 +149,16 @@ export default function ExamDetailClient({ examId, initialExam }: { examId: stri
                         {/* Language */}
                         {(examId.startsWith('kpsc') || examId.startsWith('kea')) && (
                             <div>
-                                <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Language</div>
+                                <div style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-secondary)', marginBottom: '8px', textTransform: 'uppercase' }}>Language</div>
                                 <div style={{ display: 'flex', gap: '6px' }}>
                                     {['en', 'kn'].map((l) => (
                                         <button key={l} onClick={() => setTestLang(l as Language)} style={{
-                                            padding: '6px 14px', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '13px',
-                                            border: 'none',
-                                            background: testLang === l ? 'var(--accent-sage)' : 'var(--bg-secondary)',
-                                            color: 'var(--text-primary)', transition: 'all 0.15s',
+                                            padding: '6px 14px', borderRadius: '4px', cursor: 'pointer', fontWeight: 700, fontSize: '13px',
+                                            border: '1px solid var(--border)',
+                                            background: testLang === l ? '#111827' : 'var(--bg-secondary)',
+                                            color: testLang === l ? '#FFFFFF' : 'var(--text-primary)',
+                                            boxShadow: testLang === l ? '1px 1px 0px var(--border)' : 'none',
+                                            transition: 'all 0.15s',
                                         }}>{l === 'en' ? '🇬🇧 English' : '🇮🇳 ಕನ್ನಡ'}</button>
                                     ))}
                                 </div>

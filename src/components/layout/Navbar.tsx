@@ -29,6 +29,9 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const { theme, toggleTheme } = useTheme();
 
+    // Hide general navbar on CBT testing screens
+    if (pathname?.startsWith('/test/')) return null;
+
     const handleLogout = () => { logout(); router.push('/'); };
 
     return (
@@ -36,23 +39,25 @@ export default function Navbar() {
             <nav 
                 className="navbar-pill"
                 style={{
-                    background: theme === 'dark' ? 'rgba(15, 23, 42, 0.88)' : 'rgba(255, 255, 255, 0.94)',
+                    background: 'var(--bg-secondary)',
+                    border: '1.5px solid var(--border)',
+                    boxShadow: 'var(--shadow-card)',
                 }}
             >
                 {/* Logo */}
                 <Link href="/" className="navbar-logo-link">
                     <div style={{
-                        width: '36px', height: '36px', overflow: 'hidden',
-                        display: 'flex', alignItems: 'center', justifyContent: 'flex-start',
-                        borderRadius: '10px',
-                        background: theme === 'dark' ? 'rgba(255,255,255,0.08)' : '#F0EDE8',
+                        width: '34px', height: '34px', overflow: 'hidden',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        borderRadius: '6px',
+                        background: '#2563EB',
                         padding: '2px', flexShrink: 0, lineHeight: 0,
-                        border: '1px solid var(--border)',
+                        border: '1px solid #1D4ED8',
                     }}>
-                        <img src="/mIQ_logo.png" alt="MockIQ" style={{ height: '32px', width: 'auto', maxWidth: 'none', display: 'block' }} />
+                        <img src="/mIQ_logo.png" alt="MockIQ" style={{ height: '26px', width: 'auto', maxWidth: 'none', display: 'block', filter: 'brightness(0) invert(1)' }} />
                     </div>
                     <div className="navbar-logo-text">
-                        <div style={{ fontSize: '19px', fontWeight: 800, letterSpacing: '-0.5px', fontFamily: 'Inter, inherit' }}>
+                        <div style={{ fontSize: '18px', fontWeight: 900, letterSpacing: '-0.5px', fontFamily: 'Inter, inherit' }}>
                             <span style={{ color: 'var(--text-primary)' }}>MockI</span>
                             <span style={{ color: 'var(--brand-orange)' }}>Q</span>
                         </div>
@@ -63,17 +68,18 @@ export default function Navbar() {
                 </Link>
 
                 {/* Desktop nav links */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'var(--bg-card)', padding: '4px', borderRadius: '12px', border: '1px solid var(--border)' }} className="hidden-mobile">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'var(--bg-tertiary)', padding: '3px', borderRadius: '8px', border: '1px solid var(--border)' }} className="hidden-mobile">
                     {NAV_LINKS.map((link) => {
                         const active = pathname === link.href || (link.href !== '/' && pathname?.startsWith(link.href));
                         return (
                             <Link key={link.href} href={link.href} style={{
-                                padding: '6px 14px', borderRadius: '8px', textDecoration: 'none',
-                                fontSize: '13px', fontWeight: active ? 700 : 500,
-                                color: active ? 'white' : 'var(--text-secondary)',
-                                background: active ? 'var(--brand-orange)' : 'transparent',
-                                transition: 'all 0.2s ease',
-                                boxShadow: active ? '0 2px 10px rgba(37,99,235,0.3)' : 'none',
+                                padding: '5px 12px', borderRadius: '6px', textDecoration: 'none',
+                                fontSize: '12.5px', fontWeight: active ? 800 : 600,
+                                color: active ? '#FFFFFF' : 'var(--text-secondary)',
+                                background: active ? '#111827' : 'transparent',
+                                border: active ? '1px solid #111827' : '1px solid transparent',
+                                transition: 'all 0.15s ease',
+                                boxShadow: active ? '1px 1px 0px #1E1E1E' : 'none',
                             }}>
                                 {t(link.labelKey, language as Language)}
                             </Link>
@@ -155,20 +161,19 @@ export default function Navbar() {
             {menuOpen && (
                 <div style={{
                     position: 'fixed', top: '60px', left: '10px', right: '10px', zIndex: 49,
-                    background: theme === 'dark' ? 'rgba(15, 23, 42, 0.96)' : 'rgba(255, 255, 255, 0.98)', 
-                    backdropFilter: 'blur(24px)',
-                    WebkitBackdropFilter: 'blur(24px)',
-                    border: '1px solid var(--border)',
-                    borderRadius: '16px',
+                    background: 'var(--bg-secondary)', 
+                    border: '1.5px solid var(--border)',
+                    borderRadius: '8px',
                     padding: '12px', display: 'flex', flexDirection: 'column', gap: '4px',
-                    boxShadow: '0 12px 36px rgba(0,0,0,0.25)'
+                    boxShadow: 'var(--shadow-card)'
                 }}>
                     {NAV_LINKS.map((link) => (
                         <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
-                            padding: '10px 14px', borderRadius: '10px', textDecoration: 'none',
-                            color: 'var(--text-primary)', fontWeight: 600, fontSize: '14px',
-                            background: pathname === link.href ? 'rgba(255, 107, 43, 0.12)' : 'transparent',
-                            border: pathname === link.href ? '1px solid rgba(255, 107, 43, 0.25)' : '1px solid transparent',
+                            padding: '10px 14px', borderRadius: '6px', textDecoration: 'none',
+                            color: pathname === link.href ? '#FFFFFF' : 'var(--text-primary)',
+                            fontWeight: 700, fontSize: '13.5px',
+                            background: pathname === link.href ? '#111827' : 'transparent',
+                            border: pathname === link.href ? '1.5px solid #111827' : '1.5px solid transparent',
                             display: 'flex', alignItems: 'center', gap: '10px',
                         }}>
                             <span>{link.emoji}</span>

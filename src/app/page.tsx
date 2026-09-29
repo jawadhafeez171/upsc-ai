@@ -116,47 +116,30 @@ export default function HomePage() {
           <div style={{ maxWidth: '840px', margin: '0 auto', textAlign: 'center' }}>
             
             {/* Badge */}
-            <div className="fade-in-up" style={{
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.2)',
-              borderRadius: '999px', padding: '6px 20px', fontSize: '13px', fontWeight: 600,
-              color: '#FFFFFF', marginBottom: '28px', backdropFilter: 'blur(12px)',
-              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)'
-            }}>
-              <Sparkles size={14} style={{ color: '#F43F5E' }} /> {totalQuestions.toLocaleString()}+ Verified UPSC, KPSC & Police PYQs (2011–2026)
+            <div className="fade-in-up hero-top-badge">
+              <Sparkles size={14} style={{ color: '#2563EB' }} /> {totalQuestions.toLocaleString()}+ Verified UPSC, KPSC & Police PYQs (2011–2026)
             </div>
 
             {/* Creative Lab Bold Headline */}
             <h1 className="fade-in-up-d1 hero-creative-title" style={{
-              fontSize: 'clamp(36px, 5.8vw, 62px)', marginBottom: '24px',
+              fontSize: 'clamp(32px, 5.2vw, 56px)', marginBottom: '20px',
             }}>
               Master KPSC KAS & UPSC Prelims <br />
               <span className="hero-creative-gradient-text">Bilingual PYQs</span> with Peak Accuracy
             </h1>
 
             {/* Description */}
-            <p className="fade-in-up-d2" style={{
-              fontSize: '17px', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '36px',
-              lineHeight: 1.7, maxWidth: '660px', margin: '0 auto 36px', fontWeight: 400
-            }}>
+            <p className="fade-in-up-d2 hero-desc">
               Master civil service prelims with real exam papers in English & Kannada. Instant explanations, subject drills, and detailed weakness telemetry.
             </p>
 
             {/* Main CTAs */}
-            <div className="fade-in-up-d3" style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '36px' }}>
-              <Link href="/exams" className="btn btn-primary btn-lg" style={{
-                borderRadius: '12px', padding: '14px 28px', fontSize: '15px',
-                background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
-                boxShadow: '0 8px 24px rgba(37, 99, 235, 0.4)'
-              }}>
+            <div className="fade-in-up-d3" style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '32px' }}>
+              <Link href="/exams" className="btn btn-primary btn-lg">
                 Browse All {totalQuestions.toLocaleString()} Questions <ArrowRight size={18} />
               </Link>
               {!user && (
-                <Link href="/register" className="btn btn-secondary btn-lg" style={{
-                  borderRadius: '12px', padding: '14px 28px', fontSize: '15px',
-                  background: 'rgba(255, 255, 255, 0.1)', border: '1px solid rgba(255, 255, 255, 0.25)',
-                  color: '#FFFFFF', backdropFilter: 'blur(12px)'
-                }}>
+                <Link href="/register" className="btn btn-secondary btn-lg">
                   Create Free Account
                 </Link>
               )}
@@ -164,38 +147,35 @@ export default function HomePage() {
 
             {/* Sub-Text Callout matching Creative Lab style */}
             <div style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', flexWrap: 'wrap',
-              paddingTop: '24px', borderTop: '1px solid rgba(255, 255, 255, 0.12)'
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', flexWrap: 'wrap',
+              paddingTop: '20px', borderTop: '1px solid var(--border)'
             }}>
               <span className="hero-sub-text-pill">🏛️ 4,440+ UPSC CSE & CSAT</span>
-              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
-              <span className="hero-sub-text-pill">🎖️ 1,625 UPSC CAPF (2014–2026)</span>
-              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
-              <span className="hero-sub-text-pill">🅺 1,200 KPSC KAS (2011–2024)</span>
-              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
+              <span className="hero-sub-text-pill">🎖️ 1,625 UPSC CAPF</span>
+              <span className="hero-sub-text-pill">🅺 1,200 KPSC KAS</span>
               <span className="hero-sub-text-pill">🚔 200 KSP Police Constable</span>
-              <span style={{ color: 'rgba(255,255,255,0.3)' }}>•</span>
               <span className="hero-sub-text-pill">🌐 Bilingual EN/KN/HI Support</span>
             </div>
 
           </div>
 
           {/* QUICK-START TILES */}
-          <div style={{ marginTop: '20px' }}>
-            <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', textAlign: 'center', marginBottom: '16px' }}>
+          <div style={{ marginTop: '24px' }}>
+            <div style={{ fontSize: '12px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', textAlign: 'center', marginBottom: '16px' }}>
               ⚡ 1-Click Practice Launchpad
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
               {QUICK_LAUNCHES.map((item) => (
                 <Link key={item.title} href={item.link} style={{ textDecoration: 'none' }}>
                   <div className="card" style={{
-                    padding: '20px', borderRadius: '16px', border: '1px solid var(--border)',
+                    padding: '20px', borderRadius: '8px', border: '1.5px solid var(--border)',
                     background: 'var(--bg-card)', transition: 'all 0.2s ease', cursor: 'pointer',
                     position: 'relative', overflow: 'hidden', height: '100%',
+                    boxShadow: 'var(--shadow-card)',
                     display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
                   }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                      <span style={{ fontSize: '11px', fontWeight: 700, color: item.color, background: `${item.color}15`, padding: '4px 10px', borderRadius: '999px' }}>
+                      <span style={{ fontSize: '11px', fontWeight: 800, color: '#111827', background: '#FEF08A', border: '1px solid #1E1E1E', padding: '3px 8px', borderRadius: '4px' }}>
                         {item.badge}
                       </span>
                       <ArrowRight size={16} style={{ color: 'var(--text-muted)' }} />
@@ -214,11 +194,11 @@ export default function HomePage() {
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
 
         {/* ── 2. LIVE INTERACTIVE DEMO PLAYER ── */}
-        <section style={{ marginBottom: '80px', marginTop: '20px' }}>
+        <section style={{ marginBottom: '60px', marginTop: '30px' }}>
           <div className="card" style={{
-            padding: '32px', borderRadius: '24px', border: '1px solid var(--border)',
+            padding: '32px', borderRadius: '8px', border: '1.5px solid var(--border)',
             background: 'var(--bg-card)',
-            boxShadow: '0 12px 40px rgba(0,0,0,0.15)'
+            boxShadow: 'var(--shadow-card)'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
               <div>
@@ -227,15 +207,16 @@ export default function HomePage() {
               </div>
 
               {/* Language Switcher */}
-              <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-secondary)', padding: '4px', borderRadius: '10px', border: '1px solid var(--border)' }}>
+              <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-tertiary)', padding: '4px', borderRadius: '6px', border: '1px solid var(--border)' }}>
                 <button
                   onClick={() => setDemoLang('en')}
                   style={{
-                    padding: '6px 14px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+                    padding: '6px 14px', borderRadius: '4px', border: '1px solid var(--border)', cursor: 'pointer',
                     fontSize: '12px', fontWeight: 700,
-                    background: demoLang === 'en' ? 'var(--brand-orange)' : 'transparent',
-                    color: demoLang === 'en' ? 'white' : 'var(--text-secondary)',
-                    transition: 'all 0.2s'
+                    background: demoLang === 'en' ? '#111827' : 'transparent',
+                    color: demoLang === 'en' ? '#FFFFFF' : 'var(--text-secondary)',
+                    boxShadow: demoLang === 'en' ? '1px 1px 0px var(--border)' : 'none',
+                    transition: 'all 0.15s'
                   }}
                 >
                   🇬🇧 English
@@ -243,11 +224,12 @@ export default function HomePage() {
                 <button
                   onClick={() => setDemoLang('kn')}
                   style={{
-                    padding: '6px 14px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+                    padding: '6px 14px', borderRadius: '4px', border: '1px solid var(--border)', cursor: 'pointer',
                     fontSize: '12px', fontWeight: 700,
-                    background: demoLang === 'kn' ? 'var(--brand-orange)' : 'transparent',
-                    color: demoLang === 'kn' ? 'white' : 'var(--text-secondary)',
-                    transition: 'all 0.2s'
+                    background: demoLang === 'kn' ? '#111827' : 'transparent',
+                    color: demoLang === 'kn' ? '#FFFFFF' : 'var(--text-secondary)',
+                    boxShadow: demoLang === 'kn' ? '1px 1px 0px var(--border)' : 'none',
+                    transition: 'all 0.15s'
                   }}
                 >
                   🇮🇳 ಕನ್ನಡ
@@ -265,16 +247,16 @@ export default function HomePage() {
               {SAMPLE_QUESTION.options.map((opt) => {
                 const isSelected = demoSelected === opt.id;
                 const isCorrect = opt.id === SAMPLE_QUESTION.correct;
-                let borderStyle = '1px solid var(--border)';
+                let borderStyle = '1.5px solid var(--border)';
                 let bgStyle = 'var(--bg-card)';
 
                 if (isSelected) {
                   if (isCorrect) {
-                    borderStyle = '1px solid var(--accent-emerald)';
-                    bgStyle = 'rgba(16, 185, 129, 0.12)';
+                    borderStyle = '1.5px solid #16A34A';
+                    bgStyle = '#F0FDF4';
                   } else {
-                    borderStyle = '1px solid var(--accent-rose)';
-                    bgStyle = 'rgba(244, 63, 94, 0.12)';
+                    borderStyle = '1.5px solid #DC2626';
+                    bgStyle = '#FEF2F2';
                   }
                 }
 
@@ -283,22 +265,22 @@ export default function HomePage() {
                     key={opt.id}
                     onClick={() => setDemoSelected(opt.id)}
                     style={{
-                      padding: '14px 18px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
+                      padding: '14px 18px', borderRadius: '6px', cursor: 'pointer', textAlign: 'left',
                       border: borderStyle, background: bgStyle, color: 'var(--text-primary)',
-                      display: 'flex', alignItems: 'center', gap: '14px', transition: 'all 0.2s'
+                      display: 'flex', alignItems: 'center', gap: '14px', transition: 'all 0.2s',
+                      boxShadow: 'var(--shadow-sm)'
                     }}
                   >
                     <span style={{
-                      width: 32, height: 32, borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      fontSize: '13.5px', fontWeight: 800, flexShrink: 0,
-                      background: isSelected ? (isCorrect ? 'var(--accent-emerald)' : 'var(--accent-rose)') : 'var(--bg-tertiary)',
-                      color: isSelected ? 'white' : 'var(--text-primary)',
-                      border: isSelected ? 'none' : '1px solid var(--border)',
-                      boxShadow: '0 2px 6px rgba(0,0,0,0.06)'
+                      width: 30, height: 30, borderRadius: '4px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: '13px', fontWeight: 800, flexShrink: 0,
+                      background: isSelected ? (isCorrect ? '#16A34A' : '#DC2626') : 'var(--bg-tertiary)',
+                      color: isSelected ? '#FFFFFF' : 'var(--text-primary)',
+                      border: '1px solid var(--border)',
                     }}>
                       {opt.id.toUpperCase()}
                     </span>
-                    <div style={{ flex: 1, lineHeight: 1.6 }}>
+                    <div style={{ flex: 1, lineHeight: 1.6, fontSize: '13.5px' }}>
                       <OptionFormatter text={demoLang === 'kn' ? opt.text_kn : opt.text_en} />
                     </div>
                   </button>
@@ -309,12 +291,13 @@ export default function HomePage() {
             {/* AI Explanation Accordion */}
             {demoSelected && (
               <div style={{
-                padding: '16px', borderRadius: '14px',
-                background: demoSelected === SAMPLE_QUESTION.correct ? 'rgba(16, 185, 129, 0.1)' : 'rgba(217, 119, 6, 0.1)',
-                border: demoSelected === SAMPLE_QUESTION.correct ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid rgba(217, 119, 6, 0.3)',
+                padding: '16px', borderRadius: '6px',
+                background: demoSelected === SAMPLE_QUESTION.correct ? '#F0FDF4' : '#FFFBEB',
+                border: demoSelected === SAMPLE_QUESTION.correct ? '1.5px solid #16A34A' : '1.5px solid #F59E0B',
+                boxShadow: 'var(--shadow-sm)',
                 animation: 'fadeIn 0.3s ease'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 700, fontSize: '13px', color: demoSelected === SAMPLE_QUESTION.correct ? 'var(--accent-emerald)' : 'var(--brand-gold)', marginBottom: '8px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 800, fontSize: '13px', color: demoSelected === SAMPLE_QUESTION.correct ? '#16A34A' : '#B45309', marginBottom: '8px' }}>
                   <CheckCircle2 size={16} /> {demoSelected === SAMPLE_QUESTION.correct ? 'Correct Answer! (Option A)' : 'Explanation (Correct Answer: Option A)'}
                 </div>
                 <div style={{ fontSize: '13.5px', color: 'var(--text-primary)', lineHeight: 1.65 }}>
@@ -329,7 +312,7 @@ export default function HomePage() {
         <section style={{ marginBottom: '80px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '32px', flexWrap: 'wrap', gap: '12px' }}>
             <div>
-              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '12px', fontWeight: 600, color: 'var(--brand-orange)', background: 'rgba(37, 99, 235, 0.1)', border: '1px solid rgba(37, 99, 235, 0.2)', borderRadius: '999px', padding: '5px 14px', marginBottom: '12px' }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '11px', fontWeight: 800, color: '#111827', background: '#FEF08A', border: '1px solid #1E1E1E', borderRadius: '4px', padding: '4px 10px', marginBottom: '12px', boxShadow: '1px 1px 0px var(--border)' }}>
                 EXAM CATALOG
               </div>
               <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.5px' }}>
@@ -371,7 +354,7 @@ export default function HomePage() {
                           <span className="tag chip-sky">ಕನ್ನಡ</span>
                         )}
                       </div>
-                      <span style={{ color: 'var(--brand-orange)', fontSize: '12px', fontWeight: 700 }}>Start Test →</span>
+                      <span style={{ color: 'var(--brand-orange)', fontSize: '12px', fontWeight: 800 }}>Start Test →</span>
                     </div>
                   </div>
                 </Link>
@@ -383,7 +366,7 @@ export default function HomePage() {
         {/* ── 4. WHY MOCKIQ BENTO GRID ── */}
         <section style={{ marginBottom: '80px' }}>
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '12px', fontWeight: 600, color: 'var(--brand-teal)', background: 'rgba(13, 148, 136, 0.1)', border: '1px solid rgba(13, 148, 136, 0.2)', borderRadius: '999px', padding: '5px 14px', marginBottom: '16px' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '11px', fontWeight: 800, color: '#111827', background: '#FEF08A', border: '1px solid #1E1E1E', borderRadius: '4px', padding: '4px 10px', marginBottom: '16px', boxShadow: '1px 1px 0px var(--border)' }}>
               PLATFORM FEATURES
             </div>
             <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 36px)', fontWeight: 800, marginBottom: '12px', letterSpacing: '-0.5px' }}>
@@ -396,10 +379,11 @@ export default function HomePage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '16px' }}>
             {FEATURES.map((feature) => (
-              <div key={feature.title} className="card" style={{ padding: '28px', borderRadius: '16px' }}>
+              <div key={feature.title} className="card" style={{ padding: '24px', borderRadius: '8px', border: '1.5px solid var(--border)', boxShadow: 'var(--shadow-card)' }}>
                 <div style={{
-                  width: 48, height: 48, borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '22px', marginBottom: '16px', background: 'var(--bg-tertiary)'
+                  width: 44, height: 44, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '22px', marginBottom: '16px', background: 'var(--bg-tertiary)', border: '1px solid var(--border)',
+                  boxShadow: '1px 1px 0px var(--border)'
                 }}>
                   {feature.emoji}
                 </div>
