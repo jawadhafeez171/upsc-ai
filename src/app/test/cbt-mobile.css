@@ -1,0 +1,904 @@
+/* ==========================================================================
+   MOCKIQ CBT TERMINAL — DEDICATED MOBILE VIEW STYLESHEET
+   Matches exact reference mock for viewport <= 900px
+   ========================================================================== */
+
+/* ─── Visibility Utilities ─── */
+.cbt-desktop-only {
+    display: block;
+}
+
+.cbt-mobile-only {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .cbt-desktop-only {
+        display: none !important;
+    }
+
+    .cbt-mobile-only {
+        display: flex !important;
+        flex-direction: column;
+    }
+}
+
+/* ─── Mobile Canvas Container ─── */
+.cbt-mobile-container {
+    background-color: #F6F4EE;
+    min-height: 100vh;
+    padding-bottom: 84px; /* Space for fixed bottom action bar */
+    color: #1E1E1E;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ─── 1. Single Mobile Header ─── */
+.cbt-mobile-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: 56px;
+    background: #EFECE6;
+    border-bottom: 1.5px solid #1E1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    gap: 8px;
+}
+
+.cbt-mobile-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: -0.02em;
+}
+
+.cbt-mobile-logo-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    background: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: 1px solid #1D4ED8;
+}
+
+.cbt-mobile-timer {
+    background: #111827;
+    color: #EF4444;
+    padding: 4px 8px;
+    border-radius: 5px;
+    border: 1px solid #1E1E1E;
+    font-family: var(--cbt-font-mono, monospace);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.cbt-mobile-lang-chip {
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 5px;
+    padding: 3px 6px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #1E1E1E;
+    white-space: nowrap;
+}
+
+.cbt-mobile-palette-btn {
+    width: 36px;
+    height: 36px;
+    background: #FACC15;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E1E1E;
+    cursor: pointer;
+    box-shadow: 1px 1px 0px #1E1E1E;
+    flex-shrink: 0;
+    transition: transform 0.1s ease;
+}
+
+.cbt-mobile-palette-btn:active {
+    transform: scale(0.95);
+}
+
+.cbt-mobile-avatar-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #111827;
+    border: 1.5px solid #1E1E1E;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ─── 2. Sub-Toolstrip Row ─── */
+.cbt-mobile-substrip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    gap: 8px;
+    background: #F6F4EE;
+    flex-wrap: wrap;
+}
+
+.cbt-substrip-subject {
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 11.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #1E1E1E;
+}
+
+.cbt-substrip-neg {
+    background: #FEE2E2;
+    border: 1.5px solid #DC2626;
+    color: #DC2626;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 11.5px;
+    font-weight: 800;
+}
+
+.cbt-substrip-zoom {
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 5px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.cbt-substrip-progress {
+    background: #FACC15;
+    border: 1.5px solid #1E1E1E;
+    color: #1E1E1E;
+    border-radius: 5px;
+    padding: 4px 10px;
+    font-size: 11.5px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 1px 1px 0px #1E1E1E;
+}
+
+/* ─── 3. Filter Pills & Jump Navigator ─── */
+.cbt-mobile-jump-wrapper {
+    padding: 0 14px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cbt-mobile-filters-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cbt-mobile-filters-row::-webkit-scrollbar {
+    display: none;
+}
+
+.cbt-filter-pill {
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    border: 1.5px solid #1E1E1E;
+    background: #FFFFFF;
+    color: #1E1E1E;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cbt-filter-pill.active {
+    background: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.cbt-filter-next-unans {
+    margin-left: auto;
+    background: #FEE2E2;
+    border: 1.5px solid #DC2626;
+    color: #DC2626;
+    padding: 4px 10px;
+    border-radius: 14px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+/* Horizontal Jump Row */
+.cbt-mobile-jump-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cbt-jump-label {
+    font-size: 11px;
+    font-weight: 900;
+    color: #4B5563;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.cbt-jump-scroll {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 4px 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cbt-jump-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.cbt-jump-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1.5px solid #1E1E1E;
+    font-size: 13px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 1px 1px 0px #1E1E1E;
+    transition: transform 0.1s ease;
+}
+
+.cbt-jump-box:active {
+    transform: scale(0.92);
+}
+
+.cbt-jump-box.answered {
+    background: #16A34A;
+    color: #FFFFFF;
+}
+
+.cbt-jump-box.unanswered {
+    background: #DC2626;
+    color: #FFFFFF;
+}
+
+.cbt-jump-box.marked {
+    background: #7C3AED;
+    color: #FFFFFF;
+}
+
+.cbt-jump-box.ans_and_marked {
+    background: #7C3AED;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.cbt-jump-box.ans_and_marked::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid #22C55E;
+    border-left: 8px solid transparent;
+}
+
+.cbt-jump-box.not_visited {
+    background: #FFFFFF;
+    color: #4B5563;
+}
+
+.cbt-jump-box.active {
+    outline: 2.5px solid #FACC15;
+    outline-offset: 1px;
+}
+
+/* Scrub Navigation Bar */
+.cbt-mobile-scrub-bar {
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 6px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 1px 1px 0px #1E1E1E;
+}
+
+.cbt-scrub-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cbt-scrub-title {
+    font-size: 11px;
+    font-weight: 800;
+    color: #4B5563;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 0.04em;
+}
+
+.cbt-scrub-count-badge {
+    background: #1E1E1E;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 11px;
+    font-weight: 800;
+    font-family: var(--cbt-font-mono, monospace);
+}
+
+.cbt-scrub-slider-container {
+    position: relative;
+    width: 100%;
+    padding: 4px 0;
+}
+
+.cbt-scrub-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: #E5E7EB;
+    border: 1px solid #1E1E1E;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.cbt-scrub-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #1E1E1E;
+    border: 2px solid #FACC15;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cbt-scrub-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #1E1E1E;
+    border: 2px solid #FACC15;
+    cursor: pointer;
+}
+
+.cbt-scrub-ticks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #6B7280;
+    margin-top: 2px;
+}
+
+/* ─── 4. MCQ Question Meta Bar ─── */
+.cbt-mobile-mcq-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px 10px 14px;
+}
+
+.cbt-mcq-type-badge {
+    background: #1E1E1E;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cbt-mcq-marks-pill {
+    background: #F3F4F6;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #374151;
+}
+
+/* ─── 5. Question Main Card ─── */
+.cbt-mobile-card {
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 8px;
+    margin: 0 14px 14px 14px;
+    padding: 16px;
+    box-shadow: 2px 2px 0px #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cbt-card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cbt-question-title {
+    font-size: 15px;
+    font-weight: 900;
+    color: #111827;
+    letter-spacing: 0.02em;
+}
+
+.cbt-card-action-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cbt-icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    background: #F9FAFB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4B5563;
+    transition: all 0.15s ease;
+}
+
+.cbt-icon-btn:hover {
+    background: #F3F4F6;
+    color: #111827;
+}
+
+.cbt-icon-btn.active {
+    background: #FEF08A;
+    border-color: #EAB308;
+    color: #854D0E;
+}
+
+.cbt-question-prompt {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1F2937;
+    font-weight: 500;
+}
+
+.cbt-question-prompt strong {
+    font-weight: 800;
+    color: #111827;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Numbered Statement Boxes */
+.cbt-statement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cbt-statement-item {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #374151;
+}
+
+.cbt-statement-num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1E1E1E;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.cbt-sub-prompt {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Vernacular Accordion */
+.cbt-vernacular-toggle {
+    background: #FEF3C7;
+    border: 1.5px solid #F59E0B;
+    border-radius: 6px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: #92400E;
+}
+
+.cbt-vernacular-content {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #78350F;
+}
+
+/* ─── 6. Answer Options Section ─── */
+.cbt-options-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 14px 14px 14px;
+}
+
+.cbt-options-meta-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #6B7280;
+    letter-spacing: 0.05em;
+    padding: 0 2px;
+}
+
+.cbt-eliminate-hint {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cbt-option-row {
+    background: #FFFFFF;
+    border: 1.5px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.04);
+    transition: all 0.15s ease;
+}
+
+.cbt-option-row:hover {
+    border-color: #9CA3AF;
+}
+
+.cbt-option-row.selected {
+    border: 2px solid #1E1E1E;
+    box-shadow: 2px 2px 0px #1E1E1E;
+    background: #FAFAFA;
+}
+
+.cbt-option-row.eliminated {
+    opacity: 0.45;
+    background: #F3F4F6;
+    border-style: dashed;
+}
+
+.cbt-option-row.eliminated .cbt-option-text {
+    text-decoration: line-through;
+    color: #9CA3AF;
+}
+
+.cbt-option-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.cbt-option-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #F3F4F6;
+    border: 1px solid #D1D5DB;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.cbt-option-row.selected .cbt-option-badge {
+    background: #1E1E1E;
+    border-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.cbt-option-text {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1F2937;
+    line-height: 1.4;
+}
+
+.cbt-option-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.cbt-chosen-pill {
+    background: #1E1E1E;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 9.5px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+}
+
+.cbt-option-eliminate-btn {
+    background: none;
+    border: none;
+    color: #9CA3AF;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.cbt-option-eliminate-btn:hover {
+    color: #DC2626;
+    background: #FEE2E2;
+}
+
+/* ─── 7. Telemetry & Confidence Section ─── */
+.cbt-mobile-telemetry-row {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 6px;
+    margin: 0 14px 10px 14px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #4B5563;
+}
+
+.cbt-confidence-row {
+    background: #FFFFFF;
+    border: 1.5px solid #1E1E1E;
+    border-radius: 6px;
+    margin: 0 14px 14px 14px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 0px #1E1E1E;
+}
+
+.cbt-confidence-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cbt-confidence-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cbt-conf-btn {
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #D1D5DB;
+    background: #F9FAFB;
+    color: #4B5563;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cbt-conf-btn.active {
+    background: #1E1E1E;
+    border-color: #1E1E1E;
+    color: #FFFFFF;
+}
+
+/* ─── 8. Sticky Fixed 4-Button Bottom Bar ─── */
+.cbt-mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: #FFFFFF;
+    border-top: 1.5px solid #1E1E1E;
+    padding: 8px 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr 1.1fr;
+    gap: 6px;
+    z-index: 60;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.cbt-nav-btn {
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.1s ease;
+}
+
+.cbt-nav-btn:active {
+    transform: scale(0.96);
+}
+
+.cbt-nav-btn.review {
+    background: #FFFBEB;
+    border: 1.5px solid #F59E0B;
+    color: #92400E;
+}
+
+.cbt-nav-btn.clear {
+    background: #F3F4F6;
+    border: 1.5px solid #9CA3AF;
+    color: #374151;
+}
+
+.cbt-nav-btn.save-next {
+    background: #111827;
+    border: 1.5px solid #111827;
+    color: #FFFFFF;
+}
+
+.cbt-nav-btn.submit {
+    background: #DC2626;
+    border: 1.5px solid #DC2626;
+    color: #FFFFFF;
+}
+
+/* ─── 9. Mobile Question Palette Drawer (Bottom Sheet) ─── */
+.cbt-palette-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 100;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cbt-palette-drawer-content {
+    background: #FFFFFF;
+    border-top: 2px solid #1E1E1E;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: cbtDrawerSlideUp 0.25s ease-out;
+}
+
+@keyframes cbtDrawerSlideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.cbt-drawer-header {
+    padding: 14px 16px;
+    background: #F8F6F0;
+    border-bottom: 1.5px solid #1E1E1E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cbt-drawer-body {
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}

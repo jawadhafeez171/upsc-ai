@@ -8,6 +8,7 @@ import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
 import { isValidImageUrl } from '@/lib/imageUtils';
 import '@/app/test/cbt-terminal.css';
+import '@/app/test/cbt-mobile.css';
 import ExamHeader from '@/components/test/ExamHeader';
 import ExamSubHeader from '@/components/test/ExamSubHeader';
 import QuickNavigator, { QuestionState } from '@/components/test/QuickNavigator';
@@ -18,6 +19,12 @@ import QuestionPaletteSummary from '@/components/test/QuestionPaletteSummary';
 import QuestionPaletteGrid from '@/components/test/QuestionPaletteGrid';
 import ExamToolsCard from '@/components/test/ExamToolsCard';
 import { InstructionsModal, FullPaperModal, SubmitExamModal, ReportDiscrepancyModal } from '@/components/test/ExamModals';
+import MobileExamHeader from '@/components/test/MobileExamHeader';
+import MobileSubToolstrip from '@/components/test/MobileSubToolstrip';
+import MobileJumpNav from '@/components/test/MobileJumpNav';
+import MobileQuestionCard from '@/components/test/MobileQuestionCard';
+import MobileExamBottomNav from '@/components/test/MobileExamBottomNav';
+import MobilePaletteDrawer from '@/components/test/MobilePaletteDrawer';
 
 const CSAT_EN_PATTERNS = [
     /With reference to the above passage/i,
@@ -202,6 +209,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const [showFullPaper, setShowFullPaper] = useState(false);
     const [showSubmitModal, setShowSubmitModal] = useState(false);
     const [showDiscrepancy, setShowDiscrepancy] = useState(false);
+    const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
+    const [bookmarkedQuestions, setBookmarkedQuestions] = useState<Record<string, boolean>>({});
+    const [confidenceRatings, setConfidenceRatings] = useState<Record<string, 'low' | 'med' | 'high'>>({});
 
     useEffect(() => {
         if (activeSession?.config?.language) {
@@ -800,6 +810,14 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         router.push(`/results/${activeSession!.id}`);
     };
 
+    const handleToggleBookmark = (qId: string) => {
+        setBookmarkedQuestions(prev => ({ ...prev, [qId]: !prev[qId] }));
+    };
+
+    const handleSetConfidence = (qId: string, level: 'low' | 'med' | 'high') => {
+        setConfidenceRatings(prev => ({ ...prev, [qId]: level }));
+    };
+
     // Keyboard Shortcuts
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -887,112 +905,205 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
 
     return (
         <div className="cbt-terminal-wrapper">
-            {/* 1. Global Header Bar */}
-            <ExamHeader
-                examTitle={examTitle}
-                timeLeft={timeLeft}
-                activeLang={activeLang}
-                supportedLangs={supportedLangs}
-                onToggleLang={handleToggleLang}
-                onSubmitClick={() => setShowSubmitModal(true)}
-                candidateName={candidateName}
-            />
+            {/* ─── DESKTOP VIEW (> 900px) ─── */}
+            <div className="cbt-desktop-only">
+                {/* 1. Global Header Bar */}
+                <ExamHeader
+                    examTitle={examTitle}
+                    timeLeft={timeLeft}
+                    activeLang={activeLang}
+                    supportedLangs={supportedLangs}
+                    onToggleLang={handleToggleLang}
+                    onSubmitClick={() => setShowSubmitModal(true)}
+                    candidateName={candidateName}
+                />
 
-            {/* 2. Sub-Header Toolbar */}
-            <ExamSubHeader
-                currentIdx={currentIdx}
-                totalQuestions={questions.length}
-                subject={activeLang === 'kn' && question.subject_kannada ? question.subject_kannada : (question.subject || 'General Studies')}
-                subTopic={activeLang === 'kn' && question.sub_topic_kannada ? question.sub_topic_kannada : question.sub_topic}
-                positiveMarks={marking.positive}
-                negativeDeduction={marking.negative}
-                fontSizePercent={fontSizePercent}
-                onZoomIn={handleZoomIn}
-                onZoomOut={handleZoomOut}
-                onZoomReset={handleZoomReset}
-            />
+                {/* 2. Sub-Header Toolbar */}
+                <ExamSubHeader
+                    currentIdx={currentIdx}
+                    totalQuestions={questions.length}
+                    subject={activeLang === 'kn' && question.subject_kannada ? question.subject_kannada : (question.subject || 'General Studies')}
+                    subTopic={activeLang === 'kn' && question.sub_topic_kannada ? question.sub_topic_kannada : question.sub_topic}
+                    positiveMarks={marking.positive}
+                    negativeDeduction={marking.negative}
+                    fontSizePercent={fontSizePercent}
+                    onZoomIn={handleZoomIn}
+                    onZoomOut={handleZoomOut}
+                    onZoomReset={handleZoomReset}
+                />
 
-            {/* 3. Main CBT Canvas */}
-            <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '16px 20px' }}>
-                <div className="cbt-main-grid">
-                    {/* Left Column: Test Flow & Questions */}
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        {/* Quick Question Navigator with dynamic scrubber */}
-                        <QuickNavigator
-                            totalQuestions={questions.length}
-                            currentIdx={currentIdx}
-                            markedCount={markedReviewCount + ansAndReviewCount}
-                            unansweredCount={notAnsweredCount}
-                            questionStates={questionStates}
-                            onSelectQuestion={(idx) => setCurrentIdx(idx)}
-                            onJumpNextUnanswered={handleJumpNextUnanswered}
-                        />
+                {/* 3. Main CBT Canvas */}
+                <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '16px 20px' }}>
+                    <div className="cbt-main-grid">
+                        {/* Left Column: Test Flow & Questions */}
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            {/* Quick Question Navigator with dynamic scrubber */}
+                            <QuickNavigator
+                                totalQuestions={questions.length}
+                                currentIdx={currentIdx}
+                                markedCount={markedReviewCount + ansAndReviewCount}
+                                unansweredCount={notAnsweredCount}
+                                questionStates={questionStates}
+                                onSelectQuestion={(idx) => setCurrentIdx(idx)}
+                                onJumpNextUnanswered={handleJumpNextUnanswered}
+                            />
 
-                        {/* CBT Question Card with crisp statement boxes and elimination */}
-                        <CbtQuestionCard
-                            questionNumber={currentIdx + 1}
-                            question={question}
-                            activeLang={activeLang}
-                            supportedLangs={supportedLangs}
-                            onToggleLang={handleToggleLang}
-                            selectedOptionId={answers[question.id]?.selected}
-                            eliminatedOptionIds={eliminatedOptions[question.id] || {}}
-                            onSelectOption={handleSelectOption}
-                            onToggleEliminate={handleToggleEliminate}
-                            fontSizePercent={fontSizePercent}
-                            onReportDiscrepancy={() => setShowDiscrepancy(true)}
-                            onPreviewImage={(url) => setPreviewImage(url)}
-                        />
+                            {/* CBT Question Card with crisp statement boxes and elimination */}
+                            <CbtQuestionCard
+                                questionNumber={currentIdx + 1}
+                                question={question}
+                                activeLang={activeLang}
+                                supportedLangs={supportedLangs}
+                                onToggleLang={handleToggleLang}
+                                selectedOptionId={answers[question.id]?.selected}
+                                eliminatedOptionIds={eliminatedOptions[question.id] || {}}
+                                onSelectOption={handleSelectOption}
+                                onToggleEliminate={handleToggleEliminate}
+                                fontSizePercent={fontSizePercent}
+                                onReportDiscrepancy={() => setShowDiscrepancy(true)}
+                                onPreviewImage={(url) => setPreviewImage(url)}
+                            />
 
-                        {/* Bottom Action Bar */}
-                        <ExamBottomNav
-                            currentIdx={currentIdx}
-                            totalQuestions={questions.length}
-                            hasSelectedAnswer={!!answers[question.id]?.selected}
-                            isMarkedForReview={!!answers[question.id]?.marked_for_review}
-                            onPrev={() => setCurrentIdx(i => Math.max(0, i - 1))}
-                            onNext={handleSaveAndNext}
-                            onClearResponse={handleClearResponse}
-                            onToggleMarkAndNext={handleToggleMarkAndNext}
-                        />
-                    </div>
+                            {/* Bottom Action Bar */}
+                            <ExamBottomNav
+                                currentIdx={currentIdx}
+                                totalQuestions={questions.length}
+                                hasSelectedAnswer={!!answers[question.id]?.selected}
+                                isMarkedForReview={!!answers[question.id]?.marked_for_review}
+                                onPrev={() => setCurrentIdx(i => Math.max(0, i - 1))}
+                                onNext={handleSaveAndNext}
+                                onClearResponse={handleClearResponse}
+                                onToggleMarkAndNext={handleToggleMarkAndNext}
+                            />
+                        </div>
 
-                    {/* Right Column: Palette & Sidebar Tools */}
-                    <div style={{ display: 'flex', flexDirection: 'column' }}>
-                        {/* Candidate Information Card */}
-                        <CandidateInfoCard
-                            name={candidateName}
-                            candidateId={candidateId}
-                            targetExam={targetExam}
-                        />
+                        {/* Right Column: Palette & Sidebar Tools */}
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            {/* Candidate Information Card */}
+                            <CandidateInfoCard
+                                name={candidateName}
+                                candidateId={candidateId}
+                                targetExam={targetExam}
+                            />
 
-                        {/* Question Palette Summary (2x2 Matrix) */}
-                        <QuestionPaletteSummary
-                            total={questions.length}
-                            answered={answeredCount}
-                            notAnswered={notAnsweredCount}
-                            markedReview={markedReviewCount}
-                            ansAndReview={ansAndReviewCount}
-                            notVisited={notVisitedCount}
-                        />
+                            {/* Question Palette Summary (2x2 Matrix) */}
+                            <QuestionPaletteSummary
+                                total={questions.length}
+                                answered={answeredCount}
+                                notAnswered={notAnsweredCount}
+                                markedReview={markedReviewCount}
+                                ansAndReview={ansAndReviewCount}
+                                notVisited={notVisitedCount}
+                            />
 
-                        {/* 10-Column Question Palette Grid */}
-                        <QuestionPaletteGrid
-                            totalQuestions={questions.length}
-                            currentIdx={currentIdx}
-                            questionStates={questionStates}
-                            onSelectQuestion={(idx) => setCurrentIdx(idx)}
-                            paperTitle={paperTitle}
-                        />
+                            {/* 10-Column Question Palette Grid */}
+                            <QuestionPaletteGrid
+                                totalQuestions={questions.length}
+                                currentIdx={currentIdx}
+                                questionStates={questionStates}
+                                onSelectQuestion={(idx) => setCurrentIdx(idx)}
+                                paperTitle={paperTitle}
+                            />
 
-                        {/* Exam Tools Card */}
-                        <ExamToolsCard
-                            onOpenFullPaper={() => setShowFullPaper(true)}
-                            onOpenInstructions={() => setShowInstructions(true)}
-                            onSubmitExam={() => setShowSubmitModal(true)}
-                        />
+                            {/* Exam Tools Card */}
+                            <ExamToolsCard
+                                onOpenFullPaper={() => setShowFullPaper(true)}
+                                onOpenInstructions={() => setShowInstructions(true)}
+                                onSubmitExam={() => setShowSubmitModal(true)}
+                            />
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            {/* ─── MOBILE VIEW (<= 900px) ─── */}
+            <div className="cbt-mobile-only cbt-mobile-container">
+                {/* 1. Single Mobile Header (Logo, Timer, Q/Lang, Yellow Grid Button, Avatar) */}
+                <MobileExamHeader
+                    timeLeft={timeLeft}
+                    currentIdx={currentIdx}
+                    activeLang={activeLang}
+                    supportedLangs={supportedLangs}
+                    onToggleLang={handleToggleLang}
+                    onOpenPalette={() => setIsMobilePaletteOpen(true)}
+                    candidateName={candidateName}
+                />
+
+                {/* 2. Sub-Toolstrip: Subject, Neg marks, Zoom toggle, Answered badge */}
+                <MobileSubToolstrip
+                    subject={activeLang === 'kn' && question.subject_kannada ? question.subject_kannada : (question.subject || 'General Studies')}
+                    subTopic={activeLang === 'kn' && question.sub_topic_kannada ? question.sub_topic_kannada : question.sub_topic}
+                    negativeDeduction={marking.negative}
+                    fontSizePercent={fontSizePercent}
+                    onZoomIn={handleZoomIn}
+                    onZoomReset={handleZoomReset}
+                    answeredCount={answeredCount + ansAndReviewCount}
+                    totalQuestions={questions.length}
+                />
+
+                {/* 3. Filter pills, Horizontal Jump Squares & Scrubber */}
+                <MobileJumpNav
+                    totalQuestions={questions.length}
+                    currentIdx={currentIdx}
+                    questionStates={questionStates}
+                    onSelectQuestion={(idx) => setCurrentIdx(idx)}
+                    onJumpNextUnanswered={handleJumpNextUnanswered}
+                    markedCount={markedReviewCount + ansAndReviewCount}
+                    unansweredCount={notAnsweredCount}
+                />
+
+                {/* 4. Question Card (MCQ meta, TTS, Bookmark, Vernacular accordion, Strikethrough options, Telemetry, Confidence) */}
+                <MobileQuestionCard
+                    questionNumber={currentIdx + 1}
+                    question={question}
+                    activeLang={activeLang}
+                    positiveMarks={marking.positive}
+                    negativeDeduction={marking.negative}
+                    selectedOptionId={answers[question.id]?.selected}
+                    eliminatedOptionIds={eliminatedOptions[question.id] || {}}
+                    onSelectOption={handleSelectOption}
+                    onToggleEliminate={handleToggleEliminate}
+                    isBookmarked={!!bookmarkedQuestions[question.id]}
+                    onToggleBookmark={() => handleToggleBookmark(question.id)}
+                    confidence={confidenceRatings[question.id] || null}
+                    onSetConfidence={(lvl) => handleSetConfidence(question.id, lvl)}
+                    answeredCount={answeredCount + ansAndReviewCount}
+                    markedCount={markedReviewCount + ansAndReviewCount}
+                    totalQuestions={questions.length}
+                    onPreviewImage={(url) => setPreviewImage(url)}
+                />
+
+                {/* 5. Sticky Fixed 4-Button Bottom Bar */}
+                <MobileExamBottomNav
+                    isMarkedForReview={!!answers[question.id]?.marked_for_review}
+                    onToggleReview={handleToggleMarkAndNext}
+                    onClearResponse={handleClearResponse}
+                    onSaveAndNext={handleSaveAndNext}
+                    onSubmitExam={() => setShowSubmitModal(true)}
+                    isLastQuestion={currentIdx === questions.length - 1}
+                />
+
+                {/* 6. Slide-Up Question Palette Drawer */}
+                <MobilePaletteDrawer
+                    isOpen={isMobilePaletteOpen}
+                    onClose={() => setIsMobilePaletteOpen(false)}
+                    totalQuestions={questions.length}
+                    currentIdx={currentIdx}
+                    questionStates={questionStates}
+                    onSelectQuestion={(idx) => setCurrentIdx(idx)}
+                    candidateName={candidateName}
+                    candidateId={candidateId}
+                    targetExam={targetExam}
+                    paperTitle={paperTitle}
+                    answeredCount={answeredCount}
+                    notAnsweredCount={notAnsweredCount}
+                    markedReviewCount={markedReviewCount}
+                    ansAndReviewCount={ansAndReviewCount}
+                    notVisitedCount={notVisitedCount}
+                    onOpenFullPaper={() => setShowFullPaper(true)}
+                    onOpenInstructions={() => setShowInstructions(true)}
+                    onSubmitExam={() => setShowSubmitModal(true)}
+                />
             </div>
 
             {/* 4. Modals */}
