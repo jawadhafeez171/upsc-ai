@@ -74,6 +74,14 @@ const STREAM_DEFINITIONS: {
         description: 'General Kannada & General English Grammar, Syntax & Vocabulary for FDA, SDA, CTI, VAO & PSI'
     },
     {
+        id: 'epfo',
+        label: 'EPFO (EO/AO & APFC)',
+        icon: '⚖️',
+        badge: '81 Nodes · 6 Pillars',
+        color: '#1E3A8A',
+        description: 'Industrial Relations, Labour Laws, Social Security, Accounting, Auditing & Insurance'
+    },
+    {
         id: 'all',
         label: 'Unified Master Graph',
         icon: '🌐',
@@ -83,11 +91,12 @@ const STREAM_DEFINITIONS: {
     }
 ];
 
-type MainExamType = 'all' | 'upsc' | 'kas' | 'teaching' | 'karnataka_state' | 'police' | 'ssc';
+type MainExamType = 'all' | 'upsc' | 'epfo' | 'kas' | 'teaching' | 'karnataka_state' | 'police' | 'ssc';
 
 const MAIN_EXAM_TABS: { id: MainExamType; label: string; icon: string; streams: KnowledgeGraphStream[] }[] = [
-    { id: 'all', label: 'All Stream Knowledge', icon: '🌐', streams: ['civil_services', 'teaching', 'languages', 'all'] },
+    { id: 'all', label: 'All Stream Knowledge', icon: '🌐', streams: ['civil_services', 'epfo', 'teaching', 'languages', 'all'] },
     { id: 'upsc', label: 'UPSC CSE', icon: '🏛️', streams: ['civil_services', 'all'] },
+    { id: 'epfo', label: 'UPSC EPFO', icon: '⚖️', streams: ['epfo', 'all'] },
     { id: 'kas', label: 'KPSC KAS', icon: '🅺', streams: ['civil_services', 'all'] },
     { id: 'teaching', label: 'Teaching (TET/KSET/NET)', icon: '👩‍🏫', streams: ['teaching', 'all'] },
     { id: 'karnataka_state', label: 'Karnataka State (PDO/VAO/CTI)', icon: '🌾', streams: ['civil_services', 'languages', 'all'] },
@@ -105,6 +114,14 @@ const EXAM_SUB_FILTERS: Record<MainExamType, { id: string; label: string }[]> = 
         { id: 'Mains-GS2', label: 'Mains GS-2 (Governance, Constitution, Polity, IR)' },
         { id: 'Mains-GS3', label: 'Mains GS-3 (Economy, Env, S&T, Security, DM)' },
         { id: 'Mains-GS4', label: 'Mains GS-4 (Ethics, Integrity & Aptitude)' },
+    ],
+    epfo: [
+        { id: 'all_epfo', label: 'All EPFO Syllabus' },
+        { id: 'Labour-Laws', label: 'Industrial Relations & Labour Legislation' },
+        { id: 'Social-Security', label: 'Social Security & Insurance in India' },
+        { id: 'Accounting', label: 'General Accounting Principles & Auditing' },
+        { id: 'Statistics', label: 'Applied Statistics & Probability' },
+        { id: 'General-Studies', label: 'Freedom Struggle, Polity & Economy' },
     ],
     kas: [
         { id: 'all_kas', label: 'All KAS' },
@@ -217,6 +234,34 @@ export default function KnowledgeGraphPage() {
             if (!tags || tags.length === 0) return false;
             if (!subFilter || subFilter === 'all_upsc') return true;
             return tags.includes(subFilter);
+        }
+
+        if (selectedExam === 'epfo') {
+            const isEpfoSubject = [
+                'industrial_relations_labour_laws',
+                'social_security_in_india',
+                'general_accounting_principles',
+                'auditing',
+                'insurance',
+                'applied_statistics',
+                'language_proficiency_grammar_communication',
+                'indian_polity_constitution_governance',
+                'indian_economy_development',
+                'history',
+                'science_technology_defence',
+                'general_mental_ability_quantitative_aptitude_comprehension'
+            ].includes(node.subjectId);
+
+            if (!isEpfoSubject && !node.examTags.epfo && !node.examTags.upsc) return false;
+            if (!subFilter || subFilter === 'all_epfo') return true;
+
+            const textLow = `${node.name} ${node.description || ''} ${(node.entities || []).join(' ')}`.toLowerCase();
+            if (subFilter === 'Labour-Laws') return node.subjectId.includes('labour') || textLow.includes('labour') || textLow.includes('industrial') || textLow.includes('trade union');
+            if (subFilter === 'Social-Security') return node.subjectId.includes('social_security') || node.subjectId.includes('insurance') || textLow.includes('epf') || textLow.includes('esi') || textLow.includes('provident');
+            if (subFilter === 'Accounting') return node.subjectId.includes('accounting') || node.subjectId.includes('auditing') || textLow.includes('gaap') || textLow.includes('ledger') || textLow.includes('balance sheet');
+            if (subFilter === 'Statistics') return node.subjectId.includes('statistics') || textLow.includes('variance') || textLow.includes('central tendency');
+            if (subFilter === 'General-Studies') return node.subjectId.includes('polity') || node.subjectId.includes('economy') || node.subjectId.includes('history');
+            return true;
         }
 
         if (selectedExam === 'kas') {

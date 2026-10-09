@@ -25,8 +25,8 @@ export default function DashboardPage() {
                 data.forEach((e) => {
                     m[e.id] = {
                         name: e.title,
-                        icon: e.id.includes('upsc') ? '🏛️' : e.id.includes('kpsc') ? '🅺' : '📋',
-                        color: e.id.includes('upsc-cse') ? '#082C54' : e.id.includes('capf') ? '#0D5D56' : 'var(--brand-orange)',
+                        icon: e.id.includes('epfo') ? '⚖️' : e.id.includes('capf') ? '🎖️' : e.id.includes('upsc') ? '🏛️' : e.id.includes('kpsc') ? '🅺' : '📋',
+                        color: e.id.includes('upsc-cse') ? '#082C54' : e.id.includes('epfo') ? '#1E3A8A' : e.id.includes('capf') ? '#0D5D56' : 'var(--brand-orange)',
                     };
                 });
                 setExamsObj(m);

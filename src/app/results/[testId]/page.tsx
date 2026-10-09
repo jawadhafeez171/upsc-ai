@@ -148,7 +148,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
                             {/* Language switcher */}
                             {(() => {
-                                const isUpsc = session?.config?.exam_id === 'upsc-cse' || session?.config?.exam_id === 'upsc-capf';
+                                const isUpsc = session?.config?.exam_id === 'upsc-cse' || session?.config?.exam_id === 'upsc-capf' || session?.config?.exam_id === 'upsc-epfo';
                                 const isKarnataka = session?.config?.exam_id?.startsWith('kpsc') || session?.config?.exam_id?.startsWith('kea') || session?.config?.exam_id?.startsWith('ksp');
                                 if (!isUpsc && !isKarnataka) return null;
                                 const langOptions = isUpsc ? (['en', 'hi'] as const) : (['en', 'kn'] as const);

@@ -12,6 +12,7 @@ export interface ExamProjections {
     ugc_net?: string[];
     capf?: string[];
     cds?: string[];
+    epfo?: string[];
     [key: string]: string[] | undefined;
 }
 
