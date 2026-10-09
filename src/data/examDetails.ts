@@ -1510,6 +1510,126 @@ export const EXAM_DETAILS: Record<string, ExamInfo> = {
         faqs: [
             { question: 'Is KARTET or CTET required for GPSTR?', answer: 'Yes. Candidates must have qualified KARTET (Paper 2) or CTET (Paper 2) in the relevant stream to be eligible to apply for GPSTR recruitment.' }
         ]
+    },
+
+    'upsc-epfo': {
+        id: 'upsc-epfo',
+        slug: 'upsc-epfo',
+        title: 'UPSC EPFO (EO/AO & APFC)',
+        title_kn: 'ಯುಪಿಎಸ್‌ಸಿ ಇಪಿಎಫ್‌ಒ (ಇಒ/ಎಒ ಮತ್ತು ಎಪಿಎಫ್‌ಸಿ)',
+        shortName: 'UPSC EPFO',
+        conductingBody: 'Union Public Service Commission (UPSC)',
+        conductingBody_kn: 'ಕೇಂದ್ರ ಲೋಕಸೇವಾ ಆಯೋಗ',
+        tagline: 'Specialized central cadre recruitment for Enforcement Officer, Accounts Officer & Assistant Provident Fund Commissioner.',
+        category: 'upsc',
+        overview: 'The UPSC EPFO examination is a prestigious special recruitment test conducted by the Union Public Service Commission for appointing Enforcement Officers / Accounts Officers (EO/AO) and Assistant Provident Fund Commissioners (APFC) in the Employees’ Provident Fund Organisation under the Ministry of Labour and Employment.',
+        allocatedServices: [
+            {
+                serviceCode: 'APFC',
+                serviceName: 'Assistant Provident Fund Commissioner',
+                serviceName_kn: 'ಸಹಾಯಕ ಭವಿಷ್ಯ ನಿಧಿ ಆಯುಕ್ತ (ಎಪಿಎಫ್‌ಸಿ)',
+                group: 'Group A Central Service',
+                entryDesignation: 'Assistant Provident Fund Commissioner (APFC)',
+                department: 'Ministry of Labour & Employment / EPFO',
+                roleDescription: 'Quasi-judicial officer administering social security laws, holding inquiries under Section 7A of the EPF Act, managing regional office operations, and overseeing compliance and investment operations.',
+                careerApex: 'Central Provident Fund Commissioner (CPFC) / Additional CPFC'
+            },
+            {
+                serviceCode: 'EO/AO',
+                serviceName: 'Enforcement Officer / Accounts Officer',
+                serviceName_kn: 'ಜಾರಿ ಅಧಿಕಾರಿ / ಲೆಕ್ಕಪತ್ರ ಅಧಿಕಾರಿ (ಇಒ/ಎಒ)',
+                group: 'Group B Central Service',
+                entryDesignation: 'Enforcement Officer / Accounts Officer',
+                department: 'Ministry of Labour & Employment / EPFO',
+                roleDescription: 'Field inspections for statutory compliance, audit of employer contributions, recovery of dues, resolving worker grievances, and maintaining PF subscriber accounts.',
+                careerApex: 'Regional Provident Fund Commissioner (RPFC-I)'
+            }
+        ],
+        jobRole: {
+            designation: 'Enforcement Officer / Accounts Officer (EO/AO) & APFC',
+            designation_kn: 'ಜಾರಿ ಅಧಿಕಾರಿ / ಲೆಕ್ಕಪತ್ರ ಅಧಿಕಾರಿ & ಸಹಾಯಕ ಭವಿಷ್ಯ ನಿಧಿ ಆಯುಕ್ತ',
+            cadre: 'Central Labour Services / EPFO Cadre',
+            department: 'Ministry of Labour & Employment',
+            department_kn: 'ಕೇಂದ್ರ ಕಾರ್ಮಿಕ ಮತ್ತು ಉದ್ಯೋಗ ಸಚಿವಾಲಯ',
+            keyResponsibilities: [
+                'Enforcement and statutory compliance under the EPF & MP Act, 1952',
+                'Quasi-judicial inquiries and dispute resolution under Section 7A and 14B',
+                'Auditing enterprise accounts, maintenance of subscriber ledgers and claims',
+                'Implementation of social security benefits, pensions, and insurance schemes'
+            ],
+            careerProgression: [
+                'Enforcement Officer / Accounts Officer (Level 8)',
+                'Assistant Provident Fund Commissioner (Level 10)',
+                'Regional PF Commissioner-II (Level 11)',
+                'Regional PF Commissioner-I (Level 12)',
+                'Additional Central PF Commissioner (Level 13)'
+            ],
+            postingLocations: 'EPFO Head Office (New Delhi), Zonal Offices, and 140+ Regional/District Offices across India',
+            payScale: {
+                level: 'Level 8 (EO/AO: ₹47,600 - ₹1,51,100) | Level 10 (APFC: ₹56,100 - ₹1,77,500)',
+                basicPayRange: '₹47,600 – ₹1,77,500',
+                approxMonthlyGross: '₹85,000 to ₹1,05,000+ (with DA, HRA, and Central Perks)',
+                perks: ['Central Government Health Scheme (CGHS)', 'Leave Travel Concession (LTC)', 'Government Accommodation / HRA', 'Central NPS Benefits']
+            }
+        },
+        eligibility: {
+            ageLimit: {
+                general: 'Up to 30 years (EO/AO) | Up to 35 years (APFC)',
+                obc: 'Up to 33 years (EO/AO) | Up to 38 years (APFC)',
+                sc_st: 'Up to 35 years (EO/AO) | Up to 40 years (APFC)'
+            },
+            educationalQualification: 'Bachelor’s degree in any discipline from a recognized University. Desirable: Law / Management / CA / CS.'
+        },
+        stages: [
+            {
+                stageNumber: 1,
+                stageName: 'Recruitment Test (RT)',
+                mode: 'Objective (CBT/OMR)',
+                totalMarks: 300,
+                durationMinutes: 120,
+                description: 'Objective multiple-choice examination carrying 75% weightage in final merit.',
+                papers: [
+                    {
+                        paperName: 'Recruitment Test (General Ability Test)',
+                        marks: 300,
+                        durationMinutes: 120,
+                        negativeMarking: '0.33 mark deduction',
+                        subjects: [
+                            'General English',
+                            'Indian Freedom Struggle',
+                            'Current Events & Developmental Issues',
+                            'Indian Polity & Economy',
+                            'General Accounting Principles',
+                            'Industrial Relations & Labour Laws',
+                            'Social Security in India',
+                            'General Science & Knowledge of Computer Applications',
+                            'General Mental Ability & Quantitative Aptitude',
+                            'Applied Statistics',
+                            'Auditing & Insurance'
+                        ]
+                    }
+                ]
+            },
+            {
+                stageNumber: 2,
+                stageName: 'Interview / Personality Test',
+                mode: 'Interview / Viva Voce',
+                totalMarks: 100,
+                durationMinutes: 30,
+                description: 'Conducted at UPSC Headquarters, Dholpur House, New Delhi (25% weightage in final merit).',
+                papers: []
+            }
+        ],
+        syllabusFocus: [
+            { pillarName: 'Industrial Relations & Labour Laws', weightage: 'Very High', topics: ['Trade Unions Act 1926', 'Industrial Disputes Act 1947', 'Factories Act 1948', 'Four New Labour Codes 2019-2020', 'ILO Conventions'] },
+            { pillarName: 'General Accounting & Auditing', weightage: 'Very High', topics: ['Accounting Concepts & GAAP', 'Final Accounts & Balance Sheet', 'Depreciation & Inventory', 'Company Accounts', 'Auditing Principles & Vouching'] },
+            { pillarName: 'Social Security & Insurance', weightage: 'Very High', topics: ['EPF Act 1952', 'ESI Act 1948', 'Gratuity Act 1972', 'Maternity Benefit Act', 'Code on Social Security 2020', 'Insurance Principles & IRDAI'] },
+            { pillarName: 'General English & Mental Ability', weightage: 'High', topics: ['Spotting Errors', 'Vocabulary & Idioms', 'Sentence Rearrangement', 'Quantitative Aptitude', 'Applied Statistics Basics'] }
+        ],
+        faqs: [
+            { question: 'What is the role of an APFC in EPFO?', answer: 'An Assistant Provident Fund Commissioner (APFC) is a Group A officer who exercises quasi-judicial powers to summon records, conduct hearings under Section 7A of the EPF Act, assess dues from establishments, and supervise administrative and finance operations.' },
+            { question: 'What is the weightage between the Recruitment Test and Interview?', answer: 'The final merit is calculated on a 75:25 ratio — 75% weightage for the Objective Recruitment Test (RT) and 25% weightage for the Interview.' }
+        ]
     }
 };
 

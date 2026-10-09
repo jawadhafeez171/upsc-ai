@@ -1,6 +1,7 @@
 import civilServicesGraphRaw from '@/data/knowledge_graph_civil_services.json';
 import teachingGraphRaw from '@/data/knowledge_graph_teaching.json';
 import languagesGraphRaw from '@/data/knowledge_graph_languages.json';
+import epfoGraphRaw from '@/data/knowledge_graph_epfo.json';
 import masterGraphRaw from '@/data/knowledge_graph.json';
 import { KnowledgeGraphData, KnowledgeGraphStream, KnowledgeNode, KnowledgeNodeLevel } from '@/types/knowledgeGraph';
 
@@ -8,6 +9,7 @@ const GRAPHS: Record<KnowledgeGraphStream, KnowledgeGraphData> = {
     civil_services: civilServicesGraphRaw as unknown as KnowledgeGraphData,
     teaching: teachingGraphRaw as unknown as KnowledgeGraphData,
     languages: languagesGraphRaw as unknown as KnowledgeGraphData,
+    epfo: epfoGraphRaw as unknown as KnowledgeGraphData,
     all: masterGraphRaw as unknown as KnowledgeGraphData
 };
 

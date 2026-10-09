@@ -960,6 +960,140 @@ export function getExamMindMap(examId: string): MindMapNode {
             };
 
         // ═══════════════════════════════════════════════════════════════
+        // 6. UPSC EPFO (EO/AO & APFC) OFFICIAL SYLLABUS
+        // ═══════════════════════════════════════════════════════════════
+        case 'upsc-epfo':
+            return {
+                id: 'epfo-root',
+                label: 'UPSC EPFO (EO/AO & APFC) Examination',
+                label_kn: 'ಯುಪಿಎಸ್‌ಸಿ ಇಪಿಎಫ್‌ಒ (ಇಒ/ಎಒ & ಎಪಿಎಫ್‌ಸಿ) ಪರೀಕ್ಷೆ',
+                category: 'exam',
+                color: '#1E3A8A',
+                children: [
+                    {
+                        id: 'epfo-rt',
+                        label: 'Stage 1: Recruitment Test (RT) (Objective 300 Marks - 120 MCQs)',
+                        label_kn: 'ಹಂತ ೧: ನೇಮಕಾತಿ ಪರೀಕ್ಷೆ (ಆಬ್ಜೆಕ್ಟಿವ್ ೩೦೦ ಅಂಕಗಳು)',
+                        category: 'stage',
+                        color: '#2563EB',
+                        children: [
+                            {
+                                id: 'epfo-rt-paper',
+                                label: 'Recruitment Test: General Ability Test (GAT)',
+                                label_kn: 'ಸಾಮಾನ್ಯ ಸಾಮರ್ಥ್ಯ ಪರೀಕ್ಷೆ',
+                                category: 'paper',
+                                badge: '120 Qs · 300 Marks (2 Hours)',
+                                weightage: 'Very High',
+                                color: '#0D9488',
+                                children: [
+                                    {
+                                        id: 'epfo-rt-lang',
+                                        label: 'General English & Language Proficiency',
+                                        label_kn: 'ಸಾಮಾನ್ಯ ಇಂಗ್ಲಿಷ್ & ಭಾಷಾ ಪ್ರಾವೀಣ್ಯತೆ',
+                                        category: 'domain',
+                                        weightage: 'Very High',
+                                        description: 'Spotting errors, sentence rearrangement, idioms & phrases, prepositions, active/passive voice, and vocabulary.',
+                                        entities: ['Idioms & Phrasal Verbs', 'Spotting Errors & Tenses', 'Prepositions & Articles', 'Sentence Rearrangement (Para Jumbles)', 'Vocabulary (Antonyms & Synonyms)', 'One-Word Substitutions']
+                                    },
+                                    {
+                                        id: 'epfo-rt-labour',
+                                        label: 'Industrial Relations & Labour Legislation',
+                                        label_kn: 'ಕೈಗಾರಿಕಾ ಸಂಬಂಧಗಳು & ಕಾರ್ಮಿಕ ಕಾಯ್ದೆಗಳು',
+                                        category: 'domain',
+                                        weightage: 'Very High',
+                                        description: 'Trade unionism, collective bargaining, statutory dispute resolution machinery, and the four New Labour Codes.',
+                                        entities: ['Trade Unions Act 1926', 'Industrial Disputes Act 1947 (Strikes, Lockouts, Retrenchment)', 'Factories Act 1948', 'Code on Wages 2019', 'Occupational Safety, Health & Working Conditions Code 2020', 'Industrial Relations Code 2020', 'ILO Conventions & Tripartism']
+                                    },
+                                    {
+                                        id: 'epfo-rt-social-sec',
+                                        label: 'Social Security in India & Insurance Principles',
+                                        label_kn: 'ಭಾರತದಲ್ಲಿ ಸಾಮಾಜಿಕ ಭದ್ರತೆ & ವಿಮಾ ತತ್ವಗಳು',
+                                        category: 'domain',
+                                        weightage: 'Very High',
+                                        description: 'Statutory provident fund schemes, pensions, maternity benefits, unorganized workers, and insurance mechanisms.',
+                                        entities: ['Employees’ Provident Funds Act 1952 (Section 7A, 14B, EDLI, EPS-95)', 'Employees’ State Insurance (ESI) Act 1948', 'Payment of Gratuity Act 1972', 'Maternity Benefit Act 1961', 'Code on Social Security 2020', 'Unorganised Workers Social Security Act 2008', 'Insurance Principles (Utmost Good Faith, Insurable Interest, Indemnity, IRDAI)']
+                                    },
+                                    {
+                                        id: 'epfo-rt-accounting',
+                                        label: 'General Accounting Principles & Auditing',
+                                        label_kn: 'ಸಾಮಾನ್ಯ ಲೆಕ್ಕಪತ್ರ ತತ್ವಗಳು & ಆಡಿಟಿಂಗ್',
+                                        category: 'domain',
+                                        weightage: 'Very High',
+                                        description: 'Fundamental accounting concepts, GAAP, depreciation, company accounts, trial balances, and auditing verification.',
+                                        entities: ['Accounting Concepts & Conventions (Accrual, Going Concern, Conservatism)', 'Journal Entries, Subsidiary Books & Ledgers', 'Trial Balance & Rectification of Errors', 'Depreciation Methods (SLM, WDV)', 'Final Accounts (Trading, P&L, Balance Sheet)', 'Company Accounts & Share Forfeiture', 'Auditing Principles, Internal Check & Vouching']
+                                    },
+                                    {
+                                        id: 'epfo-rt-history',
+                                        label: 'Indian Freedom Struggle & Modern National Movement',
+                                        label_kn: 'ಭಾರತೀಯ ಸ್ವಾತಂತ್ರ್ಯ ಚಳವಳಿ & ಇತಿಹಾಸ',
+                                        category: 'domain',
+                                        weightage: 'High',
+                                        description: 'Revolts against colonial rule, socio-religious reforms, Gandhian phases, revolutionary movements, and independence.',
+                                        entities: ['1857 Revolt & Early Resistance', 'Socio-Religious Reform Movements', 'Formation of INC & Swadeshi Movement 1905', 'Gandhian Mass Movements (Non-Cooperation, Civil Disobedience, Quit India)', 'Revolutionary Movement (INA, Bose, Bhagat Singh)', 'Constitutional Acts (1909, 1919, 1935) & Partition 1947']
+                                    },
+                                    {
+                                        id: 'epfo-rt-polity',
+                                        label: 'Indian Polity, Governance & Constitution',
+                                        label_kn: 'ಭಾರತ ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ',
+                                        category: 'domain',
+                                        weightage: 'Very High',
+                                        description: 'Constitutional organs, fundamental rights, directive principles, judiciary, tribunals, and administrative machinery.',
+                                        entities: ['Preamble, Fundamental Rights (Articles 12-35) & DPSP', 'Parliament & Union Executive (President, PM, Council)', 'Supreme Court & High Courts (Judicial Review & Writs)', 'Quasi-Judicial Bodies & Tribunals (CGIT, EPFAT)', 'Emergency Provisions & Constitutional Amendments', 'Panchayati Raj & Decentralization']
+                                    },
+                                    {
+                                        id: 'epfo-rt-economy',
+                                        label: 'Indian Economy & Current Developmental Issues',
+                                        label_kn: 'ಭಾರತೀಯ ಅರ್ಥವ್ಯವಸ್ಥೆ & ಅಭಿವೃದ್ಧಿ ವಿಷಯಗಳು',
+                                        category: 'domain',
+                                        weightage: 'Very High',
+                                        description: 'Macroeconomics, national income, fiscal/monetary policies, banking, international trade, and social welfare programs.',
+                                        entities: ['National Income (GDP, GVA, Per Capita Income)', 'Fiscal Policy, Union Budget & GST Mechanism', 'Monetary Policy & RBI Tools (Repo, CRR, Inflation Targeting)', 'Banking Sector Reforms (IBC 2016, NPAs)', 'Foreign Trade, Balance of Payments & WTO', 'Poverty, Demographic Dividend & Welfare Schemes']
+                                    },
+                                    {
+                                        id: 'epfo-rt-quant-stats',
+                                        label: 'Quantitative Aptitude, Reasoning & Applied Statistics',
+                                        label_kn: 'ಗಣಿತ, ತಾರ್ಕಿಕ ಸಾಮರ್ಥ್ಯ & ಅನ್ವಯಿಕ ಸಂಖ್ಯಾಶಾಸ್ತ್ರ',
+                                        category: 'domain',
+                                        weightage: 'Very High',
+                                        description: 'Arithmetic, logical puzzles, syllogisms, and statistical measures of central tendency and dispersion.',
+                                        entities: ['Number Systems, LCM & HCF', 'Percentages, Profit & Loss, Ratio & Proportion', 'Time, Work & Distance', 'Logical Reasoning, Coding-Decoding & Syllogisms', 'Measures of Central Tendency (Mean, Median, Mode)', 'Measures of Dispersion (Variance, Standard Deviation, Skewness)', 'Probability & Sampling Techniques']
+                                    },
+                                    {
+                                        id: 'epfo-rt-sci-comp',
+                                        label: 'General Science & Computer Applications',
+                                        label_kn: 'ಸಾಮಾನ್ಯ ವಿಜ್ಞಾನ & ಕಂಪ್ಯೂಟರ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು',
+                                        category: 'domain',
+                                        weightage: 'High',
+                                        description: 'Foundational physics/chemistry/biology and digital computer concepts, networking, and governance portals.',
+                                        entities: ['Human Biology, Pathogens & Nutrition', 'Physics & Chemistry in Everyday Life', 'Computer Hardware, CPU, Cache & Memory (RAM/ROM)', 'Operating Systems & Networking (TCP/IP, LAN, WAN)', 'Cybersecurity & Data Privacy (Malware, Phishing, Encryption)', 'Digital Governance & Shram Suvidha / Universal Account Number (UAN)']
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        id: 'epfo-interview',
+                        label: 'Stage 2: Interview / Personality Test (100 Marks)',
+                        label_kn: 'ಹಂತ ೨: ಸಂದರ್ಶನ / ವ್ಯಕ್ತಿತ್ವ ಪರೀಕ್ಷೆ (೧೦೦ ಅಂಕಗಳು)',
+                        category: 'stage',
+                        color: '#DC2626',
+                        children: [
+                            {
+                                id: 'epfo-interview-board',
+                                label: 'UPSC Board Interview (Dholpur House, New Delhi)',
+                                label_kn: 'ಯುಪಿಎಸ್‌ಸಿ ಸಂದರ್ಶನ ಮಂಡಳಿ',
+                                category: 'domain',
+                                badge: '25% Weightage in Final Merit',
+                                weightage: 'Very High',
+                                description: 'Evaluating administrative acumen, situational leadership, labor legislation interpretation, and problem-solving.',
+                                entities: ['Detailed Application Form (DAF) Profiling', 'Administrative Ethics & Decision Making', 'Quasi-Judicial Inquiry Scenarios (Section 7A Hearings)', 'Labor Relations Crisis Containment', 'Current National & Economic Events']
+                            }
+                        ]
+                    }
+                ]
+            };
+
+        // ═══════════════════════════════════════════════════════════════
         // DEFAULT FALLBACK
         // ═══════════════════════════════════════════════════════════════
         default:

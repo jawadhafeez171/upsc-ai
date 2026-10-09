@@ -78,19 +78,20 @@ export default function HomePage() {
   // Demo Question State
   const [demoSelected, setDemoSelected] = useState<string | null>(null);
   const [demoLang, setDemoLang] = useState<'en' | 'kn'>('en');
-  const [totalQuestions, setTotalQuestions] = useState<number>(7466);
+  const [totalQuestions, setTotalQuestions] = useState<number>(8526);
 
   useEffect(() => {
     async function fetchTotalQuestions() {
       try {
-        const [q1, q2, q3, q4, q5] = await Promise.all([
+        const [q1, q2, q3, q4, q5, q6] = await Promise.all([
           supabase.from('upsc_questions').select('id', { count: 'exact', head: true }),
           supabase.from('csat_pyq').select('id', { count: 'exact', head: true }),
           supabase.from('kas_questions').select('id', { count: 'exact', head: true }),
           supabase.from('pc_pyq').select('id', { count: 'exact', head: true }),
-          supabase.from('capf_pyq').select('id', { count: 'exact', head: true })
+          supabase.from('capf_pyq').select('id', { count: 'exact', head: true }),
+          supabase.from('epfo_pyq').select('id', { count: 'exact', head: true })
         ]);
-        const sum = (q1.count || 3321) + (q2.count || 1120) + (q3.count || 1200) + (q4.count || 200) + (q5.count || 1625);
+        const sum = (q1.count || 3321) + (q2.count || 1120) + (q3.count || 1200) + (q4.count || 200) + (q5.count || 1625) + (q6.count || 1060);
         setTotalQuestions(sum);
       } catch (e) {
         console.error('Error fetching question count:', e);

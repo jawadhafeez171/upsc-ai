@@ -430,6 +430,45 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         console.error('Local JSON fallback error for upsc-capf:', e);
                     }
                 }
+            } else if (config.exam_id === 'upsc-epfo') {
+                let query = supabase.from('epfo_pyq').select('*');
+                if (config.paper_code && config.paper_code !== 'all') {
+                    query = query.eq('paper_code', config.paper_code);
+                }
+                if (config.year && config.year !== 'all') {
+                    query = query.eq('year', config.year);
+                }
+                if (config.mode === 'subject' && config.subject) {
+                    query = query.or(`subject.eq."${config.subject}",subject_hindi.eq."${config.subject}"`);
+                }
+                if (config.difficulty && config.difficulty !== 'mixed') {
+                    query = query.eq('difficulty', config.difficulty);
+                }
+                const { data, error: epfoErr } = await query;
+                if (!epfoErr && data && data.length > 0) {
+                    selectedRawQuestions = data;
+                } else {
+                    // Fallback to local JSON file if offline or network failure
+                    try {
+                        const epfoMod = await import('@/data/epfo/epfo-all-papers.json');
+                        let pool: any[] = epfoMod.default || epfoMod;
+                        if (config.paper_code && config.paper_code !== 'all') {
+                            pool = pool.filter((q: any) => q.paper_code === config.paper_code);
+                        }
+                        if (config.year && config.year !== 'all') {
+                            pool = pool.filter((q: any) => q.year === Number(config.year));
+                        }
+                        if (config.mode === 'subject' && config.subject) {
+                            pool = pool.filter((q: any) => q.subject === config.subject || q.subject_hindi === config.subject);
+                        }
+                        if (config.difficulty && config.difficulty !== 'mixed') {
+                            pool = pool.filter((q: any) => q.difficulty === config.difficulty);
+                        }
+                        selectedRawQuestions = pool;
+                    } catch (e) {
+                        console.error('Local JSON fallback error for upsc-epfo:', e);
+                    }
+                }
             } else if (config.exam_id === 'kpsc-kas') {
                 let query = supabase.from('kas_questions').select('*');
                 if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
@@ -464,6 +503,12 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 } else if (config.exam_id === 'upsc-cse' && config.paper === 2) {
                     // CSAT: preserve the groupPreservingShuffle and sorted order
                     sortedQuestions = selectedRawQuestions;
+                } else if (config.exam_id === 'upsc-epfo') {
+                    if (config.mode === 'yearwise' || (config.year && config.year !== 'all') || (config.paper_code && config.paper_code !== 'all')) {
+                        sortedQuestions = [...selectedRawQuestions].sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
+                    } else {
+                        sortedQuestions = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
+                    }
                 } else if (config.exam_id === 'kpsc-kas') {
                     sortedQuestions.sort((a, b) => {
                         const numA = parseInt(a.id.match(/-q(\d+)$/)?.[1] || '0', 10);
@@ -486,7 +531,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
 
                 const formattedQs: Question[] = sortedQuestions.map((dbq) => {
                     // Police Constable (PC) CAR/DAR Question Format (from pc_pyq or JSON)
-                    if (dbq.option_1_english || dbq.paper_code || dbq.exam_id === 'ksp-pc') {
+                    if (dbq.option_1_english || dbq.exam_id === 'ksp-pc') {
                         const optionsList = [
                             { id: '1', text: dbq.option_1_english || '', text_kn: dbq.option_1_kannada || undefined },
                             { id: '2', text: dbq.option_2_english || '', text_kn: dbq.option_2_kannada || undefined },

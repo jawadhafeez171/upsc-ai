@@ -38,6 +38,18 @@ export const EXAMS: Exam[] = [
         color: '#B83E11',
         badge: 'Armed Forces'
     },
+    {
+        id: 'upsc-epfo',
+        name: 'UPSC EPFO (EO/AO & APFC)',
+        category: 'upsc',
+        description: 'Employees’ Provident Fund Organisation — Enforcement Officer, Accounts Officer & APFC',
+        languages: ['en', 'hi'],
+        negative_marking: 0.33,
+        subjects: ['Language Proficiency, Grammar & Communication (general Kannada & General English)', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'History', 'Science, Technology & Defence', 'Industrial Relations & Labour Laws', 'General Accounting Principles', 'Social Security in India', 'Applied Statistics', 'Auditing', 'Insurance'],
+        icon: '⚖️',
+        color: '#1E3A8A',
+        badge: 'EO/AO & APFC'
+    },
 
     // --- 2. KARNATAKA STATE GOVERNMENT EXAMINATIONS ---
     {

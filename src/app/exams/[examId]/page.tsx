@@ -41,7 +41,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
     const [paper, setPaper] = useState<number | 'all'>('all');
-    const [paperCode, setPaperCode] = useState<'all' | 'hk' | 'nhk'>('all');
+    const [paperCode, setPaperCode] = useState<'all' | 'hk' | 'nhk' | 'eoao' | 'apfc' | 'eoao-apfc' | string>('all');
     const [month, setMonth] = useState<string | 'all'>('all');
     const [count, setCount] = useState(25);
     const [customCount, setCustomCount] = useState('');
@@ -120,6 +120,21 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     } else {
                         qCount = year === 'all' ? 1625 : 125;
                     }
+                } else if (examId === 'upsc-epfo') {
+                    let query = supabase.from('epfo_pyq').select('id', { count: 'exact', head: true });
+                    if (paperCode !== 'all') query = query.eq('paper_code', paperCode);
+                    if (mode === 'subject' && subject) {
+                        query = query.or(`subject.eq."${subject}",subject_hindi.eq."${subject}"`);
+                    }
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                    if (year !== 'all') query = query.eq('year', year);
+
+                    const { count: epfoCount, error: epfoErr } = await query;
+                    if (!epfoErr && epfoCount !== null) {
+                        qCount = epfoCount;
+                    } else {
+                        qCount = year === 'all' ? 1060 : (year === 2012 ? 100 : 120);
+                    }
                 } else if (examId === 'ksp-pc') {
                     let query = supabase.from('pc_pyq').select('id', { count: 'exact', head: true });
                     if (paperCode !== 'all') query = query.eq('paper_code', paperCode);
@@ -185,10 +200,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             difficulty,
             question_count: finalCount,
             language: testLang,
-            year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' ? year : examId === 'ksp-pc' ? 2026 : undefined,
-            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : (examId === 'upsc-capf' ? 1 : undefined),
+            year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' ? year : examId === 'ksp-pc' ? 2026 : undefined,
+            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : ((examId === 'upsc-capf' || examId === 'upsc-epfo') ? 1 : undefined),
             month: examId === 'kpsc-kas' ? month : examId === 'ksp-pc' ? 'September' : undefined,
-            paper_code: examId === 'ksp-pc' ? paperCode : undefined
+            paper_code: examId === 'ksp-pc' || examId === 'upsc-epfo' ? paperCode : undefined
         };
 
         const sessionId = `session_${Date.now()}`;
@@ -481,7 +496,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             )}
 
                             {/* Year-Wise & Paper-Wise Filters */}
-                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf') && (
+                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo') && (
                                 <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                     {/* Paper Selector */}
                                     <div>
@@ -489,50 +504,109 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                             <span>📄 SELECT EXAM PAPER:</span>
                                         </label>
                                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                            <button
-                                                onClick={() => setPaper('all')}
-                                                style={{
-                                                    padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                    fontSize: '12.5px', fontWeight: 700,
-                                                    background: paper === 'all' ? '#2563EB' : 'var(--bg-primary)',
-                                                    color: paper === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: paper === 'all' ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                    transition: 'all 0.15s'
-                                                }}
-                                            >
-                                                {examId === 'upsc-capf' ? 'All Papers (13 Years — 1,625 Qs)' : 'All Papers (Combined)'}
-                                            </button>
-                                            <button
-                                                onClick={() => setPaper(1)}
-                                                style={{
-                                                    padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                    fontSize: '12.5px', fontWeight: 700,
-                                                    background: paper === 1 ? '#2563EB' : 'var(--bg-primary)',
-                                                    color: paper === 1 ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: paper === 1 ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                    transition: 'all 0.15s'
-                                                }}
-                                            >
-                                                {examId === 'upsc-capf' 
-                                                    ? 'Paper 1: General Ability & Intelligence (125 Qs / 250 Marks)' 
-                                                    : examId === 'upsc-cse' 
-                                                        ? 'Paper 1: General Studies (GS-1)' 
-                                                        : 'Paper 1: General Studies & Humanities'}
-                                            </button>
-                                            {examId !== 'upsc-capf' && (
-                                                <button
-                                                    onClick={() => setPaper(2)}
-                                                    style={{
-                                                        padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                        fontSize: '12.5px', fontWeight: 700,
-                                                        background: paper === 2 ? '#2563EB' : 'var(--bg-primary)',
-                                                        color: paper === 2 ? '#FFFFFF' : 'var(--text-secondary)',
-                                                        border: paper === 2 ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                        transition: 'all 0.15s'
-                                                    }}
-                                                >
-                                                    {examId === 'upsc-cse' ? 'Paper 2: CSAT / Aptitude' : 'Paper 2: Science & Tech, Environment & GMA'}
-                                                </button>
+                                            {examId === 'upsc-epfo' ? (
+                                                <>
+                                                    <button
+                                                        onClick={() => setPaperCode('all')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'all' ? '#2563EB' : 'var(--bg-primary)',
+                                                            color: paperCode === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'all' ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        All Papers (9 Papers — 1,060 Qs)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('eoao')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'eoao' ? '#2563EB' : 'var(--bg-primary)',
+                                                            color: paperCode === 'eoao' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'eoao' ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        EO/AO Papers (360 Qs)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('apfc')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'apfc' ? '#2563EB' : 'var(--bg-primary)',
+                                                            color: paperCode === 'apfc' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'apfc' ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        APFC Papers (580 Qs)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('eoao-apfc')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'eoao-apfc' ? '#2563EB' : 'var(--bg-primary)',
+                                                            color: paperCode === 'eoao-apfc' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'eoao-apfc' ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        Combined EO/AO & APFC (2025 Paper — 120 Qs)
+                                                    </button>
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <button
+                                                        onClick={() => setPaper('all')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paper === 'all' ? '#2563EB' : 'var(--bg-primary)',
+                                                            color: paper === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paper === 'all' ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        {examId === 'upsc-capf' ? 'All Papers (13 Years — 1,625 Qs)' : 'All Papers (Combined)'}
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaper(1)}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paper === 1 ? '#2563EB' : 'var(--bg-primary)',
+                                                            color: paper === 1 ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paper === 1 ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        {examId === 'upsc-capf' 
+                                                            ? 'Paper 1: General Ability & Intelligence (125 Qs / 250 Marks)' 
+                                                            : examId === 'upsc-cse' 
+                                                                ? 'Paper 1: General Studies (GS-1)' 
+                                                                : 'Paper 1: General Studies & Humanities'}
+                                                    </button>
+                                                    {examId !== 'upsc-capf' && (
+                                                        <button
+                                                            onClick={() => setPaper(2)}
+                                                            style={{
+                                                                padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                                fontSize: '12.5px', fontWeight: 700,
+                                                                background: paper === 2 ? '#2563EB' : 'var(--bg-primary)',
+                                                                color: paper === 2 ? '#FFFFFF' : 'var(--text-secondary)',
+                                                                border: paper === 2 ? '1px solid #2563EB' : '1px solid var(--border)',
+                                                                transition: 'all 0.15s'
+                                                            }}
+                                                        >
+                                                            {examId === 'upsc-cse' ? 'Paper 2: CSAT / Aptitude' : 'Paper 2: Science & Tech, Environment & GMA'}
+                                                        </button>
+                                                    )}
+                                                </>
                                             )}
                                         </div>
                                     </div>
@@ -555,13 +629,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     transition: 'all 0.15s'
                                                 }}
                                             >
-                                                {examId === 'upsc-capf' ? 'All Years (2014–2026)' : 'All Years (2011–2024)'}
+                                                {examId === 'upsc-capf' ? 'All Years (2014–2026)' : examId === 'upsc-epfo' ? 'All Years (2002–2025 — 1,060 Qs)' : 'All Years (2011–2024)'}
                                             </button>
                                             {(examId === 'upsc-capf'
                                                 ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
-                                                : examId === 'kpsc-kas' 
-                                                    ? [2024, 2020, 2017, 2015, 2011]
-                                                    : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
+                                                : examId === 'upsc-epfo'
+                                                    ? [2025, 2023, 2021, 2017, 2016, 2012, 2004, 2002]
+                                                    : examId === 'kpsc-kas' 
+                                                        ? [2024, 2020, 2017, 2015, 2011]
+                                                        : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
                                             ).map((yr) => {
                                                 const isSelected = year === yr;
                                                 return (
@@ -791,9 +867,11 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '24px' }}>
                                 {(examId === 'upsc-capf' 
                                     ? [...QUESTION_COUNTS, 125] 
-                                    : availableQs >= 200 
-                                        ? [...QUESTION_COUNTS, 200] 
-                                        : QUESTION_COUNTS
+                                    : examId === 'upsc-epfo'
+                                        ? [...QUESTION_COUNTS, 120]
+                                        : availableQs >= 200 
+                                            ? [...QUESTION_COUNTS, 200] 
+                                            : QUESTION_COUNTS
                                 ).map((c) => (
                                     <button
                                         key={c}
@@ -806,7 +884,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                             border: count === c && !customCount ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
                                         }}
                                     >
-                                        {c} Qs {c === 125 && examId === 'upsc-capf' ? '(Full Paper)' : c === 100 && availableQs === 100 ? '(Full Paper)' : c === 200 ? '(Full Exam)' : ''}
+                                        {c} Qs {c === 125 && examId === 'upsc-capf' ? '(Full Paper)' : c === 120 && examId === 'upsc-epfo' ? '(Full Paper)' : c === 100 && availableQs === 100 ? '(Full Paper)' : c === 200 ? '(Full Exam)' : ''}
                                     </button>
                                 ))}
                             </div>

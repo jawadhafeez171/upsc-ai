@@ -56,11 +56,13 @@ def main():
     cs_graph = json.load(open('src/data/knowledge_graph_civil_services.json', encoding='utf-8'))
     teaching_graph = json.load(open('src/data/knowledge_graph_teaching.json', encoding='utf-8'))
     lang_graph = json.load(open('src/data/knowledge_graph_languages.json', encoding='utf-8'))
+    epfo_graph = json.load(open('src/data/knowledge_graph_epfo.json', encoding='utf-8'))
     unified_graph = json.load(open('src/data/knowledge_graph.json', encoding='utf-8'))
 
     print(f"Loaded CS: {len(cs_graph['nodes'])} nodes")
     print(f"Loaded Teaching: {len(teaching_graph['nodes'])} nodes")
     print(f"Loaded Languages: {len(lang_graph['nodes'])} nodes")
+    print(f"Loaded EPFO: {len(epfo_graph['nodes'])} nodes")
     print(f"Loaded Master Unified: {len(unified_graph['nodes'])} nodes")
 
     # 2. Build consolidated node record map with stream tags
@@ -87,7 +89,16 @@ def main():
             record = format_node_record(node, 'languages')
             nodes_payload[nid] = record
 
-    # Master Unified check to ensure all 815 nodes are present
+    # EPFO nodes
+    for nid, node in epfo_graph['nodes'].items():
+        if nid in nodes_payload:
+            if 'epfo' not in nodes_payload[nid]['streams']:
+                nodes_payload[nid]['streams'].append('epfo')
+        else:
+            record = format_node_record(node, 'epfo')
+            nodes_payload[nid] = record
+
+    # Master Unified check to ensure all nodes are present
     for nid, node in unified_graph['nodes'].items():
         if nid not in nodes_payload:
             record = format_node_record(node, 'civil_services')
@@ -129,12 +140,21 @@ def main():
 
     # 4. Upsert Knowledge Graph Meta records
     endpoint_meta = f"{supabase_url}/rest/v1/knowledge_graph_meta?on_conflict=id"
+    
+    # Collect all root subject ids for current unified graph
+    current_roots = list(dict.fromkeys(
+        unified_graph.get("rootSubjectIds", []) + epfo_graph.get("rootSubjectIds", [])
+    ))
+    
     meta_records = [
         {
             "id": "current",
-            "version": unified_graph.get("version", "2.0.0"),
-            "root_subject_ids": unified_graph.get("rootSubjectIds", []),
-            "stats": unified_graph.get("stats", {})
+            "version": unified_graph.get("version", "2.5.0"),
+            "root_subject_ids": current_roots,
+            "stats": {
+                "totalNodes": len(all_nodes_list),
+                "epfoNodes": len(epfo_graph['nodes'])
+            }
         },
         {
             "id": "civil_services",
@@ -153,12 +173,18 @@ def main():
             "version": lang_graph.get("version", "2.0.0"),
             "root_subject_ids": lang_graph.get("rootSubjectIds", []),
             "stats": lang_graph.get("stats", {})
+        },
+        {
+            "id": "epfo",
+            "version": epfo_graph.get("version", "1.0.0"),
+            "root_subject_ids": epfo_graph.get("rootSubjectIds", []),
+            "stats": epfo_graph.get("stats", {})
         }
     ]
 
     try:
         make_request(endpoint_meta, supabase_key, method='POST', body=meta_records, prefer='resolution=merge-duplicates')
-        print("Successfully updated knowledge_graph_meta entries for all 4 streams.")
+        print("Successfully updated knowledge_graph_meta entries for all 5 streams.")
     except Exception as e:
         print(f"Error updating knowledge_graph_meta: {e}")
 

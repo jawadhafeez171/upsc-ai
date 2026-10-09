@@ -84,7 +84,7 @@ export interface TestConfig {
     year?: number | 'all';
     paper?: number | 'all';
     month?: string | 'all';
-    paper_code?: 'hk' | 'nhk' | 'all';
+    paper_code?: 'hk' | 'nhk' | 'apfc' | 'eoao' | 'eoao-apfc' | 'all' | string;
 }
 
 export interface TestAnswer {

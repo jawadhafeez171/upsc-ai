@@ -58,7 +58,7 @@ export interface KnowledgeGraphStats {
     };
 }
 
-export type KnowledgeGraphStream = 'civil_services' | 'teaching' | 'languages' | 'all';
+export type KnowledgeGraphStream = 'civil_services' | 'teaching' | 'languages' | 'epfo' | 'all';
 
 export interface KnowledgeGraphData {
     version: string;

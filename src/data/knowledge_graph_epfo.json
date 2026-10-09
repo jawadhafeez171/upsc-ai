@@ -1,0 +1,2542 @@
+{
+    "version": "1.0.0",
+    "name": "UPSC EPFO Specialized Knowledge Graph (Industrial Relations, Labour Laws, Accounting, Auditing, Insurance, Social Security, Statistics)",
+    "generatedAt": "2026-10-09",
+    "rootSubjectIds": [
+        "industrial_relations_and_labour_laws",
+        "general_accounting_principles",
+        "auditing",
+        "insurance",
+        "social_security_in_india",
+        "applied_statistics"
+    ],
+    "nodes": {
+        "industrial_relations_and_labour_laws.industrial_relations.theories_and_approaches_of_industrial_relations": {
+            "id": "industrial_relations_and_labour_laws.industrial_relations.theories_and_approaches_of_industrial_relations",
+            "slug": "theories_and_approaches_of_industrial_relations",
+            "name": "Theories and Approaches of Industrial Relations",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.industrial_relations",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.industrial_relations"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Unitary",
+                "Pluralist",
+                "Marxist",
+                "Dunlop Systems Approach",
+                "Human Relations",
+                "Psychological Approach"
+            ]
+        },
+        "industrial_relations_and_labour_laws.industrial_relations.trade_unions_and_collective_bargaining": {
+            "id": "industrial_relations_and_labour_laws.industrial_relations.trade_unions_and_collective_bargaining",
+            "slug": "trade_unions_and_collective_bargaining",
+            "name": "Trade Unions & Collective Bargaining",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.industrial_relations",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.industrial_relations"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Trade Union Movement in India",
+                "Registration",
+                "Recognition",
+                "Collective Bargaining Process",
+                "Levels of Bargaining",
+                "AITUC",
+                "INTUC",
+                "BMS"
+            ]
+        },
+        "industrial_relations_and_labour_laws.industrial_relations.industrial_disputes_and_adjudication": {
+            "id": "industrial_relations_and_labour_laws.industrial_relations.industrial_disputes_and_adjudication",
+            "slug": "industrial_disputes_and_adjudication",
+            "name": "Industrial Disputes, Settlement & Adjudication Machinery",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.industrial_relations",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.industrial_relations"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Strikes",
+                "Lockouts",
+                "Lay-off",
+                "Retrenchment",
+                "Closure",
+                "Works Committee",
+                "Conciliation",
+                "Board of Conciliation",
+                "Labour Court",
+                "Industrial Tribunal",
+                "National Tribunal",
+                "Arbitration"
+            ]
+        },
+        "industrial_relations_and_labour_laws.industrial_relations.workers_participation_in_management": {
+            "id": "industrial_relations_and_labour_laws.industrial_relations.workers_participation_in_management",
+            "slug": "workers_participation_in_management",
+            "name": "Workers' Participation in Management (WPM)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.industrial_relations",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.industrial_relations"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Article 43A",
+                "Joint Management Councils",
+                "Shop Councils",
+                "Plant Councils",
+                "Board-level Participation",
+                "Quality Circles"
+            ]
+        },
+        "industrial_relations_and_labour_laws.industrial_relations.tripartism_and_ilo": {
+            "id": "industrial_relations_and_labour_laws.industrial_relations.tripartism_and_ilo",
+            "slug": "tripartism_and_ilo",
+            "name": "Tripartism, Indian Labour Conference & ILO Conventions",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.industrial_relations",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.industrial_relations"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Tripartite Bodies",
+                "Indian Labour Conference",
+                "Standing Labour Committee",
+                "ILO Conventions",
+                "Declaration on Fundamental Principles and Rights at Work"
+            ]
+        },
+        "industrial_relations_and_labour_laws.industrial_relations": {
+            "id": "industrial_relations_and_labour_laws.industrial_relations",
+            "slug": "industrial_relations",
+            "name": "Industrial Relations & Trade Unionism",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws",
+            "childrenIds": [
+                "industrial_relations_and_labour_laws.industrial_relations.theories_and_approaches_of_industrial_relations",
+                "industrial_relations_and_labour_laws.industrial_relations.trade_unions_and_collective_bargaining",
+                "industrial_relations_and_labour_laws.industrial_relations.industrial_disputes_and_adjudication",
+                "industrial_relations_and_labour_laws.industrial_relations.workers_participation_in_management",
+                "industrial_relations_and_labour_laws.industrial_relations.tripartism_and_ilo"
+            ],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "INDUSTRIAL RELATIONS & TRADE UNIONISM"
+            ]
+        },
+        "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.trade_unions_act_1926": {
+            "id": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.trade_unions_act_1926",
+            "slug": "trade_unions_act_1926",
+            "name": "The Trade Unions Act, 1926",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Registration of Trade Unions",
+                "Minimum Membership",
+                "Rights and Liabilities",
+                "Civil Immunity",
+                "Criminal Conspiracy Protection",
+                "General Fund",
+                "Political Fund"
+            ]
+        },
+        "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.industrial_disputes_act_1947": {
+            "id": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.industrial_disputes_act_1947",
+            "slug": "industrial_disputes_act_1947",
+            "name": "The Industrial Disputes Act, 1947",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Definition of Workman",
+                "Public Utility Services",
+                "Notice of Strike",
+                "Illegal Strikes and Lockouts",
+                "Lay-off Compensation",
+                "Retrenchment Conditions",
+                "Chapter V-B",
+                "Unfair Labour Practices"
+            ]
+        },
+        "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.factories_act_1948": {
+            "id": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.factories_act_1948",
+            "slug": "factories_act_1948",
+            "name": "The Factories Act, 1948",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Definition of Factory",
+                "Manufacturing Process",
+                "Health Provisions",
+                "Safety Provisions",
+                "Welfare Provisions",
+                "Working Hours for Adults",
+                "Overtime Wages",
+                "Annual Leave with Wages",
+                "Adolescent Worker",
+                "Employment of Women and Young Persons"
+            ]
+        },
+        "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.wages_legislation_acts": {
+            "id": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.wages_legislation_acts",
+            "slug": "wages_legislation_acts",
+            "name": "Wages Legislation (Minimum Wages Act 1948 & Payment of Wages Act 1936)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Minimum Rates of Wages",
+                "Scheduled Employment",
+                "Advisory Board",
+                "Deductions from Wages",
+                "Wage Period",
+                "Mode of Payment",
+                "Time of Payment",
+                "Payment of Bonus Act 1965"
+            ]
+        },
+        "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.contract_and_migrant_labour_acts": {
+            "id": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.contract_and_migrant_labour_acts",
+            "slug": "contract_and_migrant_labour_acts",
+            "name": "Contract Labour Act 1970 & Inter-State Migrant Workmen Act 1979",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Contract Labour Regulation and Abolition Act 1970",
+                "Principal Employer Liability",
+                "Licensing of Contractors",
+                "Inter-State Migrant Workmen Act 1979",
+                "Displacement Allowance",
+                "Journey Allowance"
+            ]
+        },
+        "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.special_category_labour_acts": {
+            "id": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.special_category_labour_acts",
+            "slug": "special_category_labour_acts",
+            "name": "Child Labour, Mines Act & Specific Sector Labour Acts",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Child and Adolescent Labour Prohibition Act 1986",
+                "Hazardous Occupations",
+                "Mines Act 1952",
+                "Plantations Labour Act 1951",
+                "BOCW Act 1996"
+            ]
+        },
+        "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts": {
+            "id": "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+            "slug": "labour_legislation_and_historic_acts",
+            "name": "Labour Legislation & Historic Labour Acts",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws",
+            "childrenIds": [
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.trade_unions_act_1926",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.industrial_disputes_act_1947",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.factories_act_1948",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.wages_legislation_acts",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.contract_and_migrant_labour_acts",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts.special_category_labour_acts"
+            ],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "LABOUR LEGISLATION & HISTORIC LABOUR ACTS"
+            ]
+        },
+        "industrial_relations_and_labour_laws.new_labour_codes.code_on_wages_2019": {
+            "id": "industrial_relations_and_labour_laws.new_labour_codes.code_on_wages_2019",
+            "slug": "code_on_wages_2019",
+            "name": "The Code on Wages, 2019",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.new_labour_codes",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.new_labour_codes"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Universal Minimum Wage",
+                "National Floor Level Minimum Wage",
+                "Uniform Definition of Wages",
+                "Gender Equality in Remuneration",
+                "Amalgamation of 4 Wage Acts"
+            ]
+        },
+        "industrial_relations_and_labour_laws.new_labour_codes.industrial_relations_code_2020": {
+            "id": "industrial_relations_and_labour_laws.new_labour_codes.industrial_relations_code_2020",
+            "slug": "industrial_relations_code_2020",
+            "name": "The Industrial Relations Code, 2020",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.new_labour_codes",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.new_labour_codes"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Standing Orders Threshold",
+                "Mandatory 14 Days Strike Notice",
+                "Sole Negotiating Union",
+                "Negotiating Council",
+                "Fixed Term Employment",
+                "Worker Reskilling Fund"
+            ]
+        },
+        "industrial_relations_and_labour_laws.new_labour_codes.occupational_safety_health_working_conditions_code_2020": {
+            "id": "industrial_relations_and_labour_laws.new_labour_codes.occupational_safety_health_working_conditions_code_2020",
+            "slug": "occupational_safety_health_working_conditions_code_2020",
+            "name": "OSH & Working Conditions Code, 2020",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws.new_labour_codes",
+            "childrenIds": [],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws",
+                "industrial_relations_and_labour_laws.new_labour_codes"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "National OSH Board",
+                "Duties of Employer",
+                "Annual Health Check-up",
+                "Women Working at Night",
+                "Inter-State Migrant Worker Welfare"
+            ]
+        },
+        "industrial_relations_and_labour_laws.new_labour_codes": {
+            "id": "industrial_relations_and_labour_laws.new_labour_codes",
+            "slug": "new_labour_codes",
+            "name": "The Four New Labour Codes",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": "industrial_relations_and_labour_laws",
+            "childrenIds": [
+                "industrial_relations_and_labour_laws.new_labour_codes.code_on_wages_2019",
+                "industrial_relations_and_labour_laws.new_labour_codes.industrial_relations_code_2020",
+                "industrial_relations_and_labour_laws.new_labour_codes.occupational_safety_health_working_conditions_code_2020"
+            ],
+            "ancestorIds": [
+                "industrial_relations_and_labour_laws"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "THE FOUR NEW LABOUR CODES"
+            ]
+        },
+        "industrial_relations_and_labour_laws": {
+            "id": "industrial_relations_and_labour_laws",
+            "slug": "industrial_relations_and_labour_laws",
+            "name": "Industrial Relations & Labour Laws",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "INDUSTRIAL_RELATIONS_AND_LABOUR_LAWS",
+            "subjectId": "industrial_relations_and_labour_laws",
+            "parentId": null,
+            "childrenIds": [
+                "industrial_relations_and_labour_laws.industrial_relations",
+                "industrial_relations_and_labour_laws.labour_legislation_and_historic_acts",
+                "industrial_relations_and_labour_laws.new_labour_codes"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "INDUSTRIAL RELATIONS & LABOUR LAWS"
+            ]
+        },
+        "general_accounting_principles.accounting_framework_and_concepts.nature_scope_and_objectives_of_accounting": {
+            "id": "general_accounting_principles.accounting_framework_and_concepts.nature_scope_and_objectives_of_accounting",
+            "slug": "nature_scope_and_objectives_of_accounting",
+            "name": "Nature, Scope and Objectives of Accounting",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.accounting_framework_and_concepts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.accounting_framework_and_concepts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Book-keeping vs Accounting",
+                "Financial Accounting",
+                "Cost Accounting",
+                "Management Accounting",
+                "Users of Accounting Information",
+                "Qualitative Characteristics"
+            ]
+        },
+        "general_accounting_principles.accounting_framework_and_concepts.accounting_concepts_principles_and_conventions": {
+            "id": "general_accounting_principles.accounting_framework_and_concepts.accounting_concepts_principles_and_conventions",
+            "slug": "accounting_concepts_principles_and_conventions",
+            "name": "Accounting Concepts, Principles & Conventions (GAAP)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.accounting_framework_and_concepts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.accounting_framework_and_concepts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Business Entity Concept",
+                "Going Concern",
+                "Money Measurement",
+                "Accounting Period",
+                "Dual Aspect",
+                "Accrual Basis",
+                "Matching Principle",
+                "Realisation / Revenue Recognition",
+                "Prudence / Conservatism",
+                "Materiality",
+                "Consistency",
+                "Historical Cost"
+            ]
+        },
+        "general_accounting_principles.accounting_framework_and_concepts.accounting_standards_and_ind_as": {
+            "id": "general_accounting_principles.accounting_framework_and_concepts.accounting_standards_and_ind_as",
+            "slug": "accounting_standards_and_ind_as",
+            "name": "Accounting Standards & Ind AS Framework",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.accounting_framework_and_concepts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.accounting_framework_and_concepts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Accounting Standards Board",
+                "ICAI",
+                "Convergence with IFRS",
+                "Ind AS",
+                "AS 1 Disclosure of Accounting Policies",
+                "AS 2 Valuation of Inventories",
+                "AS 3 Cash Flow Statements",
+                "AS 9 Revenue Recognition",
+                "AS 10 Property Plant Equipment"
+            ]
+        },
+        "general_accounting_principles.accounting_framework_and_concepts": {
+            "id": "general_accounting_principles.accounting_framework_and_concepts",
+            "slug": "accounting_framework_and_concepts",
+            "name": "Accounting Framework, Concepts & Standards",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles",
+            "childrenIds": [
+                "general_accounting_principles.accounting_framework_and_concepts.nature_scope_and_objectives_of_accounting",
+                "general_accounting_principles.accounting_framework_and_concepts.accounting_concepts_principles_and_conventions",
+                "general_accounting_principles.accounting_framework_and_concepts.accounting_standards_and_ind_as"
+            ],
+            "ancestorIds": [
+                "general_accounting_principles"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "ACCOUNTING FRAMEWORK, CONCEPTS & STANDARDS"
+            ]
+        },
+        "general_accounting_principles.accounting_process_and_books.double_entry_system_and_journal": {
+            "id": "general_accounting_principles.accounting_process_and_books.double_entry_system_and_journal",
+            "slug": "double_entry_system_and_journal",
+            "name": "Double Entry System & Recording Transactions (Journal)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.accounting_process_and_books",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.accounting_process_and_books"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Rules of Debit and Credit",
+                "Personal Accounts",
+                "Real Accounts",
+                "Nominal Accounts",
+                "Compound Journal Entries",
+                "Source Documents",
+                "Vouchers"
+            ]
+        },
+        "general_accounting_principles.accounting_process_and_books.ledger_posting_and_subdivision_of_journal": {
+            "id": "general_accounting_principles.accounting_process_and_books.ledger_posting_and_subdivision_of_journal",
+            "slug": "ledger_posting_and_subdivision_of_journal",
+            "name": "Ledger Accounts, Subsidiary Books & Cash Book",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.accounting_process_and_books",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.accounting_process_and_books"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Posting to Ledger",
+                "Balancing of Accounts",
+                "Purchase Day Book",
+                "Sales Day Book",
+                "Returns Inward and Outward",
+                "Single Column Cash Book",
+                "Two Column Cash Book",
+                "Three Column Cash Book",
+                "Petty Cash Book",
+                "Imprest System"
+            ]
+        },
+        "general_accounting_principles.accounting_process_and_books.bank_reconciliation_statement": {
+            "id": "general_accounting_principles.accounting_process_and_books.bank_reconciliation_statement",
+            "slug": "bank_reconciliation_statement",
+            "name": "Bank Reconciliation Statement (BRS)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.accounting_process_and_books",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.accounting_process_and_books"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Causes of Difference",
+                "Cheques Issued but Not Presented",
+                "Cheques Deposited but Not Cleared",
+                "Direct Debits and Credits by Bank",
+                "Amended Cash Book",
+                "Bank Overdraft BRS"
+            ]
+        },
+        "general_accounting_principles.accounting_process_and_books.trial_balance_and_rectification_of_errors": {
+            "id": "general_accounting_principles.accounting_process_and_books.trial_balance_and_rectification_of_errors",
+            "slug": "trial_balance_and_rectification_of_errors",
+            "name": "Trial Balance & Rectification of Errors",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.accounting_process_and_books",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.accounting_process_and_books"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Objectives of Trial Balance",
+                "Errors Disclosed by Trial Balance",
+                "Errors Not Disclosed",
+                "Errors of Omission",
+                "Errors of Commission",
+                "Errors of Principle",
+                "Compensating Errors",
+                "Suspense Account",
+                "Rectification Entries"
+            ]
+        },
+        "general_accounting_principles.accounting_process_and_books": {
+            "id": "general_accounting_principles.accounting_process_and_books",
+            "slug": "accounting_process_and_books",
+            "name": "Accounting Process, Books of Accounts & Trial Balance",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles",
+            "childrenIds": [
+                "general_accounting_principles.accounting_process_and_books.double_entry_system_and_journal",
+                "general_accounting_principles.accounting_process_and_books.ledger_posting_and_subdivision_of_journal",
+                "general_accounting_principles.accounting_process_and_books.bank_reconciliation_statement",
+                "general_accounting_principles.accounting_process_and_books.trial_balance_and_rectification_of_errors"
+            ],
+            "ancestorIds": [
+                "general_accounting_principles"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "ACCOUNTING PROCESS, BOOKS OF ACCOUNTS & TRIAL BALANCE"
+            ]
+        },
+        "general_accounting_principles.financial_statements_and_adjustments.capital_and_revenue_expenditure_and_receipts": {
+            "id": "general_accounting_principles.financial_statements_and_adjustments.capital_and_revenue_expenditure_and_receipts",
+            "slug": "capital_and_revenue_expenditure_and_receipts",
+            "name": "Capital vs Revenue Expenditure & Receipts",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.financial_statements_and_adjustments",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.financial_statements_and_adjustments"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Capital Expenditure",
+                "Revenue Expenditure",
+                "Deferred Revenue Expenditure",
+                "Capital Receipts",
+                "Revenue Receipts",
+                "Capital Loss vs Revenue Loss"
+            ]
+        },
+        "general_accounting_principles.financial_statements_and_adjustments.depreciation_provisions_and_reserves": {
+            "id": "general_accounting_principles.financial_statements_and_adjustments.depreciation_provisions_and_reserves",
+            "slug": "depreciation_provisions_and_reserves",
+            "name": "Depreciation Accounting, Provisions & Reserves",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.financial_statements_and_adjustments",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.financial_statements_and_adjustments"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Straight Line Method (SLM)",
+                "Written Down Value (WDV)",
+                "Annuity Method",
+                "Sinking Fund",
+                "Provision vs Reserve",
+                "General Reserve",
+                "Capital Reserve",
+                "Secret Reserve",
+                "Provision for Doubtful Debts",
+                "Provision for Discount on Debtors"
+            ]
+        },
+        "general_accounting_principles.financial_statements_and_adjustments.inventory_valuation": {
+            "id": "general_accounting_principles.financial_statements_and_adjustments.inventory_valuation",
+            "slug": "inventory_valuation",
+            "name": "Valuation of Inventories",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.financial_statements_and_adjustments",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.financial_statements_and_adjustments"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Cost or Net Realisable Value (NRV)",
+                "FIFO Method",
+                "LIFO Method",
+                "Weighted Average Price",
+                "Simple Average",
+                "Perpetual vs Periodic Inventory System"
+            ]
+        },
+        "general_accounting_principles.financial_statements_and_adjustments.preparation_of_final_accounts": {
+            "id": "general_accounting_principles.financial_statements_and_adjustments.preparation_of_final_accounts",
+            "slug": "preparation_of_final_accounts",
+            "name": "Trading, Profit & Loss Account and Balance Sheet",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.financial_statements_and_adjustments",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.financial_statements_and_adjustments"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Gross Profit",
+                "Net Profit",
+                "Operating Profit",
+                "Balance Sheet Classification",
+                "Current Assets",
+                "Non-Current Assets",
+                "Current Liabilities",
+                "Working Capital",
+                "Adjustments: Closing Stock, Outstanding Expenses, Prepaid Expenses, Accrued Income"
+            ]
+        },
+        "general_accounting_principles.financial_statements_and_adjustments": {
+            "id": "general_accounting_principles.financial_statements_and_adjustments",
+            "slug": "financial_statements_and_adjustments",
+            "name": "Financial Statements, Depreciation & Adjustments",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles",
+            "childrenIds": [
+                "general_accounting_principles.financial_statements_and_adjustments.capital_and_revenue_expenditure_and_receipts",
+                "general_accounting_principles.financial_statements_and_adjustments.depreciation_provisions_and_reserves",
+                "general_accounting_principles.financial_statements_and_adjustments.inventory_valuation",
+                "general_accounting_principles.financial_statements_and_adjustments.preparation_of_final_accounts"
+            ],
+            "ancestorIds": [
+                "general_accounting_principles"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "FINANCIAL STATEMENTS, DEPRECIATION & ADJUSTMENTS"
+            ]
+        },
+        "general_accounting_principles.special_and_advanced_accounts.bills_of_exchange": {
+            "id": "general_accounting_principles.special_and_advanced_accounts.bills_of_exchange",
+            "slug": "bills_of_exchange",
+            "name": "Bills of Exchange & Promissory Notes",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.special_and_advanced_accounts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.special_and_advanced_accounts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Drawer",
+                "Drawee",
+                "Payee",
+                "Maturity Date",
+                "Days of Grace",
+                "Discounting of Bill",
+                "Endorsement",
+                "Dishonour of Bill",
+                "Noting Charges",
+                "Renewal of Bill",
+                "Accommodation Bill"
+            ]
+        },
+        "general_accounting_principles.special_and_advanced_accounts.consignment_and_joint_ventures": {
+            "id": "general_accounting_principles.special_and_advanced_accounts.consignment_and_joint_ventures",
+            "slug": "consignment_and_joint_ventures",
+            "name": "Consignment Accounts & Joint Ventures",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.special_and_advanced_accounts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.special_and_advanced_accounts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Consignor",
+                "Consignee",
+                "Proforma Invoice",
+                "Account Sales",
+                "Del Credere Commission",
+                "Normal Loss",
+                "Abnormal Loss",
+                "Joint Venture Accounts"
+            ]
+        },
+        "general_accounting_principles.special_and_advanced_accounts.partnership_accounts": {
+            "id": "general_accounting_principles.special_and_advanced_accounts.partnership_accounts",
+            "slug": "partnership_accounts",
+            "name": "Partnership Accounts",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.special_and_advanced_accounts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.special_and_advanced_accounts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Partnership Deed",
+                "Profit Sharing Ratio",
+                "Valuation of Goodwill",
+                "Admission of Partner",
+                "Retirement and Death of Partner",
+                "Dissolution of Firm"
+            ]
+        },
+        "general_accounting_principles.special_and_advanced_accounts.company_accounts_and_share_capital": {
+            "id": "general_accounting_principles.special_and_advanced_accounts.company_accounts_and_share_capital",
+            "slug": "company_accounts_and_share_capital",
+            "name": "Company Accounts & Share Capital",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles.special_and_advanced_accounts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "general_accounting_principles",
+                "general_accounting_principles.special_and_advanced_accounts"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Issue of Shares at Par, Premium, Discount",
+                "Calls in Arrears",
+                "Calls in Advance",
+                "Forfeiture of Shares",
+                "Reissue of Forfeited Shares",
+                "Capital Redemption Reserve",
+                "Issue of Debentures"
+            ]
+        },
+        "general_accounting_principles.special_and_advanced_accounts": {
+            "id": "general_accounting_principles.special_and_advanced_accounts",
+            "slug": "special_and_advanced_accounts",
+            "name": "Special & Advanced Accounting Topics",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": "general_accounting_principles",
+            "childrenIds": [
+                "general_accounting_principles.special_and_advanced_accounts.bills_of_exchange",
+                "general_accounting_principles.special_and_advanced_accounts.consignment_and_joint_ventures",
+                "general_accounting_principles.special_and_advanced_accounts.partnership_accounts",
+                "general_accounting_principles.special_and_advanced_accounts.company_accounts_and_share_capital"
+            ],
+            "ancestorIds": [
+                "general_accounting_principles"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "SPECIAL & ADVANCED ACCOUNTING TOPICS"
+            ]
+        },
+        "general_accounting_principles": {
+            "id": "general_accounting_principles",
+            "slug": "general_accounting_principles",
+            "name": "General Accounting Principles",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "GENERAL_ACCOUNTING_PRINCIPLES",
+            "subjectId": "general_accounting_principles",
+            "parentId": null,
+            "childrenIds": [
+                "general_accounting_principles.accounting_framework_and_concepts",
+                "general_accounting_principles.accounting_process_and_books",
+                "general_accounting_principles.financial_statements_and_adjustments",
+                "general_accounting_principles.special_and_advanced_accounts"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "GENERAL ACCOUNTING PRINCIPLES"
+            ]
+        },
+        "auditing.fundamentals_and_audit_planning.nature_objective_and_types_of_audit": {
+            "id": "auditing.fundamentals_and_audit_planning.nature_objective_and_types_of_audit",
+            "slug": "nature_objective_and_types_of_audit",
+            "name": "Nature, Scope and Types of Audit",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing.fundamentals_and_audit_planning",
+            "childrenIds": [],
+            "ancestorIds": [
+                "auditing",
+                "auditing.fundamentals_and_audit_planning"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "True and Fair View",
+                "Detection of Frauds and Errors",
+                "Continuous Audit",
+                "Interim Audit",
+                "Final Audit",
+                "Balance Sheet Audit",
+                "Management Audit",
+                "Cost Audit",
+                "Tax Audit"
+            ]
+        },
+        "auditing.fundamentals_and_audit_planning.audit_program_evidence_and_working_papers": {
+            "id": "auditing.fundamentals_and_audit_planning.audit_program_evidence_and_working_papers",
+            "slug": "audit_program_evidence_and_working_papers",
+            "name": "Audit Program, Evidence & Working Papers",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing.fundamentals_and_audit_planning",
+            "childrenIds": [],
+            "ancestorIds": [
+                "auditing",
+                "auditing.fundamentals_and_audit_planning"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Audit Notebook",
+                "Audit Working Papers",
+                "Ownership of Working Papers",
+                "Sufficient Appropriate Audit Evidence",
+                "Physical Verification",
+                "Inquiry and Confirmation"
+            ]
+        },
+        "auditing.fundamentals_and_audit_planning.internal_control_internal_check_and_internal_audit": {
+            "id": "auditing.fundamentals_and_audit_planning.internal_control_internal_check_and_internal_audit",
+            "slug": "internal_control_internal_check_and_internal_audit",
+            "name": "Internal Control, Internal Check & Internal Audit",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing.fundamentals_and_audit_planning",
+            "childrenIds": [],
+            "ancestorIds": [
+                "auditing",
+                "auditing.fundamentals_and_audit_planning"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Internal Check System",
+                "Division of Duties",
+                "Internal Audit vs External Audit",
+                "Statutory Internal Audit Section 138",
+                "Test Checking",
+                "Audit Sampling"
+            ]
+        },
+        "auditing.fundamentals_and_audit_planning": {
+            "id": "auditing.fundamentals_and_audit_planning",
+            "slug": "fundamentals_and_audit_planning",
+            "name": "Audit Fundamentals, Internal Control & Planning",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing",
+            "childrenIds": [
+                "auditing.fundamentals_and_audit_planning.nature_objective_and_types_of_audit",
+                "auditing.fundamentals_and_audit_planning.audit_program_evidence_and_working_papers",
+                "auditing.fundamentals_and_audit_planning.internal_control_internal_check_and_internal_audit"
+            ],
+            "ancestorIds": [
+                "auditing"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "AUDIT FUNDAMENTALS, INTERNAL CONTROL & PLANNING"
+            ]
+        },
+        "auditing.vouching_verification_and_company_audit.vouching_of_cash_and_trading_transactions": {
+            "id": "auditing.vouching_verification_and_company_audit.vouching_of_cash_and_trading_transactions",
+            "slug": "vouching_of_cash_and_trading_transactions",
+            "name": "Vouching of Transactions",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing.vouching_verification_and_company_audit",
+            "childrenIds": [],
+            "ancestorIds": [
+                "auditing",
+                "auditing.vouching_verification_and_company_audit"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Vouching as Backbone of Auditing",
+                "Cash Receipts",
+                "Cash Payments",
+                "Credit Purchases",
+                "Credit Sales",
+                "Teeming and Lading",
+                "Window Dressing"
+            ]
+        },
+        "auditing.vouching_verification_and_company_audit.verification_and_valuation_of_assets_and_liabilities": {
+            "id": "auditing.vouching_verification_and_company_audit.verification_and_valuation_of_assets_and_liabilities",
+            "slug": "verification_and_valuation_of_assets_and_liabilities",
+            "name": "Verification & Valuation of Assets & Liabilities",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing.vouching_verification_and_company_audit",
+            "childrenIds": [],
+            "ancestorIds": [
+                "auditing",
+                "auditing.vouching_verification_and_company_audit"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Verification vs Valuation",
+                "Fixed Assets",
+                "Current Assets",
+                "Cash in Hand",
+                "Stock in Trade",
+                "Contingent Liabilities",
+                "Auditor's Duty Regarding Valuation"
+            ]
+        },
+        "auditing.vouching_verification_and_company_audit.company_audit_under_companies_act_2013": {
+            "id": "auditing.vouching_verification_and_company_audit.company_audit_under_companies_act_2013",
+            "slug": "company_audit_under_companies_act_2013",
+            "name": "Company Audit under Companies Act, 2013",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing.vouching_verification_and_company_audit",
+            "childrenIds": [],
+            "ancestorIds": [
+                "auditing",
+                "auditing.vouching_verification_and_company_audit"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Appointment of Auditor Section 139",
+                "Rotation of Auditors",
+                "Disqualifications of Auditor Section 141",
+                "Rights and Duties Section 143",
+                "Reporting on Frauds",
+                "Removal and Resignation",
+                "CARO (Companies Auditor's Report Order)"
+            ]
+        },
+        "auditing.vouching_verification_and_company_audit.audit_report_and_government_audit": {
+            "id": "auditing.vouching_verification_and_company_audit.audit_report_and_government_audit",
+            "slug": "audit_report_and_government_audit",
+            "name": "Audit Report & Government / EPFO Audit",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing.vouching_verification_and_company_audit",
+            "childrenIds": [],
+            "ancestorIds": [
+                "auditing",
+                "auditing.vouching_verification_and_company_audit"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Unqualified / Clean Opinion",
+                "Qualified Opinion",
+                "Adverse Opinion",
+                "Disclaimer of Opinion",
+                "CAG Audit of Government Undertakings",
+                "Social Audit",
+                "EPFO Statutory Audit"
+            ]
+        },
+        "auditing.vouching_verification_and_company_audit": {
+            "id": "auditing.vouching_verification_and_company_audit",
+            "slug": "vouching_verification_and_company_audit",
+            "name": "Vouching, Verification & Company Audit",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": "auditing",
+            "childrenIds": [
+                "auditing.vouching_verification_and_company_audit.vouching_of_cash_and_trading_transactions",
+                "auditing.vouching_verification_and_company_audit.verification_and_valuation_of_assets_and_liabilities",
+                "auditing.vouching_verification_and_company_audit.company_audit_under_companies_act_2013",
+                "auditing.vouching_verification_and_company_audit.audit_report_and_government_audit"
+            ],
+            "ancestorIds": [
+                "auditing"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "VOUCHING, VERIFICATION & COMPANY AUDIT"
+            ]
+        },
+        "auditing": {
+            "id": "auditing",
+            "slug": "auditing",
+            "name": "Auditing",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "AUDITING",
+            "subjectId": "auditing",
+            "parentId": null,
+            "childrenIds": [
+                "auditing.fundamentals_and_audit_planning",
+                "auditing.vouching_verification_and_company_audit"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "AUDITING"
+            ]
+        },
+        "insurance.principles_and_fundamentals_of_insurance.concept_history_and_functions_of_insurance": {
+            "id": "insurance.principles_and_fundamentals_of_insurance.concept_history_and_functions_of_insurance",
+            "slug": "concept_history_and_functions_of_insurance",
+            "name": "Concept, History & Economic Role of Insurance",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance.principles_and_fundamentals_of_insurance",
+            "childrenIds": [],
+            "ancestorIds": [
+                "insurance",
+                "insurance.principles_and_fundamentals_of_insurance"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Risk Pooling",
+                "Transfer of Risk",
+                "Insurable Risk",
+                "Moral Hazard",
+                "Morale Hazard",
+                "Peril",
+                "History of Life & General Insurance in India",
+                "Nationalisation of LIC and GIC"
+            ]
+        },
+        "insurance.principles_and_fundamentals_of_insurance.fundamental_legal_principles_of_insurance": {
+            "id": "insurance.principles_and_fundamentals_of_insurance.fundamental_legal_principles_of_insurance",
+            "slug": "fundamental_legal_principles_of_insurance",
+            "name": "Fundamental Legal Principles of Insurance",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance.principles_and_fundamentals_of_insurance",
+            "childrenIds": [],
+            "ancestorIds": [
+                "insurance",
+                "insurance.principles_and_fundamentals_of_insurance"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Principle of Utmost Good Faith (Uberrimae Fidei)",
+                "Insurable Interest",
+                "Principle of Indemnity",
+                "Subrogation",
+                "Contribution",
+                "Proximate Cause (Causa Proxima)",
+                "Mitigation of Loss",
+                "Warranties and Conditions"
+            ]
+        },
+        "insurance.principles_and_fundamentals_of_insurance": {
+            "id": "insurance.principles_and_fundamentals_of_insurance",
+            "slug": "principles_and_fundamentals_of_insurance",
+            "name": "Principles & Fundamentals of Insurance",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance",
+            "childrenIds": [
+                "insurance.principles_and_fundamentals_of_insurance.concept_history_and_functions_of_insurance",
+                "insurance.principles_and_fundamentals_of_insurance.fundamental_legal_principles_of_insurance"
+            ],
+            "ancestorIds": [
+                "insurance"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "PRINCIPLES & FUNDAMENTALS OF INSURANCE"
+            ]
+        },
+        "insurance.life_general_and_health_insurance.life_insurance_products_and_underwriting": {
+            "id": "insurance.life_general_and_health_insurance.life_insurance_products_and_underwriting",
+            "slug": "life_insurance_products_and_underwriting",
+            "name": "Life Insurance Products & Actuarial Basics",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance.life_general_and_health_insurance",
+            "childrenIds": [],
+            "ancestorIds": [
+                "insurance",
+                "insurance.life_general_and_health_insurance"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Term Life Insurance",
+                "Whole Life Policy",
+                "Endowment Assurance",
+                "Money Back Policy",
+                "Unit Linked Insurance Plans (ULIP)",
+                "Annuity and Pension Plans",
+                "Surrender Value",
+                "Paid-up Value",
+                "Mortality Tables",
+                "Medical & Non-Medical Underwriting"
+            ]
+        },
+        "insurance.life_general_and_health_insurance.general_and_health_insurance": {
+            "id": "insurance.life_general_and_health_insurance.general_and_health_insurance",
+            "slug": "general_and_health_insurance",
+            "name": "General, Property & Health Insurance",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance.life_general_and_health_insurance",
+            "childrenIds": [],
+            "ancestorIds": [
+                "insurance",
+                "insurance.life_general_and_health_insurance"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Fire Insurance",
+                "Marine Insurance",
+                "Perils of the Sea",
+                "General Average vs Particular Average",
+                "Motor Vehicles Insurance",
+                "Third Party Liability",
+                "Comprehensive Policy",
+                "Health Insurance",
+                "Mediclaim",
+                "Cashless Hospitalisation",
+                "Co-payment and Deductibles"
+            ]
+        },
+        "insurance.life_general_and_health_insurance": {
+            "id": "insurance.life_general_and_health_insurance",
+            "slug": "life_general_and_health_insurance",
+            "name": "Life, General & Health Insurance Products",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance",
+            "childrenIds": [
+                "insurance.life_general_and_health_insurance.life_insurance_products_and_underwriting",
+                "insurance.life_general_and_health_insurance.general_and_health_insurance"
+            ],
+            "ancestorIds": [
+                "insurance"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "LIFE, GENERAL & HEALTH INSURANCE PRODUCTS"
+            ]
+        },
+        "insurance.regulatory_framework_and_government_schemes.irdai_powers_and_regulations": {
+            "id": "insurance.regulatory_framework_and_government_schemes.irdai_powers_and_regulations",
+            "slug": "irdai_powers_and_regulations",
+            "name": "IRDAI Structure, Powers & Functions",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance.regulatory_framework_and_government_schemes",
+            "childrenIds": [],
+            "ancestorIds": [
+                "insurance",
+                "insurance.regulatory_framework_and_government_schemes"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "IRDAI Act 1999",
+                "Malhotra Committee Recommendations",
+                "Protection of Policyholders' Interests",
+                "Solvency Margin",
+                "Ombudsman Scheme",
+                "Foreign Direct Investment in Insurance"
+            ]
+        },
+        "insurance.regulatory_framework_and_government_schemes.government_social_insurance_schemes": {
+            "id": "insurance.regulatory_framework_and_government_schemes.government_social_insurance_schemes",
+            "slug": "government_social_insurance_schemes",
+            "name": "National Social & Micro-Insurance Schemes",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance.regulatory_framework_and_government_schemes",
+            "childrenIds": [],
+            "ancestorIds": [
+                "insurance",
+                "insurance.regulatory_framework_and_government_schemes"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC",
+                    "EO/AO"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC, EO/AO]",
+            "entities": [],
+            "keywords": [
+                "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+                "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+                "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+                "Ayushman Bharat PM-JAY",
+                "Aam Aadmi Bima Yojana"
+            ]
+        },
+        "insurance.regulatory_framework_and_government_schemes": {
+            "id": "insurance.regulatory_framework_and_government_schemes",
+            "slug": "regulatory_framework_and_government_schemes",
+            "name": "Insurance Regulatory Framework & Government Schemes",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": "insurance",
+            "childrenIds": [
+                "insurance.regulatory_framework_and_government_schemes.irdai_powers_and_regulations",
+                "insurance.regulatory_framework_and_government_schemes.government_social_insurance_schemes"
+            ],
+            "ancestorIds": [
+                "insurance"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "INSURANCE REGULATORY FRAMEWORK & GOVERNMENT SCHEMES"
+            ]
+        },
+        "insurance": {
+            "id": "insurance",
+            "slug": "insurance",
+            "name": "Insurance",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "INSURANCE",
+            "subjectId": "insurance",
+            "parentId": null,
+            "childrenIds": [
+                "insurance.principles_and_fundamentals_of_insurance",
+                "insurance.life_general_and_health_insurance",
+                "insurance.regulatory_framework_and_government_schemes"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "INSURANCE"
+            ]
+        },
+        "social_security_in_india.concept_and_constitutional_framework.concept_dimensions_and_evolution_of_social_security": {
+            "id": "social_security_in_india.concept_and_constitutional_framework.concept_dimensions_and_evolution_of_social_security",
+            "slug": "concept_dimensions_and_evolution_of_social_security",
+            "name": "Concept, Evolution & Dimensions of Social Security",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.concept_and_constitutional_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.concept_and_constitutional_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Social Assistance vs Social Insurance",
+                "Beveridge Report",
+                "ILO Social Security (Minimum Standards) Convention 102",
+                "Nine Classical Contingencies",
+                "History of Social Security in India"
+            ]
+        },
+        "social_security_in_india.concept_and_constitutional_framework.constitutional_and_institutional_provisions": {
+            "id": "social_security_in_india.concept_and_constitutional_framework.constitutional_and_institutional_provisions",
+            "slug": "constitutional_and_institutional_provisions",
+            "name": "Constitutional Mandate & Institutional Framework",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.concept_and_constitutional_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.concept_and_constitutional_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Article 39",
+                "Article 41 Right to Work and Education and Public Assistance",
+                "Article 42 Just and Humane Conditions of Work and Maternity Relief",
+                "Article 43 Living Wage for Workers",
+                "Ministry of Labour and Employment",
+                "National Commission on Labour Recommendations"
+            ]
+        },
+        "social_security_in_india.concept_and_constitutional_framework": {
+            "id": "social_security_in_india.concept_and_constitutional_framework",
+            "slug": "concept_and_constitutional_framework",
+            "name": "Concept, Philosophy & Constitutional Framework",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india",
+            "childrenIds": [
+                "social_security_in_india.concept_and_constitutional_framework.concept_dimensions_and_evolution_of_social_security",
+                "social_security_in_india.concept_and_constitutional_framework.constitutional_and_institutional_provisions"
+            ],
+            "ancestorIds": [
+                "social_security_in_india"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "CONCEPT, PHILOSOPHY & CONSTITUTIONAL FRAMEWORK"
+            ]
+        },
+        "social_security_in_india.statutory_social_security_framework.employees_provident_funds_act_1952": {
+            "id": "social_security_in_india.statutory_social_security_framework.employees_provident_funds_act_1952",
+            "slug": "employees_provident_funds_act_1952",
+            "name": "The EPF & Miscellaneous Provisions Act, 1952",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.statutory_social_security_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.statutory_social_security_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Applicability Threshold 20 Employees",
+                "Central Board of Trustees (CBT)",
+                "Employees' Provident Funds Scheme 1952",
+                "Employees' Pension Scheme (EPS) 1995",
+                "Employees' Deposit-Linked Insurance (EDLI) Scheme 1976",
+                "Wage Ceiling",
+                "Contribution Rates 12%",
+                "Universal Account Number (UAN)",
+                "Recovery of Arrears Section 7A"
+            ]
+        },
+        "social_security_in_india.statutory_social_security_framework.employees_state_insurance_act_1948": {
+            "id": "social_security_in_india.statutory_social_security_framework.employees_state_insurance_act_1948",
+            "slug": "employees_state_insurance_act_1948",
+            "name": "The Employees' State Insurance Act, 1948",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.statutory_social_security_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.statutory_social_security_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "ESIC Governance",
+                "Wage Limit for Coverage",
+                "Contribution Rates (3.25% Employer, 0.75% Employee)",
+                "Sickness Benefit",
+                "Maternity Benefit",
+                "Disablement Benefit",
+                "Dependants' Benefit",
+                "Medical Benefit",
+                "Funeral Expenses"
+            ]
+        },
+        "social_security_in_india.statutory_social_security_framework.payment_of_gratuity_act_1972": {
+            "id": "social_security_in_india.statutory_social_security_framework.payment_of_gratuity_act_1972",
+            "slug": "payment_of_gratuity_act_1972",
+            "name": "The Payment of Gratuity Act, 1972",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.statutory_social_security_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.statutory_social_security_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Applicability Threshold 10 Employees",
+                "Continuous Service 5 Years Requirement",
+                "Calculation Formula (15 days wages per year of service)",
+                "Ceiling Limit on Gratuity (Rs 20 Lakhs)",
+                "Forfeiture Conditions"
+            ]
+        },
+        "social_security_in_india.statutory_social_security_framework.maternity_benefit_act_1961": {
+            "id": "social_security_in_india.statutory_social_security_framework.maternity_benefit_act_1961",
+            "slug": "maternity_benefit_act_1961",
+            "name": "The Maternity Benefit Act, 1961 & 2017 Amendment",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.statutory_social_security_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.statutory_social_security_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Paid Leave 26 Weeks",
+                "Applicability",
+                "Creche Facility Threshold 50 Employees",
+                "Work from Home Provisions",
+                "Nursing Breaks",
+                "Medical Bonus"
+            ]
+        },
+        "social_security_in_india.statutory_social_security_framework.employees_compensation_act_1923": {
+            "id": "social_security_in_india.statutory_social_security_framework.employees_compensation_act_1923",
+            "slug": "employees_compensation_act_1923",
+            "name": "The Employees' Compensation Act, 1923",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.statutory_social_security_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.statutory_social_security_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Employer Liability",
+                "Accident Arising Out of and in the Course of Employment",
+                "Doctrine of Notional Extension",
+                "Occupational Diseases Schedule III",
+                "Calculation of Compensation for Death and Permanent Total Disablement"
+            ]
+        },
+        "social_security_in_india.statutory_social_security_framework.unorganized_workers_social_security_act_2008": {
+            "id": "social_security_in_india.statutory_social_security_framework.unorganized_workers_social_security_act_2008",
+            "slug": "unorganized_workers_social_security_act_2008",
+            "name": "Unorganised Workers' Social Security Framework",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.statutory_social_security_framework",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.statutory_social_security_framework"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Unorganised Workers' Social Security Act 2008",
+                "National Social Security Board",
+                "State Social Security Boards",
+                "e-Shram Portal",
+                "Universal Social Security for Informal Sector"
+            ]
+        },
+        "social_security_in_india.statutory_social_security_framework": {
+            "id": "social_security_in_india.statutory_social_security_framework",
+            "slug": "statutory_social_security_framework",
+            "name": "Statutory Social Security Schemes & Acts",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india",
+            "childrenIds": [
+                "social_security_in_india.statutory_social_security_framework.employees_provident_funds_act_1952",
+                "social_security_in_india.statutory_social_security_framework.employees_state_insurance_act_1948",
+                "social_security_in_india.statutory_social_security_framework.payment_of_gratuity_act_1972",
+                "social_security_in_india.statutory_social_security_framework.maternity_benefit_act_1961",
+                "social_security_in_india.statutory_social_security_framework.employees_compensation_act_1923",
+                "social_security_in_india.statutory_social_security_framework.unorganized_workers_social_security_act_2008"
+            ],
+            "ancestorIds": [
+                "social_security_in_india"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "STATUTORY SOCIAL SECURITY SCHEMES & ACTS"
+            ]
+        },
+        "social_security_in_india.code_on_social_security_2020.code_on_social_security_2020_provisions": {
+            "id": "social_security_in_india.code_on_social_security_2020.code_on_social_security_2020_provisions",
+            "slug": "code_on_social_security_2020_provisions",
+            "name": "The Code on Social Security, 2020",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.code_on_social_security_2020",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.code_on_social_security_2020"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Amalgamation of 9 Social Security Acts",
+                "Definition of Gig Worker",
+                "Platform Worker",
+                "Aggregator Obligations",
+                "National Social Security Board for Gig and Platform Workers",
+                "Social Security Fund",
+                "Fixed Term Employees Gratuity on Pro-rata Basis"
+            ]
+        },
+        "social_security_in_india.code_on_social_security_2020.national_pension_and_social_welfare_schemes": {
+            "id": "social_security_in_india.code_on_social_security_2020.national_pension_and_social_welfare_schemes",
+            "slug": "national_pension_and_social_welfare_schemes",
+            "name": "National Pension, Welfare Schemes & International SSAs",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india.code_on_social_security_2020",
+            "childrenIds": [],
+            "ancestorIds": [
+                "social_security_in_india",
+                "social_security_in_india.code_on_social_security_2020"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM)",
+                "Atal Pension Yojana (APY)",
+                "National Pension System (NPS)",
+                "PFRDA",
+                "PM Kisan Maan-Dhan Yojana",
+                "Social Security Agreements (SSA) with Foreign Countries",
+                "Certificate of Coverage (CoC)",
+                "Exportability of Pensions"
+            ]
+        },
+        "social_security_in_india.code_on_social_security_2020": {
+            "id": "social_security_in_india.code_on_social_security_2020",
+            "slug": "code_on_social_security_2020",
+            "name": "Code on Social Security 2020 & Social Welfare Schemes",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": "social_security_in_india",
+            "childrenIds": [
+                "social_security_in_india.code_on_social_security_2020.code_on_social_security_2020_provisions",
+                "social_security_in_india.code_on_social_security_2020.national_pension_and_social_welfare_schemes"
+            ],
+            "ancestorIds": [
+                "social_security_in_india"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "CODE ON SOCIAL SECURITY 2020 & SOCIAL WELFARE SCHEMES"
+            ]
+        },
+        "social_security_in_india": {
+            "id": "social_security_in_india",
+            "slug": "social_security_in_india",
+            "name": "Social Security in India",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "SOCIAL_SECURITY_IN_INDIA",
+            "subjectId": "social_security_in_india",
+            "parentId": null,
+            "childrenIds": [
+                "social_security_in_india.concept_and_constitutional_framework",
+                "social_security_in_india.statutory_social_security_framework",
+                "social_security_in_india.code_on_social_security_2020"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "SOCIAL SECURITY IN INDIA"
+            ]
+        },
+        "applied_statistics.data_collection_and_central_tendency.collection_and_presentation_of_data": {
+            "id": "applied_statistics.data_collection_and_central_tendency.collection_and_presentation_of_data",
+            "slug": "collection_and_presentation_of_data",
+            "name": "Collection, Classification & Tabulation of Data",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics.data_collection_and_central_tendency",
+            "childrenIds": [],
+            "ancestorIds": [
+                "applied_statistics",
+                "applied_statistics.data_collection_and_central_tendency"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Primary vs Secondary Data",
+                "Sampling Methods",
+                "Random Sampling",
+                "Stratified Sampling",
+                "Frequency Distribution",
+                "Histogram",
+                "Frequency Polygon",
+                "Ogive",
+                "Pie Chart"
+            ]
+        },
+        "applied_statistics.data_collection_and_central_tendency.measures_of_central_tendency": {
+            "id": "applied_statistics.data_collection_and_central_tendency.measures_of_central_tendency",
+            "slug": "measures_of_central_tendency",
+            "name": "Measures of Central Tendency",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics.data_collection_and_central_tendency",
+            "childrenIds": [],
+            "ancestorIds": [
+                "applied_statistics",
+                "applied_statistics.data_collection_and_central_tendency"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Arithmetic Mean",
+                "Weighted Mean",
+                "Properties of Arithmetic Mean",
+                "Median",
+                "Mode",
+                "Empirical Relationship (Mode = 3 Median - 2 Mean)",
+                "Geometric Mean",
+                "Harmonic Mean",
+                "Choice of Average"
+            ]
+        },
+        "applied_statistics.data_collection_and_central_tendency": {
+            "id": "applied_statistics.data_collection_and_central_tendency",
+            "slug": "data_collection_and_central_tendency",
+            "name": "Data Collection, Presentation & Measures of Central Tendency",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics",
+            "childrenIds": [
+                "applied_statistics.data_collection_and_central_tendency.collection_and_presentation_of_data",
+                "applied_statistics.data_collection_and_central_tendency.measures_of_central_tendency"
+            ],
+            "ancestorIds": [
+                "applied_statistics"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "DATA COLLECTION, PRESENTATION & MEASURES OF CENTRAL TENDENCY"
+            ]
+        },
+        "applied_statistics.dispersion_correlation_and_probability.measures_of_dispersion_and_skewness": {
+            "id": "applied_statistics.dispersion_correlation_and_probability.measures_of_dispersion_and_skewness",
+            "slug": "measures_of_dispersion_and_skewness",
+            "name": "Measures of Dispersion & Skewness",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics.dispersion_correlation_and_probability",
+            "childrenIds": [],
+            "ancestorIds": [
+                "applied_statistics",
+                "applied_statistics.dispersion_correlation_and_probability"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Range",
+                "Quartile Deviation",
+                "Mean Deviation",
+                "Standard Deviation",
+                "Variance",
+                "Coefficient of Variation",
+                "Karl Pearson's Coefficient of Skewness",
+                "Kurtosis"
+            ]
+        },
+        "applied_statistics.dispersion_correlation_and_probability.correlation_and_regression": {
+            "id": "applied_statistics.dispersion_correlation_and_probability.correlation_and_regression",
+            "slug": "correlation_and_regression",
+            "name": "Correlation & Regression Analysis",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics.dispersion_correlation_and_probability",
+            "childrenIds": [],
+            "ancestorIds": [
+                "applied_statistics",
+                "applied_statistics.dispersion_correlation_and_probability"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Scatter Diagram",
+                "Karl Pearson's Coefficient of Correlation",
+                "Properties of Correlation Coefficient",
+                "Spearman's Rank Correlation",
+                "Regression Lines",
+                "Regression Coefficients"
+            ]
+        },
+        "applied_statistics.dispersion_correlation_and_probability.index_numbers": {
+            "id": "applied_statistics.dispersion_correlation_and_probability.index_numbers",
+            "slug": "index_numbers",
+            "name": "Index Numbers & Time Series Basics",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics.dispersion_correlation_and_probability",
+            "childrenIds": [],
+            "ancestorIds": [
+                "applied_statistics",
+                "applied_statistics.dispersion_correlation_and_probability"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Base Year",
+                "Laspeyres Index",
+                "Paasche Index",
+                "Fisher's Ideal Index",
+                "Time Reversal Test",
+                "Factor Reversal Test",
+                "Consumer Price Index (CPI)",
+                "Wholesale Price Index (WPI)"
+            ]
+        },
+        "applied_statistics.dispersion_correlation_and_probability.elementary_probability": {
+            "id": "applied_statistics.dispersion_correlation_and_probability.elementary_probability",
+            "slug": "elementary_probability",
+            "name": "Elementary Probability",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics.dispersion_correlation_and_probability",
+            "childrenIds": [],
+            "ancestorIds": [
+                "applied_statistics",
+                "applied_statistics.dispersion_correlation_and_probability"
+            ],
+            "examTags": {
+                "epfo": [
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: APFC]",
+            "entities": [],
+            "keywords": [
+                "Random Experiment",
+                "Sample Space",
+                "Mutually Exclusive Events",
+                "Addition Theorem of Probability",
+                "Multiplication Theorem",
+                "Conditional Probability",
+                "Independent Events"
+            ]
+        },
+        "applied_statistics.dispersion_correlation_and_probability": {
+            "id": "applied_statistics.dispersion_correlation_and_probability",
+            "slug": "dispersion_correlation_and_probability",
+            "name": "Dispersion, Correlation, Index Numbers & Probability",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": "applied_statistics",
+            "childrenIds": [
+                "applied_statistics.dispersion_correlation_and_probability.measures_of_dispersion_and_skewness",
+                "applied_statistics.dispersion_correlation_and_probability.correlation_and_regression",
+                "applied_statistics.dispersion_correlation_and_probability.index_numbers",
+                "applied_statistics.dispersion_correlation_and_probability.elementary_probability"
+            ],
+            "ancestorIds": [
+                "applied_statistics"
+            ],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "DISPERSION, CORRELATION, INDEX NUMBERS & PROBABILITY"
+            ]
+        },
+        "applied_statistics": {
+            "id": "applied_statistics",
+            "slug": "applied_statistics",
+            "name": "Applied Statistics",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "APPLIED_STATISTICS",
+            "subjectId": "applied_statistics",
+            "parentId": null,
+            "childrenIds": [
+                "applied_statistics.data_collection_and_central_tendency",
+                "applied_statistics.dispersion_correlation_and_probability"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "epfo": [
+                    "EO/AO",
+                    "APFC"
+                ]
+            },
+            "rawExamTagString": "[EPFO: EO/AO, APFC]",
+            "entities": [],
+            "keywords": [
+                "APPLIED STATISTICS"
+            ]
+        }
+    },
+    "stats": {
+        "total_nodes": 81,
+        "level_1_subjects": 6,
+        "level_2_domains": 17,
+        "level_3_topics": 58
+    }
+}
