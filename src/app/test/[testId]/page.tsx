@@ -509,6 +509,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     } else {
                         sortedQuestions = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
                     }
+                    if (config.question_count && config.question_count < sortedQuestions.length) {
+                        sortedQuestions = sortedQuestions.slice(0, config.question_count);
+                    }
                 } else if (config.exam_id === 'kpsc-kas') {
                     sortedQuestions.sort((a, b) => {
                         const numA = parseInt(a.id.match(/-q(\d+)$/)?.[1] || '0', 10);
@@ -584,7 +587,12 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             group_id: dbq.group_id || undefined,
                             group_label: dbq.group_label || undefined,
                             subject_kannada: dbq.subject_kannada || undefined,
-                            sub_topic_kannada: dbq.sub_topic_kannada || undefined
+                            sub_topic_kannada: dbq.sub_topic_kannada || undefined,
+                            node_id: dbq.node_id || undefined,
+                            domain: dbq.domain || undefined,
+                            sub_topic: dbq.sub_topic || undefined,
+                            tags: Array.isArray(dbq.tags) ? dbq.tags : (dbq.tags ? [dbq.tags] : undefined),
+                            secondary_node_ids: Array.isArray(dbq.secondary_node_ids) ? dbq.secondary_node_ids : undefined
                         };
                     } else if (dbq.options_en && Array.isArray(dbq.options_en)) {
                         return {
@@ -658,7 +666,8 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     }
                 });
                 setQuestions(formattedQs);
-                setTimeLeft(formattedQs.length * 72);
+                const qSecs = config.exam_id === 'upsc-epfo' ? 60 : 72;
+                setTimeLeft(formattedQs.length * qSecs);
                 setActiveSession({ ...activeSession!, questions: formattedQs });
             } else {
                 // Fallback to local QUESTIONS if remote database returns 0 matching rows
@@ -670,13 +679,15 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 if (fallback.length === 0) fallback = QUESTIONS;
                 const finalFallback = fallback.slice(0, config.question_count || 10);
                 setQuestions(finalFallback);
-                setTimeLeft(finalFallback.length * 72);
+                const fallbackSecs = config.exam_id === 'upsc-epfo' ? 60 : 72;
+                setTimeLeft(finalFallback.length * fallbackSecs);
                 setActiveSession({ ...activeSession!, questions: finalFallback });
             }
             setLoading(false);
         }
         if (activeSession.questions && activeSession.questions.length > 0) {
-            setQuestions(activeSession.questions); setAnswers(activeSession.answers || {}); setTimeLeft(activeSession.questions.length * 72); setLoading(false);
+            const resumeSecs = activeSession.config?.exam_id === 'upsc-epfo' ? 60 : 72;
+            setQuestions(activeSession.questions); setAnswers(activeSession.answers || {}); setTimeLeft(activeSession.questions.length * resumeSecs); setLoading(false);
         } else { fetchQuestions(); }
     }, [testId, activeSession?.id, router]);
 
@@ -700,9 +711,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         }
     }, [currentIdx, questions]);
 
-    const isCse = activeSession?.config?.exam_id === 'upsc-cse' || activeSession?.config?.exam_id === 'upsc-capf';
+    const isUpsc = activeSession?.config?.exam_id === 'upsc-cse' || activeSession?.config?.exam_id === 'upsc-capf' || activeSession?.config?.exam_id === 'upsc-epfo';
     const isKarnataka = activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea') || activeSession?.config?.exam_id?.startsWith('ksp');
-    const supportedLangs: ('en' | 'kn' | 'hi')[] = isCse ? ['en', 'hi'] : (isKarnataka ? ['en', 'kn'] : ['en']);
+    const supportedLangs: ('en' | 'kn' | 'hi')[] = isUpsc ? ['en', 'hi'] : (isKarnataka ? ['en', 'kn'] : ['en']);
 
     const handleToggleLang = () => {
         if (supportedLangs.length <= 1) return;
@@ -714,6 +725,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     };
 
     const getMarkingScheme = (examId?: string, paper?: number | string) => {
+        if (examId === 'upsc-epfo') {
+            return { positive: 2.50, negative: 0.83 };
+        }
         if (examId === 'upsc-cse' && (paper === 2 || paper === '2')) {
             return { positive: 2.50, negative: 0.83 };
         }

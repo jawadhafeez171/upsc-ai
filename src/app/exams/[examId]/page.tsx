@@ -51,6 +51,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         async function loadExamData() {
             setLoading(true);
             const localExam = EXAMS.find(e => e.id === examId);
+            if (localExam && !localExam.languages.includes(testLang)) {
+                setTestLang(localExam.languages[0] || 'en');
+            }
             const detailedInfo = getExamInfo(examId);
             setExamInfo(detailedInfo);
 
@@ -520,7 +523,12 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         All Papers (9 Papers — 1,060 Qs)
                                                     </button>
                                                     <button
-                                                        onClick={() => setPaperCode('eoao')}
+                                                        onClick={() => {
+                                                            setPaperCode('eoao');
+                                                            if (year !== 'all' && ![2023, 2021, 2017].includes(Number(year))) {
+                                                                setYear('all');
+                                                            }
+                                                        }}
                                                         style={{
                                                             padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
                                                             fontSize: '12.5px', fontWeight: 700,
@@ -533,7 +541,12 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         EO/AO Papers (360 Qs)
                                                     </button>
                                                     <button
-                                                        onClick={() => setPaperCode('apfc')}
+                                                        onClick={() => {
+                                                            setPaperCode('apfc');
+                                                            if (year !== 'all' && ![2023, 2016, 2012, 2004, 2002].includes(Number(year))) {
+                                                                setYear('all');
+                                                            }
+                                                        }}
                                                         style={{
                                                             padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
                                                             fontSize: '12.5px', fontWeight: 700,
@@ -546,7 +559,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         APFC Papers (580 Qs)
                                                     </button>
                                                     <button
-                                                        onClick={() => setPaperCode('eoao-apfc')}
+                                                        onClick={() => {
+                                                            setPaperCode('eoao-apfc');
+                                                            setYear(2025);
+                                                        }}
                                                         style={{
                                                             padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
                                                             fontSize: '12.5px', fontWeight: 700,
@@ -640,6 +656,11 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
                                             ).map((yr) => {
                                                 const isSelected = year === yr;
+                                                const isEpfoMatch = examId !== 'upsc-epfo' || paperCode === 'all' 
+                                                    || (paperCode === 'eoao' && [2023, 2021, 2017].includes(yr))
+                                                    || (paperCode === 'apfc' && [2023, 2016, 2012, 2004, 2002].includes(yr))
+                                                    || (paperCode === 'eoao-apfc' && yr === 2025);
+
                                                 return (
                                                     <button
                                                         key={yr}
@@ -647,6 +668,21 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         onClick={() => {
                                                             setYear(yr);
                                                             if (yr !== 2024) setMonth('all');
+                                                            if (examId === 'upsc-epfo') {
+                                                                if (yr === 2025) {
+                                                                    setPaperCode('eoao-apfc');
+                                                                } else if ([2021, 2017].includes(yr)) {
+                                                                    if (paperCode === 'apfc' || paperCode === 'eoao-apfc') {
+                                                                        setPaperCode('eoao');
+                                                                    }
+                                                                } else if ([2016, 2012, 2004, 2002].includes(yr)) {
+                                                                    if (paperCode === 'eoao' || paperCode === 'eoao-apfc') {
+                                                                        setPaperCode('apfc');
+                                                                    }
+                                                                } else if (yr === 2023 && paperCode === 'eoao-apfc') {
+                                                                    setPaperCode('all');
+                                                                }
+                                                            }
                                                         }}
                                                         style={{
                                                             padding: '6px 12px', borderRadius: '9px', cursor: 'pointer',
@@ -654,10 +690,18 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                             background: isSelected ? 'var(--brand-orange)' : 'var(--bg-primary)',
                                                             color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
                                                             border: isSelected ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
+                                                            opacity: isEpfoMatch ? 1 : 0.65,
                                                             transition: 'all 0.15s'
                                                         }}
                                                     >
-                                                        {yr} {yr >= 2025 ? '🔥 Latest' : yr === 2024 ? '🔥' : ''}
+                                                        {examId === 'upsc-epfo' ? (
+                                                            yr === 2025 ? `${yr} (Combined) 🔥` :
+                                                            yr === 2023 ? `${yr} (EO/AO & APFC)` :
+                                                            [2021, 2017].includes(yr) ? `${yr} (EO/AO)` :
+                                                            `${yr} (APFC)`
+                                                        ) : (
+                                                            `${yr} ${yr >= 2025 ? '🔥 Latest' : yr === 2024 ? '🔥' : ''}`
+                                                        )}
                                                     </button>
                                                 );
                                             })}
@@ -904,16 +948,20 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             {/* Start Test Button */}
                             <button
                                 onClick={handleStart}
+                                disabled={finalCount === 0}
                                 style={{
-                                    width: '100%', padding: '16px', borderRadius: '14px', cursor: 'pointer',
-                                    background: 'var(--brand-orange)', color: '#FFFFFF',
+                                    width: '100%', padding: '16px', borderRadius: '14px',
+                                    cursor: finalCount === 0 ? 'not-allowed' : 'pointer',
+                                    background: finalCount === 0 ? 'var(--bg-tertiary)' : 'var(--brand-orange)',
+                                    color: finalCount === 0 ? 'var(--text-muted)' : '#FFFFFF',
                                     fontSize: '16px', fontWeight: 800, border: 'none',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-                                    boxShadow: '0 4px 16px rgba(255, 107, 43, 0.35)', transition: 'all 0.15s'
+                                    boxShadow: finalCount === 0 ? 'none' : '0 4px 16px rgba(255, 107, 43, 0.35)',
+                                    transition: 'all 0.15s'
                                 }}
                             >
                                 <Zap size={18} />
-                                Start {finalCount} Question Mock Test ➔
+                                {finalCount > 0 ? `Start ${finalCount} Question Mock Test ➔` : 'No Questions Match Selected Filter'}
                             </button>
                         </div>
                     </div>
