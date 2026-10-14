@@ -1,0 +1,88 @@
+﻿index,year,question_number,question,old_node_id,new_node_id,old_subject,new_subject,old_domain,new_domain,old_sub_topic,new_sub_topic,change_type
+27,2016,28,"Amongst the following, who is the latest recipient of the 'Bharat Ratna' award?",art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards.national_cultural_awards_and_honours,general_knowledge_miscellaneous.awards_honours.civilian_gallantry_awards_of_india,"Art, Culture & Heritage",General Knowledge (Miscellaneous),"Cultural Institutions, Numismatics & Heritage Governance",Awards & Honours,Government Heritage Conservation Schemes & Cultural Awards,Civilian & Gallantry Awards of India (Bharat Ratna 1954 - First Recipients C. Ra,node changed
+171,2017,52,"Who among the following were conferred with Rajiv Gandhi Khel Ratna Award for the year 2016?
+1. Jitu Rai
+2. Dipa Karmakar
+3. P. V. Sindhu
+4. Sakshi Malik
+Select the correct answer using the code given below.",art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards.national_cultural_awards_and_honours,sports.national_sports_awards_honours.national_sports_awards,"Art, Culture & Heritage",Sports,"Cultural Institutions, Numismatics & Heritage Governance",National Sports Awards & Honours,Government Heritage Conservation Schemes & Cultural Awards,"National Sports Awards (Major Dhyan Chand Khel Ratna - Instituted 1991-92, First",node changed
+272,2002,33,"Recently, Cannes Film Festival was held in",art_culture_heritage.performing_arts,general_knowledge_miscellaneous.awards_honours.film_literature_arts_awards,"Art, Culture & Heritage",General Knowledge (Miscellaneous),"Performing Arts (Dance, Music, Theatre & Puppetry)",Awards & Honours,"Performing Arts (Dance, Music, Theatre & Puppetry)","Film, Literature & Arts Awards (Dadasaheb Phalke Award 1969 - First Devika Rani,",node changed
+275,2002,36,Knesset is the name of the Parliament of,international_relations_global_institutions,general_knowledge_miscellaneous.general_science_world_gk.countries_capitals_currencies_parliaments,International Relations & Global Institutions,General Knowledge (Miscellaneous),International Relations & Global Institutions,General Science & World GK,International Relations & Global Institutions,"Countries, Capitals, Currencies & Parliaments (Japan - Tokyo, Yen, Diet; China -",node changed
+282,2002,43,"Match Football World Cup year to host country.
+A. 1986; B. 1990; C. 1994; D. 1998.
+1. Italy; 2. Mexico; 3. France; 4. USA; 5. Spain.
+Codes are in A, B, C, D order.",international_relations_global_institutions,sports.major_sports_tournaments_achievements.football_hockey,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Football & Hockey (FIFA 1904 - Zurich; First FIFA World Cup 1930 Uruguay; AIFF 1,node changed
+289,2002,50,"Consider these Soccer World Cup statements:
+1. Before FIFA 2002 Brazil had won four World Cups.
+2. Indomitable Lions is Cameroon’s nickname.
+3. Azzurri is Italy’s nickname.
+4. Senegal, Slovenia and Ecuador were the only first-time teams in 2002.
+Which are correct?",international_relations_global_institutions,sports.major_sports_tournaments_achievements.football_hockey,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Football & Hockey (FIFA 1904 - Zurich; First FIFA World Cup 1930 Uruguay; AIFF 1,node changed
+295,2002,56,"Match football player to country.
+A. Michael Owen; B. Luis Figo; C. Gabriel Batistuta; D. Raul Gonzalez.
+1. Italy; 2. Spain; 3. Portugal; 4. Argentina; 5. England; 6. Brazil.
+Codes in A, B, C, D order.",international_relations_global_institutions,sports.major_sports_tournaments_achievements.football_hockey,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Football & Hockey (FIFA 1904 - Zurich; First FIFA World Cup 1930 Uruguay; AIFF 1,node changed
+325,2002,86,Shri Rajender Singh won the Ramon Magsaysay Award for,art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards.national_cultural_awards_and_honours,general_knowledge_miscellaneous.awards_honours.international_awards_indian_laureates,"Art, Culture & Heritage",General Knowledge (Miscellaneous),"Cultural Institutions, Numismatics & Heritage Governance",Awards & Honours,Government Heritage Conservation Schemes & Cultural Awards,"International Awards & Indian Laureates (Nobel Prize 1901 - Alfred Nobel, Econom",node changed
+350,2002,111,Who wrote Algebra of Infinite Justice?,art_culture_heritage.indian_literature_languages,general_knowledge_miscellaneous.books_authors.indian_writing_booker_winners,"Art, Culture & Heritage",General Knowledge (Miscellaneous),Indian Literature & Languages,Books & Authors,Indian Literature & Languages,Indian Writing & Booker Winners (Gitanjali - Rabindranath Tagore; The Discovery ,node changed
+412,2004,53,"Match railway zones and headquarters.
+A. East-Central
+B. North-Western
+C. North-Central
+D. South-Western
+1. Hubli
+2. Allahabad
+3. Hajipur
+4. Jabalpur
+5. Jaipur
+Codes: A, B, C, D.",indian_economy_development.infrastructure_energy_investment_models.physical_infrastructure_systems,general_knowledge_miscellaneous.organisations_mottos_nicknames.headquarters_of_indian_institutions,Indian Economy & Development,General Knowledge (Miscellaneous),"Infrastructure, Energy & Investment Models","Organisations, Mottos & Nicknames",Physical Infrastructure Systems (Road Infrastructure - National Highways Authori,"Headquarters of Indian Institutions (Bengaluru - ISRO, HAL, BEL, BEML, IISc, NIM",node changed
+455,2004,96,"Who were Bharat Ratna recipients?
+1. Amartya Sen
+2. Gulzar Lal Nanda
+3. M. S. Swaminathan
+4. Satyajit Ray",art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards.national_cultural_awards_and_honours,general_knowledge_miscellaneous.awards_honours.civilian_gallantry_awards_of_india,"Art, Culture & Heritage",General Knowledge (Miscellaneous),"Cultural Institutions, Numismatics & Heritage Governance",Awards & Honours,Government Heritage Conservation Schemes & Cultural Awards,Civilian & Gallantry Awards of India (Bharat Ratna 1954 - First Recipients C. Ra,node changed
+461,2004,102,"Match Athens Olympic sportspersons and countries.
+A. Michael Phelps
+B. Ian Thorpe
+C. Yulia Nesterenko
+D. Nicolas Massu
+1. Belarus
+2. USA
+3. Australia
+4. Chile
+5. Sweden
+Codes: A, B, C, D.",international_relations_global_institutions,sports.olympic_multi_sport_events.olympic_movement,International Relations & Global Institutions,Sports,International Relations & Global Institutions,Olympic & Multi-Sport Events,International Relations & Global Institutions,Olympic Movement (Modern Olympics 1896 Athens - Pierre de Coubertin; Internation,node changed
+462,2004,103,Who won the men’s 100-metre race at Athens Olympics in August 2004?,international_relations_global_institutions,sports.olympic_multi_sport_events.olympic_movement,International Relations & Global Institutions,Sports,International Relations & Global Institutions,Olympic & Multi-Sport Events,International Relations & Global Institutions,Olympic Movement (Modern Olympics 1896 Athens - Pierre de Coubertin; Internation,node changed
+463,2004,104,Which Indian film actor/director received the Order of the British Empire in 2004?,art_culture_heritage.cultural_institutions_numismatics_initiatives.government_heritage_conservation_schemes_awards.national_cultural_awards_and_honours,general_knowledge_miscellaneous.awards_honours.international_awards_indian_laureates,"Art, Culture & Heritage",General Knowledge (Miscellaneous),"Cultural Institutions, Numismatics & Heritage Governance",Awards & Honours,Government Heritage Conservation Schemes & Cultural Awards,"International Awards & Indian Laureates (Nobel Prize 1901 - Alfred Nobel, Econom",node changed
+478,2004,119,"Match authors and books.
+A. Bill Clinton
+B. Henry Kissinger
+C. Nelson Mandela
+D. Hillary Clinton
+1. Between Hope and History
+2. Living History
+3. Diplomacy
+4. Long Walk to Freedom
+Codes: A, B, C, D.",international_relations_global_institutions,general_knowledge_miscellaneous.books_authors.autobiographies_memoirs,International Relations & Global Institutions,General Knowledge (Miscellaneous),International Relations & Global Institutions,Books & Authors,International Relations & Global Institutions,Autobiographies & Memoirs (The Story of My Experiments with Truth - M.K. Gandhi;,node changed
+501,2012,22,Who won the UEFA Euro 2012 Golden Boot?,international_relations_global_institutions,sports.major_sports_tournaments_achievements.football_hockey,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Football & Hockey (FIFA 1904 - Zurich; First FIFA World Cup 1930 Uruguay; AIFF 1,node changed
+504,2012,25,"Match books and authors.
+A. Rahul Dravid: Timeless Steel
+B. An Ashes Summer
+C. Sachin: A Hundred Hundreds Now
+D. Opening Up: My Autography
+1. Steve Waugh and Nasser Hussain
+2. Greg Chappell
+3. Mike Atherton
+4. V. Krishnaswamy
+Codes: A, B, C, D.",international_relations_global_institutions,sports.trophies_terminology_teams_venues.sports_autobiographies_nicknames,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Trophies, Terminology, Teams & Venues",International Relations & Global Institutions,Sports Autobiographies & Nicknames (Playing It My Way - Sachin Tendulkar; 281 an,node changed
+633,2021,54,Who discovered the proton?,science_technology_defence.applied_fundamental_sciences.applied_chemistry,general_knowledge_miscellaneous.general_science_world_gk.inventions_discoveries,"Science, Technology & Defence",General Knowledge (Miscellaneous),Applied & Fundamental Sciences,General Science & World GK,"Applied Chemistry (Chemical Compounds & Industrial Materials - Acids & Bases, Po",Inventions & Discoveries (Printing Press - Gutenberg; Steam Engine - James Watt;,node changed
+635,2021,56,Which railway zone–headquarters pair is not correctly matched?,indian_economy_development.infrastructure_energy_investment_models.physical_infrastructure_systems,general_knowledge_miscellaneous.organisations_mottos_nicknames.headquarters_of_indian_institutions,Indian Economy & Development,General Knowledge (Miscellaneous),"Infrastructure, Energy & Investment Models","Organisations, Mottos & Nicknames",Physical Infrastructure Systems (Road Infrastructure - National Highways Authori,"Headquarters of Indian Institutions (Bengaluru - ISRO, HAL, BEL, BEML, IISc, NIM",node changed
+675,2021,96,Who became the first bowler to take 200 wickets of left-handed batters in Test cricket?,international_relations_global_institutions,sports.major_sports_tournaments_achievements.cricket,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Cricket (International Cricket Council / ICC 1909 - Dubai; BCCI 1928; India's Fi,node changed
+677,2021,98,International Mother Language Day has been observed on 21 February since 2000 on the initiative of which country?,international_relations_global_institutions.global_institutions_agreements_treaties.international_organisations_reform,general_knowledge_miscellaneous.important_days_observances.international_days,International Relations & Global Institutions,General Knowledge (Miscellaneous),"Global Institutions, Agreements & Treaties",Important Days & Observances,International Organisations & Reform (United Nations Security Council / UNSC Ref,International Days (21 February International Mother Language Day; 8 March Inter,node changed
+690,2021,111,Who authored The Little Book of Encouragement?,international_relations_global_institutions,general_knowledge_miscellaneous.books_authors,International Relations & Global Institutions,General Knowledge (Miscellaneous),International Relations & Global Institutions,Books & Authors,International Relations & Global Institutions,Books & Authors,node changed
+691,2021,112,On which date is Parakram Diwas observed?,history.indian_freedom_struggle.wwii_cripps_mission_quit_india_movement_ina.subhash_chandra_bose_indian_national_army_ina,general_knowledge_miscellaneous.important_days_observances.national_days_of_india,History,General Knowledge (Miscellaneous),Indian Freedom Struggle,Important Days & Observances,"WWII, Cripps Mission, Quit India Movement & INA (1939–1945)",National Days of India (12 January National Youth Day - Swami Vivekananda; 24 Ja,node changed
+694,2021,115,Whom did Naomi Osaka defeat in the 2021 Australian Open women’s singles final?,international_relations_global_institutions,sports.major_sports_tournaments_achievements.badminton_tennis,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Badminton & Tennis (Badminton World Federation / BWF - Kuala Lumpur; Prakash Pad,node changed
+937,2023,118,The 2022 Chemistry Nobel recognised what?,science_technology_defence.applied_fundamental_sciences.applied_chemistry,general_knowledge_miscellaneous.awards_honours.international_awards_indian_laureates,"Science, Technology & Defence",General Knowledge (Miscellaneous),Applied & Fundamental Sciences,Awards & Honours,"Applied Chemistry (Chemical Compounds & Industrial Materials - Acids & Bases, Po","International Awards & Indian Laureates (Nobel Prize 1901 - Alfred Nobel, Econom",node changed
+939,2023,120,Which Santosh Trophy 2023 statements are correct? 1. The final was in Riyadh. 2. Karnataka played Meghalaya in the final.,international_relations_global_institutions,sports.major_sports_tournaments_achievements.football_hockey,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Football & Hockey (FIFA 1904 - Zurich; First FIFA World Cup 1930 Uruguay; AIFF 1,node changed
+1053,2025,114,"Which statements about the 2026 FIFA Men’s World Cup are correct?
+1. USA, Mexico and Canada jointly host it.
+2. Forty-eight teams participate.",international_relations_global_institutions,sports.major_sports_tournaments_achievements.football_hockey,International Relations & Global Institutions,Sports,International Relations & Global Institutions,"Major Sports, Tournaments & Achievements",International Relations & Global Institutions,Football & Hockey (FIFA 1904 - Zurich; First FIFA World Cup 1930 Uruguay; AIFF 1,node changed

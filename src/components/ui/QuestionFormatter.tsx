@@ -664,6 +664,20 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
 export function OptionFormatter({ text }: { text: string }) {
     if (!text) return null;
     
+    const trimmed = text.trim();
+    if (/^https?:\/\/.+\.(png|jpg|jpeg|webp|svg|gif)(\?.*)?$/i.test(trimmed) || trimmed.includes('.r2.dev/questions/')) {
+        return (
+            <span style={{ display: 'inline-block', margin: '4px 0' }}>
+                <img 
+                    src={trimmed} 
+                    alt="Option diagram" 
+                    style={{ maxHeight: '140px', maxWidth: '100%', objectFit: 'contain', borderRadius: '6px', border: '1px solid var(--border)', background: '#ffffff', padding: '4px' }} 
+                    loading="lazy"
+                />
+            </span>
+        );
+    }
+
     if (text.includes(';')) {
         const parts = text.split(';');
         return (

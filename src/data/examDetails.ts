@@ -491,6 +491,112 @@ export const EXAM_DETAILS: Record<string, ExamInfo> = {
         ]
     },
 
+    'kea': {
+        id: 'kea',
+        slug: 'kea',
+        title: 'KEA Karnataka State Recruitment Examinations',
+        title_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ (KEA) ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳು',
+        shortName: 'KEA Recruitment',
+        conductingBody: 'Karnataka Examinations Authority (KEA), Government of Karnataka',
+        conductingBody_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ, ಕರ್ನಾಟಕ ಸರ್ಕಾರ',
+        tagline: 'State recruitment examinations for FDA, SDA, VAO, Police, GTTC, Assistant Professors & Board/Corporation Technical Posts.',
+        tagline_kn: 'ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಪ್ರಥಮ & ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕರು, ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ, ಪೊಲೀಸ್ ಹಾಗೂ ನಿಗಮ-ಮಂಡಳಿಗಳ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳು.',
+        category: 'karnataka',
+        overview: 'Karnataka Examinations Authority (KEA) is the premier state recruitment agency responsible for conducting direct recruitment examinations for various government departments, boards, and corporations across Karnataka. Our archive includes 6,364 authentic questions across 64 actual papers (2023–2026) including FDA, SDA, VAO, Police Constables, GTTC, and Legislative Council.',
+        jobRole: {
+            designation: 'Group B & Group C Officers / Technical & Administrative Cadres',
+            cadre: 'Group B & Group C',
+            department: 'Various Karnataka Government Departments, Boards & Corporations',
+            keyResponsibilities: [
+                'State administrative execution and public service delivery across Karnataka.',
+                'Revenue, policing, regulatory compliance, and local governance operations.',
+                'Technical execution in engineering, urban water supply (BWSSB), power, and transport corporations.',
+                'Implementation of Karnataka state welfare schemes, Sakala, and citizen charter services.'
+            ],
+            careerProgression: [
+                'Entry Level Group C / Group B ➔ Senior Assistant / Section Officer',
+                'Section Officer ➔ Assistant Secretary / Assistant Commissioner',
+                'Deputy Director / Joint Director Cadre Progression'
+            ],
+            postingLocations: 'Districts and Taluks across Karnataka (HK & Non-HK / RPC regions).',
+            payScale: {
+                level: 'Group B & C Pay Scales: ₹21,400 to ₹83,900',
+                basicPayRange: '₹21,400 – ₹83,900',
+                approxMonthlyGross: '₹32,000 – ₹1,05,000+ (plus DA, HRA, CCA, Medical allowances)',
+                perks: ['NPS / State Pension System', 'Karnataka Arogya Sanjeevini (KASS)', 'State Government Travel Allowances']
+            }
+        },
+        eligibility: {
+            ageLimit: {
+                general: '18 to 35 years',
+                obc_2a_2b_3a_3b: '18 to 38 years (2A, 2B, 3A, 3B)',
+                sc_st_cat1: '18 to 40 years (SC, ST, Category-1)'
+            },
+            educationalQualification: 'Degree / 2nd PUC / Diploma / Engineering Degree depending on specific post notification.'
+        },
+        stages: [
+            {
+                stageNumber: 1,
+                stageName: 'Competitive Written Examination (Paper 1)',
+                mode: 'Objective (CBT/OMR)',
+                totalMarks: 100,
+                durationMinutes: 120,
+                description: 'Paper 1: General Knowledge, General Studies, Constitution, History, Karnataka Heritage & Mental Ability.',
+                papers: [
+                    {
+                        paperName: 'Paper 1: General Knowledge (ಸಾಮಾನ್ಯ ಜ್ಞಾನ)',
+                        questionsCount: 100,
+                        marks: 100,
+                        durationMinutes: 120,
+                        negativeMarking: '0.25 (1/4th)',
+                        subjects: [
+                            'History of India & Karnataka',
+                            'Indian Polity & Constitution',
+                            'General Science & Technology',
+                            'Karnataka & Indian Geography',
+                            'Indian Economy & Karnataka Schemes',
+                            'General Mental Ability & Reasoning',
+                            'Current Affairs'
+                        ]
+                    }
+                ]
+            },
+            {
+                stageNumber: 2,
+                stageName: 'Communication / Domain Paper (Paper 2)',
+                mode: 'Objective (CBT/OMR)',
+                totalMarks: 100,
+                durationMinutes: 120,
+                description: 'Paper 2: General Kannada, General English and Computer Literacy (or specific technical subject paper).',
+                papers: [
+                    {
+                        paperName: 'Paper 2: Communication / Specific Paper',
+                        questionsCount: 100,
+                        marks: 100,
+                        durationMinutes: 120,
+                        negativeMarking: '0.25 (1/4th)',
+                        subjects: [
+                            'General Kannada Grammar & Literature (35 Marks)',
+                            'General English Grammar & Vocabulary (35 Marks)',
+                            'Computer Knowledge & Basics (30 Marks)'
+                        ]
+                    }
+                ]
+            }
+        ],
+        syllabusFocus: [
+            { pillarName: 'Karnataka Governance & Heritage', weightage: 'Very High', topics: ['Kadamba, Chalukya, Rashtrakuta & Vijayanagara History', 'Mysore Kingdom & Unification', 'Article 371J (Kalyana-Karnataka)', 'Karnataka Lokayukta & Sakala'] },
+            { pillarName: 'Communication Paper Mastery', weightage: 'Very High', topics: ['Kannada Sandhi, Samasa, Tatsama-Tadbhava', 'English Error Spotting & Idioms', 'Computer Memory, MS Office, Internet & Cybersecurity'] },
+            { pillarName: 'Indian Constitution & Polity', weightage: 'High', topics: ['Fundamental Rights & DPSP', 'State Executive & Governor', 'Local Bodies (73rd/74th Amendments)', 'Panchayat Raj & Municipalities'] },
+            { pillarName: 'Mental Ability & Quantitative Aptitude', weightage: 'High', topics: ['Number Series & Coding-Decoding', 'Data Interpretation & Graphs', 'Arithmetic Progression & Percentages', 'Logical Puzzles'] }
+        ],
+        faqs: [
+            { question: 'What examinations are covered under KEA in this portal?', answer: 'This repository contains 6,364 authentic questions across 64 official KEA question papers (2023–2026), including First Division Assistant (FDA), Second Division Assistant (SDA), Village Administrative Officer (VAO), Police Constables (Civil & KSRP/KSISF), GTTC Officers, Legislative Council, and technical corporation posts.' },
+            { question: 'Is there negative marking in KEA recruitment tests?', answer: 'Yes, most KEA recruitment objective tests have a negative marking of 0.25 marks (1/4th) for each incorrect answer.' },
+            { question: 'Are tests available in both English and Kannada?', answer: 'Yes, all KEA papers are fully bilingual (English & Kannada) with bilingual question statements, options, and detailed explanations.' }
+        ]
+    },
+
     'kea-vao': {
         id: 'kea-vao',
         slug: 'kea-vao',

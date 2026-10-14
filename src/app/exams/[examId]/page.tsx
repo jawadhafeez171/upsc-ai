@@ -162,6 +162,43 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
                     const { count } = await query;
                     qCount = count || 0;
+                } else if (examId === 'kea' || examId.startsWith('kea-')) {
+                    let query = supabase.from('kea_questions').select('id', { count: 'exact', head: true });
+                    
+                    if (paperCode !== 'all') {
+                        if (paperCode === 'fda-sda') {
+                            query = query.or('paper_code.ilike.%fda%,paper_code.ilike.%sda%,paper_code.ilike.%kec1%');
+                        } else if (paperCode === 'vao') {
+                            query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
+                        } else if (paperCode === 'police') {
+                            query = query.or('paper_code.ilike.%civilpc%,paper_code.ilike.%ksrp%,paper_code.ilike.%psi%');
+                        } else if (paperCode === 'leg-council') {
+                            query = query.ilike('paper_code', '%legcouncil%');
+                        } else if (paperCode === 'tech-eng') {
+                            query = query.or('paper_code.ilike.%bwssb%,paper_code.ilike.%kuwsdb%,paper_code.ilike.%kridl%,paper_code.ilike.%ksscl%,paper_code.ilike.%gttc%');
+                        } else if (paperCode === 'coaching') {
+                            query = query.or('paper_code.ilike.%coaching%,paper_code.ilike.%swd%,paper_code.ilike.%bcwd%,paper_code.ilike.%minority%');
+                        } else {
+                            query = query.eq('paper_code', paperCode);
+                        }
+                    } else if (examId === 'kea-vao') {
+                        query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
+                    } else if (examId === 'kea-kset') {
+                        query = query.ilike('paper_code', '%kset%');
+                    }
+
+                    if (mode === 'subject' && subject) {
+                        query = query.or(`subject.eq."${subject}",subject_kannada.eq."${subject}"`);
+                    }
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                    if (year !== 'all') query = query.eq('year', year);
+
+                    const { count: keaCount, error: keaErr } = await query;
+                    if (!keaErr && keaCount !== null) {
+                        qCount = keaCount;
+                    } else {
+                        qCount = 6364;
+                    }
                 } else {
                     let query = supabase.from('questions').select('id', { count: 'exact', head: true }).eq('exam_id', examId);
                     if (mode === 'subject' && subject) query = query.eq('subject', subject);
@@ -203,10 +240,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             difficulty,
             question_count: finalCount,
             language: testLang,
-            year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' ? year : examId === 'ksp-pc' ? 2026 : undefined,
+            year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' || examId === 'kea' || examId.startsWith('kea-') ? year : examId === 'ksp-pc' ? 2026 : undefined,
             paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : ((examId === 'upsc-capf' || examId === 'upsc-epfo') ? 1 : undefined),
             month: examId === 'kpsc-kas' ? month : examId === 'ksp-pc' ? 'September' : undefined,
-            paper_code: examId === 'ksp-pc' || examId === 'upsc-epfo' ? paperCode : undefined
+            paper_code: examId === 'ksp-pc' || examId === 'upsc-epfo' || examId === 'kea' || examId.startsWith('kea-') ? paperCode : undefined
         };
 
         const sessionId = `session_${Date.now()}`;
@@ -499,15 +536,109 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             )}
 
                             {/* Year-Wise & Paper-Wise Filters */}
-                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo') && (
+                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' || examId === 'kea' || examId.startsWith('kea-')) && (
                                 <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                                     {/* Paper Selector */}
                                     <div>
                                         <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                            <span>📄 SELECT EXAM PAPER:</span>
+                                            <span>📄 SELECT EXAM PAPER / CADRE:</span>
                                         </label>
                                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                            {examId === 'upsc-epfo' ? (
+                                            {examId === 'kea' || examId.startsWith('kea-') ? (
+                                                <>
+                                                    <button
+                                                        onClick={() => setPaperCode('all')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'all' ? '#0D9488' : 'var(--bg-primary)',
+                                                            color: paperCode === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'all' ? '1px solid #0D9488' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        🌟 All Papers (64 Papers — 6,364 Qs)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('fda-sda')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'fda-sda' ? '#0D9488' : 'var(--bg-primary)',
+                                                            color: paperCode === 'fda-sda' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'fda-sda' ? '1px solid #0D9488' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        📋 KEA FDA & SDA (12 Papers)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('vao')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'vao' ? '#0D9488' : 'var(--bg-primary)',
+                                                            color: paperCode === 'vao' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'vao' ? '1px solid #0D9488' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        🌾 KEA VAO & Compulsory Kannada (4 Papers)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('police')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'police' ? '#0D9488' : 'var(--bg-primary)',
+                                                            color: paperCode === 'police' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'police' ? '1px solid #0D9488' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        👮 Civil PC, KSRP/KSISF & PSI (5 Papers)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('leg-council')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'leg-council' ? '#0D9488' : 'var(--bg-primary)',
+                                                            color: paperCode === 'leg-council' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'leg-council' ? '1px solid #0D9488' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        🏛️ Legislative Council (6 Papers)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('tech-eng')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'tech-eng' ? '#0D9488' : 'var(--bg-primary)',
+                                                            color: paperCode === 'tech-eng' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'tech-eng' ? '1px solid #0D9488' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        ⚙️ Technical & Engineering (GTTC, BWSSB, KRIDL)
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setPaperCode('coaching')}
+                                                        style={{
+                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
+                                                            fontSize: '12.5px', fontWeight: 700,
+                                                            background: paperCode === 'coaching' ? '#0D9488' : 'var(--bg-primary)',
+                                                            color: paperCode === 'coaching' ? '#FFFFFF' : 'var(--text-secondary)',
+                                                            border: paperCode === 'coaching' ? '1px solid #0D9488' : '1px solid var(--border)',
+                                                            transition: 'all 0.15s'
+                                                        }}
+                                                    >
+                                                        🎯 Free Coaching Entrance (SWD, BCWD, IAS/KAS)
+                                                    </button>
+                                                </>
+                                            ) : examId === 'upsc-epfo' ? (
                                                 <>
                                                     <button
                                                         onClick={() => setPaperCode('all')}
@@ -645,15 +776,17 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     transition: 'all 0.15s'
                                                 }}
                                             >
-                                                {examId === 'upsc-capf' ? 'All Years (2014–2026)' : examId === 'upsc-epfo' ? 'All Years (2002–2025 — 1,060 Qs)' : 'All Years (2011–2024)'}
+                                                {examId === 'kea' || examId.startsWith('kea-') ? 'All Years (2023–2026 — 6,364 Qs)' : examId === 'upsc-capf' ? 'All Years (2014–2026)' : examId === 'upsc-epfo' ? 'All Years (2002–2025 — 1,060 Qs)' : 'All Years (2011–2024)'}
                                             </button>
-                                            {(examId === 'upsc-capf'
-                                                ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
-                                                : examId === 'upsc-epfo'
-                                                    ? [2025, 2023, 2021, 2017, 2016, 2012, 2004, 2002]
-                                                    : examId === 'kpsc-kas' 
-                                                        ? [2024, 2020, 2017, 2015, 2011]
-                                                        : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
+                                            {(examId === 'kea' || examId.startsWith('kea-')
+                                                ? [2026, 2025, 2024, 2023]
+                                                : examId === 'upsc-capf'
+                                                    ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
+                                                    : examId === 'upsc-epfo'
+                                                        ? [2025, 2023, 2021, 2017, 2016, 2012, 2004, 2002]
+                                                        : examId === 'kpsc-kas' 
+                                                            ? [2024, 2020, 2017, 2015, 2011]
+                                                            : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
                                             ).map((yr) => {
                                                 const isSelected = year === yr;
                                                 const isEpfoMatch = examId !== 'upsc-epfo' || paperCode === 'all' 

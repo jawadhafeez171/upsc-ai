@@ -1,20 +1,80 @@
 # -*- coding: utf-8 -*-
 """
-Sync Multi-Stream Knowledge Graph to Supabase
----------------------------------------------
-Ingests:
-1. Civil Services Subgraph (760 nodes) -> stream: 'civil_services'
-2. Teaching Subgraph (90 nodes) -> stream: 'teaching'
-3. State Languages Subgraph (29 nodes) -> stream: 'languages'
-4. Master Unified Graph (815 nodes) -> metadata & master federation
+Universal Knowledge Graph Supabase Sync Engine
+-----------------------------------------------
+Seeds 100% of nodes directly from Master Knowledge Graph (src/data/knowledge_graph.json)
+into Supabase PostgreSQL (public.knowledge_nodes and public.knowledge_graph_meta).
 
-Performs batch upsert (batches of 100) to public.knowledge_nodes and public.knowledge_graph_meta.
+Features:
+1. Direct ingestion of all 1,236 unified nodes from knowledge_graph.json
+2. Multi-stream classification:
+   - civil_services (History, Geography, Polity, Economy, Science, Environment, etc.)
+   - teaching (Educational Psychology, Child Development & Pedagogy)
+   - languages (Language Proficiency, Grammar & Communication, Communication Paper)
+   - epfo (Industrial Relations, Accounting, Auditing, Insurance, Social Security, Statistics)
+3. Ascending topological ordering (Level 1 -> 4) to honor foreign key constraints
+4. Batch upserting (chunks of 100) via REST API
+5. Purging of corrupt / obsolete ghost nodes
+6. Full synchronization of knowledge_graph_meta records
 """
 
 import os
+import sys
 import json
 import urllib.request
 import urllib.error
+import urllib.parse
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+CIVIL_SERVICES_SUBJECTS = {
+    "history",
+    "art_culture_heritage",
+    "geography_earth_systems",
+    "indian_society_social_justice",
+    "indian_polity_constitution_governance",
+    "international_relations_global_institutions",
+    "indian_economy_development",
+    "environment_ecology_disaster_management",
+    "science_technology_defence",
+    "internal_security",
+    "ethics_integrity_aptitude",
+    "general_mental_ability_quantitative_aptitude_comprehension",
+    "sports",
+    "general_knowledge_miscellaneous"
+}
+
+TEACHING_SUBJECTS = {
+    "educational_psychology_child_development_teaching_pedagogy"
+}
+
+LANGUAGES_SUBJECTS = {
+    "language_proficiency_grammar_communication",
+    "communication_paper"
+}
+
+EPFO_SUBJECTS = {
+    "industrial_relations_and_labour_laws",
+    "general_accounting_principles",
+    "auditing",
+    "insurance",
+    "social_security_in_india",
+    "applied_statistics"
+}
+
+OBSOLETE_NODES_TO_DELETE = [
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure.',
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure.-',
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure..current_affair_article_linked_to_with_temporal_stamp_and_context_summary',
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure..geography_regional_geography_karnataka_geography',
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure..history_regional_history_karnataka_history',
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure..indian_economy_regional_economy_karnataka_state_economy',
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure..mind_map_flashcard_generated_automatically_from_node_hierarchy_and_relationship_edges',
+    'language_proficiency_grammar_communication.general_kannada_grammar_structure..pyq_linked_to_with_exam_tag',
+    'language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards.',
+    'language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.',
+    'language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.-'
+]
 
 def load_env():
     env = {}
@@ -41,156 +101,23 @@ def make_request(url, key, method='GET', body=None, prefer='return=representatio
         content = resp.read().decode('utf-8')
         return json.loads(content) if content else {}
 
-def main():
-    env = load_env()
-    supabase_url = env.get('NEXT_PUBLIC_SUPABASE_URL')
-    supabase_key = env.get('NEXT_PUBLIC_SUPABASE_ANON_KEY')
+def get_node_streams(node):
+    sid = node.get('subjectId') or node.get('id')
+    if sid == 'communication_paper':
+        return 'languages', ['languages', 'communication_paper']
+    elif sid in LANGUAGES_SUBJECTS:
+        return 'languages', ['languages']
+    elif sid in TEACHING_SUBJECTS:
+        return 'teaching', ['teaching']
+    elif sid in EPFO_SUBJECTS:
+        return 'epfo', ['epfo']
+    elif sid in CIVIL_SERVICES_SUBJECTS:
+        return 'civil_services', ['civil_services']
+    else:
+        return 'civil_services', ['civil_services']
 
-    if not supabase_url or not supabase_key or 'placeholder' in supabase_url:
-        print("ERROR: Supabase URL or Key not properly configured in .env.local")
-        return
-
-    print(f"Connecting to Supabase: {supabase_url}")
-
-    # 1. Load Subgraphs
-    cs_graph = json.load(open('src/data/knowledge_graph_civil_services.json', encoding='utf-8'))
-    teaching_graph = json.load(open('src/data/knowledge_graph_teaching.json', encoding='utf-8'))
-    lang_graph = json.load(open('src/data/knowledge_graph_languages.json', encoding='utf-8'))
-    epfo_graph = json.load(open('src/data/knowledge_graph_epfo.json', encoding='utf-8'))
-    unified_graph = json.load(open('src/data/knowledge_graph.json', encoding='utf-8'))
-
-    print(f"Loaded CS: {len(cs_graph['nodes'])} nodes")
-    print(f"Loaded Teaching: {len(teaching_graph['nodes'])} nodes")
-    print(f"Loaded Languages: {len(lang_graph['nodes'])} nodes")
-    print(f"Loaded EPFO: {len(epfo_graph['nodes'])} nodes")
-    print(f"Loaded Master Unified: {len(unified_graph['nodes'])} nodes")
-
-    # 2. Build consolidated node record map with stream tags
-    nodes_payload = {}
-
-    # Civil Services nodes
-    for nid, node in cs_graph['nodes'].items():
-        record = format_node_record(node, 'civil_services')
-        nodes_payload[nid] = record
-
-    # Teaching nodes
-    for nid, node in teaching_graph['nodes'].items():
-        if nid in nodes_payload:
-            nodes_payload[nid]['streams'].append('teaching')
-        else:
-            record = format_node_record(node, 'teaching')
-            nodes_payload[nid] = record
-
-    # Languages nodes
-    for nid, node in lang_graph['nodes'].items():
-        if nid in nodes_payload:
-            nodes_payload[nid]['streams'].append('languages')
-        else:
-            record = format_node_record(node, 'languages')
-            nodes_payload[nid] = record
-
-    # EPFO nodes
-    for nid, node in epfo_graph['nodes'].items():
-        if nid in nodes_payload:
-            if 'epfo' not in nodes_payload[nid]['streams']:
-                nodes_payload[nid]['streams'].append('epfo')
-        else:
-            record = format_node_record(node, 'epfo')
-            nodes_payload[nid] = record
-
-    # Master Unified check to ensure all nodes are present
-    for nid, node in unified_graph['nodes'].items():
-        if nid not in nodes_payload:
-            record = format_node_record(node, 'civil_services')
-            nodes_payload[nid] = record
-
-    all_nodes_list = list(nodes_payload.values())
-    # Sort nodes by level ascending (Level 1 Subject -> Level 2 Domain -> Level 3 Topic -> Level 4 Subtopic)
-    # This guarantees that parent nodes exist before child nodes reference them in parent_id
-    all_nodes_list.sort(key=lambda n: n['level'])
-    print(f"\nTotal consolidated nodes to upsert: {len(all_nodes_list)} (sorted by level 1->4)")
-
-    # 3. Upsert knowledge_nodes in batches of 100
-    batch_size = 100
-    endpoint_nodes = f"{supabase_url}/rest/v1/knowledge_nodes?on_conflict=id"
-    
-    total_upserted = 0
-    for i in range(0, len(all_nodes_list), batch_size):
-        batch = all_nodes_list[i:i + batch_size]
-        try:
-            make_request(endpoint_nodes, supabase_key, method='POST', body=batch, prefer='resolution=merge-duplicates')
-            total_upserted += len(batch)
-            print(f"  Upserted nodes batch {i+1} to {min(i+batch_size, len(all_nodes_list))} / {len(all_nodes_list)}")
-        except urllib.error.HTTPError as e:
-            err_body = e.read().decode('utf-8')
-            if 'column' in err_body and ('stream' in err_body or 'streams' in err_body):
-                for r in batch:
-                    r.pop('stream', None)
-                    r.pop('streams', None)
-                try:
-                    make_request(endpoint_nodes, supabase_key, method='POST', body=batch, prefer='resolution=merge-duplicates')
-                    total_upserted += len(batch)
-                    print(f"  Upserted nodes batch {i+1} to {min(i+batch_size, len(all_nodes_list))} / {len(all_nodes_list)} (without stream column)")
-                except urllib.error.HTTPError as e2:
-                    print(f"  HTTP Error {e2.code} in batch {i}: {e2.read().decode('utf-8')}")
-            else:
-                print(f"  HTTP Error {e.code} in batch {i}: {err_body}")
-        except Exception as e:
-            print(f"  Unexpected error in batch {i}: {e}")
-
-    # 4. Upsert Knowledge Graph Meta records
-    endpoint_meta = f"{supabase_url}/rest/v1/knowledge_graph_meta?on_conflict=id"
-    
-    # Collect all root subject ids for current unified graph
-    current_roots = list(dict.fromkeys(
-        unified_graph.get("rootSubjectIds", []) + epfo_graph.get("rootSubjectIds", [])
-    ))
-    
-    meta_records = [
-        {
-            "id": "current",
-            "version": unified_graph.get("version", "2.5.0"),
-            "root_subject_ids": current_roots,
-            "stats": {
-                "totalNodes": len(all_nodes_list),
-                "epfoNodes": len(epfo_graph['nodes'])
-            }
-        },
-        {
-            "id": "civil_services",
-            "version": cs_graph.get("version", "2.0.0"),
-            "root_subject_ids": cs_graph.get("rootSubjectIds", []),
-            "stats": cs_graph.get("stats", {})
-        },
-        {
-            "id": "teaching",
-            "version": teaching_graph.get("version", "2.0.0"),
-            "root_subject_ids": teaching_graph.get("rootSubjectIds", []),
-            "stats": teaching_graph.get("stats", {})
-        },
-        {
-            "id": "languages",
-            "version": lang_graph.get("version", "2.0.0"),
-            "root_subject_ids": lang_graph.get("rootSubjectIds", []),
-            "stats": lang_graph.get("stats", {})
-        },
-        {
-            "id": "epfo",
-            "version": epfo_graph.get("version", "1.0.0"),
-            "root_subject_ids": epfo_graph.get("rootSubjectIds", []),
-            "stats": epfo_graph.get("stats", {})
-        }
-    ]
-
-    try:
-        make_request(endpoint_meta, supabase_key, method='POST', body=meta_records, prefer='resolution=merge-duplicates')
-        print("Successfully updated knowledge_graph_meta entries for all 5 streams.")
-    except Exception as e:
-        print(f"Error updating knowledge_graph_meta: {e}")
-
-    print(f"\nKnowledge Graph Supabase Sync Completed: {total_upserted} nodes synced.")
-
-def format_node_record(node, primary_stream):
+def format_node_record(node):
+    primary_stream, stream_list = get_node_streams(node)
     return {
         "id": node["id"],
         "slug": node.get("slug", node["id"].split(".")[-1]),
@@ -208,8 +135,165 @@ def format_node_record(node, primary_stream):
         "entities": node.get("entities", []),
         "keywords": node.get("keywords", []),
         "stream": primary_stream,
-        "streams": [primary_stream]
+        "streams": stream_list
     }
+
+def main():
+    print("==================================================")
+    print("   SEEDING MASTER KNOWLEDGE GRAPH TO SUPABASE     ")
+    print("==================================================")
+    
+    env = load_env()
+    supabase_url = env.get('NEXT_PUBLIC_SUPABASE_URL')
+    supabase_key = env.get('NEXT_PUBLIC_SUPABASE_ANON_KEY')
+
+    if not supabase_url or not supabase_key or 'placeholder' in supabase_url:
+        print("ERROR: Supabase URL or Key not configured in .env.local")
+        return
+
+    print(f"Target Database: {supabase_url}")
+
+    # 1. Load Master Graph
+    master_path = 'src/data/knowledge_graph.json'
+    with open(master_path, 'r', encoding='utf-8') as f:
+        master_kg = json.load(f)
+
+    nodes = master_kg.get('nodes', {})
+    root_subjects = master_kg.get('rootSubjectIds', [])
+    print(f"Loaded Master KG: {len(nodes)} nodes across {len(root_subjects)} root subjects.")
+
+    # 2. Format and sort nodes (Level 1 -> 4)
+    formatted_nodes = [format_node_record(n) for n in nodes.values()]
+    formatted_nodes.sort(key=lambda n: n['level'])
+
+    # 3. Upsert nodes in batches of 100
+    batch_size = 100
+    endpoint_nodes = f"{supabase_url}/rest/v1/knowledge_nodes?on_conflict=id"
+    total_upserted = 0
+
+    print(f"\nBeginning upsert of {len(formatted_nodes)} nodes (batch size: {batch_size})...")
+    for i in range(0, len(formatted_nodes), batch_size):
+        batch = formatted_nodes[i:i + batch_size]
+        try:
+            make_request(endpoint_nodes, supabase_key, method='POST', body=batch, prefer='resolution=merge-duplicates')
+            total_upserted += len(batch)
+            print(f"  [Batch {i // batch_size + 1}] Upserted {total_upserted}/{len(formatted_nodes)} nodes (levels {batch[0]['level']}-{batch[-1]['level']})")
+        except urllib.error.HTTPError as e:
+            err_body = e.read().decode('utf-8')
+            print(f"  [ERROR] HTTP {e.code} in batch {i}: {err_body}")
+            raise
+        except Exception as e:
+            print(f"  [ERROR] Unexpected error in batch {i}: {e}")
+            raise
+
+    print(f"All {total_upserted} knowledge nodes successfully upserted into Supabase.")
+
+    # 4. Clean up obsolete / corrupt ghost nodes
+    print(f"\nPurging {len(OBSOLETE_NODES_TO_DELETE)} corrupt / malformed nodes from database...")
+    deleted_count = 0
+    for obs_id in OBSOLETE_NODES_TO_DELETE:
+        del_url = f"{supabase_url}/rest/v1/knowledge_nodes?id=eq.{urllib.parse.quote(obs_id)}"
+        try:
+            req = urllib.request.Request(del_url, headers={
+                'apikey': supabase_key,
+                'Authorization': f'Bearer {supabase_key}'
+            }, method='DELETE')
+            with urllib.request.urlopen(req) as resp:
+                if resp.status in (200, 204):
+                    deleted_count += 1
+        except Exception as e:
+            print(f"  Notice during delete of '{obs_id}': {e}")
+    print(f"Purged {deleted_count} obsolete nodes from knowledge_nodes.")
+
+    # 5. Calculate stream statistics
+    stream_counts = {}
+    for fn in formatted_nodes:
+        s = fn['stream']
+        stream_counts[s] = stream_counts.get(s, 0) + 1
+
+    cs_nodes = [n for n in formatted_nodes if n['stream'] == 'civil_services']
+    lang_nodes = [n for n in formatted_nodes if n['stream'] == 'languages']
+    teach_nodes = [n for n in formatted_nodes if n['stream'] == 'teaching']
+    epfo_nodes = [n for n in formatted_nodes if n['stream'] == 'epfo']
+
+    # 6. Update knowledge_graph_meta
+    endpoint_meta = f"{supabase_url}/rest/v1/knowledge_graph_meta?on_conflict=id"
+    meta_records = [
+        {
+            "id": "current",
+            "version": master_kg.get("version", "2.0.1"),
+            "root_subject_ids": root_subjects,
+            "stats": master_kg.get("stats", {
+                "totalNodes": len(formatted_nodes),
+                "byLevel": {
+                    "subjects": sum(1 for n in formatted_nodes if n['level'] == 1),
+                    "domains": sum(1 for n in formatted_nodes if n['level'] == 2),
+                    "topics": sum(1 for n in formatted_nodes if n['level'] == 3),
+                    "entities": sum(1 for n in formatted_nodes if n['level'] == 4),
+                }
+            })
+        },
+        {
+            "id": "civil_services",
+            "version": "2.5.0",
+            "root_subject_ids": [s for s in root_subjects if s in CIVIL_SERVICES_SUBJECTS],
+            "stats": {
+                "total_nodes": len(cs_nodes),
+                "level_1_subjects": sum(1 for n in cs_nodes if n['level'] == 1),
+                "level_2_domains": sum(1 for n in cs_nodes if n['level'] == 2),
+                "level_3_topics": sum(1 for n in cs_nodes if n['level'] == 3),
+                "level_4_subtopics": sum(1 for n in cs_nodes if n['level'] == 4),
+            }
+        },
+        {
+            "id": "languages",
+            "version": "2.5.0",
+            "root_subject_ids": [s for s in root_subjects if s in LANGUAGES_SUBJECTS],
+            "stats": {
+                "total_nodes": len(lang_nodes),
+                "level_1_subjects": sum(1 for n in lang_nodes if n['level'] == 1),
+                "level_2_domains": sum(1 for n in lang_nodes if n['level'] == 2),
+                "level_3_topics": sum(1 for n in lang_nodes if n['level'] == 3),
+                "level_4_subtopics": sum(1 for n in lang_nodes if n['level'] == 4),
+            }
+        },
+        {
+            "id": "teaching",
+            "version": "2.5.0",
+            "root_subject_ids": [s for s in root_subjects if s in TEACHING_SUBJECTS],
+            "stats": {
+                "total_nodes": len(teach_nodes),
+                "level_1_subjects": sum(1 for n in teach_nodes if n['level'] == 1),
+                "level_2_domains": sum(1 for n in teach_nodes if n['level'] == 2),
+                "level_3_topics": sum(1 for n in teach_nodes if n['level'] == 3),
+                "level_4_subtopics": sum(1 for n in teach_nodes if n['level'] == 4),
+            }
+        },
+        {
+            "id": "epfo",
+            "version": "1.0.0",
+            "root_subject_ids": [s for s in root_subjects if s in EPFO_SUBJECTS],
+            "stats": {
+                "total_nodes": len(epfo_nodes),
+                "level_1_subjects": sum(1 for n in epfo_nodes if n['level'] == 1),
+                "level_2_domains": sum(1 for n in epfo_nodes if n['level'] == 2),
+                "level_3_topics": sum(1 for n in epfo_nodes if n['level'] == 3),
+                "level_4_subtopics": sum(1 for n in epfo_nodes if n['level'] == 4),
+            }
+        }
+    ]
+
+    try:
+        make_request(endpoint_meta, supabase_key, method='POST', body=meta_records, prefer='resolution=merge-duplicates')
+        print(f"Successfully updated knowledge_graph_meta entries for {len(meta_records)} streams.")
+    except Exception as e:
+        print(f"Notice updating knowledge_graph_meta: {e}")
+
+    print("\n==================================================")
+    print(f"  SYNC COMPLETED SUCCESSFULLY")
+    print(f"  Total Nodes Upserted: {total_upserted}")
+    print(f"  Stream Breakdown: {stream_counts}")
+    print("==================================================")
 
 if __name__ == "__main__":
     main()

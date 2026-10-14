@@ -17,7 +17,7 @@ SUPABASE_URL = "https://oazgwzctyjowxnvbhiud.supabase.co"
 SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9hemd3emN0eWpvd3hudmJoaXVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyMzE5ODEsImV4cCI6MjA4ODgwNzk4MX0.DvOTMoqNVJjPMiXGw4nhwmY0AXAcsUONAEzrkQfBrP0"
 
 def load_capf_questions():
-    files = sorted(glob.glob("src/data/upsc_capf/*.json"))
+    files = sorted(glob.glob("src/data/upsc_capf/CAPF_*_Paper1_GS.json"))
     records = []
     
     for fpath in files:

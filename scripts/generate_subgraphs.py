@@ -19,7 +19,9 @@ CIVIL_SERVICES_SUBJECT_IDS = [
     "science_technology_defence",
     "internal_security",
     "ethics_integrity_aptitude",
-    "general_mental_ability_quantitative_aptitude_comprehension"
+    "general_mental_ability_quantitative_aptitude_comprehension",
+    "sports",
+    "general_knowledge_miscellaneous"
 ]
 
 TEACHING_SUBJECT_IDS = [
@@ -27,7 +29,8 @@ TEACHING_SUBJECT_IDS = [
 ]
 
 LANGUAGES_SUBJECT_IDS = [
-    "language_proficiency_grammar_communication"
+    "language_proficiency_grammar_communication",
+    "communication_paper"
 ]
 
 def build_subgraph(subject_ids, name="Subgraph", version="2.5.0"):

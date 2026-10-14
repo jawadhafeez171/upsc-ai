@@ -353,7 +353,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     try {
                         let localPool: any[] = [];
                         if (!config.paper_code || config.paper_code === 'all' || config.paper_code === 'hk') {
-                            const hkMod = await import('@/data/upsc_pyq/pc/hk_dar_pc_2026_sept.json');
+                            const hkMod = await import('@/data/pc/hk_dar_pc_2026_sept.json');
                             const hkItems = (hkMod.default || hkMod).map((q: any) => ({
                                 ...q,
                                 id: `pc-hk-2026-q${q.question_number}`,
@@ -363,7 +363,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                             localPool = [...localPool, ...hkItems];
                         }
                         if (!config.paper_code || config.paper_code === 'all' || config.paper_code === 'nhk') {
-                            const nhkMod = await import('@/data/upsc_pyq/pc/nhk_dar_pc_2026_sept.json');
+                            const nhkMod = await import('@/data/pc/nhk_dar_pc_2026_sept.json');
                             const nhkItems = (nhkMod.default || nhkMod).map((q: any) => ({
                                 ...q,
                                 id: `pc-nhk-2026-q${q.question_number}`,
@@ -478,6 +478,38 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 if (config.month && config.month !== 'all') query = query.eq('month', config.month);
                 const { data } = await query;
                 if (data) selectedRawQuestions = data;
+            } else if (config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
+                let query = supabase.from('kea_questions').select('*');
+                if (config.paper_code && config.paper_code !== 'all') {
+                    if (config.paper_code === 'fda-sda') {
+                        query = query.or('paper_code.ilike.%fda%,paper_code.ilike.%sda%,paper_code.ilike.%kec1%');
+                    } else if (config.paper_code === 'vao') {
+                        query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
+                    } else if (config.paper_code === 'police') {
+                        query = query.or('paper_code.ilike.%civilpc%,paper_code.ilike.%ksrp%,paper_code.ilike.%psi%');
+                    } else if (config.paper_code === 'leg-council') {
+                        query = query.ilike('paper_code', '%legcouncil%');
+                    } else if (config.paper_code === 'tech-eng') {
+                        query = query.or('paper_code.ilike.%bwssb%,paper_code.ilike.%kuwsdb%,paper_code.ilike.%kridl%,paper_code.ilike.%ksscl%,paper_code.ilike.%gttc%');
+                    } else if (config.paper_code === 'coaching') {
+                        query = query.or('paper_code.ilike.%coaching%,paper_code.ilike.%swd%,paper_code.ilike.%bcwd%,paper_code.ilike.%minority%');
+                    } else {
+                        query = query.eq('paper_code', config.paper_code);
+                    }
+                } else if (config.exam_id === 'kea-vao') {
+                    query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
+                } else if (config.exam_id === 'kea-kset') {
+                    query = query.ilike('paper_code', '%kset%');
+                }
+
+                if (config.mode === 'subject' && config.subject) {
+                    query = query.or(`subject.eq."${config.subject}",subject_kannada.eq."${config.subject}"`);
+                }
+                if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                if (config.year && config.year !== 'all') query = query.eq('year', config.year);
+                
+                const { data } = await query;
+                if (data) selectedRawQuestions = data;
             } else {
                 let query = supabase.from('questions').select('*').eq('exam_id', config.exam_id);
                 if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
@@ -490,6 +522,17 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 let sortedQuestions = [...selectedRawQuestions];
                 if (config.exam_id === 'ksp-pc') {
                     // Group linked questions sharing common passages
+                    selectedRawQuestions = assignQuestionGroups(selectedRawQuestions);
+
+                    if (config.mode === 'yearwise' || (config.paper_code && config.paper_code !== 'all')) {
+                        sortedQuestions = [...selectedRawQuestions].sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
+                    } else {
+                        sortedQuestions = groupPreservingShuffle(selectedRawQuestions);
+                    }
+                    if (config.question_count && config.question_count < sortedQuestions.length) {
+                        sortedQuestions = safeSliceQuestions(sortedQuestions, config.question_count);
+                    }
+                } else if (config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
                     selectedRawQuestions = assignQuestionGroups(selectedRawQuestions);
 
                     if (config.mode === 'yearwise' || (config.paper_code && config.paper_code !== 'all')) {
@@ -533,33 +576,37 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 }
 
                 const formattedQs: Question[] = sortedQuestions.map((dbq) => {
-                    // Police Constable (PC) CAR/DAR Question Format (from pc_pyq or JSON)
-                    if (dbq.option_1_english || dbq.exam_id === 'ksp-pc') {
+                    // Police Constable (PC) CAR/DAR & KEA Question Format (from pc_pyq, kea_questions, or JSON)
+                    if (dbq.option_1_english || dbq.option_1_kannada || dbq.exam_id === 'ksp-pc' || dbq.exam_id === 'kea' || config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
                         const optionsList = [
-                            { id: '1', text: dbq.option_1_english || '', text_kn: dbq.option_1_kannada || undefined },
-                            { id: '2', text: dbq.option_2_english || '', text_kn: dbq.option_2_kannada || undefined },
-                            { id: '3', text: dbq.option_3_english || '', text_kn: dbq.option_3_kannada || undefined },
-                            { id: '4', text: dbq.option_4_english || '', text_kn: dbq.option_4_kannada || undefined }
+                            { id: '1', text: dbq.option_1_english || dbq.option_1_kannada || '', text_kn: dbq.option_1_kannada || undefined },
+                            { id: '2', text: dbq.option_2_english || dbq.option_2_kannada || '', text_kn: dbq.option_2_kannada || undefined },
+                            { id: '3', text: dbq.option_3_english || dbq.option_3_kannada || '', text_kn: dbq.option_3_kannada || undefined },
+                            { id: '4', text: dbq.option_4_english || dbq.option_4_kannada || '', text_kn: dbq.option_4_kannada || undefined }
                         ];
                         const rawAns = String(dbq.key_answer || '1').trim();
                         return {
-                            id: dbq.id || `pc-${dbq.paper_code || 'car'}-2026-q${dbq.question_number || 1}`,
-                            exam_id: 'ksp-pc',
+                            id: dbq.id || `${config.exam_id || 'kea'}-${dbq.paper_code || 'paper'}-q${dbq.question_number || 1}`,
+                            exam_id: dbq.exam_id || config.exam_id || 'kea',
                             subject: dbq.subject || 'General Knowledge',
                             difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
-                            text: dbq.question_english || '',
+                            text: dbq.question_english || dbq.question_kannada || '',
                             text_kn: dbq.question_kannada || undefined,
                             options: optionsList,
                             correct: rawAns,
-                            explanation: dbq.explanation_english || 'No explanation available.',
+                            explanation: dbq.explanation_english || dbq.explanation_kannada || 'No explanation available.',
                             explanation_kn: dbq.explanation_kannada || undefined,
                             image_url: isValidImageUrl(dbq.image_url) ? dbq.image_url.trim() : undefined,
-                            passage: dbq.passage_english?.trim() || undefined,
+                            passage: dbq.passage_english?.trim() || dbq.passage_kannada?.trim() || undefined,
                             passage_kn: dbq.passage_kannada?.trim() || undefined,
                             group_id: dbq.group_id || undefined,
                             group_label: dbq.group_label || undefined,
                             subject_kannada: dbq.subject_kannada || undefined,
-                            sub_topic_kannada: dbq.sub_topic_kannada || undefined
+                            sub_topic_kannada: dbq.sub_topic_kannada || undefined,
+                            node_id: dbq.node_id || undefined,
+                            domain: dbq.domain || undefined,
+                            sub_topic: dbq.sub_topic || undefined,
+                            tags: Array.isArray(dbq.tags) ? dbq.tags : (dbq.tags ? [dbq.tags] : undefined)
                         };
                     } else if (dbq.question_english) {
                         const optionsList = [

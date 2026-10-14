@@ -1,18 +1,19 @@
 {
     "version": "2.5.0",
     "name": "State Languages & Communication Knowledge Graph (General Kannada & General English)",
-    "generatedAt": "2026-08-15T12:19:43.260Z",
+    "generatedAt": "2026-10-13T20:02:14.256Z",
     "rootSubjectIds": [
-        "language_proficiency_grammar_communication"
+        "language_proficiency_grammar_communication",
+        "communication_paper"
     ],
     "nodes": {
         "language_proficiency_grammar_communication": {
             "id": "language_proficiency_grammar_communication",
             "slug": "language_proficiency_grammar_communication",
-            "name": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "name": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "level": 1,
             "levelName": "Subject",
-            "subject": "LANGUAGE PROFICIENCY, GRAMMAR & COMMUNICATION (GENERAL KANNADA & GENERAL ENGLISH)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": null,
             "childrenIds": [
@@ -62,12 +63,12 @@
             "name": "General Kannada Grammar & Structure (ಕನ್ನಡ ವ್ಯಾಕರಣ)",
             "level": 2,
             "levelName": "Domain",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication",
             "childrenIds": [
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure.-"
+                "language_proficiency_grammar_communication.general_kannada_grammar_structure.kannada_alphabet_phonetics",
+                "language_proficiency_grammar_communication.general_kannada_grammar_structure.sentence_structure_verb_forms_kartari_karmani_prayoga"
             ],
             "ancestorIds": [
                 "language_proficiency_grammar_communication"
@@ -86,12 +87,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "General",
@@ -102,23 +100,16 @@
                 "ವ್ಯಾಕರಣ"
             ]
         },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure.": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-            "slug": "",
+        "language_proficiency_grammar_communication.general_kannada_grammar_structure.kannada_alphabet_phonetics": {
+            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure.kannada_alphabet_phonetics",
+            "slug": "kannada_alphabet_phonetics",
             "name": "ವರ್ಣಮಾಲೆ ಮತ್ತು ಧ್ವನಿ ರಚನೆ (ಕನ್ನಡ ಅಕ್ಷರಮಾಲೆ - 49 ಅಕ್ಷರಗಳು: ಸ್ವರಗಳು 13, ಯೋಗವಾಹಗಳು 2, ವ್ಯಂಜನಗಳು 34; ವರ್ಗೀಯ ವ್ಯಂಜನಗಳು 25: ಅಲ್ಪಪ್ರಾಣ, ಮಹಾಪ್ರಾಣ, ಅನುನಾಸಿಕ; ಅವರ್ಗೀಯ ವ್ಯಂಜನಗಳು 9; ಹ್ರಸ್ವ ಸ್ವರ, ದೀರ್ಘ ಸ್ವರ, ಪ್ಲುತ ಸ್ವರ; ಸಂಧ್ಯಕ್ಷರಗಳು: ಐ, ಔ; ಗುಣಿತಾಕ್ಷರಗಳು ಮತ್ತು ಸಂಯುಕ್ತಾಕ್ಷರಗಳು / ಒತ್ತಕ್ಷರಗಳು: ಸಜಾತೀಯ, ವಿಜಾತೀಯ)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure",
-            "childrenIds": [
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure..history_regional_history_karnataka_history",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure..geography_regional_geography_karnataka_geography",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure..indian_economy_regional_economy_karnataka_state_economy",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure..pyq_linked_to_with_exam_tag",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure..current_affair_article_linked_to_with_temporal_stamp_and_context_summary",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure..mind_map_flashcard_generated_automatically_from_node_hierarchy_and_relationship_edges"
-            ],
+            "childrenIds": [],
             "ancestorIds": [
                 "language_proficiency_grammar_communication",
                 "language_proficiency_grammar_communication.general_kannada_grammar_structure"
@@ -137,12 +128,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "ವರ್ಣಮಾಲೆ",
@@ -172,360 +160,13 @@
                 "ವಿಜಾತೀಯ"
             ]
         },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure..history_regional_history_karnataka_history": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure..history_regional_history_karnataka_history",
-            "slug": "history_regional_history_karnataka_history",
-            "name": "History → Regional History → Karnataka History [KAS: Prelims-P1, Mains-GS1]",
-            "level": 4,
-            "levelName": "Subtopic_Entity",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
-            "subjectId": "language_proficiency_grammar_communication",
-            "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-            "childrenIds": [],
-            "ancestorIds": [
-                "language_proficiency_grammar_communication",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure."
-            ],
-            "examTags": {
-                "kpsc": [
-                    "CTI",
-                    "FDA",
-                    "SDA"
-                ],
-                "kea": [
-                    "VAO"
-                ],
-                "ksp": [
-                    "PSI-Paper1"
-                ],
-                "kas": [
-                    "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
-                ]
-            },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
-            "description": "Kadambas, Gangas, Chalukyas of Badami, Rashtrakutas, Hoysalas, Vijayanagara, Wodeyars of Mysore, Hyder Ali & Tipu Sultan, Unification of Karnataka Movement",
-            "entities": [
-                "Kadambas, Gangas, Chalukyas of Badami, Rashtrakutas, Hoysalas, Vijayanagara, Wodeyars of Mysore, Hyder Ali & Tipu Sultan, Unification of Karnataka Movement"
-            ],
-            "keywords": [
-                "History",
-                "Regional",
-                "Karnataka",
-                "KAS",
-                "Prelims",
-                "Mains",
-                "GS1",
-                "Kadambas",
-                "Gangas",
-                "Chalukyas",
-                "Badami",
-                "Rashtrakutas",
-                "Hoysalas",
-                "Vijayanagara",
-                "Wodeyars",
-                "Mysore",
-                "Hyder",
-                "Ali",
-                "Tipu",
-                "Sultan",
-                "Unification",
-                "Movement"
-            ]
-        },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure..geography_regional_geography_karnataka_geography": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure..geography_regional_geography_karnataka_geography",
-            "slug": "geography_regional_geography_karnataka_geography",
-            "name": "Geography → Regional Geography → Karnataka Geography [KAS: Prelims-P1, Mains-GS1]",
-            "level": 4,
-            "levelName": "Subtopic_Entity",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
-            "subjectId": "language_proficiency_grammar_communication",
-            "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-            "childrenIds": [],
-            "ancestorIds": [
-                "language_proficiency_grammar_communication",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure."
-            ],
-            "examTags": {
-                "kpsc": [
-                    "CTI",
-                    "FDA",
-                    "SDA"
-                ],
-                "kea": [
-                    "VAO"
-                ],
-                "ksp": [
-                    "PSI-Paper1"
-                ],
-                "kas": [
-                    "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
-                ]
-            },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
-            "description": "Physiography: Coastal Plains, Malnad, Maidan; River Basins: Krishna, Kaveri, Tungabhadra; Soils & Forests; Mineral Resources",
-            "entities": [
-                "Physiography: Coastal Plains, Malnad, Maidan",
-                "River Basins: Krishna, Kaveri, Tungabhadra",
-                "Soils & Forests",
-                "Mineral Resources"
-            ],
-            "keywords": [
-                "Geography",
-                "Regional",
-                "Karnataka",
-                "KAS",
-                "Prelims",
-                "Mains",
-                "GS1",
-                "Physiography",
-                "Coastal",
-                "Plains",
-                "Malnad",
-                "Maidan",
-                "River",
-                "Basins",
-                "Krishna",
-                "Kaveri",
-                "Tungabhadra",
-                "Soils",
-                "Forests",
-                "Mineral",
-                "Resources"
-            ]
-        },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure..indian_economy_regional_economy_karnataka_state_economy": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure..indian_economy_regional_economy_karnataka_state_economy",
-            "slug": "indian_economy_regional_economy_karnataka_state_economy",
-            "name": "Indian Economy → Regional Economy → Karnataka State Economy [KAS: Prelims-P2, Mains-GS3]",
-            "level": 4,
-            "levelName": "Subtopic_Entity",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
-            "subjectId": "language_proficiency_grammar_communication",
-            "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-            "childrenIds": [],
-            "ancestorIds": [
-                "language_proficiency_grammar_communication",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure."
-            ],
-            "examTags": {
-                "kpsc": [
-                    "CTI",
-                    "FDA",
-                    "SDA"
-                ],
-                "kea": [
-                    "VAO"
-                ],
-                "ksp": [
-                    "PSI-Paper1"
-                ],
-                "kas": [
-                    "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
-                ]
-            },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
-            "description": "State Budget, GSDP Trends, IT/Biotech Corridor, Irrigation & Drought Management, State Welfare Schemes - Gruha Lakshmi, Yuva Nidhi, Anna Bhagya",
-            "entities": [
-                "State Budget, GSDP Trends, IT",
-                "Biotech Corridor, Irrigation & Drought Management, State Welfare Schemes - Gruha Lakshmi, Yuva Nidhi, Anna Bhagya"
-            ],
-            "keywords": [
-                "Indian",
-                "Economy",
-                "Regional",
-                "Karnataka",
-                "State",
-                "KAS",
-                "Prelims",
-                "Mains",
-                "GS3",
-                "Budget",
-                "GSDP",
-                "Trends",
-                "IT/Biotech",
-                "Corridor",
-                "Irrigation",
-                "Drought",
-                "Management",
-                "Welfare",
-                "Schemes",
-                "Gruha",
-                "Lakshmi",
-                "Yuva",
-                "Nidhi",
-                "Anna",
-                "Bhagya",
-                "Biotech"
-            ]
-        },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure..pyq_linked_to_with_exam_tag": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure..pyq_linked_to_with_exam_tag",
-            "slug": "pyq_linked_to_with_exam_tag",
-            "name": "PYQ ➔ linked to [Node_ID] with exam tag",
-            "level": 4,
-            "levelName": "Subtopic_Entity",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
-            "subjectId": "language_proficiency_grammar_communication",
-            "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-            "childrenIds": [],
-            "ancestorIds": [
-                "language_proficiency_grammar_communication",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure."
-            ],
-            "examTags": {
-                "kpsc": [
-                    "CTI",
-                    "FDA",
-                    "SDA"
-                ],
-                "kea": [
-                    "VAO"
-                ],
-                "ksp": [
-                    "PSI-Paper1"
-                ],
-                "kas": [
-                    "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
-                ]
-            },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
-            "description": "year, exam: UPSC_CSE_2023, question_type: Prelims_MCQ / Mains_10M",
-            "entities": [
-                "year, exam: UPSC_CSE_2023, question_type: Prelims_MCQ",
-                "Mains_10M"
-            ],
-            "keywords": [
-                "PYQ",
-                "linked",
-                "Node_ID",
-                "exam",
-                "tag",
-                "year",
-                "UPSC_CSE_2023",
-                "question_type",
-                "Prelims_MCQ",
-                "Mains_10M"
-            ]
-        },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure..current_affair_article_linked_to_with_temporal_stamp_and_context_summary": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure..current_affair_article_linked_to_with_temporal_stamp_and_context_summary",
-            "slug": "current_affair_article_linked_to_with_temporal_stamp_and_context_summary",
-            "name": "Current_Affair_Article ➔ linked to [Node_ID] with temporal stamp and context summary.",
-            "level": 4,
-            "levelName": "Subtopic_Entity",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
-            "subjectId": "language_proficiency_grammar_communication",
-            "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-            "childrenIds": [],
-            "ancestorIds": [
-                "language_proficiency_grammar_communication",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure."
-            ],
-            "examTags": {
-                "kpsc": [
-                    "CTI",
-                    "FDA",
-                    "SDA"
-                ],
-                "kea": [
-                    "VAO"
-                ],
-                "ksp": [
-                    "PSI-Paper1"
-                ],
-                "kas": [
-                    "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
-                ]
-            },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
-            "description": "",
-            "entities": [],
-            "keywords": [
-                "Current_Affair_Article",
-                "linked",
-                "Node_ID",
-                "temporal",
-                "stamp",
-                "context",
-                "summary."
-            ]
-        },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure..mind_map_flashcard_generated_automatically_from_node_hierarchy_and_relationship_edges": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure..mind_map_flashcard_generated_automatically_from_node_hierarchy_and_relationship_edges",
-            "slug": "mind_map_flashcard_generated_automatically_from_node_hierarchy_and_relationship_edges",
-            "name": "Mind_Map / Flashcard ➔ generated automatically from node hierarchy and relationship edges.",
-            "level": 4,
-            "levelName": "Subtopic_Entity",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
-            "subjectId": "language_proficiency_grammar_communication",
-            "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure.",
-            "childrenIds": [],
-            "ancestorIds": [
-                "language_proficiency_grammar_communication",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure",
-                "language_proficiency_grammar_communication.general_kannada_grammar_structure."
-            ],
-            "examTags": {
-                "kpsc": [
-                    "CTI",
-                    "FDA",
-                    "SDA"
-                ],
-                "kea": [
-                    "VAO"
-                ],
-                "ksp": [
-                    "PSI-Paper1"
-                ],
-                "kas": [
-                    "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
-                ]
-            },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
-            "description": "",
-            "entities": [],
-            "keywords": [
-                "Mind_Map",
-                "Flashcard",
-                "generated",
-                "automatically",
-                "node",
-                "hierarchy",
-                "relationship",
-                "edges."
-            ]
-        },
-        "language_proficiency_grammar_communication.general_kannada_grammar_structure.-": {
-            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure.-",
-            "slug": "-",
+        "language_proficiency_grammar_communication.general_kannada_grammar_structure.sentence_structure_verb_forms_kartari_karmani_prayoga": {
+            "id": "language_proficiency_grammar_communication.general_kannada_grammar_structure.sentence_structure_verb_forms_kartari_karmani_prayoga",
+            "slug": "sentence_structure_verb_forms_kartari_karmani_prayoga",
             "name": "ವಾಕ್ಯ ರಚನೆ ಮತ್ತು ಕರ್ತರಿ-ಕರ್ಮಣಿ ಪ್ರಯೋಗ (ಕ್ರಿಯಾಪದಗಳ ರಚನೆ - ಧಾತು, ಕಾಲಸೂಚಕ ಪ್ರತ್ಯಯ, ಆಖ್ಯಾತ ಪ್ರತ್ಯಯ; ಭೂತಕಾಲ, ವರ್ತಮಾನಕಾಲ, ಭವಿಷ್ಯತ್ಕಾಲ; ಪ್ರೇರಣಾರ್ಥಕ, ಸಂಭಾವನಾರ್ಥಕ, ನಿಷೇಧಾರ್ಥಕ ಕ್ರಿಯಾರೂಪಗಳು; ಕರ್ತರಿ ಪ್ರಯೋಗ ಮತ್ತು ಕರ್ಮಣಿ ಪ್ರಯೋಗ / 'ಅಲ್ಪಡು' ಧಾತು ಬಳಕೆ; ವಾಕ್ಯಗಳ ವಿಧಗಳು: ಸಾಮಾನ್ಯ ವಾಕ್ಯ, ಸಂಯೋಜಿತ ವಾಕ್ಯ, ಮಿಶ್ರ ವಾಕ್ಯ)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.general_kannada_grammar_structure",
             "childrenIds": [],
@@ -547,12 +188,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "ವಾಕ್ಯ",
@@ -588,12 +226,12 @@
             "name": "Kannada Vocabulary, Usage & Idioms (ಶಬ್ದ ಸಂಪತ್ತು ಮತ್ತು ನುಡಿಗಟ್ಟುಗಳು)",
             "level": 2,
             "levelName": "Domain",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication",
             "childrenIds": [
-                "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.-",
-                "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms."
+                "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.tatsama_tadbhava_word_origins",
+                "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.synonyms_homonyms_antonyms"
             ],
             "ancestorIds": [
                 "language_proficiency_grammar_communication"
@@ -612,12 +250,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "Kannada",
@@ -630,13 +265,13 @@
                 "ನುಡಿಗಟ್ಟುಗಳು"
             ]
         },
-        "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.-": {
-            "id": "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.-",
-            "slug": "-",
+        "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.tatsama_tadbhava_word_origins": {
+            "id": "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.tatsama_tadbhava_word_origins",
+            "slug": "tatsama_tadbhava_word_origins",
             "name": "ತತ್ಸಮ-ತದ್ಭವ ಮತ್ತು ಶಬ್ದ ಮೂಲಗಳು (ಸಂಸ್ಕೃತ ಮೂಲ ತತ್ಸಮಗಳು ಮತ್ತು ಕನ್ನಡಕ್ಕೆ ಹೊಂದಿಕೊಂಡ ತದ್ಭವ ರೂಪಗಳು; ಅನ್ಯದೇಶ್ಯ ಶಬ್ದಗಳು: ಪರ್ಷಿಯನ್, ಅರೇಬಿಕ್, ಪೋರ್ಚುಗೀಸ್, ಇಂಗ್ಲಿಷ್ ಶಬ್ದಗಳು; ದೇಶ್ಯ ಶಬ್ದಗಳು)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms",
             "childrenIds": [],
@@ -658,12 +293,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "ತತ್ಸಮ",
@@ -686,13 +318,13 @@
                 "ದೇಶ್ಯ"
             ]
         },
-        "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.": {
-            "id": "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.",
-            "slug": "",
+        "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.synonyms_homonyms_antonyms": {
+            "id": "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms.synonyms_homonyms_antonyms",
+            "slug": "synonyms_homonyms_antonyms",
             "name": "ಸಮಾನಾರ್ಥಕ, ನಾನಾರ್ಥಕ ಮತ್ತು ವಿರುದ್ಧ ಪದಗಳು (ಪರ್ಯಾಯ ಪದಕೋಶ, ನಾನಾರ್ಥ ಕೊಡುವ ಶಬ್ದಗಳು, ವಿರೋಧಾರ್ಥಕ ಶಬ್ದಗಳು, ಜೋಡುನುಡಿಗಳು / ಜೋಡುಪದಗಳು, ದ್ವಿರುಕ್ತಿಗಳು, ಅನುಕರಣಾವ್ಯಯಗಳು)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.kannada_vocabulary_usage_idioms",
             "childrenIds": [],
@@ -714,12 +346,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "ಸಮಾನಾರ್ಥಕ",
@@ -745,11 +374,11 @@
             "name": "Kannada Literature, Authors & Sahitya Academy Awards (ಕನ್ನಡ ಸಾಹಿತ್ಯ ಪರಿಚಯ)",
             "level": 2,
             "levelName": "Domain",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication",
             "childrenIds": [
-                "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards."
+                "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards.history_of_kannada_literature_eras"
             ],
             "ancestorIds": [
                 "language_proficiency_grammar_communication"
@@ -768,12 +397,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "Kannada",
@@ -787,13 +413,13 @@
                 "ಪರಿಚಯ"
             ]
         },
-        "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards.": {
-            "id": "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards.",
-            "slug": "",
+        "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards.history_of_kannada_literature_eras": {
+            "id": "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards.history_of_kannada_literature_eras",
+            "slug": "history_of_kannada_literature_eras",
             "name": "ಕನ್ನಡ ಸಾಹಿತ್ಯ ಚರಿತ್ರೆ ಮತ್ತು ಯುಗಗಳು (ಪೂರ್ವ ಹಳಗನ್ನಡ / ಕವಿರಾಜಮಾರ್ಗ, ಪಂಪ ಪೂರ್ವ ಯುಗ; ಹಳಗನ್ನಡ ಯುಗ / ಪಂಪ, ರನ್ನ, ಪೊನ್ನ, ಜನ್ನ, ನಾಗವರ್ಮ; ನಡುಗನ್ನಡ ಯುಗ / ವಚನ ಸಾಹಿತ್ಯ: ಬಸವೇಶ್ವರ, ಅಲ್ಲಮಪ್ರಭು, ಅಕ್ಕಮಹಾದೇವಿ, ಚನ್ನಬಸವಣ್ಣ; ಹರಿದಾಸ ಸಾಹಿತ್ಯ: ಪುರಂದರದಾಸರು, ಕನಕದಾಸರು, ವಿಜಯದಾಸರು; ರಗಳೆ & ಷಟ್ಪದಿ ಕವಿಗಳು: ಹರಿಹರ, ರಾಘವಾಂಕ, ಕುಮಾರವ್ಯಾಸ, ಚಾಮರಸ, ಲಕ್ಷ್ಮೀಶ; ಹೊಸಗನ್ನಡ ನವೋದಯ, ಪ್ರಗತಿಶೀಲ, ನವ್ಯ, ಬಂಡಾಯ ಮತ್ತು ದಲಿತ ಸಾಹಿತ್ಯ ಚಳವಳಿಗಳು)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.kannada_literature_authors_sahitya_academy_awards",
             "childrenIds": [],
@@ -815,12 +441,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "ಕನ್ನಡ",
@@ -870,7 +493,7 @@
             "name": "Translation & Precis Writing (ಭಾಷಾಂತರ ಮತ್ತು ಸಂಕ್ಷೇಪಣ)",
             "level": 2,
             "levelName": "Domain",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication",
             "childrenIds": [
@@ -917,7 +540,7 @@
             "name": "English to Kannada Translation Principles (Contextual Translation vs Literal Translation, Technical & Administrative Terminology, Sentence Restructuring / SVO in English to SOV in Kannada, Translating Legal & Governance Idioms)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.translation_precis_writing",
             "childrenIds": [],
@@ -939,12 +562,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "English",
@@ -972,7 +592,7 @@
             "name": "Kannada to English Translation Principles (Grammatical Equivalence, Active Voice preference, Precision of Vocabulary, Paragraph Flow & Cohesion)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.translation_precis_writing",
             "childrenIds": [],
@@ -994,12 +614,9 @@
                 ],
                 "kas": [
                     "Compulsory-Lang"
-                ],
-                "ssc": [
-                    "English"
                 ]
             },
-            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang] [SSC: English]",
+            "rawExamTagString": "[KPSC: CTI, FDA, SDA] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
             "entities": [],
             "keywords": [
                 "Kannada",
@@ -1024,7 +641,7 @@
             "name": "Precis Writing & Comprehension (Summarization Methodology - 1/3rd Rule, Retaining Central Thesis, Elimination of Examples & Superfluous Details, Assigning Title; Passage Analysis & Direct Answer Framing)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.translation_precis_writing",
             "childrenIds": [],
@@ -1083,7 +700,7 @@
             "name": "General English Grammar & Syntax",
             "level": 2,
             "levelName": "Domain",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication",
             "childrenIds": [
@@ -1128,7 +745,7 @@
             "name": "Parts of Speech & Sentence Architecture (Nouns: Types, Countable/Uncountable, Plural Rules; Pronouns: Personal, Relative, Reflexive, Demonstrative; Adjectives & Degrees of Comparison; Adverbs: Time, Place, Manner, Frequency; Prepositions: Spatial, Temporal, Complex Prepositions; Conjunctions: Coordinating, Subordinating, Correlative; Interjections)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.general_english_grammar_syntax",
             "childrenIds": [],
@@ -1197,7 +814,7 @@
             "name": "Tenses, Verb Forms & Subject-Verb Agreement (Present, Past, Future Tense Sub-types - Simple, Continuous, Perfect, Perfect Continuous; Modal Auxiliaries - Can, Could, May, Might, Shall, Should, Will, Would, Must, Ought to; Subject-Verb Agreement Rules - Proximity, Collective Nouns, Indefinite Pronouns, Compound Subjects)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.general_english_grammar_syntax",
             "childrenIds": [],
@@ -1269,7 +886,7 @@
             "name": "Voice, Narration & Sentence Transformation (Active vs Passive Voice Conversion Rules across all tenses, Modals & Imperative sentences; Direct vs Indirect Speech / Narration - Tense backshifting, Reporting verbs, Pronoun & Time/Place adverbial shifts, Interrogative & Exclamatory conversions; Simple, Compound & Complex Sentence Transformations)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.general_english_grammar_syntax",
             "childrenIds": [],
@@ -1338,7 +955,7 @@
             "name": "English Vocabulary, Idioms & Phrasal Verbs",
             "level": 2,
             "levelName": "Domain",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication",
             "childrenIds": [
@@ -1383,7 +1000,7 @@
             "name": "Lexical Building Blocks (Root Words: Greek & Latin roots; Prefixes & Suffixes; Synonyms & Antonyms; Homonyms, Homophones & Commonly Confused Words; One-Word Substitutions)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.english_vocabulary_idioms_phrasal_verbs",
             "childrenIds": [],
@@ -1440,7 +1057,7 @@
             "name": "Idioms, Phrases & Phrasal Verbs (Popular Idiomatic Expressions with contextual meanings; Common Phrasal Verbs - Prepositional Verbs: Break down, Bring up, Call off, Carry out, Look into, Put up with, Turn down; Collocations in Business & Administrative English)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.english_vocabulary_idioms_phrasal_verbs",
             "childrenIds": [],
@@ -1503,7 +1120,7 @@
             "name": "Reading Comprehension, Sentence Correction & Verbal Ability",
             "level": 2,
             "levelName": "Domain",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication",
             "childrenIds": [
@@ -1549,7 +1166,7 @@
             "name": "Sentence Correction & Spotting Errors (Common Grammatical Errors - Dangling Modifiers, Redundancies, Misplaced Prepositions, Faulty Parallelism, Tense Inconsistencies, Double Negatives)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.reading_comprehension_sentence_correction_verbal_ability",
             "childrenIds": [],
@@ -1604,7 +1221,7 @@
             "name": "Verbal Ability & Sentence Rearrangement (Para Jumbles / Sentence Reordering - Identifying Opening Sentences, Connecting Links, Pronoun References, Concluding Sentences; Cloze Test - Contextual Word Fillers; Sentence Completion & Double Fillers)",
             "level": 3,
             "levelName": "Topic",
-            "subject": "Language Proficiency, Grammar & Communication (general Kannada & General English)",
+            "subject": "Language Proficiency, Grammar & Communication (General Kannada & General English)",
             "subjectId": "language_proficiency_grammar_communication",
             "parentId": "language_proficiency_grammar_communication.reading_comprehension_sentence_correction_verbal_ability",
             "childrenIds": [],
@@ -1657,13 +1274,3320 @@
                 "Completion",
                 "Double"
             ]
+        },
+        "communication_paper": {
+            "id": "communication_paper",
+            "slug": "communication_paper",
+            "name": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "level": 1,
+            "levelName": "Subject",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": null,
+            "childrenIds": [
+                "communication_paper.general_kannada",
+                "communication_paper.general_english",
+                "communication_paper.computer_knowledge"
+            ],
+            "ancestorIds": [],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Communication",
+                "Paper",
+                "Kannada",
+                "English",
+                "Computer",
+                "Knowledge",
+                "KPSC",
+                "KEA"
+            ]
+        },
+        "communication_paper.general_kannada": {
+            "id": "communication_paper.general_kannada",
+            "slug": "general_kannada",
+            "name": "General Kannada (ಸಾಮಾನ್ಯ ಕನ್ನಡ)",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper",
+            "childrenIds": [
+                "communication_paper.general_kannada.kannada_grammar_and_syntax",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs",
+                "communication_paper.general_kannada.kannada_literature_authors_awards",
+                "communication_paper.general_kannada.kannada_comprehension_and_usage"
+            ],
+            "ancestorIds": [
+                "communication_paper"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "General",
+                "Kannada",
+                "ಸಾಮಾನ್ಯ",
+                "ಕನ್ನಡ",
+                "ವ್ಯಾಕರಣ",
+                "ಸಾಹಿತ್ಯ",
+                "ಗ್ರಹಿಕೆ"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_grammar_and_syntax": {
+            "id": "communication_paper.general_kannada.kannada_grammar_and_syntax",
+            "slug": "kannada_grammar_and_syntax",
+            "name": "ಕನ್ನಡ ವ್ಯಾಕರಣ ಮತ್ತು ವಾಕ್ಯ ರಚನೆ (Kannada Grammar & Syntax)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada",
+            "childrenIds": [
+                "communication_paper.general_kannada.kannada_grammar_and_syntax.varnamale_sandhi_samasa",
+                "communication_paper.general_kannada.kannada_grammar_and_syntax.namapada_vibhakti_linga_vachana",
+                "communication_paper.general_kannada.kannada_grammar_and_syntax.kriyapada_dhatu_kala_prayoga",
+                "communication_paper.general_kannada.kannada_grammar_and_syntax.avyayagalu_vakya_rachane"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಕನ್ನಡ",
+                "ವ್ಯಾಕರಣ",
+                "ಮತ್ತು",
+                "ವಾಕ್ಯ",
+                "ರಚನೆ",
+                "Kannada",
+                "Grammar",
+                "Syntax"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_grammar_and_syntax.varnamale_sandhi_samasa": {
+            "id": "communication_paper.general_kannada.kannada_grammar_and_syntax.varnamale_sandhi_samasa",
+            "slug": "varnamale_sandhi_samasa",
+            "name": "ಕನ್ನಡ ವರ್ಣಮಾಲೆ, ಸಂಧಿಗಳು ಮತ್ತು ಸಮಾಸಗಳು (Alphabets, Sandhi & Samasa)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_grammar_and_syntax",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_grammar_and_syntax"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಕನ್ನಡ",
+                "ವರ್ಣಮಾಲೆ",
+                "ಸಂಧಿಗಳು",
+                "ಮತ್ತು",
+                "ಸಮಾಸಗಳು",
+                "Alphabets",
+                "Sandhi",
+                "Samasa"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_grammar_and_syntax.namapada_vibhakti_linga_vachana": {
+            "id": "communication_paper.general_kannada.kannada_grammar_and_syntax.namapada_vibhakti_linga_vachana",
+            "slug": "namapada_vibhakti_linga_vachana",
+            "name": "ನಾಮಪದಗಳು, ಲಿಂಗ-ವಚನ ಮತ್ತು ವಿಭಕ್ತಿ ಪ್ರತ್ಯಯಗಳು (Nouns, Gender, Number & Case Endings)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_grammar_and_syntax",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_grammar_and_syntax"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ನಾಮಪದಗಳು",
+                "ಲಿಂಗ-ವಚನ",
+                "ಮತ್ತು",
+                "ವಿಭಕ್ತಿ",
+                "ಪ್ರತ್ಯಯಗಳು",
+                "Nouns",
+                "Gender",
+                "Number",
+                "Case",
+                "Endings"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_grammar_and_syntax.kriyapada_dhatu_kala_prayoga": {
+            "id": "communication_paper.general_kannada.kannada_grammar_and_syntax.kriyapada_dhatu_kala_prayoga",
+            "slug": "kriyapada_dhatu_kala_prayoga",
+            "name": "ಕ್ರಿಯಾಪದಗಳು, ಧಾತು, ಕಾಲಗಳು ಮತ್ತು ಕರ್ತರಿ-ಕರ್ಮಣಿ ಪ್ರಯೋಗ (Verbs, Tenses & Voice)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_grammar_and_syntax",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_grammar_and_syntax"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಕ್ರಿಯಾಪದಗಳು",
+                "ಧಾತು",
+                "ಕಾಲಗಳು",
+                "ಮತ್ತು",
+                "ಕರ್ತರಿ-ಕರ್ಮಣಿ",
+                "ಪ್ರಯೋಗ",
+                "Verbs",
+                "Tenses",
+                "Voice"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_grammar_and_syntax.avyayagalu_vakya_rachane": {
+            "id": "communication_paper.general_kannada.kannada_grammar_and_syntax.avyayagalu_vakya_rachane",
+            "slug": "avyayagalu_vakya_rachane",
+            "name": "ಅವ್ಯಯಗಳು ಮತ್ತು ವಾಕ್ಯ ರಚನೆಯ ವಿಧಗಳು (Indeclinables & Sentence Formation)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_grammar_and_syntax",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_grammar_and_syntax"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಅವ್ಯಯಗಳು",
+                "ಮತ್ತು",
+                "ವಾಕ್ಯ",
+                "ರಚನೆಯ",
+                "ವಿಧಗಳು",
+                "Indeclinables",
+                "Sentence",
+                "Formation"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs": {
+            "id": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs",
+            "slug": "kannada_vocabulary_idioms_proverbs",
+            "name": "ಕನ್ನಡ ಶಬ್ದಕೋಶ ಮತ್ತು ನುಡಿಗಟ್ಟುಗಳು (Kannada Vocabulary & Idioms)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada",
+            "childrenIds": [
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.tatsama_tadbhavagalu_deshya_anyadeshya",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.samanarthaka_viruddharthaka_nanarthaka",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.jodunudi_dvirukti_anukarana",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.kannada_gade_nudigattugalu"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಕನ್ನಡ",
+                "ಶಬ್ದಕೋಶ",
+                "ಮತ್ತು",
+                "ನುಡಿಗಟ್ಟುಗಳು",
+                "Kannada",
+                "Vocabulary",
+                "Idioms"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.tatsama_tadbhavagalu_deshya_anyadeshya": {
+            "id": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.tatsama_tadbhavagalu_deshya_anyadeshya",
+            "slug": "tatsama_tadbhavagalu_deshya_anyadeshya",
+            "name": "ತತ್ಸಮ-ತದ್ಭವಗಳು, ದೇಶ್ಯ ಮತ್ತು ಅನ್ಯದೇಶ್ಯ ಶಬ್ದಗಳು (Etymology & Loan Words)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ತತ್ಸಮ-ತದ್ಭವಗಳು",
+                "ದೇಶ್ಯ",
+                "ಮತ್ತು",
+                "ಅನ್ಯದೇಶ್ಯ",
+                "ಶಬ್ದಗಳು",
+                "Etymology",
+                "Loan",
+                "Words"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.samanarthaka_viruddharthaka_nanarthaka": {
+            "id": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.samanarthaka_viruddharthaka_nanarthaka",
+            "slug": "samanarthaka_viruddharthaka_nanarthaka",
+            "name": "ಸಮಾನಾರ್ಥಕ, ವಿರುದ್ಧಾರ್ಥಕ ಮತ್ತು ನಾನಾರ್ಥಕ ಪದಗಳು (Synonyms, Antonyms & Homonyms)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಸಮಾನಾರ್ಥಕ",
+                "ವಿರುದ್ಧಾರ್ಥಕ",
+                "ಮತ್ತು",
+                "ನಾನಾರ್ಥಕ",
+                "ಪದಗಳು",
+                "Synonyms",
+                "Antonyms",
+                "Homonyms"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.jodunudi_dvirukti_anukarana": {
+            "id": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.jodunudi_dvirukti_anukarana",
+            "slug": "jodunudi_dvirukti_anukarana",
+            "name": "ಜೋಡುನುಡಿಗಳು, ದ್ವಿರುಕ್ತಿಗಳು ಮತ್ತು ಅನುಕರಣಾವ್ಯಯಗಳು (Collocations & Reduplicatives)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಜೋಡುನುಡಿಗಳು",
+                "ದ್ವಿರುಕ್ತಿಗಳು",
+                "ಮತ್ತು",
+                "ಅನುಕರಣಾವ್ಯಯಗಳು",
+                "Collocations",
+                "Reduplicatives"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.kannada_gade_nudigattugalu": {
+            "id": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs.kannada_gade_nudigattugalu",
+            "slug": "kannada_gade_nudigattugalu",
+            "name": "ಕನ್ನಡ ಗಾದೆಗಳು ಮತ್ತು ನುಡಿಗಟ್ಟುಗಳು (Kannada Proverbs & Idiomatic Usage)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_vocabulary_idioms_proverbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಕನ್ನಡ",
+                "ಗಾದೆಗಳು",
+                "ಮತ್ತು",
+                "ನುಡಿಗಟ್ಟುಗಳು",
+                "Kannada",
+                "Proverbs",
+                "Idiomatic",
+                "Usage"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_literature_authors_awards": {
+            "id": "communication_paper.general_kannada.kannada_literature_authors_awards",
+            "slug": "kannada_literature_authors_awards",
+            "name": "ಕನ್ನಡ ಸಾಹಿತ್ಯ, ಕವಿಗಳು ಮತ್ತು ಪ್ರಶಸ್ತಿಗಳು (Kannada Literature, Poets & Awards)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada",
+            "childrenIds": [
+                "communication_paper.general_kannada.kannada_literature_authors_awards.hale_nadu_hosagannada_sahitya_yugagalu",
+                "communication_paper.general_kannada.kannada_literature_authors_awards.pramukha_kavigalu_krutigalu",
+                "communication_paper.general_kannada.kannada_literature_authors_awards.jnanpith_sahitya_academy_pampa_awards"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಕನ್ನಡ",
+                "ಸಾಹಿತ್ಯ",
+                "ಕವಿಗಳು",
+                "ಮತ್ತು",
+                "ಪ್ರಶಸ್ತಿಗಳು",
+                "Kannada",
+                "Literature",
+                "Poets",
+                "Awards"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_literature_authors_awards.hale_nadu_hosagannada_sahitya_yugagalu": {
+            "id": "communication_paper.general_kannada.kannada_literature_authors_awards.hale_nadu_hosagannada_sahitya_yugagalu",
+            "slug": "hale_nadu_hosagannada_sahitya_yugagalu",
+            "name": "ಹಳಗನ್ನಡ, ನಡುಗನ್ನಡ ಮತ್ತು ಹೊಸಗನ್ನಡ ಸಾಹಿತ್ಯ ಯುಗಗಳು (Eras of Kannada Literature - Pampa, Vachana, Haridasa)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_literature_authors_awards",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_literature_authors_awards"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಹಳಗನ್ನಡ",
+                "ನಡುಗನ್ನಡ",
+                "ಮತ್ತು",
+                "ಹೊಸಗನ್ನಡ",
+                "ಸಾಹಿತ್ಯ",
+                "ಯುಗಗಳು",
+                "Eras",
+                "Kannada",
+                "Literature",
+                "Pampa"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_literature_authors_awards.pramukha_kavigalu_krutigalu": {
+            "id": "communication_paper.general_kannada.kannada_literature_authors_awards.pramukha_kavigalu_krutigalu",
+            "slug": "pramukha_kavigalu_krutigalu",
+            "name": "ಪ್ರಮುಖ ಕವಿಗಳು, ಅವರ ಕೃತಿಗಳು ಮತ್ತು ಬಿರುದುಗಳು (Prominent Authors, Works & Titles)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_literature_authors_awards",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_literature_authors_awards"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಪ್ರಮುಖ",
+                "ಕವಿಗಳು",
+                "ಅವರ",
+                "ಕೃತಿಗಳು",
+                "ಮತ್ತು",
+                "ಬಿರುದುಗಳು",
+                "Prominent",
+                "Authors",
+                "Works",
+                "Titles"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_literature_authors_awards.jnanpith_sahitya_academy_pampa_awards": {
+            "id": "communication_paper.general_kannada.kannada_literature_authors_awards.jnanpith_sahitya_academy_pampa_awards",
+            "slug": "jnanpith_sahitya_academy_pampa_awards",
+            "name": "ಜ್ಞಾನಪೀಠ, ಕೇಂದ್ರ ಸಾಹಿತ್ಯ ಅಕಾಡೆಮಿ ಮತ್ತು ಪಂಪ ಪ್ರಶಸ್ತಿಗಳು (Major Literary Awards & Laureates)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_literature_authors_awards",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_literature_authors_awards"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಜ್ಞಾನಪೀಠ",
+                "ಕೇಂದ್ರ",
+                "ಸಾಹಿತ್ಯ",
+                "ಅಕಾಡೆಮಿ",
+                "ಮತ್ತು",
+                "ಪಂಪ",
+                "ಪ್ರಶಸ್ತಿಗಳು",
+                "Major",
+                "Literary",
+                "Awards"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_comprehension_and_usage": {
+            "id": "communication_paper.general_kannada.kannada_comprehension_and_usage",
+            "slug": "kannada_comprehension_and_usage",
+            "name": "ಕನ್ನಡ ಗ್ರಹಿಕೆ ಮತ್ತು ಭಾಷಾ ಬಳಕೆ (Kannada Comprehension & Language Usage)",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada",
+            "childrenIds": [
+                "communication_paper.general_kannada.kannada_comprehension_and_usage.gadya_grahike_passage_comprehension",
+                "communication_paper.general_kannada.kannada_comprehension_and_usage.vakya_dosha_tiddupadi",
+                "communication_paper.general_kannada.kannada_comprehension_and_usage.adalitatmaka_paribhashika_padagalu"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಕನ್ನಡ",
+                "ಗ್ರಹಿಕೆ",
+                "ಮತ್ತು",
+                "ಭಾಷಾ",
+                "ಬಳಕೆ",
+                "Kannada",
+                "Comprehension",
+                "Language",
+                "Usage"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_comprehension_and_usage.gadya_grahike_passage_comprehension": {
+            "id": "communication_paper.general_kannada.kannada_comprehension_and_usage.gadya_grahike_passage_comprehension",
+            "slug": "gadya_grahike_passage_comprehension",
+            "name": "ಗದ್ಯ ಗ್ರಹಿಕೆ (Passage Reading Comprehension)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_comprehension_and_usage",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_comprehension_and_usage"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಗದ್ಯ",
+                "ಗ್ರಹಿಕೆ",
+                "Passage",
+                "Reading",
+                "Comprehension"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_comprehension_and_usage.vakya_dosha_tiddupadi": {
+            "id": "communication_paper.general_kannada.kannada_comprehension_and_usage.vakya_dosha_tiddupadi",
+            "slug": "vakya_dosha_tiddupadi",
+            "name": "ವಾಕ್ಯ ದೋಷ ತಿದ್ದುಪಡಿ ಮತ್ತು ಅಕ್ಷರ ವಿನ್ಯಾಸ (Sentence Correction & Orthography)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_comprehension_and_usage",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_comprehension_and_usage"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ವಾಕ್ಯ",
+                "ದೋಷ",
+                "ತಿದ್ದುಪಡಿ",
+                "ಮತ್ತು",
+                "ಅಕ್ಷರ",
+                "ವಿನ್ಯಾಸ",
+                "Sentence",
+                "Correction",
+                "Orthography"
+            ]
+        },
+        "communication_paper.general_kannada.kannada_comprehension_and_usage.adalitatmaka_paribhashika_padagalu": {
+            "id": "communication_paper.general_kannada.kannada_comprehension_and_usage.adalitatmaka_paribhashika_padagalu",
+            "slug": "adalitatmaka_paribhashika_padagalu",
+            "name": "ಆಡಳಿತಾತ್ಮಕ ಮತ್ತು ಕಚೇರಿ ಪಾರಿಭಾಷಿಕ ಪದಗಳು (Official Administrative & Governance Terminology)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_kannada.kannada_comprehension_and_usage",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_kannada",
+                "communication_paper.general_kannada.kannada_comprehension_and_usage"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "ಆಡಳಿತಾತ್ಮಕ",
+                "ಮತ್ತು",
+                "ಕಚೇರಿ",
+                "ಪಾರಿಭಾಷಿಕ",
+                "ಪದಗಳು",
+                "Official",
+                "Administrative",
+                "Governance",
+                "Terminology"
+            ]
+        },
+        "communication_paper.general_english": {
+            "id": "communication_paper.general_english",
+            "slug": "general_english",
+            "name": "General English (ಸಾಮಾನ್ಯ ಇಂಗ್ಲಿಷ್)",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper",
+            "childrenIds": [
+                "communication_paper.general_english.english_grammar_and_parts_of_speech",
+                "communication_paper.general_english.tenses_voice_and_narration",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs",
+                "communication_paper.general_english.sentence_correction_and_comprehension"
+            ],
+            "ancestorIds": [
+                "communication_paper"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "General",
+                "English",
+                "Grammar",
+                "Vocabulary",
+                "Tenses",
+                "Voice",
+                "Comprehension"
+            ]
+        },
+        "communication_paper.general_english.english_grammar_and_parts_of_speech": {
+            "id": "communication_paper.general_english.english_grammar_and_parts_of_speech",
+            "slug": "english_grammar_and_parts_of_speech",
+            "name": "English Grammar & Parts of Speech",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english",
+            "childrenIds": [
+                "communication_paper.general_english.english_grammar_and_parts_of_speech.nouns_pronouns_articles",
+                "communication_paper.general_english.english_grammar_and_parts_of_speech.adjectives_adverbs_comparison",
+                "communication_paper.general_english.english_grammar_and_parts_of_speech.prepositions_conjunctions"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "English",
+                "Grammar",
+                "Parts",
+                "Speech"
+            ]
+        },
+        "communication_paper.general_english.english_grammar_and_parts_of_speech.nouns_pronouns_articles": {
+            "id": "communication_paper.general_english.english_grammar_and_parts_of_speech.nouns_pronouns_articles",
+            "slug": "nouns_pronouns_articles",
+            "name": "Nouns, Pronouns, Articles & Determiners",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_grammar_and_parts_of_speech",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_grammar_and_parts_of_speech"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Nouns",
+                "Pronouns",
+                "Articles",
+                "Determiners"
+            ]
+        },
+        "communication_paper.general_english.english_grammar_and_parts_of_speech.adjectives_adverbs_comparison": {
+            "id": "communication_paper.general_english.english_grammar_and_parts_of_speech.adjectives_adverbs_comparison",
+            "slug": "adjectives_adverbs_comparison",
+            "name": "Adjectives, Adverbs & Degrees of Comparison",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_grammar_and_parts_of_speech",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_grammar_and_parts_of_speech"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Adjectives",
+                "Adverbs",
+                "Degrees",
+                "Comparison"
+            ]
+        },
+        "communication_paper.general_english.english_grammar_and_parts_of_speech.prepositions_conjunctions": {
+            "id": "communication_paper.general_english.english_grammar_and_parts_of_speech.prepositions_conjunctions",
+            "slug": "prepositions_conjunctions",
+            "name": "Prepositions, Conjunctions & Interjections",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_grammar_and_parts_of_speech",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_grammar_and_parts_of_speech"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Prepositions",
+                "Conjunctions",
+                "Interjections"
+            ]
+        },
+        "communication_paper.general_english.tenses_voice_and_narration": {
+            "id": "communication_paper.general_english.tenses_voice_and_narration",
+            "slug": "tenses_voice_and_narration",
+            "name": "Tenses, Voice & Narration",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english",
+            "childrenIds": [
+                "communication_paper.general_english.tenses_voice_and_narration.tenses_and_verb_forms",
+                "communication_paper.general_english.tenses_voice_and_narration.subject_verb_agreement",
+                "communication_paper.general_english.tenses_voice_and_narration.active_and_passive_voice",
+                "communication_paper.general_english.tenses_voice_and_narration.direct_and_indirect_speech"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Tenses",
+                "Voice",
+                "Narration"
+            ]
+        },
+        "communication_paper.general_english.tenses_voice_and_narration.tenses_and_verb_forms": {
+            "id": "communication_paper.general_english.tenses_voice_and_narration.tenses_and_verb_forms",
+            "slug": "tenses_and_verb_forms",
+            "name": "Tenses & Auxiliary Verbs",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.tenses_voice_and_narration",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.tenses_voice_and_narration"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Tenses",
+                "Auxiliary",
+                "Verbs"
+            ]
+        },
+        "communication_paper.general_english.tenses_voice_and_narration.subject_verb_agreement": {
+            "id": "communication_paper.general_english.tenses_voice_and_narration.subject_verb_agreement",
+            "slug": "subject_verb_agreement",
+            "name": "Subject-Verb Agreement (Syntax Rules)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.tenses_voice_and_narration",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.tenses_voice_and_narration"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Subject-Verb",
+                "Agreement",
+                "Syntax",
+                "Rules"
+            ]
+        },
+        "communication_paper.general_english.tenses_voice_and_narration.active_and_passive_voice": {
+            "id": "communication_paper.general_english.tenses_voice_and_narration.active_and_passive_voice",
+            "slug": "active_and_passive_voice",
+            "name": "Active & Passive Voice Transformations",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.tenses_voice_and_narration",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.tenses_voice_and_narration"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Active",
+                "Passive",
+                "Voice",
+                "Transformations"
+            ]
+        },
+        "communication_paper.general_english.tenses_voice_and_narration.direct_and_indirect_speech": {
+            "id": "communication_paper.general_english.tenses_voice_and_narration.direct_and_indirect_speech",
+            "slug": "direct_and_indirect_speech",
+            "name": "Direct & Indirect Speech (Reported Speech)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.tenses_voice_and_narration",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.tenses_voice_and_narration"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Direct",
+                "Indirect",
+                "Speech",
+                "Reported"
+            ]
+        },
+        "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs": {
+            "id": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs",
+            "slug": "english_vocabulary_idioms_phrasal_verbs",
+            "name": "English Vocabulary, Idioms & Phrasal Verbs",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english",
+            "childrenIds": [
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.synonyms_and_antonyms",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.one_word_substitutions",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.idioms_and_phrases",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.phrasal_verbs_and_prepositional_phrases",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.spelling_rules_and_homophones"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "English",
+                "Vocabulary",
+                "Idioms",
+                "Phrasal",
+                "Verbs"
+            ]
+        },
+        "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.synonyms_and_antonyms": {
+            "id": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.synonyms_and_antonyms",
+            "slug": "synonyms_and_antonyms",
+            "name": "Synonyms & Antonyms",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Synonyms",
+                "Antonyms"
+            ]
+        },
+        "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.one_word_substitutions": {
+            "id": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.one_word_substitutions",
+            "slug": "one_word_substitutions",
+            "name": "One-Word Substitutions",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "One-Word",
+                "Substitutions"
+            ]
+        },
+        "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.idioms_and_phrases": {
+            "id": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.idioms_and_phrases",
+            "slug": "idioms_and_phrases",
+            "name": "Idiomatic Expressions & Common Sayings",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Idiomatic",
+                "Expressions",
+                "Common",
+                "Sayings"
+            ]
+        },
+        "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.phrasal_verbs_and_prepositional_phrases": {
+            "id": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.phrasal_verbs_and_prepositional_phrases",
+            "slug": "phrasal_verbs_and_prepositional_phrases",
+            "name": "Phrasal Verbs & Prepositional Phrases",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Phrasal",
+                "Verbs",
+                "Prepositional",
+                "Phrases"
+            ]
+        },
+        "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.spelling_rules_and_homophones": {
+            "id": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs.spelling_rules_and_homophones",
+            "slug": "spelling_rules_and_homophones",
+            "name": "Spelling Rules, Homophones & Confusable Words",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.english_vocabulary_idioms_phrasal_verbs"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Spelling",
+                "Rules",
+                "Homophones",
+                "Confusable",
+                "Words"
+            ]
+        },
+        "communication_paper.general_english.sentence_correction_and_comprehension": {
+            "id": "communication_paper.general_english.sentence_correction_and_comprehension",
+            "slug": "sentence_correction_and_comprehension",
+            "name": "Sentence Correction & Comprehension",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english",
+            "childrenIds": [
+                "communication_paper.general_english.sentence_correction_and_comprehension.spotting_errors_in_sentences",
+                "communication_paper.general_english.sentence_correction_and_comprehension.sentence_rearrangement_para_jumbles",
+                "communication_paper.general_english.sentence_correction_and_comprehension.reading_comprehension_passages",
+                "communication_paper.general_english.sentence_correction_and_comprehension.cloze_test_and_sentence_completion"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Sentence",
+                "Correction",
+                "Comprehension"
+            ]
+        },
+        "communication_paper.general_english.sentence_correction_and_comprehension.spotting_errors_in_sentences": {
+            "id": "communication_paper.general_english.sentence_correction_and_comprehension.spotting_errors_in_sentences",
+            "slug": "spotting_errors_in_sentences",
+            "name": "Spotting Errors & Sentence Improvement",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.sentence_correction_and_comprehension",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.sentence_correction_and_comprehension"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Spotting",
+                "Errors",
+                "Sentence",
+                "Improvement"
+            ]
+        },
+        "communication_paper.general_english.sentence_correction_and_comprehension.sentence_rearrangement_para_jumbles": {
+            "id": "communication_paper.general_english.sentence_correction_and_comprehension.sentence_rearrangement_para_jumbles",
+            "slug": "sentence_rearrangement_para_jumbles",
+            "name": "Sentence Rearrangement & Para Jumbles",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.sentence_correction_and_comprehension",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.sentence_correction_and_comprehension"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Sentence",
+                "Rearrangement",
+                "Para",
+                "Jumbles"
+            ]
+        },
+        "communication_paper.general_english.sentence_correction_and_comprehension.reading_comprehension_passages": {
+            "id": "communication_paper.general_english.sentence_correction_and_comprehension.reading_comprehension_passages",
+            "slug": "reading_comprehension_passages",
+            "name": "Reading Comprehension Passages",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.sentence_correction_and_comprehension",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.sentence_correction_and_comprehension"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Reading",
+                "Comprehension",
+                "Passages"
+            ]
+        },
+        "communication_paper.general_english.sentence_correction_and_comprehension.cloze_test_and_sentence_completion": {
+            "id": "communication_paper.general_english.sentence_correction_and_comprehension.cloze_test_and_sentence_completion",
+            "slug": "cloze_test_and_sentence_completion",
+            "name": "Cloze Test & Fill in the Blanks",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.general_english.sentence_correction_and_comprehension",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.general_english",
+                "communication_paper.general_english.sentence_correction_and_comprehension"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Cloze",
+                "Test",
+                "Fill",
+                "the",
+                "Blanks"
+            ]
+        },
+        "communication_paper.computer_knowledge": {
+            "id": "communication_paper.computer_knowledge",
+            "slug": "computer_knowledge",
+            "name": "Computer Knowledge & Literacy (ಗಣಕಯಂತ್ರ ಜ್ಞಾನ)",
+            "level": 2,
+            "levelName": "Domain",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper",
+            "childrenIds": [
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools",
+                "communication_paper.computer_knowledge.internet_networking_and_email",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india"
+            ],
+            "ancestorIds": [
+                "communication_paper"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Computer",
+                "Knowledge",
+                "Hardware",
+                "Software",
+                "MS Office",
+                "Internet",
+                "Networking",
+                "Cyber",
+                "Security"
+            ]
+        },
+        "communication_paper.computer_knowledge.computer_fundamentals_and_architecture": {
+            "id": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture",
+            "slug": "computer_fundamentals_and_architecture",
+            "name": "Computer Fundamentals & Architecture",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge",
+            "childrenIds": [
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.generations_and_types_of_computers",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.cpu_input_output_devices",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.primary_and_secondary_memory",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.computer_software_types",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.number_systems_and_computer_codes"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Computer",
+                "Fundamentals",
+                "Architecture"
+            ]
+        },
+        "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.generations_and_types_of_computers": {
+            "id": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.generations_and_types_of_computers",
+            "slug": "generations_and_types_of_computers",
+            "name": "History, Generations (1st to 5th) & Classification of Computers",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "History",
+                "Generations",
+                "1st",
+                "5th",
+                "Classification",
+                "Computers"
+            ]
+        },
+        "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.cpu_input_output_devices": {
+            "id": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.cpu_input_output_devices",
+            "slug": "cpu_input_output_devices",
+            "name": "CPU Architecture (ALU, CU, Registers) & Input/Output Devices",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "CPU",
+                "Architecture",
+                "ALU",
+                "CU",
+                "Registers",
+                "Input/Output",
+                "Devices"
+            ]
+        },
+        "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.primary_and_secondary_memory": {
+            "id": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.primary_and_secondary_memory",
+            "slug": "primary_and_secondary_memory",
+            "name": "Memory Hierarchy, RAM, ROM, Cache, Registers & Storage Media (HDD, SSD, Optical)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Memory",
+                "Hierarchy",
+                "RAM",
+                "ROM",
+                "Cache",
+                "Registers",
+                "Storage",
+                "Media",
+                "HDD",
+                "SSD"
+            ]
+        },
+        "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.computer_software_types": {
+            "id": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.computer_software_types",
+            "slug": "computer_software_types",
+            "name": "System Software vs Application Software, OS, Compilers & Device Drivers",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "System",
+                "Software",
+                "Application",
+                "OS",
+                "Compilers",
+                "Device",
+                "Drivers"
+            ]
+        },
+        "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.number_systems_and_computer_codes": {
+            "id": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture.number_systems_and_computer_codes",
+            "slug": "number_systems_and_computer_codes",
+            "name": "Binary, Octal, Decimal, Hexadecimal, ASCII & Unicode Encoding",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.computer_fundamentals_and_architecture",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.computer_fundamentals_and_architecture"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Binary",
+                "Octal",
+                "Decimal",
+                "Hexadecimal",
+                "ASCII",
+                "Unicode",
+                "Encoding"
+            ]
+        },
+        "communication_paper.computer_knowledge.operating_systems_and_shortcuts": {
+            "id": "communication_paper.computer_knowledge.operating_systems_and_shortcuts",
+            "slug": "operating_systems_and_shortcuts",
+            "name": "Operating Systems & Shortcuts",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge",
+            "childrenIds": [
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts.operating_system_concepts",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts.dos_commands_and_file_management",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts.file_extensions_and_formats",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts.keyboard_shortcuts_and_windows_gui"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Operating",
+                "Systems",
+                "Shortcuts"
+            ]
+        },
+        "communication_paper.computer_knowledge.operating_systems_and_shortcuts.operating_system_concepts": {
+            "id": "communication_paper.computer_knowledge.operating_systems_and_shortcuts.operating_system_concepts",
+            "slug": "operating_system_concepts",
+            "name": "Operating System Concepts, Functions & Types (Windows, Linux, DOS, Android)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.operating_systems_and_shortcuts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Operating",
+                "System",
+                "Concepts",
+                "Functions",
+                "Types",
+                "Windows",
+                "Linux",
+                "DOS",
+                "Android"
+            ]
+        },
+        "communication_paper.computer_knowledge.operating_systems_and_shortcuts.dos_commands_and_file_management": {
+            "id": "communication_paper.computer_knowledge.operating_systems_and_shortcuts.dos_commands_and_file_management",
+            "slug": "dos_commands_and_file_management",
+            "name": "Command Prompt / DOS Commands, File Systems (FAT, NTFS), Directories & Paths",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.operating_systems_and_shortcuts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Command",
+                "Prompt",
+                "DOS",
+                "Commands",
+                "File",
+                "Systems",
+                "FAT",
+                "NTFS",
+                "Directories",
+                "Paths"
+            ]
+        },
+        "communication_paper.computer_knowledge.operating_systems_and_shortcuts.file_extensions_and_formats": {
+            "id": "communication_paper.computer_knowledge.operating_systems_and_shortcuts.file_extensions_and_formats",
+            "slug": "file_extensions_and_formats",
+            "name": "Common File Extensions (Documents, Spreadsheets, Multimedia, System, Executable)",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.operating_systems_and_shortcuts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Common",
+                "File",
+                "Extensions",
+                "Documents",
+                "Spreadsheets",
+                "Multimedia",
+                "System",
+                "Executable"
+            ]
+        },
+        "communication_paper.computer_knowledge.operating_systems_and_shortcuts.keyboard_shortcuts_and_windows_gui": {
+            "id": "communication_paper.computer_knowledge.operating_systems_and_shortcuts.keyboard_shortcuts_and_windows_gui",
+            "slug": "keyboard_shortcuts_and_windows_gui",
+            "name": "Standard Universal & Windows Keyboard Shortcuts, Taskbar, Control Panel Utilities",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.operating_systems_and_shortcuts",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.operating_systems_and_shortcuts"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Standard",
+                "Universal",
+                "Windows",
+                "Keyboard",
+                "Shortcuts",
+                "Taskbar",
+                "Control",
+                "Panel",
+                "Utilities"
+            ]
+        },
+        "communication_paper.computer_knowledge.ms_office_productivity_tools": {
+            "id": "communication_paper.computer_knowledge.ms_office_productivity_tools",
+            "slug": "ms_office_productivity_tools",
+            "name": "MS Office Productivity Suite",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge",
+            "childrenIds": [
+                "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_word_word_processing",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_excel_spreadsheets_and_formulas",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_powerpoint_presentations",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_access_database_basics"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Office",
+                "Productivity",
+                "Suite"
+            ]
+        },
+        "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_word_word_processing": {
+            "id": "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_word_word_processing",
+            "slug": "ms_word_word_processing",
+            "name": "MS Word: Formatting, Styles, Tables, Header/Footer, Mail Merge & Word Shortcuts",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.ms_office_productivity_tools",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Word",
+                "Formatting",
+                "Styles",
+                "Tables",
+                "Header/Footer",
+                "Mail",
+                "Merge",
+                "Shortcuts"
+            ]
+        },
+        "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_excel_spreadsheets_and_formulas": {
+            "id": "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_excel_spreadsheets_and_formulas",
+            "slug": "ms_excel_spreadsheets_and_formulas",
+            "name": "MS Excel: Worksheets, Cells, Formulas (SUM, AVERAGE, IF, VLOOKUP), Charts & Formatting",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.ms_office_productivity_tools",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Excel",
+                "Worksheets",
+                "Cells",
+                "Formulas",
+                "SUM",
+                "AVERAGE",
+                "IF",
+                "VLOOKUP",
+                "Charts",
+                "Formatting"
+            ]
+        },
+        "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_powerpoint_presentations": {
+            "id": "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_powerpoint_presentations",
+            "slug": "ms_powerpoint_presentations",
+            "name": "MS PowerPoint: Slide Layouts, Views, Animations, Transitions & Slide Show Controls",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.ms_office_productivity_tools",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "PowerPoint",
+                "Slide",
+                "Layouts",
+                "Views",
+                "Animations",
+                "Transitions",
+                "Show",
+                "Controls"
+            ]
+        },
+        "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_access_database_basics": {
+            "id": "communication_paper.computer_knowledge.ms_office_productivity_tools.ms_access_database_basics",
+            "slug": "ms_access_database_basics",
+            "name": "MS Access & DBMS Fundamentals: Tables, Records, Primary Keys, Queries & Forms",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.ms_office_productivity_tools",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.ms_office_productivity_tools"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Access",
+                "DBMS",
+                "Fundamentals",
+                "Tables",
+                "Records",
+                "Primary",
+                "Keys",
+                "Queries",
+                "Forms"
+            ]
+        },
+        "communication_paper.computer_knowledge.internet_networking_and_email": {
+            "id": "communication_paper.computer_knowledge.internet_networking_and_email",
+            "slug": "internet_networking_and_email",
+            "name": "Internet, Networking & Email Communication",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge",
+            "childrenIds": [
+                "communication_paper.computer_knowledge.internet_networking_and_email.computer_networks_topologies_devices",
+                "communication_paper.computer_knowledge.internet_networking_and_email.internet_architecture_and_protocols",
+                "communication_paper.computer_knowledge.internet_networking_and_email.web_browsers_and_search_engines",
+                "communication_paper.computer_knowledge.internet_networking_and_email.email_communication_and_protocols"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Internet",
+                "Networking",
+                "Email",
+                "Communication"
+            ]
+        },
+        "communication_paper.computer_knowledge.internet_networking_and_email.computer_networks_topologies_devices": {
+            "id": "communication_paper.computer_knowledge.internet_networking_and_email.computer_networks_topologies_devices",
+            "slug": "computer_networks_topologies_devices",
+            "name": "Computer Networks (LAN, MAN, WAN), Topologies (Star, Ring, Mesh, Bus) & Network Devices",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.internet_networking_and_email",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.internet_networking_and_email"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Computer",
+                "Networks",
+                "LAN",
+                "MAN",
+                "WAN",
+                "Topologies",
+                "Star",
+                "Ring",
+                "Mesh",
+                "Bus"
+            ]
+        },
+        "communication_paper.computer_knowledge.internet_networking_and_email.internet_architecture_and_protocols": {
+            "id": "communication_paper.computer_knowledge.internet_networking_and_email.internet_architecture_and_protocols",
+            "slug": "internet_architecture_and_protocols",
+            "name": "Internet Architecture, IPv4 vs IPv6, MAC Address, DNS, TCP/IP, HTTP/HTTPS, FTP",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.internet_networking_and_email",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.internet_networking_and_email"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Internet",
+                "Architecture",
+                "IPv4",
+                "IPv6",
+                "MAC",
+                "Address",
+                "DNS",
+                "TCP/IP",
+                "HTTP/HTTPS",
+                "FTP"
+            ]
+        },
+        "communication_paper.computer_knowledge.internet_networking_and_email.web_browsers_and_search_engines": {
+            "id": "communication_paper.computer_knowledge.internet_networking_and_email.web_browsers_and_search_engines",
+            "slug": "web_browsers_and_search_engines",
+            "name": "Web Browsers vs Search Engines, URL Anatomy, Bookmarks, Cookies & Cache",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.internet_networking_and_email",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.internet_networking_and_email"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Web",
+                "Browsers",
+                "Search",
+                "Engines",
+                "URL",
+                "Anatomy",
+                "Bookmarks",
+                "Cookies",
+                "Cache"
+            ]
+        },
+        "communication_paper.computer_knowledge.internet_networking_and_email.email_communication_and_protocols": {
+            "id": "communication_paper.computer_knowledge.internet_networking_and_email.email_communication_and_protocols",
+            "slug": "email_communication_and_protocols",
+            "name": "Email Architecture, SMTP, POP3, IMAP Protocols, CC vs BCC, Attachments & Email Etiquette",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.internet_networking_and_email",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.internet_networking_and_email"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Email",
+                "Architecture",
+                "SMTP",
+                "POP3",
+                "IMAP",
+                "Protocols",
+                "BCC",
+                "Attachments",
+                "Etiquette"
+            ]
+        },
+        "communication_paper.computer_knowledge.cyber_security_and_digital_india": {
+            "id": "communication_paper.computer_knowledge.cyber_security_and_digital_india",
+            "slug": "cyber_security_and_digital_india",
+            "name": "Cyber Security, IT Act & Digital Governance",
+            "level": 3,
+            "levelName": "Topic",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge",
+            "childrenIds": [
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india.malware_threats_and_antivirus",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india.cyber_laws_and_it_act_2000",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india.digital_india_and_e_governance",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india.karnataka_e_governance_initiatives"
+            ],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Cyber",
+                "Security",
+                "Act",
+                "Digital",
+                "Governance"
+            ]
+        },
+        "communication_paper.computer_knowledge.cyber_security_and_digital_india.malware_threats_and_antivirus": {
+            "id": "communication_paper.computer_knowledge.cyber_security_and_digital_india.malware_threats_and_antivirus",
+            "slug": "malware_threats_and_antivirus",
+            "name": "Malware Types (Viruses, Worms, Trojans, Spyware, Ransomware), Phishing, Firewalls & Antivirus",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.cyber_security_and_digital_india",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Malware",
+                "Types",
+                "Viruses",
+                "Worms",
+                "Trojans",
+                "Spyware",
+                "Ransomware",
+                "Phishing",
+                "Firewalls",
+                "Antivirus"
+            ]
+        },
+        "communication_paper.computer_knowledge.cyber_security_and_digital_india.cyber_laws_and_it_act_2000": {
+            "id": "communication_paper.computer_knowledge.cyber_security_and_digital_india.cyber_laws_and_it_act_2000",
+            "slug": "cyber_laws_and_it_act_2000",
+            "name": "Information Technology Act 2000, Cyber Crimes, Digital Signatures & CERT-In",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.cyber_security_and_digital_india",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Information",
+                "Technology",
+                "Act",
+                "2000",
+                "Cyber",
+                "Crimes",
+                "Digital",
+                "Signatures",
+                "CERT-In"
+            ]
+        },
+        "communication_paper.computer_knowledge.cyber_security_and_digital_india.digital_india_and_e_governance": {
+            "id": "communication_paper.computer_knowledge.cyber_security_and_digital_india.digital_india_and_e_governance",
+            "slug": "digital_india_and_e_governance",
+            "name": "Digital India Initiatives, DigiLocker, UPI, UMANG, Aadhaar Enabled Services",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.cyber_security_and_digital_india",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Digital",
+                "India",
+                "Initiatives",
+                "DigiLocker",
+                "UPI",
+                "UMANG",
+                "Aadhaar",
+                "Enabled",
+                "Services"
+            ]
+        },
+        "communication_paper.computer_knowledge.cyber_security_and_digital_india.karnataka_e_governance_initiatives": {
+            "id": "communication_paper.computer_knowledge.cyber_security_and_digital_india.karnataka_e_governance_initiatives",
+            "slug": "karnataka_e_governance_initiatives",
+            "name": "Karnataka State E-Governance Portals: Bhoomi, Seva Sindhu, KSWAN, Kutumba, FRUITS",
+            "level": 4,
+            "levelName": "Subtopic_Entity",
+            "subject": "Communication Paper (General Kannada, General English & Computer Knowledge)",
+            "subjectId": "communication_paper",
+            "parentId": "communication_paper.computer_knowledge.cyber_security_and_digital_india",
+            "childrenIds": [],
+            "ancestorIds": [
+                "communication_paper",
+                "communication_paper.computer_knowledge",
+                "communication_paper.computer_knowledge.cyber_security_and_digital_india"
+            ],
+            "examTags": {
+                "kpsc": [
+                    "Group-C",
+                    "FDA",
+                    "SDA",
+                    "CTI",
+                    "Sub-Registrar"
+                ],
+                "kea": [
+                    "VAO",
+                    "Village-Accountant"
+                ],
+                "ksp": [
+                    "PSI-Paper1",
+                    "PC"
+                ],
+                "kas": [
+                    "Compulsory-Kannada",
+                    "Compulsory-English"
+                ]
+            },
+            "rawExamTagString": "[KPSC: Group-C, FDA, SDA, CTI, Sub-Registrar] [KEA: VAO] [KSP: PSI-Paper1] [KAS: Compulsory-Lang]",
+            "entities": [],
+            "keywords": [
+                "Karnataka",
+                "State",
+                "E-Governance",
+                "Portals",
+                "Bhoomi",
+                "Seva",
+                "Sindhu",
+                "KSWAN",
+                "Kutumba",
+                "FRUITS"
+            ]
         }
     },
     "stats": {
-        "total_nodes": 29,
-        "level_1_subjects": 1,
-        "level_2_domains": 7,
-        "level_3_topics": 15,
-        "level_4_subtopics": 6
+        "total_nodes": 91,
+        "level_1_subjects": 2,
+        "level_2_domains": 10,
+        "level_3_topics": 28,
+        "level_4_subtopics": 51
     }
 }
