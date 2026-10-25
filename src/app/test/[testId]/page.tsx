@@ -383,6 +383,29 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         console.error('Local JSON fallback error for ksp-pc:', e);
                     }
                 }
+            } else if (config.exam_id === 'ksp-psi') {
+                let query = supabase.from('psi_pyq').select('*');
+                if (config.paper) {
+                    query = query.eq('paper', config.paper);
+                } else {
+                    query = query.eq('paper', 2);
+                }
+                if (config.cadre && config.cadre !== 'all') {
+                    query = query.eq('cadre', config.cadre);
+                }
+                if (config.mode === 'subject' && config.subject) {
+                    query = query.or(`subject.eq."${config.subject}",subject_kannada.eq."${config.subject}"`);
+                }
+                if (config.difficulty && config.difficulty !== 'mixed') {
+                    query = query.eq('difficulty', config.difficulty);
+                }
+                if (config.year && config.year !== 'all') {
+                    query = query.eq('year', config.year);
+                }
+                const { data } = await query;
+                if (data && data.length > 0) {
+                    selectedRawQuestions = data;
+                }
             } else if (config.exam_id === 'upsc-capf') {
                 let query = supabase.from('capf_pyq').select('*');
                 if (config.mode === 'subject' && config.subject) {
@@ -532,6 +555,17 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     if (config.question_count && config.question_count < sortedQuestions.length) {
                         sortedQuestions = safeSliceQuestions(sortedQuestions, config.question_count);
                     }
+                } else if (config.exam_id === 'ksp-psi') {
+                    selectedRawQuestions = assignQuestionGroups(selectedRawQuestions);
+
+                    if (config.mode === 'yearwise' || (config.year && config.year !== 'all') || (config.cadre && config.cadre !== 'all')) {
+                        sortedQuestions = [...selectedRawQuestions].sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
+                    } else {
+                        sortedQuestions = groupPreservingShuffle(selectedRawQuestions);
+                    }
+                    if (config.question_count && config.question_count < sortedQuestions.length) {
+                        sortedQuestions = safeSliceQuestions(sortedQuestions, config.question_count);
+                    }
                 } else if (config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
                     selectedRawQuestions = assignQuestionGroups(selectedRawQuestions);
 
@@ -576,8 +610,8 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 }
 
                 const formattedQs: Question[] = sortedQuestions.map((dbq) => {
-                    // Police Constable (PC) CAR/DAR & KEA Question Format (from pc_pyq, kea_questions, or JSON)
-                    if (dbq.option_1_english || dbq.option_1_kannada || dbq.exam_id === 'ksp-pc' || dbq.exam_id === 'kea' || config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
+                    // Police Sub-Inspector (PSI), Police Constable (PC) & KEA Question Format (from psi_pyq, pc_pyq, kea_questions)
+                    if (dbq.option_1_english || dbq.option_1_kannada || dbq.exam_id === 'ksp-psi' || config.exam_id === 'ksp-psi' || dbq.exam_id === 'ksp-pc' || dbq.exam_id === 'kea' || config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
                         const optionsList = [
                             { id: '1', text: dbq.option_1_english || dbq.option_1_kannada || '', text_kn: dbq.option_1_kannada || undefined },
                             { id: '2', text: dbq.option_2_english || dbq.option_2_kannada || '', text_kn: dbq.option_2_kannada || undefined },
