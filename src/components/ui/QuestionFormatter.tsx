@@ -532,7 +532,6 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                 borderRadius: '10px',
                                 background: 'var(--bg-secondary)',
                                 border: '1px solid var(--border)',
-                                borderLeft: `4px solid ${borderColor}`,
                                 boxShadow: 'var(--shadow-sm)'
                             }}
                         >

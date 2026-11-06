@@ -91,7 +91,7 @@ export default function RegisterPage() {
                     <div style={{ fontSize: '56px', marginBottom: '24px' }}>🚀</div>
                     <h2 style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.8px', marginBottom: '16px', color: '#EEF2FF' }}>
                         Start your <br />
-                        <span style={{ background: 'linear-gradient(135deg, #1ABEAA, #3B82F6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>journey.</span>
+                        <span style={{ color: '#38BDF8' }}>journey.</span>
                     </h2>
                     <p style={{ color: '#94A3B8', fontSize: '15px', lineHeight: 1.7 }}>
                         Free access to high-quality mock tests. No credit card required.
@@ -99,7 +99,7 @@ export default function RegisterPage() {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '40px', textAlign: 'left' }}>
                         {['Track your progress over time', 'Earn XP and unlock badges', 'Compare with the leaderboard', 'Study in your native language'].map((item) => (
                             <div key={item} style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#94A3B8', fontSize: '14px' }}>
-                                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#1ABEAA', flexShrink: 0, boxShadow: '0 0 8px rgba(26,190,170,0.6)' }} />
+                                <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#38BDF8', flexShrink: 0, boxShadow: '0 0 8px rgba(56,189,248,0.6)' }} />
                                 {item}
                             </div>
                         ))}
@@ -109,10 +109,10 @@ export default function RegisterPage() {
 
             {/* Right Form Panel */}
             <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 24px', background: 'var(--bg-primary)' }}>
-                <div style={{ width: '100%', maxWidth: '420px', padding: '36px', borderRadius: '8px', border: '1.5px solid var(--border)', background: 'var(--bg-card)', boxShadow: 'var(--shadow-card)' }} className="fade-in-up">
+                <div style={{ width: '100%', maxWidth: '420px', padding: '36px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--bg-card)', boxShadow: 'var(--shadow-card)' }} className="fade-in-up">
                     <div style={{ marginBottom: '28px' }}>
-                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 800, color: '#111827', background: '#FEF08A', border: '1px solid #1E1E1E', borderRadius: '4px', padding: '3px 8px', marginBottom: '12px' }}>
-                            NEW ASPIRANT
+                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 700, color: '#1D4ED8', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '6px', padding: '3px 8px', marginBottom: '12px' }}>
+                            UPSC AI ASPIRANT
                         </div>
                         <h1 style={{ fontSize: '26px', fontWeight: 900, letterSpacing: '-0.5px', marginBottom: '6px' }}>Create account</h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '13.5px' }}>Free mock tests. No credit card needed.</p>
@@ -120,10 +120,9 @@ export default function RegisterPage() {
 
                     {error && (
                         <div style={{
-                            background: '#FEF2F2', border: '1.5px solid #DC2626',
-                            borderRadius: '6px', padding: '12px 16px', marginBottom: '20px',
+                            background: '#FEF2F2', border: '1px solid #FECACA',
+                            borderRadius: '8px', padding: '12px 16px', marginBottom: '20px',
                             fontSize: '13.5px', color: '#DC2626', fontWeight: 600,
-                            boxShadow: '1px 1px 0px var(--border)'
                         }}>
                             ⚠️ {error}
                         </div>
@@ -133,7 +132,7 @@ export default function RegisterPage() {
                         onClick={handleGoogleLogin}
                         disabled={loading}
                         className="btn btn-secondary"
-                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px', borderRadius: '6px' }}
+                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px', borderRadius: '8px' }}
                     >
                         <GoogleIcon />
                         Continue with Google
@@ -150,13 +149,13 @@ export default function RegisterPage() {
                             <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <User size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Full Name
                             </label>
-                            <input className="input" type="text" placeholder="Arjun Sharma" value={name} onChange={(e) => setName(e.target.value)} required autoComplete="name" style={{ borderRadius: '6px' }} />
+                            <input className="input" type="text" placeholder="Arjun Sharma" value={name} onChange={(e) => setName(e.target.value)} required autoComplete="name" style={{ borderRadius: '8px' }} />
                         </div>
                         <div>
                             <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Mail size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Email
                             </label>
-                            <input className="input" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" style={{ borderRadius: '6px' }} />
+                            <input className="input" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" style={{ borderRadius: '8px' }} />
                         </div>
                         <div>
                             <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
@@ -170,7 +169,7 @@ export default function RegisterPage() {
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     required autoComplete="new-password"
-                                    style={{ paddingRight: '44px', borderRadius: '6px' }}
+                                    style={{ paddingRight: '44px', borderRadius: '8px' }}
                                 />
                                 <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
                                     {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -181,12 +180,12 @@ export default function RegisterPage() {
                             <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Lock size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Confirm Password
                             </label>
-                            <input className="input" type={showPass ? 'text' : 'password'} placeholder="Repeat password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required autoComplete="new-password" style={{ borderRadius: '6px' }} />
+                            <input className="input" type={showPass ? 'text' : 'password'} placeholder="Repeat password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required autoComplete="new-password" style={{ borderRadius: '8px' }} />
                         </div>
                         <button
                             type="submit"
                             className="btn btn-primary"
-                            style={{ padding: '12px', fontSize: '14px', marginTop: '4px', width: '100%', borderRadius: '6px' }}
+                            style={{ padding: '12px', fontSize: '14px', marginTop: '4px', width: '100%', borderRadius: '8px' }}
                             disabled={loading}
                         >
                             {loading ? '⏳ Creating account…' : <><ArrowRight size={16} /> Create Account</>}

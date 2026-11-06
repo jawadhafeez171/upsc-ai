@@ -82,9 +82,8 @@ export default function LeaderboardPage() {
                             <div key={entry.user_id} style={{
                                 display: 'flex', alignItems: 'center', gap: '14px', padding: '14px 20px',
                                 borderBottom: idx < board.length - 1 ? '1px solid var(--border)' : 'none',
-                                background: isYou ? 'rgba(37, 99, 235, 0.12)' : 'transparent',
-                                borderLeft: isYou ? '3px solid var(--brand-orange)' : 'none',
-                                transition: 'background 0.15s',
+                                background: isYou ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
+                                transition: 'background 0.15s ease',
                             }}>
                                 <div style={{ width: '28px', textAlign: 'center', fontWeight: 800, fontSize: '13px', color: entry.rank <= 3 ? 'var(--brand-gold)' : 'var(--text-muted)' }}>
                                     {entry.rank <= 3 ? RANK_EMOJI[entry.rank - 1] : `#${entry.rank}`}

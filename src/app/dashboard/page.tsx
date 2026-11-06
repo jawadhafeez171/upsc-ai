@@ -46,8 +46,8 @@ export default function DashboardPage() {
     const xpProgress = Math.min((user.xp % xpToNextLevel) / xpToNextLevel, 1);
 
     const STATS = [
-        { emoji: '🔥', label: 'Day Streak', value: `${user.streak}`, color: 'var(--brand-gold)', bg: 'rgba(217, 119, 6, 0.1)', border: 'rgba(217, 119, 6, 0.25)' },
-        { emoji: '📝', label: 'Tests Taken', value: `${totalTests}`, color: 'var(--brand-orange)', bg: 'rgba(37, 99, 235, 0.1)', border: 'rgba(37, 99, 235, 0.25)' },
+        { emoji: '🔥', label: 'Day Streak', value: `${user.streak}`, color: 'var(--brand-saffron)', bg: 'rgba(234, 88, 12, 0.1)', border: 'rgba(234, 88, 12, 0.25)' },
+        { emoji: '📝', label: 'Tests Taken', value: `${totalTests}`, color: 'var(--brand-blue)', bg: 'rgba(37, 99, 235, 0.1)', border: 'rgba(37, 99, 235, 0.25)' },
         { emoji: '⭐', label: 'Avg Score', value: totalTests > 0 ? `${avgScore}%` : '—', color: 'var(--brand-teal)', bg: 'rgba(13, 148, 136, 0.1)', border: 'rgba(13, 148, 136, 0.25)' },
         { emoji: '🏅', label: 'Badges', value: `${user.badges.length}`, color: '#8B5CF6', bg: 'rgba(139, 92, 246, 0.1)', border: 'rgba(139, 92, 246, 0.25)' },
     ];
@@ -65,17 +65,17 @@ export default function DashboardPage() {
                         </h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '15px' }}>Here&apos;s your preparation overview.</p>
                     </div>
-                    <Link href="/exams" className="btn btn-primary" style={{ borderRadius: '10px' }}>
+                    <Link href="/exams" className="btn btn-primary" style={{ borderRadius: '8px' }}>
                         New Test <ArrowRight size={15} />
                     </Link>
                 </div>
 
                 {/* XP / Level Card */}
-                <div className="card fade-in-up-d1" style={{ padding: '28px', marginBottom: '24px', background: 'linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(13,148,136,0.04) 100%)', borderColor: 'rgba(37,99,235,0.2)' }}>
+                <div className="card fade-in-up-d1" style={{ padding: '28px', marginBottom: '24px', borderRadius: '12px', background: 'linear-gradient(135deg, rgba(37,99,235,0.06) 0%, rgba(13,148,136,0.03) 100%)', borderColor: 'rgba(37,99,235,0.2)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
                         <div>
                             <div style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '6px' }}>Your Level</div>
-                            <div style={{ fontSize: '24px', fontWeight: 900, background: 'linear-gradient(135deg, var(--brand-orange), var(--brand-gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                            <div style={{ fontSize: '24px', fontWeight: 900, color: 'var(--brand-orange)' }}>
                                 {user.level}
                             </div>
                         </div>
@@ -94,12 +94,12 @@ export default function DashboardPage() {
                 </div>
 
                 {/* Stats Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px', marginBottom: '24px' }} className="fade-in-up-d2">
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px', marginBottom: '24px' }} className="fade-in-up-d2">
                     {STATS.map((s) => (
-                        <div key={s.label} className="stat-card" style={{ border: `1px solid ${s.border}`, background: s.bg }}>
+                        <div key={s.label} className="stat-card" style={{ border: `1px solid ${s.border}`, background: s.bg, borderRadius: '12px' }}>
                             <div style={{ fontSize: '24px', marginBottom: '10px' }}>{s.emoji}</div>
                             <div style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.5px', color: s.color, marginBottom: '4px' }}>{s.value}</div>
-                            <div style={{ fontSize: '12px', color: 'var(--text-secondary)', fontWeight: 500 }}>{s.label}</div>
+                            <div style={{ fontSize: '12px', color: 'var(--text-secondary)', fontWeight: 600 }}>{s.label}</div>
                         </div>
                     ))}
                 </div>
@@ -107,7 +107,7 @@ export default function DashboardPage() {
                 {/* Bottom Grid: Recent Tests + Badges */}
                 <div className="dashboard-layout-grid fade-in-up-d3">
                     {/* Recent Tests */}
-                    <div className="card" style={{ padding: '28px' }}>
+                    <div className="card" style={{ padding: '28px', borderRadius: '12px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
                             <TrendingUp size={16} style={{ color: 'var(--brand-orange)' }} />
                             <h2 style={{ fontWeight: 700, fontSize: '16px' }}>Recent Tests</h2>
@@ -127,7 +127,7 @@ export default function DashboardPage() {
                                     return (
                                         <div key={s.id} style={{
                                             display: 'flex', alignItems: 'center', gap: '14px',
-                                            padding: '14px 16px', background: 'var(--bg-secondary)', borderRadius: '12px',
+                                            padding: '14px 16px', background: 'var(--bg-secondary)', borderRadius: '10px',
                                             border: '1px solid var(--border)',
                                         }}>
                                             <div style={{ fontSize: '22px', width: 36, textAlign: 'center', flexShrink: 0 }}>{examInfo.icon}</div>
@@ -148,7 +148,7 @@ export default function DashboardPage() {
                     </div>
 
                     {/* Badges */}
-                    <div className="card" style={{ padding: '28px' }}>
+                    <div className="card" style={{ padding: '28px', borderRadius: '12px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
                             <Award size={16} style={{ color: 'var(--brand-gold)' }} />
                             <h2 style={{ fontWeight: 700, fontSize: '16px' }}>Badges</h2>

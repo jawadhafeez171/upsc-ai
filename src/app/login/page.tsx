@@ -70,10 +70,10 @@ export default function LoginPage() {
                     <div style={{ fontSize: '56px', marginBottom: '24px' }}>🎯</div>
                     <h2 style={{ fontSize: '32px', fontWeight: 900, letterSpacing: '-0.8px', marginBottom: '16px', color: '#EEF2FF' }}>
                         Your prep. <br />
-                        <span style={{ background: 'linear-gradient(135deg, #F26B1D, #F59E0B)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Elevated.</span>
+                        <span style={{ color: '#38BDF8' }}>Elevated.</span>
                     </h2>
                     <p style={{ color: '#94A3B8', fontSize: '15px', lineHeight: 1.7 }}>
-                        Join thousands of aspirants who trust MockIQ for their UPSC and KPSC preparation.
+                        Join thousands of aspirants who trust UPSC AI for their civil services and state examination preparation.
                     </p>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '40px', textAlign: 'left' }}>
                         {['8+ exam formats covered', 'Subject-wise analytics', 'Multilingual support', 'Instant result feedback'].map((item) => (
@@ -91,10 +91,10 @@ export default function LoginPage() {
                 flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center',
                 padding: '40px 24px', background: 'var(--bg-primary)'
             }}>
-                <div style={{ width: '100%', maxWidth: '420px', padding: '36px', borderRadius: '8px', border: '1.5px solid var(--border)', background: 'var(--bg-card)', boxShadow: 'var(--shadow-card)' }} className="fade-in-up">
+                <div style={{ width: '100%', maxWidth: '420px', padding: '36px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--bg-card)', boxShadow: 'var(--shadow-card)' }} className="fade-in-up">
                     <div style={{ marginBottom: '28px' }}>
-                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 800, color: '#111827', background: '#FEF08A', border: '1px solid #1E1E1E', borderRadius: '4px', padding: '3px 8px', marginBottom: '12px' }}>
-                            MOCKIQ ACCESS
+                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 700, color: '#1D4ED8', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '6px', padding: '3px 8px', marginBottom: '12px' }}>
+                            UPSC AI ACCESS
                         </div>
                         <h1 style={{ fontSize: '26px', fontWeight: 900, letterSpacing: '-0.5px', marginBottom: '6px' }}>Welcome back</h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '13.5px' }}>Continue your preparation journey</p>
@@ -102,10 +102,9 @@ export default function LoginPage() {
 
                     {error && (
                         <div style={{
-                            background: '#FEF2F2', border: '1.5px solid #DC2626',
-                            borderRadius: '6px', padding: '12px 16px', marginBottom: '20px',
+                            background: '#FEF2F2', border: '1px solid #FECACA',
+                            borderRadius: '8px', padding: '12px 16px', marginBottom: '20px',
                             fontSize: '13.5px', color: '#DC2626', fontWeight: 600,
-                            boxShadow: '1px 1px 0px var(--border)'
                         }}>
                             ⚠️ {error}
                         </div>
@@ -115,7 +114,7 @@ export default function LoginPage() {
                         onClick={handleGoogleLogin}
                         disabled={loading}
                         className="btn btn-secondary"
-                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px', borderRadius: '6px' }}
+                        style={{ width: '100%', padding: '12px', fontSize: '14px', display: 'flex', gap: '10px', justifyContent: 'center', marginBottom: '20px', borderRadius: '8px' }}
                     >
                         <GoogleIcon />
                         Continue with Google
@@ -140,7 +139,7 @@ export default function LoginPage() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                                 autoComplete="email"
-                                style={{ borderRadius: '6px' }}
+                                style={{ borderRadius: '8px' }}
                             />
                         </div>
                         <div>
@@ -156,7 +155,7 @@ export default function LoginPage() {
                                     onChange={(e) => setPassword(e.target.value)}
                                     required
                                     autoComplete="current-password"
-                                    style={{ paddingRight: '44px', borderRadius: '6px' }}
+                                    style={{ paddingRight: '44px', borderRadius: '8px' }}
                                 />
                                 <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
                                     {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
@@ -166,7 +165,7 @@ export default function LoginPage() {
                         <button
                             type="submit"
                             className="btn btn-primary"
-                            style={{ padding: '12px', fontSize: '14px', marginTop: '4px', width: '100%', borderRadius: '6px' }}
+                            style={{ padding: '12px', fontSize: '14px', marginTop: '4px', width: '100%', borderRadius: '8px' }}
                             disabled={loading}
                         >
                             {loading ? '⏳ Signing in…' : <><ArrowRight size={16} /> Sign In</>}

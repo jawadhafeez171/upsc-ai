@@ -56,7 +56,8 @@ export default function ExamBottomNav({
                     }}
                 >
                     <ArrowLeft size={14} />
-                    <span>PREVIOUS (Q.{Math.max(1, currentIdx)})</span>
+                    <span>PREVIOUS</span>
+                    <kbd style={{ fontSize: '10px', background: '#F3F4F6', color: '#6B7280', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>P</kbd>
                 </button>
 
                 {hasSelectedAnswer && (
@@ -69,10 +70,13 @@ export default function ExamBottomNav({
                             fontWeight: 700,
                             fontSize: '12px',
                             cursor: 'pointer',
-                            textDecoration: 'underline'
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '4px'
                         }}
                     >
-                        CLEAR RESPONSE
+                        <span>CLEAR RESPONSE</span>
+                        <kbd style={{ fontSize: '9.5px', background: '#E5E7EB', color: '#4B5563', padding: '1px 4px', borderRadius: '2px', fontWeight: 700 }}>C</kbd>
                     </button>
                 )}
             </div>
@@ -82,30 +86,32 @@ export default function ExamBottomNav({
                 <button
                     onClick={onToggleMarkAndNext}
                     style={{
-                        padding: '9px 18px',
-                        background: isMarkedForReview ? '#F59E0B' : '#FACC15',
-                        border: '1.5px solid #1E1E1E',
+                        padding: '9px 16px',
+                        background: isMarkedForReview ? '#F59E0B' : '#FAF5FF',
+                        border: isMarkedForReview ? '1.5px solid #D97706' : '1.5px solid #7C3AED',
                         borderRadius: '6px',
-                        color: '#000000',
+                        color: isMarkedForReview ? '#FFFFFF' : '#7C3AED',
                         fontWeight: 800,
                         fontSize: '13px',
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
                         gap: '6px',
-                        boxShadow: '0 2px 4px rgba(250, 204, 21, 0.3)'
+                        boxShadow: '0 1px 3px rgba(124, 58, 237, 0.15)'
                     }}
                 >
-                    <Bookmark size={14} fill={isMarkedForReview ? '#000000' : 'none'} />
-                    <span>{isMarkedForReview ? 'UNMARK REVIEW & NEXT' : 'MARK FOR REVIEW & NEXT'}</span>
+                    <Bookmark size={14} fill={isMarkedForReview ? '#FFFFFF' : 'none'} />
+                    <span>{isMarkedForReview ? 'UNMARK REVIEW' : 'MARK FOR REVIEW & NEXT'}</span>
+                    <kbd style={{ fontSize: '10px', background: isMarkedForReview ? 'rgba(0,0,0,0.2)' : 'rgba(124,58,237,0.1)', color: isMarkedForReview ? '#FFFFFF' : '#7C3AED', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>M</kbd>
                 </button>
 
+                {/* Primary Action Button: Save & Next in Royal Blue */}
                 <button
                     onClick={onNext}
                     style={{
-                        padding: '9px 22px',
-                        background: '#111827',
-                        border: '1.5px solid #111827',
+                        padding: '9px 24px',
+                        background: '#2563EB',
+                        border: '1.5px solid #1D4ED8',
                         borderRadius: '6px',
                         color: '#FFFFFF',
                         fontWeight: 800,
@@ -114,11 +120,12 @@ export default function ExamBottomNav({
                         display: 'flex',
                         alignItems: 'center',
                         gap: '8px',
-                        boxShadow: '0 2px 6px rgba(0,0,0,0.2)'
+                        boxShadow: '0 2px 8px rgba(37, 99, 235, 0.35)'
                     }}
                 >
                     <span>{isLast ? 'REVIEW & SUBMIT' : 'SAVE & NEXT'}</span>
                     <ArrowRight size={14} />
+                    <kbd style={{ fontSize: '10px', background: 'rgba(255,255,255,0.25)', color: '#FFFFFF', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>N / ↵</kbd>
                 </button>
             </div>
         </div>

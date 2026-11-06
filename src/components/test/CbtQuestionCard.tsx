@@ -78,10 +78,6 @@ export default function CbtQuestionCard({
     const parsedEnglish = parseStatementBlocks(question.text);
     const parsedSecondary = hasTranslation ? parseStatementBlocks(activeLang === 'kn' ? (question.text_kn || '') : (question.text_hi || '')) : null;
 
-    // Generate statutory or factual reference note for the exam tip box
-    const tipText = question.explanation 
-        ? question.explanation.slice(0, 140).replace(/^[A-Z]\s*is\s*correct[\.:\s]*/i, '') + (question.explanation.length > 140 ? '...' : '')
-        : 'Carefully eliminate improbable statement pairs before finalizing response.';
     const tipRef = question.node_id ? question.node_id.toUpperCase().replace(/_/g, '-') : (question.sub_topic ? question.sub_topic.toUpperCase() : 'GS-STANDARD');
 
     return (
@@ -359,26 +355,26 @@ export default function CbtQuestionCard({
                 </div>
             </div>
 
-            {/* Bottom Tip / Revision Reference Box */}
+            {/* Statutory Reference Strip */}
             <div style={{
-                marginTop: '20px',
+                marginTop: '16px',
                 background: '#F8F6F0',
                 border: '1px solid #D1CBBE',
                 borderRadius: '6px',
-                padding: '10px 14px',
+                padding: '8px 12px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 flexWrap: 'wrap',
-                gap: '10px'
+                gap: '8px'
             }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, minWidth: '240px' }}>
-                    <div style={{ fontWeight: 800, fontSize: '11px', color: '#111827', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                        <span>💡 EXAM TIP:</span>
-                    </div>
-                    <div style={{ fontSize: '12px', color: '#4B5563', lineHeight: 1.4 }}>
-                        {tipText}
-                    </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <span style={{ fontWeight: 800, fontSize: '11px', color: '#4B5563', letterSpacing: '0.04em' }}>
+                        EXAM NOTICE:
+                    </span>
+                    <span style={{ fontSize: '11.5px', color: '#6B7280' }}>
+                        1/3rd Negative Marking applies (-0.66). Evaluate all statements carefully.
+                    </span>
                 </div>
 
                 <div style={{
@@ -388,7 +384,7 @@ export default function CbtQuestionCard({
                     color: '#6B7280',
                     letterSpacing: '0.04em'
                 }}>
-                    REF: {tipRef}
+                    DOMAIN: {tipRef}
                 </div>
             </div>
         </div>

@@ -153,22 +153,22 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                 if (!isUpsc && !isKarnataka) return null;
                                 const langOptions = isUpsc ? (['en', 'hi'] as const) : (['en', 'kn'] as const);
                                 return (
-                                    <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-tertiary)', padding: '2px', borderRadius: '4px', border: '1px solid var(--border)' }}>
+                                    <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-tertiary)', padding: '3px', borderRadius: '8px', border: '1px solid var(--border)' }}>
                                         {langOptions.map((l) => (
                                             <button
                                                 key={l}
                                                 onClick={() => setActiveLang(l)}
                                                 style={{
                                                     padding: '4px 10px',
-                                                    borderRadius: '4px',
-                                                    border: activeLang === l ? '1px solid var(--border)' : '1px solid transparent',
+                                                    borderRadius: '6px',
+                                                    border: 'none',
                                                     fontSize: '11px',
-                                                    fontWeight: 800,
+                                                    fontWeight: 700,
                                                     cursor: 'pointer',
-                                                    background: activeLang === l ? '#111827' : 'transparent',
+                                                    background: activeLang === l ? '#2563EB' : 'transparent',
                                                     color: activeLang === l ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    boxShadow: activeLang === l ? '1px 1px 0px var(--border)' : 'none',
-                                                    transition: 'all 0.15s'
+                                                    boxShadow: activeLang === l ? '0 1px 2px rgba(37,99,235,0.2)' : 'none',
+                                                    transition: 'all 0.15s ease'
                                                 }}
                                             >
                                                 {l === 'en' ? '🇬🇧 EN' : l === 'hi' ? '🇮🇳 HI' : '🇮🇳 KN'}
@@ -178,17 +178,19 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                 );
                             })()}
 
-                            <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                                 {((['all', 'correct', 'incorrect', 'skipped', ...(dropped > 0 ? ['dropped'] : [])]) as ReviewFilter[]).map((f) => {
                                     const isActive = filter === f;
                                     return (
                                         <button key={f} onClick={() => setFilter(f)} style={{
-                                            padding: '5px 12px', borderRadius: '4px', border: '1px solid var(--border)', cursor: 'pointer',
-                                            fontWeight: 800, fontSize: '12px', textTransform: 'capitalize',
-                                            background: isActive ? '#111827' : 'var(--bg-card)',
-                                            color: isActive ? '#FFFFFF' : 'var(--text-primary)',
-                                            boxShadow: isActive ? '1px 1px 0px var(--border)' : 'none',
-                                            transition: 'all 0.15s',
+                                            padding: '5px 12px', borderRadius: '6px',
+                                            border: isActive ? '1px solid #2563EB' : '1px solid var(--border)',
+                                            cursor: 'pointer',
+                                            fontWeight: 700, fontSize: '12px', textTransform: 'capitalize',
+                                            background: isActive ? '#2563EB' : 'var(--bg-card)',
+                                            color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
+                                            boxShadow: isActive ? '0 1px 3px rgba(37,99,235,0.2)' : 'var(--shadow-sm)',
+                                            transition: 'all 0.15s ease',
                                         }}>
                                             {f === 'dropped' ? `🎁 Dropped (${dropped})` : f}
                                         </button>

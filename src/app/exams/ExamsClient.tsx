@@ -67,9 +67,9 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 key={exam.id} 
                 className="card"
                 style={{
-                    borderRadius: '8px', padding: '24px',
+                    borderRadius: '12px', padding: '24px',
                     display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
-                    border: '1.5px solid var(--border)',
+                    border: '1px solid var(--border)',
                     boxShadow: 'var(--shadow-card)',
                     transition: 'all 0.2s',
                     position: 'relative', overflow: 'hidden'
@@ -80,10 +80,9 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                     <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '14px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                             <div style={{ 
-                                width: '44px', height: '44px', borderRadius: '8px', 
-                                background: 'var(--bg-tertiary)', border: '1.5px solid var(--border)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px',
-                                boxShadow: '1px 1px 0px var(--border)'
+                                width: '44px', height: '44px', borderRadius: '10px', 
+                                background: 'var(--bg-tertiary)', border: '1px solid var(--border)',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px'
                             }}>
                                 {exam.icon}
                             </div>
@@ -105,9 +104,9 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
 
                         {exam.badge && (
                             <span style={{ 
-                                fontSize: '11px', fontWeight: 800, padding: '3px 8px', borderRadius: '4px',
-                                background: '#FEF08A', color: '#111827',
-                                border: '1px solid #1E1E1E', boxShadow: '1px 1px 0px var(--border)'
+                                fontSize: '11px', fontWeight: 700, padding: '3px 8px', borderRadius: '6px',
+                                background: '#EFF6FF', color: '#1D4ED8',
+                                border: '1px solid #BFDBFE'
                             }}>
                                 {exam.badge}
                             </span>
@@ -125,7 +124,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             <span 
                                 key={idx}
                                 style={{
-                                    fontSize: '11.5px', fontWeight: 700, padding: '3px 9px', borderRadius: '4px',
+                                    fontSize: '11.5px', fontWeight: 600, padding: '3px 9px', borderRadius: '6px',
                                     background: 'var(--bg-tertiary)', color: 'var(--text-secondary)',
                                     border: '1px solid var(--border)'
                                 }}
@@ -134,7 +133,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             </span>
                         ))}
                         {(displaySubjects || []).length > 4 && (
-                            <span style={{ fontSize: '11.5px', fontWeight: 700, padding: '3px 8px', borderRadius: '4px', color: 'var(--text-muted)' }}>
+                            <span style={{ fontSize: '11.5px', fontWeight: 600, padding: '3px 8px', borderRadius: '6px', color: 'var(--text-muted)' }}>
                                 +{(displaySubjects || []).length - 4} more
                             </span>
                         )}
@@ -142,16 +141,16 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 </div>
 
                 {/* Action Buttons: About & Practice */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', borderTop: '1.5px solid var(--border)', paddingTop: '16px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', borderTop: '1px solid var(--border)', paddingTop: '16px' }}>
                     <Link 
                         href={`/exams/${exam.id}?tab=about`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '10px 12px', borderRadius: '6px',
-                            background: '#FFFFFF', color: '#111827',
-                            border: '1.5px solid var(--border)', fontSize: '13px', fontWeight: 700,
+                            padding: '10px 12px', borderRadius: '8px',
+                            background: 'var(--bg-secondary)', color: 'var(--text-primary)',
+                            border: '1px solid var(--border)', fontSize: '13px', fontWeight: 700,
                             textDecoration: 'none', transition: 'all 0.15s',
-                            boxShadow: '1.5px 1.5px 0px var(--border)'
+                            boxShadow: 'var(--shadow-sm)'
                         }}
                     >
                         <Info size={14} color="#2563EB" />
@@ -162,15 +161,15 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         href={`/exams/${exam.id}?tab=practice`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '10px 12px', borderRadius: '6px',
-                            background: '#111827', color: '#FFFFFF',
+                            padding: '10px 12px', borderRadius: '8px',
+                            background: '#2563EB', color: '#FFFFFF',
                             fontSize: '13px', fontWeight: 700, textDecoration: 'none',
-                            border: '1.5px solid var(--border)',
-                            boxShadow: '1.5px 1.5px 0px var(--border)',
+                            border: '1px solid #2563EB',
+                            boxShadow: '0 1px 2px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.18)',
                             transition: 'all 0.15s'
                         }}
                     >
-                        <Zap size={14} color="#FACC15" />
+                        <Zap size={14} color="#FFFFFF" />
                         Practice
                     </Link>
                 </div>
@@ -186,10 +185,10 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 <div style={{ textAlign: 'center', marginBottom: '40px' }}>
                     <div style={{ 
                         display: 'inline-flex', alignItems: 'center', gap: '8px', 
-                        fontSize: '12px', fontWeight: 800, color: '#111827', 
-                        background: '#FEF08A', border: '1.5px solid #1E1E1E', 
-                        borderRadius: '999px', padding: '6px 16px', marginBottom: '14px',
-                        boxShadow: '1.5px 1.5px 0px #1E1E1E'
+                        fontSize: '12px', fontWeight: 700, color: '#1D4ED8', 
+                        background: '#EFF6FF', border: '1px solid #BFDBFE', 
+                        borderRadius: '9999px', padding: '6px 16px', marginBottom: '14px',
+                        boxShadow: '0 1px 2px rgba(37, 99, 235, 0.08)'
                     }}>
                         <Award size={15} color="#2563EB" />
                         COMPREHENSIVE EXAM CATALOG
@@ -206,8 +205,8 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 <div style={{ 
                     display: 'flex', justifyContent: 'space-between', gap: '16px', 
                     marginBottom: '36px', flexWrap: 'wrap', alignItems: 'center',
-                    background: 'var(--bg-card)', padding: '16px 20px', borderRadius: '8px',
-                    border: '1.5px solid var(--border)', boxShadow: 'var(--shadow-card)'
+                    background: 'var(--bg-card)', padding: '16px 20px', borderRadius: '12px',
+                    border: '1px solid var(--border)', boxShadow: 'var(--shadow-card)'
                 }}>
                     {/* Category Filter Pills */}
                     <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
@@ -218,13 +217,13 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                                     key={f.key}
                                     onClick={() => setFilter(f.key)}
                                     style={{
-                                        padding: '7px 16px', borderRadius: '6px', cursor: 'pointer',
-                                        fontWeight: 700, fontSize: '13px', fontFamily: 'inherit',
-                                        background: isActive ? '#111827' : '#FFFFFF',
-                                        color: isActive ? '#FFFFFF' : '#111827',
-                                        border: '1.5px solid var(--border)',
-                                        boxShadow: isActive ? '1.5px 1.5px 0px var(--border)' : 'none',
-                                        transition: 'all 0.2s',
+                                        padding: '7px 16px', borderRadius: '8px', cursor: 'pointer',
+                                        fontWeight: 600, fontSize: '13px', fontFamily: 'inherit',
+                                        background: isActive ? '#2563EB' : 'var(--bg-secondary)',
+                                        color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
+                                        border: isActive ? '1px solid #2563EB' : '1px solid var(--border)',
+                                        boxShadow: isActive ? '0 1px 3px rgba(37,99,235,0.2)' : 'var(--shadow-sm)',
+                                        transition: 'all 0.15s ease',
                                     }}
                                 >
                                     {f.label}

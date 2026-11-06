@@ -974,7 +974,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 handleSelectOption('c');
             } else if (key === '4' || key === 'd') {
                 handleSelectOption('d');
-            } else if (key === 'arrowright' || key === 'n') {
+            } else if (key === 'arrowright' || key === 'n' || (key === 'enter' && !e.shiftKey)) {
                 e.preventDefault();
                 handleSaveAndNext();
             } else if (key === 'arrowleft' || key === 'p') {
@@ -983,6 +983,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             } else if (key === 'r' || key === 'm') {
                 e.preventDefault();
                 handleToggleMarkAndNext();
+            } else if (key === 'c') {
+                e.preventDefault();
+                handleClearResponse();
             }
         };
 
@@ -1220,6 +1223,8 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     onClearResponse={handleClearResponse}
                     onSaveAndNext={handleSaveAndNext}
                     onSubmitExam={() => setShowSubmitModal(true)}
+                    onPrevious={() => setCurrentIdx(i => Math.max(0, i - 1))}
+                    canGoPrevious={currentIdx > 0}
                     isLastQuestion={currentIdx === questions.length - 1}
                 />
 

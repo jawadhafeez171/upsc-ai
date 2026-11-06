@@ -33,21 +33,21 @@ export default function MobileExamHeader({
     const secondaryLangText = supportedLangs.includes('kn') ? 'ಕನ್ನಡ' : 'हिन्दी';
     const initials = candidateName
         ? candidateName.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase()
-        : 'IQ';
+        : 'UA';
 
     return (
         <header className="cbt-mobile-header">
-            {/* 1. MockIQ Branded Logo */}
-            <Link href="/exams" className="cbt-mobile-logo" title="MockIQ Live Terminal">
+            {/* 1. UPSC AI Branded Logo */}
+            <Link href="/exams" className="cbt-mobile-logo" title="UPSC AI Live Terminal">
                 <div className="cbt-mobile-logo-badge">
                     <Check size={14} strokeWidth={3} />
                 </div>
-                <span>Mock<span style={{ color: '#2563EB' }}>IQ</span></span>
+                <span>UPSC <span style={{ color: '#2563EB' }}>AI</span></span>
             </Link>
 
-            {/* 2. Red Countdown Timer Pill */}
-            <div className="cbt-mobile-timer" title="Time Remaining">
-                <Clock size={12} strokeWidth={2.5} color="#EF4444" />
+            {/* 2. Calibrated Countdown Timer Pill */}
+            <div className={`cbt-mobile-timer ${timeLeft <= 300 ? 'urgent' : timeLeft <= 900 ? 'warning' : 'normal'}`} title="Time Remaining">
+                <Clock size={12} strokeWidth={2.5} color={timeLeft <= 300 ? '#DC2626' : timeLeft <= 900 ? '#D97706' : '#94A3B8'} />
                 <span>{formatTime(timeLeft)}</span>
             </div>
 

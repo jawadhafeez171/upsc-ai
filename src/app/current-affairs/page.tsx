@@ -27,9 +27,9 @@ export default function CurrentAffairsPage() {
                 {(['en', 'hi', 'kn'] as Language[]).map((l) => (
                     <button key={l} onClick={() => setTabLang(l)} style={{
                         padding: '8px 18px', borderRadius: '8px', border: 'none', cursor: 'pointer',
-                        fontWeight: 600, fontSize: '13px', transition: 'all 0.2s',
-                        background: tabLang === l ? 'linear-gradient(135deg, var(--accent-indigo), var(--accent-purple))' : 'transparent',
-                        color: tabLang === l ? 'white' : 'var(--text-secondary)',
+                        fontWeight: 600, fontSize: '13px', transition: 'all 0.15s ease',
+                        background: tabLang === l ? '#2563EB' : 'transparent',
+                        color: tabLang === l ? '#FFFFFF' : 'var(--text-secondary)',
                     }}>{LANG_LABELS[l]}</button>
                 ))}
             </div>
@@ -38,10 +38,12 @@ export default function CurrentAffairsPage() {
             <div style={{ display: 'flex', gap: '6px', marginBottom: '24px', flexWrap: 'wrap' }}>
                 {CATEGORIES.map((c) => (
                     <button key={c} onClick={() => setCategory(c)} style={{
-                        padding: '6px 14px', borderRadius: '20px', border: `1px solid ${category === c ? 'var(--accent-indigo)' : 'var(--border)'}`,
-                        background: category === c ? 'rgba(184, 62, 17, 0.1)' : 'transparent',
-                        cursor: 'pointer', fontWeight: 500, fontSize: '12px',
-                        color: category === c ? 'var(--accent-indigo)' : 'var(--text-muted)', transition: 'all 0.2s',
+                        padding: '6px 14px', borderRadius: '20px',
+                        border: category === c ? '1px solid #2563EB' : '1px solid var(--border)',
+                        background: category === c ? '#EFF6FF' : 'var(--bg-secondary)',
+                        cursor: 'pointer', fontWeight: 600, fontSize: '12px',
+                        color: category === c ? '#1D4ED8' : 'var(--text-secondary)',
+                        transition: 'all 0.15s ease',
                     }}>{c}</button>
                 ))}
             </div>
@@ -52,12 +54,13 @@ export default function CurrentAffairsPage() {
                     const title = tabLang === 'hi' ? article.title_hi : tabLang === 'kn' ? article.title_kn : article.title_en;
                     const body = tabLang === 'hi' ? article.body_hi : tabLang === 'kn' ? article.body_kn : article.body_en;
                     const categoryColors: Record<string, string> = {
-                        Economy: '#10B981', Polity: '#0D5D56', 'Science & Tech': '#06B6D4', Environment: '#84CC16', International: '#F59E0B'
+                        Economy: '#10B981', Polity: '#0D9488', 'Science & Tech': '#2563EB', Environment: '#16A34A', International: '#F59E0B'
                     };
+                    const color = categoryColors[article.category] || '#2563EB';
                     return (
-                        <div key={article.id} className="card" style={{ padding: '24px', borderLeft: `3px solid ${categoryColors[article.category] || 'var(--accent-indigo)'}` }}>
+                        <div key={article.id} className="card" style={{ padding: '24px', borderRadius: '12px' }}>
                             <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '10px', flexWrap: 'wrap' }}>
-                                <span className="tag" style={{ background: `${categoryColors[article.category]}22`, color: categoryColors[article.category], border: `1px solid ${categoryColors[article.category]}44`, fontSize: '11px' }}>
+                                <span className="tag" style={{ background: `${color}15`, color: color, border: `1px solid ${color}35`, fontSize: '11px', borderRadius: '6px' }}>
                                     {article.category}
                                 </span>
                                 <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{article.date}</span>

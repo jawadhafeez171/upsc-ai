@@ -46,8 +46,8 @@ export default function ExamHeader({
                         <Check size={18} strokeWidth={3.5} />
                     </div>
                     <div style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.5px', color: '#111827' }}>
-                        <span>MockI</span>
-                        <span style={{ color: '#2563EB' }}>Q</span>
+                        <span>UPSC </span>
+                        <span style={{ color: '#2563EB' }}>AI</span>
                     </div>
                 </Link>
 
@@ -55,18 +55,18 @@ export default function ExamHeader({
 
                 <div>
                     <div style={{ fontSize: '11px', fontWeight: 800, letterSpacing: '0.08em', color: '#111827', textTransform: 'uppercase' }}>
-                        MOCKIQ LIVE
+                        CBT ASSESSMENT TERMINAL
                     </div>
                     <div style={{ fontSize: '11px', color: '#6B7280', fontWeight: 500 }}>
-                        {examTitle || 'UPSC / KPSC Benchmark Mock'}
+                        {examTitle || 'UPSC Civil Services Prelims'}
                     </div>
                 </div>
             </div>
 
             {/* Right: Timer, Language Toggle, Proctor Badge, Submit Button, Avatar */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                {/* Timer Badge */}
-                <div className="cbt-timer-badge">
+                {/* Timer Badge with Calibrated Urgency */}
+                <div className={`cbt-timer-badge ${timeLeft <= 300 ? 'urgent' : timeLeft <= 900 ? 'warning' : 'normal'}`}>
                     <Clock size={16} strokeWidth={2.5} />
                     <span>{formatTime(timeLeft)}</span>
                 </div>

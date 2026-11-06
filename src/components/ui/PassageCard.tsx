@@ -50,7 +50,6 @@ export default function PassageCard({
                 marginBottom: compact ? '14px' : '20px',
                 borderRadius: '12px',
                 border: '1px solid var(--border)',
-                borderLeft: '4px solid var(--brand-orange)',
                 background: 'var(--bg-secondary)',
                 boxShadow: 'var(--shadow-sm)',
                 overflow: 'hidden',

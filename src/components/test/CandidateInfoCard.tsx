@@ -14,7 +14,7 @@ export default function CandidateInfoCard({
 }: CandidateInfoCardProps) {
     const initials = name
         ? name.split(' ').map((p) => p[0]).join('').slice(0, 2).toUpperCase()
-        : 'IQ';
+        : 'UA';
 
     return (
         <div className="cbt-box" style={{ padding: '12px 14px', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '12px' }}>

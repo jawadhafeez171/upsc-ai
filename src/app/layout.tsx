@@ -7,6 +7,7 @@ import ThemeProvider from '@/components/layout/ThemeProvider';
 import AuthProvider from '@/components/layout/AuthProvider';
 import { Analytics } from '@vercel/analytics/react';
 import RotatingTagline from '@/components/layout/RotatingTagline';
+import { BookOpen } from 'lucide-react';
 
 const sansFont = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -38,10 +39,10 @@ const kannadaFont = Noto_Sans_Kannada({
 
 export const metadata: Metadata = {
   title: {
-    default: 'MockIQ · Practice Smart, Achieve More',
-    template: '%s | MockIQ'
+    default: 'UPSC AI · 30-Year PYQ Archive & CBT Mock Engine',
+    template: '%s | UPSC AI'
   },
-  description: 'Free high-quality mock tests for UPSC CSE, KPSC KAS, PSI, PC, and major competitive exams in English, Hindi, and Kannada. Track your progress, earn badges, and crack your dream exam.',
+  description: 'Official 30-year previous year question archive and authentic computer-based test simulation for UPSC Civil Services Prelims, CSAT, and State PSC examinations.',
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -50,10 +51,10 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/favicon.png'
   },
-  keywords: ['UPSC', 'KPSC', 'KAS', 'PSI', 'PC', 'Mock Test', 'Kannada', 'Hindi', 'Civil Services', 'Exam Prep', 'MockIQ'],
-  authors: [{ name: 'MockIQ Team' }],
-  creator: 'MockIQ',
-  publisher: 'MockIQ',
+  keywords: ['UPSC', 'KPSC', 'KAS', 'PSI', 'PC', 'Mock Test', 'Kannada', 'Hindi', 'Civil Services', 'Exam Prep', 'UPSC AI', 'PYQ Archive'],
+  authors: [{ name: 'UPSC AI Team' }],
+  creator: 'UPSC AI',
+  publisher: 'UPSC AI',
   formatDetection: {
     email: false,
     address: false,
@@ -62,25 +63,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://mockiq.vercel.app',
-    siteName: 'MockIQ',
-    title: 'MockIQ · Practice Smart, Achieve More',
-    description: 'Free mock tests for UPSC and KPSC exams in English, Hindi, and Kannada.',
+    url: 'https://upsc-ai.vercel.app',
+    siteName: 'UPSC AI',
+    title: 'UPSC AI · 30-Year PYQ Archive & CBT Mock Engine',
+    description: 'Official 30-year previous year question archive and authentic computer-based test simulation for UPSC Civil Services Prelims, CSAT, and State PSC examinations.',
     images: [
       {
-        url: 'https://mockiq.vercel.app/og-image.png',
+        url: 'https://upsc-ai.vercel.app/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'MockIQ Mock Test Portal',
+        alt: 'UPSC AI Portal',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MockIQ · Practice Smart, Achieve More',
-    description: 'Free mock tests for UPSC and KPSC exams in English, Hindi, and Kannada.',
-    creator: '@mockiq',
-    images: ['https://mockiq.vercel.app/og-image.png'],
+    title: 'UPSC AI · 30-Year PYQ Archive & CBT Mock Engine',
+    description: 'Official 30-year previous year question archive and authentic computer-based test simulation for UPSC Civil Services Prelims, CSAT, and State PSC examinations.',
+    creator: '@upsc_ai',
+    images: ['https://upsc-ai.vercel.app/og-image.png'],
   },
   robots: {
     index: true,
@@ -114,7 +115,7 @@ export default function RootLayout({
               {children}
             </main>
             <footer style={{
-              borderTop: '1.5px solid var(--border)',
+              borderTop: '1px solid var(--border)',
               padding: '40px 24px',
               background: 'var(--bg-secondary)',
             }}>
@@ -123,23 +124,23 @@ export default function RootLayout({
                   <div style={{
                     width: '34px', height: '34px', overflow: 'hidden',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    borderRadius: '6px', background: '#2563EB',
+                    borderRadius: '8px', background: '#1E1B4B',
                     padding: '2px', flexShrink: 0, lineHeight: 0,
-                    border: '1.5px solid #1E1E1E',
-                    boxShadow: '1px 1px 0px #1E1E1E',
+                    border: '1px solid #312E81',
+                    boxShadow: '0 2px 6px rgba(30, 27, 75, 0.25)',
                   }}>
-                    <img src="/mIQ_logo.png" alt="MockIQ Icon" style={{ height: '26px', width: 'auto', maxWidth: 'none', display: 'block', filter: 'brightness(0) invert(1)' }} />
+                    <BookOpen size={18} color="#FFFFFF" strokeWidth={2.5} />
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', textAlign: 'left', lineHeight: 1.15 }}>
                     <div style={{ fontSize: '18px', fontWeight: 900, letterSpacing: '-0.5px' }}>
-                      <span style={{ color: 'var(--text-primary)' }}>MockI</span>
-                      <span style={{ color: 'var(--brand-orange)' }}>Q</span>
+                      <span style={{ color: 'var(--text-primary)' }}>UPSC </span>
+                      <span style={{ color: 'var(--brand-orange)' }}>AI</span>
                     </div>
                     <RotatingTagline />
                   </div>
                 </div>
                 <div style={{ fontSize: '13px', color: 'var(--text-muted)', textAlign: 'center' }}>
-                  © 2026 MockIQ · Prepare. Practice. Prevail. 🇮🇳
+                  © 2026 UPSC AI · Dedicated Civil Services Examination Engine.
                 </div>
                 <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', justifyContent: 'center' }}>
                   {[
