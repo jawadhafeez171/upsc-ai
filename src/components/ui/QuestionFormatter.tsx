@@ -727,7 +727,7 @@ export function ExplanationFormatter({ text }: ExplanationFormatterProps) {
     if (!text) return null;
 
     // Clean diamond question marks
-    let cleanText = text.replace(/[\ufffd\uFFFD]/g, ' · ');
+    const cleanText = text.replace(/[\ufffd\uFFFD]/g, ' · ');
 
     // Match statement or pair delimiters like "Pair 1 incorrect:", "Pair 2 correct:", "Statement 1 is correct:", "Option (a):"
     const segmentRegex = /(?:^|\s*)(Pair\s*\d+(?:\s+is\s+)?(?:\s*correct|\s*incorrect|\s*correctly matched|\s*incorrectly matched)?[:\.\-]|Statement\s*[-I|V|X\d]+(?:\s+is\s+)?(?:\s*correct|\s*incorrect|\s*true|\s*false)?[:\.\-]|Option\s*\([a-d]\)(?:\s+is\s+)?(?:\s*correct|\s*incorrect)?[:\.\-]|Why\s+Option\s+[A-D]\s+is\s+Correct:?|Hence,\s+option\s+\([a-d]\)\s+is\s+correct[:\.]?|Correct\s+Answer:?)/gi;

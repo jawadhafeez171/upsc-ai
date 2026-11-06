@@ -67,14 +67,24 @@ export default function MobileQuestionCard({
 }: MobileQuestionCardProps) {
     const [showVernacular, setShowVernacular] = useState(false);
     const [isSpeaking, setIsSpeaking] = useState(false);
+    const [prevQuestionId, setPrevQuestionId] = useState(question.id);
 
     // Stop speaking when question changes
-    useEffect(() => {
+    if (question.id !== prevQuestionId) {
+        setPrevQuestionId(question.id);
+        setIsSpeaking(false);
         if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
             window.speechSynthesis.cancel();
-            setIsSpeaking(false);
         }
-    }, [question.id]);
+    }
+
+    useEffect(() => {
+        return () => {
+            if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+        };
+    }, []);
 
     const handleToggleSpeech = () => {
         if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;

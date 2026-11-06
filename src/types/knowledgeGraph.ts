@@ -39,15 +39,19 @@ export interface KnowledgeNode {
 }
 
 export interface KnowledgeGraphStats {
-    totalNodes: number;
-    byLevel: {
+    totalNodes?: number;
+    total_nodes?: number;
+    level_1_subjects?: number;
+    level_2_domains?: number;
+    level_3_topics?: number;
+    byLevel?: {
         subjects: number;
         domains: number;
         topics: number;
         entities: number;
     };
-    bySubject: Record<string, number>;
-    byExam: {
+    bySubject?: Record<string, number>;
+    byExam?: {
         upsc: number;
         kas: number;
         teaching?: number;
@@ -57,6 +61,7 @@ export interface KnowledgeGraphStats {
         banking: number;
         [key: string]: number | undefined;
     };
+    [key: string]: any;
 }
 
 export type KnowledgeGraphStream = 'civil_services' | 'teaching' | 'languages' | 'epfo' | 'all';
@@ -67,5 +72,5 @@ export interface KnowledgeGraphData {
     generatedAt: string;
     rootSubjectIds: string[];
     nodes: Record<string, KnowledgeNode>;
-    stats: any;
+    stats: KnowledgeGraphStats;
 }
