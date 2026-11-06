@@ -44,6 +44,7 @@ export interface KnowledgeGraphStats {
     level_1_subjects?: number;
     level_2_domains?: number;
     level_3_topics?: number;
+    level_4_subtopics?: number;
     byLevel?: {
         subjects: number;
         domains: number;
@@ -52,16 +53,15 @@ export interface KnowledgeGraphStats {
     };
     bySubject?: Record<string, number>;
     byExam?: {
-        upsc: number;
-        kas: number;
+        upsc?: number;
+        kas?: number;
         teaching?: number;
         karnataka_state?: number;
         police?: number;
-        ssc: number;
-        banking: number;
+        ssc?: number;
+        banking?: number;
         [key: string]: number | undefined;
     };
-    [key: string]: any;
 }
 
 export type KnowledgeGraphStream = 'civil_services' | 'teaching' | 'languages' | 'epfo' | 'all';
