@@ -24,25 +24,26 @@ export default function QuestionPaletteGrid({
     return (
         <div className="cbt-box" style={{ padding: '14px', marginBottom: '14px' }}>
             {/* Header: Title + CBT STANDARD + Paper */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
-                <div style={{ fontSize: '11px', fontWeight: 800, color: '#374151', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-secondary, #475569)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     QUESTION PALETTE
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <span style={{
-                        background: '#111827',
+                        background: '#1E1B4B',
                         color: '#FFFFFF',
-                        fontSize: '9px',
+                        border: '1px solid #312E81',
+                        fontSize: '9.5px',
                         fontWeight: 900,
-                        padding: '2px 5px',
-                        borderRadius: '3px',
+                        padding: '2px 6px',
+                        borderRadius: '4px',
                         letterSpacing: '0.04em'
                     }}>
                         CBT STANDARD
                     </span>
                     <span style={{
-                        color: '#2563EB',
-                        fontSize: '11px',
+                        color: 'var(--brand-blue, #2563EB)',
+                        fontSize: '11.5px',
                         fontWeight: 800
                     }}>
                         {paperTitle}
@@ -51,77 +52,85 @@ export default function QuestionPaletteGrid({
             </div>
 
             {/* Filter Buttons */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '10px', flexWrap: 'wrap' }}>
-                <span style={{ fontSize: '10px', fontWeight: 800, color: '#6B7280', letterSpacing: '0.05em' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '12px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '10px', fontWeight: 800, color: '#64748B', letterSpacing: '0.05em' }}>
                     FILTER:
                 </span>
                 <button
                     onClick={() => setFilter('all')}
+                    type="button"
                     style={{
-                        padding: '3px 8px',
-                        borderRadius: '3px',
-                        border: filter === 'all' ? '1px solid #111827' : '1px solid #D1D5DB',
-                        background: filter === 'all' ? '#111827' : '#FFFFFF',
-                        color: filter === 'all' ? '#FFFFFF' : '#374151',
-                        fontSize: '10.5px',
+                        padding: '3px 9px',
+                        borderRadius: '4px',
+                        border: filter === 'all' ? '1px solid #1E1B4B' : '1px solid var(--cbt-border, #E2E8F0)',
+                        background: filter === 'all' ? '#1E1B4B' : '#FFFFFF',
+                        color: filter === 'all' ? '#FFFFFF' : '#334155',
+                        fontSize: '11px',
                         fontWeight: 700,
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        transition: 'all 0.15s ease'
                     }}
                 >
                     All
                 </button>
                 <button
                     onClick={() => setFilter('ans')}
+                    type="button"
                     style={{
-                        padding: '3px 8px',
-                        borderRadius: '3px',
-                        border: filter === 'ans' ? '1px solid #16A34A' : '1px solid #D1D5DB',
-                        background: filter === 'ans' ? '#16A34A' : '#FFFFFF',
-                        color: filter === 'ans' ? '#FFFFFF' : '#15803D',
-                        fontSize: '10.5px',
+                        padding: '3px 9px',
+                        borderRadius: '4px',
+                        border: filter === 'ans' ? '1px solid #10B981' : '1px solid var(--cbt-border, #E2E8F0)',
+                        background: filter === 'ans' ? '#10B981' : '#FFFFFF',
+                        color: filter === 'ans' ? '#FFFFFF' : '#059669',
+                        fontSize: '11px',
                         fontWeight: 700,
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '3px'
+                        gap: '4px',
+                        transition: 'all 0.15s ease'
                     }}
                 >
-                    <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: filter === 'ans' ? '#FFFFFF' : '#16A34A' }} />
+                    <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: filter === 'ans' ? '#FFFFFF' : '#10B981' }} />
                     Ans
                 </button>
                 <button
                     onClick={() => setFilter('unans')}
+                    type="button"
                     style={{
-                        padding: '3px 8px',
-                        borderRadius: '3px',
-                        border: filter === 'unans' ? '1px solid #DC2626' : '1px solid #D1D5DB',
-                        background: filter === 'unans' ? '#DC2626' : '#FFFFFF',
-                        color: filter === 'unans' ? '#FFFFFF' : '#B91C1C',
-                        fontSize: '10.5px',
+                        padding: '3px 9px',
+                        borderRadius: '4px',
+                        border: filter === 'unans' ? '1px solid #EF4444' : '1px solid var(--cbt-border, #E2E8F0)',
+                        background: filter === 'unans' ? '#EF4444' : '#FFFFFF',
+                        color: filter === 'unans' ? '#FFFFFF' : '#DC2626',
+                        fontSize: '11px',
                         fontWeight: 700,
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '3px'
+                        gap: '4px',
+                        transition: 'all 0.15s ease'
                     }}
                 >
-                    <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: filter === 'unans' ? '#FFFFFF' : '#DC2626' }} />
+                    <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: filter === 'unans' ? '#FFFFFF' : '#EF4444' }} />
                     Unans
                 </button>
                 <button
                     onClick={() => setFilter('review')}
+                    type="button"
                     style={{
-                        padding: '3px 8px',
-                        borderRadius: '3px',
-                        border: filter === 'review' ? '1px solid #7C3AED' : '1px solid #D1D5DB',
+                        padding: '3px 9px',
+                        borderRadius: '4px',
+                        border: filter === 'review' ? '1px solid #7C3AED' : '1px solid var(--cbt-border, #E2E8F0)',
                         background: filter === 'review' ? '#7C3AED' : '#FFFFFF',
                         color: filter === 'review' ? '#FFFFFF' : '#6D28D9',
-                        fontSize: '10.5px',
+                        fontSize: '11px',
                         fontWeight: 700,
                         cursor: 'pointer',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '3px'
+                        gap: '4px',
+                        transition: 'all 0.15s ease'
                     }}
                 >
                     <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: filter === 'review' ? '#FFFFFF' : '#7C3AED' }} />
@@ -130,16 +139,16 @@ export default function QuestionPaletteGrid({
             </div>
 
             {/* Total Questions label */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px', fontSize: '10.5px', fontWeight: 700, color: '#4B5563' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px', fontSize: '10.5px', fontWeight: 700, color: '#475569' }}>
                 <span>Questions Matrix</span>
-                <span>{totalQuestions} Questions</span>
+                <span style={{ fontFamily: 'var(--cbt-font-mono)' }}>{totalQuestions} Questions</span>
             </div>
 
             {/* 10-column Grid */}
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(10, 1fr)',
-                gap: '4px',
+                gap: '5px',
                 maxHeight: '340px',
                 overflowY: 'auto',
                 paddingRight: '2px'
@@ -156,6 +165,7 @@ export default function QuestionPaletteGrid({
                     return (
                         <button
                             key={i}
+                            type="button"
                             onClick={() => onSelectQuestion(i)}
                             className={`cbt-palette-cell state-${state} ${isCurrent ? 'state-active' : ''}`}
                             style={{
@@ -163,6 +173,7 @@ export default function QuestionPaletteGrid({
                                 height: '28px'
                             }}
                             title={`Question ${i + 1} - ${state.replace(/_/g, ' ')}`}
+                            aria-label={`Question ${i + 1}, status: ${state.replace(/_/g, ' ')}`}
                         >
                             {i + 1}
                         </button>

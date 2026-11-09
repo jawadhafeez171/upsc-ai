@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Clock, LayoutGrid, User, Check } from 'lucide-react';
+import { Clock, LayoutGrid, BookOpen } from 'lucide-react';
 
 interface MobileExamHeaderProps {
     timeLeft: number;
@@ -36,30 +36,48 @@ export default function MobileExamHeader({
         : 'UA';
 
     return (
-        <header className="cbt-mobile-header">
+        <header className="cbt-mobile-header" role="banner">
             {/* 1. UPSC AI Branded Logo */}
-            <Link href="/exams" className="cbt-mobile-logo" title="UPSC AI Live Terminal">
-                <div className="cbt-mobile-logo-badge">
-                    <Check size={14} strokeWidth={3} />
+            <Link href="/exams" className="cbt-mobile-logo" title="MockIQ / UPSC AI">
+                <div style={{
+                    width: '28px',
+                    height: '28px',
+                    borderRadius: '7px',
+                    background: '#1E1B4B',
+                    border: '1px solid #312E81',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#FFFFFF',
+                    flexShrink: 0
+                }}>
+                    <BookOpen size={14} color="#FFFFFF" strokeWidth={2.5} />
                 </div>
-                <span>UPSC <span style={{ color: '#2563EB' }}>AI</span></span>
+                <span>
+                    UPSC <span style={{ color: 'var(--brand-orange, #EA580C)' }}>AI</span>
+                </span>
             </Link>
 
             {/* 2. Calibrated Countdown Timer Pill */}
-            <div className={`cbt-mobile-timer ${timeLeft <= 300 ? 'urgent' : timeLeft <= 900 ? 'warning' : 'normal'}`} title="Time Remaining">
+            <div
+                className={`cbt-mobile-timer ${timeLeft <= 300 ? 'urgent' : timeLeft <= 900 ? 'warning' : 'normal'}`}
+                title="Time Remaining"
+                aria-label={`Time remaining: ${formatTime(timeLeft)}`}
+            >
                 <Clock size={12} strokeWidth={2.5} color={timeLeft <= 300 ? '#DC2626' : timeLeft <= 900 ? '#D97706' : '#94A3B8'} />
                 <span>{formatTime(timeLeft)}</span>
             </div>
 
             {/* 3. Question Index & Bilingual Toggle Chip */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <div style={{
-                    background: '#111827',
+                    background: '#1E1B4B',
                     color: '#FFFFFF',
-                    borderRadius: '4px',
-                    padding: '3px 6px',
+                    border: '1px solid #312E81',
+                    borderRadius: '5px',
+                    padding: '3px 7px',
                     fontSize: '11px',
-                    fontWeight: 900,
+                    fontWeight: 800,
                     fontFamily: 'var(--cbt-font-mono, monospace)'
                 }}>
                     Q{currentIdx + 1}
@@ -67,27 +85,39 @@ export default function MobileExamHeader({
 
                 {isBilingual && (
                     <button
+                        type="button"
                         onClick={onToggleLang}
                         className="cbt-mobile-lang-chip"
                         title="Switch Language"
+                        aria-label="Switch Language"
                     >
-                        <span>{activeLang === 'en' ? `ENG/${secondaryLangText}` : `${secondaryLangText}/ENG`}</span>
+                        <span>{activeLang === 'en' ? `EN/${secondaryLangText}` : `${secondaryLangText}/EN`}</span>
                     </button>
                 )}
             </div>
 
-            {/* 4. Yellow Grid Button (Opens Mobile Question Palette Drawer) */}
+            {/* 4. Question Palette Drawer Toggle */}
             <button
+                type="button"
                 onClick={onOpenPalette}
                 className="cbt-mobile-palette-btn"
                 title="Open Question Palette & Tools"
                 aria-label="Open Question Palette"
             >
-                <LayoutGrid size={18} strokeWidth={2.5} />
+                <LayoutGrid size={18} strokeWidth={2.2} />
             </button>
 
             {/* 5. User Profile Avatar Button */}
-            <div className="cbt-mobile-avatar-btn" title={candidateName}>
+            <div
+                className="cbt-mobile-avatar-btn"
+                title={candidateName}
+                style={{
+                    background: '#1E1B4B',
+                    color: '#FFFFFF',
+                    border: '1px solid #312E81',
+                    fontWeight: 800
+                }}
+            >
                 {initials}
             </div>
         </header>

@@ -222,14 +222,16 @@
   border-color: #6D28D9;
 }
 
-.cbt-palette-cell.state-ans-marked {
+.cbt-palette-cell.state-ans-marked,
+.cbt-palette-cell.state-ans_and_marked {
   background: var(--cbt-purple);
   color: #FFFFFF;
   border-color: #6D28D9;
 }
 
 /* Green corner triangle for Ans & Marked using clip-path */
-.cbt-palette-cell.state-ans-marked::after {
+.cbt-palette-cell.state-ans-marked::after,
+.cbt-palette-cell.state-ans_and_marked::after {
   content: '';
   position: absolute;
   top: 0;

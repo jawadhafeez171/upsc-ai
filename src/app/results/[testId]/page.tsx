@@ -4,10 +4,28 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
-import { CheckCircle, XCircle, MinusCircle, ChevronDown, ChevronUp, RotateCcw, Home, Loader2 } from 'lucide-react';
+import {
+    CheckCircle,
+    XCircle,
+    MinusCircle,
+    ChevronDown,
+    ChevronUp,
+    RotateCcw,
+    Home,
+    Loader2,
+    Check,
+    X,
+    AlertTriangle,
+    Gift,
+    BookOpen,
+    BarChart3,
+    Clock,
+    Target
+} from 'lucide-react';
 import QuestionFormatter, { OptionFormatter, ExplanationFormatter } from '@/components/ui/QuestionFormatter';
 import PassageCard from '@/components/ui/PassageCard';
 import { isValidImageUrl } from '@/lib/imageUtils';
+
 type ReviewFilter = 'all' | 'correct' | 'incorrect' | 'skipped' | 'dropped';
 
 export default function ResultsPage({ params }: { params: Promise<{ testId: string }> }) {
@@ -29,22 +47,29 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     }, [session?.config?.language]);
 
     useEffect(() => {
-        if (!session) { router.push('/exams'); return; }
+        if (!session) {
+            router.push('/exams');
+            return;
+        }
         async function loadExam() {
             setLoadingExam(true);
             const { data } = await supabase.from('exams').select('id, title').eq('id', session!.exam_id).single();
-            if (data) setExam({ name: data.title, icon: data.id.includes('upsc') ? '🏛️' : data.id.includes('kpsc') ? '🅺' : '📋' });
+            if (data) {
+                setExam({ name: data.title });
+            }
             setLoadingExam(false);
         }
         loadExam();
     }, [session, router]);
 
-    if (!session || loadingExam) return (
-        <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: 'var(--brand-orange)' }} />
-            Loading results...
-        </div>
-    );
+    if (!session || loadingExam) {
+        return (
+            <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: '#2563EB' }} />
+                <span>Loading examination results...</span>
+            </div>
+        );
+    }
 
     const { questions, answers, score = 0, total_marks = 0, config } = session;
     const lang = activeLang;
@@ -67,12 +92,19 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     const wrongQuestions = questions.filter((q) => answers[q.id]?.is_correct === false);
     const retryWrong = () => {
         if (!wrongQuestions.length) return;
-        const retrySession = { id: `session_${Date.now()}`, user_id: session.user_id, exam_id: session.exam_id, config: { ...config, question_count: wrongQuestions.length }, questions: wrongQuestions, answers: {}, started_at: new Date().toISOString(), status: 'active' as const };
+        const retrySession = {
+            id: `session_${Date.now()}`,
+            user_id: session.user_id,
+            exam_id: session.exam_id,
+            config: { ...config, question_count: wrongQuestions.length },
+            questions: wrongQuestions,
+            answers: {},
+            started_at: new Date().toISOString(),
+            status: 'active' as const
+        };
         setActiveSession(retrySession);
         router.push(`/test/${retrySession.id}`);
     };
-
-    const scoreColor = pct >= 60 ? 'var(--accent-sage)' : pct >= 40 ? 'var(--accent-peach)' : 'rgba(225, 29, 72, 0.1)';
 
     const subjects = [...new Set(questions.map((q) => q.subject))];
     const subjectStats = subjects.map((s) => {
@@ -82,70 +114,154 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     });
 
     return (
-        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '40px 0' }}>
-            <div style={{ maxWidth: '880px', margin: '0 auto', padding: '0 24px' }}>
-                {/* Score */}
-                <div className="card" style={{ padding: '32px', textAlign: 'center', marginBottom: '20px' }}>
-                    <div style={{ fontSize: '14px', color: 'var(--text-secondary)', marginBottom: '20px', fontWeight: 500 }}>
-                        {exam?.icon} {exam?.name} · {config.mode === 'subject' ? config.subject : 'Full'}
+        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '36px 0 60px' }}>
+            <div style={{ maxWidth: '920px', margin: '0 auto', padding: '0 24px' }}>
+
+                {/* Scorecard Box */}
+                <div className="card" style={{ padding: '32px', textAlign: 'center', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                    <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '18px', fontWeight: 600 }}>
+                        {exam?.name || 'Examination'} · {config.mode === 'subject' ? config.subject : 'Full Paper'}
                     </div>
+
                     <div style={{
-                        width: '110px', height: '110px', borderRadius: '50%', background: scoreColor,
-                        display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                        margin: '0 auto 20px',
+                        width: '108px',
+                        height: '108px',
+                        borderRadius: '50%',
+                        background: pct >= 60 ? 'rgba(16, 185, 129, 0.08)' : pct >= 40 ? 'rgba(245, 158, 11, 0.08)' : 'rgba(239, 68, 68, 0.08)',
+                        border: `2px solid ${pct >= 60 ? '#10B981' : pct >= 40 ? '#F59E0B' : '#EF4444'}`,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        margin: '0 auto 16px',
                     }}>
-                        <div style={{ fontSize: '32px', fontWeight: 800, color: 'var(--text-primary)' }}>{pct}%</div>
-                        <div style={{ fontSize: '11px', color: 'var(--text-secondary)', fontWeight: 600 }}>Score</div>
+                        <div style={{ fontSize: '30px', fontWeight: 900, fontFamily: 'var(--font-mono, monospace)', color: pct >= 60 ? '#059669' : pct >= 40 ? '#D97706' : '#DC2626' }}>
+                            {pct}%
+                        </div>
+                        <div style={{ fontSize: '10.5px', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Accuracy</div>
                     </div>
-                    <div style={{ fontSize: '15px', fontWeight: 600, marginBottom: '24px' }}>{score}/{total_marks} marks</div>
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '32px', flexWrap: 'wrap' }}>
+
+                    <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '24px', color: 'var(--text-primary)', fontFamily: 'var(--font-mono, monospace)' }}>
+                        {score} / {total_marks} Marks
+                    </div>
+
+                    {/* Breakdown Pills */}
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap' }}>
                         {[
-                            { label: 'Correct', value: correct, emoji: '✅', color: 'var(--brand-teal)' },
-                            { label: 'Wrong', value: incorrect, emoji: '❌', color: 'var(--brand-orange)' },
-                            { label: 'Skipped', value: skipped, emoji: '⏭️', color: 'var(--text-muted)' },
-                            ...(dropped > 0 ? [{ label: 'Dropped (Bonus)', value: dropped, emoji: '🎁', color: '#F59E0B' }] : []),
+                            { label: 'Correct', value: correct, icon: <CheckCircle size={16} color="#059669" />, color: '#059669', bg: 'rgba(16, 185, 129, 0.06)' },
+                            { label: 'Incorrect', value: incorrect, icon: <XCircle size={16} color="#DC2626" />, color: '#DC2626', bg: 'rgba(239, 68, 68, 0.06)' },
+                            { label: 'Unattempted', value: skipped, icon: <MinusCircle size={16} color="#64748B" />, color: '#64748B', bg: 'rgba(100, 116, 139, 0.06)' },
+                            ...(dropped > 0 ? [{ label: 'Dropped (Bonus)', value: dropped, icon: <Gift size={16} color="#D97706" />, color: '#D97706', bg: 'rgba(245, 158, 11, 0.06)' }] : []),
                         ].map((s) => (
-                            <div key={s.label} style={{ textAlign: 'center' }}>
-                                <div style={{ fontSize: '22px', fontWeight: 800, color: s.color }}>{s.value}</div>
-                                <div style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{s.emoji} {s.label}</div>
+                            <div key={s.label} style={{
+                                padding: '10px 16px',
+                                borderRadius: '8px',
+                                background: s.bg,
+                                border: '1px solid var(--border)',
+                                minWidth: '100px',
+                                textAlign: 'center'
+                            }}>
+                                <div style={{ fontSize: '20px', fontWeight: 900, color: s.color, fontFamily: 'var(--font-mono, monospace)' }}>
+                                    {s.value}
+                                </div>
+                                <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px', marginTop: '2px' }}>
+                                    {s.icon}
+                                    <span>{s.label}</span>
+                                </div>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Subject breakdown */}
-                <div className="card" style={{ padding: '24px', marginBottom: '20px' }}>
-                    <h2 style={{ fontWeight: 700, fontSize: '16px', marginBottom: '16px' }}>📊 Subject Breakdown</h2>
+                {/* Subject-Wise Performance Breakdown */}
+                <div className="card" style={{ padding: '24px', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
+                        <BarChart3 size={17} color="#2563EB" />
+                        <h2 style={{ fontWeight: 800, fontSize: '15.5px', margin: 0 }}>Subject-Wise Performance</h2>
+                    </div>
+
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                         {subjectStats.map((s) => (
                             <div key={s.subject}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', marginBottom: '6px' }}>
-                                    <span style={{ fontWeight: 600 }}>{s.subject}</span>
-                                    <span style={{ fontWeight: 600, color: s.pct >= 60 ? 'var(--brand-teal)' : 'var(--brand-orange)' }}>{s.correct}/{s.total}</span>
+                                    <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{s.subject}</span>
+                                    <span style={{ fontWeight: 700, fontFamily: 'var(--font-mono, monospace)', color: s.pct >= 60 ? '#059669' : s.pct >= 40 ? '#D97706' : '#DC2626' }}>
+                                        {s.correct}/{s.total} ({s.pct}%)
+                                    </span>
                                 </div>
-                                <div className="progress-bar" style={{ height: '6px' }}>
-                                    <div className="progress-fill" style={{ width: `${s.pct}%`, background: s.pct >= 60 ? 'var(--brand-teal)' : s.pct >= 40 ? '#F59E0B' : 'var(--brand-orange)' }} />
+                                <div className="progress-bar" style={{ height: '6px', background: 'var(--border)', borderRadius: '9999px', overflow: 'hidden' }}>
+                                    <div
+                                        className="progress-fill"
+                                        style={{
+                                            width: `${s.pct}%`,
+                                            height: '100%',
+                                            background: s.pct >= 60 ? '#10B981' : s.pct >= 40 ? '#F59E0B' : '#EF4444',
+                                            borderRadius: '9999px',
+                                            transition: 'width 0.3s ease'
+                                        }}
+                                    />
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Actions */}
-                <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', flexWrap: 'wrap' }}>
-                    <Link href="/exams" className="btn btn-secondary" style={{ padding: '8px 16px' }}><Home size={14} /> New Test</Link>
+                {/* Actions Row */}
+                <div style={{ display: 'flex', gap: '10px', marginBottom: '24px', flexWrap: 'wrap' }}>
+                    <Link
+                        href="/exams"
+                        className="btn btn-secondary"
+                        style={{
+                            padding: '9px 18px',
+                            borderRadius: '8px',
+                            fontWeight: 700,
+                            fontSize: '13px',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                            background: 'var(--bg-card)',
+                            border: '1px solid var(--border)',
+                            color: 'var(--text-primary)'
+                        }}
+                    >
+                        <Home size={15} />
+                        <span>All Examinations</span>
+                    </Link>
+
                     {wrongQuestions.length > 0 && (
-                        <button onClick={retryWrong} className="btn btn-primary" style={{ padding: '8px 16px' }}>
-                            <RotateCcw size={14} /> Retry {wrongQuestions.length} Wrong
+                        <button
+                            type="button"
+                            onClick={retryWrong}
+                            className="btn btn-primary"
+                            style={{
+                                padding: '9px 18px',
+                                borderRadius: '8px',
+                                fontWeight: 700,
+                                fontSize: '13px',
+                                background: '#1E1B4B',
+                                color: '#FFFFFF',
+                                border: '1px solid #312E81',
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '6px',
+                                cursor: 'pointer'
+                            }}
+                        >
+                            <RotateCcw size={15} />
+                            <span>Retry {wrongQuestions.length} Incorrect Questions</span>
                         </button>
                     )}
                 </div>
 
-                {/* Review */}
-                <div className="card" style={{ padding: '24px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
-                        <h2 style={{ fontWeight: 700, fontSize: '16px' }}>📝 Review</h2>
-                        <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+                {/* Question Review Section */}
+                <div className="card" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <BookOpen size={17} color="#2563EB" />
+                            <h2 style={{ fontWeight: 800, fontSize: '15.5px', margin: 0 }}>Detailed Question Review</h2>
+                        </div>
+
+                        <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
                             {/* Language switcher */}
                             {(() => {
                                 const isUpsc = session?.config?.exam_id === 'upsc-cse' || session?.config?.exam_id === 'upsc-capf' || session?.config?.exam_id === 'upsc-epfo';
@@ -153,10 +269,11 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                 if (!isUpsc && !isKarnataka) return null;
                                 const langOptions = isUpsc ? (['en', 'hi'] as const) : (['en', 'kn'] as const);
                                 return (
-                                    <div style={{ display: 'flex', gap: '4px', background: 'var(--bg-tertiary)', padding: '3px', borderRadius: '8px', border: '1px solid var(--border)' }}>
+                                    <div style={{ display: 'flex', gap: '3px', background: 'var(--bg-tertiary)', padding: '3px', borderRadius: '8px', border: '1px solid var(--border)' }}>
                                         {langOptions.map((l) => (
                                             <button
                                                 key={l}
+                                                type="button"
                                                 onClick={() => setActiveLang(l)}
                                                 style={{
                                                     padding: '4px 10px',
@@ -165,34 +282,43 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                                     fontSize: '11px',
                                                     fontWeight: 700,
                                                     cursor: 'pointer',
-                                                    background: activeLang === l ? '#2563EB' : 'transparent',
+                                                    background: activeLang === l ? '#1E1B4B' : 'transparent',
                                                     color: activeLang === l ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    boxShadow: activeLang === l ? '0 1px 2px rgba(37,99,235,0.2)' : 'none',
+                                                    boxShadow: activeLang === l ? '0 1px 2px rgba(30,27,75,0.2)' : 'none',
                                                     transition: 'all 0.15s ease'
                                                 }}
                                             >
-                                                {l === 'en' ? '🇬🇧 EN' : l === 'hi' ? '🇮🇳 HI' : '🇮🇳 KN'}
+                                                {l.toUpperCase()}
                                             </button>
                                         ))}
                                     </div>
                                 );
                             })()}
 
+                            {/* Filter Buttons */}
                             <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
                                 {((['all', 'correct', 'incorrect', 'skipped', ...(dropped > 0 ? ['dropped'] : [])]) as ReviewFilter[]).map((f) => {
                                     const isActive = filter === f;
                                     return (
-                                        <button key={f} onClick={() => setFilter(f)} style={{
-                                            padding: '5px 12px', borderRadius: '6px',
-                                            border: isActive ? '1px solid #2563EB' : '1px solid var(--border)',
-                                            cursor: 'pointer',
-                                            fontWeight: 700, fontSize: '12px', textTransform: 'capitalize',
-                                            background: isActive ? '#2563EB' : 'var(--bg-card)',
-                                            color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
-                                            boxShadow: isActive ? '0 1px 3px rgba(37,99,235,0.2)' : 'var(--shadow-sm)',
-                                            transition: 'all 0.15s ease',
-                                        }}>
-                                            {f === 'dropped' ? `🎁 Dropped (${dropped})` : f}
+                                        <button
+                                            key={f}
+                                            type="button"
+                                            onClick={() => setFilter(f)}
+                                            style={{
+                                                padding: '4px 10px',
+                                                borderRadius: '6px',
+                                                border: isActive ? '1px solid #1E1B4B' : '1px solid var(--border)',
+                                                cursor: 'pointer',
+                                                fontWeight: 700,
+                                                fontSize: '11.5px',
+                                                textTransform: 'capitalize',
+                                                background: isActive ? '#1E1B4B' : 'var(--bg-card)',
+                                                color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
+                                                boxShadow: isActive ? '0 1px 3px rgba(30,27,75,0.2)' : 'var(--shadow-sm)',
+                                                transition: 'all 0.15s ease',
+                                            }}
+                                        >
+                                            {f === 'dropped' ? `Dropped (${dropped})` : f}
                                         </button>
                                     );
                                 })}
@@ -200,7 +326,8 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         </div>
                     </div>
 
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    {/* Question List */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                         {filtered.map((q, i) => {
                             const a = answers[q.id];
                             const isDropped = q.correct?.toLowerCase() === 'x';
@@ -211,24 +338,38 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                             const expText = lang === 'kn' && q.explanation_kn ? q.explanation_kn : (lang === 'hi' && q.explanation_hi ? q.explanation_hi : q.explanation);
 
                             return (
-                                <div key={q.id} style={{ background: 'var(--bg-secondary)', borderRadius: '10px', overflow: 'hidden' }}>
-                                    <button onClick={() => setExpanded(isOpen ? null : q.id)} style={{
-                                        width: '100%', padding: '12px 14px', display: 'flex', alignItems: 'flex-start', gap: '10px',
-                                        background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left', color: 'var(--text-primary)',
-                                    }}>
+                                <div key={q.id} style={{ background: 'var(--bg-secondary)', borderRadius: '10px', border: '1px solid var(--border)', overflow: 'hidden' }}>
+                                    <button
+                                        type="button"
+                                        onClick={() => setExpanded(isOpen ? null : q.id)}
+                                        style={{
+                                            width: '100%',
+                                            padding: '14px 16px',
+                                            display: 'flex',
+                                            alignItems: 'flex-start',
+                                            gap: '12px',
+                                            background: 'none',
+                                            border: 'none',
+                                            cursor: 'pointer',
+                                            textAlign: 'left',
+                                            color: 'var(--text-primary)',
+                                        }}
+                                    >
                                         <div style={{ flexShrink: 0, marginTop: '2px' }}>
                                             {isDropped ? (
-                                                <span style={{ fontSize: '15px', lineHeight: 1 }} title="Officially Dropped (Full credit awarded)">🎁</span>
+                                                <AlertTriangle size={17} color="#D97706" />
                                             ) : isCorrect ? (
-                                                <CheckCircle size={16} color="var(--brand-teal)" />
+                                                <CheckCircle size={17} color="#059669" />
                                             ) : wasSkipped ? (
-                                                <MinusCircle size={16} color="var(--text-muted)" />
+                                                <MinusCircle size={17} color="#64748B" />
                                             ) : (
-                                                <XCircle size={16} color="var(--brand-orange)" />
+                                                <XCircle size={17} color="#DC2626" />
                                             )}
                                         </div>
-                                        <div style={{ flex: 1 }}>
-                                            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '2px' }}>Q{i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}</div>
+                                        <div style={{ flex: 1, minWidth: 0 }}>
+                                            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '3px', fontWeight: 600 }}>
+                                                Question {i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}
+                                            </div>
                                             {(q.passage || q.passage_kn || q.passage_hi) && (
                                                 <div style={{ marginTop: '6px', marginBottom: '8px' }}>
                                                     <PassageCard
@@ -241,7 +382,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                                     />
                                                 </div>
                                             )}
-                                            <div style={{ fontWeight: 600 }}>
+                                            <div style={{ fontWeight: 600, fontSize: '13.5px', lineHeight: 1.55 }}>
                                                 <QuestionFormatter text={qText} />
                                                 {isValidImageUrl(q.image_url) && (
                                                     <div style={{ marginTop: '12px', borderRadius: '8px', overflow: 'hidden', border: '1px solid var(--border)', background: 'var(--bg-card)', display: 'flex', justifyContent: 'center', padding: '12px' }}>
@@ -250,93 +391,100 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                                 )}
                                             </div>
                                         </div>
-                                        {isOpen ? <ChevronUp size={14} color="var(--text-muted)" /> : <ChevronDown size={14} color="var(--text-muted)" />}
+                                        <div style={{ flexShrink: 0, marginTop: '2px' }}>
+                                            {isOpen ? <ChevronUp size={16} color="var(--text-muted)" /> : <ChevronDown size={16} color="var(--text-muted)" />}
+                                        </div>
                                     </button>
 
                                     {isOpen && (
-                                        <div style={{ padding: '0 14px 14px 38px' }}>
+                                        <div style={{ padding: '0 16px 16px 45px' }}>
                                             {isDropped && (
                                                 <div style={{
                                                     padding: '10px 14px',
                                                     marginBottom: '14px',
                                                     borderRadius: '8px',
-                                                    background: 'rgba(245, 158, 11, 0.12)',
-                                                    border: '1px solid #F59E0B',
-                                                    color: '#D97706',
+                                                    background: 'rgba(245, 158, 11, 0.08)',
+                                                    border: '1px solid #FCD34D',
+                                                    color: '#B45309',
                                                     display: 'flex',
                                                     alignItems: 'flex-start',
                                                     gap: '8px'
                                                 }}>
-                                                    <span style={{ fontSize: '16px', lineHeight: '18px' }}>⚠️</span>
+                                                    <AlertTriangle size={16} color="#D97706" style={{ marginTop: '2px', flexShrink: 0 }} />
                                                     <div>
-                                                        <div style={{ fontWeight: 700, fontSize: '13px' }}>Official Commission Dropped Question (Answer Key: 'X')</div>
+                                                        <div style={{ fontWeight: 700, fontSize: '12.5px' }}>
+                                                            Official Commission Dropped Question (Key: &apos;X&apos;)
+                                                        </div>
                                                         <div style={{ fontSize: '12px', color: 'var(--text-secondary)', marginTop: '2px', lineHeight: 1.4 }}>
-                                                            This question was cancelled / invalidated by the official commission in the final published answer key. Full credit (+1.0) has been awarded with zero negative marking.
+                                                            This question was cancelled by the commission in the final key. Full credit has been awarded with zero negative penalty.
                                                         </div>
                                                     </div>
                                                 </div>
                                             )}
-                                            {(() => {
-                                                const isShortOptions = (q.options?.length || 0) <= 4 && q.options?.every((opt) => {
+
+                                            {/* Options Grid */}
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '14px' }}>
+                                                {q.options.map((opt) => {
                                                     const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
-                                                    return (optText?.trim().length || 0) <= 36 && !optText?.includes('\n');
-                                                });
+                                                    const isCorrectOpt = opt.id === q.correct;
+                                                    const isSelectedOpt = opt.id === a?.selected;
+                                                    let bg = 'var(--bg-card)';
+                                                    let border = '1px solid var(--border)';
+                                                    let badgeBg = 'var(--bg-tertiary)';
+                                                    let badgeCol = 'var(--text-primary)';
 
-                                                return (
-                                                    <div style={{
-                                                        display: isShortOptions ? 'grid' : 'flex',
-                                                        gridTemplateColumns: isShortOptions ? 'repeat(auto-fit, minmax(280px, 1fr))' : undefined,
-                                                        flexDirection: isShortOptions ? undefined : 'column',
-                                                        gap: '8px',
-                                                        marginBottom: '14px'
-                                                    }}>
-                                                        {q.options.map((opt) => {
-                                                            const optText = lang === 'kn' && opt.text_kn ? opt.text_kn : (lang === 'hi' && opt.text_hi ? opt.text_hi : opt.text);
-                                                            const isCorrectOpt = opt.id === q.correct;
-                                                            const isSelectedOpt = opt.id === a?.selected;
-                                                            let bg = 'var(--bg-card-solid)';
-                                                            let border = '1px solid var(--border)';
-                                                            let badgeBg = 'var(--bg-tertiary)';
-                                                            let badgeCol = 'var(--text-primary)';
+                                                    if (isCorrectOpt) {
+                                                        bg = 'rgba(16, 185, 129, 0.08)';
+                                                        border = '1px solid #10B981';
+                                                        badgeBg = '#10B981';
+                                                        badgeCol = '#FFFFFF';
+                                                    } else if (isSelectedOpt) {
+                                                        bg = 'rgba(239, 68, 68, 0.08)';
+                                                        border = '1px solid #EF4444';
+                                                        badgeBg = '#EF4444';
+                                                        badgeCol = '#FFFFFF';
+                                                    }
 
-                                                            if (isCorrectOpt) {
-                                                                bg = 'rgba(16, 185, 129, 0.12)';
-                                                                border = '1px solid #10B981';
-                                                                badgeBg = '#10B981';
-                                                                badgeCol = 'white';
-                                                            } else if (isSelectedOpt) {
-                                                                bg = 'rgba(225, 29, 72, 0.12)';
-                                                                border = '1px solid #E11D48';
-                                                                badgeBg = '#E11D48';
-                                                                badgeCol = 'white';
-                                                            }
+                                                    return (
+                                                        <div key={opt.id} style={{
+                                                            padding: '10px 14px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '10px',
+                                                            background: bg, border: border, transition: 'all 0.15s'
+                                                        }}>
+                                                            <div style={{
+                                                                width: '26px', height: '26px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                                fontSize: '12px', fontWeight: 800, flexShrink: 0,
+                                                                background: badgeBg, color: badgeCol, border: isCorrectOpt || isSelectedOpt ? 'none' : '1px solid var(--border)',
+                                                                fontFamily: 'var(--font-mono, monospace)'
+                                                            }}>
+                                                                {opt.id.toUpperCase()}
+                                                            </div>
+                                                            <div style={{ flex: 1, fontSize: '13px' }}>
+                                                                <OptionFormatter text={optText} />
+                                                            </div>
+                                                            {isCorrectOpt && (
+                                                                <span style={{ fontSize: '11px', fontWeight: 800, color: '#059669', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                                                                    <Check size={14} strokeWidth={3} />
+                                                                    Official Key
+                                                                </span>
+                                                            )}
+                                                            {isSelectedOpt && !isCorrectOpt && (
+                                                                <span style={{ fontSize: '11px', fontWeight: 800, color: '#DC2626', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                                                                    <X size={14} strokeWidth={3} />
+                                                                    Your Choice
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
 
-                                                            return (
-                                                                <div key={opt.id} style={{
-                                                                    padding: '12px 16px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '12px',
-                                                                    background: bg, border: border, transition: 'all 0.15s'
-                                                                }}>
-                                                                    <div style={{
-                                                                        width: 30, height: 30, borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                                        fontSize: '13px', fontWeight: 800, flexShrink: 0,
-                                                                        background: badgeBg, color: badgeCol, border: isCorrectOpt || isSelectedOpt ? 'none' : '1px solid var(--border)'
-                                                                    }}>
-                                                                        {opt.id.toUpperCase()}
-                                                                    </div>
-                                                                    <div style={{ flex: 1 }}>
-                                                                        <OptionFormatter text={optText} />
-                                                                    </div>
-                                                                    {isCorrectOpt && <span style={{ fontSize: '16px' }}>✅</span>}
-                                                                    {isSelectedOpt && !isCorrectOpt && <span style={{ fontSize: '16px' }}>❌</span>}
-                                                                </div>
-                                                            );
-                                                        })}
-                                                    </div>
-                                                );
-                                            })()}
-                                            <div style={{ background: 'var(--bg-card)', borderRadius: '12px', padding: '16px', border: '1px solid var(--border)', boxShadow: 'var(--shadow-sm)' }}>
-                                                <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>💡 Explanation</div>
-                                                <div>
+                                            {/* Explanation Box */}
+                                            <div style={{ background: 'var(--bg-card)', borderRadius: '8px', padding: '16px', border: '1px solid var(--border)', boxShadow: 'var(--shadow-sm)' }}>
+                                                <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange, #EA580C)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                                    <BookOpen size={13} />
+                                                    <span>Explanation & Standard Citation</span>
+                                                </div>
+                                                <div style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--text-secondary)' }}>
                                                     <ExplanationFormatter text={expText} />
                                                 </div>
                                             </div>
@@ -347,6 +495,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         })}
                     </div>
                 </div>
+
             </div>
         </div>
     );

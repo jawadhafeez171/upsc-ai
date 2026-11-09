@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Volume2, VolumeX, Star, ChevronDown, ChevronUp, Check, SlidersHorizontal } from 'lucide-react';
+import { Volume2, VolumeX, Star, ChevronDown, ChevronUp, Check, SlidersHorizontal, ZoomIn, Target } from 'lucide-react';
 import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
 import PassageCard from '@/components/ui/PassageCard';
 import { isValidImageUrl } from '@/lib/imageUtils';
@@ -177,9 +177,9 @@ export default function MobileQuestionCard({
                     <div
                         onClick={() => onPreviewImage(question.image_url!)}
                         style={{
-                            borderRadius: '6px',
+                            borderRadius: '8px',
                             overflow: 'hidden',
-                            border: '1.5px solid #1E1E1E',
+                            border: '1px solid var(--border)',
                             background: '#F9FAFB',
                             display: 'flex',
                             flexDirection: 'column',
@@ -193,8 +193,8 @@ export default function MobileQuestionCard({
                             alt="Question Diagram"
                             style={{ maxWidth: '100%', maxHeight: '240px', objectFit: 'contain' }}
                         />
-                        <div style={{ fontSize: '11px', color: '#2563EB', fontWeight: 700, marginTop: '6px' }}>
-                            🔍 Tap to view high-resolution diagram
+                        <div style={{ fontSize: '11px', color: '#2563EB', fontWeight: 700, marginTop: '8px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+                            <ZoomIn size={14} /> Tap to view high-resolution diagram
                         </div>
                     </div>
                 )}
@@ -301,7 +301,7 @@ export default function MobileQuestionCard({
             {/* 5. Self-Assessment Confidence Selector */}
             <div className="cbt-confidence-row">
                 <div className="cbt-confidence-label">
-                    <span>🎯</span>
+                    <Target size={14} color="#6366F1" />
                     <span>Self-Assessment Confidence</span>
                 </div>
 

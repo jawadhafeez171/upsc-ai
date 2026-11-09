@@ -205,9 +205,11 @@ export function FullPaperModal({
                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                         <span style={{
-                                            background: '#FACC15', color: '#000000',
+                                            background: '#1E1B4B', color: '#FFFFFF',
+                                            border: '1px solid #312E81',
                                             padding: '2px 8px', borderRadius: '4px',
-                                            fontWeight: 900, fontSize: '12px'
+                                            fontWeight: 800, fontSize: '12px',
+                                            fontFamily: 'var(--cbt-font-mono)'
                                         }}>
                                             Q.{idx + 1}
                                         </span>

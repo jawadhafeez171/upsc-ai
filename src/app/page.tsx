@@ -16,11 +16,11 @@ import {
   Building2,
   ShieldCheck,
   Award,
-  ChevronRight
+  ChevronRight,
+  Brain,
+  Scale,
+  Layers
 } from 'lucide-react';
-import { EXAMS } from '@/lib/mockData';
-import { t } from '@/lib/i18n';
-import { Language } from '@/types';
 import { OptionFormatter, ExplanationFormatter } from '@/components/ui/QuestionFormatter';
 
 interface DemoQuestion {
@@ -140,10 +140,6 @@ const CURATED_EXAMS = [
 ];
 
 export default function HomePage() {
-  const { user, language } = useAppStore();
-  const lang = language as Language;
-
-  // Demo Question State
   const [demoSelected, setDemoSelected] = useState<string | null>(null);
   const [demoLang, setDemoLang] = useState<'en' | 'hi' | 'kn'>('en');
   const [totalQuestions, setTotalQuestions] = useState<number>(14890);
@@ -183,61 +179,41 @@ export default function HomePage() {
   return (
     <div style={{ background: 'var(--bg-primary)', minHeight: '100vh', paddingBottom: '90px' }}>
 
-      {/* ── 1. EDITORIAL HERO SECTION ── */}
+      {/* ── 1. EDITORIAL HERO SECTION (FOCUSED SINGLE-COLUMN) ── */}
       <section style={{
-        padding: '56px 24px 44px',
+        padding: '64px 24px 52px',
         borderBottom: '1.5px solid var(--border)',
         background: 'var(--bg-secondary)',
         position: 'relative'
       }}>
-        <div style={{ maxWidth: '1160px', margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: '1040px', margin: '0 auto', textAlign: 'center' }}>
 
-          {/* Kicker Badge */}
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            background: '#FFF7ED',
-            border: '1px solid #FED7AA',
-            borderRadius: '9999px',
-            padding: '6px 18px',
-            fontSize: '11.5px',
-            fontWeight: 700,
-            color: '#C2410C',
-            letterSpacing: '0.04em',
-            marginBottom: '22px',
-            boxShadow: '0 1px 3px rgba(234, 88, 12, 0.08)'
-          }}>
-            <Building2 size={13} color="#EA580C" />
-            <span>OFFICIAL UPSC CIVIL SERVICES PRELIMS ARCHIVE (1995–2024)</span>
-          </div>
-
-          {/* Master Display Headline */}
+          {/* Master Display Headline (Clean, no kicker above) */}
           <h1 style={{
             fontFamily: 'var(--font-sans), sans-serif',
-            fontSize: 'clamp(32px, 4.6vw, 52px)',
+            fontSize: 'clamp(32px, 4.8vw, 54px)',
             fontWeight: 900,
-            letterSpacing: '-0.03em',
+            letterSpacing: '-0.035em',
             lineHeight: 1.15,
             color: 'var(--text-primary)',
-            marginBottom: '18px',
-            maxWidth: '920px',
+            marginBottom: '20px',
+            maxWidth: '960px',
             marginInline: 'auto'
           }}>
             Master UPSC CSE & State PCS Prelims <br className="hidden-mobile" />
-            with <span style={{ color: 'var(--brand-orange)' }}>30-Year PYQ Precision</span>
+            with <span style={{ color: '#C2410C' }}>30-Year PYQ Precision</span>
           </h1>
 
           {/* Academic Lead Paragraph */}
           <p style={{
-            fontSize: 'clamp(15px, 1.2vw + 0.5rem, 17.5px)',
+            fontSize: 'clamp(15px, 1.2vw + 0.5rem, 18px)',
             color: 'var(--text-secondary)',
             lineHeight: 1.65,
-            maxWidth: '740px',
-            margin: '0 auto 30px'
+            maxWidth: '760px',
+            margin: '0 auto 32px'
           }}>
             Over {totalQuestions.toLocaleString()}+ verified questions spanning 1995 to 2024. Exact Computer-Based Test
-            simulation, bilingual English/Hindi/Kannada parity, and rigorous step-by-step reasoning citing standard texts.
+            simulation, bilingual English, Hindi, and Kannada parity, and rigorous step-by-step reasoning citing standard civil services sources.
           </p>
 
           {/* Primary Action Button Pair */}
@@ -246,11 +222,16 @@ export default function HomePage() {
               href="/exams/upsc-cse"
               className="btn btn-primary"
               style={{
-                padding: '12px 28px',
+                padding: '13px 28px',
                 fontSize: '14.5px',
                 fontWeight: 700,
                 borderRadius: '8px',
+                background: '#1E1B4B',
+                color: '#FFFFFF',
+                border: '1px solid #312E81',
                 gap: '8px',
+                display: 'inline-flex',
+                alignItems: 'center'
               }}
             >
               <span>Start 100-Question Prelims Mock</span>
@@ -261,41 +242,62 @@ export default function HomePage() {
               href="/exams"
               className="btn btn-secondary"
               style={{
-                padding: '12px 24px',
+                padding: '13px 24px',
                 fontSize: '14.5px',
                 fontWeight: 700,
                 borderRadius: '8px',
+                background: 'var(--bg-card)',
+                border: '1px solid var(--border)',
+                color: 'var(--text-primary)'
               }}
             >
               <span>Browse 30-Year PYQ Catalog</span>
             </Link>
           </div>
 
-          {/* Verifiable Trust Metrics Strip */}
+          {/* Verifiable Trust Metrics Strip (Strictly Lucide SVG icons, NO emojis) */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '8px',
+            gap: '10px',
             flexWrap: 'wrap',
-            paddingTop: '20px',
+            paddingTop: '22px',
             borderTop: '1px solid var(--border)'
           }}>
-            <span className="hero-sub-text-pill">🏛️ 3,320+ UPSC CSE GS-1</span>
-            <span className="hero-sub-text-pill">🧠 1,120 CSAT Paper II</span>
-            <span className="hero-sub-text-pill">🎖️ 1,625 CAPF (AC)</span>
-            <span className="hero-sub-text-pill">🅺 1,200 KPSC KAS</span>
-            <span className="hero-sub-text-pill">⚖️ +2.00 / -0.66 Scoring</span>
-            <span className="hero-sub-text-pill">🌐 Full Hindi & English</span>
+            <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Building2 size={13} color="#2563EB" />
+              <span>3,320+ UPSC CSE GS-1</span>
+            </span>
+            <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Brain size={13} color="#D97706" />
+              <span>1,120 CSAT Paper II</span>
+            </span>
+            <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <ShieldCheck size={13} color="#0D5D56" />
+              <span>1,625 CAPF (AC)</span>
+            </span>
+            <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Layers size={13} color="#0D9488" />
+              <span>1,200 KPSC KAS</span>
+            </span>
+            <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Scale size={13} color="#7C3AED" />
+              <span>+2.00 / -0.66 Scoring</span>
+            </span>
+            <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <Languages size={13} color="#2563EB" />
+              <span>English · Hindi · Kannada</span>
+            </span>
           </div>
 
         </div>
       </section>
 
       {/* ── 2. LIVE INTERACTIVE DEMO PLAYER ── */}
-      <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 24px' }}>
+      <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
 
-        <section style={{ marginTop: '40px', marginBottom: '64px' }}>
+        <section style={{ marginTop: '44px', marginBottom: '64px' }}>
           <div className="card" style={{
             padding: '28px 32px',
             borderRadius: '12px',
@@ -307,35 +309,16 @@ export default function HomePage() {
             <div style={{
               display: 'flex',
               justifyContent: 'space-between',
-              alignItems: 'flex-start',
+              alignItems: 'center',
               marginBottom: '20px',
               flexWrap: 'wrap',
               gap: '14px',
               paddingBottom: '16px',
               borderBottom: '1px solid var(--border)'
             }}>
-              <div>
-                <div style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  fontSize: '11px',
-                  fontWeight: 700,
-                  color: '#EA580C',
-                  background: '#FFF7ED',
-                  border: '1px solid #FED7AA',
-                  padding: '3px 8px',
-                  borderRadius: '6px',
-                  marginBottom: '6px',
-                  letterSpacing: '0.04em'
-                }}>
-                  <ShieldCheck size={13} color="#EA580C" />
-                  <span>INTERACTIVE QUESTION WORKBENCH</span>
-                </div>
-                <h2 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                  Test Your Conceptual Grasp on Real UPSC Questions
-                </h2>
-              </div>
+              <h2 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
+                Test Your Conceptual Grasp on Real UPSC Questions
+              </h2>
 
               {/* Toolbar: Language Switcher & Reset Button */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
@@ -348,6 +331,7 @@ export default function HomePage() {
                   border: '1px solid var(--border)'
                 }}>
                   <button
+                    type="button"
                     onClick={() => setDemoLang('en')}
                     style={{
                       padding: '4px 10px',
@@ -355,16 +339,17 @@ export default function HomePage() {
                       border: 'none',
                       cursor: 'pointer',
                       fontSize: '11.5px',
-                      fontWeight: 600,
-                      background: demoLang === 'en' ? '#2563EB' : 'transparent',
+                      fontWeight: 700,
+                      background: demoLang === 'en' ? '#1E1B4B' : 'transparent',
                       color: demoLang === 'en' ? '#FFFFFF' : 'var(--text-secondary)',
-                      boxShadow: demoLang === 'en' ? '0 1px 2px rgba(37,99,235,0.2)' : 'none',
+                      boxShadow: demoLang === 'en' ? '0 1px 2px rgba(30,27,75,0.2)' : 'none',
                       transition: 'all 0.15s ease'
                     }}
                   >
                     English
                   </button>
                   <button
+                    type="button"
                     onClick={() => setDemoLang('hi')}
                     style={{
                       padding: '4px 10px',
@@ -372,16 +357,17 @@ export default function HomePage() {
                       border: 'none',
                       cursor: 'pointer',
                       fontSize: '11.5px',
-                      fontWeight: 600,
-                      background: demoLang === 'hi' ? '#2563EB' : 'transparent',
+                      fontWeight: 700,
+                      background: demoLang === 'hi' ? '#1E1B4B' : 'transparent',
                       color: demoLang === 'hi' ? '#FFFFFF' : 'var(--text-secondary)',
-                      boxShadow: demoLang === 'hi' ? '0 1px 2px rgba(37,99,235,0.2)' : 'none',
+                      boxShadow: demoLang === 'hi' ? '0 1px 2px rgba(30,27,75,0.2)' : 'none',
                       transition: 'all 0.15s ease'
                     }}
                   >
                     हिन्दी
                   </button>
                   <button
+                    type="button"
                     onClick={() => setDemoLang('kn')}
                     style={{
                       padding: '4px 10px',
@@ -389,10 +375,10 @@ export default function HomePage() {
                       border: 'none',
                       cursor: 'pointer',
                       fontSize: '11.5px',
-                      fontWeight: 600,
-                      background: demoLang === 'kn' ? '#2563EB' : 'transparent',
+                      fontWeight: 700,
+                      background: demoLang === 'kn' ? '#1E1B4B' : 'transparent',
                       color: demoLang === 'kn' ? '#FFFFFF' : 'var(--text-secondary)',
-                      boxShadow: demoLang === 'kn' ? '0 1px 2px rgba(37,99,235,0.2)' : 'none',
+                      boxShadow: demoLang === 'kn' ? '0 1px 2px rgba(30,27,75,0.2)' : 'none',
                       transition: 'all 0.15s ease'
                     }}
                   >
@@ -402,6 +388,7 @@ export default function HomePage() {
 
                 {demoSelected && (
                   <button
+                    type="button"
                     onClick={handleResetDemo}
                     style={{
                       display: 'flex',
@@ -413,7 +400,7 @@ export default function HomePage() {
                       background: 'var(--bg-secondary)',
                       color: 'var(--text-secondary)',
                       fontSize: '11.5px',
-                      fontWeight: 600,
+                      fontWeight: 700,
                       cursor: 'pointer',
                       boxShadow: 'var(--shadow-sm)'
                     }}
@@ -428,7 +415,7 @@ export default function HomePage() {
 
             {/* Question Statement */}
             <div style={{
-              fontSize: '15.5px',
+              fontSize: '15px',
               fontWeight: 600,
               color: 'var(--text-primary)',
               marginBottom: '20px',
@@ -452,22 +439,23 @@ export default function HomePage() {
               {SAMPLE_QUESTION.options.map((opt) => {
                 const isSelected = demoSelected === opt.id;
                 const isCorrect = opt.id === SAMPLE_QUESTION.correct;
-                let borderStyle = '1.5px solid var(--border)';
+                let borderStyle = '1px solid var(--border)';
                 let bgStyle = 'var(--bg-secondary)';
 
                 if (isSelected) {
                   if (isCorrect) {
-                    borderStyle = '2px solid #16A34A';
-                    bgStyle = '#F0FDF4';
+                    borderStyle = '1.5px solid #10B981';
+                    bgStyle = 'rgba(16, 185, 129, 0.08)';
                   } else {
-                    borderStyle = '2px solid #DC2626';
-                    bgStyle = '#FEF2F2';
+                    borderStyle = '1.5px solid #EF4444';
+                    bgStyle = 'rgba(239, 68, 68, 0.08)';
                   }
                 }
 
                 return (
                   <button
                     key={opt.id}
+                    type="button"
                     onClick={() => setDemoSelected(opt.id)}
                     style={{
                       padding: '14px 16px',
@@ -480,27 +468,28 @@ export default function HomePage() {
                       display: 'flex',
                       alignItems: 'center',
                       gap: '12px',
-                      transition: 'all 0.15s',
+                      transition: 'all 0.15s ease',
                       boxShadow: 'var(--shadow-sm)'
                     }}
                   >
                     <span style={{
                       width: 28,
                       height: 28,
-                      borderRadius: '4px',
+                      borderRadius: '6px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      fontSize: '12.5px',
+                      fontSize: '12px',
                       fontWeight: 800,
                       flexShrink: 0,
-                      background: isSelected ? (isCorrect ? '#16A34A' : '#DC2626') : 'var(--bg-tertiary)',
+                      background: isSelected ? (isCorrect ? '#10B981' : '#EF4444') : 'var(--bg-card)',
                       color: isSelected ? '#FFFFFF' : 'var(--text-primary)',
                       border: '1px solid var(--border)',
+                      fontFamily: 'var(--font-mono, monospace)'
                     }}>
                       {opt.id.toUpperCase()}
                     </span>
-                    <div style={{ flex: 1, lineHeight: 1.5, fontSize: '14px', fontWeight: 500 }}>
+                    <div style={{ flex: 1, lineHeight: 1.5, fontSize: '13.5px', fontWeight: 500 }}>
                       <OptionFormatter
                         text={
                           demoLang === 'hi'
@@ -521,8 +510,8 @@ export default function HomePage() {
               <div style={{
                 padding: '16px 20px',
                 borderRadius: '8px',
-                background: demoSelected === SAMPLE_QUESTION.correct ? '#F0FDF4' : '#FFFBEB',
-                border: demoSelected === SAMPLE_QUESTION.correct ? '1.5px solid #16A34A' : '1.5px solid #F59E0B',
+                background: demoSelected === SAMPLE_QUESTION.correct ? 'rgba(16, 185, 129, 0.06)' : 'rgba(245, 158, 11, 0.06)',
+                border: demoSelected === SAMPLE_QUESTION.correct ? '1px solid #86EFAC' : '1px solid #FDE68A',
                 boxShadow: 'var(--shadow-sm)'
               }}>
                 <div style={{
@@ -531,13 +520,13 @@ export default function HomePage() {
                   gap: '8px',
                   fontWeight: 800,
                   fontSize: '13px',
-                  color: demoSelected === SAMPLE_QUESTION.correct ? '#16A34A' : '#B45309',
+                  color: demoSelected === SAMPLE_QUESTION.correct ? '#059669' : '#B45309',
                   marginBottom: '8px'
                 }}>
                   <CheckCircle2 size={16} />
                   <span>
                     {demoSelected === SAMPLE_QUESTION.correct
-                      ? 'Correct Response! (+2.00 Marks)'
+                      ? 'Correct Response! (+2.00 Marks Awarded)'
                       : 'Incorrect Response (-0.66 Marks Penalty) · Official Key: (c)'}
                   </span>
                 </div>
@@ -561,10 +550,10 @@ export default function HomePage() {
                 <div style={{
                   fontSize: '11px',
                   fontWeight: 700,
-                  color: '#6B7280',
-                  borderTop: '1px solid rgba(0,0,0,0.08)',
+                  color: 'var(--text-muted)',
+                  borderTop: '1px solid var(--border)',
                   paddingTop: '8px',
-                  fontFamily: 'var(--cbt-font-mono, monospace)'
+                  fontFamily: 'var(--font-mono, monospace)'
                 }}>
                   {SAMPLE_QUESTION.citation}
                 </div>
@@ -579,49 +568,32 @@ export default function HomePage() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
-            marginBottom: '28px',
+            marginBottom: '24px',
             flexWrap: 'wrap',
             gap: '12px'
           }}>
             <div>
-              <div style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                fontSize: '11px',
-                fontWeight: 700,
-                color: '#EA580C',
-                background: '#FFF7ED',
-                border: '1px solid #FED7AA',
-                borderRadius: '9999px',
-                padding: '4px 12px',
-                marginBottom: '10px',
-                boxShadow: '0 1px 2px rgba(234,88,12,0.08)'
-              }}>
-                OFFICIAL QUESTION DIRECTORY
-              </div>
-              <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
-                Primary Civil Services Examination Archives
+              <h2 style={{ fontSize: 'clamp(22px, 3vw, 28px)', fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
+                Primary Examination Archives
               </h2>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '14px', marginTop: '6px', margin: 0 }}>
-                Filter full mock sittings and subject chapter tests with official UPSC answer keys.
+              <p style={{ color: 'var(--text-secondary)', fontSize: '14px', marginTop: '4px', margin: 0 }}>
+                Full mock sittings and subject chapter tests validated with official commission answer keys.
               </p>
             </div>
 
-            <Link href="/exams" className="btn btn-ghost" style={{ fontSize: '13.5px', gap: '6px' }}>
+            <Link href="/exams" className="btn btn-ghost" style={{ fontSize: '13px', fontWeight: 700, gap: '6px', color: '#2563EB', textDecoration: 'none' }}>
               <span>View All Papers</span>
               <ArrowRight size={14} />
             </Link>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
             {CURATED_EXAMS.map((exam) => (
               <Link key={exam.id} href={exam.link} style={{ textDecoration: 'none' }}>
                 <div className="card" style={{
                   padding: '22px',
                   borderRadius: '12px',
                   border: '1px solid var(--border)',
-                  borderTop: `4px solid ${exam.accentColor}`,
                   background: 'var(--bg-card)',
                   boxShadow: 'var(--shadow-card)',
                   height: '100%',
@@ -631,14 +603,14 @@ export default function HomePage() {
                   transition: 'transform 0.15s ease'
                 }}>
                   <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
                       <span style={{
-                        fontSize: '10.5px',
+                        fontSize: '11px',
                         fontWeight: 700,
                         color: exam.accentColor,
                         background: 'rgba(37, 99, 235, 0.08)',
-                        border: '1px solid rgba(37, 99, 235, 0.2)',
-                        padding: '2px 7px',
+                        border: '1px solid rgba(37, 99, 235, 0.25)',
+                        padding: '3px 10px',
                         borderRadius: '6px'
                       }}>
                         {exam.badge}
@@ -648,10 +620,10 @@ export default function HomePage() {
                       </span>
                     </div>
 
-                    <h3 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '6px' }}>
+                    <h3 style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '6px' }}>
                       {exam.title}
                     </h3>
-                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '16px' }}>
+                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.55, marginBottom: '16px' }}>
                       {exam.desc}
                     </p>
                   </div>
@@ -670,7 +642,7 @@ export default function HomePage() {
                     <span style={{
                       fontSize: '12px',
                       fontWeight: 700,
-                      color: 'var(--brand-orange)',
+                      color: '#C2410C',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '4px'
@@ -687,27 +659,11 @@ export default function HomePage() {
 
         {/* ── 4. WHY UPSC AI: ENGINEERED FOR SERIOUS ASPIRANTS ── */}
         <section style={{ marginBottom: '72px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              fontSize: '11px',
-              fontWeight: 700,
-              color: '#1E1B4B',
-              background: '#EEF2FF',
-              border: '1px solid #C7D2FE',
-              borderRadius: '9999px',
-              padding: '4px 12px',
-              marginBottom: '12px',
-              boxShadow: '0 1px 2px rgba(30,27,75,0.08)'
-            }}>
-              TECHNICAL CAPABILITIES
-            </div>
-            <h2 style={{ fontSize: 'clamp(24px, 3.2vw, 34px)', fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
+          <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+            <h2 style={{ fontSize: 'clamp(24px, 3.2vw, 32px)', fontWeight: 800, letterSpacing: '-0.02em', margin: 0 }}>
               Engineered for Serious Civil Services Aspirants
             </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '15px', maxWidth: '520px', margin: '8px auto 0', lineHeight: 1.6 }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '14.5px', maxWidth: '520px', margin: '8px auto 0', lineHeight: 1.6 }}>
               A distraction-free technical assessment workspace built around actual exam conditions.
             </p>
           </div>
@@ -723,22 +679,12 @@ export default function HomePage() {
                   boxShadow: 'var(--shadow-card)',
                   background: 'var(--bg-card)'
                 }}>
-                  <div style={{
-                    width: '38px',
-                    height: '38px',
-                    borderRadius: '8px',
-                    background: 'var(--bg-tertiary)',
-                    border: '1px solid var(--border)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '16px',
-                  }}>
-                    <IconComp size={18} color={pillar.color} strokeWidth={2.5} />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                    <IconComp size={19} color={pillar.color} strokeWidth={2.4} />
+                    <h3 style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
+                      {pillar.title}
+                    </h3>
                   </div>
-                  <h3 style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '8px' }}>
-                    {pillar.title}
-                  </h3>
                   <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.6, margin: 0 }}>
                     {pillar.desc}
                   </p>
@@ -750,7 +696,7 @@ export default function HomePage() {
 
         {/* ── 5. CLOSING CONVERSION BLOCK (PEAK-END REASSURANCE) ── */}
         <section style={{
-          padding: '40px 32px',
+          padding: '44px 32px',
           borderRadius: '16px',
           border: '1px solid var(--border)',
           background: 'var(--bg-card)',
@@ -758,27 +704,9 @@ export default function HomePage() {
           textAlign: 'center',
           marginBottom: '20px'
         }}>
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '6px',
-            background: 'rgba(37, 99, 235, 0.08)',
-            border: '1px solid rgba(37, 99, 235, 0.25)',
-            padding: '3px 10px',
-            borderRadius: '4px',
-            fontSize: '11px',
-            fontWeight: 800,
-            color: '#2563EB',
-            letterSpacing: '0.04em',
-            marginBottom: '14px'
-          }}>
-            <Award size={13} />
-            <span>EXAM DAY READINESS</span>
-          </div>
-
           <h2 style={{
-            fontSize: 'clamp(22px, 3vw, 32px)',
-            fontWeight: 900,
+            fontSize: 'clamp(22px, 3vw, 30px)',
+            fontWeight: 800,
             letterSpacing: '-0.02em',
             marginBottom: '12px',
             color: 'var(--text-primary)'
@@ -806,6 +734,12 @@ export default function HomePage() {
                 fontSize: '14.5px',
                 fontWeight: 700,
                 borderRadius: '8px',
+                background: '#1E1B4B',
+                color: '#FFFFFF',
+                border: '1px solid #312E81',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px'
               }}
             >
               <span>Launch 100-Question Prelims Mock</span>
@@ -822,6 +756,7 @@ export default function HomePage() {
                 borderRadius: '8px',
                 background: 'var(--bg-secondary)',
                 border: '1px solid var(--border)',
+                color: 'var(--text-primary)'
               }}
             >
               <span>Explore All Exam Papers</span>

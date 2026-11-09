@@ -42,22 +42,23 @@ export default function ExamBottomNav({
                     disabled={isFirst}
                     style={{
                         padding: '9px 18px',
-                        background: '#FFFFFF',
-                        border: '1.5px solid #1E1E1E',
+                        background: 'var(--bg-card)',
+                        border: '1px solid var(--border)',
                         borderRadius: '6px',
-                        color: isFirst ? '#9CA3AF' : '#111827',
-                        borderColor: isFirst ? '#D1D5DB' : '#1E1E1E',
-                        fontWeight: 800,
+                        color: isFirst ? 'var(--text-muted)' : 'var(--text-primary)',
+                        borderColor: isFirst ? 'var(--border)' : 'var(--border)',
+                        fontWeight: 700,
                         fontSize: '13px',
                         cursor: isFirst ? 'not-allowed' : 'pointer',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '6px'
+                        gap: '6px',
+                        boxShadow: 'var(--shadow-sm)'
                     }}
                 >
                     <ArrowLeft size={14} />
                     <span>PREVIOUS</span>
-                    <kbd style={{ fontSize: '10px', background: '#F3F4F6', color: '#6B7280', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>P</kbd>
+                    <kbd style={{ fontSize: '10px', background: 'var(--bg-secondary)', color: 'var(--text-secondary)', padding: '1px 5px', borderRadius: '3px', fontWeight: 700 }}>P</kbd>
                 </button>
 
                 {hasSelectedAnswer && (
@@ -66,8 +67,8 @@ export default function ExamBottomNav({
                         style={{
                             background: 'transparent',
                             border: 'none',
-                            color: '#6B7280',
-                            fontWeight: 700,
+                            color: 'var(--text-muted)',
+                            fontWeight: 600,
                             fontSize: '12px',
                             cursor: 'pointer',
                             display: 'flex',
@@ -76,7 +77,7 @@ export default function ExamBottomNav({
                         }}
                     >
                         <span>CLEAR RESPONSE</span>
-                        <kbd style={{ fontSize: '9.5px', background: '#E5E7EB', color: '#4B5563', padding: '1px 4px', borderRadius: '2px', fontWeight: 700 }}>C</kbd>
+                        <kbd style={{ fontSize: '9.5px', background: 'var(--bg-secondary)', color: 'var(--text-muted)', padding: '1px 4px', borderRadius: '2px', fontWeight: 700 }}>C</kbd>
                     </button>
                 )}
             </div>
@@ -87,11 +88,11 @@ export default function ExamBottomNav({
                     onClick={onToggleMarkAndNext}
                     style={{
                         padding: '9px 16px',
-                        background: isMarkedForReview ? '#F59E0B' : '#FAF5FF',
-                        border: isMarkedForReview ? '1.5px solid #D97706' : '1.5px solid #7C3AED',
+                        background: isMarkedForReview ? '#7C3AED' : 'rgba(124, 58, 237, 0.08)',
+                        border: '1px solid #7C3AED',
                         borderRadius: '6px',
                         color: isMarkedForReview ? '#FFFFFF' : '#7C3AED',
-                        fontWeight: 800,
+                        fontWeight: 700,
                         fontSize: '13px',
                         cursor: 'pointer',
                         display: 'flex',
@@ -110,8 +111,8 @@ export default function ExamBottomNav({
                     onClick={onNext}
                     style={{
                         padding: '9px 24px',
-                        background: '#2563EB',
-                        border: '1.5px solid #1D4ED8',
+                        background: 'var(--brand-blue, #2563EB)',
+                        border: '1px solid #1D4ED8',
                         borderRadius: '6px',
                         color: '#FFFFFF',
                         fontWeight: 800,
@@ -120,7 +121,7 @@ export default function ExamBottomNav({
                         display: 'flex',
                         alignItems: 'center',
                         gap: '8px',
-                        boxShadow: '0 2px 8px rgba(37, 99, 235, 0.35)'
+                        boxShadow: '0 2px 6px rgba(37, 99, 235, 0.3)'
                     }}
                 >
                     <span>{isLast ? 'REVIEW & SUBMIT' : 'SAVE & NEXT'}</span>

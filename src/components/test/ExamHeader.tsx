@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Shield, Clock, User, Check } from 'lucide-react';
-import { Language } from '@/types';
+import { Shield, Clock, User, BookOpen } from 'lucide-react';
 
 interface ExamHeaderProps {
     examTitle: string;
@@ -35,30 +34,31 @@ export default function ExamHeader({
 
     return (
         <header className="cbt-header">
-            {/* Left: MockIQ Logo & Exam Subtitle */}
+            {/* Left: Brand Identity & Exam Subtitle */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
                 <Link href="/exams" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
                     <div style={{
-                        width: '28px', height: '28px', borderRadius: '6px',
-                        background: '#2563EB', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        color: '#FFFFFF'
+                        width: '30px', height: '30px', borderRadius: '7px',
+                        background: '#1E1B4B', border: '1px solid #312E81',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        color: '#FFFFFF', boxShadow: '0 2px 4px rgba(30,27,75,0.2)'
                     }}>
-                        <Check size={18} strokeWidth={3.5} />
+                        <BookOpen size={16} strokeWidth={2.5} />
                     </div>
-                    <div style={{ fontSize: '18px', fontWeight: 800, letterSpacing: '-0.5px', color: '#111827' }}>
+                    <div style={{ fontSize: '17px', fontWeight: 800, letterSpacing: '-0.5px', color: 'var(--text-primary)' }}>
                         <span>UPSC </span>
-                        <span style={{ color: '#2563EB' }}>AI</span>
+                        <span style={{ color: 'var(--brand-orange, #EA580C)' }}>AI</span>
                     </div>
                 </Link>
 
-                <div style={{ width: '1px', height: '24px', background: '#D1D5DB' }} />
+                <div style={{ width: '1px', height: '22px', background: 'var(--border)' }} />
 
                 <div>
-                    <div style={{ fontSize: '11px', fontWeight: 800, letterSpacing: '0.08em', color: '#111827', textTransform: 'uppercase' }}>
+                    <div style={{ fontSize: '10.5px', fontWeight: 800, letterSpacing: '0.06em', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>
                         CBT ASSESSMENT TERMINAL
                     </div>
-                    <div style={{ fontSize: '11px', color: '#6B7280', fontWeight: 500 }}>
-                        {examTitle || 'UPSC Civil Services Prelims'}
+                    <div style={{ fontSize: '12px', color: 'var(--text-primary)', fontWeight: 600 }}>
+                        {examTitle || 'Civil Services Preliminary Examination'}
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ export default function ExamHeader({
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                 {/* Timer Badge with Calibrated Urgency */}
                 <div className={`cbt-timer-badge ${timeLeft <= 300 ? 'urgent' : timeLeft <= 900 ? 'warning' : 'normal'}`}>
-                    <Clock size={16} strokeWidth={2.5} />
+                    <Clock size={15} strokeWidth={2.5} />
                     <span>{formatTime(timeLeft)}</span>
                 </div>
 
@@ -78,17 +78,17 @@ export default function ExamHeader({
                         title="Toggle bilingual question translation"
                         style={{
                             padding: '6px 12px',
-                            background: '#FFFFFF',
-                            border: '1.5px solid #1E1E1E',
+                            background: 'var(--bg-card)',
+                            border: '1px solid var(--border)',
                             borderRadius: '6px',
-                            fontSize: '12px',
+                            fontSize: '11.5px',
                             fontWeight: 700,
                             cursor: 'pointer',
-                            color: '#111827',
+                            color: 'var(--text-primary)',
                             display: 'flex',
                             alignItems: 'center',
                             gap: '6px',
-                            boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
+                            boxShadow: 'var(--shadow-sm)'
                         }}
                     >
                         <span>{activeLang === 'en' ? `ENG ⇄ ${secondaryLangName}` : `${secondaryLangName.toUpperCase()} ⇄ ENG`}</span>
@@ -100,16 +100,16 @@ export default function ExamHeader({
                     display: 'flex',
                     alignItems: 'center',
                     gap: '6px',
-                    padding: '6px 12px',
-                    background: '#FFFFFF',
-                    border: '1.5px solid #1E1E1E',
+                    padding: '5px 10px',
+                    background: 'rgba(16, 185, 129, 0.08)',
+                    border: '1px solid rgba(16, 185, 129, 0.25)',
                     borderRadius: '6px',
                     fontSize: '11px',
                     fontWeight: 700,
                     letterSpacing: '0.04em',
-                    color: '#15803D'
+                    color: '#059669'
                 }}>
-                    <Shield size={14} color="#15803D" />
+                    <Shield size={13} color="#059669" />
                     <span>PROCTOR ACTIVE</span>
                 </div>
 
@@ -118,15 +118,15 @@ export default function ExamHeader({
                     onClick={onSubmitClick}
                     style={{
                         padding: '6px 14px',
-                        background: '#111827',
+                        background: 'var(--brand-indigo, #1E1B4B)',
                         color: '#FFFFFF',
-                        border: '1.5px solid #111827',
+                        border: '1px solid #312E81',
                         borderRadius: '6px',
-                        fontSize: '12px',
+                        fontSize: '11.5px',
                         fontWeight: 800,
                         letterSpacing: '0.04em',
                         cursor: 'pointer',
-                        boxShadow: '0 2px 6px rgba(0,0,0,0.15)'
+                        boxShadow: '0 2px 4px rgba(30, 27, 75, 0.25)'
                     }}
                 >
                     SUBMIT EXAM
@@ -139,16 +139,16 @@ export default function ExamHeader({
                         width: '32px',
                         height: '32px',
                         borderRadius: '50%',
-                        border: '1.5px solid #1E1E1E',
-                        background: '#F1EDE4',
+                        border: '1px solid var(--border)',
+                        background: 'var(--bg-secondary)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        color: '#111827',
+                        color: 'var(--text-secondary)',
                         cursor: 'pointer'
                     }}
                 >
-                    <User size={16} />
+                    <User size={15} />
                 </div>
             </div>
         </header>

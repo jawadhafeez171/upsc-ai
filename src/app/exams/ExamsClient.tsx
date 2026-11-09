@@ -2,10 +2,32 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useAppStore } from '@/lib/store';
-import { Search, ArrowRight, BookOpen, Zap, Shield, Sparkles, CheckCircle2, Award, Info, Landmark, MapPin } from 'lucide-react';
+import {
+    Search,
+    ArrowRight,
+    BookOpen,
+    Zap,
+    Shield,
+    ShieldCheck,
+    Info,
+    Landmark,
+    MapPin,
+    GraduationCap,
+    Swords,
+    Inbox
+} from 'lucide-react';
 import { Exam } from '@/types';
 
 type CategoryFilter = 'all' | 'national' | 'karnataka' | 'police' | 'teaching' | 'defence';
+
+function getExamIcon(exam: Exam) {
+    if (exam.id.includes('upsc-cse')) return <Landmark size={22} color="#2563EB" />;
+    if (exam.id.includes('capf') || exam.id.includes('cds') || exam.category === 'defence') return <Swords size={22} color="#0D5D56" />;
+    if (exam.id.includes('psi') || exam.id.includes('pc') || exam.id.includes('police')) return <ShieldCheck size={22} color="#1E3A8A" />;
+    if (exam.category === 'teaching' || exam.id.includes('tet') || exam.id.includes('kset')) return <GraduationCap size={22} color="#7C3AED" />;
+    if (exam.category === 'karnataka' || exam.id.includes('kpsc') || exam.id.includes('kas') || exam.id.includes('kea')) return <MapPin size={22} color="#EA580C" />;
+    return <BookOpen size={22} color="#2563EB" />;
+}
 
 export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) {
     const { language } = useAppStore();
@@ -48,13 +70,13 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
     const filteredKarnataka = karnatakaExams.filter(filterFn);
     const totalFiltered = filteredNational.length + filteredKarnataka.length;
 
-    const filters: { key: CategoryFilter; label: string; count: number }[] = [
-        { key: 'all', label: 'All Exams', count: exams.length },
-        { key: 'national', label: '🏛️ National (UPSC / Defence)', count: nationalExams.length },
-        { key: 'karnataka', label: '🅺 Karnataka (KEA / KPSC / KSP)', count: karnatakaExams.length },
-        { key: 'police', label: '👮 Police (PSI / PC)', count: exams.filter(e => e.id.includes('psi') || e.id.includes('pc') || e.id.includes('capf')).length },
-        { key: 'teaching', label: '👩‍🏫 Teaching (TET / KSET)', count: exams.filter(e => e.category === 'teaching').length },
-        { key: 'defence', label: '⚔️ Defence (CDS / CAPF)', count: exams.filter(e => e.category === 'defence').length },
+    const filters: { key: CategoryFilter; label: string; icon: React.ReactNode; count: number }[] = [
+        { key: 'all', label: 'All Exams', icon: <BookOpen size={14} />, count: exams.length },
+        { key: 'national', label: 'National (UPSC / Defence)', icon: <Landmark size={14} />, count: nationalExams.length },
+        { key: 'karnataka', label: 'Karnataka (KEA / KPSC / KSP)', icon: <MapPin size={14} />, count: karnatakaExams.length },
+        { key: 'police', label: 'Police (PSI / PC)', icon: <ShieldCheck size={14} />, count: exams.filter(e => e.id.includes('psi') || e.id.includes('pc') || e.id.includes('capf')).length },
+        { key: 'teaching', label: 'Teaching (TET / KSET)', icon: <GraduationCap size={14} />, count: exams.filter(e => e.category === 'teaching').length },
+        { key: 'defence', label: 'Defence (CDS / CAPF)', icon: <Swords size={14} />, count: exams.filter(e => e.category === 'defence').length },
     ];
 
     const renderExamCard = (exam: Exam) => {
@@ -80,18 +102,19 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                     <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '14px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                             <div style={{ 
-                                width: '44px', height: '44px', borderRadius: '10px', 
+                                width: '42px', height: '42px', borderRadius: '10px', 
                                 background: 'var(--bg-tertiary)', border: '1px solid var(--border)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px'
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                flexShrink: 0
                             }}>
-                                {exam.icon}
+                                {getExamIcon(exam)}
                             </div>
                             <div>
-                                <h2 style={{ fontSize: '18px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '2px', lineHeight: 1.2 }}>
+                                <h3 style={{ fontSize: '17px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '2px', lineHeight: 1.25 }}>
                                     {displayName}
-                                </h2>
+                                </h3>
                                 <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
-                                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--brand-orange)' }}>
+                                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--brand-orange, #EA580C)' }}>
                                         {exam.category}
                                     </span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>•</span>
@@ -104,9 +127,9 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
 
                         {exam.badge && (
                             <span style={{ 
-                                fontSize: '11px', fontWeight: 700, padding: '3px 8px', borderRadius: '6px',
-                                background: '#EFF6FF', color: '#1D4ED8',
-                                border: '1px solid #BFDBFE'
+                                fontSize: '10.5px', fontWeight: 700, padding: '2px 8px', borderRadius: '6px',
+                                background: 'rgba(37, 99, 235, 0.08)', color: '#2563EB',
+                                border: '1px solid rgba(37, 99, 235, 0.25)'
                             }}>
                                 {exam.badge}
                             </span>
@@ -114,7 +137,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                     </div>
 
                     {/* Description */}
-                    <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '16px', minHeight: '40px' }}>
+                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.55, marginBottom: '16px', minHeight: '40px' }}>
                         {displayDesc}
                     </p>
 
@@ -124,7 +147,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             <span 
                                 key={idx}
                                 style={{
-                                    fontSize: '11.5px', fontWeight: 600, padding: '3px 9px', borderRadius: '6px',
+                                    fontSize: '11px', fontWeight: 600, padding: '3px 8px', borderRadius: '6px',
                                     background: 'var(--bg-tertiary)', color: 'var(--text-secondary)',
                                     border: '1px solid var(--border)'
                                 }}
@@ -133,7 +156,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             </span>
                         ))}
                         {(displaySubjects || []).length > 4 && (
-                            <span style={{ fontSize: '11.5px', fontWeight: 600, padding: '3px 8px', borderRadius: '6px', color: 'var(--text-muted)' }}>
+                            <span style={{ fontSize: '11px', fontWeight: 600, padding: '3px 6px', borderRadius: '6px', color: 'var(--text-muted)' }}>
                                 +{(displaySubjects || []).length - 4} more
                             </span>
                         )}
@@ -146,7 +169,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         href={`/exams/${exam.id}?tab=about`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '10px 12px', borderRadius: '8px',
+                            padding: '9px 12px', borderRadius: '8px',
                             background: 'var(--bg-secondary)', color: 'var(--text-primary)',
                             border: '1px solid var(--border)', fontSize: '13px', fontWeight: 700,
                             textDecoration: 'none', transition: 'all 0.15s',
@@ -161,16 +184,16 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         href={`/exams/${exam.id}?tab=practice`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '10px 12px', borderRadius: '8px',
-                            background: '#2563EB', color: '#FFFFFF',
+                            padding: '9px 12px', borderRadius: '8px',
+                            background: '#1E1B4B', color: '#FFFFFF',
                             fontSize: '13px', fontWeight: 700, textDecoration: 'none',
-                            border: '1px solid #2563EB',
-                            boxShadow: '0 1px 2px rgba(0,0,0,0.05), inset 0 1px 0 rgba(255,255,255,0.18)',
+                            border: '1px solid #312E81',
+                            boxShadow: '0 1px 3px rgba(30, 27, 75, 0.25)',
                             transition: 'all 0.15s'
                         }}
                     >
                         <Zap size={14} color="#FFFFFF" />
-                        Practice
+                        Practice CBT
                     </Link>
                 </div>
             </div>
@@ -178,26 +201,16 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
     };
 
     return (
-        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '48px 0 80px' }}>
+        <div style={{ background: 'var(--bg-primary)', minHeight: '85vh', padding: '44px 0 80px' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
 
-                {/* Hero Header */}
-                <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-                    <div style={{ 
-                        display: 'inline-flex', alignItems: 'center', gap: '8px', 
-                        fontSize: '12px', fontWeight: 700, color: '#1D4ED8', 
-                        background: '#EFF6FF', border: '1px solid #BFDBFE', 
-                        borderRadius: '9999px', padding: '6px 16px', marginBottom: '14px',
-                        boxShadow: '0 1px 2px rgba(37, 99, 235, 0.08)'
-                    }}>
-                        <Award size={15} color="#2563EB" />
-                        COMPREHENSIVE EXAM CATALOG
-                    </div>
-                    <h1 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 900, letterSpacing: '-0.02em', color: 'var(--text-primary)', marginBottom: '12px' }}>
-                        Find Your Target Examination
+                {/* Clean Headline (No kicker above) */}
+                <div style={{ textAlign: 'center', marginBottom: '36px' }}>
+                    <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 900, letterSpacing: '-0.025em', color: 'var(--text-primary)', marginBottom: '10px' }}>
+                        Examination Catalog & PYQ Archives
                     </h1>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '16px', maxWidth: '720px', margin: '0 auto', lineHeight: 1.6 }}>
-                        Explore official exam patterns, career progression guides, salary structures, and practice syllabus-accurate mock tests.
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '15.5px', maxWidth: '720px', margin: '0 auto', lineHeight: 1.6 }}>
+                        Explore official exam patterns, syllabus-accurate mock tests, and standard computer-based test simulations.
                     </p>
                 </div>
 
@@ -215,98 +228,113 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                             return (
                                 <button
                                     key={f.key}
+                                    type="button"
                                     onClick={() => setFilter(f.key)}
                                     style={{
-                                        padding: '7px 16px', borderRadius: '8px', cursor: 'pointer',
-                                        fontWeight: 600, fontSize: '13px', fontFamily: 'inherit',
-                                        background: isActive ? '#2563EB' : 'var(--bg-secondary)',
+                                        padding: '7px 14px', borderRadius: '8px', cursor: 'pointer',
+                                        fontWeight: 700, fontSize: '12.5px', fontFamily: 'inherit',
+                                        background: isActive ? '#1E1B4B' : 'var(--bg-secondary)',
                                         color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
-                                        border: isActive ? '1px solid #2563EB' : '1px solid var(--border)',
-                                        boxShadow: isActive ? '0 1px 3px rgba(37,99,235,0.2)' : 'var(--shadow-sm)',
+                                        border: isActive ? '1px solid #312E81' : '1px solid var(--border)',
+                                        boxShadow: isActive ? '0 1px 3px rgba(30, 27, 75, 0.25)' : 'var(--shadow-sm)',
                                         transition: 'all 0.15s ease',
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        gap: '6px'
                                     }}
                                 >
-                                    {f.label}
+                                    {f.icon}
+                                    <span>{f.label}</span>
+                                    <span style={{
+                                        fontSize: '11px',
+                                        fontWeight: 800,
+                                        opacity: isActive ? 0.9 : 0.6,
+                                        padding: '1px 5px',
+                                        borderRadius: '4px',
+                                        background: isActive ? 'rgba(255, 255, 255, 0.15)' : 'var(--border)'
+                                    }}>
+                                        {f.count}
+                                    </span>
                                 </button>
                             );
                         })}
                     </div>
 
                     {/* Search Input */}
-                    <div style={{ position: 'relative', width: '100%', maxWidth: '320px' }}>
-                        <span style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
-                            <Search size={16} />
+                    <div style={{ position: 'relative', width: '100%', maxWidth: '300px' }}>
+                        <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
+                            <Search size={15} />
                         </span>
                         <input
                             type="text"
-                            placeholder="Search by exam, post, or topic..."
+                            placeholder="Search by exam or subject..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="input"
-                            style={{ paddingLeft: '40px', height: '42px', width: '100%', borderRadius: '6px', fontSize: '13.5px' }}
+                            style={{ paddingLeft: '36px', height: '38px', width: '100%', borderRadius: '6px', fontSize: '13px' }}
                         />
                     </div>
                 </div>
 
                 {/* Main Content Layout */}
                 {totalFiltered === 0 ? (
-                    <div className="card" style={{ textAlign: 'center', padding: '64px 24px', borderRadius: '18px' }}>
-                        <div style={{ fontSize: '48px', marginBottom: '16px' }}>🔍</div>
-                        <h3 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}>No exams found</h3>
-                        <p style={{ fontSize: '14px', color: 'var(--text-secondary)' }}>Try adjusting your search or category filter.</p>
+                    <div className="card" style={{ textAlign: 'center', padding: '56px 24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                        <Inbox size={40} style={{ margin: '0 auto 12px', opacity: 0.4 }} />
+                        <h3 style={{ fontSize: '17px', fontWeight: 800, marginBottom: '6px' }}>No examinations found</h3>
+                        <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', margin: 0 }}>Try adjusting your search query or category filter.</p>
                     </div>
                 ) : (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '44px' }}>
                         
-                        {/* 1. NATIONAL & CENTRAL EXAMINATIONS (FIRST) */}
+                        {/* 1. NATIONAL & CENTRAL EXAMINATIONS */}
                         {filteredNational.length > 0 && (
                             <div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>
                                     <div style={{ 
-                                        width: '36px', height: '36px', borderRadius: '10px', 
-                                        background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.25)',
+                                        width: '34px', height: '34px', borderRadius: '8px', 
+                                        background: 'rgba(37, 99, 235, 0.08)', border: '1px solid rgba(37, 99, 235, 0.2)',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center' 
                                     }}>
-                                        <Landmark size={18} color="#3B82F6" />
+                                        <Landmark size={17} color="#2563EB" />
                                     </div>
                                     <div>
-                                        <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
+                                        <h2 style={{ fontSize: '19px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                             National & Central Government Examinations
                                         </h2>
-                                        <div style={{ fontSize: '12.5px', color: 'var(--text-muted)' }}>
+                                        <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
                                             Premier civil, defence, and central services across India ({filteredNational.length} Exams)
                                         </div>
                                     </div>
                                 </div>
 
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '20px' }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '18px' }}>
                                     {filteredNational.map(renderExamCard)}
                                 </div>
                             </div>
                         )}
 
-                        {/* 2. KARNATAKA STATE GOVERNMENT EXAMINATIONS (SECOND) */}
+                        {/* 2. KARNATAKA STATE GOVERNMENT EXAMINATIONS */}
                         {filteredKarnataka.length > 0 && (
                             <div>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>
                                     <div style={{ 
-                                        width: '36px', height: '36px', borderRadius: '10px', 
-                                        background: 'rgba(242, 107, 29, 0.1)', border: '1px solid rgba(242, 107, 29, 0.25)',
+                                        width: '34px', height: '34px', borderRadius: '8px', 
+                                        background: 'rgba(234, 88, 12, 0.08)', border: '1px solid rgba(234, 88, 12, 0.2)',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center' 
                                     }}>
-                                        <MapPin size={18} color="var(--brand-orange)" />
+                                        <MapPin size={17} color="var(--brand-orange, #EA580C)" />
                                     </div>
                                     <div>
-                                        <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
+                                        <h2 style={{ fontSize: '19px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                             Karnataka State Government Examinations
                                         </h2>
-                                        <div style={{ fontSize: '12.5px', color: 'var(--text-muted)' }}>
+                                        <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
                                             State administrative, revenue, police, teaching, and board examinations ({filteredKarnataka.length} Exams)
                                         </div>
                                     </div>
                                 </div>
 
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '20px' }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '18px' }}>
                                     {filteredKarnataka.map(renderExamCard)}
                                 </div>
                             </div>

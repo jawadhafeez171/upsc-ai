@@ -2,9 +2,7 @@
 import { useAppStore } from '@/lib/store';
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
-import { Loader2 } from 'lucide-react';
-
-const RANK_EMOJI = ['🥇', '🥈', '🥉'];
+import { Loader2, Trophy, Medal, Award, Crown } from 'lucide-react';
 
 export default function LeaderboardPage() {
     const { user } = useAppStore();
@@ -30,21 +28,39 @@ export default function LeaderboardPage() {
 
     if (loading) return (
         <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: 'var(--brand-orange)' }} />
-            Loading leaderboard...
+            <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: '#2563EB' }} />
+            <span>Loading leaderboard standings...</span>
         </div>
     );
 
     const top3 = board.slice(0, 3);
 
     return (
-        <div style={{ background: 'transparent', minHeight: '85vh', padding: '40px 0' }}>
-            <div style={{ maxWidth: '680px', margin: '0 auto', padding: '0 24px' }}>
+        <div style={{ background: 'transparent', minHeight: '85vh', padding: '36px 0 60px' }}>
+            <div style={{ maxWidth: '720px', margin: '0 auto', padding: '0 24px' }}>
                 
-                {/* Header */}
+                {/* Header (No emoji in heading) */}
                 <div style={{ textAlign: 'center', marginBottom: '36px' }}>
-                    <h1 style={{ fontSize: '28px', fontWeight: 800, marginBottom: '6px' }}>🏆 Leaderboard</h1>
-                    <p style={{ color: 'var(--text-secondary)', fontSize: '15px' }}>See how you stack up against other aspirants.</p>
+                    <div style={{
+                        width: '44px',
+                        height: '44px',
+                        borderRadius: '12px',
+                        background: '#1E1B4B',
+                        border: '1px solid #312E81',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        margin: '0 auto 12px',
+                        boxShadow: '0 2px 8px rgba(30, 27, 75, 0.25)'
+                    }}>
+                        <Trophy size={22} color="#F59E0B" />
+                    </div>
+                    <h1 style={{ fontSize: '28px', fontWeight: 800, marginBottom: '6px', color: 'var(--text-primary)' }}>
+                        Candidate Standing & Leaderboard
+                    </h1>
+                    <p style={{ color: 'var(--text-secondary)', fontSize: '14.5px', margin: 0 }}>
+                        Compare your practice consistency and accuracy against fellow aspirants.
+                    </p>
                 </div>
 
                 {/* Podium */}
@@ -52,19 +68,32 @@ export default function LeaderboardPage() {
                     <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'center', gap: '16px', marginBottom: '36px' }}>
                         {[top3[1], top3[0], top3[2]].map((entry, i) => {
                             const isYou = user && entry.user_id === user.id;
-                            const heights = ['100px', '135px', '80px'];
-                            const podiumBgs = ['rgba(2, 132, 199, 0.15)', 'rgba(37, 99, 235, 0.25)', 'rgba(225, 29, 72, 0.15)'];
-                            const borders = ['1px solid rgba(2, 132, 199, 0.4)', '1px solid rgba(37, 99, 235, 0.5)', '1px solid rgba(225, 29, 72, 0.4)'];
+                            const heights = ['90px', '125px', '75px'];
+                            const podiumBgs = ['rgba(148, 163, 184, 0.08)', 'rgba(37, 99, 235, 0.1)', 'rgba(217, 119, 6, 0.08)'];
+                            const borders = ['1px solid #CBD5E1', '1.5px solid #2563EB', '1px solid #FDE68A'];
+                            const rankIcons = [
+                                <Medal key="2" size={20} color="#94A3B8" />,
+                                <Crown key="1" size={24} color="#D97706" />,
+                                <Award key="3" size={20} color="#B45309" />
+                            ];
+                            const podiumIdx = i === 1 ? 0 : i === 0 ? 1 : 2;
+
                             return (
-                                <div key={entry.user_id} style={{ textAlign: 'center', flex: 1, maxWidth: '150px' }}>
-                                    <div style={{ fontSize: '24px', marginBottom: '6px' }}>{RANK_EMOJI[i === 1 ? 0 : i === 0 ? 1 : 2]}</div>
-                                    <div style={{ fontWeight: 800, fontSize: '14px', color: isYou ? 'var(--brand-orange)' : 'var(--text-primary)', marginBottom: '2px' }}>{entry.name.split(' ')[0]}</div>
-                                    <div style={{ fontSize: '12px', color: 'var(--brand-gold)', fontWeight: 700, marginBottom: '8px' }}>{entry.xp} XP</div>
+                                <div key={entry.user_id} style={{ textAlign: 'center', flex: 1, maxWidth: '160px' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '6px' }}>
+                                        {rankIcons[podiumIdx]}
+                                    </div>
+                                    <div style={{ fontWeight: 800, fontSize: '13.5px', color: isYou ? '#2563EB' : 'var(--text-primary)', marginBottom: '2px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                        {entry.name.split(' ')[0]}
+                                    </div>
+                                    <div style={{ fontSize: '11.5px', color: '#D97706', fontWeight: 800, fontFamily: 'var(--font-mono, monospace)', marginBottom: '8px' }}>
+                                        {entry.xp} XP
+                                    </div>
                                     <div style={{
                                         height: heights[i], background: podiumBgs[i], border: borders[i],
-                                        borderRadius: '14px 14px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        fontSize: '22px', fontWeight: 800, color: 'var(--text-primary)',
-                                        boxShadow: i === 1 ? '0 0 24px rgba(37,99,235,0.3)' : 'none',
+                                        borderRadius: '12px 12px 0 0', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        fontSize: '20px', fontWeight: 900, color: 'var(--text-primary)',
+                                        boxShadow: i === 1 ? '0 4px 16px rgba(37,99,235,0.2)' : 'none',
                                     }}>
                                         {entry.name[0]}
                                     </div>
@@ -75,34 +104,42 @@ export default function LeaderboardPage() {
                 )}
 
                 {/* Full list */}
-                <div className="card" style={{ overflow: 'hidden', borderRadius: '16px' }}>
+                <div className="card" style={{ overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--border)' }}>
                     {board.map((entry, idx) => {
                         const isYou = user && entry.user_id === user.id;
                         return (
                             <div key={entry.user_id} style={{
-                                display: 'flex', alignItems: 'center', gap: '14px', padding: '14px 20px',
+                                display: 'flex', alignItems: 'center', gap: '14px', padding: '12px 18px',
                                 borderBottom: idx < board.length - 1 ? '1px solid var(--border)' : 'none',
                                 background: isYou ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
                                 transition: 'background 0.15s ease',
                             }}>
-                                <div style={{ width: '28px', textAlign: 'center', fontWeight: 800, fontSize: '13px', color: entry.rank <= 3 ? 'var(--brand-gold)' : 'var(--text-muted)' }}>
-                                    {entry.rank <= 3 ? RANK_EMOJI[entry.rank - 1] : `#${entry.rank}`}
+                                <div style={{ width: '28px', textAlign: 'center', fontWeight: 800, fontSize: '12.5px', color: entry.rank <= 3 ? '#D97706' : 'var(--text-muted)', fontFamily: 'var(--font-mono, monospace)' }}>
+                                    #{entry.rank}
                                 </div>
                                 <div style={{
-                                    width: 36, height: 36, borderRadius: '10px',
-                                    background: isYou ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
+                                    width: 34, height: 34, borderRadius: '8px',
+                                    background: isYou ? '#1E1B4B' : 'var(--bg-tertiary)',
                                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                    fontWeight: 800, fontSize: '14px', flexShrink: 0,
-                                    color: isYou ? 'white' : 'var(--text-primary)',
-                                    border: '1px solid var(--border)',
-                                }}>{entry.name[0]}</div>
-                                <div style={{ flex: 1 }}>
-                                    <div style={{ fontWeight: 700, fontSize: '14px', color: isYou ? 'var(--brand-orange)' : 'var(--text-primary)' }}>{entry.name}</div>
-                                    <div style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>{entry.level}</div>
+                                    fontWeight: 800, fontSize: '13px', flexShrink: 0,
+                                    color: isYou ? '#FFFFFF' : 'var(--text-primary)',
+                                    border: isYou ? '1px solid #312E81' : '1px solid var(--border)',
+                                }}>
+                                    {entry.name[0]}
+                                </div>
+                                <div style={{ flex: 1, minWidth: 0 }}>
+                                    <div style={{ fontWeight: 700, fontSize: '13.5px', color: isYou ? '#2563EB' : 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                        {entry.name}
+                                    </div>
+                                    <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', fontWeight: 500 }}>
+                                        {entry.level} Tier
+                                    </div>
                                 </div>
                                 <div style={{ textAlign: 'right' }}>
-                                    <div style={{ fontWeight: 800, fontSize: '15px' }}>{entry.xp}</div>
-                                    <div style={{ fontSize: '10px', color: 'var(--text-muted)' }}>XP</div>
+                                    <div style={{ fontWeight: 800, fontSize: '14px', fontFamily: 'var(--font-mono, monospace)', color: 'var(--text-primary)' }}>
+                                        {entry.xp}
+                                    </div>
+                                    <div style={{ fontSize: '10px', color: 'var(--text-muted)', fontWeight: 700 }}>XP</div>
                                 </div>
                             </div>
                         );

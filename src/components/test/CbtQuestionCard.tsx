@@ -89,12 +89,12 @@ export default function CbtQuestionCard({
                 justifyContent: 'space-between',
                 paddingBottom: '12px',
                 marginBottom: '16px',
-                borderBottom: '1px solid #E5E7EB',
+                borderBottom: '1px solid var(--border)',
                 flexWrap: 'wrap',
                 gap: '8px'
             }}>
-                <div style={{ fontSize: '11px', fontWeight: 800, color: '#374151', letterSpacing: '0.04em' }}>
-                    ■ PRELIMS MOCK BENCHMARK • CODE D
+                <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-secondary)', letterSpacing: '0.04em' }}>
+                    OFFICIAL EXAMINATION STANDARDS • CODE D
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -105,14 +105,15 @@ export default function CbtQuestionCard({
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 gap: '5px',
-                                padding: '3px 8px',
-                                borderRadius: '4px',
-                                border: '1px solid #1E1E1E',
-                                background: '#F8FAF6',
-                                fontSize: '11px',
-                                fontWeight: 800,
-                                color: '#166534',
-                                cursor: 'pointer'
+                                padding: '4px 10px',
+                                borderRadius: '6px',
+                                border: '1px solid var(--border)',
+                                background: 'var(--bg-card)',
+                                fontSize: '11.5px',
+                                fontWeight: 700,
+                                color: 'var(--brand-blue)',
+                                cursor: 'pointer',
+                                transition: 'all 0.15s ease'
                             }}
                         >
                             <span>文 {secondaryLangLabel}</span>
@@ -127,7 +128,7 @@ export default function CbtQuestionCard({
                             gap: '4px',
                             background: 'transparent',
                             border: 'none',
-                            color: '#6B7280',
+                            color: 'var(--text-muted)',
                             fontSize: '11.5px',
                             fontWeight: 600,
                             cursor: 'pointer'
@@ -155,22 +156,22 @@ export default function CbtQuestionCard({
 
             {/* Question Number Badge & Statement Area */}
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '14px', marginBottom: '20px' }}>
-                {/* Yellow Question Number Badge */}
+                {/* Sovereign Midnight Indigo Question Number Badge */}
                 <div style={{
                     width: '36px',
                     height: '36px',
-                    background: '#FACC15',
-                    color: '#000000',
-                    border: '1.5px solid #1E1E1E',
-                    borderRadius: '4px',
+                    background: 'var(--brand-indigo, #1E1B4B)',
+                    color: '#FFFFFF',
+                    border: '1px solid #312E81',
+                    borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '16px',
-                    fontWeight: 900,
+                    fontSize: '15px',
+                    fontWeight: 800,
                     flexShrink: 0,
                     marginTop: '2px',
-                    boxShadow: '0 1px 3px rgba(0,0,0,0.1)'
+                    boxShadow: '0 2px 6px rgba(30, 27, 75, 0.2)'
                 }}>
                     {questionNumber}
                 </div>
@@ -309,13 +310,13 @@ export default function CbtQuestionCard({
                                             </div>
                                             {isSelected && (
                                                 <span style={{
-                                                    background: '#000000',
+                                                    background: 'var(--brand-blue, #2563EB)',
                                                     color: '#FFFFFF',
                                                     fontSize: '9.5px',
-                                                    fontWeight: 900,
-                                                    padding: '1px 6px',
-                                                    borderRadius: '3px',
-                                                    letterSpacing: '0.06em'
+                                                    fontWeight: 800,
+                                                    padding: '2px 7px',
+                                                    borderRadius: '4px',
+                                                    letterSpacing: '0.04em'
                                                 }}>
                                                     SELECTED
                                                 </span>

@@ -20,16 +20,16 @@ export default function CandidateInfoCard({
         <div className="cbt-box" style={{ padding: '12px 14px', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '12px' }}>
             {/* Initials Avatar Badge */}
             <div style={{
-                width: '42px',
-                height: '42px',
-                background: '#111827',
+                width: '40px',
+                height: '40px',
+                background: '#1E1B4B',
                 color: '#FFFFFF',
-                borderRadius: '4px',
-                border: '1.5px solid #111827',
+                borderRadius: '8px',
+                border: '1.5px solid #312E81',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '15px',
+                fontSize: '14px',
                 fontWeight: 900,
                 letterSpacing: '0.05em',
                 flexShrink: 0
@@ -40,29 +40,29 @@ export default function CandidateInfoCard({
             {/* Candidate Details */}
             <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '6px' }}>
-                    <div style={{ fontSize: '13px', fontWeight: 800, color: '#111827', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    <div style={{ fontSize: '13px', fontWeight: 800, color: 'var(--text-primary, #0F172A)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                         {name || 'Aspirant Candidate'}
                     </div>
                     <span style={{
-                        background: '#DCFCE7',
-                        color: '#15803D',
-                        border: '1px solid #86EFAC',
+                        background: 'rgba(16, 185, 129, 0.08)',
+                        color: '#059669',
+                        border: '1px solid rgba(16, 185, 129, 0.25)',
                         fontSize: '9.5px',
                         fontWeight: 900,
-                        padding: '1px 5px',
-                        borderRadius: '3px',
+                        padding: '1px 6px',
+                        borderRadius: '4px',
                         letterSpacing: '0.04em'
                     }}>
                         LIVE
                     </span>
                 </div>
 
-                <div style={{ fontSize: '10.5px', color: '#6B7280', fontFamily: 'var(--cbt-font-mono)', marginTop: '1px' }}>
+                <div style={{ fontSize: '10.5px', color: 'var(--text-muted, #64748B)', fontFamily: 'var(--cbt-font-mono)', marginTop: '2px' }}>
                     ID: {candidateId}
                 </div>
 
                 <div style={{ fontSize: '10.5px', fontWeight: 700, color: '#B45309', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px' }}>
-                    <span style={{ width: '6px', height: '6px', background: '#D97706', display: 'inline-block' }} />
+                    <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#D97706', display: 'inline-block' }} />
                     <span style={{ textTransform: 'uppercase' }}>TARGET: {targetExam}</span>
                 </div>
             </div>

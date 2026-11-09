@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useAppStore } from '@/lib/store';
-import { BookOpen, Newspaper, Trophy, LogIn, LogOut, Menu, X, Sun, Moon, LayoutDashboard } from 'lucide-react';
+import { BookOpen, Newspaper, Trophy, LogIn, LogOut, Menu, X, Sun, Moon, LayoutDashboard, Flame } from 'lucide-react';
 import { Language } from '@/types';
 import { t } from '@/lib/i18n';
 import { useTheme } from '@/components/layout/ThemeProvider';
 import RotatingTagline from './RotatingTagline';
 
 const NAV_LINKS = [
-    { href: '/', labelKey: 'home', icon: BookOpen, emoji: '🏠' },
-    { href: '/exams', labelKey: 'exams', icon: BookOpen, emoji: '📚' },
-    { href: '/current-affairs', labelKey: 'currentAffairs', icon: Newspaper, emoji: '📰' },
-    { href: '/leaderboard', labelKey: 'leaderboard', icon: Trophy, emoji: '🏆' },
+    { href: '/', labelKey: 'home', icon: BookOpen },
+    { href: '/exams', labelKey: 'exams', icon: BookOpen },
+    { href: '/current-affairs', labelKey: 'currentAffairs', icon: Newspaper },
+    { href: '/leaderboard', labelKey: 'leaderboard', icon: Trophy },
 ];
 
 const LANGS: { code: Language; label: string }[] = [
@@ -124,7 +124,7 @@ export default function Navbar() {
                                     borderRadius: '20px', padding: '3px 8px', fontSize: '11.5px', fontWeight: 700,
                                     color: 'var(--brand-gold)',
                                 }} className="hidden-mobile">
-                                    <span>🔥</span> <span>{user.streak || 3}d</span>
+                                    <Flame size={12} color="#EA580C" /> <span>{user.streak || 3}d</span>
                                 </div>
 
                                 <div style={{
@@ -168,19 +168,22 @@ export default function Navbar() {
                     padding: '12px', display: 'flex', flexDirection: 'column', gap: '4px',
                     boxShadow: 'var(--shadow-card-hover)'
                 }}>
-                    {NAV_LINKS.map((link) => (
-                        <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
-                            padding: '10px 14px', borderRadius: '8px', textDecoration: 'none',
-                            color: pathname === link.href ? '#FFFFFF' : 'var(--text-primary)',
-                            fontWeight: 600, fontSize: '13.5px',
-                            background: pathname === link.href ? '#2563EB' : 'transparent',
-                            display: 'flex', alignItems: 'center', gap: '10px',
-                            transition: 'all 0.15s ease'
-                        }}>
-                            <span>{link.emoji}</span>
-                            {t(link.labelKey, language as Language)}
-                        </Link>
-                    ))}
+                    {NAV_LINKS.map((link) => {
+                        const IconComp = link.icon;
+                        return (
+                            <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)} style={{
+                                padding: '10px 14px', borderRadius: '8px', textDecoration: 'none',
+                                color: pathname === link.href ? '#FFFFFF' : 'var(--text-primary)',
+                                fontWeight: 600, fontSize: '13.5px',
+                                background: pathname === link.href ? '#2563EB' : 'transparent',
+                                display: 'flex', alignItems: 'center', gap: '10px',
+                                transition: 'all 0.15s ease'
+                            }}>
+                                <IconComp size={16} />
+                                <span>{t(link.labelKey, language as Language)}</span>
+                            </Link>
+                        );
+                    })}
 
                     <div style={{ borderTop: '1px solid var(--border)', paddingTop: '10px', marginTop: '4px' }}>
                         <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)', paddingLeft: '14px', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
