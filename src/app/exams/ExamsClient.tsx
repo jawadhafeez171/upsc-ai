@@ -21,12 +21,13 @@ import { Exam } from '@/types';
 type CategoryFilter = 'all' | 'national' | 'karnataka' | 'police' | 'teaching' | 'defence';
 
 function getExamIcon(exam: Exam) {
-    if (exam.id.includes('upsc-cse')) return <Landmark size={22} color="#2563EB" />;
-    if (exam.id.includes('capf') || exam.id.includes('cds') || exam.category === 'defence') return <Swords size={22} color="#0D5D56" />;
-    if (exam.id.includes('psi') || exam.id.includes('pc') || exam.id.includes('police')) return <ShieldCheck size={22} color="#1E3A8A" />;
-    if (exam.category === 'teaching' || exam.id.includes('tet') || exam.id.includes('kset')) return <GraduationCap size={22} color="#7C3AED" />;
-    if (exam.category === 'karnataka' || exam.id.includes('kpsc') || exam.id.includes('kas') || exam.id.includes('kea')) return <MapPin size={22} color="#EA580C" />;
-    return <BookOpen size={22} color="#2563EB" />;
+    const c = 'var(--text-secondary)';
+    if (exam.id.includes('upsc-cse')) return <Landmark size={22} color={c} />;
+    if (exam.id.includes('capf') || exam.id.includes('cds') || exam.category === 'defence') return <Swords size={22} color={c} />;
+    if (exam.id.includes('psi') || exam.id.includes('pc') || exam.id.includes('police')) return <ShieldCheck size={22} color={c} />;
+    if (exam.category === 'teaching' || exam.id.includes('tet') || exam.id.includes('kset')) return <GraduationCap size={22} color={c} />;
+    if (exam.category === 'karnataka' || exam.id.includes('kpsc') || exam.id.includes('kas') || exam.id.includes('kea')) return <MapPin size={22} color={c} />;
+    return <BookOpen size={22} color={c} />;
 }
 
 export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) {
@@ -87,7 +88,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
         return (
             <div 
                 key={exam.id} 
-                className="card"
+                className="card card-static"
                 style={{
                     borderRadius: '12px', padding: '24px',
                     display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
@@ -114,7 +115,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                                     {displayName}
                                 </h3>
                                 <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
-                                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--brand-orange, #EA580C)' }}>
+                                    <span style={{ fontSize: '11px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--brand-orange-text)' }}>
                                         {exam.category}
                                     </span>
                                     <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>•</span>
@@ -127,9 +128,9 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
 
                         {exam.badge && (
                             <span style={{ 
-                                fontSize: '10.5px', fontWeight: 700, padding: '2px 8px', borderRadius: '6px',
-                                background: 'rgba(37, 99, 235, 0.08)', color: '#2563EB',
-                                border: '1px solid rgba(37, 99, 235, 0.25)'
+                                fontSize: '11px', fontWeight: 700, padding: '2px 8px', borderRadius: '6px',
+                                background: 'var(--bg-tertiary)', color: 'var(--text-secondary)',
+                                border: '1px solid var(--border)', whiteSpace: 'nowrap', flexShrink: 0, marginLeft: '8px'
                             }}>
                                 {exam.badge}
                             </span>
@@ -143,21 +144,23 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
 
                     {/* Syllabus Topic Chips */}
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
-                        {(displaySubjects || []).slice(0, 4).map((sub, idx) => (
-                            <span 
+                        {(displaySubjects || []).slice(0, 3).map((sub, idx) => (
+                            <span
                                 key={idx}
+                                title={sub}
                                 style={{
-                                    fontSize: '11px', fontWeight: 600, padding: '3px 8px', borderRadius: '6px',
+                                    fontSize: '11.5px', fontWeight: 600, padding: '3px 8px', borderRadius: '6px',
                                     background: 'var(--bg-tertiary)', color: 'var(--text-secondary)',
-                                    border: '1px solid var(--border)'
+                                    border: '1px solid var(--border)',
+                                    maxWidth: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'
                                 }}
                             >
                                 {sub}
                             </span>
                         ))}
-                        {(displaySubjects || []).length > 4 && (
-                            <span style={{ fontSize: '11px', fontWeight: 600, padding: '3px 6px', borderRadius: '6px', color: 'var(--text-muted)' }}>
-                                +{(displaySubjects || []).length - 4} more
+                        {(displaySubjects || []).length > 3 && (
+                            <span style={{ fontSize: '11.5px', fontWeight: 600, padding: '3px 6px', borderRadius: '6px', color: 'var(--text-muted)' }}>
+                                +{(displaySubjects || []).length - 3} more
                             </span>
                         )}
                     </div>
@@ -169,14 +172,14 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         href={`/exams/${exam.id}?tab=about`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '9px 12px', borderRadius: '8px',
+                            padding: '9px 12px', minHeight: '40px', borderRadius: '8px',
                             background: 'var(--bg-secondary)', color: 'var(--text-primary)',
                             border: '1px solid var(--border)', fontSize: '13px', fontWeight: 700,
                             textDecoration: 'none', transition: 'all 0.15s',
                             boxShadow: 'var(--shadow-sm)'
                         }}
                     >
-                        <Info size={14} color="#2563EB" />
+                        <Info size={14} color="var(--link-text)" />
                         About Exam
                     </Link>
 
@@ -184,7 +187,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         href={`/exams/${exam.id}?tab=practice`}
                         style={{
                             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
-                            padding: '9px 12px', borderRadius: '8px',
+                            padding: '9px 12px', minHeight: '40px', borderRadius: '8px',
                             background: '#1E1B4B', color: '#FFFFFF',
                             fontSize: '13px', fontWeight: 700, textDecoration: 'none',
                             border: '1px solid #312E81',
@@ -215,20 +218,20 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 </div>
 
                 {/* Filter & Search Controls */}
-                <div style={{ 
-                    display: 'flex', justifyContent: 'space-between', gap: '16px', 
-                    marginBottom: '36px', flexWrap: 'wrap', alignItems: 'center',
+                <div className="catalog-controls" style={{
+                    marginBottom: '36px',
                     background: 'var(--bg-card)', padding: '16px 20px', borderRadius: '12px',
                     border: '1px solid var(--border)', boxShadow: 'var(--shadow-card)'
                 }}>
                     {/* Category Filter Pills */}
-                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                    <div className="catalog-filters" role="group" aria-label="Filter exams by category">
                         {filters.map((f) => {
                             const isActive = filter === f.key;
                             return (
                                 <button
                                     key={f.key}
                                     type="button"
+                                    aria-pressed={isActive}
                                     onClick={() => setFilter(f.key)}
                                     style={{
                                         padding: '7px 14px', borderRadius: '8px', cursor: 'pointer',
@@ -261,13 +264,15 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                     </div>
 
                     {/* Search Input */}
-                    <div style={{ position: 'relative', width: '100%', maxWidth: '300px' }}>
+                    <div className="catalog-search">
                         <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)', display: 'flex', alignItems: 'center' }}>
                             <Search size={15} />
                         </span>
                         <input
-                            type="text"
-                            placeholder="Search by exam or subject..."
+                            type="search"
+                            aria-label="Search exams by name or subject"
+                            placeholder="Search by exam or subject…"
+
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="input"
@@ -278,10 +283,11 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
 
                 {/* Main Content Layout */}
                 {totalFiltered === 0 ? (
-                    <div className="card" style={{ textAlign: 'center', padding: '56px 24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                    <div className="card card-static" style={{ textAlign: 'center', padding: '56px 24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                         <Inbox size={40} style={{ margin: '0 auto 12px', opacity: 0.4 }} />
                         <h3 style={{ fontSize: '17px', fontWeight: 800, marginBottom: '6px' }}>No examinations found</h3>
-                        <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', margin: 0 }}>Try adjusting your search query or category filter.</p>
+                        <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', margin: '0 0 16px' }}>Try a different search or category.</p>
+                        <button type="button" className="btn btn-ghost" onClick={() => { setSearchQuery(''); setFilter('all'); }} style={{ margin: '0 auto' }}>Clear filters</button>
                     </div>
                 ) : (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '44px' }}>

@@ -696,6 +696,26 @@ body:has(.cbt-terminal-wrapper) footer {
 }
 .footer-link:hover { color: var(--text-secondary); }
 
+/* Static cards (containers that are not themselves links) should not lift on hover */
+.card.card-static:hover { transform: none; box-shadow: var(--shadow-card); border-color: var(--border); }
+
+/* Exam catalog controls */
+.catalog-controls { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
+.catalog-filters { display: flex; gap: 8px; flex-wrap: wrap; min-width: 0; }
+.catalog-filters button:focus-visible, .catalog-search input:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 2px; }
+.catalog-search { position: relative; flex: 1 1 260px; max-width: 360px; }
+@media (max-width: 720px) {
+  .catalog-filters {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    margin: 0 -20px; padding: 2px 20px;
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent);
+  }
+  .catalog-filters::-webkit-scrollbar { display: none; }
+  .catalog-filters button { flex: 0 0 auto; min-height: 40px; }
+  .catalog-search { max-width: none; flex-basis: 100%; }
+  .catalog-search input { height: 44px !important; font-size: 16px !important; }
+}
+
 /* Divider */
 .divider { height: 1px; background: var(--border); }
 
