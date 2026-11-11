@@ -9,7 +9,7 @@ export const EXAMS: Exam[] = [
         description: 'Civil Services Examination — IAS, IPS, IFS & Group A Central Services',
         languages: ['en', 'hi'],
         negative_marking: 0.33,
-        subjects: ['History', 'Art, Culture & Heritage', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'Geography & Earth Systems', 'Environment, Ecology & Disaster Management', 'Science, Technology & Defence', 'International Relations & Global Institutions', 'Indian Society & Social Justice'],
+        subjects: ['Ancient History', 'Medieval History', 'Modern History', 'Art and Culture', 'Polity', 'Economics', 'Geography', 'Environment', 'Science & Technology', 'IR & Current Affairs', 'General Awareness'],
         icon: '🏛️',
         color: '#082C54',
         badge: 'Premier'
@@ -121,8 +121,8 @@ export const EXAMS: Exam[] = [
         description_kn: 'ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ — ಕಂದಾಯ ಇಲಾಖೆ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆ',
         languages: ['en', 'kn'],
         negative_marking: 0.25,
-        subjects: ['General Knowledge', 'General Kannada', 'General English', 'Computer Knowledge', 'Arithmetic & Reasoning'],
-        subjects_kn: ['ಸಾಮಾನ್ಯ ಜ್ಞಾನ & ಪ್ರಚಲಿತ ಘಟನೆಗಳು', 'ಸಾಮಾನ್ಯ ಕನ್ನಡ ವ್ಯಾಕರಣ', 'ಸಾಮಾನ್ಯ ಇಂಗ್ಲಿಷ್', 'ಗಣಕಯಂತ್ರ ಜ್ಞಾನ (Computer)', 'ಅಂಕಗಣಿತ ಮತ್ತು ರೀಸನಿಂಗ್'],
+        subjects: ['Language Proficiency, Grammar & Communication (General Kannada & General English)', 'Communication Paper (General Kannada, General English & Computer Knowledge)', 'History', 'Science, Technology & Defence', 'Indian Polity, Constitution & Governance', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'Indian Economy & Development', 'Geography & Earth Systems', 'Art, Culture & Heritage', 'Environment, Ecology & Disaster Management', 'General Knowledge (Miscellaneous)'],
+        subjects_kn: ['ಭಾಷಾ ಪ್ರಾವೀಣ್ಯತೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ & ಇಂಗ್ಲಿಷ್)', 'ಸಂವಹನ ಪತ್ರಿಕೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ, ಇಂಗ್ಲಿಷ್ & ಕಂಪ್ಯೂಟರ್)', 'ಇತಿಹಾಸ', 'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ', 'ಸಾಮಾನ್ಯ ಜ್ಞಾನ'],
         icon: '🌾',
         color: '#0D9488',
         badge: 'Hot'
@@ -237,8 +237,8 @@ export const EXAMS: Exam[] = [
         description_kn: 'ಬೋಧನಾ ಮತ್ತು ಸಂಶೋಧನಾ ಅಭಿರುಚಿ — ಸಾಮಾನ್ಯ ಪತ್ರಿಕೆ ೧',
         languages: ['en', 'kn'],
         negative_marking: 0,
-        subjects: ['Teaching Aptitude', 'Research Aptitude', 'Reading Comprehension', 'Communication & ICT', 'Mathematical Reasoning & DI', 'People & Environment', 'Higher Education System'],
-        subjects_kn: ['ಬೋಧನಾ ಅಭಿರುಚಿ', 'ಸಂಶೋಧನಾ ಅಭಿರುಚಿ', 'ಗ್ರಹಣ ಸಾಮರ್ಥ್ಯ', 'ಸಂವಹನ & ICT', 'ಗಣಿತೀಯ ತರ್ಕ & DI', 'ಜನರು ಮತ್ತು ಪರಿಸರ', 'ಉನ್ನತ ಶಿಕ್ಷಣ ವ್ಯವಸ್ಥೆ'],
+        subjects: ['General Mental Ability, Quantitative Aptitude & Comprehension', 'Educational Psychology, Child Development & Teaching Pedagogy', 'Indian Society & Social Justice', 'Environment, Ecology & Disaster Management'],
+        subjects_kn: ['ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ', 'ಶೈಕ್ಷಣಿಕ ಮನೋವಿಜ್ಞಾನ ಮತ್ತು ಬೋಧನಾಶಾಸ್ತ್ರ', 'ಭಾರತೀಯ ಸಮಾಜ ಮತ್ತು ಸಾಮಾಜಿಕ ನ್ಯಾಯ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ'],
         icon: '🎓',
         color: '#6366F1',
         badge: 'UGC Scale'
