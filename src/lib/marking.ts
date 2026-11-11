@@ -1,0 +1,18 @@
+/**
+ * Marks per question and the deduction for a wrong answer, per exam/paper.
+ * Single source of truth for the test screen, the exam setup page and the homepage.
+ * (Exam.negative_marking is the *fraction* deducted, e.g. 0.33 = one third of the marks.)
+ */
+export function getMarkingScheme(examId?: string, paper?: number | string | 'all') {
+    if (examId === 'upsc-epfo') return { positive: 2.5, negative: 0.83 };
+    if (examId === 'upsc-cse' && (paper === 2 || paper === '2')) return { positive: 2.5, negative: 0.83 };
+    if (examId === 'upsc-cse' || examId === 'upsc-capf') return { positive: 2, negative: 0.66 };
+    if (examId?.startsWith('kpsc')) return { positive: 2, negative: 0.5 };
+    if (examId?.startsWith('ksp')) return { positive: 1, negative: 0.25 };
+    return { positive: 2, negative: 0.66 };
+}
+
+/** "−0.66" style label, trimming trailing zeros. */
+export function formatMarks(n: number) {
+    return String(Number(n.toFixed(2)));
+}

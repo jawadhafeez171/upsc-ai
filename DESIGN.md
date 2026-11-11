@@ -5,6 +5,9 @@ colors:
   primary: "#1E1B4B"
   primary-deep: "#0F172A"
   primary-tint: "#EEF2FF"
+  primary-border: "#312E81"
+  primary-dark-mode: "#4F46E5"
+  primary-dark-mode-border: "#6366F1"
   accent-saffron: "#EA580C"
   accent-saffron-light: "#F97316"
   accent-saffron-tint: "#FFF7ED"
@@ -121,6 +124,8 @@ The system pairs sovereign Midnight Indigo (`#1E1B4B`) and Lapis Blue (`#2563EB`
 
 ### Brand & Interactive Accents
 - **Sovereign Indigo**: `#1E1B4B` — Primary brand tone representing constitutional dignity and executive authority.
+- **Indigo Border**: `#312E81` — 1px edge on indigo primary buttons and the logo tile, so the fill reads as a raised control.
+- **Dark-mode Primary**: `#4F46E5` fill with `#6366F1` border — replaces Sovereign Indigo on dark surfaces, where `#1E1B4B` disappears against `#151829`.
 - **Saffron Spark (Accent)**: `#EA580C` (hover `#C2410C`, tint `#FFF7ED`) — High-energy courage, streak flame, active state highlight, and brand emblem spark.
 - **Lapis Blue (Interactive Action)**: `#2563EB` (hover `#1D4ED8`, tint `#EFF6FF`) — Interactive controls, active question navigation, and focus rings.
 - **Secondary Teal**: `#0D9488` — Performance metrics and syllabus domain tags.

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import { useAppStore } from '@/lib/store';
 import { EXAMS } from '@/lib/mockData';
+import { getMarkingScheme, formatMarks } from '@/lib/marking';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
 import { TestConfig, Language, TestMode } from '@/types';
 import { 
@@ -81,11 +82,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [subject, setSubject] = useState('');
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
-    const [paper, setPaper] = useState<number | 'all'>('all');
+    // Presets from links such as /exams/upsc-cse?paper=1&count=100 (homepage CTAs)
+    const presetPaper = searchParams.get('paper');
+    const presetCount = Number(searchParams.get('count'));
+    const validPreset = Number.isInteger(presetCount) && presetCount > 0 && presetCount <= 200 ? presetCount : 0;
+    const [paper, setPaper] = useState<number | 'all'>(presetPaper === '1' ? 1 : presetPaper === '2' ? 2 : 'all');
     const [paperCode, setPaperCode] = useState<'all' | 'hk' | 'nhk' | 'eoao' | 'apfc' | 'eoao-apfc' | string>('all');
     const [month, setMonth] = useState<string | 'all'>('all');
-    const [count, setCount] = useState(25);
-    const [customCount, setCustomCount] = useState('');
+    const [count, setCount] = useState(validPreset && QUESTION_COUNTS.includes(validPreset) ? validPreset : 25);
+    const [customCount, setCustomCount] = useState(validPreset && !QUESTION_COUNTS.includes(validPreset) ? String(validPreset) : '');
     const [testLang, setTestLang] = useState<Language>(language);
 
     useEffect(() => {
@@ -431,8 +436,11 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     ? [2024, 2020, 2017, 2015, 2011]
                     : examId === 'ksp-psi'
                     ? [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
+                    : examId === 'upsc-cse'
+                    ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
                     : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011];
-    const allYearsRange = isKea ? '2023–2026' : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : examId === 'ksp-psi' ? '2016–2024' : '2011–2024';
+    const allYearsRange = isKea ? '2023–2026' : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : examId === 'ksp-psi' ? '2016–2024'
+        : examId === 'upsc-cse' ? (paper === 2 ? '2013–2026' : paper === 1 ? '1993–2024' : '1993–2026') : '2011–2024';
     const epfoYearMeta = (yr: number) => yr === 2025 ? 'Combined' : yr === 2023 ? 'EO/AO & APFC' : [2021, 2017].includes(yr) ? 'EO/AO' : 'APFC';
     const epfoYearMatches = (yr: number) => examId !== 'upsc-epfo' || paperCode === 'all'
         || (paperCode === 'eoao' && [2023, 2021, 2017].includes(yr))
@@ -463,6 +471,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             : c === 200 ? 'Full exam' : undefined;
     const requestedCount = Number(customCount) || count;
     const secsPerQ = examId === 'upsc-epfo' ? 60 : 72;
+    const marking = getMarkingScheme(examId, paper);
     const durationMin = Math.round((finalCount * secsPerQ) / 60);
     const langNames: Record<string, string> = { en: 'English', hi: 'हिन्दी (Hindi)', kn: 'ಕನ್ನಡ (Kannada)' };
 
@@ -689,7 +698,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 <AlertTriangle size={15} />
                                 <span>
                                     {exam.negative_marking > 0
-                                        ? <><strong>−{exam.negative_marking}</strong> mark for each wrong answer. Unanswered questions score zero.</>
+                                        ? <><strong>−{formatMarks(marking.negative)}</strong> of {formatMarks(marking.positive)} marks for each wrong answer. Unanswered questions score zero.</>
                                         : 'No negative marking for this exam.'}
                                 </span>
                             </p>

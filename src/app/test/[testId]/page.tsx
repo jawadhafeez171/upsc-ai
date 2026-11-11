@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
 import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
+import { getMarkingScheme } from '@/lib/marking';
 import { isValidImageUrl } from '@/lib/imageUtils';
 import '@/app/test/cbt-terminal.css';
 import '@/app/test/cbt-mobile.css';
@@ -824,25 +825,6 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         } else if (supportedLangs.includes('hi')) {
             setActiveLang(prev => (prev === 'hi' ? 'en' : 'hi'));
         }
-    };
-
-    const getMarkingScheme = (examId?: string, paper?: number | string) => {
-        if (examId === 'upsc-epfo') {
-            return { positive: 2.50, negative: 0.83 };
-        }
-        if (examId === 'upsc-cse' && (paper === 2 || paper === '2')) {
-            return { positive: 2.50, negative: 0.83 };
-        }
-        if (examId === 'upsc-cse' || examId === 'upsc-capf') {
-            return { positive: 2.00, negative: 0.66 };
-        }
-        if (examId?.startsWith('kpsc')) {
-            return { positive: 2.00, negative: 0.50 };
-        }
-        if (examId?.startsWith('ksp')) {
-            return { positive: 1.00, negative: 0.25 };
-        }
-        return { positive: 2.00, negative: 0.66 };
     };
 
     const marking = getMarkingScheme(activeSession?.config?.exam_id, activeSession?.config?.paper);
