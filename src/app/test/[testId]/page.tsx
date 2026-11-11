@@ -1069,6 +1069,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
 
     return (
         <div className="cbt-terminal-wrapper">
+            <h1 className="cbt-sr-only">{examTitle} — question {currentIdx + 1} of {questions.length}</h1>
             {/* ─── DESKTOP VIEW (> 900px) ─── */}
             <div className="cbt-desktop-only">
                 {/* 1. Global Header Bar */}

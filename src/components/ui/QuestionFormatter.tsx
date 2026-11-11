@@ -518,7 +518,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                     const isAssertion = /Assertion|ಪ್ರತಿಪಾದನೆ|अभिकथन/i.test(rawLabel);
                     const borderColor = isAssertion ? '#2563EB' : '#F59E0B';
                     const bgBadge = isAssertion ? 'rgba(37, 99, 235, 0.12)' : 'rgba(245, 158, 11, 0.12)';
-                    const textBadge = isAssertion ? '#2563EB' : '#D97706';
+                    const textBadge = isAssertion ? 'var(--link-text)' : 'var(--warning-text)';
 
                     elements.push(
                         <div

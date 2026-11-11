@@ -319,3 +319,42 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   LIGHT-LOCKED EXAM SURFACE
+   Official CBT screens are light. The terminal's panels are hard-coded light,
+   so its text tokens must be too — otherwise dark-theme text (near white)
+   renders on white panels and disappears.
+   ========================================================================== */
+.cbt-terminal-wrapper {
+    color-scheme: light;
+    --bg-primary: #FAFAFA;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F1F5F9;
+    --bg-card: #FFFFFF;
+    --bg-card-solid: #FFFFFF;
+    --bg-card-hover: #F8FAFC;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #5B677A;
+    --border: #E2E8F0;
+    --border-subtle: #F1F5F9;
+    --border-active: #2563EB;
+    --brand-orange-text: #C2410C;
+    --link-text: #2563EB;
+    --success-text: #047857;
+    --danger-text: #BE123C;
+    --warning-text: #B45309;
+    --teal-text: #0F766E;
+    background: #F8FAFC;
+    color: #0F172A;
+    min-height: 100vh;
+}
+.cbt-sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.cbt-terminal-wrapper :is(button, a, input):focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+}

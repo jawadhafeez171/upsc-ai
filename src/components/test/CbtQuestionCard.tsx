@@ -373,7 +373,7 @@ export default function CbtQuestionCard({
                     <span style={{ fontWeight: 800, fontSize: '11px', color: '#4B5563', letterSpacing: '0.04em' }}>
                         EXAM NOTICE:
                     </span>
-                    <span style={{ fontSize: '11.5px', color: '#6B7280' }}>
+                    <span style={{ fontSize: '11.5px', color: '#4B5563' }}>
                         1/3rd Negative Marking applies (-0.66). Evaluate all statements carefully.
                     </span>
                 </div>
@@ -382,7 +382,7 @@ export default function CbtQuestionCard({
                     fontSize: '10.5px',
                     fontFamily: 'var(--cbt-font-mono)',
                     fontWeight: 700,
-                    color: '#6B7280',
+                    color: '#4B5563',
                     letterSpacing: '0.04em'
                 }}>
                     DOMAIN: {tipRef}

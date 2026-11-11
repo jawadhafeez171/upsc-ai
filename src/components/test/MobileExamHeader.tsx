@@ -38,7 +38,7 @@ export default function MobileExamHeader({
     return (
         <header className="cbt-mobile-header" role="banner">
             {/* 1. UPSC AI Branded Logo */}
-            <Link href="/exams" className="cbt-mobile-logo" title="MockIQ / UPSC AI">
+            <Link href="/exams" className="cbt-mobile-logo" title="UPSC AI — leave test" aria-label="UPSC AI — leave test and return to exams">
                 <div style={{
                     width: '28px',
                     height: '28px',

@@ -121,9 +121,9 @@ export default function MobileQuestionCard({
                 </div>
 
                 <div className="cbt-mcq-marks-pill">
-                    <span style={{ color: '#16A34A', fontWeight: 900 }}>+{positiveMarks.toFixed(2)}</span>
+                    <span style={{ color: '#047857', fontWeight: 900 }}>+{positiveMarks.toFixed(2)}</span>
                     <span style={{ margin: '0 4px', color: '#9CA3AF' }}>/</span>
-                    <span style={{ color: '#DC2626', fontWeight: 900 }}>-{negativeDeduction.toFixed(2)}</span>
+                    <span style={{ color: '#B91C1C', fontWeight: 900 }}>-{negativeDeduction.toFixed(2)}</span>
                 </div>
             </div>
 

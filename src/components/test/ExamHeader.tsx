@@ -107,9 +107,9 @@ export default function ExamHeader({
                     fontSize: '11px',
                     fontWeight: 700,
                     letterSpacing: '0.04em',
-                    color: '#059669'
+                    color: '#047857'
                 }}>
-                    <Shield size={13} color="#059669" />
+                    <Shield size={13} color="#047857" />
                     <span>PROCTOR ACTIVE</span>
                 </div>
 

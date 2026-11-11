@@ -150,7 +150,7 @@ export default function QuestionPaletteSummary({
             }}>
                 <div style={{
                     width: '22px', height: '22px', borderRadius: '3px',
-                    background: '#94A3B8', color: '#FFFFFF',
+                    background: '#64748B', color: '#FFFFFF',
                     fontWeight: 900, fontSize: '11px',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     fontFamily: 'var(--cbt-font-mono)'

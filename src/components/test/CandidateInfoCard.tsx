@@ -45,9 +45,9 @@ export default function CandidateInfoCard({
                     </div>
                     <span style={{
                         background: 'rgba(16, 185, 129, 0.08)',
-                        color: '#059669',
+                        color: '#047857',
                         border: '1px solid rgba(16, 185, 129, 0.25)',
-                        fontSize: '9.5px',
+                        fontSize: '10px',
                         fontWeight: 900,
                         padding: '1px 6px',
                         borderRadius: '4px',
