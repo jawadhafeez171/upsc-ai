@@ -9,7 +9,7 @@ export const EXAMS: Exam[] = [
         description: 'Civil Services Examination — IAS, IPS, IFS & Group A Central Services',
         languages: ['en', 'hi'],
         negative_marking: 0.33,
-        subjects: ['Ancient History', 'Medieval History', 'Art and Culture', 'Modern History', 'Polity', 'Economics', 'Geography', 'Environment', 'Science & Technology', 'IR and Current Affairs', 'General Awareness'],
+        subjects: ['History', 'Art, Culture & Heritage', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'Geography & Earth Systems', 'Environment, Ecology & Disaster Management', 'Science, Technology & Defence', 'International Relations & Global Institutions', 'Indian Society & Social Justice'],
         icon: '🏛️',
         color: '#082C54',
         badge: 'Premier'
@@ -21,7 +21,7 @@ export const EXAMS: Exam[] = [
         description: 'Central Armed Police Forces — Assistant Commandant in BSF, CRPF, CISF, ITBP, SSB',
         languages: ['en', 'hi'],
         negative_marking: 0.33,
-        subjects: ['General Science', 'Current Events', 'Indian Polity & Economy', 'History of India', 'Indian & World Geography', 'General Mental Ability', 'Essay, Precis & Comprehension'],
+        subjects: ['Science, Technology & Defence', 'History', 'Geography & Earth Systems', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'Environment, Ecology & Disaster Management', 'Art, Culture & Heritage', 'International Relations & Global Institutions', 'Internal Security', 'Indian Society & Social Justice', 'General Knowledge (Miscellaneous)'],
         icon: '🎖️',
         color: '#0D5D56',
         badge: 'Class-1 Officer'
@@ -45,7 +45,7 @@ export const EXAMS: Exam[] = [
         description: 'Employees’ Provident Fund Organisation — Enforcement Officer, Accounts Officer & APFC',
         languages: ['en', 'hi'],
         negative_marking: 0.33,
-        subjects: ['Language Proficiency, Grammar & Communication (general Kannada & General English)', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'History', 'Science, Technology & Defence', 'Industrial Relations & Labour Laws', 'General Accounting Principles', 'Social Security in India', 'Applied Statistics', 'Auditing', 'Insurance'],
+        subjects: ['Language Proficiency, Grammar & Communication (General Kannada & General English)', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'History', 'Science, Technology & Defence', 'Geography & Earth Systems', 'Environment, Ecology & Disaster Management', 'Industrial Relations & Labour Laws', 'General Accounting Principles', 'Social Security in India', 'Applied Statistics', 'Auditing', 'Insurance'],
         icon: '⚖️',
         color: '#1E3A8A',
         badge: 'EO/AO & APFC'
@@ -61,8 +61,8 @@ export const EXAMS: Exam[] = [
         description_kn: 'ಕರ್ನಾಟಕ ಆಡಳಿತ ಸೇವೆ — ಗೆಜೆಟೆಡ್ ಪ್ರೊಬೇಷನರ್ಸ್ ಪರೀಕ್ಷೆ',
         languages: ['en', 'kn'],
         negative_marking: 0.25,
-        subjects: ['Karnataka History', 'Indian History', 'Indian Polity', 'Geography', 'Karnataka Geography', 'Economy', 'Karnataka Economy', 'Science & Tech', 'Environment', 'Karnataka Administration', 'General Mental Ability'],
-        subjects_kn: ['ಕರ್ನಾಟಕ ಇತಿಹಾಸ', 'ಭಾರತದ ಇತಿಹಾಸ', 'ಭಾರತೀಯ ಸಂವಿಧಾನ & ರಾಜ್ಯಶಾಸ್ತ್ರ', 'ಭೂಗೋಳಶಾಸ್ತ್ರ', 'ಕರ್ನಾಟಕ ಭೂಗೋಳ', 'ಅರ್ಥಶಾಸ್ತ್ರ', 'ಕರ್ನಾಟಕ ಆರ್ಥಿಕತೆ', 'ವಿಜ್ಞಾನ & ತಂತ್ರಜ್ಞಾನ', 'ಪರಿಸರ', 'ಕರ್ನಾಟಕ ಆಡಳಿತ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ'],
+        subjects: ['History', 'Geography & Earth Systems', 'Indian Economy & Development', 'Indian Polity, Constitution & Governance', 'Science, Technology & Defence', 'Environment, Ecology & Disaster Management', 'Art, Culture & Heritage', 'Indian Society & Social Justice', 'International Relations & Global Institutions', 'Ethics, Integrity & Aptitude', 'General Mental Ability, Quantitative Aptitude & Comprehension'],
+        subjects_kn: ['ಇತಿಹಾಸ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ', 'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ', 'ಭಾರತೀಯ ಸಮಾಜ ಮತ್ತು ಸಾಮಾಜಿಕ ನ್ಯಾಯ', 'ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು', 'ನೈತಿಕತೆ, ಸಮಗ್ರತೆ ಮತ್ತು ಯೋಗ್ಯತೆ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ'],
         icon: '🅺',
         color: '#B83E11',
         badge: 'State Top'

@@ -1,5 +1,5 @@
 'use client';
-import { use, useState, useEffect } from 'react';
+import { use, useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
@@ -17,6 +17,11 @@ import ExamMindMapVisualizer from '@/components/graph/ExamMindMapVisualizer';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 const DIFFICULTIES = ['mixed', 'easy', 'medium', 'hard'] as const;
+const CSAT_TOPICS = [
+    'Reading Comprehension & Interpersonal Skills',
+    'Quantitative Aptitude & Basic Numeracy',
+    'General Mental Ability & Logical Reasoning'
+];
 
 type ActiveTab = 'practice' | 'about' | 'services' | 'mindmap';
 
@@ -35,6 +40,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [examInfo, setExamInfo] = useState<ExamInfo | undefined>(undefined);
     const [loading, setLoading] = useState(true);
     const [availableQs, setAvailableQs] = useState(0);
+    const [countLoading, setCountLoading] = useState(true);
+    const loadedExamIdRef = useRef<string | null>(null);
 
     const [mode, setMode] = useState<TestMode>('full');
     const [subject, setSubject] = useState('');
@@ -48,8 +55,11 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [testLang, setTestLang] = useState<Language>(language);
 
     useEffect(() => {
+        let cancelled = false;
         async function loadExamData() {
-            setLoading(true);
+            // Only blank the whole page on the first load of an exam; filter changes just refresh the count.
+            if (loadedExamIdRef.current !== examId) setLoading(true);
+            setCountLoading(true);
             const localExam = EXAMS.find(e => e.id === examId);
             if (localExam && !localExam.languages.includes(testLang)) {
                 setTestLang(localExam.languages[0] || 'en');
@@ -95,6 +105,23 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         if (year !== 'all') query = query.eq('year', year);
                         const { count: uCount } = await query;
                         qCount = uCount || 0;
+                    } else if (mode === 'subject' && subject) {
+                        // "All papers" + a subject: count only the paper that subject belongs to
+                        if (CSAT_TOPICS.includes(subject)) {
+                            let query = supabase.from('csat_pyq').select('id', { count: 'exact', head: true }).gt('year', 0)
+                                .or(`domain.ilike.%${subject}%,sub_topic.ilike.%${subject}%`);
+                            if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                            if (year !== 'all') query = query.eq('year', year);
+                            const { count: cCount } = await query;
+                            qCount = cCount || 0;
+                        } else {
+                            let query = supabase.from('upsc_questions').select('id', { count: 'exact', head: true }).gt('year', 0)
+                                .ilike('subject', `%${subject}%`);
+                            if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                            if (year !== 'all') query = query.eq('year', year);
+                            const { count: uCount } = await query;
+                            qCount = uCount || 0;
+                        }
                     } else {
                         let q1 = supabase.from('upsc_questions').select('id', { count: 'exact', head: true }).gt('year', 0);
                         let q2 = supabase.from('csat_pyq').select('id', { count: 'exact', head: true }).gt('year', 0);
@@ -207,11 +234,16 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     const { count } = await query;
                     qCount = count || 0;
                 }
+                if (cancelled) return;
                 setAvailableQs(qCount);
             }
+            if (cancelled) return;
+            loadedExamIdRef.current = examId;
+            setCountLoading(false);
             setLoading(false);
         }
         loadExamData();
+        return () => { cancelled = true; };
     }, [examId, mode, subject, difficulty, year, paper, paperCode, month]);
 
     if (loading) {
@@ -227,7 +259,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         );
     }
 
-    const finalCount = Math.min(Number(customCount) || count, availableQs || 25);
+    const finalCount = countLoading ? 0 : Math.min(Number(customCount) || count, availableQs);
 
     const handleStart = () => {
         if (!user) { router.push('/login'); return; }
@@ -263,24 +295,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const examTitle = language === 'kn' && exam.name_kn ? exam.name_kn : (exam.title || exam.name);
     const examDesc = language === 'kn' && exam.description_kn ? exam.description_kn : exam.description;
     
-    let baseTopics = language === 'kn' && exam.subjects_kn ? exam.subjects_kn : (exam.topics || exam.subjects || []);
+    // value = the subject name stored on the questions (used for filtering); label = what the button shows
+    const subjectValues: string[] = exam.topics || exam.subjects || [];
+    const subjectLabels: string[] | undefined = language === 'kn' && exam.subjects_kn?.length === subjectValues.length ? exam.subjects_kn : undefined;
+    let examTopics: { value: string; label: string }[] = subjectValues.map((v, i) => ({ value: v, label: subjectLabels ? subjectLabels[i] : v }));
     if (examId === 'upsc-cse') {
-        if (paper === 2) {
-            baseTopics = [
-                'Reading Comprehension & Interpersonal Skills',
-                'Quantitative Aptitude & Basic Numeracy',
-                'General Mental Ability & Logical Reasoning'
-            ];
-        } else if (paper === 'all') {
-            baseTopics = [
-                ...baseTopics,
-                'Reading Comprehension & Interpersonal Skills',
-                'Quantitative Aptitude & Basic Numeracy',
-                'General Mental Ability & Logical Reasoning'
-            ];
-        }
+        const csat = CSAT_TOPICS.map(v => ({ value: v, label: v }));
+        if (paper === 2) examTopics = csat;
+        else if (paper === 'all') examTopics = [...examTopics, ...csat];
     }
-    const examTopics = baseTopics;
 
     return (
         <div style={{ background: 'var(--bg-primary)', minHeight: '100vh', padding: '40px 0 80px' }}>
@@ -451,7 +474,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 </button>
 
                                 <button
-                                    onClick={() => { setMode('subject'); setSubject(examTopics[0] || ''); }}
+                                    onClick={() => { setMode('subject'); setSubject(examTopics[0]?.value || ''); }}
                                     style={{
                                         padding: '16px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
                                         background: mode === 'subject' ? 'rgba(13, 148, 136, 0.08)' : 'var(--bg-primary)',
@@ -932,7 +955,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                         CHOOSE SUBJECT / TOPIC:
                                     </label>
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                        {examTopics.map((sub: string) => {
+                                        {examTopics.map(({ value: sub, label }) => {
                                             const isSelected = subject === sub;
                                             return (
                                                 <button
@@ -947,7 +970,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         transition: 'all 0.15s'
                                                     }}
                                                 >
-                                                    {sub}
+                                                    {label}
                                                 </button>
                                             );
                                         })}
@@ -1036,8 +1059,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 <label style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
                                     4. Number of Questions
                                 </label>
-                                <span style={{ fontSize: '13px', color: availableQs > 0 ? 'var(--brand-orange)' : 'var(--text-muted)', fontWeight: 700 }}>
-                                    {availableQs > 0 ? `${availableQs.toLocaleString()} Questions Available in Pool` : 'Calculating question pool...'}
+                                <span style={{ fontSize: '13px', color: !countLoading && availableQs > 0 ? 'var(--brand-orange)' : 'var(--text-muted)', fontWeight: 700 }}>
+                                    {countLoading ? 'Calculating question pool...' : availableQs > 0 ? `${availableQs.toLocaleString()} Questions Available in Pool` : 'No questions in pool for this filter'}
                                 </span>
                             </div>
 
@@ -1094,7 +1117,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 }}
                             >
                                 <Zap size={18} />
-                                {finalCount > 0 ? `Start ${finalCount} Question Mock Test ➔` : 'No Questions Match Selected Filter'}
+                                {countLoading ? 'Calculating question pool...' : finalCount > 0 ? `Start ${finalCount} Question Mock Test ➔` : 'No Questions Match Selected Filter'}
                             </button>
                         </div>
                     </div>

@@ -26,6 +26,12 @@ import MobileQuestionCard from '@/components/test/MobileQuestionCard';
 import MobileExamBottomNav from '@/components/test/MobileExamBottomNav';
 import MobilePaletteDrawer from '@/components/test/MobilePaletteDrawer';
 
+const CSAT_SUBJECTS = [
+    'Reading Comprehension & Interpersonal Skills',
+    'Quantitative Aptitude & Basic Numeracy',
+    'General Mental Ability & Logical Reasoning'
+];
+
 const CSAT_EN_PATTERNS = [
     /With reference to the above passage/i,
     /Based on the above passage/i,
@@ -318,12 +324,26 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         q1 = q1.eq('year', config.year);
                         q2 = q2.eq('year', config.year);
                     }
-                    const [{ data: d1 }, { data: d2 }] = await Promise.all([q1, q2]);
+                    // Subject drill across "All papers": only pull from the paper that subject belongs to
+                    const subjectSel = config.mode === 'subject' && config.subject ? config.subject : null;
+                    const isCsatSubject = !!subjectSel && CSAT_SUBJECTS.includes(subjectSel);
+                    if (subjectSel && !isCsatSubject) q1 = q1.ilike('subject', `%${subjectSel}%`);
+                    if (isCsatSubject) q2 = q2.or(`domain.ilike.%${subjectSel}%,sub_topic.ilike.%${subjectSel}%`);
+                    const [{ data: d1 }, { data: d2 }] = await Promise.all([
+                        isCsatSubject ? Promise.resolve({ data: null }) : q1,
+                        subjectSel && !isCsatSubject ? Promise.resolve({ data: null }) : q2,
+                    ]);
                     let csatData = d2;
-                    if (!csatData || csatData.length === 0) {
+                    if ((!csatData || csatData.length === 0) && (!subjectSel || isCsatSubject)) {
                         try {
                             const csatModule = await import('@/data/upsc_pyq/csat/2020_csat.json');
                             csatData = [...(csatModule.default || csatModule)];
+                            if (isCsatSubject) {
+                                const subLower = subjectSel!.toLowerCase();
+                                csatData = csatData.filter((q: { domain?: string; sub_topic?: string }) =>
+                                    q.domain?.toLowerCase().includes(subLower) || q.sub_topic?.toLowerCase().includes(subLower)
+                                );
+                            }
                         } catch (e) {}
                     }
                     const processedCsat = (csatData || []).map(processCsatQuestion);
@@ -754,10 +774,11 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 // Fallback to local QUESTIONS if remote database returns 0 matching rows
                 let fallback = QUESTIONS.filter(q => q.exam_id === config.exam_id);
                 if (config.mode === 'subject' && config.subject) {
-                    const subFiltered = fallback.filter(q => q.subject.toLowerCase() === config.subject?.toLowerCase());
-                    if (subFiltered.length > 0) fallback = subFiltered;
+                    // Never substitute other subjects for a subject drill — show "No Questions Found" instead
+                    fallback = fallback.filter(q => q.subject.toLowerCase() === config.subject?.toLowerCase());
+                } else if (fallback.length === 0) {
+                    fallback = QUESTIONS;
                 }
-                if (fallback.length === 0) fallback = QUESTIONS;
                 const finalFallback = fallback.slice(0, config.question_count || 10);
                 setQuestions(finalFallback);
                 const fallbackSecs = config.exam_id === 'upsc-epfo' ? 60 : 72;
@@ -1007,7 +1028,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     <div style={{ fontSize: '40px', marginBottom: '16px' }}>⚠️</div>
                     <h3 style={{ color: '#111827', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>No Questions Found</h3>
                     <p style={{ fontSize: '13.5px', color: '#4B5563', lineHeight: 1.5, marginBottom: '24px' }}>
-                        No questions match this configuration. Make sure you run the seed script!
+                        No questions match this configuration. Try a different subject, year or difficulty.
                     </p>
                     <button onClick={() => router.push('/exams')} className="btn btn-primary" style={{ width: '100%' }}>
                         Back to Catalog
