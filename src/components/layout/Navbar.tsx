@@ -118,14 +118,16 @@ export default function Navbar() {
                     {user ? (
                         <>
                             <Link href="/dashboard" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                <div style={{
-                                    display: 'flex', alignItems: 'center', gap: '4px',
-                                    background: 'rgba(217, 119, 6, 0.12)', border: '1px solid rgba(217, 119, 6, 0.3)',
-                                    borderRadius: '20px', padding: '3px 8px', fontSize: '11.5px', fontWeight: 700,
-                                    color: 'var(--brand-gold)',
-                                }} className="hidden-mobile">
-                                    <Flame size={12} color="#EA580C" /> <span>{user.streak || 3}d</span>
-                                </div>
+                                {user.streak > 0 && (
+                                    <div style={{
+                                        display: 'flex', alignItems: 'center', gap: '4px',
+                                        background: 'var(--bg-tertiary)', border: '1px solid var(--border)',
+                                        borderRadius: '20px', padding: '3px 8px', fontSize: '11.5px', fontWeight: 700,
+                                        color: 'var(--brand-orange-text)',
+                                    }} className="hidden-mobile" title={`${user.streak}-day practice streak`}>
+                                        <Flame size={12} /> <span>{user.streak}d</span>
+                                    </div>
+                                )}
 
                                 <div style={{
                                     width: 32, height: 32, borderRadius: '50%',

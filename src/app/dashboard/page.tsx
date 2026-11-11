@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAppStore, useStoreHydrated } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
+import { EXAMS } from '@/lib/mockData';
 import {
     ArrowRight,
     TrendingUp,
@@ -48,9 +49,14 @@ function getBadgeIcon(id: string) {
 export default function DashboardPage() {
     const router = useRouter();
     const { user, completedSessions, activeSession } = useAppStore();
-    const [recentSessions, setRecentSessions] = useState<any[]>([]);
     const [examsObj, setExamsObj] = useState<Record<string, { name: string; color: string }>>({});
     const hydrated = useStoreHydrated();
+    const recentSessions = user
+        ? [...completedSessions]
+            .filter((s) => s.user_id === user.id)
+            .sort((a, b) => new Date(b.finished_at || b.started_at).getTime() - new Date(a.finished_at || a.started_at).getTime())
+            .slice(0, 6)
+        : [];
 
     useEffect(() => {
         if (!hydrated) return;
@@ -58,12 +64,6 @@ export default function DashboardPage() {
             router.replace('/login');
             return;
         }
-
-        const sorted = [...completedSessions]
-            .filter((s) => s.user_id === user.id)
-            .sort((a, b) => new Date(b.finished_at || b.started_at).getTime() - new Date(a.finished_at || a.started_at).getTime())
-            .slice(0, 6);
-        setRecentSessions(sorted);
 
         async function fetchExams() {
             const { data } = await supabase.from('exams').select('id, title');
@@ -88,6 +88,14 @@ export default function DashboardPage() {
     const avgScore = totalTests > 0
         ? Math.round((userSessions.reduce((sum, s) => sum + (s.score || 0), 0) / userSessions.reduce((sum, s) => sum + (s.total_marks || 1), 0)) * 100)
         : 0;
+
+    let attemptedAll = 0, correctAll = 0;
+    userSessions.forEach((s) => Object.values(s.answers || {}).forEach((a) => {
+        if (a?.selected) { attemptedAll += 1; if (a.is_correct) correctAll += 1; }
+    }));
+    const accuracyAll = attemptedAll > 0 ? Math.round((correctAll / attemptedAll) * 100) : null;
+    const tone = (p: number) => (p >= 65 ? 'var(--success-text)' : p >= 45 ? 'var(--warning-text)' : 'var(--danger-text)');
+    const examName = (id: string) => examsObj[id]?.name || EXAMS.find((e) => e.id === id)?.name || id;
 
     const xpToNextLevel = 1000;
     const xpProgress = Math.min((user.xp % xpToNextLevel) / xpToNextLevel, 1);
@@ -121,38 +129,10 @@ export default function DashboardPage() {
         .slice(0, 5);
 
     const STATS = [
-        {
-            icon: <Flame size={20} color="#EA580C" />,
-            label: 'Day Streak',
-            value: `${user.streak} Days`,
-            color: '#EA580C',
-            bg: 'rgba(234, 88, 12, 0.06)',
-            border: 'rgba(234, 88, 12, 0.2)'
-        },
-        {
-            icon: <FileCheck size={20} color="#2563EB" />,
-            label: 'Tests Completed',
-            value: `${totalTests}`,
-            color: '#2563EB',
-            bg: 'rgba(37, 99, 235, 0.06)',
-            border: 'rgba(37, 99, 235, 0.2)'
-        },
-        {
-            icon: <Target size={20} color="#059669" />,
-            label: 'Average Score',
-            value: totalTests > 0 ? `${avgScore}%` : 'N/A',
-            color: '#059669',
-            bg: 'rgba(16, 185, 129, 0.06)',
-            border: 'rgba(16, 185, 129, 0.2)'
-        },
-        {
-            icon: <Award size={20} color="#7C3AED" />,
-            label: 'Academic Standing',
-            value: user.level,
-            color: '#7C3AED',
-            bg: 'rgba(124, 58, 237, 0.06)',
-            border: 'rgba(124, 58, 237, 0.2)'
-        },
+        { icon: <Flame size={20} />, label: 'Day streak', value: `${user.streak} ${user.streak === 1 ? 'day' : 'days'}` },
+        { icon: <FileCheck size={20} />, label: 'Tests completed', value: `${totalTests}` },
+        { icon: <Target size={20} />, label: 'Average score', value: totalTests > 0 ? `${avgScore}%` : '—' },
+        { icon: <CheckCircle2 size={20} />, label: 'Accuracy', value: accuracyAll === null ? '—' : `${accuracyAll}%` },
     ];
 
     return (
@@ -166,7 +146,7 @@ export default function DashboardPage() {
                             Welcome back, {user.name.split(' ')[0]}
                         </h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '14px', margin: 0 }}>
-                            Candidate Performance & Examination Telemetry
+                            Your practice, progress and recent results
                         </p>
                     </div>
                     <Link
@@ -225,7 +205,7 @@ export default function DashboardPage() {
                                     Active Examination in Progress
                                 </div>
                                 <div style={{ fontSize: '16px', fontWeight: 800, marginTop: '2px' }}>
-                                    {examsObj[activeSession.exam_id]?.name || 'Mock Examination'}
+                                    {examName(activeSession.exam_id)}
                                 </div>
                                 <div style={{ fontSize: '12.5px', color: '#E0E7FF', marginTop: '2px' }}>
                                     {Object.keys(activeSession.answers || {}).length} of {activeSession.questions?.length || 0} questions attempted
@@ -258,14 +238,14 @@ export default function DashboardPage() {
                 )}
 
                 {/* Level / XP Progress Card */}
-                <div className="card" style={{ padding: '24px', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--bg-card)' }}>
+                <div className="card card-static" style={{ padding: '24px', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--bg-card)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
                         <div>
                             <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)' }}>
                                 Academic Standing
                             </div>
-                            <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--brand-blue, #2563EB)', marginTop: '2px' }}>
-                                {user.level} Level
+                            <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--link-text)', marginTop: '2px' }}>
+                                {user.level} level
                             </div>
                         </div>
                         <div style={{ textAlign: 'right' }}>
@@ -285,20 +265,21 @@ export default function DashboardPage() {
                 </div>
 
                 {/* Core Stats Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '14px', marginBottom: '24px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 150px), 1fr))', gap: '12px', marginBottom: '24px' }}>
                     {STATS.map((s) => (
                         <div
                             key={s.label}
                             className="stat-card"
                             style={{
-                                border: `1px solid ${s.border}`,
-                                background: s.bg,
+                                border: '1px solid var(--border)',
+                                background: 'var(--bg-card)',
                                 borderRadius: '12px',
-                                padding: '20px',
+                                padding: 'clamp(14px, 3vw, 20px)',
                                 textAlign: 'left',
                                 display: 'flex',
                                 alignItems: 'flex-start',
-                                gap: '14px'
+                                gap: '10px',
+                                flexDirection: 'column'
                             }}
                         >
                             <div style={{
@@ -306,7 +287,8 @@ export default function DashboardPage() {
                                 height: '40px',
                                 borderRadius: '10px',
                                 background: 'var(--bg-card)',
-                                border: `1px solid ${s.border}`,
+                                border: '1px solid var(--border)',
+                                color: 'var(--text-secondary)',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -316,7 +298,7 @@ export default function DashboardPage() {
                             </div>
                             <div>
                                 <div style={{ fontSize: '12px', color: 'var(--text-secondary)', fontWeight: 600 }}>{s.label}</div>
-                                <div style={{ fontSize: '22px', fontWeight: 800, color: s.color, marginTop: '2px', letterSpacing: '-0.3px' }}>
+                                <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--text-primary)', marginTop: '2px', letterSpacing: '-0.3px', fontVariantNumeric: 'tabular-nums' }}>
                                     {s.value}
                                 </div>
                             </div>
@@ -327,7 +309,7 @@ export default function DashboardPage() {
                 {/* 2-Column Analytics: Subject Performance + Recent Tests */}
                 <div className="dashboard-layout-grid" style={{ marginBottom: '24px' }}>
                     {/* Subject-Wise Mastery */}
-                    <div className="card" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                    <div className="card card-static" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <BarChart3 size={17} color="#2563EB" />
@@ -347,29 +329,31 @@ export default function DashboardPage() {
                         ) : (
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                                 {subjectList.map((item) => {
-                                    const badgeColor = item.accuracy >= 65 ? '#059669' : item.accuracy >= 45 ? '#D97706' : '#DC2626';
+                                    const badgeColor = tone(item.accuracy);
+                                    const barColor = item.accuracy >= 65 ? '#10B981' : item.accuracy >= 45 ? '#F59E0B' : '#EF4444';
                                     const badgeBg = item.accuracy >= 65 ? 'rgba(16, 185, 129, 0.08)' : item.accuracy >= 45 ? 'rgba(245, 158, 11, 0.08)' : 'rgba(239, 68, 68, 0.08)';
                                     const badgeLabel = item.accuracy >= 65 ? 'Strong' : item.accuracy >= 45 ? 'Developing' : 'Needs Focus';
 
                                     return (
                                         <div key={item.name}>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px', marginBottom: '6px' }}>
                                                 <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-primary)' }}>
                                                     {item.name}
                                                 </span>
                                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                                     <span style={{
-                                                        fontSize: '10px',
+                                                        fontSize: '11px',
                                                         fontWeight: 800,
                                                         padding: '2px 6px',
                                                         borderRadius: '4px',
                                                         color: badgeColor,
                                                         background: badgeBg,
-                                                        border: `1px solid ${badgeColor}30`
+                                                        border: '1px solid var(--border)',
+                                                        whiteSpace: 'nowrap'
                                                     }}>
                                                         {badgeLabel}
                                                     </span>
-                                                    <span style={{ fontSize: '12.5px', fontWeight: 800, fontFamily: 'var(--font-mono, monospace)', color: badgeColor }}>
+                                                    <span style={{ fontSize: '12.5px', fontWeight: 800, fontVariantNumeric: 'tabular-nums', color: badgeColor }}>
                                                         {item.accuracy}%
                                                     </span>
                                                 </div>
@@ -379,7 +363,7 @@ export default function DashboardPage() {
                                                     style={{
                                                         width: `${item.accuracy}%`,
                                                         height: '100%',
-                                                        background: badgeColor,
+                                                        background: barColor,
                                                         borderRadius: '9999px',
                                                         transition: 'width 0.3s ease'
                                                     }}
@@ -393,14 +377,14 @@ export default function DashboardPage() {
                     </div>
 
                     {/* Recent Tests */}
-                    <div className="card" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                    <div className="card card-static" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <TrendingUp size={17} color="#059669" />
                                 <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Recent Test Records</h2>
                             </div>
-                            <Link href="/exams" style={{ fontSize: '12px', color: '#2563EB', fontWeight: 700, textDecoration: 'none' }}>
-                                Browse Mocks →
+                            <Link href="/exams" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', minHeight: '44px', fontSize: '13px', color: 'var(--link-text)', fontWeight: 700, textDecoration: 'none' }}>
+                                Browse mocks <ArrowRight size={14} />
                             </Link>
                         </div>
 
@@ -408,16 +392,16 @@ export default function DashboardPage() {
                             <div style={{ textAlign: 'center', padding: '36px 16px', color: 'var(--text-muted)' }}>
                                 <Inbox size={32} style={{ margin: '0 auto 10px', opacity: 0.4 }} />
                                 <p style={{ fontSize: '13px', margin: '0 0 6px', fontWeight: 600 }}>No test records recorded</p>
-                                <Link href="/exams" style={{ color: '#2563EB', fontWeight: 700, textDecoration: 'none', fontSize: '12.5px' }}>
-                                    Take your first mock examination →
+                                <Link href="/exams" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', minHeight: '44px', color: 'var(--link-text)', fontWeight: 700, textDecoration: 'none', fontSize: '13px' }}>
+                                    Take your first mock test <ArrowRight size={14} />
                                 </Link>
                             </div>
                         ) : (
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                                 {recentSessions.map((s) => {
-                                    const examInfo = examsObj[s.exam_id] || { name: s.exam_id, color: '#2563EB' };
+                                    const examInfo = { name: examName(s.exam_id) };
                                     const pct = Math.round(((s.score || 0) / (s.total_marks || 1)) * 100);
-                                    const scoreColor = pct >= 60 ? '#059669' : pct >= 40 ? '#D97706' : '#DC2626';
+                                    const scoreColor = pct >= 60 ? 'var(--success-text)' : pct >= 40 ? 'var(--warning-text)' : 'var(--danger-text)';
 
                                     return (
                                         <div
@@ -447,11 +431,11 @@ export default function DashboardPage() {
                                                     fontWeight: 800,
                                                     fontSize: '13px',
                                                     color: scoreColor,
-                                                    background: `${scoreColor}12`,
-                                                    border: `1px solid ${scoreColor}30`,
+                                                    background: 'var(--bg-tertiary)',
+                                                    border: '1px solid var(--border)',
                                                     padding: '4px 8px',
                                                     borderRadius: '6px',
-                                                    fontFamily: 'var(--font-mono, monospace)',
+                                                    fontVariantNumeric: 'tabular-nums',
                                                     flexShrink: 0,
                                                 }}>
                                                     {pct}%
@@ -459,11 +443,14 @@ export default function DashboardPage() {
                                                 <Link
                                                     href={`/results/${s.id}`}
                                                     style={{
-                                                        fontSize: '11.5px',
+                                                        fontSize: '12.5px',
                                                         fontWeight: 700,
-                                                        color: '#2563EB',
+                                                        color: 'var(--link-text)',
                                                         textDecoration: 'none',
-                                                        padding: '4px 8px',
+                                                        padding: '8px 12px',
+                                                        minHeight: '36px',
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
                                                         borderRadius: '6px',
                                                         border: '1px solid var(--border)',
                                                         background: 'var(--bg-card)',
@@ -482,7 +469,7 @@ export default function DashboardPage() {
                 </div>
 
                 {/* Badges / Milestones Section */}
-                <div className="card" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                <div className="card card-static" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
                         <Award size={18} color="#D97706" />
                         <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Milestones & Accolades</h2>
