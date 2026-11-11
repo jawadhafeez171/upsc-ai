@@ -28,7 +28,7 @@ export default function RotatingTagline({ fontSize = '11px' }: { fontSize?: stri
             gap: '5px', 
             marginTop: '2px',
             fontWeight: 700, 
-            color: '#475569', 
+            color: 'var(--text-muted)', 
             textTransform: 'uppercase', 
             letterSpacing: '0.5px',
             height: '16px',

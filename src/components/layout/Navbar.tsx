@@ -96,7 +96,7 @@ export default function Navbar() {
                             <button key={l.code} onClick={() => setLanguage(l.code)} style={{
                                 padding: '4px 10px', borderRadius: '7px', border: 'none', cursor: 'pointer',
                                 fontSize: '12px', fontWeight: 700,
-                                background: language === l.code ? 'var(--brand-orange)' : 'transparent',
+                                background: language === l.code ? 'var(--brand-orange-dim)' : 'transparent',
                                 color: language === l.code ? 'white' : 'var(--text-secondary)',
                                 transition: 'all 0.15s ease',
                             }}>{l.label}</button>
@@ -194,7 +194,7 @@ export default function Navbar() {
                                 <button key={l.code} onClick={() => { setLanguage(l.code); setMenuOpen(false); }} style={{
                                     padding: '5px 12px', borderRadius: '6px', border: 'none', cursor: 'pointer',
                                     fontSize: '12px', fontWeight: 700,
-                                    background: language === l.code ? 'var(--brand-orange)' : 'transparent',
+                                    background: language === l.code ? 'var(--brand-orange-dim)' : 'transparent',
                                     color: language === l.code ? 'white' : 'var(--text-secondary)',
                                     transition: 'all 0.15s',
                                 }}>{l.label}</button>

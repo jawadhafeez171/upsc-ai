@@ -40,6 +40,11 @@
   --brand-orange: #EA580C;       /* Main Brand Accent Token */
   --brand-orange-dim: #C2410C;
   --brand-orange-glow: rgba(234, 88, 12, 0.2);
+  --brand-orange-text: #C2410C;   /* saffron for text: 5.2:1 on white */
+  --link-text: #2563EB;
+  --success-text: #047857;
+  --danger-text: #BE123C;
+  --warning-text: #B45309;
   --brand-teal: #0D9488;
   --brand-teal-dim: #0F766E;
   --brand-navy: #1E1B4B;
@@ -110,8 +115,13 @@
   --nav-bg: rgba(21, 24, 41, 0.88);
 
   --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  --text-secondary: #A3B0C2;
+  --text-muted: #8A94A8;
+  --brand-orange-text: #FB923C;
+  --link-text: #60A5FA;
+  --success-text: #34D399;
+  --danger-text: #FB7185;
+  --warning-text: #FBBF24;
 
   --border: #262B47;
   --border-subtle: #1B1F33;
@@ -676,6 +686,8 @@ body:has(.cbt-terminal-wrapper) footer {
 
 /* Footer Links */
 .footer-link {
+  display: inline-block;
+  padding: 10px 4px;
   font-size: 13px;
   color: var(--text-muted);
   text-decoration: none;
@@ -792,7 +804,8 @@ body:has(.cbt-terminal-wrapper) footer {
   }
 
   .navbar-login-btn {
-    padding: 5px 10px !important;
+    min-height: 40px;
+    padding: 5px 12px !important;
     font-size: 12px !important;
     border-radius: 8px !important;
   }

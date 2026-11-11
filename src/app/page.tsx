@@ -266,27 +266,27 @@ export default function HomePage() {
             borderTop: '1px solid var(--border)'
           }}>
             <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Building2 size={13} color="#2563EB" />
+              <Building2 size={13} color="var(--text-muted)" />
               <span>3,320+ UPSC CSE GS-1</span>
             </span>
             <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Brain size={13} color="#D97706" />
+              <Brain size={13} color="var(--text-muted)" />
               <span>1,120 CSAT Paper II</span>
             </span>
             <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <ShieldCheck size={13} color="#0D5D56" />
+              <ShieldCheck size={13} color="var(--text-muted)" />
               <span>1,625 CAPF (AC)</span>
             </span>
             <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Layers size={13} color="#0D9488" />
+              <Layers size={13} color="var(--text-muted)" />
               <span>1,200 KPSC KAS</span>
             </span>
             <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Scale size={13} color="#7C3AED" />
+              <Scale size={13} color="var(--text-muted)" />
               <span>+2.00 / -0.66 Scoring</span>
             </span>
             <span className="hero-sub-text-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Languages size={13} color="#2563EB" />
+              <Languages size={13} color="var(--text-muted)" />
               <span>English · Hindi · Kannada</span>
             </span>
           </div>
@@ -334,7 +334,8 @@ export default function HomePage() {
                     type="button"
                     onClick={() => setDemoLang('en')}
                     style={{
-                      padding: '4px 10px',
+                      padding: '7px 12px',
+                      minHeight: '32px',
                       borderRadius: '6px',
                       border: 'none',
                       cursor: 'pointer',
@@ -352,7 +353,8 @@ export default function HomePage() {
                     type="button"
                     onClick={() => setDemoLang('hi')}
                     style={{
-                      padding: '4px 10px',
+                      padding: '7px 12px',
+                      minHeight: '32px',
                       borderRadius: '6px',
                       border: 'none',
                       cursor: 'pointer',
@@ -370,7 +372,8 @@ export default function HomePage() {
                     type="button"
                     onClick={() => setDemoLang('kn')}
                     style={{
-                      padding: '4px 10px',
+                      padding: '7px 12px',
+                      minHeight: '32px',
                       borderRadius: '6px',
                       border: 'none',
                       cursor: 'pointer',
@@ -520,7 +523,7 @@ export default function HomePage() {
                   gap: '8px',
                   fontWeight: 800,
                   fontSize: '13px',
-                  color: demoSelected === SAMPLE_QUESTION.correct ? '#059669' : '#B45309',
+                  color: demoSelected === SAMPLE_QUESTION.correct ? 'var(--success-text)' : 'var(--warning-text)',
                   marginBottom: '8px'
                 }}>
                   <CheckCircle2 size={16} />
@@ -581,7 +584,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <Link href="/exams" className="btn btn-ghost" style={{ fontSize: '13px', fontWeight: 700, gap: '6px', color: '#2563EB', textDecoration: 'none' }}>
+            <Link href="/exams" className="btn btn-ghost" style={{ fontSize: '13px', fontWeight: 700, gap: '6px', color: 'var(--link-text)', textDecoration: 'none' }}>
               <span>View All Papers</span>
               <ArrowRight size={14} />
             </Link>
@@ -603,19 +606,20 @@ export default function HomePage() {
                   transition: 'transform 0.15s ease'
                 }}>
                   <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '6px 10px', marginBottom: '12px' }}>
                       <span style={{
-                        fontSize: '11px',
+                        fontSize: '11.5px',
                         fontWeight: 700,
-                        color: exam.accentColor,
-                        background: 'rgba(37, 99, 235, 0.08)',
-                        border: '1px solid rgba(37, 99, 235, 0.25)',
-                        padding: '3px 10px',
-                        borderRadius: '6px'
+                        color: 'var(--text-secondary)',
+                        background: 'var(--bg-tertiary)',
+                        border: '1px solid var(--border)',
+                        padding: '3px 9px',
+                        borderRadius: '6px',
+                        whiteSpace: 'nowrap'
                       }}>
                         {exam.badge}
                       </span>
-                      <span style={{ fontSize: '11px', fontWeight: 600, color: 'var(--text-muted)' }}>
+                      <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-muted)', whiteSpace: 'nowrap', fontVariantNumeric: 'tabular-nums' }}>
                         {exam.period}
                       </span>
                     </div>
@@ -642,7 +646,7 @@ export default function HomePage() {
                     <span style={{
                       fontSize: '12px',
                       fontWeight: 700,
-                      color: '#C2410C',
+                      color: 'var(--brand-orange-text)',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '4px'

@@ -27,7 +27,7 @@ const renderKaTeXHtml = (expr: string, displayMode: boolean = false): string => 
     }
 };
 
-const NEGATIVE_KEYWORDS_REGEX = /\b(NOT correct|not correct|incorrectly|incorrect|not true|not valid|neither|except)\b|(ಸರಿಯಲ್ಲ|ತಪ್ಪಾಗಿದೆ|ತಪ್ಪು|ಸರಿಯಲ್ಲದ)|(सही नहीं|गलत|अवैध|असंगत)/gi;
+const NEGATIVE_KEYWORDS_REGEX = /\b(NOT correct|not correct|incorrectly|incorrect|not true|not valid|except)\b|(ಸರಿಯಲ್ಲ|ತಪ್ಪಾಗಿದೆ|ತಪ್ಪು|ಸರಿಯಲ್ಲದ)|(सही नहीं|गलत|अवैध|असंगत)/gi;
 
 function renderHighlightedModifiers(str: string): React.ReactNode {
     if (!str || typeof str !== 'string') return str;
@@ -38,7 +38,7 @@ function renderHighlightedModifiers(str: string): React.ReactNode {
     return (
         <>
             {parts.map((token, i) => {
-                const isNegative = /^(NOT correct|not correct|incorrectly|incorrect|not true|not valid|neither|except|ಸರಿಯಲ್ಲ|ತಪ್ಪಾಗಿದೆ|ತಪ್ಪು|ಸರಿಯಲ್ಲದ|सही नहीं|गलत|अवैध|असंगत)$/i.test(token.trim());
+                const isNegative = /^(NOT correct|not correct|incorrectly|incorrect|not true|not valid|except|ಸರಿಯಲ್ಲ|ತಪ್ಪಾಗಿದೆ|ತಪ್ಪು|ಸರಿಯಲ್ಲದ|सही नहीं|गलत|अवैध|असंगत)$/i.test(token.trim());
                 if (isNegative) {
                     return (
                         <mark
@@ -788,7 +788,7 @@ export function ExplanationFormatter({ text }: ExplanationFormatterProps) {
 
                     const badgeBg = isGreen ? 'rgba(16, 185, 129, 0.15)' : isRed ? 'rgba(225, 29, 72, 0.15)' : 'var(--bg-tertiary)';
                     const badgeBorder = isGreen ? 'rgba(16, 185, 129, 0.35)' : isRed ? 'rgba(225, 29, 72, 0.35)' : 'var(--border)';
-                    const badgeColor = isGreen ? '#10B981' : isRed ? '#F43F5E' : 'var(--brand-orange)';
+                    const badgeColor = isGreen ? 'var(--success-text)' : isRed ? 'var(--danger-text)' : 'var(--brand-orange-text)';
 
                     return (
                         <div 
