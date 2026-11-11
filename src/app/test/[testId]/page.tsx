@@ -1065,7 +1065,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         : (activeSession?.config?.exam_id === 'upsc-capf' ? 'UPSC CAPF (AC) PAPER I' : (activeSession?.config?.exam_id?.toUpperCase() || 'CIVIL SERVICES EXAM'));
 
     const examTitle = targetExam;
-    const paperTitle = activeSession?.config?.paper === 2 ? 'Paper II (CSAT)' : 'Paper I (GS)';
+    const cfgPaper = activeSession?.config?.paper;
+    const paperTitle = activeSession?.config?.exam_id === 'upsc-cse'
+        ? (cfgPaper === 2 ? 'Paper II (CSAT)' : 'Paper I (GS)')
+        : (typeof cfgPaper === 'number' ? `Paper ${cfgPaper}` : 'Full paper');
 
     return (
         <div className="cbt-terminal-wrapper">
@@ -1127,6 +1130,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                                 fontSizePercent={fontSizePercent}
                                 onReportDiscrepancy={() => setShowDiscrepancy(true)}
                                 onPreviewImage={(url) => setPreviewImage(url)}
+                                negativeDeduction={marking.negative}
                             />
 
                             {/* Bottom Action Bar */}

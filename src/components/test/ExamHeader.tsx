@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Shield, Clock, User, BookOpen } from 'lucide-react';
+import { Clock, User, BookOpen } from 'lucide-react';
 
 interface ExamHeaderProps {
     examTitle: string;
@@ -94,24 +94,6 @@ export default function ExamHeader({
                         <span>{activeLang === 'en' ? `ENG ⇄ ${secondaryLangName}` : `${secondaryLangName.toUpperCase()} ⇄ ENG`}</span>
                     </button>
                 )}
-
-                {/* Proctor Active Badge */}
-                <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    padding: '5px 10px',
-                    background: 'rgba(16, 185, 129, 0.08)',
-                    border: '1px solid rgba(16, 185, 129, 0.25)',
-                    borderRadius: '6px',
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    letterSpacing: '0.04em',
-                    color: '#047857'
-                }}>
-                    <Shield size={13} color="#047857" />
-                    <span>PROCTOR ACTIVE</span>
-                </div>
 
                 {/* Submit Exam Button */}
                 <button

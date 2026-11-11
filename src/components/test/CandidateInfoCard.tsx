@@ -43,18 +43,6 @@ export default function CandidateInfoCard({
                     <div style={{ fontSize: '13px', fontWeight: 800, color: 'var(--text-primary, #0F172A)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                         {name || 'Aspirant Candidate'}
                     </div>
-                    <span style={{
-                        background: 'rgba(16, 185, 129, 0.08)',
-                        color: '#047857',
-                        border: '1px solid rgba(16, 185, 129, 0.25)',
-                        fontSize: '10px',
-                        fontWeight: 900,
-                        padding: '1px 6px',
-                        borderRadius: '4px',
-                        letterSpacing: '0.04em'
-                    }}>
-                        LIVE
-                    </span>
                 </div>
 
                 <div style={{ fontSize: '10.5px', color: 'var(--text-muted, #64748B)', fontFamily: 'var(--cbt-font-mono)', marginTop: '2px' }}>

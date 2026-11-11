@@ -213,6 +213,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     } else {
                         qCount = paperCode === 'all' ? 200 : 100;
                     }
+                } else if (examId === 'ksp-psi') {
+                    let query = supabase.from('psi_pyq').select('id', { count: 'exact', head: true }).eq('paper', 2);
+                    if (mode === 'subject' && subject) {
+                        query = query.or(`subject.eq."${subject}",subject_kannada.eq."${subject}"`);
+                    }
+                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                    if (year !== 'all') query = query.eq('year', year);
+                    const { count: psiCount } = await query;
+                    qCount = psiCount || 0;
                 } else if (examId === 'kpsc-kas') {
                     let query = supabase.from('kas_questions').select('id', { count: 'exact', head: true });
                     if (mode === 'subject' && subject) query = query.eq('subject', subject);
@@ -316,8 +325,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             difficulty,
             question_count: finalCount,
             language: testLang,
-            year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' || examId === 'kea' || examId.startsWith('kea-') ? year : examId === 'ksp-pc' ? 2026 : undefined,
-            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : ((examId === 'upsc-capf' || examId === 'upsc-epfo') ? 1 : undefined),
+            year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' || examId === 'ksp-psi' || examId === 'kea' || examId.startsWith('kea-') ? year : examId === 'ksp-pc' ? 2026 : undefined,
+            paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : examId === 'ksp-psi' ? 2 : ((examId === 'upsc-capf' || examId === 'upsc-epfo') ? 1 : undefined),
             month: examId === 'kpsc-kas' ? month : examId === 'ksp-pc' ? 'September' : undefined,
             paper_code: examId === 'ksp-pc' || examId === 'upsc-epfo' || examId === 'kea' || examId.startsWith('kea-') ? paperCode : undefined
         };
@@ -351,7 +360,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
     // ── Practice-tab option model ───────────────────────────────────────
     const isKea = examId === 'kea' || examId.startsWith('kea-');
-    const showPaperYear = examId !== 'ksp-pc' && (mode === 'yearwise' || ['upsc-cse', 'kpsc-kas', 'upsc-capf', 'upsc-epfo'].includes(examId) || isKea);
+    const showPaperYear = examId !== 'ksp-pc' && (mode === 'yearwise' || ['upsc-cse', 'kpsc-kas', 'upsc-capf', 'upsc-epfo', 'ksp-psi'].includes(examId) || isKea);
 
     const codeOpt = (code: string, label: string, meta?: string, onSelect?: () => void): Opt => ({
         key: code, label, meta, selected: paperCode === code, onSelect: onSelect || (() => setPaperCode(code)),
@@ -363,6 +372,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             codeOpt('hk', 'HK CAR/DAR 2026', 'Hyderabad-Karnataka · 100 Qs'),
             codeOpt('nhk', 'NHK CAR/DAR 2026', 'Non-HK, state-wide · 100 Qs'),
         ];
+    } else if (examId === 'ksp-psi') {
+        paperOptions = []; // Paper 1 is descriptive; practice uses objective Paper 2
     } else if (isKea) {
         paperOptions = [
             codeOpt('all', 'All papers', '64 papers · 6,364 Qs'),
@@ -418,8 +429,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                 ? [2025, 2023, 2021, 2017, 2016, 2012, 2004, 2002]
                 : examId === 'kpsc-kas'
                     ? [2024, 2020, 2017, 2015, 2011]
+                    : examId === 'ksp-psi'
+                    ? [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
                     : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011];
-    const allYearsRange = isKea ? '2023–2026' : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : '2011–2024';
+    const allYearsRange = isKea ? '2023–2026' : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : examId === 'ksp-psi' ? '2016–2024' : '2011–2024';
     const epfoYearMeta = (yr: number) => yr === 2025 ? 'Combined' : yr === 2023 ? 'EO/AO & APFC' : [2021, 2017].includes(yr) ? 'EO/AO' : 'APFC';
     const epfoYearMatches = (yr: number) => examId !== 'upsc-epfo' || paperCode === 'all'
         || (paperCode === 'eoao' && [2023, 2021, 2017].includes(yr))
@@ -456,7 +469,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const summaryRows: [string, string][] = [
         ['Mode', modes.find(m => m.id === mode)?.title || ''],
     ];
-    if (showPaperYear || examId === 'ksp-pc') summaryRows.push(['Paper', paperOptions.find(o => o.selected)?.label || '—']);
+    if ((showPaperYear || examId === 'ksp-pc') && paperOptions.length > 0) summaryRows.push(['Paper', paperOptions.find(o => o.selected)?.label || '—']);
+    if (examId === 'ksp-psi') summaryRows.push(['Paper', 'Paper 2 · General Studies']);
     if (showPaperYear) {
         const monthLabel = examId === 'kpsc-kas' && year === 2024 && month !== 'all' ? (month === 'august' ? ' · August' : ' · December') : '';
         summaryRows.push(['Year', year === 'all' ? `All (${allYearsRange})` : `${year}${monthLabel}`]);
@@ -548,18 +562,20 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             {/* Paper & year */}
                             {(showPaperYear || examId === 'ksp-pc') && (
                                 <section className="xd-section" aria-labelledby="xd-paper-h">
-                                    <h2 id="xd-paper-h" className="xd-section-title">{examId === 'ksp-pc' ? 'Paper' : 'Paper & year'}</h2>
+                                    <h2 id="xd-paper-h" className="xd-section-title">{examId === 'ksp-pc' ? 'Paper' : paperOptions.length === 0 ? 'Year' : 'Paper & year'}</h2>
                                     <p className="xd-section-sub">
                                         {examId === 'ksp-pc'
                                             ? 'September 2026 session, checked against the official answer key.'
                                             : mode === 'yearwise' ? 'Pick the paper you want to sit.' : 'Optional — narrow the question pool.'}
                                     </p>
 
-                                    <OptionGroup label={examId === 'ksp-pc' ? 'Cadre / region' : 'Paper'}>
-                                        {paperOptions.map(o => (
-                                            <Chip key={o.key} selected={o.selected} onSelect={o.onSelect} meta={o.meta}>{o.label}</Chip>
-                                        ))}
-                                    </OptionGroup>
+                                    {paperOptions.length > 0 && (
+                                        <OptionGroup label={examId === 'ksp-pc' ? 'Cadre / region' : 'Paper'}>
+                                            {paperOptions.map(o => (
+                                                <Chip key={o.key} selected={o.selected} onSelect={o.onSelect} meta={o.meta}>{o.label}</Chip>
+                                            ))}
+                                        </OptionGroup>
+                                    )}
 
                                     {showPaperYear && (
                                         <OptionGroup label="Year">

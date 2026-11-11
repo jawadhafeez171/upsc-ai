@@ -72,7 +72,7 @@ export function InstructionsModal({
                         <li>Each question answered correctly awards <strong>+{positiveMarks.toFixed(2)} marks</strong>.</li>
                         <li>
                             {negativeDeduction > 0 ? (
-                                <>For each incorrect answer, <strong>-{negativeDeduction.toFixed(2)} marks (1/3rd penalty)</strong> will be deducted from your total score.</>
+                                <>For each incorrect answer, <strong>-{negativeDeduction.toFixed(2)} marks</strong> will be deducted from your total score.</>
                             ) : (
                                 <>There is <strong>no negative marking</strong> for wrong answers in this examination sitting.</>
                             )}

@@ -99,7 +99,7 @@ export default function ExamSubHeader({
                     fontSize: '12px',
                     fontWeight: 800
                 }}>
-                    {negativeDeduction > 0 ? `-${negativeDeduction.toFixed(2)} Negative (1/3rd)` : 'No Negative'}
+                    {negativeDeduction > 0 ? `−${negativeDeduction.toFixed(2)} per wrong answer` : 'No Negative'}
                 </div>
 
                 {/* Font Size Adjuster Controls */}

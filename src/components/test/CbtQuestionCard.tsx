@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Flag, X, RefreshCw, ZoomIn, AlertCircle } from 'lucide-react';
+import { Flag, X, RefreshCw, ZoomIn, AlertCircle, Languages } from 'lucide-react';
 import QuestionFormatter, { OptionFormatter } from '@/components/ui/QuestionFormatter';
 import PassageCard from '@/components/ui/PassageCard';
 import { isValidImageUrl } from '@/lib/imageUtils';
@@ -40,6 +40,7 @@ interface CbtQuestionCardProps {
     fontSizePercent: number;
     onReportDiscrepancy: () => void;
     onPreviewImage: (imageUrl: string) => void;
+    negativeDeduction?: number;
 }
 
 export default function CbtQuestionCard({
@@ -54,10 +55,13 @@ export default function CbtQuestionCard({
     onToggleEliminate,
     fontSizePercent,
     onReportDiscrepancy,
-    onPreviewImage
+    onPreviewImage,
+    negativeDeduction
 }: CbtQuestionCardProps) {
     const hasTranslation = activeLang !== 'en' && ((activeLang === 'kn' && question.text_kn) || (activeLang === 'hi' && question.text_hi));
-    const secondaryLangLabel = activeLang === 'kn' ? 'KANNADA ACTIVE' : 'HINDI ACTIVE';
+    const LANG_NAME: Record<string, string> = { en: 'English', hi: 'Hindi', kn: 'Kannada' };
+    const otherLang = supportedLangs.find((l) => l !== 'en') || 'en';
+    const secondaryLangLabel = activeLang === 'en' ? `Show in ${LANG_NAME[otherLang]}` : 'Show in English';
 
     // Parse question statement blocks if question text has numbered statements: "1. ... 2. ..." or "1) ... 2) ..."
     const parseStatementBlocks = (rawText: string) => {
@@ -100,7 +104,9 @@ export default function CbtQuestionCard({
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     {supportedLangs.length > 1 && (
                         <button
+                            type="button"
                             onClick={onToggleLang}
+                            aria-label={secondaryLangLabel}
                             style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
@@ -111,12 +117,12 @@ export default function CbtQuestionCard({
                                 background: 'var(--bg-card)',
                                 fontSize: '11.5px',
                                 fontWeight: 700,
-                                color: 'var(--brand-blue)',
+                                color: 'var(--link-text)',
                                 cursor: 'pointer',
                                 transition: 'all 0.15s ease'
                             }}
                         >
-                            <span>文 {secondaryLangLabel}</span>
+                            <Languages size={13} aria-hidden="true" /><span>{secondaryLangLabel}</span>
                         </button>
                     )}
 
@@ -374,7 +380,7 @@ export default function CbtQuestionCard({
                         EXAM NOTICE:
                     </span>
                     <span style={{ fontSize: '11.5px', color: '#4B5563' }}>
-                        1/3rd Negative Marking applies (-0.66). Evaluate all statements carefully.
+                        {negativeDeduction ? `−${negativeDeduction} mark for each wrong answer.` : 'No negative marking.'} Evaluate all statements carefully.
                     </span>
                 </div>
 

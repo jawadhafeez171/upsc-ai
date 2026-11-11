@@ -151,8 +151,8 @@ export const EXAMS: Exam[] = [
         description_kn: 'ಪೊಲೀಸ್ ಉಪ-ನಿರೀಕ್ಷಕ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆ (ಸಿವಿಲ್ / ಸಶಸ್ತ್ರ)',
         languages: ['en', 'kn'],
         negative_marking: 0.25,
-        subjects: ['Indian Constitution & Polity', 'Indian & Karnataka History', 'Geography', 'General Science', 'Current Affairs', 'Mental Ability', 'Translation (English ↔ Kannada)', 'Essay & Precis'],
-        subjects_kn: ['ಭಾರತೀಯ ಸಂವಿಧಾನ & ಪೊಲೀಸ್ ಅಧಿಕಾರಗಳು', 'ಭಾರತ & ಕರ್ನಾಟಕ ಇತಿಹಾಸ', 'ಭೂಗೋಳಶಾಸ್ತ್ರ', 'ಸಾಮಾನ್ಯ ವಿಜ್ಞಾನ', 'ಪ್ರಚಲಿತ ವಿದ್ಯಮಾನಗಳು', 'ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ', 'ಭಾಷಾಂತರ (ಕನ್ನಡ ↔ ಇಂಗ್ಲಿಷ್)', 'ಪ್ರಬಂಧ & ಸಂಕ್ಷೇಪಣೆ'],
+        subjects: ['Science, Technology & Defence', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'Geography & Earth Systems', 'Indian Polity, Constitution & Governance', 'History', 'General Knowledge', 'Indian Economy & Development', 'Art, Culture & Heritage', 'Communication Paper', 'Environment, Ecology & Disaster Management', 'International Relations & Global Institutions', 'Sports'],
+        subjects_kn: ['ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ಇತಿಹಾಸ', 'ಸಾಮಾನ್ಯ ಜ್ಞಾನ', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ', 'ಸಂವಹನ ಪತ್ರಿಕೆ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ', 'ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು', 'ಕ್ರೀಡೆ'],
         icon: '👮',
         color: '#1E3A8A',
         badge: 'High Demand'
