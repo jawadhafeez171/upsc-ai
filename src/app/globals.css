@@ -20,7 +20,7 @@
   /* High-Contrast Modern Slate Typography */
   --text-primary: #0F172A;
   --text-secondary: #475569;
-  --text-muted: #64748B;
+  --text-muted: #5B677A; /* 4.9:1 on tertiary panels */
 
   /* Subtle Refined Borders */
   --border: #E2E8F0;
@@ -42,6 +42,7 @@
   --brand-orange-glow: rgba(234, 88, 12, 0.2);
   --brand-orange-text: #C2410C;   /* saffron for text: 5.2:1 on white */
   --link-text: #2563EB;
+  --teal-text: #0F766E;
   --success-text: #047857;
   --danger-text: #BE123C;
   --warning-text: #B45309;
@@ -91,7 +92,7 @@
 
   --text-primary: #0F172A;
   --text-secondary: #475569;
-  --text-muted: #64748B;
+  --text-muted: #5B677A;
 
   --border: #E2E8F0;
   --border-subtle: #F1F5F9;
@@ -119,6 +120,7 @@
   --text-muted: #8A94A8;
   --brand-orange-text: #FB923C;
   --link-text: #60A5FA;
+  --teal-text: #2DD4BF;
   --success-text: #34D399;
   --danger-text: #FB7185;
   --warning-text: #FBBF24;

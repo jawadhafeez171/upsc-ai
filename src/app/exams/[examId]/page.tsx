@@ -723,7 +723,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 </div>
                                 <div style={{ background: 'var(--bg-secondary)', padding: '10px 16px', borderRadius: '10px' }}>
                                     <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>CATEGORY: </span>
-                                    <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--brand-orange)', textTransform: 'uppercase' }}>
+                                    <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--brand-orange-text)', textTransform: 'uppercase' }}>
                                         {examInfo.category}
                                     </span>
                                 </div>
@@ -744,14 +744,14 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     <div key={stg.stageNumber} style={{ border: '1px solid var(--border)', borderRadius: '14px', overflow: 'hidden' }}>
                                         <div style={{ background: 'var(--bg-secondary)', padding: '14px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                <span style={{ fontSize: '11px', fontWeight: 800, padding: '3px 8px', borderRadius: '6px', background: 'var(--brand-orange)', color: '#FFFFFF' }}>
+                                                <span style={{ fontSize: '11px', fontWeight: 800, padding: '3px 8px', borderRadius: '6px', background: 'var(--brand-orange-dim)', color: '#FFFFFF' }}>
                                                     STAGE {stg.stageNumber}
                                                 </span>
                                                 <span style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
                                                     {stg.stageName}
                                                 </span>
                                             </div>
-                                            <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--brand-teal)' }}>
+                                            <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--teal-text)' }}>
                                                 {stg.totalMarks > 0 ? `${stg.totalMarks} Marks` : 'Qualifying'}
                                             </span>
                                         </div>
@@ -769,7 +769,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                                 <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)' }}>
                                                                     {p.paperName}
                                                                 </span>
-                                                                <span style={{ fontSize: '12.5px', fontWeight: 700, color: 'var(--brand-orange)' }}>
+                                                                <span style={{ fontSize: '12.5px', fontWeight: 700, color: 'var(--brand-orange-text)' }}>
                                                                     {p.marks} Marks ({p.durationMinutes} mins)
                                                                 </span>
                                                             </div>
@@ -867,9 +867,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     </div>
                                     <Link 
                                         href="/graph" 
-                                        style={{ fontSize: '13px', fontWeight: 700, color: 'var(--brand-teal)', textDecoration: 'none' }}
+                                        style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', minHeight: '44px', fontSize: '13px', fontWeight: 700, color: 'var(--teal-text)', textDecoration: 'none' }}
                                     >
-                                        Explore 14-Pillar Knowledge Graph ➔
+                                        Explore 14-Pillar Knowledge Graph <ArrowRight size={14} />
                                     </Link>
                                 </div>
 
@@ -878,7 +878,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                         <div key={fIdx} style={{ background: 'var(--bg-secondary)', padding: '16px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                                                 <span style={{ fontSize: '14px', fontWeight: 800, color: 'var(--text-primary)' }}>{foc.pillarName}</span>
-                                                <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange)', background: 'rgba(255, 107, 43, 0.1)', padding: '2px 8px', borderRadius: '6px' }}>{foc.weightage}</span>
+                                                <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange-text)', background: 'rgba(255, 107, 43, 0.1)', padding: '2px 8px', borderRadius: '6px' }}>{foc.weightage}</span>
                                             </div>
                                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                                                 {foc.topics.map((tp, tIdx) => (
@@ -961,7 +961,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                                             <span style={{ 
                                                                 fontSize: '13px', fontWeight: 900, color: '#FFFFFF',
-                                                                background: isAIS ? 'var(--brand-orange)' : 'var(--brand-teal)',
+                                                                background: isAIS ? 'var(--brand-orange-dim)' : 'var(--brand-teal-dim)',
                                                                 padding: '4px 10px', borderRadius: '8px'
                                                             }}>
                                                                 {srv.serviceCode}
@@ -975,7 +975,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     <h3 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
                                                         {srvName}
                                                     </h3>
-                                                    <div style={{ fontSize: '12.5px', fontWeight: 600, color: 'var(--brand-teal)', marginBottom: '10px' }}>
+                                                    <div style={{ fontSize: '12.5px', fontWeight: 600, color: 'var(--teal-text)', marginBottom: '10px' }}>
                                                         {srv.department}
                                                     </div>
 
@@ -988,7 +988,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     <div style={{ fontSize: '11.5px', color: 'var(--text-muted)' }}>
                                                         <strong>Entry Post:</strong> {srv.entryDesignation}
                                                     </div>
-                                                    <div style={{ fontSize: '11.5px', color: 'var(--brand-orange)' }}>
+                                                    <div style={{ fontSize: '11.5px', color: 'var(--brand-orange-text)' }}>
                                                         <strong>Apex Rank:</strong> {srv.careerApex}
                                                     </div>
                                                 </div>
@@ -1020,7 +1020,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 </div>
                                 <div>
                                     <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>CADRE & CLASS</div>
-                                    <div style={{ fontSize: '14.5px', fontWeight: 700, color: 'var(--brand-orange)', marginTop: '2px' }}>
+                                    <div style={{ fontSize: '14.5px', fontWeight: 700, color: 'var(--brand-orange-text)', marginTop: '2px' }}>
                                         {examInfo.jobRole.cadre}
                                     </div>
                                 </div>
@@ -1049,7 +1049,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
                                 {examInfo.jobRole.careerProgression.map((step, idx) => (
                                     <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13.5px', color: 'var(--text-secondary)', background: 'var(--bg-tertiary)', padding: '10px 14px', borderRadius: '10px' }}>
-                                        <ChevronRight size={16} color="var(--brand-teal)" />
+                                        <ChevronRight size={16} color="var(--teal-text)" />
                                         <span>{step}</span>
                                     </div>
                                 ))}
@@ -1084,8 +1084,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 </div>
 
                                 <div style={{ background: 'rgba(13, 148, 136, 0.08)', border: '1px solid rgba(13, 148, 136, 0.2)', padding: '16px', borderRadius: '14px' }}>
-                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--brand-teal)' }}>APPROX GROSS SALARY</div>
-                                    <div style={{ fontSize: '18px', fontWeight: 900, color: 'var(--brand-teal)', marginTop: '4px' }}>
+                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--teal-text)' }}>APPROX GROSS SALARY</div>
+                                    <div style={{ fontSize: '18px', fontWeight: 900, color: 'var(--teal-text)', marginTop: '4px' }}>
                                         {examInfo.jobRole.payScale.approxMonthlyGross}
                                     </div>
                                 </div>
@@ -1097,7 +1097,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                                 {examInfo.jobRole.payScale.perks.map((perk, idx) => (
                                     <span key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12.5px', fontWeight: 600, padding: '5px 12px', borderRadius: '8px', background: 'var(--bg-tertiary)', color: 'var(--text-secondary)' }}>
-                                        <CheckCircle2 size={13} color="var(--brand-teal)" />
+                                        <CheckCircle2 size={13} color="var(--teal-text)" />
                                         {perk}
                                     </span>
                                 ))}

@@ -45,6 +45,7 @@
   text-decoration: none;
   border-radius: var(--radius-sm);
   padding: 4px 2px;
+  min-height: 44px;
   transition: color 150ms var(--xd-ease);
 }
 .xd-back:hover { color: var(--text-primary); }
