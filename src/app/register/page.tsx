@@ -111,20 +111,17 @@ export default function RegisterPage() {
             <div style={{ flex: '1', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px 24px', background: 'var(--bg-primary)' }}>
                 <div style={{ width: '100%', maxWidth: '420px', padding: '36px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--bg-card)', boxShadow: 'var(--shadow-card)' }} className="fade-in-up">
                     <div style={{ marginBottom: '28px' }}>
-                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 700, color: '#1D4ED8', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '6px', padding: '3px 8px', marginBottom: '12px' }}>
-                            UPSC AI ASPIRANT
-                        </div>
                         <h1 style={{ fontSize: '26px', fontWeight: 900, letterSpacing: '-0.5px', marginBottom: '6px' }}>Create account</h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '13.5px' }}>Free mock tests. No credit card needed.</p>
                     </div>
 
                     {error && (
-                        <div style={{
+                        <div role="alert" style={{
                             background: '#FEF2F2', border: '1px solid #FECACA',
                             borderRadius: '8px', padding: '12px 16px', marginBottom: '20px',
                             fontSize: '13.5px', color: '#DC2626', fontWeight: 600,
                         }}>
-                            ⚠️ {error}
+                            {error}
                         </div>
                     )}
 
@@ -146,23 +143,23 @@ export default function RegisterPage() {
 
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label htmlFor="register-name" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <User size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Full Name
                             </label>
-                            <input className="input" type="text" placeholder="Arjun Sharma" value={name} onChange={(e) => setName(e.target.value)} required autoComplete="name" style={{ borderRadius: '8px' }} />
+                            <input id="register-name" className="input" type="text" placeholder="Arjun Sharma" value={name} onChange={(e) => setName(e.target.value)} required autoComplete="name" style={{ borderRadius: '8px' }} />
                         </div>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label htmlFor="register-email" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Mail size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Email
                             </label>
-                            <input className="input" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" style={{ borderRadius: '8px' }} />
+                            <input id="register-email" className="input" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" style={{ borderRadius: '8px' }} />
                         </div>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label htmlFor="register-password" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Lock size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Password
                             </label>
                             <div style={{ position: 'relative' }}>
-                                <input
+                                <input id="register-password"
                                     className="input"
                                     type={showPass ? 'text' : 'password'}
                                     placeholder="Min. 6 characters"
@@ -171,16 +168,16 @@ export default function RegisterPage() {
                                     required autoComplete="new-password"
                                     style={{ paddingRight: '44px', borderRadius: '8px' }}
                                 />
-                                <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
+                                <button type="button" onClick={() => setShowPass(!showPass)} aria-label={showPass ? 'Hide password' : 'Show password'} aria-pressed={showPass} style={{ position: 'absolute', right: '2px', top: '50%', transform: 'translateY(-50%)', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', borderRadius: '6px', cursor: 'pointer', color: 'var(--text-muted)' }}>
                                     {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
                                 </button>
                             </div>
                         </div>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label htmlFor="register-confirm" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Lock size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Confirm Password
                             </label>
-                            <input className="input" type={showPass ? 'text' : 'password'} placeholder="Repeat password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required autoComplete="new-password" style={{ borderRadius: '8px' }} />
+                            <input id="register-confirm" className="input" type={showPass ? 'text' : 'password'} placeholder="Repeat password" value={confirm} onChange={(e) => setConfirm(e.target.value)} required autoComplete="new-password" style={{ borderRadius: '8px' }} />
                         </div>
                         <button
                             type="submit"
@@ -188,13 +185,13 @@ export default function RegisterPage() {
                             style={{ padding: '12px', fontSize: '14px', marginTop: '4px', width: '100%', borderRadius: '8px' }}
                             disabled={loading}
                         >
-                            {loading ? '⏳ Creating account…' : <><ArrowRight size={16} /> Create Account</>}
+                            {loading ? 'Creating account…' : <><ArrowRight size={16} /> Create Account</>}
                         </button>
                     </form>
 
                     <p style={{ textAlign: 'center', marginTop: '24px', fontSize: '13px', color: 'var(--text-muted)' }}>
                         Already have an account?{' '}
-                        <Link href="/login" style={{ color: 'var(--brand-orange)', fontWeight: 700, textDecoration: 'none' }}>Sign In</Link>
+                        <Link href="/login" style={{ color: 'var(--brand-orange-text)', fontWeight: 700, textDecoration: 'none', display: 'inline-block', padding: '10px 2px' }}>Sign In</Link>
                     </p>
                 </div>
             </div>

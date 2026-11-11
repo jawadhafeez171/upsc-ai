@@ -93,20 +93,17 @@ export default function LoginPage() {
             }}>
                 <div style={{ width: '100%', maxWidth: '420px', padding: '36px', borderRadius: '12px', border: '1px solid var(--border)', background: 'var(--bg-card)', boxShadow: 'var(--shadow-card)' }} className="fade-in-up">
                     <div style={{ marginBottom: '28px' }}>
-                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: 700, color: '#1D4ED8', background: '#EFF6FF', border: '1px solid #BFDBFE', borderRadius: '6px', padding: '3px 8px', marginBottom: '12px' }}>
-                            UPSC AI ACCESS
-                        </div>
                         <h1 style={{ fontSize: '26px', fontWeight: 900, letterSpacing: '-0.5px', marginBottom: '6px' }}>Welcome back</h1>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '13.5px' }}>Continue your preparation journey</p>
                     </div>
 
                     {error && (
-                        <div style={{
+                        <div role="alert" style={{
                             background: '#FEF2F2', border: '1px solid #FECACA',
                             borderRadius: '8px', padding: '12px 16px', marginBottom: '20px',
                             fontSize: '13.5px', color: '#DC2626', fontWeight: 600,
                         }}>
-                            ⚠️ {error}
+                            {error}
                         </div>
                     )}
 
@@ -128,10 +125,10 @@ export default function LoginPage() {
 
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label htmlFor="login-email" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Mail size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Email
                             </label>
-                            <input
+                            <input id="login-email"
                                 className="input"
                                 type="email"
                                 placeholder="you@example.com"
@@ -143,11 +140,11 @@ export default function LoginPage() {
                             />
                         </div>
                         <div>
-                            <label style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
+                            <label htmlFor="login-password" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)', display: 'block', marginBottom: '6px' }}>
                                 <Lock size={13} style={{ display: 'inline', marginRight: '6px', verticalAlign: 'middle' }} />Password
                             </label>
                             <div style={{ position: 'relative' }}>
-                                <input
+                                <input id="login-password"
                                     className="input"
                                     type={showPass ? 'text' : 'password'}
                                     placeholder="••••••••"
@@ -157,7 +154,7 @@ export default function LoginPage() {
                                     autoComplete="current-password"
                                     style={{ paddingRight: '44px', borderRadius: '8px' }}
                                 />
-                                <button type="button" onClick={() => setShowPass(!showPass)} style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}>
+                                <button type="button" onClick={() => setShowPass(!showPass)} aria-label={showPass ? 'Hide password' : 'Show password'} aria-pressed={showPass} style={{ position: 'absolute', right: '2px', top: '50%', transform: 'translateY(-50%)', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'none', border: 'none', borderRadius: '6px', cursor: 'pointer', color: 'var(--text-muted)' }}>
                                     {showPass ? <EyeOff size={16} /> : <Eye size={16} />}
                                 </button>
                             </div>
@@ -168,13 +165,13 @@ export default function LoginPage() {
                             style={{ padding: '12px', fontSize: '14px', marginTop: '4px', width: '100%', borderRadius: '8px' }}
                             disabled={loading}
                         >
-                            {loading ? '⏳ Signing in…' : <><ArrowRight size={16} /> Sign In</>}
+                            {loading ? 'Signing in…' : <><ArrowRight size={16} /> Sign In</>}
                         </button>
                     </form>
 
                     <p style={{ textAlign: 'center', marginTop: '24px', fontSize: '13px', color: 'var(--text-muted)' }}>
                         New here?{' '}
-                        <Link href="/register" style={{ color: 'var(--brand-orange)', fontWeight: 700, textDecoration: 'none' }}>Create a free account</Link>
+                        <Link href="/register" style={{ color: 'var(--brand-orange-text)', fontWeight: 700, textDecoration: 'none', display: 'inline-block', padding: '10px 2px' }}>Create a free account</Link>
                     </p>
                 </div>
             </div>
