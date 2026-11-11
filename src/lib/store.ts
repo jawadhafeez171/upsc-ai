@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useState } from 'react';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { User, TestSession, Language, Badge } from '@/types';
@@ -131,3 +132,19 @@ export const useAppStore = create<AppState>()(
         }
     )
 );
+
+/**
+ * True once the persisted store has been read from localStorage *and* the
+ * component is past React hydration. During hydration zustand serves the
+ * initial (empty) state so markup matches the server, so effects that
+ * redirect on "no user" / "no session" must wait for this.
+ */
+export function useStoreHydrated() {
+    const [hydrated, setHydrated] = useState(false);
+    useEffect(() => {
+        const unsub = useAppStore.persist.onFinishHydration(() => setHydrated(true));
+        if (useAppStore.persist.hasHydrated()) setHydrated(true);
+        return unsub;
+    }, []);
+    return hydrated;
+}

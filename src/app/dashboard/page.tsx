@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { useAppStore } from '@/lib/store';
+import { useAppStore, useStoreHydrated } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import {
     ArrowRight,
@@ -50,10 +50,12 @@ export default function DashboardPage() {
     const { user, completedSessions, activeSession } = useAppStore();
     const [recentSessions, setRecentSessions] = useState<any[]>([]);
     const [examsObj, setExamsObj] = useState<Record<string, { name: string; color: string }>>({});
+    const hydrated = useStoreHydrated();
 
     useEffect(() => {
+        if (!hydrated) return;
         if (!user) {
-            router.push('/login');
+            router.replace('/login');
             return;
         }
 
@@ -77,7 +79,7 @@ export default function DashboardPage() {
             }
         }
         fetchExams();
-    }, [user, completedSessions, router]);
+    }, [hydrated, user, completedSessions, router]);
 
     if (!user) return null;
 

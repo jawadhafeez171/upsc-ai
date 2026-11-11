@@ -2,7 +2,7 @@
 import { use, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { useAppStore } from '@/lib/store';
+import { useAppStore, useStoreHydrated } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import {
     CheckCircle,
@@ -33,6 +33,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     const router = useRouter();
     const { completedSessions, setActiveSession } = useAppStore();
     const session = completedSessions.find((s) => s.id === testId);
+    const hydrated = useStoreHydrated();
 
     const [filter, setFilter] = useState<ReviewFilter>('all');
     const [expanded, setExpanded] = useState<string | null>(null);
@@ -47,8 +48,9 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     }, [session?.config?.language]);
 
     useEffect(() => {
+        if (!hydrated) return;
         if (!session) {
-            router.push('/exams');
+            router.replace('/exams');
             return;
         }
         async function loadExam() {
@@ -60,7 +62,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
             setLoadingExam(false);
         }
         loadExam();
-    }, [session, router]);
+    }, [hydrated, session, router]);
 
     if (!session || loadingExam) {
         return (
@@ -78,6 +80,9 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
     const correct = questions.filter((q) => answers[q.id]?.is_correct === true && q.correct?.toLowerCase() !== 'x').length;
     const incorrect = questions.filter((q) => answers[q.id]?.is_correct === false).length;
     const skipped = questions.filter((q) => !answers[q.id]?.selected && q.correct?.toLowerCase() !== 'x').length;
+    const attempted = correct + incorrect;
+    const accuracy = attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
+    const tone = (p: number) => (p >= 60 ? 'var(--success-text)' : p >= 40 ? 'var(--warning-text)' : 'var(--danger-text)');
 
     const filtered = questions.filter((q) => {
         const a = answers[q.id];
@@ -118,10 +123,10 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
             <div style={{ maxWidth: '920px', margin: '0 auto', padding: '0 24px' }}>
 
                 {/* Scorecard Box */}
-                <div className="card" style={{ padding: '32px', textAlign: 'center', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
-                    <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '18px', fontWeight: 600 }}>
-                        {exam?.name || 'Examination'} · {config.mode === 'subject' ? config.subject : 'Full Paper'}
-                    </div>
+                <div className="card card-static" style={{ padding: '32px', textAlign: 'center', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                    <h1 style={{ fontSize: '15px', color: 'var(--text-secondary)', margin: '0 0 18px', fontWeight: 700, letterSpacing: 0 }}>
+                        {exam?.name || 'Examination'} · {config.mode === 'subject' ? config.subject : 'Full paper'} — result
+                    </h1>
 
                     <div style={{
                         width: '108px',
@@ -135,23 +140,26 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         justifyContent: 'center',
                         margin: '0 auto 16px',
                     }}>
-                        <div style={{ fontSize: '30px', fontWeight: 900, fontFamily: 'var(--font-mono, monospace)', color: pct >= 60 ? '#059669' : pct >= 40 ? '#D97706' : '#DC2626' }}>
+                        <div style={{ fontSize: '30px', fontWeight: 900, fontFamily: 'var(--font-mono, monospace)', color: tone(pct) }}>
                             {pct}%
                         </div>
-                        <div style={{ fontSize: '10.5px', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Accuracy</div>
+                        <div style={{ fontSize: '10.5px', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Score</div>
                     </div>
 
-                    <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '24px', color: 'var(--text-primary)', fontFamily: 'var(--font-mono, monospace)' }}>
-                        {score} / {total_marks} Marks
+                    <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '4px', color: 'var(--text-primary)', fontVariantNumeric: 'tabular-nums' }}>
+                        {score} / {total_marks} marks
+                    </div>
+                    <div style={{ fontSize: '13px', color: 'var(--text-secondary)', marginBottom: '24px' }}>
+                        {attempted > 0 ? `${accuracy}% accuracy on ${attempted} attempted question${attempted === 1 ? '' : 's'}` : 'No questions attempted'}
                     </div>
 
                     {/* Breakdown Pills */}
                     <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap' }}>
                         {[
-                            { label: 'Correct', value: correct, icon: <CheckCircle size={16} color="#059669" />, color: '#059669', bg: 'rgba(16, 185, 129, 0.06)' },
-                            { label: 'Incorrect', value: incorrect, icon: <XCircle size={16} color="#DC2626" />, color: '#DC2626', bg: 'rgba(239, 68, 68, 0.06)' },
-                            { label: 'Unattempted', value: skipped, icon: <MinusCircle size={16} color="#64748B" />, color: '#64748B', bg: 'rgba(100, 116, 139, 0.06)' },
-                            ...(dropped > 0 ? [{ label: 'Dropped (Bonus)', value: dropped, icon: <Gift size={16} color="#D97706" />, color: '#D97706', bg: 'rgba(245, 158, 11, 0.06)' }] : []),
+                            { label: 'Correct', value: correct, icon: <CheckCircle size={16} color="var(--success-text)" />, color: 'var(--success-text)', bg: 'rgba(16, 185, 129, 0.06)' },
+                            { label: 'Incorrect', value: incorrect, icon: <XCircle size={16} color="var(--danger-text)" />, color: 'var(--danger-text)', bg: 'rgba(239, 68, 68, 0.06)' },
+                            { label: 'Unattempted', value: skipped, icon: <MinusCircle size={16} color="var(--text-muted)" />, color: 'var(--text-secondary)', bg: 'rgba(100, 116, 139, 0.06)' },
+                            ...(dropped > 0 ? [{ label: 'Dropped (Bonus)', value: dropped, icon: <Gift size={16} color="var(--warning-text)" />, color: 'var(--warning-text)', bg: 'rgba(245, 158, 11, 0.06)' }] : []),
                         ].map((s) => (
                             <div key={s.label} style={{
                                 padding: '10px 16px',
@@ -174,7 +182,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                 </div>
 
                 {/* Subject-Wise Performance Breakdown */}
-                <div className="card" style={{ padding: '24px', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                <div className="card card-static" style={{ padding: '24px', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
                         <BarChart3 size={17} color="#2563EB" />
                         <h2 style={{ fontWeight: 800, fontSize: '15.5px', margin: 0 }}>Subject-Wise Performance</h2>
@@ -185,7 +193,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                             <div key={s.subject}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', marginBottom: '6px' }}>
                                     <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{s.subject}</span>
-                                    <span style={{ fontWeight: 700, fontFamily: 'var(--font-mono, monospace)', color: s.pct >= 60 ? '#059669' : s.pct >= 40 ? '#D97706' : '#DC2626' }}>
+                                    <span style={{ fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: tone(s.pct), whiteSpace: 'nowrap', marginLeft: '12px' }}>
                                         {s.correct}/{s.total} ({s.pct}%)
                                     </span>
                                 </div>
@@ -254,7 +262,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                 </div>
 
                 {/* Question Review Section */}
-                <div className="card" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                <div className="card card-static" style={{ padding: 'clamp(14px, 4vw, 24px)', borderRadius: '12px', border: '1px solid var(--border)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <BookOpen size={17} color="#2563EB" />
@@ -275,11 +283,13 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                                 key={l}
                                                 type="button"
                                                 onClick={() => setActiveLang(l)}
+                                                aria-pressed={activeLang === l}
                                                 style={{
-                                                    padding: '4px 10px',
+                                                    padding: '6px 12px',
+                                                    minHeight: '32px',
                                                     borderRadius: '6px',
                                                     border: 'none',
-                                                    fontSize: '11px',
+                                                    fontSize: '12px',
                                                     fontWeight: 700,
                                                     cursor: 'pointer',
                                                     background: activeLang === l ? '#1E1B4B' : 'transparent',
@@ -304,13 +314,15 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                             key={f}
                                             type="button"
                                             onClick={() => setFilter(f)}
+                                            aria-pressed={isActive}
                                             style={{
-                                                padding: '4px 10px',
+                                                padding: '6px 12px',
+                                                minHeight: '36px',
                                                 borderRadius: '6px',
                                                 border: isActive ? '1px solid #1E1B4B' : '1px solid var(--border)',
                                                 cursor: 'pointer',
                                                 fontWeight: 700,
-                                                fontSize: '11.5px',
+                                                fontSize: '12.5px',
                                                 textTransform: 'capitalize',
                                                 background: isActive ? '#1E1B4B' : 'var(--bg-card)',
                                                 color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
@@ -342,12 +354,13 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                     <button
                                         type="button"
                                         onClick={() => setExpanded(isOpen ? null : q.id)}
+                                        aria-expanded={isOpen}
                                         style={{
                                             width: '100%',
-                                            padding: '14px 16px',
+                                            padding: '14px clamp(10px, 3vw, 16px)',
                                             display: 'flex',
                                             alignItems: 'flex-start',
-                                            gap: '12px',
+                                            gap: 'clamp(8px, 2.5vw, 12px)',
                                             background: 'none',
                                             border: 'none',
                                             cursor: 'pointer',
@@ -367,8 +380,13 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                             )}
                                         </div>
                                         <div style={{ flex: 1, minWidth: 0 }}>
-                                            <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginBottom: '3px', fontWeight: 600 }}>
-                                                Question {i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}
+                                            <div style={{ fontSize: '12px', color: 'var(--text-muted)', marginBottom: '4px', fontWeight: 600, display: 'flex', flexWrap: 'wrap', gap: '4px 10px', alignItems: 'center' }}>
+                                                <span>Question {i + 1} · {lang === 'kn' && q.subject_kannada ? q.subject_kannada : q.subject}</span>
+                                                {!isDropped && (
+                                                    <span style={{ fontWeight: 700, color: isCorrect ? 'var(--success-text)' : wasSkipped ? 'var(--text-secondary)' : 'var(--danger-text)' }}>
+                                                        {wasSkipped ? 'Skipped' : `Your answer ${a?.selected?.toUpperCase()}`} · Key {q.correct?.toUpperCase()}
+                                                    </span>
+                                                )}
                                             </div>
                                             {(q.passage || q.passage_kn || q.passage_hi) && (
                                                 <div style={{ marginTop: '6px', marginBottom: '8px' }}>
@@ -397,7 +415,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                     </button>
 
                                     {isOpen && (
-                                        <div style={{ padding: '0 16px 16px 45px' }}>
+                                        <div style={{ padding: '0 16px 16px clamp(16px, 6vw, 45px)' }}>
                                             {isDropped && (
                                                 <div style={{
                                                     padding: '10px 14px',
@@ -405,7 +423,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                                     borderRadius: '8px',
                                                     background: 'rgba(245, 158, 11, 0.08)',
                                                     border: '1px solid #FCD34D',
-                                                    color: '#B45309',
+                                                    color: 'var(--warning-text)',
                                                     display: 'flex',
                                                     alignItems: 'flex-start',
                                                     gap: '8px'
@@ -462,13 +480,13 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                                                 <OptionFormatter text={optText} />
                                                             </div>
                                                             {isCorrectOpt && (
-                                                                <span style={{ fontSize: '11px', fontWeight: 800, color: '#059669', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                                                                <span style={{ fontSize: '11.5px', fontWeight: 800, color: 'var(--success-text)', display: 'flex', alignItems: 'center', gap: '3px', whiteSpace: 'nowrap' }}>
                                                                     <Check size={14} strokeWidth={3} />
                                                                     Official Key
                                                                 </span>
                                                             )}
                                                             {isSelectedOpt && !isCorrectOpt && (
-                                                                <span style={{ fontSize: '11px', fontWeight: 800, color: '#DC2626', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                                                                <span style={{ fontSize: '11.5px', fontWeight: 800, color: 'var(--danger-text)', display: 'flex', alignItems: 'center', gap: '3px', whiteSpace: 'nowrap' }}>
                                                                     <X size={14} strokeWidth={3} />
                                                                     Your Choice
                                                                 </span>
@@ -480,7 +498,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
 
                                             {/* Explanation Box */}
                                             <div style={{ background: 'var(--bg-card)', borderRadius: '8px', padding: '16px', border: '1px solid var(--border)', boxShadow: 'var(--shadow-sm)' }}>
-                                                <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange, #EA580C)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                                <div style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange-text)', marginBottom: '8px', textTransform: 'uppercase', letterSpacing: '0.04em', display: 'flex', alignItems: 'center', gap: '6px' }}>
                                                     <BookOpen size={13} />
                                                     <span>Explanation & Standard Citation</span>
                                                 </div>
