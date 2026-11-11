@@ -397,15 +397,6 @@ export default function KnowledgeGraphPage() {
                 
                 {/* Hero Header */}
                 <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-                    <div style={{ 
-                        display: 'inline-flex', alignItems: 'center', gap: '8px', 
-                        padding: '6px 16px', borderRadius: '9999px', 
-                        background: 'rgba(255, 107, 43, 0.1)', border: '1px solid rgba(255, 107, 43, 0.25)',
-                        color: 'var(--brand-orange)', fontSize: '13px', fontWeight: 700, marginBottom: '14px'
-                    }}>
-                        <Network size={15} />
-                        Modular Examination Knowledge Graph Architecture
-                    </div>
                     <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '12px', letterSpacing: '-0.02em' }}>
                         {activeStreamInfo.label}
                     </h1>
@@ -425,22 +416,23 @@ export default function KnowledgeGraphPage() {
                             return (
                                 <button
                                     key={stream.id}
+                                    type="button"
                                     onClick={() => handleStreamChange(stream.id)}
+                                    aria-pressed={isSelected}
                                     style={{
                                         display: 'flex', alignItems: 'center', gap: '8px',
-                                        padding: '10px 18px', borderRadius: '12px', cursor: 'pointer',
-                                        fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s',
-                                        background: isSelected ? 'var(--brand-orange)' : 'transparent',
+                                        padding: '10px 16px', minHeight: '44px', borderRadius: '12px', cursor: 'pointer',
+                                        fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s', textAlign: 'left',
+                                        background: isSelected ? 'var(--brand-orange-dim)' : 'transparent',
                                         color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
-                                        border: isSelected ? '1px solid var(--brand-orange)' : '1px solid transparent',
-                                        boxShadow: isSelected ? '0 4px 12px rgba(255, 107, 43, 0.3)' : 'none'
+                                        border: isSelected ? '1px solid var(--brand-orange-dim)' : '1px solid transparent',
+                                        boxShadow: isSelected ? '0 2px 8px rgba(194, 65, 12, 0.25)' : 'none'
                                     }}
                                 >
-                                    <span>{stream.icon}</span>
                                     <span>{stream.label}</span>
                                     <span style={{ 
-                                        fontSize: '11px', opacity: 0.9, 
-                                        background: isSelected ? 'rgba(0,0,0,0.2)' : 'var(--bg-tertiary)', 
+                                        fontSize: '11.5px', whiteSpace: 'nowrap',
+                                        background: isSelected ? 'rgba(0,0,0,0.2)' : 'var(--bg-tertiary)',
                                         padding: '2px 8px', borderRadius: '6px' 
                                     }}>
                                         {stream.badge.split('·')[0].trim()}
@@ -452,31 +444,33 @@ export default function KnowledgeGraphPage() {
 
                     {/* Stats Pill Row */}
                     <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '12px', marginBottom: '24px' }}>
-                        <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: 'var(--brand-orange)' }}>🏛️ {graph.stats.level_1_subjects || graph.stats.byLevel?.subjects || rootSubjects.length}</span> Pillars
+                        <div className="card card-static" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13.5px', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                            <span style={{ color: 'var(--text-primary)', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>{graph.stats.level_1_subjects || graph.stats.byLevel?.subjects || rootSubjects.length}</span> pillars
                         </div>
-                        <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: 'var(--brand-teal)' }}>📁 {graph.stats.level_2_domains || graph.stats.byLevel?.domains || 0}</span> Core Domains
+                        <div className="card card-static" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13.5px', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                            <span style={{ color: 'var(--text-primary)', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>{graph.stats.level_2_domains || graph.stats.byLevel?.domains || 0}</span> core domains
                         </div>
-                        <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: '#8B5CF6' }}>🎯 {graph.stats.level_3_topics || graph.stats.byLevel?.topics || 0}</span> Syllabi Topics
+                        <div className="card card-static" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13.5px', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                            <span style={{ color: 'var(--text-primary)', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>{graph.stats.level_3_topics || graph.stats.byLevel?.topics || 0}</span> syllabus topics
                         </div>
-                        <div className="card" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '13.5px', fontWeight: 600 }}>
-                            <span style={{ color: '#10B981' }}>💎 {graph.stats.total_nodes || graph.stats.totalNodes}</span> Total Nodes
+                        <div className="card card-static" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '6px', fontSize: '13.5px', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                            <span style={{ color: 'var(--text-primary)', fontWeight: 800, fontVariantNumeric: 'tabular-nums' }}>{graph.stats.total_nodes || graph.stats.totalNodes}</span> total nodes
                         </div>
                     </div>
 
                     {/* View Mode Switcher: Exam Mind Map vs Canonical Tree */}
-                    <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
                         <button
+                            type="button"
                             onClick={() => setViewMode('mindmap')}
+                            aria-pressed={viewMode === 'mindmap'}
                             style={{
                                 display: 'flex', alignItems: 'center', gap: '8px',
                                 padding: '10px 22px', borderRadius: '12px', cursor: 'pointer',
                                 fontSize: '14px', fontWeight: 800, transition: 'all 0.2s',
-                                background: viewMode === 'mindmap' ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
+                                background: viewMode === 'mindmap' ? 'var(--brand-orange-dim)' : 'var(--bg-tertiary)',
                                 color: viewMode === 'mindmap' ? '#FFFFFF' : 'var(--text-secondary)',
-                                border: viewMode === 'mindmap' ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
+                                border: viewMode === 'mindmap' ? '1px solid var(--brand-orange-dim)' : '1px solid var(--border)',
                                 boxShadow: viewMode === 'mindmap' ? '0 4px 14px rgba(255, 107, 43, 0.35)' : 'none'
                             }}
                         >
@@ -485,14 +479,16 @@ export default function KnowledgeGraphPage() {
                         </button>
 
                         <button
+                            type="button"
                             onClick={() => setViewMode('tree')}
+                            aria-pressed={viewMode === 'tree'}
                             style={{
                                 display: 'flex', alignItems: 'center', gap: '8px',
                                 padding: '10px 22px', borderRadius: '12px', cursor: 'pointer',
                                 fontSize: '14px', fontWeight: 800, transition: 'all 0.2s',
-                                background: viewMode === 'tree' ? 'var(--brand-teal)' : 'var(--bg-tertiary)',
+                                background: viewMode === 'tree' ? 'var(--brand-teal-dim)' : 'var(--bg-tertiary)',
                                 color: viewMode === 'tree' ? '#FFFFFF' : 'var(--text-secondary)',
-                                border: viewMode === 'tree' ? '1px solid var(--brand-teal)' : '1px solid var(--border)',
+                                border: viewMode === 'tree' ? '1px solid var(--brand-teal-dim)' : '1px solid var(--border)',
                                 boxShadow: viewMode === 'tree' ? '0 4px 14px rgba(13, 148, 136, 0.35)' : 'none'
                             }}
                         >
@@ -527,23 +523,25 @@ export default function KnowledgeGraphPage() {
                             <div style={{ position: 'relative' }}>
                                 <Search size={18} style={{ position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                                 <input 
-                                    type="text"
-                                    placeholder="Search any topic, act, theory, river, scheme or rule within this knowledge stream..."
+                                    type="search"
+                                    aria-label="Search topics in this knowledge stream"
+                                    placeholder="Search any topic, act, theory, river, scheme or rule…"
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     style={{
                                         width: '100%', padding: '12px 16px 12px 46px',
                                         borderRadius: '12px', border: '1px solid var(--border)',
                                         background: 'var(--bg-primary)', color: 'var(--text-primary)',
-                                        fontSize: '14.5px', outline: 'none'
+                                        fontSize: '16px'
                                     }}
                                 />
                                 {searchQuery && (
-                                    <button 
+                                    <button
+                                        type="button"
                                         onClick={() => setSearchQuery('')}
                                         style={{
-                                            position: 'absolute', right: '14px', top: '50%', transform: 'translateY(-50%)',
-                                            background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: '12px', fontWeight: 600
+                                            position: 'absolute', right: '6px', top: '50%', transform: 'translateY(-50%)', minHeight: '36px', padding: '0 10px',
+                                            background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: '13px', fontWeight: 700
                                         }}
                                     >
                                         Clear
@@ -563,19 +561,20 @@ export default function KnowledgeGraphPage() {
                                         return (
                                             <button
                                                 key={tab.id}
+                                                type="button"
                                                 onClick={() => handleMainExamChange(tab.id)}
+                                                aria-pressed={isActive}
                                                 style={{
-                                                    padding: '8px 14px', borderRadius: '12px',
+                                                    padding: '8px 14px', minHeight: '40px', borderRadius: '12px',
                                                     fontSize: '13px', fontWeight: 700,
                                                     cursor: 'pointer', transition: 'all 0.15s',
-                                                    background: isActive ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
+                                                    background: isActive ? 'var(--brand-orange-dim)' : 'var(--bg-tertiary)',
                                                     color: isActive ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: isActive ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
-                                                    boxShadow: isActive ? '0 2px 8px rgba(255, 107, 43, 0.3)' : 'none',
+                                                    border: isActive ? '1px solid var(--brand-orange-dim)' : '1px solid var(--border)',
+                                                    boxShadow: isActive ? '0 2px 8px rgba(194, 65, 12, 0.25)' : 'none',
                                                     display: 'inline-flex', alignItems: 'center', gap: '6px'
                                                 }}
                                             >
-                                                <span>{tab.icon}</span>
                                                 <span>{tab.label}</span>
                                             </button>
                                         );
@@ -644,7 +643,7 @@ export default function KnowledgeGraphPage() {
                                                     >
                                                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
                                                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                                <span style={{ fontSize: '12px', padding: '2px 8px', borderRadius: '6px', background: 'var(--bg-tertiary)', fontWeight: 700, color: 'var(--brand-orange)' }}>
+                                                                <span style={{ fontSize: '12px', padding: '2px 8px', borderRadius: '6px', background: 'var(--bg-tertiary)', fontWeight: 700, color: 'var(--brand-orange-text)' }}>
                                                                     {node.levelName}
                                                                 </span>
                                                                 <span style={{ fontSize: '15px', fontWeight: 700, color: 'var(--text-primary)' }}>
@@ -698,11 +697,11 @@ export default function KnowledgeGraphPage() {
                                                             <span style={{ fontSize: '24px' }}>{icon}</span>
                                                             <div>
                                                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                                    <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                                                                    <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange-text)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                                                                         PILLAR {sIdx + 1}
                                                                     </span>
                                                                     {subject.examTags[selectedExam === 'all' ? (selectedStream === 'teaching' ? 'teaching' : 'upsc') : selectedExam] && (
-                                                                        <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--brand-teal)', background: 'rgba(13, 148, 136, 0.1)', padding: '2px 6px', borderRadius: '4px' }}>
+                                                                        <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--teal-text)', background: 'rgba(13, 148, 136, 0.1)', padding: '2px 6px', borderRadius: '4px' }}>
                                                                             {subject.examTags[selectedExam === 'all' ? (selectedStream === 'teaching' ? 'teaching' : 'upsc') : selectedExam]?.slice(0, 2).join(', ')}
                                                                         </span>
                                                                     )}
@@ -787,7 +786,7 @@ export default function KnowledgeGraphPage() {
                                                                                                             </span>
                                                                                                         ))}
                                                                                                         {topic.entities.length > 3 && (
-                                                                                                            <span style={{ fontSize: '11px', color: 'var(--brand-teal)' }}>
+                                                                                                            <span style={{ fontSize: '11px', color: 'var(--teal-text)' }}>
                                                                                                                 +{topic.entities.length - 3} more
                                                                                                             </span>
                                                                                                         )}
@@ -866,7 +865,7 @@ export default function KnowledgeGraphPage() {
                                                         key={examKey}
                                                         style={{ 
                                                             fontSize: '11.5px', fontWeight: 700, padding: '3px 8px', borderRadius: '6px',
-                                                            background: 'rgba(13, 148, 136, 0.1)', color: 'var(--brand-teal)',
+                                                            background: 'rgba(13, 148, 136, 0.1)', color: 'var(--teal-text)',
                                                             border: '1px solid rgba(13, 148, 136, 0.25)' 
                                                         }}
                                                     >

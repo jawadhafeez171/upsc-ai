@@ -1002,4 +1002,12 @@ body:has(.cbt-terminal-wrapper) footer {
   100% { transform: translate(30px, -30px) scale(1.08); }
 }
 
-
+/* Exam mind map: tree + detail panel */
+.mm-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: start; }
+.mm-layout.has-detail { grid-template-columns: minmax(0, 1fr) 380px; }
+.mm-detail { position: sticky; top: 80px; }
+.mm-node:focus-visible { outline: 2px solid var(--brand-blue); outline-offset: 2px; }
+@media (max-width: 960px) {
+  .mm-layout.has-detail { grid-template-columns: minmax(0, 1fr); }
+  .mm-detail { position: static; order: -1; }
+}

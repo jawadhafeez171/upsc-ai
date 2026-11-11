@@ -8,8 +8,7 @@ import { EXAMS } from '@/lib/mockData';
 import { 
     ChevronRight, ChevronDown, Sparkles, BookOpen, Layers, 
     Search, Zap, CheckCircle2, Award, Shield, FileText, 
-    Maximize2, Minimize2, ZoomIn, ZoomOut, RotateCcw, Compass
-} from 'lucide-react';
+    Maximize2, Minimize2, ZoomIn, ZoomOut, RotateCcw, Compass, X, ArrowRight } from 'lucide-react';
 
 interface ExamMindMapVisualizerProps {
     initialExamId?: string;
@@ -127,8 +126,13 @@ export default function ExamMindMapVisualizer({
 
         return (
             <div key={node.id} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <div 
+                <div
                     onClick={() => setSelectedNode(node)}
+                    role="button"
+                    tabIndex={0}
+                    aria-pressed={isSelected}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedNode(node); } }}
+                    className="mm-node"
                     style={{
                         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                         gap: '10px', background: nodeBg, border: `1.5px solid ${borderColor}`,
@@ -136,13 +140,18 @@ export default function ExamMindMapVisualizer({
                         transition: 'all 0.15s ease', boxShadow: isSelected ? '0 2px 10px rgba(255, 107, 43, 0.2)' : 'none'
                     }}
                 >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, minWidth: 0 }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px 8px', flex: 1, minWidth: 0, flexWrap: 'wrap' }}>
                         {hasChildren && (
                             <button
+                                type="button"
                                 onClick={(e) => toggleNode(node.id, e)}
+                                onKeyDown={(e) => e.stopPropagation()}
+                                aria-expanded={isExpanded}
+                                aria-label={`${isExpanded ? 'Collapse' : 'Expand'} ${label}`}
                                 style={{
                                     background: 'none', border: 'none', cursor: 'pointer',
-                                    display: 'flex', alignItems: 'center', padding: 0,
+                                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                    padding: 0, width: '32px', height: '32px', margin: '-6px -4px -6px -8px', borderRadius: '6px', flexShrink: 0,
                                     color: isExpanded ? 'var(--brand-orange)' : 'var(--text-muted)'
                                 }}
                             >
@@ -150,14 +159,14 @@ export default function ExamMindMapVisualizer({
                             </button>
                         )}
                         
-                        <span style={{ fontSize: fontSize, fontWeight: fontWeight, color: nodeColor, lineHeight: 1.3 }}>
+                        <span style={{ fontSize: fontSize, fontWeight: fontWeight, color: nodeColor, lineHeight: 1.3, flex: '1 1 0', minWidth: '140px' }}>
                             {label}
                         </span>
 
                         {node.badge && (
                             <span style={{ 
                                 fontSize: '11px', fontWeight: 800, padding: '2px 8px', borderRadius: '6px',
-                                background: 'rgba(13, 148, 136, 0.12)', color: 'var(--brand-teal)',
+                                background: 'rgba(13, 148, 136, 0.12)', color: 'var(--teal-text)',
                                 border: '1px solid rgba(13, 148, 136, 0.25)', whiteSpace: 'nowrap'
                             }}>
                                 {node.badge}
@@ -166,9 +175,9 @@ export default function ExamMindMapVisualizer({
 
                         {node.weightage && (
                             <span style={{ 
-                                fontSize: '10.5px', fontWeight: 800, padding: '2px 6px', borderRadius: '4px',
+                                fontSize: '11px', fontWeight: 800, padding: '2px 6px', borderRadius: '4px', whiteSpace: 'nowrap',
                                 background: node.weightage === 'Very High' ? 'rgba(239, 68, 68, 0.1)' : 'rgba(245, 158, 11, 0.1)',
-                                color: node.weightage === 'Very High' ? '#EF4444' : '#F59E0B'
+                                color: node.weightage === 'Very High' ? 'var(--danger-text)' : 'var(--warning-text)'
                             }}>
                                 {node.weightage} Weightage
                             </span>
@@ -176,7 +185,7 @@ export default function ExamMindMapVisualizer({
                     </div>
 
                     {node.entities && node.entities.length > 0 && (
-                        <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 600, background: 'var(--bg-tertiary)', padding: '2px 6px', borderRadius: '4px' }}>
+                        <span style={{ fontSize: '11px', color: 'var(--text-muted)', fontWeight: 600, background: 'var(--bg-tertiary)', padding: '2px 6px', borderRadius: '4px', whiteSpace: 'nowrap', flexShrink: 0 }}>
                             {node.entities.length} items
                         </span>
                     )}
@@ -186,7 +195,7 @@ export default function ExamMindMapVisualizer({
                 {hasChildren && isExpanded && (
                     <div style={{
                         display: 'flex', flexDirection: 'column', gap: '8px',
-                        paddingLeft: '24px', marginLeft: '12px',
+                        paddingLeft: 'clamp(10px, 3vw, 24px)', marginLeft: 'clamp(4px, 1.5vw, 12px)',
                         borderLeft: '2px dashed rgba(255, 107, 43, 0.25)'
                     }}>
                         {node.children!.map(child => renderNode(child, depth + 1))}
@@ -205,35 +214,36 @@ export default function ExamMindMapVisualizer({
                     
                     {/* Exam Dropdown Picker if enabled */}
                     {showExamPicker && (
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                            <span style={{ fontSize: '12.5px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase' }}>
-                                TARGET EXAM:
-                            </span>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', flex: '1 1 320px', minWidth: 0 }}>
+                            <label htmlFor="mm-exam" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-secondary)' }}>
+                                Target exam
+                            </label>
                             <select
+                                id="mm-exam"
                                 value={selectedExamId}
                                 onChange={(e) => setSelectedExamId(e.target.value)}
                                 style={{
-                                    padding: '8px 14px', borderRadius: '10px',
+                                    padding: '8px 14px', minHeight: '40px', borderRadius: '10px', maxWidth: '100%', flex: '1 1 220px', minWidth: 0,
                                     background: 'var(--bg-primary)', color: 'var(--text-primary)',
-                                    border: '1.5px solid var(--brand-orange)', fontSize: '13.5px', fontWeight: 700,
-                                    outline: 'none', cursor: 'pointer'
+                                    border: '1px solid var(--border)', fontSize: '14px', fontWeight: 700,
+                                    cursor: 'pointer'
                                 }}
                             >
                                 <optgroup label="Central / National Examinations">
-                                    <option value="upsc-cse">🏛️ UPSC Civil Services (CSE)</option>
-                                    <option value="upsc-capf">⚔️ UPSC Central Armed Police Forces (CAPF)</option>
-                                    <option value="upsc-cds">⚔️ UPSC Combined Defence Services (CDS)</option>
+                                    <option value="upsc-cse">UPSC Civil Services (CSE)</option>
+                                    <option value="upsc-capf">UPSC Central Armed Police Forces (CAPF)</option>
+                                    <option value="upsc-cds">UPSC Combined Defence Services (CDS)</option>
                                 </optgroup>
                                 <optgroup label="Karnataka State Examinations">
-                                    <option value="kpsc-kas">🅺 KPSC Karnataka Administrative Service (KAS)</option>
-                                    <option value="kea-pdo">🌾 KEA Panchayat Development Officer (PDO)</option>
-                                    <option value="kea-vao">📜 KEA Village Administrative Officer (VAO)</option>
-                                    <option value="ksp-psi">👮 KSP Police Sub-Inspector (PSI)</option>
-                                    <option value="ksp-pc">👮 KSP Police Constable (PC)</option>
-                                    <option value="kpsc-group-c">📋 KPSC Group C (CTI / ESI / FDA / SDA)</option>
-                                    <option value="kartet">👩‍🏫 KARTET (Karnataka Teachers Eligibility)</option>
-                                    <option value="karnataka-gpstr">👩‍🏫 Karnataka GPSTR Graduate Teacher</option>
-                                    <option value="kea-kset">🎓 KEA Assistant Professor & KSET</option>
+                                    <option value="kpsc-kas">KPSC Karnataka Administrative Service (KAS)</option>
+                                    <option value="kea-pdo">KEA Panchayat Development Officer (PDO)</option>
+                                    <option value="kea-vao">KEA Village Administrative Officer (VAO)</option>
+                                    <option value="ksp-psi">KSP Police Sub-Inspector (PSI)</option>
+                                    <option value="ksp-pc">KSP Police Constable (PC)</option>
+                                    <option value="kpsc-group-c">KPSC Group C (CTI / ESI / FDA / SDA)</option>
+                                    <option value="kartet">KARTET (Karnataka Teachers Eligibility)</option>
+                                    <option value="karnataka-gpstr">Karnataka GPSTR Graduate Teacher</option>
+                                    <option value="kea-kset">KEA Assistant Professor & KSET</option>
                                 </optgroup>
                             </select>
                         </div>
@@ -243,17 +253,18 @@ export default function ExamMindMapVisualizer({
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                         
                         {/* Search Input */}
-                        <div style={{ position: 'relative' }}>
+                        <div style={{ position: 'relative', flex: '1 1 180px' }}>
                             <Search size={14} style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }} />
                             <input 
-                                type="text"
-                                placeholder="Search in mind map..."
+                                type="search"
+                                aria-label="Search the syllabus mind map"
+                                placeholder="Search in mind map…"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 style={{
                                     padding: '6px 12px 6px 30px', borderRadius: '8px',
                                     background: 'var(--bg-primary)', color: 'var(--text-primary)',
-                                    border: '1px solid var(--border)', fontSize: '12.5px', outline: 'none', width: '180px'
+                                    border: '1px solid var(--border)', fontSize: '14px', width: '100%', minHeight: '36px'
                                 }}
                             />
                         </div>
@@ -264,7 +275,7 @@ export default function ExamMindMapVisualizer({
                                 onClick={expandAll}
                                 title="Expand All Branches"
                                 style={{
-                                    padding: '6px 10px', borderRadius: '8px', border: '1px solid var(--border)',
+                                    padding: '6px 12px', minHeight: '36px', borderRadius: '8px', border: '1px solid var(--border)',
                                     background: 'var(--bg-tertiary)', color: 'var(--text-secondary)',
                                     fontSize: '12px', fontWeight: 600, cursor: 'pointer'
                                 }}
@@ -275,7 +286,7 @@ export default function ExamMindMapVisualizer({
                                 onClick={collapseAll}
                                 title="Collapse All Branches"
                                 style={{
-                                    padding: '6px 10px', borderRadius: '8px', border: '1px solid var(--border)',
+                                    padding: '6px 12px', minHeight: '36px', borderRadius: '8px', border: '1px solid var(--border)',
                                     background: 'var(--bg-tertiary)', color: 'var(--text-secondary)',
                                     fontSize: '12px', fontWeight: 600, cursor: 'pointer'
                                 }}
@@ -288,9 +299,10 @@ export default function ExamMindMapVisualizer({
                         <div style={{ display: 'flex', gap: '2px', background: 'var(--bg-tertiary)', padding: '2px', borderRadius: '8px', border: '1px solid var(--border)' }}>
                             <button
                                 onClick={() => setLang('en')}
+                                aria-pressed={lang === 'en'}
                                 style={{
-                                    padding: '4px 10px', borderRadius: '6px', border: 'none',
-                                    background: lang === 'en' ? 'var(--brand-orange)' : 'transparent',
+                                    padding: '6px 12px', minHeight: '32px', borderRadius: '6px', border: 'none',
+                                    background: lang === 'en' ? 'var(--brand-orange-dim)' : 'transparent',
                                     color: lang === 'en' ? '#FFFFFF' : 'var(--text-secondary)',
                                     fontSize: '11.5px', fontWeight: 700, cursor: 'pointer'
                                 }}
@@ -299,9 +311,10 @@ export default function ExamMindMapVisualizer({
                             </button>
                             <button
                                 onClick={() => setLang('kn')}
+                                aria-pressed={lang === 'kn'}
                                 style={{
-                                    padding: '4px 10px', borderRadius: '6px', border: 'none',
-                                    background: lang === 'kn' ? 'var(--brand-orange)' : 'transparent',
+                                    padding: '6px 12px', minHeight: '32px', borderRadius: '6px', border: 'none',
+                                    background: lang === 'kn' ? 'var(--brand-orange-dim)' : 'transparent',
                                     color: lang === 'kn' ? '#FFFFFF' : 'var(--text-secondary)',
                                     fontSize: '11.5px', fontWeight: 700, cursor: 'pointer'
                                 }}
@@ -314,10 +327,10 @@ export default function ExamMindMapVisualizer({
             </div>
 
             {/* Mind Map Canvas and Detail Sidebar Layout */}
-            <div style={{ display: 'grid', gridTemplateColumns: selectedNode ? '1fr 380px' : '1fr', gap: '20px', alignItems: 'start' }}>
+            <div className={`mm-layout${selectedNode ? ' has-detail' : ''}`}>
                 
                 {/* Main Mind Map Tree Canvas */}
-                <div className="card" style={{ padding: '24px', borderRadius: '18px', overflowX: 'auto' }}>
+                <div className="card card-static" style={{ padding: 'clamp(14px, 3.5vw, 24px)', borderRadius: '18px', minWidth: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
                         <Compass size={18} color="var(--brand-orange)" />
                         <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -330,19 +343,20 @@ export default function ExamMindMapVisualizer({
 
                 {/* Right Column: Selected Topic Deep-Dive Sheet */}
                 {selectedNode && (
-                    <div className="card" style={{ padding: '24px', borderRadius: '18px', position: 'sticky', top: '80px' }}>
+                    <div className="card card-static mm-detail" style={{ padding: 'clamp(16px, 3.5vw, 24px)', borderRadius: '18px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
                             <span style={{ 
                                 fontSize: '11px', fontWeight: 800, padding: '3px 8px', borderRadius: '6px',
-                                background: 'var(--brand-orange)', color: '#FFFFFF', textTransform: 'uppercase'
+                                background: 'var(--brand-orange-dim)', color: '#FFFFFF', textTransform: 'uppercase'
                             }}>
                                 {selectedNode.category}
                             </span>
                             <button 
+                                type="button"
                                 onClick={() => setSelectedNode(null)}
-                                style={{ background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', fontSize: '12px', fontWeight: 700 }}
+                                style={{ background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: '13px', fontWeight: 700, minHeight: '36px', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                             >
-                                ✕ Close
+                                <X size={14} /> Close
                             </button>
                         </div>
 
@@ -351,8 +365,8 @@ export default function ExamMindMapVisualizer({
                         </h3>
 
                         {selectedNode.weightage && (
-                            <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--brand-orange)', marginBottom: '12px' }}>
-                                ⭐ Exam Importance: {selectedNode.weightage} Weightage
+                            <div style={{ fontSize: '12.5px', fontWeight: 700, color: 'var(--brand-orange-text)', marginBottom: '12px' }}>
+                                Exam importance: {selectedNode.weightage} Weightage
                             </div>
                         )}
 
@@ -383,7 +397,7 @@ export default function ExamMindMapVisualizer({
                                                 border: '1px solid var(--border)'
                                             }}
                                         >
-                                            • {ent}
+                                            {ent}
                                         </span>
                                     ))}
                                 </div>
@@ -394,15 +408,15 @@ export default function ExamMindMapVisualizer({
                         <Link
                             href={`/exams/${selectedExamId}`}
                             style={{
-                                width: '100%', padding: '12px', borderRadius: '12px',
-                                background: 'var(--brand-orange)', color: '#FFFFFF',
+                                width: '100%', padding: '12px', minHeight: '48px', borderRadius: '12px',
+                                background: 'var(--brand-orange-dim)', color: '#FFFFFF',
                                 fontSize: '14px', fontWeight: 800, border: 'none',
                                 display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
-                                textDecoration: 'none', boxShadow: '0 4px 12px rgba(255, 107, 43, 0.3)'
+                                textDecoration: 'none', boxShadow: '0 4px 12px rgba(194, 65, 12, 0.3)'
                             }}
                         >
                             <Zap size={16} />
-                            Launch Practice Mock for {selectedExamId.toUpperCase()} ➔
+                            Practise {selectedExamId.toUpperCase()} <ArrowRight size={16} />
                         </Link>
                     </div>
                 )}
