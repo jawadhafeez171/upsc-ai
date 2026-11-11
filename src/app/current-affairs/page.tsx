@@ -49,8 +49,10 @@ export default function CurrentAffairsPage() {
                         key={l}
                         type="button"
                         onClick={() => setTabLang(l)}
+                        aria-pressed={tabLang === l}
                         style={{
-                            padding: '6px 14px',
+                            padding: '8px 14px',
+                            minHeight: '36px',
                             borderRadius: '6px',
                             border: 'none',
                             cursor: 'pointer',
@@ -76,8 +78,10 @@ export default function CurrentAffairsPage() {
                             key={c}
                             type="button"
                             onClick={() => setCategory(c)}
+                            aria-pressed={isActive}
                             style={{
-                                padding: '6px 14px',
+                                padding: '8px 14px',
+                                minHeight: '36px',
                                 borderRadius: '6px',
                                 border: isActive ? '1px solid #1E1B4B' : '1px solid var(--border)',
                                 background: isActive ? '#1E1B4B' : 'var(--bg-secondary)',
@@ -100,23 +104,19 @@ export default function CurrentAffairsPage() {
                 {filtered.map((article) => {
                     const title = tabLang === 'hi' ? article.title_hi : tabLang === 'kn' ? article.title_kn : article.title_en;
                     const body = tabLang === 'hi' ? article.body_hi : tabLang === 'kn' ? article.body_kn : article.body_en;
-                    const categoryColors: Record<string, string> = {
-                        Economy: '#059669',
-                        Polity: '#2563EB',
-                        'Science & Tech': '#7C3AED',
-                        Environment: '#0D9488',
-                        International: '#D97706'
-                    };
-                    const color = categoryColors[article.category] || '#2563EB';
+                    const prettyDate = (() => {
+                        const d = new Date(article.date);
+                        return isNaN(d.getTime()) ? article.date : d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+                    })();
 
                     return (
-                        <div key={article.id} className="card" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
+                        <article key={article.id} className="card card-static" style={{ padding: 'clamp(16px, 4vw, 24px)', borderRadius: '12px', border: '1px solid var(--border)' }}>
                             <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '10px', flexWrap: 'wrap' }}>
                                 <span style={{
-                                    background: `${color}12`,
-                                    color: color,
-                                    border: `1px solid ${color}30`,
-                                    fontSize: '11px',
+                                    background: 'var(--bg-tertiary)',
+                                    color: 'var(--text-secondary)',
+                                    border: '1px solid var(--border)',
+                                    fontSize: '11.5px',
                                     fontWeight: 700,
                                     padding: '2px 8px',
                                     borderRadius: '4px'
@@ -125,16 +125,16 @@ export default function CurrentAffairsPage() {
                                 </span>
                                 <span style={{ fontSize: '12px', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '4px' }}>
                                     <Calendar size={13} />
-                                    {article.date}
+                                    <time dateTime={article.date}>{prettyDate}</time>
                                 </span>
                             </div>
                             <h3 style={{ fontSize: '16.5px', fontWeight: 800, marginBottom: '10px', lineHeight: 1.4, color: 'var(--text-primary)' }}>
                                 {title}
                             </h3>
-                            <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.65, margin: 0 }}>
+                            <p style={{ fontSize: '14.5px', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0, maxWidth: '72ch' }}>
                                 {body}
                             </p>
-                        </div>
+                        </article>
                     );
                 })}
             </div>

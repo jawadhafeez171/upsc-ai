@@ -59,7 +59,7 @@ export default function LeaderboardPage() {
                         Candidate Standing & Leaderboard
                     </h1>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '14.5px', margin: 0 }}>
-                        Compare your practice consistency and accuracy against fellow aspirants.
+                        Aspirants ranked by XP earned from completed practice tests.
                     </p>
                 </div>
 
@@ -76,17 +76,16 @@ export default function LeaderboardPage() {
                                 <Crown key="1" size={24} color="#D97706" />,
                                 <Award key="3" size={20} color="#B45309" />
                             ];
-                            const podiumIdx = i === 1 ? 0 : i === 0 ? 1 : 2;
 
                             return (
                                 <div key={entry.user_id} style={{ textAlign: 'center', flex: 1, maxWidth: '160px' }}>
                                     <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '6px' }}>
-                                        {rankIcons[podiumIdx]}
+                                        {rankIcons[i]}
                                     </div>
                                     <div style={{ fontWeight: 800, fontSize: '13.5px', color: isYou ? '#2563EB' : 'var(--text-primary)', marginBottom: '2px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                         {entry.name.split(' ')[0]}
                                     </div>
-                                    <div style={{ fontSize: '11.5px', color: '#D97706', fontWeight: 800, fontFamily: 'var(--font-mono, monospace)', marginBottom: '8px' }}>
+                                    <div style={{ fontSize: '12px', color: 'var(--warning-text)', fontWeight: 800, fontVariantNumeric: 'tabular-nums', marginBottom: '8px' }}>
                                         {entry.xp} XP
                                     </div>
                                     <div style={{
@@ -114,7 +113,7 @@ export default function LeaderboardPage() {
                                 background: isYou ? 'rgba(37, 99, 235, 0.08)' : 'transparent',
                                 transition: 'background 0.15s ease',
                             }}>
-                                <div style={{ width: '28px', textAlign: 'center', fontWeight: 800, fontSize: '12.5px', color: entry.rank <= 3 ? '#D97706' : 'var(--text-muted)', fontFamily: 'var(--font-mono, monospace)' }}>
+                                <div style={{ width: '28px', textAlign: 'center', fontWeight: 800, fontSize: '12.5px', color: entry.rank <= 3 ? 'var(--warning-text)' : 'var(--text-muted)', fontVariantNumeric: 'tabular-nums' }}>
                                     #{entry.rank}
                                 </div>
                                 <div style={{
