@@ -1,5 +1,6 @@
 'use client';
-import { use, useState, useEffect, useRef } from 'react';
+import { use, useState, useEffect, useRef, useId, Fragment } from 'react';
+import type { KeyboardEvent, ReactNode } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
@@ -8,12 +9,13 @@ import { EXAMS } from '@/lib/mockData';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
 import { TestConfig, Language, TestMode } from '@/types';
 import { 
-    ArrowRight, AlertTriangle, BookOpen, Zap, Info, Shield, 
-    Award, CheckCircle2, DollarSign, Briefcase, Calendar, 
+    ArrowRight, AlertTriangle, BookOpen, Zap, 
+    Award, CheckCircle2, DollarSign, Briefcase, 
     Layers, HelpCircle, ChevronRight, UserCheck, Scale, Landmark,
-    Compass, BrainCircuit
+    Compass, ArrowLeft, Check, CalendarDays, Target, Shuffle
 } from 'lucide-react';
 import ExamMindMapVisualizer from '@/components/graph/ExamMindMapVisualizer';
+import './exam-detail.css';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 const DIFFICULTIES = ['mixed', 'easy', 'medium', 'hard'] as const;
@@ -24,6 +26,38 @@ const CSAT_TOPICS = [
 ];
 
 type ActiveTab = 'practice' | 'about' | 'services' | 'mindmap';
+
+type Opt = { key: string; label: string; meta?: string; selected: boolean; onSelect: () => void };
+
+function Chip({ selected, onSelect, meta, muted, disabled, children }: {
+    selected: boolean; onSelect: () => void; meta?: string; muted?: boolean; disabled?: boolean; children: ReactNode;
+}) {
+    return (
+        <button
+            type="button"
+            className="xd-chip"
+            aria-pressed={selected}
+            data-muted={muted ? '' : undefined}
+            disabled={disabled}
+            onClick={onSelect}
+        >
+            <span>{children}</span>
+            {meta && <span className="xd-chip-meta">{meta}</span>}
+        </button>
+    );
+}
+
+function OptionGroup({ label, hint, children }: { label: string; hint?: string; children: ReactNode }) {
+    const id = useId();
+    return (
+        <div className="xd-field">
+            <span id={id} className="xd-label">
+                {label}{hint && <span className="xd-label-hint">{hint}</span>}
+            </span>
+            <div className="xd-chips" role="group" aria-labelledby={id}>{children}</div>
+        </div>
+    );
+}
 
 export default function ExamDetailPage({ params }: { params: Promise<{ examId: string }> }) {
     const { examId } = use(params);
@@ -247,7 +281,17 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     }, [examId, mode, subject, difficulty, year, paper, paperCode, month]);
 
     if (loading) {
-        return <div style={{ padding: '100px 20px', textAlign: 'center', color: 'var(--text-muted)' }}>Loading examination details...</div>;
+        return (
+            <div className="xd-page" aria-busy="true" aria-label="Loading exam">
+                <div className="xd-wrap xd-loading">
+                    <span className="xd-skel" style={{ width: 90, height: 16 }} />
+                    <span className="xd-skel" style={{ width: 260, height: 34, marginTop: 20 }} />
+                    <span className="xd-skel" style={{ width: '60%', height: 16, marginTop: 10 }} />
+                    <span className="xd-skel" style={{ width: '100%', height: 44, marginTop: 28 }} />
+                    <span className="xd-skel" style={{ width: '100%', height: 360, marginTop: 28, borderRadius: 16 }} />
+                </div>
+            </div>
+        );
     }
     if (!exam) {
         return (
@@ -305,819 +349,349 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         else if (paper === 'all') examTopics = [...examTopics, ...csat];
     }
 
+    // ── Practice-tab option model ───────────────────────────────────────
+    const isKea = examId === 'kea' || examId.startsWith('kea-');
+    const showPaperYear = examId !== 'ksp-pc' && (mode === 'yearwise' || ['upsc-cse', 'kpsc-kas', 'upsc-capf', 'upsc-epfo'].includes(examId) || isKea);
+
+    const codeOpt = (code: string, label: string, meta?: string, onSelect?: () => void): Opt => ({
+        key: code, label, meta, selected: paperCode === code, onSelect: onSelect || (() => setPaperCode(code)),
+    });
+    let paperOptions: Opt[] = [];
+    if (examId === 'ksp-pc') {
+        paperOptions = [
+            codeOpt('all', 'All papers', 'HK + NHK · 200 Qs'),
+            codeOpt('hk', 'HK CAR/DAR 2026', 'Hyderabad-Karnataka · 100 Qs'),
+            codeOpt('nhk', 'NHK CAR/DAR 2026', 'Non-HK, state-wide · 100 Qs'),
+        ];
+    } else if (isKea) {
+        paperOptions = [
+            codeOpt('all', 'All papers', '64 papers · 6,364 Qs'),
+            codeOpt('fda-sda', 'FDA & SDA', '12 papers'),
+            codeOpt('vao', 'VAO & Compulsory Kannada', '4 papers'),
+            codeOpt('police', 'Civil PC, KSRP/KSISF & PSI', '5 papers'),
+            codeOpt('leg-council', 'Legislative Council', '6 papers'),
+            codeOpt('tech-eng', 'Technical & Engineering', 'GTTC, BWSSB, KRIDL'),
+            codeOpt('coaching', 'Free coaching entrance', 'SWD, BCWD, IAS/KAS'),
+        ];
+    } else if (examId === 'upsc-epfo') {
+        paperOptions = [
+            codeOpt('all', 'All papers', '9 papers · 1,060 Qs'),
+            codeOpt('eoao', 'EO/AO', '360 Qs', () => {
+                setPaperCode('eoao');
+                if (year !== 'all' && ![2023, 2021, 2017].includes(Number(year))) setYear('all');
+            }),
+            codeOpt('apfc', 'APFC', '580 Qs', () => {
+                setPaperCode('apfc');
+                if (year !== 'all' && ![2023, 2016, 2012, 2004, 2002].includes(Number(year))) setYear('all');
+            }),
+            codeOpt('eoao-apfc', 'Combined EO/AO & APFC', '2025 paper · 120 Qs', () => {
+                setPaperCode('eoao-apfc');
+                setYear(2025);
+            }),
+        ];
+    } else {
+        paperOptions = [
+            { key: 'all', label: 'All papers', meta: examId === 'upsc-capf' ? '13 years · 1,625 Qs' : 'Combined', selected: paper === 'all', onSelect: () => setPaper('all') },
+            {
+                key: '1',
+                label: examId === 'upsc-capf' ? 'Paper 1 · General Ability & Intelligence' : examId === 'upsc-cse' ? 'Paper 1 · General Studies' : 'Paper 1 · General Studies & Humanities',
+                meta: examId === 'upsc-capf' ? '125 Qs · 250 marks' : undefined,
+                selected: paper === 1,
+                onSelect: () => setPaper(1),
+            },
+        ];
+        if (examId !== 'upsc-capf') {
+            paperOptions.push({
+                key: '2',
+                label: examId === 'upsc-cse' ? 'Paper 2 · CSAT' : 'Paper 2 · Science & Tech, Environment & GMA',
+                selected: paper === 2,
+                onSelect: () => setPaper(2),
+            });
+        }
+    }
+
+    const yearList: number[] = isKea
+        ? [2026, 2025, 2024, 2023]
+        : examId === 'upsc-capf'
+            ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
+            : examId === 'upsc-epfo'
+                ? [2025, 2023, 2021, 2017, 2016, 2012, 2004, 2002]
+                : examId === 'kpsc-kas'
+                    ? [2024, 2020, 2017, 2015, 2011]
+                    : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011];
+    const allYearsRange = isKea ? '2023–2026' : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : '2011–2024';
+    const epfoYearMeta = (yr: number) => yr === 2025 ? 'Combined' : yr === 2023 ? 'EO/AO & APFC' : [2021, 2017].includes(yr) ? 'EO/AO' : 'APFC';
+    const epfoYearMatches = (yr: number) => examId !== 'upsc-epfo' || paperCode === 'all'
+        || (paperCode === 'eoao' && [2023, 2021, 2017].includes(yr))
+        || (paperCode === 'apfc' && [2023, 2016, 2012, 2004, 2002].includes(yr))
+        || (paperCode === 'eoao-apfc' && yr === 2025);
+    const selectYear = (yr: number) => {
+        setYear(yr);
+        if (yr !== 2024) setMonth('all');
+        if (examId === 'upsc-epfo') {
+            if (yr === 2025) setPaperCode('eoao-apfc');
+            else if ([2021, 2017].includes(yr)) { if (paperCode === 'apfc' || paperCode === 'eoao-apfc') setPaperCode('eoao'); }
+            else if ([2016, 2012, 2004, 2002].includes(yr)) { if (paperCode === 'eoao' || paperCode === 'eoao-apfc') setPaperCode('apfc'); }
+            else if (yr === 2023 && paperCode === 'eoao-apfc') setPaperCode('all');
+        }
+    };
+
+    const modes = [
+        { id: 'full' as TestMode, title: 'Full mock test', desc: 'Questions from the whole syllabus, shuffled like a fresh paper.', Icon: Shuffle, onSelect: () => { setMode('full'); setSubject(''); } },
+        { id: 'yearwise' as TestMode, title: 'Previous year paper', desc: 'A real past paper, in its original question order.', Icon: CalendarDays, onSelect: () => { setMode('yearwise'); setSubject(''); if (examId === 'kpsc-kas' && year === 'all') setYear(2024); } },
+        { id: 'subject' as TestMode, title: 'Subject drill', desc: 'Practise one subject at a time to fix weak areas.', Icon: Target, onSelect: () => { setMode('subject'); setSubject(subject || examTopics[0]?.value || ''); } },
+    ];
+
+    const countOptions = examId === 'upsc-capf' ? [...QUESTION_COUNTS, 125]
+        : examId === 'upsc-epfo' ? [...QUESTION_COUNTS, 120]
+            : availableQs >= 200 ? [...QUESTION_COUNTS, 200] : QUESTION_COUNTS;
+    const countMeta = (c: number) =>
+        (c === 125 && examId === 'upsc-capf') || (c === 120 && examId === 'upsc-epfo') || (c === 100 && availableQs === 100) ? 'Full paper'
+            : c === 200 ? 'Full exam' : undefined;
+    const requestedCount = Number(customCount) || count;
+    const secsPerQ = examId === 'upsc-epfo' ? 60 : 72;
+    const durationMin = Math.round((finalCount * secsPerQ) / 60);
+    const langNames: Record<string, string> = { en: 'English', hi: 'हिन्दी (Hindi)', kn: 'ಕನ್ನಡ (Kannada)' };
+
+    const summaryRows: [string, string][] = [
+        ['Mode', modes.find(m => m.id === mode)?.title || ''],
+    ];
+    if (showPaperYear || examId === 'ksp-pc') summaryRows.push(['Paper', paperOptions.find(o => o.selected)?.label || '—']);
+    if (showPaperYear) {
+        const monthLabel = examId === 'kpsc-kas' && year === 2024 && month !== 'all' ? (month === 'august' ? ' · August' : ' · December') : '';
+        summaryRows.push(['Year', year === 'all' ? `All (${allYearsRange})` : `${year}${monthLabel}`]);
+    }
+    if (mode === 'subject') summaryRows.push(['Subject', examTopics.find(t => t.value === subject)?.label || '—']);
+    summaryRows.push(['Difficulty', difficulty.charAt(0).toUpperCase() + difficulty.slice(1)]);
+    summaryRows.push(['Language', langNames[testLang] || testLang]);
+    summaryRows.push(['Duration', finalCount > 0 ? `~${durationMin} min` : '—']);
+
+    const startLabel = countLoading ? 'Checking question pool…' : finalCount > 0 ? `Start ${finalCount}-question test` : 'No questions match';
+
+    const tabs = [
+        { id: 'practice' as ActiveTab, label: 'Practice test', Icon: Zap },
+        ...(examInfo ? [
+            { id: 'about' as ActiveTab, label: 'Exam pattern', Icon: BookOpen },
+            { id: 'services' as ActiveTab, label: 'Services & roles', Icon: Briefcase },
+        ] : []),
+        { id: 'mindmap' as ActiveTab, label: 'Syllabus map', Icon: Compass },
+    ];
+    const selectTab = (id: ActiveTab) => {
+        setActiveTab(id);
+        router.replace(id === 'practice' ? `/exams/${examId}` : `/exams/${examId}?tab=${id}`, { scroll: false });
+    };
+    const onTabKey = (e: KeyboardEvent) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        const idx = tabs.findIndex(t => t.id === activeTab);
+        const next = tabs[(idx + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+        selectTab(next.id);
+        document.getElementById(`xd-tab-${next.id}`)?.focus();
+    };
+
     return (
-        <div style={{ background: 'var(--bg-primary)', minHeight: '100vh', padding: '40px 0 80px' }}>
-            <div style={{ maxWidth: '960px', margin: '0 auto', padding: '0 20px' }}>
-                
-                {/* Back to Catalog Breadcrumb */}
-                <div style={{ marginBottom: '20px' }}>
-                    <Link 
-                        href="/exams" 
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '13.5px', fontWeight: 600, color: 'var(--brand-orange)', textDecoration: 'none' }}
-                    >
-                        ← Back to Exam Catalog
-                    </Link>
-                </div>
+        <div className="xd-page">
+            <div className="xd-wrap">
 
-                {/* Exam Banner Header */}
-                <div className="card" style={{ padding: '28px 32px', marginBottom: '24px', borderRadius: '20px', border: '1px solid var(--border)' }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '16px', flexWrap: 'wrap' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                            <div style={{ 
-                                width: '56px', height: '56px', borderRadius: '16px', 
-                                background: 'var(--bg-tertiary)', border: '1px solid var(--border)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '28px' 
-                            }}>
-                                {exam.icon || '🏛️'}
-                            </div>
-                            <div>
-                                <h1 style={{ fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
-                                    {examTitle}
-                                </h1>
-                                <p style={{ fontSize: '14.5px', color: 'var(--text-secondary)', margin: 0, lineHeight: 1.5 }}>
-                                    {examDesc}
-                                </p>
-                            </div>
-                        </div>
+                <Link href="/exams" className="xd-back">
+                    <ArrowLeft size={16} /> All exams
+                </Link>
 
-                        {examInfo && (
-                            <span style={{ 
-                                fontSize: '12px', fontWeight: 800, padding: '4px 12px', borderRadius: '9999px',
-                                background: 'rgba(255, 107, 43, 0.12)', color: 'var(--brand-orange)',
-                                border: '1px solid rgba(255, 107, 43, 0.25)', height: 'fit-content'
-                            }}>
-                                {examInfo.jobRole.cadre}
-                            </span>
-                        )}
+                <header className="xd-head">
+                    <div style={{ minWidth: 0 }}>
+                        <h1 className="xd-title">{examTitle}</h1>
+                        <p className="xd-desc">{examDesc}</p>
                     </div>
+                    {examInfo && <span className="xd-badge">{examInfo.jobRole.cadre}</span>}
+                </header>
 
-                    {/* Three-Category Tab Navigation Bar */}
-                    <div style={{ display: 'flex', gap: '10px', marginTop: '24px', borderTop: '1px solid var(--border)', paddingTop: '20px', flexWrap: 'wrap' }}>
-                        {/* Tab 1: Practice Mocks */}
+                <div className="xd-tabs" role="tablist" aria-label="Exam sections" onKeyDown={onTabKey}>
+                    {tabs.map(({ id, label, Icon }) => (
                         <button
-                            onClick={() => setActiveTab('practice')}
-                            style={{
-                                display: 'flex', alignItems: 'center', gap: '8px',
-                                padding: '10px 18px', borderRadius: '12px', cursor: 'pointer',
-                                fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s',
-                                background: activeTab === 'practice' ? 'var(--brand-orange)' : 'var(--bg-tertiary)',
-                                color: activeTab === 'practice' ? '#FFFFFF' : 'var(--text-secondary)',
-                                border: activeTab === 'practice' ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
-                                boxShadow: activeTab === 'practice' ? '0 2px 8px rgba(255,107,43,0.3)' : 'none'
-                            }}
+                            key={id}
+                            id={`xd-tab-${id}`}
+                            type="button"
+                            role="tab"
+                            aria-selected={activeTab === id}
+                            aria-controls={`xd-panel-${id}`}
+                            tabIndex={activeTab === id ? 0 : -1}
+                            className="xd-tab"
+                            onClick={() => selectTab(id)}
                         >
-                            <Zap size={16} />
-                            Launch Mock Test
+                            <Icon size={16} /> {label}
                         </button>
-
-                        {/* Tab 2: About Exam & Pattern */}
-                        <button
-                            onClick={() => setActiveTab('about')}
-                            style={{
-                                display: 'flex', alignItems: 'center', gap: '8px',
-                                padding: '10px 18px', borderRadius: '12px', cursor: 'pointer',
-                                fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s',
-                                background: activeTab === 'about' ? 'var(--brand-teal)' : 'var(--bg-tertiary)',
-                                color: activeTab === 'about' ? '#FFFFFF' : 'var(--text-secondary)',
-                                border: activeTab === 'about' ? '1px solid var(--brand-teal)' : '1px solid var(--border)',
-                                boxShadow: activeTab === 'about' ? '0 2px 8px rgba(13,148,136,0.3)' : 'none'
-                            }}
-                        >
-                            <BookOpen size={16} />
-                            About Exam & Pattern
-                        </button>
-
-                        {/* Tab 3: Services & Job Roles (Separate Category) */}
-                        <button
-                            onClick={() => setActiveTab('services')}
-                            style={{
-                                display: 'flex', alignItems: 'center', gap: '8px',
-                                padding: '10px 18px', borderRadius: '12px', cursor: 'pointer',
-                                fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s',
-                                background: activeTab === 'services' ? '#2563EB' : 'var(--bg-tertiary)',
-                                color: activeTab === 'services' ? '#FFFFFF' : 'var(--text-secondary)',
-                                border: activeTab === 'services' ? '1px solid #2563EB' : '1px solid var(--border)',
-                                boxShadow: activeTab === 'services' ? '0 2px 8px rgba(37,99,235,0.3)' : 'none'
-                            }}
-                        >
-                            <Briefcase size={16} />
-                            Services & Job Roles
-                        </button>
-
-                        {/* Tab 4: Syllabus Mind Map */}
-                        <button
-                            onClick={() => setActiveTab('mindmap')}
-                            style={{
-                                display: 'flex', alignItems: 'center', gap: '8px',
-                                padding: '10px 18px', borderRadius: '12px', cursor: 'pointer',
-                                fontSize: '13.5px', fontWeight: 700, transition: 'all 0.2s',
-                                background: activeTab === 'mindmap' ? '#8B5CF6' : 'var(--bg-tertiary)',
-                                color: activeTab === 'mindmap' ? '#FFFFFF' : 'var(--text-secondary)',
-                                border: activeTab === 'mindmap' ? '1px solid #8B5CF6' : '1px solid var(--border)',
-                                boxShadow: activeTab === 'mindmap' ? '0 2px 8px rgba(139,92,246,0.3)' : 'none'
-                            }}
-                        >
-                            <Compass size={16} />
-                            Syllabus Mind Map
-                        </button>
-                    </div>
+                    ))}
                 </div>
 
                 {/* ═══════════════════════════════════════════════════════════════
-                    TAB 1: PRACTICE MOCK TEST
+                    TAB 1: PRACTICE TEST SETUP
                 ═══════════════════════════════════════════════════════════════ */}
                 {activeTab === 'practice' && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                        
-                        {/* Mode Selector */}
-                        <div className="card" style={{ padding: '24px', borderRadius: '18px' }}>
-                            <label style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '12px', display: 'block', letterSpacing: '0.05em' }}>
-                                1. Select Test Mode
-                            </label>
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '12px' }}>
-                                <button
-                                    onClick={() => { setMode('full'); setSubject(''); }}
-                                    style={{
-                                        padding: '16px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
-                                        background: mode === 'full' ? 'rgba(255, 107, 43, 0.08)' : 'var(--bg-primary)',
-                                        border: mode === 'full' ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
-                                        transition: 'all 0.15s'
-                                    }}
-                                >
-                                    <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
-                                        🎯 Full Exam Mock Test
-                                    </div>
-                                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
-                                        Simulate real exam with questions mixed across all syllabus topics.
-                                    </div>
-                                </button>
+                    <div id="xd-panel-practice" role="tabpanel" aria-labelledby="xd-tab-practice" className="xd-practice">
+                        <div className="xd-panel xd-form">
 
-                                <button
-                                    onClick={() => { 
-                                        setMode('yearwise'); 
-                                        setSubject(''); 
-                                        if (examId === 'kpsc-kas' && year === 'all') setYear(2024);
-                                    }}
-                                    style={{
-                                        padding: '16px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
-                                        background: mode === 'yearwise' ? 'rgba(37, 99, 235, 0.08)' : 'var(--bg-primary)',
-                                        border: mode === 'yearwise' ? '2px solid #2563EB' : '1px solid var(--border)',
-                                        transition: 'all 0.15s'
-                                    }}
-                                >
-                                    <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
-                                        📅 Year-Wise & Paper-Wise PYQ
-                                    </div>
-                                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
-                                        Practice real previous year question papers (2011–2024) by Paper 1 / Paper 2.
-                                    </div>
-                                </button>
-
-                                <button
-                                    onClick={() => { setMode('subject'); setSubject(examTopics[0]?.value || ''); }}
-                                    style={{
-                                        padding: '16px', borderRadius: '14px', cursor: 'pointer', textAlign: 'left',
-                                        background: mode === 'subject' ? 'rgba(13, 148, 136, 0.08)' : 'var(--bg-primary)',
-                                        border: mode === 'subject' ? '2px solid var(--brand-teal)' : '1px solid var(--border)',
-                                        transition: 'all 0.15s'
-                                    }}
-                                >
-                                    <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
-                                        📚 Subject-Wise Drill
-                                    </div>
-                                    <div style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
-                                        Focus practice on a specific syllabus domain or weak subject.
-                                    </div>
-                                </button>
-                            </div>
-
-                            {/* KSP Police Constable Paper & Region Selector */}
-                            {examId === 'ksp-pc' && (
-                                <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                                    <div>
-                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                            <span>🚔 SELECT POLICE CONSTABLE CADRE / REGION PAPER:</span>
-                                        </label>
-                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                            <button
-                                                onClick={() => setPaperCode('all')}
-                                                style={{
-                                                    padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
-                                                    fontSize: '12.5px', fontWeight: 700,
-                                                    background: paperCode === 'all' ? '#082C54' : 'var(--bg-primary)',
-                                                    color: paperCode === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: paperCode === 'all' ? '1.5px solid #082C54' : '1px solid var(--border)',
-                                                    transition: 'all 0.15s'
-                                                }}
-                                            >
-                                                🌟 All Papers (HK + NHK — 200 Qs)
-                                            </button>
-                                            <button
-                                                onClick={() => setPaperCode('hk')}
-                                                style={{
-                                                    padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
-                                                    fontSize: '12.5px', fontWeight: 700,
-                                                    background: paperCode === 'hk' ? '#082C54' : 'var(--bg-primary)',
-                                                    color: paperCode === 'hk' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: paperCode === 'hk' ? '1.5px solid #082C54' : '1px solid var(--border)',
-                                                    transition: 'all 0.15s'
-                                                }}
-                                            >
-                                                🏛️ HK CAR/DAR 2026 (Hyderabad-Karnataka — 100 Qs)
-                                            </button>
-                                            <button
-                                                onClick={() => setPaperCode('nhk')}
-                                                style={{
-                                                    padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
-                                                    fontSize: '12.5px', fontWeight: 700,
-                                                    background: paperCode === 'nhk' ? '#082C54' : 'var(--bg-primary)',
-                                                    color: paperCode === 'nhk' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: paperCode === 'nhk' ? '1.5px solid #082C54' : '1px solid var(--border)',
-                                                    transition: 'all 0.15s'
-                                                }}
-                                            >
-                                                🏢 NHK CAR/DAR 2026 (Non-HK State-wide — 100 Qs)
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                            <span>📅 EXAMINATION SESSION:</span>
-                                        </label>
-                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                            <div style={{
-                                                padding: '6px 14px', borderRadius: '9px', fontSize: '12px', fontWeight: 700,
-                                                background: 'rgba(8, 44, 84, 0.1)', color: '#082C54',
-                                                border: '1px solid rgba(8, 44, 84, 0.25)', display: 'inline-flex', alignItems: 'center', gap: '6px'
-                                            }}>
-                                                <span>🔥 September 2026 Official Key Validated</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-
-                            {/* Year-Wise & Paper-Wise Filters */}
-                            {examId !== 'ksp-pc' && (mode === 'yearwise' || examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' || examId === 'kea' || examId.startsWith('kea-')) && (
-                                <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                                    {/* Paper Selector */}
-                                    <div>
-                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                            <span>📄 SELECT EXAM PAPER / CADRE:</span>
-                                        </label>
-                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                            {examId === 'kea' || examId.startsWith('kea-') ? (
-                                                <>
-                                                    <button
-                                                        onClick={() => setPaperCode('all')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'all' ? '#0D9488' : 'var(--bg-primary)',
-                                                            color: paperCode === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'all' ? '1px solid #0D9488' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        🌟 All Papers (64 Papers — 6,364 Qs)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => setPaperCode('fda-sda')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'fda-sda' ? '#0D9488' : 'var(--bg-primary)',
-                                                            color: paperCode === 'fda-sda' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'fda-sda' ? '1px solid #0D9488' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        📋 KEA FDA & SDA (12 Papers)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => setPaperCode('vao')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'vao' ? '#0D9488' : 'var(--bg-primary)',
-                                                            color: paperCode === 'vao' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'vao' ? '1px solid #0D9488' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        🌾 KEA VAO & Compulsory Kannada (4 Papers)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => setPaperCode('police')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'police' ? '#0D9488' : 'var(--bg-primary)',
-                                                            color: paperCode === 'police' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'police' ? '1px solid #0D9488' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        👮 Civil PC, KSRP/KSISF & PSI (5 Papers)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => setPaperCode('leg-council')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'leg-council' ? '#0D9488' : 'var(--bg-primary)',
-                                                            color: paperCode === 'leg-council' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'leg-council' ? '1px solid #0D9488' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        🏛️ Legislative Council (6 Papers)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => setPaperCode('tech-eng')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'tech-eng' ? '#0D9488' : 'var(--bg-primary)',
-                                                            color: paperCode === 'tech-eng' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'tech-eng' ? '1px solid #0D9488' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        ⚙️ Technical & Engineering (GTTC, BWSSB, KRIDL)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => setPaperCode('coaching')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'coaching' ? '#0D9488' : 'var(--bg-primary)',
-                                                            color: paperCode === 'coaching' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'coaching' ? '1px solid #0D9488' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        🎯 Free Coaching Entrance (SWD, BCWD, IAS/KAS)
-                                                    </button>
-                                                </>
-                                            ) : examId === 'upsc-epfo' ? (
-                                                <>
-                                                    <button
-                                                        onClick={() => setPaperCode('all')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'all' ? '#2563EB' : 'var(--bg-primary)',
-                                                            color: paperCode === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'all' ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        All Papers (9 Papers — 1,060 Qs)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => {
-                                                            setPaperCode('eoao');
-                                                            if (year !== 'all' && ![2023, 2021, 2017].includes(Number(year))) {
-                                                                setYear('all');
-                                                            }
-                                                        }}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'eoao' ? '#2563EB' : 'var(--bg-primary)',
-                                                            color: paperCode === 'eoao' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'eoao' ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        EO/AO Papers (360 Qs)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => {
-                                                            setPaperCode('apfc');
-                                                            if (year !== 'all' && ![2023, 2016, 2012, 2004, 2002].includes(Number(year))) {
-                                                                setYear('all');
-                                                            }
-                                                        }}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'apfc' ? '#2563EB' : 'var(--bg-primary)',
-                                                            color: paperCode === 'apfc' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'apfc' ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        APFC Papers (580 Qs)
-                                                    </button>
-                                                    <button
-                                                        onClick={() => {
-                                                            setPaperCode('eoao-apfc');
-                                                            setYear(2025);
-                                                        }}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paperCode === 'eoao-apfc' ? '#2563EB' : 'var(--bg-primary)',
-                                                            color: paperCode === 'eoao-apfc' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paperCode === 'eoao-apfc' ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        Combined EO/AO & APFC (2025 Paper — 120 Qs)
-                                                    </button>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <button
-                                                        onClick={() => setPaper('all')}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paper === 'all' ? '#2563EB' : 'var(--bg-primary)',
-                                                            color: paper === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paper === 'all' ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        {examId === 'upsc-capf' ? 'All Papers (13 Years — 1,625 Qs)' : 'All Papers (Combined)'}
-                                                    </button>
-                                                    <button
-                                                        onClick={() => setPaper(1)}
-                                                        style={{
-                                                            padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                            fontSize: '12.5px', fontWeight: 700,
-                                                            background: paper === 1 ? '#2563EB' : 'var(--bg-primary)',
-                                                            color: paper === 1 ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: paper === 1 ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        {examId === 'upsc-capf' 
-                                                            ? 'Paper 1: General Ability & Intelligence (125 Qs / 250 Marks)' 
-                                                            : examId === 'upsc-cse' 
-                                                                ? 'Paper 1: General Studies (GS-1)' 
-                                                                : 'Paper 1: General Studies & Humanities'}
-                                                    </button>
-                                                    {examId !== 'upsc-capf' && (
-                                                        <button
-                                                            onClick={() => setPaper(2)}
-                                                            style={{
-                                                                padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                                fontSize: '12.5px', fontWeight: 700,
-                                                                background: paper === 2 ? '#2563EB' : 'var(--bg-primary)',
-                                                                color: paper === 2 ? '#FFFFFF' : 'var(--text-secondary)',
-                                                                border: paper === 2 ? '1px solid #2563EB' : '1px solid var(--border)',
-                                                                transition: 'all 0.15s'
-                                                            }}
-                                                        >
-                                                            {examId === 'upsc-cse' ? 'Paper 2: CSAT / Aptitude' : 'Paper 2: Science & Tech, Environment & GMA'}
-                                                        </button>
-                                                    )}
-                                                </>
-                                            )}
-                                        </div>
-                                    </div>
-
-                                    {/* Year Selector */}
-                                    <div>
-                                        <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                            <span>📅 SELECT EXAM YEAR:</span>
-                                        </label>
-                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                            <button
-                                                type="button"
-                                                onClick={() => { setYear('all'); setMonth('all'); }}
-                                                style={{
-                                                    padding: '6px 12px', borderRadius: '9px', cursor: 'pointer',
-                                                    fontSize: '12px', fontWeight: 700,
-                                                    background: year === 'all' ? 'var(--brand-orange)' : 'var(--bg-primary)',
-                                                    color: year === 'all' ? '#FFFFFF' : 'var(--text-secondary)',
-                                                    border: year === 'all' ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
-                                                    transition: 'all 0.15s'
-                                                }}
-                                            >
-                                                {examId === 'kea' || examId.startsWith('kea-') ? 'All Years (2023–2026 — 6,364 Qs)' : examId === 'upsc-capf' ? 'All Years (2014–2026)' : examId === 'upsc-epfo' ? 'All Years (2002–2025 — 1,060 Qs)' : 'All Years (2011–2024)'}
-                                            </button>
-                                            {(examId === 'kea' || examId.startsWith('kea-')
-                                                ? [2026, 2025, 2024, 2023]
-                                                : examId === 'upsc-capf'
-                                                    ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
-                                                    : examId === 'upsc-epfo'
-                                                        ? [2025, 2023, 2021, 2017, 2016, 2012, 2004, 2002]
-                                                        : examId === 'kpsc-kas' 
-                                                            ? [2024, 2020, 2017, 2015, 2011]
-                                                            : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
-                                            ).map((yr) => {
-                                                const isSelected = year === yr;
-                                                const isEpfoMatch = examId !== 'upsc-epfo' || paperCode === 'all' 
-                                                    || (paperCode === 'eoao' && [2023, 2021, 2017].includes(yr))
-                                                    || (paperCode === 'apfc' && [2023, 2016, 2012, 2004, 2002].includes(yr))
-                                                    || (paperCode === 'eoao-apfc' && yr === 2025);
-
-                                                return (
-                                                    <button
-                                                        key={yr}
-                                                        type="button"
-                                                        onClick={() => {
-                                                            setYear(yr);
-                                                            if (yr !== 2024) setMonth('all');
-                                                            if (examId === 'upsc-epfo') {
-                                                                if (yr === 2025) {
-                                                                    setPaperCode('eoao-apfc');
-                                                                } else if ([2021, 2017].includes(yr)) {
-                                                                    if (paperCode === 'apfc' || paperCode === 'eoao-apfc') {
-                                                                        setPaperCode('eoao');
-                                                                    }
-                                                                } else if ([2016, 2012, 2004, 2002].includes(yr)) {
-                                                                    if (paperCode === 'eoao' || paperCode === 'eoao-apfc') {
-                                                                        setPaperCode('apfc');
-                                                                    }
-                                                                } else if (yr === 2023 && paperCode === 'eoao-apfc') {
-                                                                    setPaperCode('all');
-                                                                }
-                                                            }
-                                                        }}
-                                                        style={{
-                                                            padding: '6px 12px', borderRadius: '9px', cursor: 'pointer',
-                                                            fontSize: '12px', fontWeight: 700,
-                                                            background: isSelected ? 'var(--brand-orange)' : 'var(--bg-primary)',
-                                                            color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
-                                                            border: isSelected ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
-                                                            opacity: isEpfoMatch ? 1 : 0.65,
-                                                            transition: 'all 0.15s'
-                                                        }}
-                                                    >
-                                                        {examId === 'upsc-epfo' ? (
-                                                            yr === 2025 ? `${yr} (Combined) 🔥` :
-                                                            yr === 2023 ? `${yr} (EO/AO & APFC)` :
-                                                            [2021, 2017].includes(yr) ? `${yr} (EO/AO)` :
-                                                            `${yr} (APFC)`
-                                                        ) : (
-                                                            `${yr} ${yr >= 2025 ? '🔥 Latest' : yr === 2024 ? '🔥' : ''}`
-                                                        )}
-                                                    </button>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-
-                                    {/* KPSC KAS 2024 Examination Session Selector */}
-                                    {examId === 'kpsc-kas' && year === 2024 && (
-                                        <div style={{ 
-                                            marginTop: '6px', 
-                                            padding: '16px', 
-                                            background: 'linear-gradient(135deg, rgba(255, 107, 43, 0.08) 0%, rgba(37, 99, 235, 0.05) 100%)', 
-                                            borderRadius: '14px', 
-                                            border: '1.5px solid rgba(255, 107, 43, 0.28)' 
-                                        }}>
-                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px', flexWrap: 'wrap', gap: '8px' }}>
-                                                <label style={{ fontSize: '12px', fontWeight: 800, color: 'var(--brand-orange)', display: 'flex', alignItems: 'center', gap: '6px', letterSpacing: '0.04em' }}>
-                                                    <span>🎯 SELECT 2024 EXAM SITTING / PAPER:</span>
-                                                </label>
-                                                <span style={{ fontSize: '11px', fontWeight: 700, padding: '3px 8px', borderRadius: '6px', background: 'rgba(255, 107, 43, 0.15)', color: 'var(--brand-orange)', border: '1px solid rgba(255, 107, 43, 0.3)' }}>
-                                                    2 Official Sittings in 2024
-                                                </span>
-                                            </div>
-                                            
-                                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setMonth('august')}
-                                                    style={{
-                                                        padding: '12px 14px', borderRadius: '10px', cursor: 'pointer', textAlign: 'left',
-                                                        background: month === 'august' ? 'rgba(255, 107, 43, 0.15)' : 'var(--bg-primary)',
-                                                        color: month === 'august' ? 'var(--brand-orange)' : 'var(--text-primary)',
-                                                        border: month === 'august' ? '2px solid var(--brand-orange)' : '1px solid var(--border)',
-                                                        boxShadow: month === 'august' ? '0 2px 10px rgba(255, 107, 43, 0.2)' : 'none',
-                                                        transition: 'all 0.15s'
-                                                    }}
-                                                >
-                                                    <div style={{ fontSize: '13px', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
-                                                        <span>☀️ August 2024 Paper</span>
-                                                    </div>
-                                                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
-                                                        Original Exam (Aug 27, 2024)
-                                                    </div>
-                                                </button>
-
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setMonth('december')}
-                                                    style={{
-                                                        padding: '12px 14px', borderRadius: '10px', cursor: 'pointer', textAlign: 'left',
-                                                        background: month === 'december' ? 'rgba(37, 99, 235, 0.12)' : 'var(--bg-primary)',
-                                                        color: month === 'december' ? '#2563EB' : 'var(--text-primary)',
-                                                        border: month === 'december' ? '2px solid #2563EB' : '1px solid var(--border)',
-                                                        boxShadow: month === 'december' ? '0 2px 10px rgba(37, 99, 235, 0.2)' : 'none',
-                                                        transition: 'all 0.15s'
-                                                    }}
-                                                >
-                                                    <div style={{ fontSize: '13px', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
-                                                        <span>❄️ December 2024 Paper</span>
-                                                    </div>
-                                                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
-                                                        Re-Exam Sitting (Dec 29, 2024)
-                                                    </div>
-                                                </button>
-
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setMonth('all')}
-                                                    style={{
-                                                        padding: '12px 14px', borderRadius: '10px', cursor: 'pointer', textAlign: 'left',
-                                                        background: month === 'all' ? 'rgba(13, 148, 136, 0.12)' : 'var(--bg-primary)',
-                                                        color: month === 'all' ? 'var(--brand-teal)' : 'var(--text-primary)',
-                                                        border: month === 'all' ? '2px solid var(--brand-teal)' : '1px solid var(--border)',
-                                                        boxShadow: month === 'all' ? '0 2px 10px rgba(13, 148, 136, 0.2)' : 'none',
-                                                        transition: 'all 0.15s'
-                                                    }}
-                                                >
-                                                    <div style={{ fontSize: '13px', fontWeight: 800, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
-                                                        <span>🌟 Both Papers Combined</span>
-                                                    </div>
-                                                    <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)' }}>
-                                                        Aug + Dec (Combined Pool)
-                                                    </div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            )}
-
-                            {/* Subject Picker if mode is subject */}
-                            {mode === 'subject' && (
-                                <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid var(--border)' }}>
-                                    <label style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px', display: 'block' }}>
-                                        CHOOSE SUBJECT / TOPIC:
-                                    </label>
-                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                        {examTopics.map(({ value: sub, label }) => {
-                                            const isSelected = subject === sub;
-                                            return (
-                                                <button
-                                                    key={sub}
-                                                    onClick={() => setSubject(sub)}
-                                                    style={{
-                                                        padding: '7px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                        fontSize: '13px', fontWeight: 600,
-                                                        background: isSelected ? 'var(--brand-teal)' : 'var(--bg-primary)',
-                                                        color: isSelected ? '#FFFFFF' : 'var(--text-secondary)',
-                                                        border: isSelected ? '1px solid var(--brand-teal)' : '1px solid var(--border)',
-                                                        transition: 'all 0.15s'
-                                                    }}
-                                                >
-                                                    {label}
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-
-                        {/* Difficulty & Language */}
-                        <div className="card" style={{ padding: '24px', borderRadius: '18px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                            <div>
-                                <label style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '10px', display: 'block', letterSpacing: '0.05em' }}>
-                                    2. Difficulty Level
-                                </label>
-                                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-                                    {DIFFICULTIES.map((d) => (
-                                        <button
-                                            key={d}
-                                            onClick={() => setDifficulty(d)}
-                                            style={{
-                                                padding: '8px 14px', borderRadius: '10px', cursor: 'pointer',
-                                                fontSize: '13px', fontWeight: 700, textTransform: 'capitalize',
-                                                background: difficulty === d ? 'var(--bg-secondary)' : 'var(--bg-primary)',
-                                                color: difficulty === d ? 'var(--brand-orange)' : 'var(--text-secondary)',
-                                                border: difficulty === d ? '1.5px solid var(--brand-orange)' : '1px solid var(--border)',
-                                            }}
-                                        >
-                                            {d}
+                            {/* Mode */}
+                            <section className="xd-section" aria-labelledby="xd-mode-h">
+                                <h2 id="xd-mode-h" className="xd-section-title">Test mode</h2>
+                                <p className="xd-section-sub">Choose how questions are picked for this test.</p>
+                                <div className="xd-modes" role="group" aria-labelledby="xd-mode-h">
+                                    {modes.map(({ id, title, desc, Icon, onSelect }) => (
+                                        <button key={id} type="button" className="xd-mode" aria-pressed={mode === id} onClick={onSelect}>
+                                            <span className="xd-mode-icon"><Icon size={18} /></span>
+                                            <span className="xd-mode-title">{title}</span>
+                                            <span className="xd-mode-desc">{desc}</span>
+                                            <Check size={18} strokeWidth={2.5} className="xd-mode-check" aria-hidden="true" />
                                         </button>
                                     ))}
                                 </div>
-                            </div>
+                            </section>
 
-                            <div>
-                                <label style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '10px', display: 'block', letterSpacing: '0.05em' }}>
-                                    3. Language Medium
-                                </label>
-                                <div style={{ display: 'flex', gap: '8px' }}>
-                                    <button
-                                        onClick={() => setTestLang('en')}
-                                        style={{
-                                            padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
-                                            fontSize: '13px', fontWeight: 700,
-                                            background: testLang === 'en' ? 'var(--bg-secondary)' : 'var(--bg-primary)',
-                                            color: testLang === 'en' ? 'var(--brand-teal)' : 'var(--text-secondary)',
-                                            border: testLang === 'en' ? '1.5px solid var(--brand-teal)' : '1px solid var(--border)',
-                                        }}
-                                    >
-                                        English
-                                    </button>
-                                    {exam.languages.includes('hi') && (
-                                        <button
-                                            onClick={() => setTestLang('hi')}
-                                            style={{
-                                                padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
-                                                fontSize: '13px', fontWeight: 700,
-                                                background: testLang === 'hi' ? 'var(--bg-secondary)' : 'var(--bg-primary)',
-                                                color: testLang === 'hi' ? 'var(--brand-teal)' : 'var(--text-secondary)',
-                                                border: testLang === 'hi' ? '1.5px solid var(--brand-teal)' : '1px solid var(--border)',
-                                            }}
-                                        >
-                                            हिन्दी (Hindi)
-                                        </button>
+                            {/* Paper & year */}
+                            {(showPaperYear || examId === 'ksp-pc') && (
+                                <section className="xd-section" aria-labelledby="xd-paper-h">
+                                    <h2 id="xd-paper-h" className="xd-section-title">{examId === 'ksp-pc' ? 'Paper' : 'Paper & year'}</h2>
+                                    <p className="xd-section-sub">
+                                        {examId === 'ksp-pc'
+                                            ? 'September 2026 session, checked against the official answer key.'
+                                            : mode === 'yearwise' ? 'Pick the paper you want to sit.' : 'Optional — narrow the question pool.'}
+                                    </p>
+
+                                    <OptionGroup label={examId === 'ksp-pc' ? 'Cadre / region' : 'Paper'}>
+                                        {paperOptions.map(o => (
+                                            <Chip key={o.key} selected={o.selected} onSelect={o.onSelect} meta={o.meta}>{o.label}</Chip>
+                                        ))}
+                                    </OptionGroup>
+
+                                    {showPaperYear && (
+                                        <OptionGroup label="Year">
+                                            <Chip selected={year === 'all'} onSelect={() => { setYear('all'); setMonth('all'); }} meta={allYearsRange}>All years</Chip>
+                                            {yearList.map(yr => (
+                                                <Chip
+                                                    key={yr}
+                                                    selected={year === yr}
+                                                    onSelect={() => selectYear(yr)}
+                                                    meta={examId === 'upsc-epfo' ? epfoYearMeta(yr) : undefined}
+                                                    muted={!epfoYearMatches(yr)}
+                                                >
+                                                    {yr}
+                                                </Chip>
+                                            ))}
+                                        </OptionGroup>
                                     )}
-                                    {exam.languages.includes('kn') && (
-                                        <button
-                                            onClick={() => setTestLang('kn')}
-                                            style={{
-                                                padding: '8px 16px', borderRadius: '10px', cursor: 'pointer',
-                                                fontSize: '13px', fontWeight: 700,
-                                                background: testLang === 'kn' ? 'var(--bg-secondary)' : 'var(--bg-primary)',
-                                                color: testLang === 'kn' ? 'var(--brand-teal)' : 'var(--text-secondary)',
-                                                border: testLang === 'kn' ? '1.5px solid var(--brand-teal)' : '1px solid var(--border)',
-                                            }}
-                                        >
-                                            ಕನ್ನಡ (Kannada)
-                                        </button>
+
+                                    {examId === 'kpsc-kas' && year === 2024 && (
+                                        <OptionGroup label="2024 sitting" hint="KPSC held two sittings in 2024">
+                                            <Chip selected={month === 'august'} onSelect={() => setMonth('august')} meta="Original · 27 Aug 2024">August</Chip>
+                                            <Chip selected={month === 'december'} onSelect={() => setMonth('december')} meta="Re-exam · 29 Dec 2024">December</Chip>
+                                            <Chip selected={month === 'all'} onSelect={() => setMonth('all')} meta="Combined pool">Both sittings</Chip>
+                                        </OptionGroup>
                                     )}
+                                </section>
+                            )}
+
+                            {/* Subject */}
+                            {mode === 'subject' && (
+                                <section className="xd-section" aria-labelledby="xd-subject-h">
+                                    <h2 id="xd-subject-h" className="xd-section-title">Subject</h2>
+                                    <p className="xd-section-sub">Only questions from this subject will be included.</p>
+                                    <div className="xd-chips" role="group" aria-labelledby="xd-subject-h">
+                                        {examTopics.map(({ value, label }) => (
+                                            <Chip key={value} selected={subject === value} onSelect={() => setSubject(value)}>{label}</Chip>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
+
+                            {/* Difficulty & language */}
+                            <section className="xd-section" aria-label="Difficulty and language">
+                                <div className="xd-two">
+                                    <div className="xd-field">
+                                        <span id="xd-diff-l" className="xd-label">Difficulty</span>
+                                        <div className="xd-seg" role="group" aria-labelledby="xd-diff-l">
+                                            {DIFFICULTIES.map(d => (
+                                                <button key={d} type="button" aria-pressed={difficulty === d} onClick={() => setDifficulty(d)}>{d}</button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <OptionGroup label="Question language">
+                                        {(['en', 'hi', 'kn'] as Language[]).filter(l => l === 'en' || exam.languages.includes(l)).map(l => (
+                                            <Chip key={l} selected={testLang === l} onSelect={() => setTestLang(l)}>{langNames[l]}</Chip>
+                                        ))}
+                                    </OptionGroup>
                                 </div>
-                            </div>
+                            </section>
+
+                            {/* Question count */}
+                            <section className="xd-section" aria-labelledby="xd-count-h">
+                                <h2 id="xd-count-h" className="xd-section-title">Number of questions</h2>
+                                <p className="xd-section-sub">
+                                    {!countLoading && availableQs > 0 && requestedCount > availableQs
+                                        ? `Only ${availableQs.toLocaleString()} questions match, so the test will include all of them.`
+                                        : 'Shorter sets are good for quick revision; full papers build exam stamina.'}
+                                </p>
+                                <div className="xd-chips" role="group" aria-labelledby="xd-count-h">
+                                    {countOptions.map(c => (
+                                        <Chip
+                                            key={c}
+                                            selected={count === c && !customCount}
+                                            onSelect={() => { setCount(c); setCustomCount(''); }}
+                                            disabled={!countLoading && c > availableQs}
+                                            meta={countMeta(c)}
+                                        >
+                                            {c}
+                                        </Chip>
+                                    ))}
+                                    <label className="xd-count-input" data-active={customCount ? '' : undefined}>
+                                        Custom
+                                        <input
+                                            type="number"
+                                            inputMode="numeric"
+                                            min={1}
+                                            max={availableQs || undefined}
+                                            placeholder="—"
+                                            value={customCount}
+                                            onChange={(e) => setCustomCount(e.target.value.replace(/\D/g, '').slice(0, 4))}
+                                            aria-label="Custom number of questions"
+                                        />
+                                    </label>
+                                </div>
+                            </section>
                         </div>
 
-                        {/* Question Count & Start CTA */}
-                        <div className="card" style={{ padding: '24px', borderRadius: '18px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-                                <label style={{ fontSize: '13px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
-                                    4. Number of Questions
-                                </label>
-                                <span style={{ fontSize: '13px', color: !countLoading && availableQs > 0 ? 'var(--brand-orange)' : 'var(--text-muted)', fontWeight: 700 }}>
-                                    {countLoading ? 'Calculating question pool...' : availableQs > 0 ? `${availableQs.toLocaleString()} Questions Available in Pool` : 'No questions in pool for this filter'}
-                                </span>
+                        {/* Summary & start */}
+                        <aside className="xd-panel xd-summary" aria-label="Test summary">
+                            <div className="xd-pool" aria-live="polite" data-empty={!countLoading && availableQs === 0 ? '' : undefined}>
+                                {countLoading
+                                    ? <><span className="xd-skel" aria-hidden="true" /><span>Checking question pool…</span></>
+                                    : <><strong>{availableQs.toLocaleString()}</strong><span>{availableQs === 1 ? 'question matches' : 'questions match'}</span></>}
                             </div>
-
-                            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '24px' }}>
-                                {(examId === 'upsc-capf' 
-                                    ? [...QUESTION_COUNTS, 125] 
-                                    : examId === 'upsc-epfo'
-                                        ? [...QUESTION_COUNTS, 120]
-                                        : availableQs >= 200 
-                                            ? [...QUESTION_COUNTS, 200] 
-                                            : QUESTION_COUNTS
-                                ).map((c) => (
-                                    <button
-                                        key={c}
-                                        onClick={() => { setCount(c); setCustomCount(''); }}
-                                        style={{
-                                            padding: '9px 18px', borderRadius: '10px', cursor: 'pointer',
-                                            fontSize: '14px', fontWeight: 700,
-                                            background: count === c && !customCount ? 'var(--brand-orange)' : 'var(--bg-primary)',
-                                            color: count === c && !customCount ? '#FFFFFF' : 'var(--text-secondary)',
-                                            border: count === c && !customCount ? '1px solid var(--brand-orange)' : '1px solid var(--border)',
-                                        }}
-                                    >
-                                        {c} Qs {c === 125 && examId === 'upsc-capf' ? '(Full Paper)' : c === 120 && examId === 'upsc-epfo' ? '(Full Paper)' : c === 100 && availableQs === 100 ? '(Full Paper)' : c === 200 ? '(Full Exam)' : ''}
-                                    </button>
+                            <dl className="xd-summary-list">
+                                {summaryRows.map(([k, v]) => (
+                                    <Fragment key={k}><dt>{k}</dt><dd>{v}</dd></Fragment>
                                 ))}
-                            </div>
-
-                            {/* Negative Marking Alert */}
-                            <div style={{ 
-                                display: 'flex', alignItems: 'center', gap: '10px', 
-                                padding: '12px 16px', borderRadius: '12px', marginBottom: '20px',
-                                background: 'rgba(255, 107, 43, 0.08)', border: '1px solid rgba(255, 107, 43, 0.2)' 
-                            }}>
-                                <AlertTriangle size={18} color="var(--brand-orange)" />
-                                <span style={{ fontSize: '13px', color: 'var(--text-secondary)', fontWeight: 600 }}>
-                                    Negative marking rule: <strong>{exam.negative_marking > 0 ? `${exam.negative_marking} mark deduction per wrong answer` : 'No negative marking'}</strong>.
+                            </dl>
+                            <p className="xd-rules">
+                                <AlertTriangle size={15} />
+                                <span>
+                                    {exam.negative_marking > 0
+                                        ? <><strong>−{exam.negative_marking}</strong> mark for each wrong answer. Unanswered questions score zero.</>
+                                        : 'No negative marking for this exam.'}
                                 </span>
-                            </div>
+                            </p>
+                            <button type="button" className="xd-start" onClick={handleStart} disabled={finalCount === 0}>
+                                {startLabel} {finalCount > 0 && <ArrowRight size={17} />}
+                            </button>
+                            {!user && finalCount > 0 && <p className="xd-start-note">You&apos;ll be asked to sign in first.</p>}
+                        </aside>
 
-                            {/* Start Test Button */}
-                            <button
-                                onClick={handleStart}
-                                disabled={finalCount === 0}
-                                style={{
-                                    width: '100%', padding: '16px', borderRadius: '14px',
-                                    cursor: finalCount === 0 ? 'not-allowed' : 'pointer',
-                                    background: finalCount === 0 ? 'var(--bg-tertiary)' : 'var(--brand-orange)',
-                                    color: finalCount === 0 ? 'var(--text-muted)' : '#FFFFFF',
-                                    fontSize: '16px', fontWeight: 800, border: 'none',
-                                    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
-                                    boxShadow: finalCount === 0 ? 'none' : '0 4px 16px rgba(255, 107, 43, 0.35)',
-                                    transition: 'all 0.15s'
-                                }}
-                            >
-                                <Zap size={18} />
-                                {countLoading ? 'Calculating question pool...' : finalCount > 0 ? `Start ${finalCount} Question Mock Test ➔` : 'No Questions Match Selected Filter'}
+                        {/* Mobile action bar */}
+                        <div className="xd-bar">
+                            <div className="xd-bar-info" aria-hidden="true">
+                                <strong>{countLoading ? 'Checking pool…' : `${finalCount} questions`}</strong>
+                                {!countLoading && finalCount > 0 && `~${durationMin} min · ${availableQs.toLocaleString()} available`}
+                                {!countLoading && finalCount === 0 && 'Change the filters above'}
+                            </div>
+                            <button type="button" className="xd-start" onClick={handleStart} disabled={finalCount === 0}>
+                                {finalCount > 0 && !countLoading ? 'Start test' : startLabel} {finalCount > 0 && !countLoading && <ArrowRight size={17} />}
                             </button>
                         </div>
                     </div>
@@ -1127,12 +701,12 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     TAB 2: ABOUT EXAM & OFFICIAL PATTERN
                 ═══════════════════════════════════════════════════════════════ */}
                 {activeTab === 'about' && examInfo && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                    <div id="xd-panel-about" role="tabpanel" aria-labelledby="xd-tab-about" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
                         
                         {/* Exam Overview & Conducting Body Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: '20px' }}>
+                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-                                <Landmark size={20} color="var(--brand-teal)" />
+                                <Landmark size={20} color="var(--text-secondary)" />
                                 <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                     Overview & Conducting Authority
                                 </h2>
@@ -1157,9 +731,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         </div>
 
                         {/* Official Exam Pattern & Stages Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: '20px' }}>
+                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                <Scale size={20} color="var(--brand-orange)" />
+                                <Scale size={20} color="var(--text-secondary)" />
                                 <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                     Official Examination Stages & Pattern
                                 </h2>
@@ -1213,9 +787,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         </div>
 
                         {/* Eligibility Criteria & Age Limits Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: '20px' }}>
+                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                <UserCheck size={20} color="#8B5CF6" />
+                                <UserCheck size={20} color="var(--text-secondary)" />
                                 <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                     Eligibility & Age Limits
                                 </h2>
@@ -1283,10 +857,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
                         {/* High-Yield Syllabus Focus Card */}
                         {examInfo.syllabusFocus && examInfo.syllabusFocus.length > 0 && (
-                            <div className="card" style={{ padding: '28px', borderRadius: '20px' }}>
+                            <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                        <Layers size={20} color="var(--brand-orange)" />
+                                        <Layers size={20} color="var(--text-secondary)" />
                                         <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                             High-Yield Syllabus Focus Areas
                                         </h2>
@@ -1321,24 +895,20 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
                         {/* FAQs Card */}
                         {examInfo.faqs && examInfo.faqs.length > 0 && (
-                            <div className="card" style={{ padding: '28px', borderRadius: '20px' }}>
+                            <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                    <HelpCircle size={20} color="var(--brand-orange)" />
+                                    <HelpCircle size={20} color="var(--text-secondary)" />
                                     <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                         Frequently Asked Questions
                                     </h2>
                                 </div>
 
-                                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                                <div>
                                     {examInfo.faqs.map((faq, fIdx) => (
-                                        <div key={fIdx} style={{ background: 'var(--bg-secondary)', padding: '16px', borderRadius: '12px' }}>
-                                            <div style={{ fontSize: '14.5px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '6px' }}>
-                                                Q: {faq.question}
-                                            </div>
-                                            <div style={{ fontSize: '13.5px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                                                A: {faq.answer}
-                                            </div>
-                                        </div>
+                                        <details key={fIdx} className="xd-faq">
+                                            <summary>{faq.question}<ChevronRight size={18} /></summary>
+                                            <p>{faq.answer}</p>
+                                        </details>
                                     ))}
                                 </div>
                             </div>
@@ -1350,11 +920,11 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     TAB 3: SERVICES & JOB ROLES (SEPARATE DEDICATED CATEGORY)
                 ═══════════════════════════════════════════════════════════════ */}
                 {activeTab === 'services' && examInfo && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                    <div id="xd-panel-services" role="tabpanel" aria-labelledby="xd-tab-services" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
 
                         {/* ── ALLOCATED SERVICES & CADRES DIRECTORY (IF COMPOSITE EXAM) ── */}
                         {examInfo.allocatedServices && examInfo.allocatedServices.length > 0 && (
-                            <div className="card" style={{ padding: '28px', borderRadius: '20px', border: '1px solid var(--border)' }}>
+                            <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)', border: '1px solid var(--border)' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
                                     <div style={{ 
                                         width: '36px', height: '36px', borderRadius: '10px', 
@@ -1406,7 +976,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                         {srvName}
                                                     </h3>
                                                     <div style={{ fontSize: '12.5px', fontWeight: 600, color: 'var(--brand-teal)', marginBottom: '10px' }}>
-                                                        🏢 {srv.department}
+                                                        {srv.department}
                                                     </div>
 
                                                     <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '14px' }}>
@@ -1430,9 +1000,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         )}
 
                         {/* Job Profile & Day-to-Day Responsibilities Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: '20px' }}>
+                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-                                <Briefcase size={20} color="var(--brand-orange)" />
+                                <Briefcase size={20} color="var(--text-secondary)" />
                                 <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                     Executive Role & Statutory Responsibilities
                                 </h2>
@@ -1494,9 +1064,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         </div>
 
                         {/* Salary, Pay Scale & Allowances Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: '20px' }}>
+                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                <DollarSign size={20} color="var(--brand-teal)" />
+                                <DollarSign size={20} color="var(--text-secondary)" />
                                 <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
                                     Salary Structure & Government Perks
                                 </h2>
@@ -1540,7 +1110,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     TAB 4: SYLLABUS MIND MAP (EXAM-TAILORED PRUNED HIERARCHY)
                 ═══════════════════════════════════════════════════════════════ */}
                 {activeTab === 'mindmap' && (
-                    <div>
+                    <div id="xd-panel-mindmap" role="tabpanel" aria-labelledby="xd-tab-mindmap">
                         <ExamMindMapVisualizer initialExamId={examId} showExamPicker={false} />
                     </div>
                 )}
