@@ -68,7 +68,7 @@
   align-items: flex-start;
   gap: 6px;
   min-height: 44px;
-  padding: 8px 10px 8px calc(10px + var(--depth, 0) * 22px);
+  padding: 8px 10px 8px calc(10px + min(var(--depth, 0), 7) * 22px);
   border-radius: var(--radius);
   cursor: pointer;
   position: relative;
@@ -76,7 +76,7 @@
 .st-row::before {
   content: '';
   position: absolute;
-  left: calc(19px + (var(--depth, 0) - 1) * 22px);
+  left: calc(19px + (min(var(--depth, 0), 7) - 1) * 22px);
   top: 0;
   bottom: 0;
   width: 1px;
@@ -116,6 +116,16 @@
 .st-items-h { margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--text-primary); }
 .st-items { margin: 0 0 16px; padding-left: 18px; display: grid; gap: 4px; font-size: 14px; line-height: 1.55; color: var(--text-secondary); }
 .st-items-text { list-style: none; padding-left: 0; gap: 8px; max-width: 75ch; }
+/* Official syllabus text, indented by its own numbering depth */
+.st-ol { margin: 0 0 16px; max-width: 75ch; font-size: 14px; line-height: 1.6; color: var(--text-secondary); }
+.st-ol p { margin: 0; padding: 3px 0 3px calc(var(--d, 0) * 16px); }
+.st-ol strong { color: var(--text-primary); font-weight: 600; }
+.st-ol .st-ol-h { margin-top: 6px; }
+.st-ol p:first-child { margin-top: 0; }
+.st-ol .st-ol-sub { margin-top: 6px; font-weight: 600; color: var(--text-primary); }
+.st-ol .st-ol-note { font-style: italic; color: var(--text-muted); }
+.st-ol .st-ol-li { padding-left: calc(var(--d, 0) * 16px + 4px); }
+.st-ol mark { background: var(--st-match); color: inherit; border-radius: 3px; padding: 0 1px; }
 .st-cta { display: grid; gap: 8px; }
 .st-cta p { margin: 0; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 .st-detail-empty { padding: 24px 20px; font-size: 15px; line-height: 1.6; color: var(--text-secondary); }
@@ -138,7 +148,7 @@
   }
   .st-detail-wrap[data-open] .st-detail { position: static; padding-bottom: calc(20px + env(safe-area-inset-bottom)); }
   .st-close { display: inline-flex; float: right; margin: -8px -8px 0 8px; }
-  .st-row { padding-left: calc(6px + var(--depth, 0) * 16px); }
-  .st-row::before { left: calc(15px + (var(--depth, 0) - 1) * 16px); }
+  .st-row { padding-left: calc(6px + min(var(--depth, 0), 6) * 14px); }
+  .st-row::before { left: calc(15px + (min(var(--depth, 0), 6) - 1) * 14px); }
 }
 @media (prefers-reduced-motion: reduce) { .st-caret { transition: none; } }

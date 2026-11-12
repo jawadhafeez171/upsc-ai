@@ -13,8 +13,54 @@ export type SyllabusNode = {
     description?: string;
     items?: string[];        // key entities / sub-points
     verbatim?: boolean;      // items are the official syllabus text: show as text, not bullet points
+    outline?: OutlineLine[]; // official text owned by this node, line by line (depth, text, style)
     children?: SyllabusNode[];
 };
+
+/** [depth, text, style]: 'h' item heading · 'sub' sub-heading · 'note' instruction · 'li' list line */
+export type OutlineLine = [number, string, ('h' | 'sub' | 'note' | 'li')?];
+
+/** The node's official text with everything beneath it, in document order. */
+function subtreeOutline(n: SyllabusNode): OutlineLine[] {
+    const out: OutlineLine[] = [];
+    const walk = (x: SyllabusNode) => { x.outline?.forEach((l) => out.push(l)); x.children?.forEach(walk); };
+    walk(n);
+    return out;
+}
+
+/** Bold the title part of an item line: the whole line when short, else up to its first ':'. */
+function OutlineHead({ text, q }: { text: string; q: string }) {
+    const c = text.indexOf(':');
+    if (text.length <= 100 && (c < 0 || c === text.length - 1)) return <strong>{highlight(text, q)}</strong>;
+    if (c > 0 && c <= 100) return <><strong>{highlight(text.slice(0, c + 1), q)}</strong>{highlight(text.slice(c + 1), q)}</>;
+    const num = text.match(/^(\d+(\.\d+)*\.?|\([0-9a-zA-Z]{1,4}\)|[a-zA-H][.)])\s/);
+    if (num) return <><strong>{num[0]}</strong>{highlight(text.slice(num[0].length), q)}</>;
+    return <>{highlight(text, q)}</>;
+}
+
+function Outline({ node, q }: { node: SyllabusNode; q: string }) {
+    let lines = subtreeOutline(node);
+    // The panel heading already shows the node's own title line.
+    // ("Section-A" + "Language" are both in the title "Section-A: Language").
+    const title = node.label.toLowerCase();
+    let skip = 0;
+    while (skip < 2 && lines[skip]?.[2] === 'h') {
+        const t = lines[skip][1].trim().replace(/\s*:$/, '').toLowerCase();
+        if (t === title || (t.length <= 60 && title.includes(t))) skip += 1; else break;
+    }
+    lines = lines.slice(skip);
+    if (!lines.length) return null;
+    const base = Math.min(...lines.map((l) => l[0]));
+    return (
+        <div className="st-ol">
+            {lines.map(([d, text, style], i) => (
+                <p key={i} className={style ? `st-ol-${style}` : undefined} style={{ ['--d' as string]: Math.min(d - base, 4) }}>
+                    {style === 'h' ? <OutlineHead text={text} q={q} /> : highlight(text, q)}
+                </p>
+            ))}
+        </div>
+    );
+}
 
 export type PracticeLink = { href?: string; label?: string; note?: string } | null;
 
@@ -99,7 +145,7 @@ export default function SyllabusTree({ roots, lang = 'en', practiceFor, initiall
         const hits = new Set<string>();
         const keep = new Set<string>();
         index.byId.forEach((n, id) => {
-            const hay = `${n.label} ${n.badge ?? ''} ${(n.items ?? []).join(' ')} ${n.description ?? ''}`.toLowerCase();
+            const hay = `${n.label} ${n.badge ?? ''} ${(n.items ?? []).join(' ')} ${n.description ?? ''} ${(n.outline ?? []).map((l) => l[1]).join(' ')}`.toLowerCase();
             if (hay.includes(ql)) {
                 hits.add(id);
                 let cur: string | null | undefined = id;
@@ -225,6 +271,7 @@ export default function SyllabusTree({ roots, lang = 'en', practiceFor, initiall
     const selected = selectedId ? index.byId.get(selectedId) : null;
     const selPath = selected ? pathOf(selected.id) : [];
     const practice = selected ? practiceFor(selected, selPath) : null;
+    const selectedHasText = !!selected && subtreeOutline(selected).length > 0;
 
     if (!roots.length) return <div className="st-panel st-empty">{emptyNote}</div>;
 
@@ -259,6 +306,10 @@ export default function SyllabusTree({ roots, lang = 'en', practiceFor, initiall
                         {selPath.length > 0 && <p className="st-path">{t.inside}: {selPath.map((p) => p.label).join(' › ')}</p>}
                         {selected.badge && <p className="st-badge">{selected.badge}</p>}
                         {selected.description && <p className="st-desc">{selected.description}</p>}
+                        {selected.verbatim && selectedHasText && <>
+                            <p className="st-items-h">{t.official}</p>
+                            <Outline node={selected} q={q} />
+                        </>}
                         {!!selected.items?.length && <>
                             <p className="st-items-h">{selected.verbatim ? t.official : t.keyPoints}</p>
                             <ul className={selected.verbatim ? 'st-items st-items-text' : 'st-items'}>{selected.items.map((it, i) => <li key={i}>{it}</li>)}</ul>

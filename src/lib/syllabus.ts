@@ -26,6 +26,7 @@ export function examSyllabusTree(examId: string, lang: 'en' | 'kn'): SyllabusNod
         description: n.description,
         items: n.entities,
         verbatim: n.verbatim,
+        outline: n.outline,
         children: n.children?.map(conv),
     });
     return [conv(root)];

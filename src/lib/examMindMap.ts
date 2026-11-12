@@ -18,16 +18,44 @@ export interface MindMapNode {
     nodeCount?: number;
     /** Overrides the generic kind label ("Paper", "Optional subject"…). */
     kindLabel?: string;
-    /** `entities` are the official syllabus text, word for word. */
+    /** `entities` / `outline` are the official syllabus text, word for word. */
     verbatim?: boolean;
+    /** Official text owned by this node, line by line, in document order: [depth, text, style?]. */
+    outline?: OutlineLine[];
 }
+
+/** 'h' item heading · 'sub' sub-heading · 'note' instruction ("Answers must be written in…") · 'li' list line */
+export type OutlineLine = [number, string, ('h' | 'sub' | 'note' | 'li')?];
 
 /**
  * Builds an exam-tailored Mind Map hierarchy pruned strictly to the specific examination syllabus.
  * Directly synchronized with official KPSC KAS Gazette & UPSC Civil Services Notification syllabi.
  */
 /** UPSC CSE Main Examination — verbatim from the official notification (Section-III), built by parsing src/Syllabus/upsc-syllabus.pdf. */
-const cseMains = cseMainsJson as unknown as MindMapNode;
+const cseMains = expandPapers(cseMainsJson as unknown as MindMapNode);
+
+/**
+ * Optional papers are stored compactly (scripts/build_cse_mains_syllabus.py): inside a paper, a node's id is its
+ * parent's id plus its position, it is a verbatim topic, and its label is its first line without the trailing ':'.
+ */
+function expandPapers(n: MindMapNode): MindMapNode {
+    if (n.kindLabel === 'Paper' && n.verbatim) {
+        const fill = (c: Partial<MindMapNode>, parentId: string, i: number): MindMapNode => {
+            const id = c.id ?? `${parentId}-${i + 1}`;
+            return {
+                ...c,
+                id,
+                label: c.label ?? (c.outline?.[0]?.[1] ?? '').trim().replace(/\s*:$/, ''),
+                category: c.category ?? 'topic',
+                kindLabel: c.kindLabel ?? 'Topic',
+                verbatim: true,
+                children: c.children?.map((g, j) => fill(g, id, j)),
+            };
+        };
+        return { ...n, children: n.children?.map((c, i) => fill(c, n.id, i)) };
+    }
+    return n.children ? { ...n, children: n.children.map(expandPapers) } : n;
+}
 
 export function getExamMindMap(examId: string): MindMapNode | null {
     switch (examId) {
