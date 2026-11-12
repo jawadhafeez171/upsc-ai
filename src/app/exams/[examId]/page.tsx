@@ -7,6 +7,7 @@ import { supabase } from '@/lib/supabase';
 import { useAppStore } from '@/lib/store';
 import { EXAMS } from '@/lib/mockData';
 import { getMarkingScheme, formatMarks } from '@/lib/marking';
+import { hasExamMindMap } from '@/lib/examMindMap';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
 import { TestConfig, Language, TestMode } from '@/types';
 import { 
@@ -68,7 +69,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
     // Determine initial tab from query parameter: ?tab=about | ?tab=services | ?tab=mindmap | default practice
     const tabParam = searchParams.get('tab');
-    const initialTab: ActiveTab = tabParam === 'about' ? 'about' : tabParam === 'services' ? 'services' : tabParam === 'mindmap' ? 'mindmap' : 'practice';
+    const initialTab: ActiveTab = tabParam === 'about' ? 'about' : tabParam === 'services' ? 'services' : tabParam === 'mindmap' && hasExamMindMap(examId) ? 'mindmap' : 'practice';
     const [activeTab, setActiveTab] = useState<ActiveTab>(initialTab);
 
     const [exam, setExam] = useState<any>(null);
@@ -78,8 +79,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [countLoading, setCountLoading] = useState(true);
     const loadedExamIdRef = useRef<string | null>(null);
 
-    const [mode, setMode] = useState<TestMode>('full');
-    const [subject, setSubject] = useState('');
+    // Presets from links such as ?mode=subject&subject=Polity (syllabus map practice links)
+    const presetMode = searchParams.get('mode');
+    const [mode, setMode] = useState<TestMode>(presetMode === 'subject' || presetMode === 'yearwise' ? presetMode : 'full');
+    const [subject, setSubject] = useState(presetMode === 'subject' ? (searchParams.get('subject') ?? '') : '');
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
     // Presets from links such as /exams/upsc-cse?paper=1&count=100 (homepage CTAs)
@@ -497,7 +500,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             { id: 'about' as ActiveTab, label: 'Exam pattern', Icon: BookOpen },
             { id: 'services' as ActiveTab, label: 'Services & roles', Icon: Briefcase },
         ] : []),
-        { id: 'mindmap' as ActiveTab, label: 'Syllabus map', Icon: Compass },
+        ...(hasExamMindMap(examId) ? [{ id: 'mindmap' as ActiveTab, label: 'Syllabus map', Icon: Compass }] : []),
     ];
     const selectTab = (id: ActiveTab) => {
         setActiveTab(id);

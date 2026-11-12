@@ -136,8 +136,8 @@ export const EXAMS: Exam[] = [
         description_kn: 'ಪಂಚಾಯತ್ ಅಭಿವೃದ್ಧಿ ಅಧಿಕಾರಿ — ಗ್ರಾಮೀಣಾಭಿವೃದ್ಧಿ ಇಲಾಖೆ',
         languages: ['en', 'kn'],
         negative_marking: 0.25,
-        subjects: ['General Knowledge', 'General Kannada', 'General English', 'Computer Knowledge', 'Karnataka Gram Swaraj Act 1993', 'Rural Development Schemes'],
-        subjects_kn: ['ಸಾಮಾನ್ಯ ಜ್ಞಾನ', 'ಸಾಮಾನ್ಯ ಕನ್ನಡ', 'ಸಾಮಾನ್ಯ ಇಂಗ್ಲಿಷ್', 'ಕಂಪ್ಯೂಟರ್ ಸಾಕ್ಷರತೆ', 'ಕರ್ನಾಟಕ ಗ್ರಾಮ ಸ್ವರಾಜ್ ಕಾಯ್ದೆ 1993', 'ಗ್ರಾಮೀಣಾಭಿವೃದ್ಧಿ ಯೋಜನೆಗಳು'],
+        subjects: ['General Knowledge', 'History', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'Geography & Earth Systems', 'Science, Technology & Defence', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'Language Proficiency, Grammar & Communication (General Kannada & General English)', 'Communication Paper (General Kannada, General English & Computer Knowledge)', 'Indian Society & Social Justice', 'Environment, Ecology & Disaster Management'],
+        subjects_kn: ['ಸಾಮಾನ್ಯ ಜ್ಞಾನ', 'ಇತಿಹಾಸ', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ', 'ಭಾಷಾ ಪ್ರಾವೀಣ್ಯತೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ & ಇಂಗ್ಲಿಷ್)', 'ಸಂವಹನ ಪತ್ರಿಕೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ, ಇಂಗ್ಲಿಷ್ & ಕಂಪ್ಯೂಟರ್)', 'ಭಾರತೀಯ ಸಮಾಜ ಮತ್ತು ಸಾಮಾಜಿಕ ನ್ಯಾಯ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ'],
         icon: '🏘️',
         color: '#E67E22',
         badge: 'Popular'

@@ -1,4 +1,3 @@
-import { getKnowledgeGraph } from './knowledgeGraph';
 
 export interface MindMapNode {
     id: string;
@@ -18,7 +17,7 @@ export interface MindMapNode {
  * Builds an exam-tailored Mind Map hierarchy pruned strictly to the specific examination syllabus.
  * Directly synchronized with official KPSC KAS Gazette & UPSC Civil Services Notification syllabi.
  */
-export function getExamMindMap(examId: string): MindMapNode {
+export function getExamMindMap(examId: string): MindMapNode | null {
     switch (examId) {
         // ═══════════════════════════════════════════════════════════════
         // 1. KPSC KAS (GAZETTED PROBATIONERS) OFFICIAL SYLLABUS
@@ -1097,6 +1096,13 @@ export function getExamMindMap(examId: string): MindMapNode {
         // DEFAULT FALLBACK
         // ═══════════════════════════════════════════════════════════════
         default:
-            return getExamMindMap('upsc-cse');
+            // No curated map for this exam. Never substitute another exam's syllabus.
+            return null;
     }
+}
+
+/** Exams that have a curated syllabus map (keep in sync with the switch above). */
+export const MIND_MAP_EXAM_IDS = ['upsc-cse', 'upsc-epfo', 'kpsc-kas', 'kea-pdo', 'ksp-psi', 'ksp-pc', 'kartet', 'karnataka-gpstr'] as const;
+export function hasExamMindMap(examId: string) {
+    return (MIND_MAP_EXAM_IDS as readonly string[]).includes(examId);
 }
