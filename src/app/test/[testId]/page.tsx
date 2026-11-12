@@ -684,7 +684,9 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         return {
                             id: dbq.id || `${config.exam_id || 'exam'}-${dbq.year || 2020}-q${dbq.question_number || 1}`,
                             exam_id: dbq.exam_id || config.exam_id || 'upsc-cse',
-                            subject: dbq.subject || dbq.domain || 'General Studies',
+                            // CSAT rows share one generic subject; their real area (RC / Quant / Reasoning) is the domain,
+                            // which is what the subject drill filters on and what results should group by.
+                            subject: (dbq.domain && CSAT_SUBJECTS.includes(dbq.domain) ? dbq.domain : dbq.subject) || dbq.domain || 'General Studies',
                             difficulty: (dbq.difficulty || 'medium').toLowerCase() as any,
                             text: dbq.question_english,
                             text_hi: dbq.question_hindi || undefined,
