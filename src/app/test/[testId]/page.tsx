@@ -606,11 +606,21 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         sortedQuestions = sortedQuestions.slice(0, config.question_count);
                     }
                 } else if (config.exam_id === 'kpsc-kas') {
-                    sortedQuestions.sort((a, b) => {
-                        const numA = parseInt(a.id.match(/-q(\d+)$/)?.[1] || '0', 10);
-                        const numB = parseInt(b.id.match(/-q(\d+)$/)?.[1] || '0', 10);
-                        return numA - numB;
-                    });
+                    if (config.mode === 'yearwise') {
+                        sortedQuestions.sort((a, b) => {
+                            const numA = parseInt(a.id.match(/-q(\d+)$/)?.[1] || '0', 10);
+                            const numB = parseInt(b.id.match(/-q(\d+)$/)?.[1] || '0', 10);
+                            return numA - numB;
+                        });
+                    } else {
+                        sortedQuestions = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
+                    }
+                } else if (config.exam_id === 'upsc-capf') {
+                    if (config.mode === 'yearwise') {
+                        sortedQuestions = [...selectedRawQuestions].sort((a, b) => (a.year || 0) - (b.year || 0) || (a.question_number || 0) - (b.question_number || 0));
+                    } else {
+                        sortedQuestions = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
+                    }
                 } else {
                     const shuffledFinal = [...selectedRawQuestions].sort(() => Math.random() - 0.5);
                     const diffOrder: Record<string, number> = { easy: 0, medium: 1, hard: 2 };
@@ -623,6 +633,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                         return (diffOrder[diffA] ?? 1) - (diffOrder[diffB] ?? 1);
                     });
                     sortedQuestions = shuffledFinal;
+                }
+                // Every exam honours the number of questions chosen on the setup page.
+                if (config.question_count && config.question_count < sortedQuestions.length && !(config.exam_id === 'upsc-cse' && config.paper === 2)) {
+                    sortedQuestions = safeSliceQuestions(sortedQuestions, config.question_count);
                 }
 
                 const formattedQs: Question[] = sortedQuestions.map((dbq) => {
@@ -995,10 +1009,10 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             if ((tag === 'input' && !isRadio) || tag === 'textarea' || tag === 'select' || t?.isContentEditable) return;
 
             const key = e.key.toLowerCase();
-            const optionKeys: Record<string, string> = { a: 'a', b: 'b', c: 'c', d: 'd', '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
-            if (optionKeys[key]) {
-                const optId = optionKeys[key];
-                if (questions[currentIdx]?.options.some((o) => o.id === optId)) { e.preventDefault(); handleSelectOption(optId); }
+            const optionIndex: Record<string, number> = { a: 0, b: 1, c: 2, d: 3, '1': 0, '2': 1, '3': 2, '4': 3 };
+            if (key in optionIndex) {
+                const opt = questions[currentIdx]?.options[optionIndex[key]];
+                if (opt) { e.preventDefault(); handleSelectOption(opt.id); }
             } else if (key === 'n' || (key === 'arrowright' && !isRadio)) {
                 e.preventDefault(); handleSaveAndNext();
             } else if (key === 'p' || (key === 'arrowleft' && !isRadio)) {

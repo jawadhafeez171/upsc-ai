@@ -218,7 +218,8 @@ export function QuestionPanel({
                     <fieldset className="es-options">
                         <legend>Choose one answer <span className="es-only-desktop" style={{ display: 'inline' }}>· keys <kbd>A</kbd>–<kbd>D</kbd></span></legend>
                         <div className="es-opt-list">
-                            {question.options.map((o) => {
+                            {question.options.map((o, oi) => {
+                                const letter = 'ABCDEFGH'[oi] ?? o.id.toUpperCase();
                                 const isSel = selected === o.id;
                                 const isElim = !!eliminated[o.id];
                                 const sec = optText(o);
@@ -226,16 +227,16 @@ export function QuestionPanel({
                                     <div key={o.id} className="es-opt-row">
                                         <label className="es-opt" data-selected={isSel ? '' : undefined} data-eliminated={isElim ? '' : undefined}>
                                             <input type="radio" name={groupName} value={o.id} checked={isSel} onChange={() => onSelect(o.id)} />
-                                            <span className="es-opt-key" aria-hidden="true">{o.id.toUpperCase()}</span>
+                                            <span className="es-opt-key" aria-hidden="true">{letter}</span>
                                             <span className="es-opt-text">
-                                                <span className="cbt-sr-only">Option {o.id.toUpperCase()}: </span>
+                                                <span className="cbt-sr-only">Option {letter}: </span>
                                                 {sec ? <><span lang={lang}><OptionFormatter text={sec} /></span><small lang="en"><OptionFormatter text={o.text} /></small></> : <OptionFormatter text={o.text} />}
                                                 {isElim && <span className="cbt-sr-only"> (crossed out)</span>}
                                             </span>
                                         </label>
                                         {practice && (
                                             <button type="button" className="es-elim" aria-pressed={isElim} onClick={() => onEliminate(o.id)}
-                                                aria-label={`${isElim ? 'Restore' : 'Cross out'} option ${o.id.toUpperCase()}`} title={isElim ? 'Restore option' : 'Cross out option'}>
+                                                aria-label={`${isElim ? 'Restore' : 'Cross out'} option ${letter}`} title={isElim ? 'Restore option' : 'Cross out option'}>
                                                 <X size={18} aria-hidden="true" />
                                             </button>
                                         )}
