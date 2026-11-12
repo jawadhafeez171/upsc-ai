@@ -12,6 +12,7 @@ export type SyllabusNode = {
     badge?: string;          // factual exam detail, e.g. "100 MCQs · 200 marks"
     description?: string;
     items?: string[];        // key entities / sub-points
+    verbatim?: boolean;      // items are the official syllabus text: show as text, not bullet points
     children?: SyllabusNode[];
 };
 
@@ -19,19 +20,19 @@ export type PracticeLink = { href?: string; label?: string; note?: string } | nu
 
 type Strings = {
     search: string; expandAll: string; collapseAll: string; matches: (n: number) => string; noMatches: string;
-    pickTopic: string; close: string; inside: string; keyPoints: string; subtopics: (n: number) => string;
+    pickTopic: string; close: string; inside: string; keyPoints: string; official: string; subtopics: (n: number) => string;
 };
 const STRINGS: Record<'en' | 'kn', Strings> = {
     en: {
         search: 'Search topics', expandAll: 'Expand all', collapseAll: 'Collapse all',
         matches: (n) => `${n} matching ${n === 1 ? 'topic' : 'topics'}`, noMatches: 'No topics match. Try a shorter or different word.',
-        pickTopic: 'Select a topic to see what it covers and practise it.', close: 'Close', inside: 'In', keyPoints: 'Key points',
+        pickTopic: 'Select a topic to see what it covers and practise it.', close: 'Close', inside: 'In', keyPoints: 'Key points', official: 'Official syllabus',
         subtopics: (n) => `${n} ${n === 1 ? 'subtopic' : 'subtopics'}`,
     },
     kn: {
         search: 'ವಿಷಯಗಳನ್ನು ಹುಡುಕಿ', expandAll: 'ಎಲ್ಲವನ್ನೂ ತೆರೆಯಿರಿ', collapseAll: 'ಎಲ್ಲವನ್ನೂ ಮುಚ್ಚಿ',
         matches: (n) => `${n} ಹೊಂದಾಣಿಕೆಯ ವಿಷಯಗಳು`, noMatches: 'ಯಾವುದೇ ವಿಷಯ ಹೊಂದುತ್ತಿಲ್ಲ. ಬೇರೆ ಪದ ಪ್ರಯತ್ನಿಸಿ.',
-        pickTopic: 'ವಿವರಗಳನ್ನು ನೋಡಲು ಮತ್ತು ಅಭ್ಯಾಸ ಮಾಡಲು ಒಂದು ವಿಷಯ ಆಯ್ಕೆಮಾಡಿ.', close: 'ಮುಚ್ಚಿ', inside: 'ಇದರಲ್ಲಿ', keyPoints: 'ಮುಖ್ಯ ಅಂಶಗಳು',
+        pickTopic: 'ವಿವರಗಳನ್ನು ನೋಡಲು ಮತ್ತು ಅಭ್ಯಾಸ ಮಾಡಲು ಒಂದು ವಿಷಯ ಆಯ್ಕೆಮಾಡಿ.', close: 'ಮುಚ್ಚಿ', inside: 'ಇದರಲ್ಲಿ', keyPoints: 'ಮುಖ್ಯ ಅಂಶಗಳು', official: 'ಅಧಿಕೃತ ಪಠ್ಯಕ್ರಮ',
         subtopics: (n) => `${n} ಉಪವಿಷಯಗಳು`,
     },
 };
@@ -259,8 +260,8 @@ export default function SyllabusTree({ roots, lang = 'en', practiceFor, initiall
                         {selected.badge && <p className="st-badge">{selected.badge}</p>}
                         {selected.description && <p className="st-desc">{selected.description}</p>}
                         {!!selected.items?.length && <>
-                            <p className="st-items-h">{t.keyPoints}</p>
-                            <ul className="st-items">{selected.items.map((it, i) => <li key={i}>{it}</li>)}</ul>
+                            <p className="st-items-h">{selected.verbatim ? t.official : t.keyPoints}</p>
+                            <ul className={selected.verbatim ? 'st-items st-items-text' : 'st-items'}>{selected.items.map((it, i) => <li key={i}>{it}</li>)}</ul>
                         </>}
                         {practice && (
                             <div className="st-cta">

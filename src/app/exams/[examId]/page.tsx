@@ -7,7 +7,7 @@ import { supabase } from '@/lib/supabase';
 import { useAppStore } from '@/lib/store';
 import { EXAMS } from '@/lib/mockData';
 import { getMarkingScheme, formatMarks } from '@/lib/marking';
-import { hasExamMindMap } from '@/lib/examMindMap';
+import { hasExamMindMap } from '@/lib/mindMapIds';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
 import { TestConfig, Language, TestMode } from '@/types';
 import { 
@@ -16,7 +16,10 @@ import {
     Layers, HelpCircle, ChevronRight, UserCheck, Scale, Landmark,
     Compass, ArrowLeft, Check, CalendarDays, Target, Shuffle
 } from 'lucide-react';
-import ExamMindMapVisualizer from '@/components/graph/ExamMindMapVisualizer';
+import dynamic from 'next/dynamic';
+
+// The syllabus data is large; load it only when the Syllabus map tab opens.
+const ExamMindMapVisualizer = dynamic(() => import('@/components/graph/ExamMindMapVisualizer'), { ssr: false });
 import './exam-detail.css';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];

@@ -21,10 +21,11 @@ export function examSyllabusTree(examId: string, lang: 'en' | 'kn'): SyllabusNod
         id: n.id,
         label: lang === 'kn' && n.label_kn ? n.label_kn : n.label,
         matchLabel: n.label,
-        kind: KIND[n.category]?.[lang] ?? n.category,
+        kind: n.kindLabel ?? KIND[n.category]?.[lang] ?? n.category,
         badge: n.badge,
         description: n.description,
         items: n.entities,
+        verbatim: n.verbatim,
         children: n.children?.map(conv),
     });
     return [conv(root)];
@@ -87,6 +88,7 @@ export function practiceLinkFor(examId: string, node: SyllabusNode, path: Syllab
     const exam = EXAMS.find((e) => e.id === examId);
     if (!exam) return null;
     if (NO_QUESTION_BANK.has(examId)) return { note: `Practice questions for ${exam.name} aren’t available yet.` };
+    if ([node, ...path].some((n) => n.id === 'cse-mains-optional')) return { note: 'There are no practice questions for optional subjects yet.' };
     // Deepest first: the topic itself, then the areas it sits in.
     const labels = [node, ...[...path].reverse()].map((n) => n.matchLabel ?? n.label);
     const subjects = examId === 'upsc-cse' ? [...exam.subjects, ...CSAT_SUBJECTS] : exam.subjects;

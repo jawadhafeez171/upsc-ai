@@ -112,9 +112,10 @@
 .st-detail h3 { margin: 0 0 6px; font-size: 18px; line-height: 1.35; font-weight: 800; color: var(--text-primary); }
 .st-path { margin: 0 0 12px; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 .st-badge { display: inline-block; margin: 0 0 12px; padding: 4px 10px; border-radius: var(--radius-sm); background: var(--bg-tertiary); color: var(--text-secondary); font-size: 14px; font-weight: 600; }
-.st-desc { margin: 0 0 14px; font-size: 15px; line-height: 1.65; color: var(--text-secondary); }
+.st-desc { margin: 0 0 14px; font-size: 15px; line-height: 1.65; color: var(--text-secondary); white-space: pre-line; }
 .st-items-h { margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--text-primary); }
 .st-items { margin: 0 0 16px; padding-left: 18px; display: grid; gap: 4px; font-size: 14px; line-height: 1.55; color: var(--text-secondary); }
+.st-items-text { list-style: none; padding-left: 0; gap: 8px; max-width: 75ch; }
 .st-cta { display: grid; gap: 8px; }
 .st-cta p { margin: 0; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 .st-detail-empty { padding: 24px 20px; font-size: 15px; line-height: 1.6; color: var(--text-secondary); }

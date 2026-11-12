@@ -12,16 +12,15 @@ const STREAM_NAME = { civil_services: 'general studies', teaching: 'teaching and
 
 const examName = (id: string) => EXAMS.find((e) => e.id === id)?.name ?? id;
 
-function countNodes(nodes: SyllabusNode[], view: View): { total: number; papers: number; areas: number } {
-    let total = 0, papers = 0, areas = 0;
+function countNodes(nodes: SyllabusNode[], view: View): { total: number; areas: number } {
+    let total = 0, areas = 0;
     const walk = (n: SyllabusNode) => {
         total += 1;
-        if (n.kind === 'Paper' || n.kind === 'ಪತ್ರಿಕೆ') papers += 1;
         if (n.kind === 'Subject area' || n.kind === 'ವಿಷಯ ಕ್ಷೇತ್ರ') areas += 1;
         n.children?.forEach(walk);
     };
     nodes.forEach(walk);
-    return { total, papers, areas: view === 'topics' ? nodes.length : areas };
+    return { total, areas: view === 'topics' ? nodes.length : areas };
 }
 
 function SyllabusMap() {
@@ -39,7 +38,7 @@ function SyllabusMap() {
         () => (view === 'topics' ? topicGraphTree(stream) : examSyllabusTree(exam, lang) ?? []),
         [view, stream, exam, lang],
     );
-    const { total, papers, areas } = useMemo(() => countNodes(roots, view), [roots, view]);
+    const { total, areas } = useMemo(() => countNodes(roots, view), [roots, view]);
 
     const go = (next: { exam?: string; view?: View }) => {
         const e = next.exam ?? exam, v = next.view ?? view;
@@ -55,7 +54,7 @@ function SyllabusMap() {
                     </h1>
                     <p style={{ margin: 0, fontSize: '16px', lineHeight: 1.6, color: 'var(--text-secondary)', maxWidth: '68ch' }}>
                         {view === 'syllabus'
-                            ? <>The {examName(exam)} syllabus, paper by paper: {papers} papers covering {areas} subject areas. Select a subject area to see what it covers and practise it.</>
+                            ? <>The {examName(exam)} syllabus, stage by stage and paper by paper. Select any part to read it in full and practise it where questions are available.</>
                             : <>Every topic in the {STREAM_NAME[stream]} topic library: {areas} subjects and {(total - areas).toLocaleString('en-IN')} topics beneath them, including subtopics beyond the official syllabus wording.</>}
                     </p>
                 </header>

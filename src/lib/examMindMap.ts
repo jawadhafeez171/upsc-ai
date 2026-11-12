@@ -1,4 +1,9 @@
 
+import cseMainsJson from '@/data/syllabus/upsc-cse-mains.json';
+import { MIND_MAP_EXAM_IDS, hasExamMindMap } from './mindMapIds';
+
+export { MIND_MAP_EXAM_IDS, hasExamMindMap };
+
 export interface MindMapNode {
     id: string;
     label: string;
@@ -11,12 +16,19 @@ export interface MindMapNode {
     children?: MindMapNode[];
     color?: string;
     nodeCount?: number;
+    /** Overrides the generic kind label ("Paper", "Optional subject"…). */
+    kindLabel?: string;
+    /** `entities` are the official syllabus text, word for word. */
+    verbatim?: boolean;
 }
 
 /**
  * Builds an exam-tailored Mind Map hierarchy pruned strictly to the specific examination syllabus.
  * Directly synchronized with official KPSC KAS Gazette & UPSC Civil Services Notification syllabi.
  */
+/** UPSC CSE Main Examination — verbatim from the official notification (Section-III), built by parsing src/Syllabus/upsc-syllabus.pdf. */
+const cseMains = cseMainsJson as unknown as MindMapNode;
+
 export function getExamMindMap(examId: string): MindMapNode | null {
     switch (examId) {
         // ═══════════════════════════════════════════════════════════════
@@ -387,87 +399,7 @@ export function getExamMindMap(examId: string): MindMapNode | null {
                             }
                         ]
                     },
-                    {
-                        id: 'cse-mains',
-                        label: 'Part-B: Main Examination (Descriptive Written 1750 Marks + Interview 275 Marks)',
-                        label_kn: 'ಭಾಗ-ಬಿ: ಮುಖ್ಯ ಪರೀಕ್ಷೆ (ವಿವರಣಾತ್ಮಕ ಲಿಖಿತ ೧೭೫೦ + ಸಂದರ್ಶನ ೨೭೫ ಅಂಕಗಳು)',
-                        category: 'stage',
-                        color: '#3B82F6',
-                        children: [
-                            {
-                                id: 'cse-mains-essay',
-                                label: 'Paper I: Essay (250 Marks - 3 Hours)',
-                                label_kn: 'ಪತ್ರಿಕೆ ೧: ಪ್ರಬಂಧ (೨೫೦ ಅಂಕಗಳು)',
-                                category: 'paper',
-                                badge: '2 Section Essays · 125 Marks Each',
-                                weightage: 'Very High',
-                                color: '#EC4899',
-                                children: [
-                                    { id: 'cse-essay-p1', label: 'Section A: Philosophical, Abstract & Ethical Reflections', label_kn: 'ವಿಭಾಗ ಎ: ತಾತ್ವಿಕ & ನೀತಿಚಿಂತನೆ ಪ್ರಬಂಧ', category: 'domain', entities: ['Philosophical Hooks', 'Epistemological Reasoning', 'Humanistic Paradigms'] },
-                                    { id: 'cse-essay-p2', label: 'Section B: Socio-Economic, Geopolitical & Administrative Dimensions', label_kn: 'ವಿಭಾಗ ಬಿ: ಸಾಮಾಜಿಕ-ಆರ್ಥಿಕ & ಆಡಳಿತ ಪ್ರಬಂಧ', category: 'domain', entities: ['PESTLE Framework Synthesis', 'Constitutional Visions', 'Pragmatic Policy Solutions'] }
-                                ]
-                            },
-                            {
-                                id: 'cse-mains-gs1',
-                                label: 'Paper II: General Studies I (250 Marks) - Indian Heritage, History & Geography of the World and Society',
-                                label_kn: 'ಪತ್ರಿಕೆ ೨: ಜಿಎಸ್ ೧ (ಭಾರತೀಯ ಪರಂಪರೆ, ಇತಿಹಾಸ, ಭೂಗೋಳ & ಸಮಾಜ)',
-                                category: 'paper',
-                                badge: '20 Descriptive Qs · 250 Marks',
-                                weightage: 'Very High',
-                                color: '#F97316',
-                                children: [
-                                    { id: 'm1-art', label: 'Indian Culture - Salient Aspects of Art Forms, Literature & Architecture from Ancient to Modern', label_kn: 'ಕಲೆ, ಸಾಹಿತ್ಯ ಮತ್ತು ವಾಸ್ತುಶಿಲ್ಪ', category: 'domain', entities: ['Nagara, Dravida & Vesara Temple Architecture', 'Sculpture (Gandhara, Mathura, Amravati)', 'Classical Dances, Music & Folk Traditions', 'Ancient, Medieval & Modern Literature'] },
-                                    { id: 'm1-hist', label: 'Modern Indian History from mid-18th Century, Freedom Struggle & Post-Independence Consolidation', label_kn: 'ಆಧುನಿಕ ಭಾರತದ ಇತಿಹಾಸ & ಸ್ವಾತಂತ್ರ್ಯೋತ್ತರ ಏಕೀಕರಣ', category: 'domain', entities: ['Colonial Expansion & Administrative Systems', 'Socio-Religious Reform Movements', 'Freedom Struggle Stages & Eminent Personalities', 'Reorganization & Consolidation of States Post-1947'] },
-                                    { id: 'm1-world', label: 'History of the World (18th Century Events, Industrial Revolution, World Wars, Decolonization)', label_kn: 'ವಿಶ್ವ ಇತಿಹಾಸ', category: 'domain', entities: ['Industrial Revolution', 'American & French Revolutions', 'World War I & II Dynamics', 'Redrawal of National Frontiers, Decolonization & Cold War'] },
-                                    { id: 'm1-soc', label: 'Salient Features of Indian Society, Diversity, Women Organizations, Population, Poverty & Urbanization', label_kn: 'ಭಾರತೀಯ ಸಮಾಜ ಮತ್ತು ವೈವಿಧ್ಯತೆ', category: 'domain', entities: ['Caste System & Social Stratification', 'Secularism, Communalism & Regionalism', 'Women Empowerment & Gender Justice', 'Globalization Impact on Indian Culture & Social Structure'] },
-                                    { id: 'm1-geo', label: 'Salient Features of World Physical Geography, Natural Resources Distribution & Geophysical Phenomena', label_kn: 'ವಿಶ್ವ ಪ್ರಾಕೃತಿಕ ಭೂಗೋಳ & ನೈಸರ್ಗಿಕ ಸಂಪನ್ಮೂಲಗಳು', category: 'domain', entities: ['Plate Tectonics, Earthquakes, Tsunami & Volcanism', 'Cyclone Trajectories & Ocean Currents', 'Distribution of Key Natural Resources (Minerals, Hydrocarbons)', 'Location Factors of Primary, Secondary & Tertiary Industries'] }
-                                ]
-                            },
-                            {
-                                id: 'cse-mains-gs2',
-                                label: 'Paper III: General Studies II (250 Marks) - Governance, Constitution, Polity, Social Justice & International Relations',
-                                label_kn: 'ಪತ್ರಿಕೆ ೩: ಜಿಎಸ್ ೨ (ಆಡಳಿತ, ಸಂವಿಧಾನ, ಸಾಮಾಜಿಕ ನ್ಯಾಯ & ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು)',
-                                category: 'paper',
-                                badge: '20 Descriptive Qs · 250 Marks',
-                                weightage: 'Very High',
-                                color: '#0284C7',
-                                children: [
-                                    { id: 'm2-const', label: 'Indian Constitution - Historical Underpinnings, Evolution, Features, Amendments & Basic Structure', label_kn: 'ಭಾರತ ಸಂವಿಧಾನ ಮತ್ತು ವಿಕಾಸ', category: 'domain', entities: ['Basic Structure Doctrine (Kesavananda Bharati)', 'Federal Architecture & Centre-State Friction Points', 'Separation of Powers & Dispute Redressal Mechanisms', 'Comparison of Indian Constitutional Scheme with other Nations'] },
-                                    { id: 'm2-exec-leg', label: 'Structure, Organization & Functioning of Executive, Judiciary, Parliament & State Legislatures', label_kn: 'ಶಾಸಕಾಂಗ, ಕಾರ್ಯಾಂಗ ಮತ್ತು ನ್ಯಾಯಾಂಗ', category: 'domain', entities: ['Parliamentary Committees & Legislative Process', 'Judicial Independence, Appointments (Collegium) & Judicial Activism', 'Representation of People Act Provisions', 'Statutory, Regulatory & Quasi-Judicial Bodies (ECI, CAG, CCI, NGT)'] },
-                                    { id: 'm2-gov', label: 'Government Policies, Development Processes, NGOs, SHGs, Citizen Charters, E-Governance & Transparency', label_kn: 'ಆಡಳಿತ ಮತ್ತು ಇ-ಆಡಳಿತ', category: 'domain', entities: ['Welfare Schemes for Vulnerable Sections & Implementation Issues', 'Role of NGOs, SHGs, Charities & Stakeholders', 'Citizen Charters, Transparency & RTI Act', 'E-Governance Models, Successes & Limitations', 'Role of Civil Services in a Democracy'] },
-                                    { id: 'm2-ir', label: 'India and its Neighborhood Relations, Bilateral, Regional & Global Groupings, UN & International Bodies', label_kn: 'ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು', category: 'domain', entities: ['Neighborhood First Policy & Act East Policy', 'Global Groupings (QUAD, I2U2, BRICS, G20, SCO)', 'Impact of Policies of Developed & Developing Nations on India', 'Indian Diaspora & Geopolitical Soft Power', 'UN Security Council Reforms, WTO & IMF Restructuring'] }
-                                ]
-                            },
-                            {
-                                id: 'cse-mains-gs3',
-                                label: 'Paper IV: General Studies III (250 Marks) - Technology, Economic Development, Bio-diversity, Environment, Security & Disaster Management',
-                                label_kn: 'ಪತ್ರಿಕೆ ೪: ಜಿಎಸ್ ೩ (ಆರ್ಥಿಕತೆ, ತಂತ್ರಜ್ಞಾನ, ಪರಿಸರ, ಆಂತರಿಕ ಭದ್ರತೆ & ವಿಪತ್ತು ನಿರ್ವಹಣೆ)',
-                                category: 'paper',
-                                badge: '20 Descriptive Qs · 250 Marks',
-                                weightage: 'Very High',
-                                color: '#16A34A',
-                                children: [
-                                    { id: 'm3-econ', label: 'Indian Economy & Issues relating to Planning, Mobilization of Resources, Growth, Employment & Budgeting', label_kn: 'ಭಾರತೀಯ ಅರ್ಥವ್ಯವಸ್ಥೆ ಮತ್ತು ಬಜೆಟ್', category: 'domain', entities: ['Inclusive Growth & Financial Inclusion', 'Government Budgeting & Fiscal Responsibility (FRBM)', 'Major Crops, Cropping Patterns & Irrigation Systems', 'Agricultural Subsidies, Minimum Support Price (MSP) & PDS Reforms', 'Food Processing & Supply Chain Logistics', 'Infrastructure (Energy, Ports, Roads, Airports, Railways)'] },
-                                    { id: 'm3-st', label: 'Science & Technology - Developments, Applications in Everyday Life, Indigenization & Intellectual Property (IPR)', label_kn: 'ವಿಜ್ಞಾನ ಮತ್ತು ತಂತ್ರಜ್ಞಾನ', category: 'domain', entities: ['ISRO Achievements & Deep Space Missions', 'Supercomputing, Artificial Intelligence, Robotics & Quantum Tech', 'Nanotechnology & Biotechnology Breakthroughs', 'Intellectual Property Rights (IPR) & Patent Regimes'] },
-                                    { id: 'm3-env', label: 'Conservation, Environmental Pollution, Degradation, EIA & Disaster Management', label_kn: 'ಪರಿಸರ ಸಂರಕ್ಷಣೆ & ವಿಪತ್ತು ನಿರ್ವಹಣೆ', category: 'domain', entities: ['Renewable Energy Transition (Solar, Wind, Green Hydrogen)', 'Pollution Control & Circular Economy Models', 'Environmental Impact Assessment (EIA 2020)', 'Disaster Management Framework (NDMA & Sendai Framework)'] },
-                                    { id: 'm3-sec', label: 'Internal Security Challenges - Extremism, Cyber Security, Money Laundering, Border Management & Security Forces', label_kn: 'ಆಂತರಿಕ ಭದ್ರತೆ ಮತ್ತು ಗಡಿ ನಿರ್ವಹಣೆ', category: 'domain', entities: ['Linkages between Development & Spread of Extremism (LWE)', 'Role of External State & Non-State Actors in Internal Security', 'Cyber Warfare, Dark Net Policing & Social Media Challenges', 'Money Laundering & Terror Financing (FATF)', 'Border Security Architecture & Coastal Defence Protocols', 'Security Forces and their Mandates (BSF, CRPF, CISF, NSG, ITBP)'] }
-                                ]
-                            },
-                            {
-                                id: 'cse-mains-gs4',
-                                label: 'Paper V: General Studies IV (250 Marks) - Ethics, Integrity and Aptitude',
-                                label_kn: 'ಪತ್ರಿಕೆ ೫: ಜಿಎಸ್ ೪ (ನೀತಿಶಾಸ್ತ್ರ, ಸಮಗ್ರತೆ ಮತ್ತು ಮನೋಸಾಮರ್ಥ್ಯ ಕೇಸ್ ಸ್ಟಡಿಗಳು)',
-                                category: 'paper',
-                                badge: 'Theory & Applied Case Studies · 250 Marks',
-                                weightage: 'Very High',
-                                color: '#9333EA',
-                                children: [
-                                    { id: 'm4-theory', label: 'Ethics and Human Interface - Essence, Determinants, Consequences & Ethical Dimensions in Private & Public Life', label_kn: 'ನೀತಿಶಾಸ್ತ್ರ ಸಿದ್ಧಾಂತಗಳು', category: 'domain', entities: ['Human Values & Lessons from Great Leaders', 'Role of Family, Society & Educational Institutions in Inculcating Values', 'Attitude - Content, Structure, Function & Behavioral Influence', 'Aptitude & Foundational Values for Civil Service (Integrity, Impartiality, Non-partisanship, Objectivity, Empathy)', 'Emotional Intelligence Concepts & Application in Administration', 'Contributions of Moral Thinkers and Philosophers (India & World)', 'Public Service Values, Probity in Governance, Nolan Principles & Code of Ethics'] },
-                                    { id: 'm4-cases', label: 'Applied Case Studies on Ethical & Governance Dilemmas', label_kn: 'ಅನ್ವಯಿಕ ಕೇಸ್ ಸ್ಟಡಿಗಳು', category: 'domain', entities: ['Conflict of Interest Scenarios in Public Procurement', 'Whistleblowing & Retaliation Dilemmas', 'Disaster Relief & Resource Rationing Ethics', 'Corporate Governance & Environmental Compliance Case Studies', 'Handling Political Pressure & Preserving Bureaucratic Neutrality'] }
-                                ]
-                            }
-                        ]
-                    }
+                    cseMains,
                 ]
             };
 
@@ -1099,10 +1031,4 @@ export function getExamMindMap(examId: string): MindMapNode | null {
             // No curated map for this exam. Never substitute another exam's syllabus.
             return null;
     }
-}
-
-/** Exams that have a curated syllabus map (keep in sync with the switch above). */
-export const MIND_MAP_EXAM_IDS = ['upsc-cse', 'upsc-epfo', 'kpsc-kas', 'kea-pdo', 'ksp-psi', 'ksp-pc', 'kartet', 'karnataka-gpstr'] as const;
-export function hasExamMindMap(examId: string) {
-    return (MIND_MAP_EXAM_IDS as readonly string[]).includes(examId);
 }
