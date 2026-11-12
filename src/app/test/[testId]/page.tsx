@@ -1,5 +1,5 @@
 'use client';
-import { use, useEffect, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAppStore } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
@@ -9,23 +9,12 @@ import { QUESTIONS } from '@/lib/mockData';
 import { getMarkingScheme } from '@/lib/marking';
 import { isValidImageUrl } from '@/lib/imageUtils';
 import '@/app/test/cbt-terminal.css';
-import '@/app/test/cbt-mobile.css';
-import ExamHeader from '@/components/test/ExamHeader';
-import ExamSubHeader from '@/components/test/ExamSubHeader';
-import QuickNavigator, { QuestionState } from '@/components/test/QuickNavigator';
-import CbtQuestionCard from '@/components/test/CbtQuestionCard';
-import ExamBottomNav from '@/components/test/ExamBottomNav';
-import CandidateInfoCard from '@/components/test/CandidateInfoCard';
-import QuestionPaletteSummary from '@/components/test/QuestionPaletteSummary';
-import QuestionPaletteGrid from '@/components/test/QuestionPaletteGrid';
-import ExamToolsCard from '@/components/test/ExamToolsCard';
-import { InstructionsModal, FullPaperModal, SubmitExamModal, ReportDiscrepancyModal } from '@/components/test/ExamModals';
-import MobileExamHeader from '@/components/test/MobileExamHeader';
-import MobileSubToolstrip from '@/components/test/MobileSubToolstrip';
-import MobileJumpNav from '@/components/test/MobileJumpNav';
-import MobileQuestionCard from '@/components/test/MobileQuestionCard';
-import MobileExamBottomNav from '@/components/test/MobileExamBottomNav';
-import MobilePaletteDrawer from '@/components/test/MobilePaletteDrawer';
+import { InstructionsModal, FullPaperModal, ReportDiscrepancyModal } from '@/components/test/ExamModals';
+import {
+    ExamTopBar, QuestionPanel, ActionBar, PalettePanel, PaletteActions, PaletteSheet,
+    SubmitDialog, LeaveDialog, TimeUpDialog, TimeToast, type QuestionState, type ExamLang,
+} from '@/components/test/ExamScreen';
+import '@/app/test/exam-screen.css';
 
 const CSAT_SUBJECTS = [
     'Reading Comprehension & Interpersonal Skills',
@@ -219,6 +208,12 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const [isMobilePaletteOpen, setIsMobilePaletteOpen] = useState(false);
     const [bookmarkedQuestions, setBookmarkedQuestions] = useState<Record<string, boolean>>({});
     const [confidenceRatings, setConfidenceRatings] = useState<Record<string, 'low' | 'med' | 'high'>>({});
+    // Exam-day defaults: study aids (elimination, bookmarks, read-aloud, confidence, subject) are opt-in.
+    const [practiceTools, setPracticeTools] = useState(false);
+    const [showLeave, setShowLeave] = useState(false);
+    const [timeNotice, setTimeNotice] = useState<string | null>(null);
+    const [timeUp, setTimeUp] = useState(false);
+    const submittedRef = useRef(false);
 
     useEffect(() => {
         if (activeSession?.config?.language) {
@@ -795,12 +790,46 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     }, [testId, activeSession?.id, router]);
 
     useEffect(() => {
-        if (loading || timeLeft <= 0) return;
+        if (loading || timeUp || timeLeft <= 0) return;
         const timer = setInterval(() => {
-            setTimeLeft((t) => { if (t <= 1) { clearInterval(timer); handleSubmit(); return 0; } return t - 1; });
+            setTimeLeft((t) => {
+                if (t <= 1) { clearInterval(timer); setTimeUp(true); return 0; }
+                if (t === 301) setTimeNotice('5 minutes left.');
+                if (t === 61) setTimeNotice('1 minute left. Your answers will be submitted when time runs out.');
+                return t - 1;
+            });
         }, 1000);
         return () => clearInterval(timer);
-    }, [loading, timeLeft]);
+    }, [loading, timeLeft, timeUp]);
+
+    useEffect(() => {
+        if (!timeNotice) return;
+        const t = setTimeout(() => setTimeNotice(null), 10000);
+        return () => clearTimeout(t);
+    }, [timeNotice]);
+
+    // Warn before closing or reloading the tab mid-test
+    useEffect(() => {
+        if (loading || questions.length === 0) return;
+        const onBeforeUnload = (e: BeforeUnloadEvent) => {
+            if (submittedRef.current) return;
+            e.preventDefault();
+            e.returnValue = '';
+        };
+        window.addEventListener('beforeunload', onBeforeUnload);
+        return () => window.removeEventListener('beforeunload', onBeforeUnload);
+    }, [loading, questions.length]);
+
+    // Remember the practice-tools preference
+    useEffect(() => {
+        try { setPracticeTools(localStorage.getItem('upsc-practice-tools') === '1'); } catch {}
+    }, []);
+    const togglePracticeTools = () => {
+        setPracticeTools((v) => {
+            try { localStorage.setItem('upsc-practice-tools', v ? '0' : '1'); } catch {}
+            return !v;
+        });
+    };
 
     // Track visited questions
     useEffect(() => {
@@ -818,14 +847,6 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const isKarnataka = activeSession?.config?.exam_id?.startsWith('kpsc') || activeSession?.config?.exam_id?.startsWith('kea') || activeSession?.config?.exam_id?.startsWith('ksp');
     const supportedLangs: ('en' | 'kn' | 'hi')[] = isUpsc ? ['en', 'hi'] : (isKarnataka ? ['en', 'kn'] : ['en']);
 
-    const handleToggleLang = () => {
-        if (supportedLangs.length <= 1) return;
-        if (supportedLangs.includes('kn')) {
-            setActiveLang(prev => (prev === 'kn' ? 'en' : 'kn'));
-        } else if (supportedLangs.includes('hi')) {
-            setActiveLang(prev => (prev === 'hi' ? 'en' : 'hi'));
-        }
-    };
 
     const marking = getMarkingScheme(activeSession?.config?.exam_id, activeSession?.config?.paper);
 
@@ -853,7 +874,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
             ...prev,
             [currentQ.id]: {
                 question_id: currentQ.id,
-                selected: prev[currentQ.id]?.selected === optId ? undefined : optId,
+                selected: optId,
                 is_correct: undefined,
                 marked_for_review: prev[currentQ.id]?.marked_for_review || false,
                 time_spent: prev[currentQ.id]?.time_spent || 0
@@ -913,7 +934,8 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     };
 
     const handleSubmit = () => {
-        if (questions.length === 0) return;
+        if (questions.length === 0 || submittedRef.current) return;
+        submittedRef.current = true;
         let score = 0; let correctCount = 0;
         const checkedAnswers = { ...answers };
         const posMarks = marking.positive;
@@ -961,45 +983,49 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         setConfidenceRatings(prev => ({ ...prev, [qId]: level }));
     };
 
-    // Keyboard Shortcuts
+    // Keyboard shortcuts — A–D answer, N next, P previous, M mark & next, Backspace/Delete clear.
+    // Enter and Space are left to the focused control; arrows are left to radio groups.
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (showInstructions || showFullPaper || showSubmitModal || showDiscrepancy) return;
-            const targetTag = (e.target as HTMLElement)?.tagName?.toLowerCase();
-            if (targetTag === 'input' || targetTag === 'textarea' || targetTag === 'select') return;
+            if (showInstructions || showFullPaper || showSubmitModal || showDiscrepancy || showLeave || timeUp || isMobilePaletteOpen) return;
+            if (e.ctrlKey || e.metaKey || e.altKey) return;
+            const t = e.target as HTMLElement | null;
+            const tag = t?.tagName?.toLowerCase();
+            const isRadio = tag === 'input' && (t as HTMLInputElement).type === 'radio';
+            if ((tag === 'input' && !isRadio) || tag === 'textarea' || tag === 'select' || t?.isContentEditable) return;
 
             const key = e.key.toLowerCase();
-            if (key === '1' || key === 'a') {
-                handleSelectOption('a');
-            } else if (key === '2' || key === 'b') {
-                handleSelectOption('b');
-            } else if (key === '3' || key === 'c') {
-                handleSelectOption('c');
-            } else if (key === '4' || key === 'd') {
-                handleSelectOption('d');
-            } else if (key === 'arrowright' || key === 'n' || (key === 'enter' && !e.shiftKey)) {
-                e.preventDefault();
-                handleSaveAndNext();
-            } else if (key === 'arrowleft' || key === 'p') {
-                e.preventDefault();
-                setCurrentIdx(i => Math.max(0, i - 1));
-            } else if (key === 'r' || key === 'm') {
-                e.preventDefault();
-                handleToggleMarkAndNext();
-            } else if (key === 'c') {
-                e.preventDefault();
-                handleClearResponse();
+            const optionKeys: Record<string, string> = { a: 'a', b: 'b', c: 'c', d: 'd', '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
+            if (optionKeys[key]) {
+                const optId = optionKeys[key];
+                if (questions[currentIdx]?.options.some((o) => o.id === optId)) { e.preventDefault(); handleSelectOption(optId); }
+            } else if (key === 'n' || (key === 'arrowright' && !isRadio)) {
+                e.preventDefault(); handleSaveAndNext();
+            } else if (key === 'p' || (key === 'arrowleft' && !isRadio)) {
+                e.preventDefault(); setCurrentIdx(i => Math.max(0, i - 1));
+            } else if (key === 'm') {
+                e.preventDefault(); handleToggleMarkAndNext();
+            } else if (key === 'backspace' || key === 'delete') {
+                e.preventDefault(); handleClearResponse();
             }
         };
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [currentIdx, questions, answers, showInstructions, showFullPaper, showSubmitModal, showDiscrepancy]);
+    }, [currentIdx, questions, answers, eliminatedOptions, showInstructions, showFullPaper, showSubmitModal, showDiscrepancy, showLeave, timeUp, isMobilePaletteOpen]);
+
+    // When time runs out, show the notice briefly, then submit.
+    useEffect(() => {
+        if (!timeUp) return;
+        const t = setTimeout(() => handleSubmit(), 1800);
+        return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [timeUp]);
 
     if (loading) return (
         <div style={{ padding: '80px', textAlign: 'center', color: '#6B7280', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: '#2563EB' }} />
-            <span style={{ fontSize: '15px', fontWeight: 600 }}>Loading CBT Assessment Terminal...</span>
+            <span style={{ fontSize: '15px', fontWeight: 600 }}>Loading your test…</span>
         </div>
     );
 
@@ -1007,13 +1033,12 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         return (
             <div style={{ background: '#F4F1EA', minHeight: '85vh', padding: '80px 24px', textAlign: 'center', color: '#6B7280' }}>
                 <div className="cbt-box" style={{ maxWidth: '440px', margin: '0 auto', background: '#FFFFFF', padding: '32px' }}>
-                    <div style={{ fontSize: '40px', marginBottom: '16px' }}>⚠️</div>
-                    <h3 style={{ color: '#111827', fontWeight: 800, fontSize: '18px', marginBottom: '8px' }}>No Questions Found</h3>
+                    <h1 style={{ color: '#111827', fontWeight: 800, fontSize: '20px', marginBottom: '8px' }}>No questions found</h1>
                     <p style={{ fontSize: '13.5px', color: '#4B5563', lineHeight: 1.5, marginBottom: '24px' }}>
                         No questions match this configuration. Try a different subject, year or difficulty.
                     </p>
                     <button onClick={() => router.push('/exams')} className="btn btn-primary" style={{ width: '100%' }}>
-                        Back to Catalog
+                        Back to exams
                     </button>
                 </div>
             </div>
@@ -1034,236 +1059,135 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         return 'not_visited';
     });
 
-    const answeredCount = questions.filter(q => answers[q.id]?.selected && !answers[q.id]?.marked_for_review).length;
-    const notAnsweredCount = questions.filter(q => visitedQuestions.has(q.id) && !answers[q.id]?.selected && !answers[q.id]?.marked_for_review).length;
-    const markedReviewCount = questions.filter(q => !answers[q.id]?.selected && answers[q.id]?.marked_for_review).length;
-    const ansAndReviewCount = questions.filter(q => answers[q.id]?.selected && answers[q.id]?.marked_for_review).length;
-    const notVisitedCount = questions.filter(q => !visitedQuestions.has(q.id) && !answers[q.id]?.selected && !answers[q.id]?.marked_for_review).length;
+    const counts: Record<QuestionState, number> = { answered: 0, unanswered: 0, not_visited: 0, marked: 0, ans_and_marked: 0 };
+    questionStates.forEach((st) => { counts[st] += 1; });
 
-    const candidateName = user?.name || 'Aspirant Candidate';
-    const candidateId = `UPS-${testId.slice(0, 6).toUpperCase()}`;
-    const targetExam = activeSession?.config?.exam_id === 'upsc-cse'
-        ? (activeSession?.config?.paper === 2 ? 'UPSC CSE (CSAT PAPER II)' : 'UPSC CSE (GS PAPER I)')
-        : (activeSession?.config?.exam_id === 'upsc-capf' ? 'UPSC CAPF (AC) PAPER I' : (activeSession?.config?.exam_id?.toUpperCase() || 'CIVIL SERVICES EXAM'));
-
-    const examTitle = targetExam;
+    const candidateName = user?.name || 'Candidate';
+    const examTitle = activeSession?.config?.exam_id === 'upsc-cse'
+        ? 'UPSC Civil Services (Preliminary)'
+        : activeSession?.config?.exam_id === 'upsc-capf' ? 'UPSC CAPF (AC)'
+        : (activeSession?.config?.exam_id || 'Practice test').toUpperCase().replace(/-/g, ' ');
     const cfgPaper = activeSession?.config?.paper;
     const paperTitle = activeSession?.config?.exam_id === 'upsc-cse'
-        ? (cfgPaper === 2 ? 'Paper II (CSAT)' : 'Paper I (GS)')
+        ? (cfgPaper === 2 ? 'Paper II · CSAT' : 'Paper I · General Studies')
         : (typeof cfgPaper === 'number' ? `Paper ${cfgPaper}` : 'Full paper');
+    const lang = activeLang as ExamLang;
+    const answer = answers[question.id];
+    const zoom = (d: -1 | 0 | 1) => (d === 0 ? handleZoomReset() : d > 0 ? handleZoomIn() : handleZoomOut());
+    const jump = (idx: number) => { setCurrentIdx(idx); setIsMobilePaletteOpen(false); };
+    const openSubmit = () => { setIsMobilePaletteOpen(false); setShowSubmitModal(true); };
 
     return (
-        <div className="cbt-terminal-wrapper">
-            <h1 className="cbt-sr-only">{examTitle} — question {currentIdx + 1} of {questions.length}</h1>
-            {/* ─── DESKTOP VIEW (> 900px) ─── */}
-            <div className="cbt-desktop-only">
-                {/* 1. Global Header Bar */}
-                <ExamHeader
-                    examTitle={examTitle}
-                    timeLeft={timeLeft}
-                    activeLang={activeLang}
-                    supportedLangs={supportedLangs}
-                    onToggleLang={handleToggleLang}
-                    onSubmitClick={() => setShowSubmitModal(true)}
-                    candidateName={candidateName}
-                />
+        <div className="cbt-terminal-wrapper es">
+            <h1 className="cbt-sr-only">{examTitle}, {paperTitle} — question {currentIdx + 1} of {questions.length}</h1>
 
-                {/* 2. Sub-Header Toolbar */}
-                <ExamSubHeader
-                    currentIdx={currentIdx}
-                    totalQuestions={questions.length}
-                    subject={activeLang === 'kn' && question.subject_kannada ? question.subject_kannada : (question.subject || 'General Studies')}
-                    subTopic={activeLang === 'kn' && question.sub_topic_kannada ? question.sub_topic_kannada : question.sub_topic}
-                    positiveMarks={marking.positive}
-                    negativeDeduction={marking.negative}
-                    fontSizePercent={fontSizePercent}
-                    onZoomIn={handleZoomIn}
-                    onZoomOut={handleZoomOut}
-                    onZoomReset={handleZoomReset}
-                />
+            <ExamTopBar
+                examTitle={examTitle}
+                paperTitle={paperTitle}
+                timeLeft={timeLeft}
+                lang={lang}
+                langs={supportedLangs as ExamLang[]}
+                onLang={(l) => setActiveLang(l)}
+                practice={practiceTools}
+                onPractice={togglePracticeTools}
+                onLeave={() => setShowLeave(true)}
+                onOpenPalette={() => setIsMobilePaletteOpen(true)}
+                currentIdx={currentIdx}
+                total={questions.length}
+            />
 
-                {/* 3. Main CBT Canvas */}
-                <div style={{ maxWidth: '1440px', margin: '0 auto', padding: '16px 20px' }}>
-                    <div className="cbt-main-grid">
-                        {/* Left Column: Test Flow & Questions */}
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            {/* Quick Question Navigator with dynamic scrubber */}
-                            <QuickNavigator
-                                totalQuestions={questions.length}
-                                currentIdx={currentIdx}
-                                markedCount={markedReviewCount + ansAndReviewCount}
-                                unansweredCount={notAnsweredCount}
-                                questionStates={questionStates}
-                                onSelectQuestion={(idx) => setCurrentIdx(idx)}
-                                onJumpNextUnanswered={handleJumpNextUnanswered}
-                            />
-
-                            {/* CBT Question Card with crisp statement boxes and elimination */}
-                            <CbtQuestionCard
-                                questionNumber={currentIdx + 1}
-                                question={question}
-                                activeLang={activeLang}
-                                supportedLangs={supportedLangs}
-                                onToggleLang={handleToggleLang}
-                                selectedOptionId={answers[question.id]?.selected}
-                                eliminatedOptionIds={eliminatedOptions[question.id] || {}}
-                                onSelectOption={handleSelectOption}
-                                onToggleEliminate={handleToggleEliminate}
-                                fontSizePercent={fontSizePercent}
-                                onReportDiscrepancy={() => setShowDiscrepancy(true)}
-                                onPreviewImage={(url) => setPreviewImage(url)}
-                                negativeDeduction={marking.negative}
-                            />
-
-                            {/* Bottom Action Bar */}
-                            <ExamBottomNav
-                                currentIdx={currentIdx}
-                                totalQuestions={questions.length}
-                                hasSelectedAnswer={!!answers[question.id]?.selected}
-                                isMarkedForReview={!!answers[question.id]?.marked_for_review}
-                                onPrev={() => setCurrentIdx(i => Math.max(0, i - 1))}
-                                onNext={handleSaveAndNext}
-                                onClearResponse={handleClearResponse}
-                                onToggleMarkAndNext={handleToggleMarkAndNext}
-                            />
-                        </div>
-
-                        {/* Right Column: Palette & Sidebar Tools */}
-                        <div style={{ display: 'flex', flexDirection: 'column' }}>
-                            {/* Candidate Information Card */}
-                            <CandidateInfoCard
-                                name={candidateName}
-                                candidateId={candidateId}
-                                targetExam={targetExam}
-                            />
-
-                            {/* Question Palette Summary (2x2 Matrix) */}
-                            <QuestionPaletteSummary
-                                total={questions.length}
-                                answered={answeredCount}
-                                notAnswered={notAnsweredCount}
-                                markedReview={markedReviewCount}
-                                ansAndReview={ansAndReviewCount}
-                                notVisited={notVisitedCount}
-                            />
-
-                            {/* 10-Column Question Palette Grid */}
-                            <QuestionPaletteGrid
-                                totalQuestions={questions.length}
-                                currentIdx={currentIdx}
-                                questionStates={questionStates}
-                                onSelectQuestion={(idx) => setCurrentIdx(idx)}
-                                paperTitle={paperTitle}
-                            />
-
-                            {/* Exam Tools Card */}
-                            <ExamToolsCard
-                                onOpenFullPaper={() => setShowFullPaper(true)}
-                                onOpenInstructions={() => setShowInstructions(true)}
-                                onSubmitExam={() => setShowSubmitModal(true)}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* ─── MOBILE VIEW (<= 900px) ─── */}
-            <div className="cbt-mobile-only cbt-mobile-container">
-                {/* 1. Single Mobile Header (Logo, Timer, Q/Lang, Yellow Grid Button, Avatar) */}
-                <MobileExamHeader
-                    timeLeft={timeLeft}
-                    currentIdx={currentIdx}
-                    activeLang={activeLang}
-                    supportedLangs={supportedLangs}
-                    onToggleLang={handleToggleLang}
-                    onOpenPalette={() => setIsMobilePaletteOpen(true)}
-                    candidateName={candidateName}
-                />
-
-                {/* 2. Sub-Toolstrip: Subject, Neg marks, Zoom toggle, Answered badge */}
-                <MobileSubToolstrip
-                    subject={activeLang === 'kn' && question.subject_kannada ? question.subject_kannada : (question.subject || 'General Studies')}
-                    subTopic={activeLang === 'kn' && question.sub_topic_kannada ? question.sub_topic_kannada : question.sub_topic}
-                    negativeDeduction={marking.negative}
-                    fontSizePercent={fontSizePercent}
-                    onZoomIn={handleZoomIn}
-                    onZoomReset={handleZoomReset}
-                    answeredCount={answeredCount + ansAndReviewCount}
-                    totalQuestions={questions.length}
-                />
-
-                {/* 3. Filter pills, Horizontal Jump Squares & Scrubber */}
-                <MobileJumpNav
-                    totalQuestions={questions.length}
-                    currentIdx={currentIdx}
-                    questionStates={questionStates}
-                    onSelectQuestion={(idx) => setCurrentIdx(idx)}
-                    onJumpNextUnanswered={handleJumpNextUnanswered}
-                    markedCount={markedReviewCount + ansAndReviewCount}
-                    unansweredCount={notAnsweredCount}
-                />
-
-                {/* 4. Question Card (MCQ meta, TTS, Bookmark, Vernacular accordion, Strikethrough options, Telemetry, Confidence) */}
-                <MobileQuestionCard
-                    questionNumber={currentIdx + 1}
+            <main className="es-main">
+                <QuestionPanel
                     question={question}
-                    activeLang={activeLang}
-                    positiveMarks={marking.positive}
-                    negativeDeduction={marking.negative}
-                    selectedOptionId={answers[question.id]?.selected}
-                    eliminatedOptionIds={eliminatedOptions[question.id] || {}}
-                    onSelectOption={handleSelectOption}
-                    onToggleEliminate={handleToggleEliminate}
-                    isBookmarked={!!bookmarkedQuestions[question.id]}
-                    onToggleBookmark={() => handleToggleBookmark(question.id)}
+                    number={currentIdx + 1}
+                    total={questions.length}
+                    lang={lang}
+                    fontPct={fontSizePercent}
+                    onZoom={zoom}
+                    positive={marking.positive}
+                    negative={marking.negative}
+                    selected={answer?.selected}
+                    eliminated={eliminatedOptions[question.id] || {}}
+                    onSelect={handleSelectOption}
+                    onEliminate={handleToggleEliminate}
+                    practice={practiceTools}
+                    bookmarked={!!bookmarkedQuestions[question.id]}
+                    onBookmark={() => handleToggleBookmark(question.id)}
                     confidence={confidenceRatings[question.id] || null}
-                    onSetConfidence={(lvl) => handleSetConfidence(question.id, lvl)}
-                    answeredCount={answeredCount + ansAndReviewCount}
-                    markedCount={markedReviewCount + ansAndReviewCount}
-                    totalQuestions={questions.length}
+                    onConfidence={(c) => handleSetConfidence(question.id, c)}
+                    onReport={() => setShowDiscrepancy(true)}
                     onPreviewImage={(url) => setPreviewImage(url)}
-                />
+                >
+                    <ActionBar
+                        canPrev={currentIdx > 0}
+                        hasAnswer={!!answer?.selected}
+                        marked={!!answer?.marked_for_review}
+                        isLast={currentIdx === questions.length - 1}
+                        onPrev={() => setCurrentIdx(i => Math.max(0, i - 1))}
+                        onClear={handleClearResponse}
+                        onMark={handleToggleMarkAndNext}
+                        onNext={handleSaveAndNext}
+                    />
+                </QuestionPanel>
 
-                {/* 5. Sticky Fixed 4-Button Bottom Bar */}
-                <MobileExamBottomNav
-                    isMarkedForReview={!!answers[question.id]?.marked_for_review}
-                    onToggleReview={handleToggleMarkAndNext}
-                    onClearResponse={handleClearResponse}
-                    onSaveAndNext={handleSaveAndNext}
-                    onSubmitExam={() => setShowSubmitModal(true)}
-                    onPrevious={() => setCurrentIdx(i => Math.max(0, i - 1))}
-                    canGoPrevious={currentIdx > 0}
-                    isLastQuestion={currentIdx === questions.length - 1}
-                />
+                <aside className="es-side" aria-label="Question palette">
+                    <div className="es-panel">
+                        <PalettePanel states={questionStates} currentIdx={currentIdx} onJump={jump} counts={counts} candidate={candidateName} />
+                        <PaletteActions
+                            onNextUnanswered={handleJumpNextUnanswered}
+                            onPaper={() => setShowFullPaper(true)}
+                            onInstructions={() => setShowInstructions(true)}
+                            onSubmit={openSubmit}
+                        />
+                    </div>
+                </aside>
+            </main>
 
-                {/* 6. Slide-Up Question Palette Drawer */}
-                <MobilePaletteDrawer
-                    isOpen={isMobilePaletteOpen}
-                    onClose={() => setIsMobilePaletteOpen(false)}
-                    totalQuestions={questions.length}
-                    currentIdx={currentIdx}
-                    questionStates={questionStates}
-                    onSelectQuestion={(idx) => setCurrentIdx(idx)}
-                    candidateName={candidateName}
-                    candidateId={candidateId}
-                    targetExam={targetExam}
-                    paperTitle={paperTitle}
-                    answeredCount={answeredCount}
-                    notAnsweredCount={notAnsweredCount}
-                    markedReviewCount={markedReviewCount}
-                    ansAndReviewCount={ansAndReviewCount}
-                    notVisitedCount={notVisitedCount}
-                    onOpenFullPaper={() => setShowFullPaper(true)}
-                    onOpenInstructions={() => setShowInstructions(true)}
-                    onSubmitExam={() => setShowSubmitModal(true)}
-                />
-            </div>
+            {/* Mobile: palette, tools and submit live in one sheet */}
+            <PaletteSheet
+                open={isMobilePaletteOpen}
+                onClose={() => setIsMobilePaletteOpen(false)}
+                footer={<button type="button" className="es-btn es-btn-submit" onClick={openSubmit}>Submit test</button>}
+            >
+                <PalettePanel states={questionStates} currentIdx={currentIdx} onJump={jump} counts={counts} candidate={candidateName} />
+                <div className="es-sheet-tools">
+                    <button type="button" className="es-btn" onClick={() => { handleJumpNextUnanswered(); setIsMobilePaletteOpen(false); }}>Next unanswered</button>
+                    <button type="button" className="es-btn" onClick={() => { setIsMobilePaletteOpen(false); setShowFullPaper(true); }}>Question paper</button>
+                    <button type="button" className="es-btn" onClick={() => { setIsMobilePaletteOpen(false); setShowInstructions(true); }}>Instructions</button>
+                    <button type="button" className="es-btn" onClick={() => { setIsMobilePaletteOpen(false); setShowDiscrepancy(true); }}>Report an issue</button>
+                    <div className="es-zoom" role="group" aria-label={`Text size ${fontSizePercent}%`}>
+                        <button type="button" onClick={handleZoomOut} aria-label="Smaller text">A−</button>
+                        <button type="button" onClick={handleZoomReset} aria-label="Reset text size">{fontSizePercent}%</button>
+                        <button type="button" onClick={handleZoomIn} aria-label="Larger text">A+</button>
+                    </div>
+                    <button type="button" className="es-switch" role="switch" aria-checked={practiceTools} onClick={togglePracticeTools}>
+                        <span className="es-switch-track" aria-hidden="true" /> Practice tools
+                    </button>
+                </div>
+            </PaletteSheet>
 
-            {/* 4. Modals */}
+            <TimeToast message={timeNotice} onDismiss={() => setTimeNotice(null)} />
+            <TimeUpDialog open={timeUp} />
+
+            <SubmitDialog
+                open={showSubmitModal}
+                onClose={() => setShowSubmitModal(false)}
+                onConfirm={handleSubmit}
+                counts={counts}
+                total={questions.length}
+                timeLeft={timeLeft}
+            />
+
+            <LeaveDialog
+                open={showLeave}
+                onClose={() => setShowLeave(false)}
+                onLeave={() => { submittedRef.current = true; setShowLeave(false); router.push('/exams'); }}
+            />
+
             <InstructionsModal
                 isOpen={showInstructions}
                 onClose={() => setShowInstructions(false)}
-                examTitle={targetExam}
+                examTitle={examTitle}
                 positiveMarks={marking.positive}
                 negativeDeduction={marking.negative}
                 durationMinutes={Math.round(questions.length * 1.2)}
@@ -1278,17 +1202,6 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 onJumpToQuestion={(idx) => setCurrentIdx(idx)}
             />
 
-            <SubmitExamModal
-                isOpen={showSubmitModal}
-                onClose={() => setShowSubmitModal(false)}
-                onConfirmSubmit={handleSubmit}
-                totalQuestions={questions.length}
-                answeredCount={answeredCount + ansAndReviewCount}
-                unansweredCount={notAnsweredCount + notVisitedCount}
-                markedReviewCount={markedReviewCount + ansAndReviewCount}
-                timeLeft={timeLeft}
-            />
-
             <ReportDiscrepancyModal
                 isOpen={showDiscrepancy}
                 onClose={() => setShowDiscrepancy(false)}
@@ -1296,15 +1209,15 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 questionId={question?.id || ''}
             />
 
-            {/* Diagram Lightbox Preview */}
             {previewImage && (
-                <div onClick={() => setPreviewImage(null)} style={{
+                <div role="dialog" aria-modal="true" aria-label="Enlarged diagram" onClick={() => setPreviewImage(null)} style={{
                     position: 'fixed', inset: 0, zIndex: 110, background: 'rgba(5, 8, 17, 0.88)',
-                    backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out'
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out'
                 }}>
                     <div style={{ position: 'relative', maxWidth: '90vw', maxHeight: '90vh', textAlign: 'center' }}>
-                        <img src={previewImage} alt="Diagram Expanded View" style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: '8px', border: '1.5px solid #1E1E1E', boxShadow: '0 12px 40px rgba(0,0,0,0.6)' }} />
-                        <div style={{ textAlign: 'center', color: '#94A3B8', fontSize: '13px', marginTop: '12px', fontWeight: 600 }}>Click anywhere to close preview</div>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={previewImage} alt="Diagram, enlarged" style={{ maxWidth: '100%', maxHeight: '80vh', borderRadius: '8px', background: '#FFFFFF' }} />
+                        <div style={{ textAlign: 'center', color: '#CBD5E1', fontSize: '14px', marginTop: '12px', fontWeight: 600 }}>Click anywhere to close</div>
                     </div>
                 </div>
             )}
