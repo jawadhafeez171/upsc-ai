@@ -135,10 +135,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
                         if (year !== 'all') query = query.eq('year', year);
                         const { count: cCount, error: cErr } = await query;
-                        if (!cErr && cCount !== null && cCount > 0) {
+                        if (!cErr && cCount !== null) {
                             qCount = cCount;
                         } else {
-                            qCount = 80; // Local CSAT fallback count
+                            qCount = mode === 'subject' || difficulty !== 'mixed' ? 0 : 80; // bundled CSAT paper, unfiltered only
                         }
                     } else if (paper === 1) {
                         let query = supabase.from('upsc_questions').select('id', { count: 'exact', head: true }).gt('year', 0);
@@ -358,6 +358,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     
     // value = the subject name stored on the questions (used for filtering); label = what the button shows
     const subjectValues: string[] = exam.topics || exam.subjects || [];
+    // UPSC CSE: Paper 1 subjects and Paper 2 (CSAT) areas are separate lists. When the paper changes,
+    // a subject that doesn't belong to it would match nothing — move to the first subject of that paper.
+    const selectPaper = (p: number | 'all') => {
+        setPaper(p);
+        if (examId !== 'upsc-cse' || mode !== 'subject') return;
+        const isCsat = CSAT_TOPICS.includes(subject);
+        if (p === 2 && !isCsat) setSubject(CSAT_TOPICS[0]);
+        else if (p === 1 && isCsat) setSubject(subjectValues[0] || '');
+    };
     const subjectLabels: string[] | undefined = language === 'kn' && exam.subjects_kn?.length === subjectValues.length ? exam.subjects_kn : undefined;
     let examTopics: { value: string; label: string }[] = subjectValues.map((v, i) => ({ value: v, label: subjectLabels ? subjectLabels[i] : v }));
     if (examId === 'upsc-cse') {
@@ -410,13 +419,13 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         ];
     } else {
         paperOptions = [
-            { key: 'all', label: 'All papers', meta: examId === 'upsc-capf' ? '13 years · 1,625 Qs' : 'Combined', selected: paper === 'all', onSelect: () => setPaper('all') },
+            { key: 'all', label: 'All papers', meta: examId === 'upsc-capf' ? '13 years · 1,625 Qs' : 'Combined', selected: paper === 'all', onSelect: () => selectPaper('all') },
             {
                 key: '1',
                 label: examId === 'upsc-capf' ? 'Paper 1 · General Ability & Intelligence' : examId === 'upsc-cse' ? 'Paper 1 · General Studies' : 'Paper 1 · General Studies & Humanities',
                 meta: examId === 'upsc-capf' ? '125 Qs · 250 marks' : undefined,
                 selected: paper === 1,
-                onSelect: () => setPaper(1),
+                onSelect: () => selectPaper(1),
             },
         ];
         if (examId !== 'upsc-capf') {
@@ -424,7 +433,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                 key: '2',
                 label: examId === 'upsc-cse' ? 'Paper 2 · CSAT' : 'Paper 2 · Science & Tech, Environment & GMA',
                 selected: paper === 2,
-                onSelect: () => setPaper(2),
+                onSelect: () => selectPaper(2),
             });
         }
     }
