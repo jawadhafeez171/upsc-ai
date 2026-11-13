@@ -180,7 +180,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         }}
                     >
                         <Info size={14} color="var(--link-text)" />
-                        About Exam
+                        About exam
                     </Link>
 
                     <Link 
@@ -196,7 +196,7 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                         }}
                     >
                         <Zap size={14} color="#FFFFFF" />
-                        Practice CBT
+                        Practise
                     </Link>
                 </div>
             </div>
@@ -210,10 +210,10 @@ export default function ExamsClient({ initialExams }: { initialExams: Exam[] }) 
                 {/* Clean Headline (No kicker above) */}
                 <div style={{ textAlign: 'center', marginBottom: '36px' }}>
                     <h1 style={{ fontSize: 'clamp(28px, 4vw, 42px)', fontWeight: 900, letterSpacing: '-0.025em', color: 'var(--text-primary)', marginBottom: '10px' }}>
-                        Examination Catalog & PYQ Archives
+                        Exams
                     </h1>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '15.5px', maxWidth: '720px', margin: '0 auto', lineHeight: 1.6 }}>
-                        Explore official exam patterns, syllabus-accurate mock tests, and standard computer-based test simulations.
+                        Pick an exam to see its pattern and syllabus, then practise its previous-year questions on a timed exam screen.
                     </p>
                 </div>
 

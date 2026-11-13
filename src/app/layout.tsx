@@ -140,15 +140,14 @@ export default function RootLayout({
                   </div>
                 </div>
                 <div style={{ fontSize: '13px', color: 'var(--text-muted)', textAlign: 'center' }}>
-                  © 2026 UPSC AI · Dedicated Civil Services Examination Engine.
+                  © 2026 UPSC AI · Previous-year papers for UPSC, KPSC, KEA and KSP exams.
                 </div>
                 <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap', justifyContent: 'center' }}>
                   {[
                     { href: '/exams', label: 'Exams' },
                     { href: '/current-affairs', label: 'Current Affairs' },
-                    { href: '/graph', label: 'Knowledge Graph' },
+                    { href: '/graph', label: 'Syllabus map' },
                     { href: '/leaderboard', label: 'Leaderboard' },
-                    { href: '/login', label: 'Sign In' },
                   ].map((link) => (
                     <a key={link.href} href={link.href} className="footer-link">{link.label}</a>
                   ))}

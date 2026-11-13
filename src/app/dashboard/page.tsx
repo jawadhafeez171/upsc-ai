@@ -165,7 +165,7 @@ export default function DashboardPage() {
                             gap: '8px'
                         }}
                     >
-                        <span>Start New Mock</span>
+                        <span>Start a new test</span>
                         <ArrowRight size={15} />
                     </Link>
                 </div>
@@ -242,15 +242,15 @@ export default function DashboardPage() {
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap', gap: '12px' }}>
                         <div>
                             <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)' }}>
-                                Academic Standing
+                                Your level
                             </div>
                             <div style={{ fontSize: '22px', fontWeight: 800, color: 'var(--link-text)', marginTop: '2px' }}>
-                                {user.level} level
+                                {user.level}
                             </div>
                         </div>
                         <div style={{ textAlign: 'right' }}>
-                            <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-muted)' }}>Accumulated XP</div>
-                            <div style={{ fontSize: '24px', fontWeight: 800, fontFamily: 'var(--font-mono, monospace)', marginTop: '2px' }}>
+                            <div style={{ fontSize: '12px', fontWeight: 600, color: 'var(--text-muted)' }}>Total XP</div>
+                            <div style={{ fontSize: '24px', fontWeight: 800, fontVariantNumeric: 'tabular-nums', marginTop: '2px' }}>
                                 {user.xp.toLocaleString()}
                             </div>
                         </div>
@@ -258,8 +258,8 @@ export default function DashboardPage() {
                     <div className="progress-bar" style={{ height: '8px', background: 'var(--border)', borderRadius: '9999px', overflow: 'hidden' }}>
                         <div className="progress-fill" style={{ width: `${xpProgress * 100}%`, height: '100%', background: '#2563EB', borderRadius: '9999px', transition: 'width 0.3s ease' }} />
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11.5px', color: 'var(--text-muted)', marginTop: '8px', fontFamily: 'var(--font-mono, monospace)' }}>
-                        <span>{user.xp % xpToNextLevel} / {xpToNextLevel} XP towards next tier</span>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11.5px', color: 'var(--text-muted)', marginTop: '8px', fontVariantNumeric: 'tabular-nums' }}>
+                        <span>{user.xp % xpToNextLevel} / {xpToNextLevel} XP to the next level</span>
                         <span>{Math.round(xpProgress * 100)}%</span>
                     </div>
                 </div>
@@ -313,9 +313,9 @@ export default function DashboardPage() {
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <BarChart3 size={17} color="#2563EB" />
-                                <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Subject-Wise Accuracy</h2>
+                                <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Accuracy by subject</h2>
                             </div>
-                            <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Top Topics</span>
+                            <span style={{ fontSize: '11px', color: 'var(--text-muted)' }}>Most practised</span>
                         </div>
 
                         {subjectList.length === 0 ? (
@@ -381,10 +381,10 @@ export default function DashboardPage() {
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <TrendingUp size={17} color="#059669" />
-                                <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Recent Test Records</h2>
+                                <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Recent tests</h2>
                             </div>
                             <Link href="/exams" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', minHeight: '44px', fontSize: '13px', color: 'var(--link-text)', fontWeight: 700, textDecoration: 'none' }}>
-                                Browse mocks <ArrowRight size={14} />
+                                All exams <ArrowRight size={14} />
                             </Link>
                         </div>
 
@@ -422,7 +422,7 @@ export default function DashboardPage() {
                                                     {examInfo.name}
                                                 </div>
                                                 <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', marginTop: '2px' }}>
-                                                    {s.config?.question_count || s.questions?.length || 0} questions · {s.finished_at ? new Date(s.finished_at).toLocaleDateString() : 'Recent'}
+                                                    {s.config?.question_count || s.questions?.length || 0} questions · {s.finished_at ? new Date(s.finished_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Recent'}
                                                 </div>
                                             </div>
 
@@ -472,13 +472,13 @@ export default function DashboardPage() {
                 <div className="card card-static" style={{ padding: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
                         <Award size={18} color="#D97706" />
-                        <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Milestones & Accolades</h2>
+                        <h2 style={{ fontWeight: 800, fontSize: '15px', margin: 0 }}>Badges</h2>
                     </div>
 
                     {user.badges.length === 0 ? (
                         <div style={{ textAlign: 'center', padding: '28px 16px', color: 'var(--text-muted)' }}>
                             <ShieldCheck size={32} style={{ margin: '0 auto 8px', opacity: 0.4 }} />
-                            <p style={{ fontSize: '13px', margin: 0 }}>Complete examinations and practice streaks to unlock accolades.</p>
+                            <p style={{ fontSize: '13px', margin: 0 }}>Finish tests and keep a daily streak to earn badges.</p>
                         </div>
                     ) : (
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: '12px' }}>

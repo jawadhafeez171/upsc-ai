@@ -594,13 +594,11 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                 display: 'flex',
                                 alignItems: 'flex-start',
                                 gap: '12px',
+                                // Shaded, borderless: statements must not look like the bordered answer options below them.
                                 padding: '9px 14px',
                                 margin: '6px 0',
                                 borderRadius: '10px',
-                                background: 'var(--bg-secondary)',
-                                border: '1px solid var(--border)',
-                                boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
-                                transition: 'all 0.15s ease'
+                                background: 'var(--bg-tertiary)',
                             }}
                         >
                             <div
@@ -614,7 +612,7 @@ export default function QuestionFormatter({ text }: QuestionFormatterProps) {
                                     justifyContent: 'center',
                                     fontSize: '11.5px',
                                     fontWeight: 800,
-                                    background: 'var(--bg-tertiary)',
+                                    background: 'var(--bg-card)',
                                     color: 'var(--text-primary)',
                                     border: '1px solid var(--border)',
                                     flexShrink: 0,

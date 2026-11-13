@@ -143,8 +143,11 @@
   padding: 0; 
 }
 
-html { 
-  scroll-behavior: smooth; 
+/* Form controls don't inherit the page font by default; without this, chips and buttons fall back to Arial. */
+button, input, select, textarea { font-family: inherit; }
+
+html {
+  scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
 }

@@ -56,7 +56,7 @@ export default function LeaderboardPage() {
                         <Trophy size={22} color="#F59E0B" />
                     </div>
                     <h1 style={{ fontSize: '28px', fontWeight: 800, marginBottom: '6px', color: 'var(--text-primary)' }}>
-                        Candidate Standing & Leaderboard
+                        Leaderboard
                     </h1>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '14.5px', margin: 0 }}>
                         Aspirants ranked by XP earned from completed practice tests.
@@ -135,7 +135,7 @@ export default function LeaderboardPage() {
                                     </div>
                                 </div>
                                 <div style={{ textAlign: 'right' }}>
-                                    <div style={{ fontWeight: 800, fontSize: '14px', fontFamily: 'var(--font-mono, monospace)', color: 'var(--text-primary)' }}>
+                                    <div style={{ fontWeight: 800, fontSize: '14px', fontVariantNumeric: 'tabular-nums', color: 'var(--text-primary)' }}>
                                         {entry.xp}
                                     </div>
                                     <div style={{ fontSize: '10px', color: 'var(--text-muted)', fontWeight: 700 }}>XP</div>

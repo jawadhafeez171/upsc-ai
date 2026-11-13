@@ -1039,7 +1039,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     }, [timeUp]);
 
     if (loading) return (
-        <div style={{ padding: '80px', textAlign: 'center', color: '#6B7280', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: '#2563EB' }} />
             <span style={{ fontSize: '15px', fontWeight: 600 }}>Loading your test…</span>
         </div>

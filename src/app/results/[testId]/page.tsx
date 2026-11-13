@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useAppStore, useStoreHydrated } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
+import { EXAMS } from '@/lib/mockData';
 import {
     CheckCircle,
     XCircle,
@@ -37,8 +38,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
 
     const [filter, setFilter] = useState<ReviewFilter>('all');
     const [expanded, setExpanded] = useState<string | null>(null);
-    const [exam, setExam] = useState<any>(null);
-    const [loadingExam, setLoadingExam] = useState(true);
+    const [examTitle, setExamTitle] = useState<string | null>(null);
     const [activeLang, setActiveLang] = useState<'en' | 'kn' | 'hi'>('en');
 
     useEffect(() => {
@@ -53,22 +53,18 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
             router.replace('/exams');
             return;
         }
-        async function loadExam() {
-            setLoadingExam(true);
-            const { data } = await supabase.from('exams').select('id, title').eq('id', session!.exam_id).single();
-            if (data) {
-                setExam({ name: data.title });
-            }
-            setLoadingExam(false);
-        }
-        loadExam();
+        // The exam's title is a nicety: the result renders from the saved session straight away.
+        let live = true;
+        supabase.from('exams').select('title').eq('id', session.exam_id).single()
+            .then(({ data }) => { if (live && data?.title) setExamTitle(data.title); }, () => {});
+        return () => { live = false; };
     }, [hydrated, session, router]);
 
-    if (!session || loadingExam) {
+    if (!session) {
         return (
             <div style={{ padding: '80px', textAlign: 'center', color: 'var(--text-muted)', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Loader2 className="animate-spin" size={28} style={{ marginBottom: '12px', color: '#2563EB' }} />
-                <span>Loading examination results...</span>
+                <span>Loading your result…</span>
             </div>
         );
     }
@@ -125,7 +121,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                 {/* Scorecard Box */}
                 <div className="card card-static" style={{ padding: '32px', textAlign: 'center', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                     <h1 style={{ fontSize: '15px', color: 'var(--text-secondary)', margin: '0 0 18px', fontWeight: 700, letterSpacing: 0 }}>
-                        {exam?.name || 'Examination'} · {config.mode === 'subject' ? config.subject : 'Full paper'} — result
+                        {examTitle || EXAMS.find((e) => e.id === session.exam_id)?.name || 'Practice test'} · {config.mode === 'subject' ? config.subject : config.mode === 'yearwise' && config.year ? `${config.year} paper` : 'Full mock'} — result
                     </h1>
 
                     <div style={{
@@ -140,7 +136,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         justifyContent: 'center',
                         margin: '0 auto 16px',
                     }}>
-                        <div style={{ fontSize: '30px', fontWeight: 900, fontFamily: 'var(--font-mono, monospace)', color: tone(pct) }}>
+                        <div style={{ fontSize: '30px', fontWeight: 900, fontVariantNumeric: 'tabular-nums', color: tone(pct) }}>
                             {pct}%
                         </div>
                         <div style={{ fontSize: '10.5px', color: 'var(--text-secondary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Score</div>
@@ -169,7 +165,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                                 minWidth: '100px',
                                 textAlign: 'center'
                             }}>
-                                <div style={{ fontSize: '20px', fontWeight: 900, color: s.color, fontFamily: 'var(--font-mono, monospace)' }}>
+                                <div style={{ fontSize: '20px', fontWeight: 900, color: s.color, fontVariantNumeric: 'tabular-nums' }}>
                                     {s.value}
                                 </div>
                                 <div style={{ fontSize: '11.5px', color: 'var(--text-secondary)', fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px', marginTop: '2px' }}>
@@ -185,7 +181,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                 <div className="card card-static" style={{ padding: '24px', marginBottom: '24px', borderRadius: '12px', border: '1px solid var(--border)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
                         <BarChart3 size={17} color="#2563EB" />
-                        <h2 style={{ fontWeight: 800, fontSize: '15.5px', margin: 0 }}>Subject-Wise Performance</h2>
+                        <h2 style={{ fontWeight: 800, fontSize: '15.5px', margin: 0 }}>Score by subject</h2>
                     </div>
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
@@ -233,7 +229,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                         }}
                     >
                         <Home size={15} />
-                        <span>All Examinations</span>
+                        <span>All exams</span>
                     </Link>
 
                     {wrongQuestions.length > 0 && (
@@ -256,7 +252,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                             }}
                         >
                             <RotateCcw size={15} />
-                            <span>Retry {wrongQuestions.length} Incorrect Questions</span>
+                            <span>Retry {wrongQuestions.length} wrong {wrongQuestions.length === 1 ? 'answer' : 'answers'}</span>
                         </button>
                     )}
                 </div>
@@ -266,7 +262,7 @@ export default function ResultsPage({ params }: { params: Promise<{ testId: stri
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '12px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <BookOpen size={17} color="#2563EB" />
-                            <h2 style={{ fontWeight: 800, fontSize: '15.5px', margin: 0 }}>Detailed Question Review</h2>
+                            <h2 style={{ fontWeight: 800, fontSize: '15.5px', margin: 0 }}>Question review</h2>
                         </div>
 
                         <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>

@@ -8,8 +8,8 @@ import { Newspaper, Calendar } from 'lucide-react';
 const CATEGORIES = ['All', 'Economy', 'Polity', 'Science & Tech', 'Environment', 'International'];
 
 export default function CurrentAffairsPage() {
-    const { language } = useAppStore();
-    const [tabLang, setTabLang] = useState<Language>(language);
+    // One language setting for the whole site: these tabs and the navbar switch stay in step.
+    const { language: tabLang, setLanguage: setTabLang } = useAppStore();
     const [category, setCategory] = useState('All');
 
     const LANG_LABELS: Record<Language, string> = { en: 'English', hi: 'हिन्दी', kn: 'ಕನ್ನಡ' };
@@ -34,11 +34,11 @@ export default function CurrentAffairsPage() {
                         <Newspaper size={18} />
                     </div>
                     <h1 style={{ fontSize: '28px', fontWeight: 800, margin: 0, color: 'var(--text-primary)' }}>
-                        Current Affairs Digest
+                        Current affairs
                     </h1>
                 </div>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '14.5px', margin: 0 }}>
-                    Concise daily exam-oriented summaries curated across national, regional, and international affairs.
+                    Short daily summaries of national, state and international news that matter for the exams.
                 </p>
             </div>
 

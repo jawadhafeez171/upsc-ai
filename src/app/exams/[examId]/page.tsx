@@ -23,6 +23,7 @@ const ExamMindMapVisualizer = dynamic(() => import('@/components/graph/ExamMindM
 import './exam-detail.css';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
+const yearsDown = (from: number, to: number) => Array.from({ length: from - to + 1 }, (_, i) => from - i);
 const DIFFICULTIES = ['mixed', 'easy', 'medium', 'hard'] as const;
 const CSAT_TOPICS = [
     'Reading Comprehension & Interpersonal Skills',
@@ -365,6 +366,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     // a subject that doesn't belong to it would match nothing — move to the first subject of that paper.
     const selectPaper = (p: number | 'all') => {
         setPaper(p);
+        // CSAT starts in 2013 and GS Paper 1 data ends in 2024: drop a year the new paper doesn't have.
+        if (examId === 'upsc-cse' && typeof year === 'number' && ((p === 2 && year < 2013) || (p === 1 && year > 2024))) setYear('all');
         if (examId !== 'upsc-cse' || mode !== 'subject') return;
         const isCsat = CSAT_TOPICS.includes(subject);
         if (p === 2 && !isCsat) setSubject(CSAT_TOPICS[0]);
@@ -452,7 +455,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     : examId === 'ksp-psi'
                     ? [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
                     : examId === 'upsc-cse'
-                    ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011]
+                    // GS Paper 1 has full papers from 1996 (1993–95 are partial); CSAT starts in 2013.
+                    ? yearsDown(paper === 2 ? 2026 : paper === 1 ? 2024 : 2026, paper === 2 ? 2013 : 1996)
                     : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011];
     const allYearsRange = isKea ? '2023–2026' : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : examId === 'ksp-psi' ? '2016–2024'
         : examId === 'upsc-cse' ? (paper === 2 ? '2013–2026' : paper === 1 ? '1993–2024' : '1993–2026') : '2011–2024';
@@ -482,8 +486,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         : examId === 'upsc-epfo' ? [...QUESTION_COUNTS, 120]
             : availableQs >= 200 ? [...QUESTION_COUNTS, 200] : QUESTION_COUNTS;
     const countMeta = (c: number) =>
-        (c === 125 && examId === 'upsc-capf') || (c === 120 && examId === 'upsc-epfo') || (c === 100 && availableQs === 100) ? 'Full paper'
-            : c === 200 ? 'Full exam' : undefined;
+        (c === 125 && examId === 'upsc-capf') || (c === 120 && examId === 'upsc-epfo') || (c === 100 && availableQs === 100)
+            || (c === 100 && examId === 'upsc-cse' && paper === 1) ? 'Full paper'
+            // Only Police Constable's two papers add up to 200; UPSC GS 1 + CSAT is 180.
+            : c === 200 && examId === 'ksp-pc' ? 'Full exam' : undefined;
     const requestedCount = Number(customCount) || count;
     const secsPerQ = examId === 'upsc-epfo' ? 60 : 72;
     const marking = getMarkingScheme(examId, paper);

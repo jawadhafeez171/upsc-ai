@@ -11,8 +11,7 @@ export const EXAMS: Exam[] = [
         negative_marking: 0.33,
         subjects: ['Ancient History', 'Medieval History', 'Modern History', 'Art and Culture', 'Polity', 'Economics', 'Geography', 'Environment', 'Science & Technology', 'IR & Current Affairs', 'General Awareness'],
         icon: '🏛️',
-        color: '#082C54',
-        badge: 'Premier'
+        color: '#082C54'
     },
     {
         id: 'upsc-capf',
@@ -64,8 +63,7 @@ export const EXAMS: Exam[] = [
         subjects: ['History', 'Geography & Earth Systems', 'Indian Economy & Development', 'Indian Polity, Constitution & Governance', 'Science, Technology & Defence', 'Environment, Ecology & Disaster Management', 'Art, Culture & Heritage', 'Indian Society & Social Justice', 'International Relations & Global Institutions', 'Ethics, Integrity & Aptitude', 'General Mental Ability, Quantitative Aptitude & Comprehension'],
         subjects_kn: ['ಇತಿಹಾಸ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ', 'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ', 'ಭಾರತೀಯ ಸಮಾಜ ಮತ್ತು ಸಾಮಾಜಿಕ ನ್ಯಾಯ', 'ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು', 'ನೈತಿಕತೆ, ಸಮಗ್ರತೆ ಮತ್ತು ಯೋಗ್ಯತೆ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ'],
         icon: '🅺',
-        color: '#B83E11',
-        badge: 'State Top'
+        color: '#B83E11'
     },
     {
         id: 'kea',
@@ -109,8 +107,7 @@ export const EXAMS: Exam[] = [
             'ಅನ್ವಯಿಕ ಸಂಖ್ಯಾಶಾಸ್ತ್ರ'
         ],
         icon: '🏢',
-        color: '#0D9488',
-        badge: '6,364 PYQs'
+        color: '#0D9488'
     },
     {
         id: 'kea-vao',
@@ -124,8 +121,7 @@ export const EXAMS: Exam[] = [
         subjects: ['Language Proficiency, Grammar & Communication (General Kannada & General English)', 'Communication Paper (General Kannada, General English & Computer Knowledge)', 'History', 'Science, Technology & Defence', 'Indian Polity, Constitution & Governance', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'Indian Economy & Development', 'Geography & Earth Systems', 'Art, Culture & Heritage', 'Environment, Ecology & Disaster Management', 'General Knowledge (Miscellaneous)'],
         subjects_kn: ['ಭಾಷಾ ಪ್ರಾವೀಣ್ಯತೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ & ಇಂಗ್ಲಿಷ್)', 'ಸಂವಹನ ಪತ್ರಿಕೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ, ಇಂಗ್ಲಿಷ್ & ಕಂಪ್ಯೂಟರ್)', 'ಇತಿಹಾಸ', 'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ', 'ಸಾಮಾನ್ಯ ಜ್ಞಾನ'],
         icon: '🌾',
-        color: '#0D9488',
-        badge: 'Hot'
+        color: '#0D9488'
     },
     {
         id: 'kea-pdo',
@@ -139,8 +135,7 @@ export const EXAMS: Exam[] = [
         subjects: ['General Knowledge', 'History', 'Indian Polity, Constitution & Governance', 'Indian Economy & Development', 'Geography & Earth Systems', 'Science, Technology & Defence', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'Language Proficiency, Grammar & Communication (General Kannada & General English)', 'Communication Paper (General Kannada, General English & Computer Knowledge)', 'Indian Society & Social Justice', 'Environment, Ecology & Disaster Management'],
         subjects_kn: ['ಸಾಮಾನ್ಯ ಜ್ಞಾನ', 'ಇತಿಹಾಸ', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ', 'ಭಾಷಾ ಪ್ರಾವೀಣ್ಯತೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ & ಇಂಗ್ಲಿಷ್)', 'ಸಂವಹನ ಪತ್ರಿಕೆ (ಸಾಮಾನ್ಯ ಕನ್ನಡ, ಇಂಗ್ಲಿಷ್ & ಕಂಪ್ಯೂಟರ್)', 'ಭಾರತೀಯ ಸಮಾಜ ಮತ್ತು ಸಾಮಾಜಿಕ ನ್ಯಾಯ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ'],
         icon: '🏘️',
-        color: '#E67E22',
-        badge: 'Popular'
+        color: '#E67E22'
     },
     {
         id: 'ksp-psi',
@@ -154,8 +149,7 @@ export const EXAMS: Exam[] = [
         subjects: ['Science, Technology & Defence', 'General Mental Ability, Quantitative Aptitude & Comprehension', 'Geography & Earth Systems', 'Indian Polity, Constitution & Governance', 'History', 'General Knowledge', 'Indian Economy & Development', 'Art, Culture & Heritage', 'Communication Paper', 'Environment, Ecology & Disaster Management', 'International Relations & Global Institutions', 'Sports'],
         subjects_kn: ['ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', 'ಸಾಮಾನ್ಯ ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಗಣಿತ', 'ಭೂಗೋಳ ಮತ್ತು ಭೂ ವ್ಯವಸ್ಥೆಗಳು', 'ಭಾರತೀಯ ರಾಜಕೀಯ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', 'ಇತಿಹಾಸ', 'ಸಾಮಾನ್ಯ ಜ್ಞಾನ', 'ಭಾರತೀಯ ಆರ್ಥಿಕತೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', 'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ', 'ಸಂವಹನ ಪತ್ರಿಕೆ', 'ಪರಿಸರ, ಪರಿಸರ ವಿಜ್ಞಾನ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ', 'ಅಂತಾರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು', 'ಕ್ರೀಡೆ'],
         icon: '👮',
-        color: '#1E3A8A',
-        badge: 'High Demand'
+        color: '#1E3A8A'
     },
     {
         id: 'ksp-pc',
