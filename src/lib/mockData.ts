@@ -67,10 +67,10 @@ export const EXAMS: Exam[] = [
     },
     {
         id: 'kea',
-        name: 'KEA (Karnataka Examination Authority)',
+        name: 'KEA (Karnataka Examinations Authority)',
         name_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ (KEA)',
         category: 'karnataka',
-        description: 'Karnataka State Recruitment Examinations — 6,364 PYQs across FDA, SDA, VAO, Police, GTTC, Asst Professor & Technical Posts (2023–2026)',
+        description: 'Past papers from KEA recruitment exams, 2023–2026: FDA and SDA, VAO, police, Legislative Council, department and corporation posts, engineering, coaching entrance and KSET.',
         description_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ — ಪ್ರಥಮ & ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕರು, ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ, ಪೊಲೀಸ್ ಹಾಗೂ ಇತರ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳು',
         languages: ['en', 'kn'],
         negative_marking: 0.25,

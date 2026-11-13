@@ -102,9 +102,11 @@ export const KEA_PAPERS: KeaPaper[] = [
 
 export const isKeaFamily = (key: string): key is KeaFamily => KEA_FAMILIES.some((f) => f.key === key);
 
-/** Exact paper codes behind a family key, a single paper code, or `null` for every paper. */
+/** Exact paper codes behind a family key ("all" = every recruitment paper) or a single paper code. */
 export function keaPaperCodes(key: string | undefined): string[] | null {
-    if (!key || key === 'all') return null;
+    if (!key) return null;
+    // "All posts" is every recruitment paper; KSET is an eligibility test with its own marking (+2, no negative).
+    if (key === 'all') return KEA_PAPERS.filter((p) => p.family !== 'kset').map((p) => p.code);
     if (key === 'tech-eng') key = 'engineering';   // key used before 13 Nov 2026
     if (isKeaFamily(key)) return KEA_PAPERS.filter((p) => p.family === key).map((p) => p.code);
     return [key];
@@ -125,3 +127,37 @@ export function keaPaperTime(p: KeaPaper) {
     if (!m) return Date.UTC(p.year, 0, 1);
     return Date.UTC(Number(m[3]), Math.max(0, MONTHS.indexOf(m[2].toLowerCase())), m[1] ? Number(m[1]) : 1);
 }
+
+/**
+ * Subjects as practised: the table names some subjects two ways ("Communication Paper" and
+ * "Communication Paper (General Kannada, …)"), which would split a drill in two. Each group lists every name it covers.
+ */
+export const KEA_SUBJECTS: { label: string; kn: string; names: string[] }[] = [
+    { label: 'Communication: Kannada, English & Computer', kn: 'ಸಂವಹನ: ಕನ್ನಡ, ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಗಣಕಯಂತ್ರ', names: ['Communication Paper', 'Communication Paper (General Kannada, General English & Computer Knowledge)'] },
+    { label: 'Language, grammar & comprehension', kn: 'ಭಾಷೆ, ವ್ಯಾಕರಣ ಮತ್ತು ಗ್ರಹಿಕೆ', names: ['Language Proficiency, Grammar & Communication (General Kannada & General English)', 'Language Proficiency, Grammar & Communication'] },
+    { label: 'Mental ability & quantitative aptitude', kn: 'ಮಾನಸಿಕ ಸಾಮರ್ಥ್ಯ ಮತ್ತು ಪರಿಮಾಣಾತ್ಮಕ ಅಭಿರುಚಿ', names: ['General Mental Ability, Quantitative Aptitude & Comprehension'] },
+    { label: 'History', kn: 'ಇತಿಹಾಸ', names: ['History'] },
+    { label: 'Science, technology & defence', kn: 'ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ರಕ್ಷಣೆ', names: ['Science, Technology & Defence'] },
+    { label: 'Polity, Constitution & governance', kn: 'ರಾಜ್ಯವ್ಯವಸ್ಥೆ, ಸಂವಿಧಾನ ಮತ್ತು ಆಡಳಿತ', names: ['Indian Polity, Constitution & Governance'] },
+    { label: 'Geography', kn: 'ಭೂಗೋಳಶಾಸ್ತ್ರ', names: ['Geography & Earth Systems'] },
+    { label: 'Economy & development', kn: 'ಅರ್ಥವ್ಯವಸ್ಥೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ', names: ['Indian Economy & Development'] },
+    { label: 'Environment & disaster management', kn: 'ಪರಿಸರ ಮತ್ತು ವಿಪತ್ತು ನಿರ್ವಹಣೆ', names: ['Environment, Ecology & Disaster Management'] },
+    { label: 'Society & social justice', kn: 'ಸಮಾಜ ಮತ್ತು ಸಾಮಾಜಿಕ ನ್ಯಾಯ', names: ['Indian Society & Social Justice'] },
+    { label: 'Art, culture & heritage', kn: 'ಕಲೆ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ಪರಂಪರೆ', names: ['Art, Culture & Heritage'] },
+    { label: 'General knowledge', kn: 'ಸಾಮಾನ್ಯ ಜ್ಞಾನ', names: ['General Knowledge', 'General Knowledge (Miscellaneous)'] },
+    { label: 'Sports', kn: 'ಕ್ರೀಡೆಗಳು', names: ['Sports'] },
+    { label: 'International relations', kn: 'ಅಂತರರಾಷ್ಟ್ರೀಯ ಸಂಬಂಧಗಳು', names: ['International Relations & Global Institutions'] },
+    { label: 'Labour laws & industrial relations', kn: 'ಕಾರ್ಮಿಕ ಕಾನೂನುಗಳು ಮತ್ತು ಕೈಗಾರಿಕಾ ಸಂಬಂಧಗಳು', names: ['Industrial Relations & Labour Laws'] },
+    { label: 'Social security', kn: 'ಸಾಮಾಜಿಕ ಭದ್ರತೆ', names: ['Social Security in India'] },
+    { label: 'Educational psychology & pedagogy', kn: 'ಶೈಕ್ಷಣಿಕ ಮನೋವಿಜ್ಞಾನ ಮತ್ತು ಬೋಧನಾಶಾಸ್ತ್ರ', names: ['Educational Psychology, Child Development & Teaching Pedagogy'] },
+    { label: 'Ethics & integrity', kn: 'ನೀತಿಶಾಸ್ತ್ರ ಮತ್ತು ಪ್ರಾಮಾಣಿಕತೆ', names: ['Ethics, Integrity & Aptitude'] },
+    { label: 'Internal security', kn: 'ಆಂತರಿಕ ಭದ್ರತೆ', names: ['Internal Security'] },
+    { label: 'Applied statistics', kn: 'ಅನ್ವಯಿಕ ಸಂಖ್ಯಾಶಾಸ್ತ್ರ', names: ['Applied Statistics'] },
+    { label: 'Insurance', kn: 'ವಿಮೆ', names: ['Insurance'] },
+];
+
+/** Table subject names behind a practised subject; a name that isn't a group is matched as is. */
+export const keaSubjectNames = (label: string) => KEA_SUBJECTS.find((g) => g.label === label)?.names ?? [label];
+
+/** Subject group for a table subject name (null for untagged questions). */
+export const keaSubjectOf = (name: string | null) => (name ? KEA_SUBJECTS.find((g) => g.names.includes(name)) ?? null : null);

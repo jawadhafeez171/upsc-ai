@@ -7,7 +7,7 @@ import { Loader2 } from 'lucide-react';
 import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
 import { getMarkingScheme } from '@/lib/marking';
-import { keaPaperCodes, keaPaper, KEA_FAMILIES } from '@/lib/keaPapers';
+import { keaPaperCodes, keaPaper, KEA_FAMILIES, keaSubjectNames } from '@/lib/keaPapers';
 import { isValidImageUrl } from '@/lib/imageUtils';
 import '@/app/test/cbt-terminal.css';
 import { InstructionsModal, FullPaperModal, ReportDiscrepancyModal } from '@/components/test/ExamModals';
@@ -526,7 +526,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     let query = supabase.from('kea_questions').select(columns);
                     if (codes) query = query.in('paper_code', codes);
                     if (config.mode === 'subject' && config.subject) {
-                        query = query.or(`subject.eq."${config.subject}",subject_kannada.eq."${config.subject}"`);
+                        query = query.in('subject', keaSubjectNames(config.subject));
                     }
                     if (!singlePaper) {
                         if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);

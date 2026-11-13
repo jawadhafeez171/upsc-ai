@@ -499,10 +499,10 @@ export const EXAM_DETAILS: Record<string, ExamInfo> = {
         shortName: 'KEA Recruitment',
         conductingBody: 'Karnataka Examinations Authority (KEA), Government of Karnataka',
         conductingBody_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ, ಕರ್ನಾಟಕ ಸರ್ಕಾರ',
-        tagline: 'State recruitment examinations for FDA, SDA, VAO, Police, GTTC, Assistant Professors & Board/Corporation Technical Posts.',
+        tagline: 'State recruitment examinations for FDA, SDA, VAO, police, Legislative Council, department and corporation posts.',
         tagline_kn: 'ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಪ್ರಥಮ & ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕರು, ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ, ಪೊಲೀಸ್ ಹಾಗೂ ನಿಗಮ-ಮಂಡಳಿಗಳ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳು.',
         category: 'karnataka',
-        overview: 'Karnataka Examinations Authority (KEA) is the premier state recruitment agency responsible for conducting direct recruitment examinations for various government departments, boards, and corporations across Karnataka. Our archive includes 6,364 authentic questions across 64 actual papers (2023–2026) including FDA, SDA, VAO, Police Constables, GTTC, and Legislative Council.',
+        overview: 'The Karnataka Examinations Authority (KEA) conducts direct recruitment examinations for Karnataka government departments, boards and corporations. This archive holds 64 of its papers from 2023 to 2026, 6,364 questions in all, each in English and Kannada with explanations in both.',
         jobRole: {
             designation: 'Group B & Group C Officers / Technical & Administrative Cadres',
             cadre: 'Group B & Group C',
@@ -591,9 +591,9 @@ export const EXAM_DETAILS: Record<string, ExamInfo> = {
             { pillarName: 'Mental Ability & Quantitative Aptitude', weightage: 'High', topics: ['Number Series & Coding-Decoding', 'Data Interpretation & Graphs', 'Arithmetic Progression & Percentages', 'Logical Puzzles'] }
         ],
         faqs: [
-            { question: 'What examinations are covered under KEA in this portal?', answer: 'This repository contains 6,364 authentic questions across 64 official KEA question papers (2023–2026), including First Division Assistant (FDA), Second Division Assistant (SDA), Village Administrative Officer (VAO), Police Constables (Civil & KSRP/KSISF), GTTC Officers, Legislative Council, and technical corporation posts.' },
-            { question: 'Is there negative marking in KEA recruitment tests?', answer: 'Yes, most KEA recruitment objective tests have a negative marking of 0.25 marks (1/4th) for each incorrect answer.' },
-            { question: 'Are tests available in both English and Kannada?', answer: 'Yes, all KEA papers are fully bilingual (English & Kannada) with bilingual question statements, options, and detailed explanations.' }
+            { question: 'Which KEA exams are covered?', answer: 'First and Second Division Assistant; Village Administrative Officer and Compulsory Kannada; Civil and KSRP/KSISF/IRB police constables and Police Sub-Inspector; Legislative Council Secretariat posts; posts in departments, boards and corporations such as GTTC, BMTC, KKRTC, KSSCL and the Range Forest Officer; Assistant and Junior Engineers; free coaching entrance tests; and KSET Paper 1. The Exam pattern tab lists every paper by post.' },
+            { question: 'Is there negative marking?', answer: 'Yes. KEA recruitment papers carry 1 mark a question and deduct a quarter mark for each wrong answer; unanswered questions score zero. KSET Paper 1 is the exception: 2 marks a question and no negative marking. Practice tests here are scored the same way.' },
+            { question: 'Can I practise in Kannada?', answer: 'Yes. Every question, its options and its explanation are available in English and Kannada. Choose the question language before you start; you can also switch during the test.' }
         ]
     },
 

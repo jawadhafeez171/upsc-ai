@@ -8,13 +8,12 @@ import { useAppStore } from '@/lib/store';
 import { EXAMS } from '@/lib/mockData';
 import { getMarkingScheme, formatMarks } from '@/lib/marking';
 import { hasExamMindMap } from '@/lib/mindMapIds';
-import { KEA_FAMILIES, KEA_PAPERS, keaPaperCodes, keaFamilyStats, keaPaperTime } from '@/lib/keaPapers';
+import { KEA_FAMILIES, KEA_PAPERS, keaPaperCodes, keaFamilyStats, keaPaperTime, keaSubjectNames, keaSubjectOf, type KeaPaper } from '@/lib/keaPapers';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
 import { TestConfig, Language, TestMode } from '@/types';
 import { 
     ArrowRight, AlertTriangle, BookOpen, Zap, 
-    Award, CheckCircle2, DollarSign, Briefcase, 
-    Layers, HelpCircle, ChevronRight, UserCheck, Scale, Landmark,
+    Briefcase,
     Compass, ArrowLeft, Check, CalendarDays, Target, Shuffle
 } from 'lucide-react';
 import dynamic from 'next/dynamic';
@@ -22,6 +21,7 @@ import dynamic from 'next/dynamic';
 // The syllabus data is large; load it only when the Syllabus map tab opens.
 const ExamMindMapVisualizer = dynamic(() => import('@/components/graph/ExamMindMapVisualizer'), { ssr: false });
 import './exam-detail.css';
+import { AboutPanel, ServicesPanel } from './InfoPanels';
 
 const QUESTION_COUNTS = [10, 25, 50, 100];
 const yearsDown = (from: number, to: number) => Array.from({ length: from - to + 1 }, (_, i) => from - i);
@@ -66,6 +66,20 @@ function OptionGroup({ label, hint, children }: { label: string; hint?: string; 
     );
 }
 
+/** Papers sat on the same day for the same post, as one sitting: "FDA (Non-HK) · 11 Jan 2026" → Paper 1, Paper 2. */
+function keaSittings(papers: KeaPaper[]) {
+    const groups: { key: string; date: string; post: string; papers: { paper: KeaPaper; name: string }[] }[] = [];
+    for (const p of papers) {
+        const [post, ...rest] = p.label.split(' · ');
+        const key = `${p.date}|${post}`;
+        let g = groups.find(x => x.key === key);
+        if (!g) { g = { key, date: p.date, post, papers: [] }; groups.push(g); }
+        g.papers.push({ paper: p, name: rest.join(' · ') || post });
+    }
+    // A sitting of one paper whose label has no part after the post: name it in full.
+    return groups.map(g => g.papers.length === 1 && g.papers[0].name === g.post ? { ...g, post: '' } : g);
+}
+
 export default function ExamDetailPage({ params }: { params: Promise<{ examId: string }> }) {
     const { examId } = use(params);
     const searchParams = useSearchParams();
@@ -101,9 +115,35 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [keaFamily, setKeaFamily] = useState<string>(examId === 'kea-vao' ? 'vao' : examId === 'kea-kset' ? 'kset' : examId === 'kea' ? 'fda-sda' : 'none'); // 'none': no papers for this post yet (e.g. PDO)
     const [keaPaperSel, setKeaPaperSel] = useState('');
     const keaFamilyPapers = KEA_PAPERS.filter(p => keaFamily === 'all' || p.family === keaFamily);
-    const keaVisiblePapers = keaFamilyPapers.filter(p => year === 'all' || p.year === year).sort((x, y) => keaPaperTime(y) - keaPaperTime(x));
+    const keaVisiblePapers = keaFamilyPapers.filter(p => mode === 'yearwise' || year === 'all' || p.year === year).sort((x, y) => keaPaperTime(y) - keaPaperTime(x));
     const keaSinglePaper = mode === 'yearwise' ? (keaVisiblePapers.find(p => p.code === keaPaperSel) ?? keaVisiblePapers[0]) : undefined;
     const keaCode = mode === 'yearwise' ? (keaSinglePaper?.code ?? 'none') : keaFamily;
+    // Subjects as tagged in the chosen post's papers (the exam's hand-written subject list missed ~40% of FDA & SDA).
+    const [keaSubjects, setKeaSubjects] = useState<{ label: string; kn: string; count: number }[] | null>(null);
+    useEffect(() => {
+        if (!(examId === 'kea' || examId.startsWith('kea-'))) return;
+        let live = true;
+        (async () => {
+            const codes = keaPaperCodes(keaFamily);
+            const tally = new Map<string, { label: string; kn: string; count: number }>();
+            for (let from = 0; ; from += 1000) {
+                let q = supabase.from('kea_questions').select('subject');
+                if (codes) q = q.in('paper_code', codes);
+                const { data, error } = await q.order('id').range(from, from + 999);
+                if (error || !data) break;
+                for (const row of data as { subject: string | null }[]) {
+                    const g = keaSubjectOf(row.subject);
+                    if (!g) continue;
+                    const t = tally.get(g.label) ?? { label: g.label, kn: g.kn, count: 0 };
+                    t.count += 1;
+                    tally.set(g.label, t);
+                }
+                if (data.length < 1000) break;
+            }
+            if (live) setKeaSubjects([...tally.values()].sort((a, b) => b.count - a.count));
+        })();
+        return () => { live = false; };
+    }, [examId, keaFamily]);
     const [count, setCount] = useState(validPreset && QUESTION_COUNTS.includes(validPreset) ? validPreset : 25);
     const [customCount, setCustomCount] = useState(validPreset && !QUESTION_COUNTS.includes(validPreset) ? String(validPreset) : '');
     const [testLang, setTestLang] = useState<Language>(language);
@@ -258,7 +298,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     if (codes) query = query.in('paper_code', codes);
 
                     if (mode === 'subject' && subject) {
-                        query = query.or(`subject.eq."${subject}",subject_kannada.eq."${subject}"`);
+                        query = query.in('subject', keaSubjectNames(subject));
                     }
                     if (mode !== 'yearwise') {
                         if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
@@ -366,7 +406,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         else if (p === 1 && isCsat) setSubject(subjectValues[0] || '');
     };
     const subjectLabels: string[] | undefined = language === 'kn' && exam.subjects_kn?.length === subjectValues.length ? exam.subjects_kn : undefined;
-    let examTopics: { value: string; label: string }[] = subjectValues.map((v, i) => ({ value: v, label: subjectLabels ? subjectLabels[i] : v }));
+    let examTopics: { value: string; label: string; meta?: string }[] = subjectValues.map((v, i) => ({ value: v, label: subjectLabels ? subjectLabels[i] : v }));
+    if (examId === 'kea' || examId.startsWith('kea-')) {
+        examTopics = (keaSubjects ?? []).map(g => ({ value: g.label, label: language === 'kn' ? g.kn : g.label, meta: `${g.count.toLocaleString('en-IN')} ${g.count === 1 ? 'question' : 'questions'}` }));
+    }
     if (examId === 'upsc-cse') {
         const csat = CSAT_TOPICS.map(v => ({ value: v, label: v }));
         if (paper === 2) examTopics = csat;
@@ -375,6 +418,10 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
     // ── Practice-tab option model ───────────────────────────────────────
     const isKea = examId === 'kea' || examId.startsWith('kea-');
+    if (isKea && mode === 'subject' && keaSubjects?.length && !keaSubjects.some(g => g.label === subject)) {
+        // Render-time correction (not an effect): the subject list just changed under the selection.
+        setSubject(keaSubjects[0].label);
+    }
     const selectKeaFamily = (f: string) => {
         setKeaFamily(f);
         setKeaPaperSel('');
@@ -401,7 +448,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                 const st = keaFamilyStats(f.key);
                 return codeOpt(f.key, f.label, `${st.papers} ${st.papers === 1 ? 'paper' : 'papers'} · ${st.qs.toLocaleString('en-IN')} Qs`, () => selectKeaFamily(f.key));
             }),
-            codeOpt('all', 'All posts', `Mixed · ${KEA_PAPERS.reduce((n, p) => n + p.qs, 0).toLocaleString('en-IN')} Qs`, () => selectKeaFamily('all')),
+            codeOpt('all', 'All posts', `Mixed, except KSET · ${KEA_PAPERS.filter(p => p.family !== 'kset').reduce((n, p) => n + p.qs, 0).toLocaleString('en-IN')} Qs`, () => selectKeaFamily('all')),
         ].map(o => ({ ...o, selected: keaFamily === o.key }));
     } else if (isKea) {
         paperOptions = []; // VAO, KSET and PDO pages are a single post already
@@ -490,7 +537,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             : c === 200 && examId === 'ksp-pc' ? 'Full exam' : undefined;
     const requestedCount = Number(customCount) || count;
     const secsPerQ = examId === 'upsc-epfo' ? 60 : 72;
-    const marking = getMarkingScheme(examId, paper, paperCode);
+    const marking = getMarkingScheme(examId, paper, isKea ? keaCode : paperCode);
     const durationMin = Math.round((finalCount * secsPerQ) / 60);
     const langNames: Record<string, string> = { en: 'English', hi: 'हिन्दी (Hindi)', kn: 'ಕನ್ನಡ (Kannada)' };
 
@@ -545,7 +592,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         <h1 className="xd-title">{examTitle}</h1>
                         <p className="xd-desc">{examDesc}</p>
                     </div>
-                    {examInfo && <span className="xd-badge">{examInfo.jobRole.cadre}</span>}
+                    {examInfo && examId !== 'kea' && <span className="xd-badge">{examInfo.jobRole.cadre}</span>}
                 </header>
 
                 <div className="xd-tabs" role="tablist" aria-label="Exam sections" onKeyDown={onTabKey}>
@@ -596,7 +643,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     <p className="xd-section-sub">
                                         {examId === 'ksp-pc'
                                             ? 'September 2026 session, checked against the official answer key.'
-                                            : mode === 'yearwise' ? 'Pick the paper you want to sit.' : 'Optional — narrow the question pool.'}
+                                            : mode === 'yearwise' ? 'Pick the paper you want to sit.'
+                                            : examId === 'kea' ? 'Choose the post you are preparing for.' : 'Optional — narrow the question pool.'}
                                     </p>
 
                                     {paperOptions.length > 0 && (
@@ -607,7 +655,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                         </OptionGroup>
                                     )}
 
-                                    {showPaperYear && (
+                                    {showPaperYear && !(isKea && mode === 'yearwise') && (
                                         <OptionGroup label="Year">
                                             <Chip selected={year === 'all'} onSelect={() => { setYear('all'); setMonth('all'); }} meta={allYearsRange}>All years</Chip>
                                             {yearList.map(yr => (
@@ -625,14 +673,22 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     )}
 
                                     {isKea && mode === 'yearwise' && (
-                                        <OptionGroup label="Paper to sit" hint={`${keaVisiblePapers.length} ${keaVisiblePapers.length === 1 ? 'paper' : 'papers'}, newest first`}>
-                                            {keaVisiblePapers.length === 0 && <p className="xd-section-sub">No papers for this post in {year}.</p>}
-                                            {keaVisiblePapers.map(p => (
-                                                <Chip key={p.code} selected={keaSinglePaper?.code === p.code} onSelect={() => setKeaPaperSel(p.code)} meta={`${p.date} · ${p.qs} questions`}>
-                                                    {p.label}
-                                                </Chip>
-                                            ))}
-                                        </OptionGroup>
+                                        <div className="xd-field">
+                                            <span id="xd-paper-l" className="xd-label">Paper to sit<span className="xd-label-hint">{keaVisiblePapers.length} {keaVisiblePapers.length === 1 ? 'paper' : 'papers'}, newest first</span></span>
+                                            <div className="xd-sittings" role="group" aria-labelledby="xd-paper-l">
+                                                {keaSittings(keaVisiblePapers).map(g => (
+                                                    <div key={g.key} className="xd-sitting">
+                                                        <p className="xd-sitting-h">{g.date}{g.post && <span> · {g.post}</span>}</p>
+                                                        {g.papers.map(({ paper: p, name }) => (
+                                                            <button key={p.code} type="button" className="xd-paper" aria-pressed={keaSinglePaper?.code === p.code} onClick={() => setKeaPaperSel(p.code)}>
+                                                                <span className="xd-paper-name">{name}</span>
+                                                                <span className="xd-paper-meta">{p.qs} questions</span>
+                                                            </button>
+                                                        ))}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
                                     )}
 
                                     {examId === 'kpsc-kas' && year === 2024 && (
@@ -649,10 +705,11 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             {mode === 'subject' && (
                                 <section className="xd-section" aria-labelledby="xd-subject-h">
                                     <h2 id="xd-subject-h" className="xd-section-title">Subject</h2>
-                                    <p className="xd-section-sub">Only questions from this subject will be included.</p>
+                                    <p className="xd-section-sub">{isKea ? 'Subjects as they appear in this post’s papers, largest first.' : 'Only questions from this subject will be included.'}</p>
                                     <div className="xd-chips" role="group" aria-labelledby="xd-subject-h">
-                                        {examTopics.map(({ value, label }) => (
-                                            <Chip key={value} selected={subject === value} onSelect={() => setSubject(value)}>{label}</Chip>
+                                        {isKea && !keaSubjects && <p className="xd-section-sub">Loading this post&apos;s subjects…</p>}
+                                        {examTopics.map(({ value, label, meta }) => (
+                                            <Chip key={value} selected={subject === value} onSelect={() => setSubject(value)} meta={meta}>{label}</Chip>
                                         ))}
                                     </div>
                                 </section>
@@ -690,7 +747,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     {countOptions.map(c => (
                                         <Chip
                                             key={c}
-                                            selected={count === c && !customCount}
+                                            selected={count === c && !customCount && (countLoading || c <= availableQs)}
                                             onSelect={() => { setCount(c); setCustomCount(''); }}
                                             disabled={!countLoading && c > availableQs}
                                             meta={countMeta(c)}
@@ -745,8 +802,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         {/* Mobile action bar */}
                         <div className="xd-bar">
                             <div className="xd-bar-info" aria-hidden="true">
-                                <strong>{countLoading ? 'Checking pool…' : `${finalCount} questions`}</strong>
-                                {!countLoading && finalCount > 0 && `~${durationMin} min · ${availableQs.toLocaleString()} available`}
+                                <strong>{countLoading ? 'Checking pool…' : keaSinglePaper ? keaSinglePaper.label : `${finalCount} questions`}</strong>
+                                {!countLoading && keaSinglePaper && `${keaSinglePaper.date} · ${finalCount} questions · ~${durationMin} min`}
+                                {!countLoading && !keaSinglePaper && finalCount > 0 && `~${durationMin} min · ${availableQs.toLocaleString()} available`}
                                 {!countLoading && finalCount === 0 && 'Change the filters above'}
                             </div>
                             <button type="button" className="xd-start" onClick={handleStart} disabled={finalCount === 0}>
@@ -756,413 +814,16 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     </div>
                 )}
 
-                {/* ═══════════════════════════════════════════════════════════════
-                    TAB 2: ABOUT EXAM & OFFICIAL PATTERN
-                ═══════════════════════════════════════════════════════════════ */}
                 {activeTab === 'about' && examInfo && (
-                    <div id="xd-panel-about" role="tabpanel" aria-labelledby="xd-tab-about" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-                        
-                        {/* Exam Overview & Conducting Body Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-                                <Landmark size={20} color="var(--text-secondary)" />
-                                <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                    Overview & Conducting Authority
-                                </h2>
-                            </div>
-                            <p style={{ fontSize: '14.5px', color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: '18px' }}>
-                                {language === 'kn' && examInfo.overview_kn ? examInfo.overview_kn : examInfo.overview}
-                            </p>
-                            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-                                <div style={{ background: 'var(--bg-secondary)', padding: '10px 16px', borderRadius: '10px' }}>
-                                    <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>CONDUCTING BODY: </span>
-                                    <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--text-primary)' }}>
-                                        {language === 'kn' && examInfo.conductingBody_kn ? examInfo.conductingBody_kn : examInfo.conductingBody}
-                                    </span>
-                                </div>
-                                <div style={{ background: 'var(--bg-secondary)', padding: '10px 16px', borderRadius: '10px' }}>
-                                    <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>CATEGORY: </span>
-                                    <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--brand-orange-text)', textTransform: 'uppercase' }}>
-                                        {examInfo.category}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Official Exam Pattern & Stages Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                <Scale size={20} color="var(--text-secondary)" />
-                                <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                    Official Examination Stages & Pattern
-                                </h2>
-                            </div>
-
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
-                                {examInfo.stages.map((stg) => (
-                                    <div key={stg.stageNumber} style={{ border: '1px solid var(--border)', borderRadius: '14px', overflow: 'hidden' }}>
-                                        <div style={{ background: 'var(--bg-secondary)', padding: '14px 18px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                <span style={{ fontSize: '11px', fontWeight: 800, padding: '3px 8px', borderRadius: '6px', background: 'var(--brand-orange-dim)', color: '#FFFFFF' }}>
-                                                    STAGE {stg.stageNumber}
-                                                </span>
-                                                <span style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)' }}>
-                                                    {stg.stageName}
-                                                </span>
-                                            </div>
-                                            <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--teal-text)' }}>
-                                                {stg.totalMarks > 0 ? `${stg.totalMarks} Marks` : 'Qualifying'}
-                                            </span>
-                                        </div>
-
-                                        <div style={{ padding: '16px 18px' }}>
-                                            <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', marginBottom: stg.papers.length > 0 ? '14px' : '0', lineHeight: 1.5 }}>
-                                                {stg.description}
-                                            </p>
-
-                                            {stg.papers.length > 0 && (
-                                                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                                                    {stg.papers.map((p, pIdx) => (
-                                                        <div key={pIdx} style={{ background: 'var(--bg-tertiary)', padding: '12px 14px', borderRadius: '10px' }}>
-                                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
-                                                                <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--text-primary)' }}>
-                                                                    {p.paperName}
-                                                                </span>
-                                                                <span style={{ fontSize: '12.5px', fontWeight: 700, color: 'var(--brand-orange-text)' }}>
-                                                                    {p.marks} Marks ({p.durationMinutes} mins)
-                                                                </span>
-                                                            </div>
-                                                            <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-                                                                Negative Marking: {p.negativeMarking} • Syllabus: {p.subjects.join(', ')}
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Eligibility Criteria & Age Limits Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                <UserCheck size={20} color="var(--text-secondary)" />
-                                <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                    Eligibility & Age Limits
-                                </h2>
-                            </div>
-
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px', marginBottom: '20px' }}>
-                                <div style={{ background: 'var(--bg-secondary)', padding: '14px', borderRadius: '12px' }}>
-                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>GENERAL / UNRESERVED</div>
-                                    <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginTop: '2px' }}>
-                                        {examInfo.eligibility.ageLimit.general}
-                                    </div>
-                                </div>
-                                {examInfo.eligibility.ageLimit.obc && (
-                                    <div style={{ background: 'var(--bg-secondary)', padding: '14px', borderRadius: '12px' }}>
-                                        <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>OBC (NON-CREAMY LAYER)</div>
-                                        <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginTop: '2px' }}>
-                                            {examInfo.eligibility.ageLimit.obc}
-                                        </div>
-                                    </div>
-                                )}
-                                {examInfo.eligibility.ageLimit.sc_st && (
-                                    <div style={{ background: 'var(--bg-secondary)', padding: '14px', borderRadius: '12px' }}>
-                                        <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>SC / ST</div>
-                                        <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginTop: '2px' }}>
-                                            {examInfo.eligibility.ageLimit.sc_st}
-                                        </div>
-                                    </div>
-                                )}
-                                {examInfo.eligibility.ageLimit.obc_2a_2b_3a_3b && (
-                                    <div style={{ background: 'var(--bg-secondary)', padding: '14px', borderRadius: '12px' }}>
-                                        <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>OBC / 2A, 2B, 3A, 3B</div>
-                                        <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginTop: '2px' }}>
-                                            {examInfo.eligibility.ageLimit.obc_2a_2b_3a_3b}
-                                        </div>
-                                    </div>
-                                )}
-                                {examInfo.eligibility.ageLimit.sc_st_cat1 && (
-                                    <div style={{ background: 'var(--bg-secondary)', padding: '14px', borderRadius: '12px' }}>
-                                        <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>SC / ST / CAT-1</div>
-                                        <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginTop: '2px' }}>
-                                            {examInfo.eligibility.ageLimit.sc_st_cat1}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-
-                            <div>
-                                <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '4px' }}>EDUCATIONAL QUALIFICATION:</div>
-                                <p style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.5, margin: 0 }}>
-                                    {examInfo.eligibility.educationalQualification}
-                                </p>
-                            </div>
-
-                            {examInfo.eligibility.physicalStandards && examInfo.eligibility.physicalStandards.length > 0 && (
-                                <div style={{ marginTop: '16px', paddingTop: '14px', borderTop: '1px solid var(--border)' }}>
-                                    <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '6px' }}>PHYSICAL STANDARDS & ENDURANCE:</div>
-                                    <ul style={{ paddingLeft: '20px', margin: 0, display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                                        {examInfo.eligibility.physicalStandards.map((std, idx) => (
-                                            <li key={idx} style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>{std}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-
-                        {/* High-Yield Syllabus Focus Card */}
-                        {examInfo.syllabusFocus && examInfo.syllabusFocus.length > 0 && (
-                            <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', flexWrap: 'wrap', gap: '10px' }}>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                        <Layers size={20} color="var(--text-secondary)" />
-                                        <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                            High-Yield Syllabus Focus Areas
-                                        </h2>
-                                    </div>
-                                    <Link 
-                                        href="/graph" 
-                                        style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', minHeight: '44px', fontSize: '13px', fontWeight: 700, color: 'var(--teal-text)', textDecoration: 'none' }}
-                                    >
-                                        Explore 14-Pillar Knowledge Graph <ArrowRight size={14} />
-                                    </Link>
-                                </div>
-
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px' }}>
-                                    {examInfo.syllabusFocus.map((foc, fIdx) => (
-                                        <div key={fIdx} style={{ background: 'var(--bg-secondary)', padding: '16px', borderRadius: '12px', border: '1px solid var(--border)' }}>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                                                <span style={{ fontSize: '14px', fontWeight: 800, color: 'var(--text-primary)' }}>{foc.pillarName}</span>
-                                                <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--brand-orange-text)', background: 'rgba(255, 107, 43, 0.1)', padding: '2px 8px', borderRadius: '6px' }}>{foc.weightage}</span>
-                                            </div>
-                                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-                                                {foc.topics.map((tp, tIdx) => (
-                                                    <span key={tIdx} style={{ fontSize: '11.5px', color: 'var(--text-muted)', background: 'var(--bg-tertiary)', padding: '3px 8px', borderRadius: '6px' }}>
-                                                        {tp}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* FAQs Card */}
-                        {examInfo.faqs && examInfo.faqs.length > 0 && (
-                            <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                    <HelpCircle size={20} color="var(--text-secondary)" />
-                                    <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                        Frequently Asked Questions
-                                    </h2>
-                                </div>
-
-                                <div>
-                                    {examInfo.faqs.map((faq, fIdx) => (
-                                        <details key={fIdx} className="xd-faq">
-                                            <summary>{faq.question}<ChevronRight size={18} /></summary>
-                                            <p>{faq.answer}</p>
-                                        </details>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                    </div>
+                    <AboutPanel
+                        info={examInfo}
+                        lang={language}
+                        kea={examId === 'kea' ? { family: keaFamily, onFamily: selectKeaFamily, subjects: keaSubjects } : undefined}
+                        onOpenMap={hasExamMindMap(examId) ? () => selectTab('mindmap') : undefined}
+                    />
                 )}
-
-                {/* ═══════════════════════════════════════════════════════════════
-                    TAB 3: SERVICES & JOB ROLES (SEPARATE DEDICATED CATEGORY)
-                ═══════════════════════════════════════════════════════════════ */}
                 {activeTab === 'services' && examInfo && (
-                    <div id="xd-panel-services" role="tabpanel" aria-labelledby="xd-tab-services" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-
-                        {/* ── ALLOCATED SERVICES & CADRES DIRECTORY (IF COMPOSITE EXAM) ── */}
-                        {examInfo.allocatedServices && examInfo.allocatedServices.length > 0 && (
-                            <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)', border: '1px solid var(--border)' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                                    <div style={{ 
-                                        width: '36px', height: '36px', borderRadius: '10px', 
-                                        background: 'rgba(37, 99, 235, 0.1)', border: '1px solid rgba(37, 99, 235, 0.25)',
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center' 
-                                    }}>
-                                        <Award size={18} color="#2563EB" />
-                                    </div>
-                                    <div>
-                                        <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                            Services & Cadres Allotted ({examInfo.allocatedServices.length} Distinct Services)
-                                        </h2>
-                                        <div style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
-                                            Candidates qualify and are allotted into the following premier services based on their final rank and service preferences:
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '16px', marginTop: '20px' }}>
-                                    {examInfo.allocatedServices.map((srv) => {
-                                        const srvName = language === 'kn' && srv.serviceName_kn ? srv.serviceName_kn : srv.serviceName;
-                                        const isAIS = srv.group.includes('All India') || srv.group.includes('Group A');
-
-                                        return (
-                                            <div 
-                                                key={srv.serviceCode}
-                                                style={{
-                                                    background: 'var(--bg-secondary)', padding: '18px', borderRadius: '14px',
-                                                    border: '1px solid var(--border)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
-                                                }}
-                                            >
-                                                <div>
-                                                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '10px' }}>
-                                                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                            <span style={{ 
-                                                                fontSize: '13px', fontWeight: 900, color: '#FFFFFF',
-                                                                background: isAIS ? 'var(--brand-orange-dim)' : 'var(--brand-teal-dim)',
-                                                                padding: '4px 10px', borderRadius: '8px'
-                                                            }}>
-                                                                {srv.serviceCode}
-                                                            </span>
-                                                            <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>
-                                                                {srv.group}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-
-                                                    <h3 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '4px' }}>
-                                                        {srvName}
-                                                    </h3>
-                                                    <div style={{ fontSize: '12.5px', fontWeight: 600, color: 'var(--teal-text)', marginBottom: '10px' }}>
-                                                        {srv.department}
-                                                    </div>
-
-                                                    <p style={{ fontSize: '13px', color: 'var(--text-secondary)', lineHeight: 1.5, marginBottom: '14px' }}>
-                                                        {srv.roleDescription}
-                                                    </p>
-                                                </div>
-
-                                                <div style={{ borderTop: '1px solid var(--border)', paddingTop: '10px', marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                                                    <div style={{ fontSize: '11.5px', color: 'var(--text-muted)' }}>
-                                                        <strong>Entry Post:</strong> {srv.entryDesignation}
-                                                    </div>
-                                                    <div style={{ fontSize: '11.5px', color: 'var(--brand-orange-text)' }}>
-                                                        <strong>Apex Rank:</strong> {srv.careerApex}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Job Profile & Day-to-Day Responsibilities Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
-                                <Briefcase size={20} color="var(--text-secondary)" />
-                                <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                    Executive Role & Statutory Responsibilities
-                                </h2>
-                            </div>
-
-                            <div style={{ 
-                                display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px',
-                                background: 'var(--bg-secondary)', padding: '16px', borderRadius: '14px', marginBottom: '20px'
-                            }}>
-                                <div>
-                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>PRIMARY DESIGNATION</div>
-                                    <div style={{ fontSize: '14.5px', fontWeight: 700, color: 'var(--text-primary)', marginTop: '2px' }}>
-                                        {examInfo.jobRole.designation}
-                                    </div>
-                                </div>
-                                <div>
-                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>CADRE & CLASS</div>
-                                    <div style={{ fontSize: '14.5px', fontWeight: 700, color: 'var(--brand-orange-text)', marginTop: '2px' }}>
-                                        {examInfo.jobRole.cadre}
-                                    </div>
-                                </div>
-                                <div>
-                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>DEPARTMENT</div>
-                                    <div style={{ fontSize: '14.5px', fontWeight: 700, color: 'var(--text-primary)', marginTop: '2px' }}>
-                                        {examInfo.jobRole.department}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h3 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '10px' }}>
-                                Key On-Duty Responsibilities:
-                            </h3>
-                            <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '24px' }}>
-                                {examInfo.jobRole.keyResponsibilities.map((resp, idx) => (
-                                    <li key={idx} style={{ fontSize: '14px', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                                        {resp}
-                                    </li>
-                                ))}
-                            </ul>
-
-                            <h3 style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-primary)', marginBottom: '10px' }}>
-                                Career Progression Ladder:
-                            </h3>
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '20px' }}>
-                                {examInfo.jobRole.careerProgression.map((step, idx) => (
-                                    <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '13.5px', color: 'var(--text-secondary)', background: 'var(--bg-tertiary)', padding: '10px 14px', borderRadius: '10px' }}>
-                                        <ChevronRight size={16} color="var(--teal-text)" />
-                                        <span>{step}</span>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div>
-                                <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '4px' }}>POSTING LOCATIONS & JURISDICTION:</div>
-                                <p style={{ fontSize: '13.5px', color: 'var(--text-secondary)', margin: 0, lineHeight: 1.5 }}>
-                                    {examInfo.jobRole.postingLocations}
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Salary, Pay Scale & Allowances Card */}
-                        <div className="card" style={{ padding: '28px', borderRadius: 'var(--radius-xl)' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
-                                <DollarSign size={20} color="var(--text-secondary)" />
-                                <h2 style={{ fontSize: '20px', fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>
-                                    Salary Structure & Government Perks
-                                </h2>
-                            </div>
-
-                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '20px' }}>
-                                <div style={{ background: 'var(--bg-secondary)', padding: '16px', borderRadius: '14px' }}>
-                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--text-muted)' }}>PAY SCALE / LEVEL</div>
-                                    <div style={{ fontSize: '16px', fontWeight: 800, color: 'var(--text-primary)', marginTop: '4px' }}>
-                                        {examInfo.jobRole.payScale.level}
-                                    </div>
-                                    <div style={{ fontSize: '12.5px', color: 'var(--text-muted)', marginTop: '2px' }}>
-                                        Basic: {examInfo.jobRole.payScale.basicPayRange}
-                                    </div>
-                                </div>
-
-                                <div style={{ background: 'rgba(13, 148, 136, 0.08)', border: '1px solid rgba(13, 148, 136, 0.2)', padding: '16px', borderRadius: '14px' }}>
-                                    <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--teal-text)' }}>APPROX GROSS SALARY</div>
-                                    <div style={{ fontSize: '18px', fontWeight: 900, color: 'var(--teal-text)', marginTop: '4px' }}>
-                                        {examInfo.jobRole.payScale.approxMonthlyGross}
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '8px' }}>
-                                INCLUDED BENEFITS & ENTITLEMENTS:
-                            </div>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                                {examInfo.jobRole.payScale.perks.map((perk, idx) => (
-                                    <span key={idx} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12.5px', fontWeight: 600, padding: '5px 12px', borderRadius: '8px', background: 'var(--bg-tertiary)', color: 'var(--text-secondary)' }}>
-                                        <CheckCircle2 size={13} color="var(--teal-text)" />
-                                        {perk}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                    <ServicesPanel info={examInfo} lang={language} kea={examId === 'kea'} />
                 )}
 
                 {/* ═══════════════════════════════════════════════════════════════
