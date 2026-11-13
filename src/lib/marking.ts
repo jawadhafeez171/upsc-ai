@@ -3,7 +3,11 @@
  * Single source of truth for the test screen, the exam setup page and the homepage.
  * (Exam.negative_marking is the *fraction* deducted, e.g. 0.33 = one third of the marks.)
  */
-export function getMarkingScheme(examId?: string, paper?: number | string | 'all') {
+export function getMarkingScheme(examId?: string, paper?: number | string | 'all', paperCode?: string) {
+    // KSET follows the UGC-NET pattern: 2 marks a question, no negative marking.
+    if (examId === 'kea-kset' || paperCode === 'kset' || /kset/i.test(paperCode ?? '')) return { positive: 2, negative: 0 };
+    // KEA recruitment papers: 1 mark a question, a quarter mark off for a wrong answer.
+    if (examId === 'kea' || examId?.startsWith('kea-')) return { positive: 1, negative: 0.25 };
     if (examId === 'upsc-epfo') return { positive: 2.5, negative: 0.83 };
     if (examId === 'upsc-cse' && (paper === 2 || paper === '2')) return { positive: 2.5, negative: 0.83 };
     if (examId === 'upsc-cse' || examId === 'upsc-capf') return { positive: 2, negative: 0.66 };

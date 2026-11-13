@@ -8,6 +8,7 @@ import { useAppStore } from '@/lib/store';
 import { EXAMS } from '@/lib/mockData';
 import { getMarkingScheme, formatMarks } from '@/lib/marking';
 import { hasExamMindMap } from '@/lib/mindMapIds';
+import { KEA_FAMILIES, KEA_PAPERS, keaPaperCodes, keaFamilyStats, keaPaperTime } from '@/lib/keaPapers';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
 import { TestConfig, Language, TestMode } from '@/types';
 import { 
@@ -96,6 +97,13 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const [paper, setPaper] = useState<number | 'all'>(presetPaper === '1' ? 1 : presetPaper === '2' ? 2 : 'all');
     const [paperCode, setPaperCode] = useState<'all' | 'hk' | 'nhk' | 'eoao' | 'apfc' | 'eoao-apfc' | string>('all');
     const [month, setMonth] = useState<string | 'all'>('all');
+    // KEA covers unrelated recruitments: practise one post family (default FDA & SDA), or sit one real paper.
+    const [keaFamily, setKeaFamily] = useState<string>(examId === 'kea-vao' ? 'vao' : examId === 'kea-kset' ? 'kset' : examId === 'kea' ? 'fda-sda' : 'none'); // 'none': no papers for this post yet (e.g. PDO)
+    const [keaPaperSel, setKeaPaperSel] = useState('');
+    const keaFamilyPapers = KEA_PAPERS.filter(p => keaFamily === 'all' || p.family === keaFamily);
+    const keaVisiblePapers = keaFamilyPapers.filter(p => year === 'all' || p.year === year).sort((x, y) => keaPaperTime(y) - keaPaperTime(x));
+    const keaSinglePaper = mode === 'yearwise' ? (keaVisiblePapers.find(p => p.code === keaPaperSel) ?? keaVisiblePapers[0]) : undefined;
+    const keaCode = mode === 'yearwise' ? (keaSinglePaper?.code ?? 'none') : keaFamily;
     const [count, setCount] = useState(validPreset && QUESTION_COUNTS.includes(validPreset) ? validPreset : 25);
     const [customCount, setCustomCount] = useState(validPreset && !QUESTION_COUNTS.includes(validPreset) ? String(validPreset) : '');
     const [testLang, setTestLang] = useState<Language>(language);
@@ -246,40 +254,22 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     qCount = count || 0;
                 } else if (examId === 'kea' || examId.startsWith('kea-')) {
                     let query = supabase.from('kea_questions').select('id', { count: 'exact', head: true });
-                    
-                    if (paperCode !== 'all') {
-                        if (paperCode === 'fda-sda') {
-                            query = query.or('paper_code.ilike.%fda%,paper_code.ilike.%sda%,paper_code.ilike.%kec1%');
-                        } else if (paperCode === 'vao') {
-                            query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
-                        } else if (paperCode === 'police') {
-                            query = query.or('paper_code.ilike.%civilpc%,paper_code.ilike.%ksrp%,paper_code.ilike.%psi%');
-                        } else if (paperCode === 'leg-council') {
-                            query = query.ilike('paper_code', '%legcouncil%');
-                        } else if (paperCode === 'tech-eng') {
-                            query = query.or('paper_code.ilike.%bwssb%,paper_code.ilike.%kuwsdb%,paper_code.ilike.%kridl%,paper_code.ilike.%ksscl%,paper_code.ilike.%gttc%');
-                        } else if (paperCode === 'coaching') {
-                            query = query.or('paper_code.ilike.%coaching%,paper_code.ilike.%swd%,paper_code.ilike.%bcwd%,paper_code.ilike.%minority%');
-                        } else {
-                            query = query.eq('paper_code', paperCode);
-                        }
-                    } else if (examId === 'kea-vao') {
-                        query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
-                    } else if (examId === 'kea-kset') {
-                        query = query.ilike('paper_code', '%kset%');
-                    }
+                    const codes = keaPaperCodes(keaCode);
+                    if (codes) query = query.in('paper_code', codes);
 
                     if (mode === 'subject' && subject) {
                         query = query.or(`subject.eq."${subject}",subject_kannada.eq."${subject}"`);
                     }
-                    if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
-                    if (year !== 'all') query = query.eq('year', year);
+                    if (mode !== 'yearwise') {
+                        if (difficulty !== 'mixed') query = query.eq('difficulty', difficulty);
+                        if (year !== 'all') query = query.eq('year', year);
+                    }
 
                     const { count: keaCount, error: keaErr } = await query;
                     if (!keaErr && keaCount !== null) {
                         qCount = keaCount;
                     } else {
-                        qCount = 6364;
+                        qCount = 0;
                     }
                 } else {
                     let query = supabase.from('questions').select('id', { count: 'exact', head: true }).eq('exam_id', examId);
@@ -299,7 +289,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         }
         loadExamData();
         return () => { cancelled = true; };
-    }, [examId, mode, subject, difficulty, year, paper, paperCode, month]);
+    }, [examId, mode, subject, difficulty, year, paper, paperCode, month, keaCode]);
 
     if (loading) {
         return (
@@ -324,7 +314,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         );
     }
 
-    const finalCount = countLoading ? 0 : Math.min(Number(customCount) || count, availableQs);
+    // "Previous year paper" on KEA sits the whole paper, as in the exam hall.
+    const keaWholePaper = (examId === 'kea' || examId.startsWith('kea-')) && mode === 'yearwise';
+    const finalCount = countLoading ? 0 : keaWholePaper ? availableQs : Math.min(Number(customCount) || count, availableQs);
 
     const handleStart = () => {
         if (!user) { router.push('/login'); return; }
@@ -340,7 +332,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             year: examId === 'upsc-cse' || examId === 'kpsc-kas' || examId === 'upsc-capf' || examId === 'upsc-epfo' || examId === 'ksp-psi' || examId === 'kea' || examId.startsWith('kea-') ? year : examId === 'ksp-pc' ? 2026 : undefined,
             paper: examId === 'upsc-cse' || examId === 'kpsc-kas' ? paper : examId === 'ksp-pc' ? 1 : examId === 'ksp-psi' ? 2 : ((examId === 'upsc-capf' || examId === 'upsc-epfo') ? 1 : undefined),
             month: examId === 'kpsc-kas' ? month : examId === 'ksp-pc' ? 'September' : undefined,
-            paper_code: examId === 'ksp-pc' || examId === 'upsc-epfo' || examId === 'kea' || examId.startsWith('kea-') ? paperCode : undefined
+            paper_code: examId === 'kea' || examId.startsWith('kea-') ? keaCode : examId === 'ksp-pc' || examId === 'upsc-epfo' ? paperCode : undefined
         };
 
         const sessionId = `session_${Date.now()}`;
@@ -383,7 +375,13 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
     // ── Practice-tab option model ───────────────────────────────────────
     const isKea = examId === 'kea' || examId.startsWith('kea-');
-    const showPaperYear = examId !== 'ksp-pc' && (mode === 'yearwise' || ['upsc-cse', 'kpsc-kas', 'upsc-capf', 'upsc-epfo', 'ksp-psi'].includes(examId) || isKea);
+    const selectKeaFamily = (f: string) => {
+        setKeaFamily(f);
+        setKeaPaperSel('');
+        if (year !== 'all' && !KEA_PAPERS.some(p => (f === 'all' || p.family === f) && p.year === year)) setYear('all');
+    };
+    const keaYears = [...new Set(keaFamilyPapers.map(p => p.year))].sort((x, y) => y - x);
+    const showPaperYear = examId !== 'ksp-pc' && !(isKea && keaYears.length === 0) && (mode === 'yearwise' || ['upsc-cse', 'kpsc-kas', 'upsc-capf', 'upsc-epfo', 'ksp-psi'].includes(examId) || isKea);
 
     const codeOpt = (code: string, label: string, meta?: string, onSelect?: () => void): Opt => ({
         key: code, label, meta, selected: paperCode === code, onSelect: onSelect || (() => setPaperCode(code)),
@@ -397,16 +395,16 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         ];
     } else if (examId === 'ksp-psi') {
         paperOptions = []; // Paper 1 is descriptive; practice uses objective Paper 2
-    } else if (isKea) {
+    } else if (examId === 'kea') {
         paperOptions = [
-            codeOpt('all', 'All papers', '64 papers · 6,364 Qs'),
-            codeOpt('fda-sda', 'FDA & SDA', '12 papers'),
-            codeOpt('vao', 'VAO & Compulsory Kannada', '4 papers'),
-            codeOpt('police', 'Civil PC, KSRP/KSISF & PSI', '5 papers'),
-            codeOpt('leg-council', 'Legislative Council', '6 papers'),
-            codeOpt('tech-eng', 'Technical & Engineering', 'GTTC, BWSSB, KRIDL'),
-            codeOpt('coaching', 'Free coaching entrance', 'SWD, BCWD, IAS/KAS'),
-        ];
+            ...KEA_FAMILIES.map(f => {
+                const st = keaFamilyStats(f.key);
+                return codeOpt(f.key, f.label, `${st.papers} ${st.papers === 1 ? 'paper' : 'papers'} · ${st.qs.toLocaleString('en-IN')} Qs`, () => selectKeaFamily(f.key));
+            }),
+            codeOpt('all', 'All posts', `Mixed · ${KEA_PAPERS.reduce((n, p) => n + p.qs, 0).toLocaleString('en-IN')} Qs`, () => selectKeaFamily('all')),
+        ].map(o => ({ ...o, selected: keaFamily === o.key }));
+    } else if (isKea) {
+        paperOptions = []; // VAO, KSET and PDO pages are a single post already
     } else if (examId === 'upsc-epfo') {
         paperOptions = [
             codeOpt('all', 'All papers', '9 papers · 1,060 Qs'),
@@ -445,7 +443,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     }
 
     const yearList: number[] = isKea
-        ? [2026, 2025, 2024, 2023]
+        ? keaYears
         : examId === 'upsc-capf'
             ? [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014]
             : examId === 'upsc-epfo'
@@ -458,7 +456,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                     // GS Paper 1 has full papers from 1996 (1993–95 are partial); CSAT starts in 2013.
                     ? yearsDown(paper === 2 ? 2026 : paper === 1 ? 2024 : 2026, paper === 2 ? 2013 : 1996)
                     : [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011];
-    const allYearsRange = isKea ? '2023–2026' : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : examId === 'ksp-psi' ? '2016–2024'
+    const allYearsRange = isKea ? (keaYears.length > 1 ? `${keaYears[keaYears.length - 1]}–${keaYears[0]}` : String(keaYears[0] ?? '')) : examId === 'upsc-capf' ? '2014–2026' : examId === 'upsc-epfo' ? '2002–2025' : examId === 'ksp-psi' ? '2016–2024'
         : examId === 'upsc-cse' ? (paper === 2 ? '2013–2026' : paper === 1 ? '1993–2024' : '1993–2026') : '2011–2024';
     const epfoYearMeta = (yr: number) => yr === 2025 ? 'Combined' : yr === 2023 ? 'EO/AO & APFC' : [2021, 2017].includes(yr) ? 'EO/AO' : 'APFC';
     const epfoYearMatches = (yr: number) => examId !== 'upsc-epfo' || paperCode === 'all'
@@ -492,21 +490,23 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
             : c === 200 && examId === 'ksp-pc' ? 'Full exam' : undefined;
     const requestedCount = Number(customCount) || count;
     const secsPerQ = examId === 'upsc-epfo' ? 60 : 72;
-    const marking = getMarkingScheme(examId, paper);
+    const marking = getMarkingScheme(examId, paper, paperCode);
     const durationMin = Math.round((finalCount * secsPerQ) / 60);
     const langNames: Record<string, string> = { en: 'English', hi: 'हिन्दी (Hindi)', kn: 'ಕನ್ನಡ (Kannada)' };
 
     const summaryRows: [string, string][] = [
         ['Mode', modes.find(m => m.id === mode)?.title || ''],
     ];
-    if ((showPaperYear || examId === 'ksp-pc') && paperOptions.length > 0) summaryRows.push(['Paper', paperOptions.find(o => o.selected)?.label || '—']);
+    if (examId === 'kea') summaryRows.push(['Post', paperOptions.find(o => o.selected)?.label || '—']);
+    else if ((showPaperYear || examId === 'ksp-pc') && paperOptions.length > 0) summaryRows.push(['Paper', paperOptions.find(o => o.selected)?.label || '—']);
+    if (keaSinglePaper) summaryRows.push(['Paper', `${keaSinglePaper.label} (${keaSinglePaper.date})`]);
     if (examId === 'ksp-psi') summaryRows.push(['Paper', 'Paper 2 · General Studies']);
-    if (showPaperYear) {
+    if (showPaperYear && !keaWholePaper) {
         const monthLabel = examId === 'kpsc-kas' && year === 2024 && month !== 'all' ? (month === 'august' ? ' · August' : ' · December') : '';
         summaryRows.push(['Year', year === 'all' ? `All (${allYearsRange})` : `${year}${monthLabel}`]);
     }
     if (mode === 'subject') summaryRows.push(['Subject', examTopics.find(t => t.value === subject)?.label || '—']);
-    summaryRows.push(['Difficulty', difficulty.charAt(0).toUpperCase() + difficulty.slice(1)]);
+    if (!keaWholePaper) summaryRows.push(['Difficulty', difficulty.charAt(0).toUpperCase() + difficulty.slice(1)]);
     summaryRows.push(['Language', langNames[testLang] || testLang]);
     summaryRows.push(['Duration', finalCount > 0 ? `~${durationMin} min` : '—']);
 
@@ -600,7 +600,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     </p>
 
                                     {paperOptions.length > 0 && (
-                                        <OptionGroup label={examId === 'ksp-pc' ? 'Cadre / region' : 'Paper'}>
+                                        <OptionGroup label={examId === 'ksp-pc' ? 'Cadre / region' : examId === 'kea' ? 'Post' : 'Paper'}>
                                             {paperOptions.map(o => (
                                                 <Chip key={o.key} selected={o.selected} onSelect={o.onSelect} meta={o.meta}>{o.label}</Chip>
                                             ))}
@@ -619,6 +619,17 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                                     muted={!epfoYearMatches(yr)}
                                                 >
                                                     {yr}
+                                                </Chip>
+                                            ))}
+                                        </OptionGroup>
+                                    )}
+
+                                    {isKea && mode === 'yearwise' && (
+                                        <OptionGroup label="Paper to sit" hint={`${keaVisiblePapers.length} ${keaVisiblePapers.length === 1 ? 'paper' : 'papers'}, newest first`}>
+                                            {keaVisiblePapers.length === 0 && <p className="xd-section-sub">No papers for this post in {year}.</p>}
+                                            {keaVisiblePapers.map(p => (
+                                                <Chip key={p.code} selected={keaSinglePaper?.code === p.code} onSelect={() => setKeaPaperSel(p.code)} meta={`${p.date} · ${p.qs} questions`}>
+                                                    {p.label}
                                                 </Chip>
                                             ))}
                                         </OptionGroup>
@@ -650,14 +661,14 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             {/* Difficulty & language */}
                             <section className="xd-section" aria-label="Difficulty and language">
                                 <div className="xd-two">
-                                    <div className="xd-field">
+                                    {!keaWholePaper && <div className="xd-field">
                                         <span id="xd-diff-l" className="xd-label">Difficulty</span>
                                         <div className="xd-seg" role="group" aria-labelledby="xd-diff-l">
                                             {DIFFICULTIES.map(d => (
                                                 <button key={d} type="button" aria-pressed={difficulty === d} onClick={() => setDifficulty(d)}>{d}</button>
                                             ))}
                                         </div>
-                                    </div>
+                                    </div>}
                                     <OptionGroup label="Question language">
                                         {(['en', 'hi', 'kn'] as Language[]).filter(l => l === 'en' || exam.languages.includes(l)).map(l => (
                                             <Chip key={l} selected={testLang === l} onSelect={() => setTestLang(l)}>{langNames[l]}</Chip>
@@ -667,6 +678,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             </section>
 
                             {/* Question count */}
+                            {!keaWholePaper && (
                             <section className="xd-section" aria-labelledby="xd-count-h">
                                 <h2 id="xd-count-h" className="xd-section-title">Number of questions</h2>
                                 <p className="xd-section-sub">
@@ -701,6 +713,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     </label>
                                 </div>
                             </section>
+                            )}
                         </div>
 
                         {/* Summary & start */}
@@ -718,8 +731,8 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             <p className="xd-rules">
                                 <AlertTriangle size={15} />
                                 <span>
-                                    {exam.negative_marking > 0
-                                        ? <><strong>−{formatMarks(marking.negative)}</strong> of {formatMarks(marking.positive)} marks for each wrong answer. Unanswered questions score zero.</>
+                                    {marking.negative > 0
+                                        ? <><strong>−{formatMarks(marking.negative)}</strong> of {formatMarks(marking.positive)} {marking.positive === 1 ? 'mark' : 'marks'} for each wrong answer. Unanswered questions score zero.</>
                                         : 'No negative marking for this exam.'}
                                 </span>
                             </p>

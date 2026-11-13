@@ -7,6 +7,7 @@ import { Loader2 } from 'lucide-react';
 import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
 import { getMarkingScheme } from '@/lib/marking';
+import { keaPaperCodes, keaPaper, KEA_FAMILIES } from '@/lib/keaPapers';
 import { isValidImageUrl } from '@/lib/imageUtils';
 import '@/app/test/cbt-terminal.css';
 import { InstructionsModal, FullPaperModal, ReportDiscrepancyModal } from '@/components/test/ExamModals';
@@ -518,37 +519,48 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 const { data } = await query;
                 if (data) selectedRawQuestions = data;
             } else if (config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
-                let query = supabase.from('kea_questions').select('*');
-                if (config.paper_code && config.paper_code !== 'all') {
-                    if (config.paper_code === 'fda-sda') {
-                        query = query.or('paper_code.ilike.%fda%,paper_code.ilike.%sda%,paper_code.ilike.%kec1%');
-                    } else if (config.paper_code === 'vao') {
-                        query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
-                    } else if (config.paper_code === 'police') {
-                        query = query.or('paper_code.ilike.%civilpc%,paper_code.ilike.%ksrp%,paper_code.ilike.%psi%');
-                    } else if (config.paper_code === 'leg-council') {
-                        query = query.ilike('paper_code', '%legcouncil%');
-                    } else if (config.paper_code === 'tech-eng') {
-                        query = query.or('paper_code.ilike.%bwssb%,paper_code.ilike.%kuwsdb%,paper_code.ilike.%kridl%,paper_code.ilike.%ksscl%,paper_code.ilike.%gttc%');
-                    } else if (config.paper_code === 'coaching') {
-                        query = query.or('paper_code.ilike.%coaching%,paper_code.ilike.%swd%,paper_code.ilike.%bcwd%,paper_code.ilike.%minority%');
-                    } else {
-                        query = query.eq('paper_code', config.paper_code);
+                // Exact paper codes (src/lib/keaPapers.ts), not loose name patterns.
+                const codes = keaPaperCodes(config.paper_code);
+                const singlePaper = config.mode === 'yearwise' && codes?.length === 1;
+                const build = (columns: string) => {
+                    let query = supabase.from('kea_questions').select(columns);
+                    if (codes) query = query.in('paper_code', codes);
+                    if (config.mode === 'subject' && config.subject) {
+                        query = query.or(`subject.eq."${config.subject}",subject_kannada.eq."${config.subject}"`);
                     }
-                } else if (config.exam_id === 'kea-vao') {
-                    query = query.or('paper_code.ilike.%vao%,paper_code.ilike.%compulsory_kannada%');
-                } else if (config.exam_id === 'kea-kset') {
-                    query = query.ilike('paper_code', '%kset%');
+                    if (!singlePaper) {
+                        if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
+                        if (config.year && config.year !== 'all') query = query.eq('year', config.year);
+                    }
+                    return query.order('id');
+                };
+                // Supabase returns at most 1,000 rows a request: page through, or a mock only ever sees the first 1,000.
+                const fetchAll = async (columns: string) => {
+                    const rows: any[] = [];
+                    for (let from = 0; ; from += 1000) {
+                        const { data, error } = await build(columns).range(from, from + 999);
+                        if (error || !data) break;
+                        rows.push(...data);
+                        if (data.length < 1000) break;
+                    }
+                    return rows;
+                };
+                if (singlePaper) {
+                    selectedRawQuestions = await fetchAll('*');
+                } else {
+                    // A pool can be thousands of questions (14 MB in full): choose from light rows, then load only the chosen ones.
+                    const light = await fetchAll('id, paper_code, question_number, passage_english, passage_kannada');
+                    let picked = groupPreservingShuffle(assignQuestionGroups(light));
+                    if (config.question_count && config.question_count < picked.length) picked = safeSliceQuestions(picked, config.question_count);
+                    const ids = picked.map((q) => q.id);
+                    const full: any[] = [];
+                    for (let i = 0; i < ids.length; i += 100) {
+                        const { data } = await supabase.from('kea_questions').select('*').in('id', ids.slice(i, i + 100));
+                        if (data) full.push(...data);
+                    }
+                    const byId = new Map(full.map((q) => [q.id, q]));
+                    selectedRawQuestions = ids.map((id) => byId.get(id)).filter(Boolean);
                 }
-
-                if (config.mode === 'subject' && config.subject) {
-                    query = query.or(`subject.eq."${config.subject}",subject_kannada.eq."${config.subject}"`);
-                }
-                if (config.difficulty && config.difficulty !== 'mixed') query = query.eq('difficulty', config.difficulty);
-                if (config.year && config.year !== 'all') query = query.eq('year', config.year);
-                
-                const { data } = await query;
-                if (data) selectedRawQuestions = data;
             } else {
                 let query = supabase.from('questions').select('*').eq('exam_id', config.exam_id);
                 if (config.mode === 'subject' && config.subject) query = query.eq('subject', config.subject);
@@ -585,7 +597,8 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 } else if (config.exam_id === 'kea' || config.exam_id?.startsWith('kea-')) {
                     selectedRawQuestions = assignQuestionGroups(selectedRawQuestions);
 
-                    if (config.mode === 'yearwise' || (config.paper_code && config.paper_code !== 'all')) {
+                    // One real paper keeps its own order; any pool of papers is shuffled into a fresh mock.
+                    if (config.mode === 'yearwise' && keaPaperCodes(config.paper_code)?.length === 1) {
                         sortedQuestions = [...selectedRawQuestions].sort((a, b) => (a.question_number || 0) - (b.question_number || 0));
                     } else {
                         sortedQuestions = groupPreservingShuffle(selectedRawQuestions);
@@ -864,7 +877,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const supportedLangs: ('en' | 'kn' | 'hi')[] = isUpsc ? ['en', 'hi'] : (isKarnataka ? ['en', 'kn'] : ['en']);
 
 
-    const marking = getMarkingScheme(activeSession?.config?.exam_id, activeSession?.config?.paper);
+    const marking = getMarkingScheme(activeSession?.config?.exam_id, activeSession?.config?.paper, activeSession?.config?.paper_code);
 
     const handleZoomIn = () => setFontSizePercent(p => Math.min(130, p + 10));
     const handleZoomOut = () => setFontSizePercent(p => Math.max(90, p - 10));
@@ -1084,8 +1097,14 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         : activeSession?.config?.exam_id === 'upsc-capf' ? 'UPSC CAPF (AC)'
         : (activeSession?.config?.exam_id || 'Practice test').toUpperCase().replace(/-/g, ' ');
     const cfgPaper = activeSession?.config?.paper;
+    const cfgCode = activeSession?.config?.paper_code;
+    const keaSat = keaPaper(cfgCode);
+    const keaFam = KEA_FAMILIES.find((f) => f.key === cfgCode);
     const paperTitle = activeSession?.config?.exam_id === 'upsc-cse'
         ? (cfgPaper === 2 ? 'Paper II · CSAT' : 'Paper I · General Studies')
+        : keaSat ? `${keaSat.label} · ${keaSat.date}`
+        : keaFam ? `${keaFam.label} · mock`
+        : activeSession?.config?.exam_id === 'kea' ? 'All posts · mock'
         : (typeof cfgPaper === 'number' ? `Paper ${cfgPaper}` : 'Full paper');
     const lang = activeLang as ExamLang;
     const answer = answers[question.id];
