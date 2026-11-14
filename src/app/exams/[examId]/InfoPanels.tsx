@@ -1,13 +1,14 @@
 'use client';
 import { ChevronRight, ArrowRight } from 'lucide-react';
 import type { ExamInfo } from '@/data/examDetails';
-import { KEA_FAMILIES, KEA_PAPERS, keaPaperTime, type KeaFamily } from '@/lib/keaPapers';
+import { KEA_FAMILIES, KEA_PAPERS, keaPaperTime, keaFamilyName, type KeaFamily } from '@/lib/keaPapers';
 
 type Lang = 'en' | 'hi' | 'kn';
 export type KeaInfo = {
     family: string;
     onFamily: (f: KeaFamily) => void;
     subjects: { label: string; kn: string; count: number }[] | null;
+    onSit: (code: string) => void;
 };
 
 const pick = (lang: Lang, en: string, kn?: string) => (lang === 'kn' && kn ? kn : en);
@@ -40,7 +41,7 @@ function Overview({ info, lang }: { info: ExamInfo; lang: Lang }) {
 }
 
 /* ── KEA: the pattern of each post, computed from its papers ── */
-function KeaPattern({ kea }: { kea: KeaInfo }) {
+function KeaPattern({ kea, lang }: { kea: KeaInfo; lang: Lang }) {
     const family: KeaFamily = KEA_FAMILIES.some(f => f.key === kea.family) ? (kea.family as KeaFamily) : 'fda-sda';
     const meta = KEA_FAMILIES.find(f => f.key === family)!;
     const papers = KEA_PAPERS.filter(p => p.family === family).sort((a, b) => keaPaperTime(b) - keaPaperTime(a));
@@ -51,25 +52,39 @@ function KeaPattern({ kea }: { kea: KeaInfo }) {
             <section className="xd-info-sec" aria-labelledby="xd-pat-h">
                 <h2 id="xd-pat-h" className="xd-info-h">Papers by post</h2>
                 <p className="xd-info-p">
-                    Every KEA paper here is objective: four options, one correct.{' '}
+                    Every KEA paper here is objective: four options, one correct, 120 minutes.{' '}
                     {family === 'kset'
                         ? 'KSET Paper 1 carries 2 marks a question with no negative marking.'
                         : 'Each question carries 1 mark, and a quarter mark is deducted for a wrong answer.'}
+                    {' '}Pay, age limits and eligibility differ by post and by notification; check the notification for your post.
                 </p>
                 <div className="xd-chips" role="group" aria-label="Post">
                     {KEA_FAMILIES.map(f => (
                         <button key={f.key} type="button" className="xd-chip" aria-pressed={family === f.key} onClick={() => kea.onFamily(f.key)}>
-                            <span>{f.label}</span>
+                            <span>{keaFamilyName(f.key, lang)}</span>
                         </button>
                     ))}
                 </div>
                 <div className="xd-table-wrap">
                     <table className="xd-table">
-                        <caption>{meta.label}: {meta.hint}. {papers.length} {papers.length === 1 ? 'paper' : 'papers'}, newest first.</caption>
-                        <thead><tr><th scope="col">Date</th><th scope="col">Paper</th><th scope="col" className="xd-num">Questions</th></tr></thead>
+                        <caption>{keaFamilyName(family, lang)}: {meta.hint}. {papers.length} {papers.length === 1 ? 'paper' : 'papers'}, newest first.</caption>
+                        <thead><tr>
+                            <th scope="col">Date</th><th scope="col">Paper</th><th scope="col" className="xd-num xd-wide">Questions</th>
+                            <th scope="col" className="xd-num xd-wide">Time</th><th scope="col"><span className="sr-only">Practise</span></th>
+                        </tr></thead>
                         <tbody>
                             {papers.map(p => (
-                                <tr key={p.code}><td className="xd-nowrap">{p.date}</td><td>{p.label}</td><td className="xd-num">{p.qs}</td></tr>
+                                <tr key={p.code}>
+                                    <td className="xd-nowrap">{p.date}</td>
+                                    <td>{p.label}</td>
+                                    <td className="xd-num xd-wide">{p.qs}</td>
+                                    <td className="xd-num xd-nowrap xd-wide">120 min</td>
+                                    <td className="xd-act">
+                                        <button type="button" className="xd-text-link" onClick={() => kea.onSit(p.code)} aria-label={`Sit ${p.label}, ${p.date}`}>
+                                            <span className="xd-wide-inline">Sit this paper</span><span className="xd-narrow-inline">Sit</span> <ArrowRight size={15} />
+                                        </button>
+                                    </td>
+                                </tr>
                             ))}
                         </tbody>
                     </table>
@@ -82,14 +97,14 @@ function KeaPattern({ kea }: { kea: KeaInfo }) {
                     <p className="xd-info-p xd-muted">Counting questions by subject…</p>
                 ) : (
                     <>
-                        <p className="xd-info-p">Questions in the {meta.label} papers, by subject. Use this to decide where your practice time goes.</p>
+                        <p className="xd-info-p">Questions in the {keaFamilyName(family, lang)} papers, by subject. Use this to decide where your practice time goes.</p>
                         <div className="xd-table-wrap">
                             <table className="xd-table">
                                 <thead><tr><th scope="col">Subject</th><th scope="col" className="xd-num">Questions</th><th scope="col" className="xd-num">Share</th></tr></thead>
                                 <tbody>
                                     {kea.subjects.map(s => (
                                         <tr key={s.label}>
-                                            <td>{s.label}</td>
+                                            <td>{lang === 'kn' ? s.kn : s.label}</td>
                                             <td className="xd-num">{s.count.toLocaleString('en-IN')}</td>
                                             <td className="xd-num">{!total ? '—' : s.count / total < 0.005 ? '<1%' : `${Math.round((s.count / total) * 100)}%`}</td>
                                         </tr>
@@ -145,6 +160,7 @@ function Pattern({ info }: { info: ExamInfo }) {
 
 function Eligibility({ info }: { info: ExamInfo }) {
     const e = info.eligibility;
+    if (!e) return null;
     const ages: [string, string | undefined][] = [
         ['General', e.ageLimit.general], ['OBC (non-creamy layer)', e.ageLimit.obc], ['SC / ST', e.ageLimit.sc_st],
         ['Category 2A, 2B, 3A, 3B', e.ageLimit.obc_2a_2b_3a_3b], ['SC / ST / Category 1', e.ageLimit.sc_st_cat1],
@@ -188,7 +204,7 @@ export function AboutPanel({ info, lang, kea, onOpenMap }: { info: ExamInfo; lan
     return (
         <div id="xd-panel-about" role="tabpanel" aria-labelledby="xd-tab-about" className="xd-panel xd-info">
             <Overview info={info} lang={lang} />
-            {kea ? <KeaPattern kea={kea} /> : <>
+            {kea ? <KeaPattern kea={kea} lang={lang} /> : <>
                 <Pattern info={info} />
                 <Eligibility info={info} />
                 <SyllabusFocus info={info} onOpenMap={onOpenMap} />
@@ -230,9 +246,10 @@ function KeaPosts() {
 
 export function ServicesPanel({ info, lang, kea }: { info: ExamInfo; lang: Lang; kea?: boolean }) {
     const j = info.jobRole;
+    if (!j && !kea) return null;
     return (
         <div id="xd-panel-services" role="tabpanel" aria-labelledby="xd-tab-services" className="xd-panel xd-info">
-            {kea ? <KeaPosts /> : <>
+            {kea || !j ? <KeaPosts /> : <>
                 {info.allocatedServices?.length ? (
                     <section className="xd-info-sec" aria-labelledby="xd-srv-h">
                         <h2 id="xd-srv-h" className="xd-info-h">Services allotted</h2>

@@ -20,3 +20,13 @@ export function getMarkingScheme(examId?: string, paper?: number | string | 'all
 export function formatMarks(n: number) {
     return String(Number(n.toFixed(2)));
 }
+
+/**
+ * Time allowed for a test, in seconds. A whole KEA paper is 120 minutes, as in the exam hall;
+ * everything else runs at the exam's pace (UPSC/KEA 120 minutes per 100 questions, EPFO 60 s a question).
+ */
+export function testDurationSeconds(cfg: { exam_id?: string; mode?: string; paper_code?: string } | undefined, questionCount: number) {
+    const kea = cfg?.exam_id === 'kea' || cfg?.exam_id?.startsWith('kea-');
+    if (kea && cfg?.mode === 'yearwise' && cfg.paper_code && cfg.paper_code.includes('__')) return 120 * 60;
+    return questionCount * (cfg?.exam_id === 'upsc-epfo' ? 60 : 72);
+}

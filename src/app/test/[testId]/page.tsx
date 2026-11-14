@@ -6,7 +6,7 @@ import { supabase } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
 import { Question } from '@/types';
 import { QUESTIONS } from '@/lib/mockData';
-import { getMarkingScheme } from '@/lib/marking';
+import { testDurationSeconds, getMarkingScheme } from '@/lib/marking';
 import { keaPaperCodes, keaPaper, KEA_FAMILIES, keaSubjectNames } from '@/lib/keaPapers';
 import { isValidImageUrl } from '@/lib/imageUtils';
 import '@/app/test/cbt-terminal.css';
@@ -792,8 +792,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     }
                 });
                 setQuestions(formattedQs);
-                const qSecs = config.exam_id === 'upsc-epfo' ? 60 : 72;
-                setTimeLeft(formattedQs.length * qSecs);
+                setTimeLeft(testDurationSeconds(config, formattedQs.length));
                 setActiveSession({ ...activeSession!, questions: formattedQs });
             } else {
                 // Fallback to local QUESTIONS if remote database returns 0 matching rows
@@ -806,15 +805,13 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 }
                 const finalFallback = fallback.slice(0, config.question_count || 10);
                 setQuestions(finalFallback);
-                const fallbackSecs = config.exam_id === 'upsc-epfo' ? 60 : 72;
-                setTimeLeft(finalFallback.length * fallbackSecs);
+                setTimeLeft(testDurationSeconds(config, finalFallback.length));
                 setActiveSession({ ...activeSession!, questions: finalFallback });
             }
             setLoading(false);
         }
         if (activeSession.questions && activeSession.questions.length > 0) {
-            const resumeSecs = activeSession.config?.exam_id === 'upsc-epfo' ? 60 : 72;
-            setQuestions(activeSession.questions); setAnswers(activeSession.answers || {}); setTimeLeft(activeSession.questions.length * resumeSecs); setLoading(false);
+            setQuestions(activeSession.questions); setAnswers(activeSession.answers || {}); setTimeLeft(testDurationSeconds(activeSession.config, activeSession.questions.length)); setLoading(false);
         } else { fetchQuestions(); }
     }, [testId, activeSession?.id, router]);
 
@@ -1225,7 +1222,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 examTitle={examTitle}
                 positiveMarks={marking.positive}
                 negativeDeduction={marking.negative}
-                durationMinutes={Math.round(questions.length * 1.2)}
+                durationMinutes={Math.round(testDurationSeconds(activeSession?.config, questions.length) / 60)}
             />
 
             <FullPaperModal

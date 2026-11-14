@@ -248,7 +248,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 1px;
-  min-height: 40px;
+  min-height: 44px;
   padding: 8px 14px;
   font: inherit;
   font-size: 13.5px;
@@ -349,7 +349,7 @@
 }
 .xd-seg button {
   flex: 1 1 auto;
-  min-height: 36px;
+  min-height: 44px;
   padding: 6px 14px;
   font: inherit;
   font-size: 13.5px;
@@ -374,7 +374,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  min-height: 40px;
+  min-height: 44px;
   padding: 0 4px 0 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -422,6 +422,7 @@
 }
 .xd-pool span { font-size: 13.5px; color: var(--text-secondary); }
 .xd-pool[data-empty] strong { color: var(--accent-rose); }
+.xd-pool-error { font-size: 13.5px; line-height: 1.45; color: var(--danger-text); }
 
 .xd-skel {
   display: inline-block;
@@ -534,7 +535,7 @@
 .xd-info-h3 span { font-size: 14px; font-weight: 500; color: var(--text-muted); }
 .xd-info-p {
   margin: 0 0 14px;
-  max-width: 70ch;
+  max-width: 38rem; /* ~75 characters at 15px */
   font-size: 15px;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -569,7 +570,15 @@
 .xd-stage + .xd-stage { margin-top: 8px; }
 
 /* Data tables */
-.xd-table-wrap { overflow-x: auto; margin: 0 0 4px; -webkit-overflow-scrolling: touch; }
+.xd-table-wrap { overflow-x: auto; max-width: 100%; margin: 0 0 4px; -webkit-overflow-scrolling: touch; }
+.xd-info { min-width: 0; }
+.xd-narrow-inline { display: none; }
+@media (max-width: 560px) {
+  /* Every KEA paper is 120 minutes and the post's count is above: keep date, paper and the action */
+  .xd-table .xd-wide { display: none; }
+  .xd-wide-inline { display: none; }
+  .xd-narrow-inline { display: inline; }
+}
 .xd-table {
   width: 100%;
   border-collapse: collapse;
@@ -612,6 +621,15 @@
   cursor: pointer;
 }
 .xd-text-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.xd-table .xd-act { text-align: right; white-space: nowrap; padding-top: 0; padding-bottom: 0; vertical-align: middle; }
+.xd-table .xd-act .xd-text-link { margin: 0; font-size: 13.5px; }
+
+/* FAQs inside an info panel: rules between questions, not cards inside a card */
+.xd-info .xd-faq { border: none; border-radius: 0; background: none; border-top: 1px solid var(--border); }
+.xd-info .xd-faq:last-child { border-bottom: 1px solid var(--border); }
+.xd-info .xd-faq + .xd-faq { margin-top: 0; }
+.xd-info .xd-faq summary { padding: 14px 0; min-height: 44px; border-radius: 0; }
+.xd-info .xd-faq p { padding: 0 0 16px; }
 
 .xd-faq {
   border: 1px solid var(--border);

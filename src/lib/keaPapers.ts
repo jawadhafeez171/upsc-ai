@@ -7,16 +7,23 @@ export type KeaFamily = 'fda-sda' | 'group-posts' | 'leg-council' | 'police' | '
 
 export type KeaPaper = { code: string; family: KeaFamily; label: string; date: string; year: number; qs: number };
 
-export const KEA_FAMILIES: { key: KeaFamily; label: string; hint: string }[] = [
-    { key: 'fda-sda', label: 'FDA & SDA', hint: 'First and Second Division Assistant' },
-    { key: 'group-posts', label: 'Group A, B & C posts', hint: 'Departments, boards and corporations' },
-    { key: 'police', label: 'Police', hint: 'Civil PC, KSRP/KSISF/IRB PC and PSI' },
-    { key: 'vao', label: 'VAO & Compulsory Kannada', hint: 'Village Administrative Officer' },
-    { key: 'leg-council', label: 'Legislative Council', hint: 'Council Secretariat posts' },
-    { key: 'engineering', label: 'Engineering', hint: 'AE and JE posts' },
-    { key: 'coaching', label: 'Free coaching entrance', hint: 'SWD, BCWD, minority and KEA coaching' },
-    { key: 'kset', label: 'KSET', hint: 'State Eligibility Test, Paper 1' },
+export const KEA_FAMILIES: { key: KeaFamily; label: string; kn: string; hint: string }[] = [
+    { key: 'fda-sda', label: 'FDA & SDA', kn: 'ಪ್ರಥಮ ಮತ್ತು ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕ', hint: 'First and Second Division Assistant' },
+    { key: 'group-posts', label: 'Other departments & corporations', kn: 'ಇತರ ಇಲಾಖೆಗಳು ಮತ್ತು ನಿಗಮಗಳು', hint: 'Group A, B and C posts in departments, boards and corporations' },
+    { key: 'police', label: 'Police', kn: 'ಪೊಲೀಸ್', hint: 'Civil PC, KSRP/KSISF/IRB PC and PSI' },
+    { key: 'vao', label: 'VAO & Compulsory Kannada', kn: 'ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ ಮತ್ತು ಕಡ್ಡಾಯ ಕನ್ನಡ', hint: 'Village Administrative Officer' },
+    { key: 'leg-council', label: 'Legislative Council', kn: 'ವಿಧಾನ ಪರಿಷತ್ತು', hint: 'Council Secretariat posts' },
+    { key: 'engineering', label: 'Engineering', kn: 'ಎಂಜಿನಿಯರಿಂಗ್', hint: 'AE and JE posts' },
+    { key: 'coaching', label: 'Free coaching entrance', kn: 'ಉಚಿತ ತರಬೇತಿ ಪ್ರವೇಶ ಪರೀಕ್ಷೆ', hint: 'SWD, BCWD, minority and KEA coaching' },
+    { key: 'kset', label: 'KSET', kn: 'ಕೆ-ಸೆಟ್', hint: 'State Eligibility Test, Paper 1' },
 ];
+
+/** Post name in the reader's language. */
+export const keaFamilyName = (key: string, lang: string) => {
+    if (key === 'all') return lang === 'kn' ? 'ಎಲ್ಲಾ ಹುದ್ದೆಗಳು' : 'All posts';
+    const f = KEA_FAMILIES.find((x) => x.key === key);
+    return f ? (lang === 'kn' ? f.kn : f.label) : key;
+};
 
 export const KEA_PAPERS: KeaPaper[] = [
     // FDA & SDA

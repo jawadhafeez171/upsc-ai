@@ -45,8 +45,8 @@ export interface ExamInfo {
     // Allocated Services & Cadres
     allocatedServices?: AllocatedService[];
     
-    // Career & Job Role
-    jobRole: {
+    // Career & Job Role (absent where it varies by post and isn't sourced, e.g. the KEA umbrella)
+    jobRole?: {
         designation: string;
         designation_kn?: string;
         cadre: string;
@@ -65,7 +65,7 @@ export interface ExamInfo {
     };
 
     // Eligibility & Qualifications
-    eligibility: {
+    eligibility?: {
         ageLimit: {
             general: string;
             obc?: string;
@@ -83,7 +83,7 @@ export interface ExamInfo {
     stages: ExamStageDetail[];
 
     // Key Syllabus Focus Areas
-    syllabusFocus: {
+    syllabusFocus?: {
         pillarName: string;
         weightage: 'High' | 'Very High' | 'Medium' | 'Qualifying';
         topics: string[];
@@ -503,93 +503,8 @@ export const EXAM_DETAILS: Record<string, ExamInfo> = {
         tagline_kn: 'ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಪ್ರಥಮ & ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕರು, ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ, ಪೊಲೀಸ್ ಹಾಗೂ ನಿಗಮ-ಮಂಡಳಿಗಳ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳು.',
         category: 'karnataka',
         overview: 'The Karnataka Examinations Authority (KEA) conducts direct recruitment examinations for Karnataka government departments, boards and corporations. This archive holds 64 of its papers from 2023 to 2026, 6,364 questions in all, each in English and Kannada with explanations in both.',
-        jobRole: {
-            designation: 'Group B & Group C Officers / Technical & Administrative Cadres',
-            cadre: 'Group B & Group C',
-            department: 'Various Karnataka Government Departments, Boards & Corporations',
-            keyResponsibilities: [
-                'State administrative execution and public service delivery across Karnataka.',
-                'Revenue, policing, regulatory compliance, and local governance operations.',
-                'Technical execution in engineering, urban water supply (BWSSB), power, and transport corporations.',
-                'Implementation of Karnataka state welfare schemes, Sakala, and citizen charter services.'
-            ],
-            careerProgression: [
-                'Entry Level Group C / Group B ➔ Senior Assistant / Section Officer',
-                'Section Officer ➔ Assistant Secretary / Assistant Commissioner',
-                'Deputy Director / Joint Director Cadre Progression'
-            ],
-            postingLocations: 'Districts and Taluks across Karnataka (HK & Non-HK / RPC regions).',
-            payScale: {
-                level: 'Group B & C Pay Scales: ₹21,400 to ₹83,900',
-                basicPayRange: '₹21,400 – ₹83,900',
-                approxMonthlyGross: '₹32,000 – ₹1,05,000+ (plus DA, HRA, CCA, Medical allowances)',
-                perks: ['NPS / State Pension System', 'Karnataka Arogya Sanjeevini (KASS)', 'State Government Travel Allowances']
-            }
-        },
-        eligibility: {
-            ageLimit: {
-                general: '18 to 35 years',
-                obc_2a_2b_3a_3b: '18 to 38 years (2A, 2B, 3A, 3B)',
-                sc_st_cat1: '18 to 40 years (SC, ST, Category-1)'
-            },
-            educationalQualification: 'Degree / 2nd PUC / Diploma / Engineering Degree depending on specific post notification.'
-        },
-        stages: [
-            {
-                stageNumber: 1,
-                stageName: 'Competitive Written Examination (Paper 1)',
-                mode: 'Objective (CBT/OMR)',
-                totalMarks: 100,
-                durationMinutes: 120,
-                description: 'Paper 1: General Knowledge, General Studies, Constitution, History, Karnataka Heritage & Mental Ability.',
-                papers: [
-                    {
-                        paperName: 'Paper 1: General Knowledge (ಸಾಮಾನ್ಯ ಜ್ಞಾನ)',
-                        questionsCount: 100,
-                        marks: 100,
-                        durationMinutes: 120,
-                        negativeMarking: '0.25 (1/4th)',
-                        subjects: [
-                            'History of India & Karnataka',
-                            'Indian Polity & Constitution',
-                            'General Science & Technology',
-                            'Karnataka & Indian Geography',
-                            'Indian Economy & Karnataka Schemes',
-                            'General Mental Ability & Reasoning',
-                            'Current Affairs'
-                        ]
-                    }
-                ]
-            },
-            {
-                stageNumber: 2,
-                stageName: 'Communication / Domain Paper (Paper 2)',
-                mode: 'Objective (CBT/OMR)',
-                totalMarks: 100,
-                durationMinutes: 120,
-                description: 'Paper 2: General Kannada, General English and Computer Literacy (or specific technical subject paper).',
-                papers: [
-                    {
-                        paperName: 'Paper 2: Communication / Specific Paper',
-                        questionsCount: 100,
-                        marks: 100,
-                        durationMinutes: 120,
-                        negativeMarking: '0.25 (1/4th)',
-                        subjects: [
-                            'General Kannada Grammar & Literature (35 Marks)',
-                            'General English Grammar & Vocabulary (35 Marks)',
-                            'Computer Knowledge & Basics (30 Marks)'
-                        ]
-                    }
-                ]
-            }
-        ],
-        syllabusFocus: [
-            { pillarName: 'Karnataka Governance & Heritage', weightage: 'Very High', topics: ['Kadamba, Chalukya, Rashtrakuta & Vijayanagara History', 'Mysore Kingdom & Unification', 'Article 371J (Kalyana-Karnataka)', 'Karnataka Lokayukta & Sakala'] },
-            { pillarName: 'Communication Paper Mastery', weightage: 'Very High', topics: ['Kannada Sandhi, Samasa, Tatsama-Tadbhava', 'English Error Spotting & Idioms', 'Computer Memory, MS Office, Internet & Cybersecurity'] },
-            { pillarName: 'Indian Constitution & Polity', weightage: 'High', topics: ['Fundamental Rights & DPSP', 'State Executive & Governor', 'Local Bodies (73rd/74th Amendments)', 'Panchayat Raj & Municipalities'] },
-            { pillarName: 'Mental Ability & Quantitative Aptitude', weightage: 'High', topics: ['Number Series & Coding-Decoding', 'Data Interpretation & Graphs', 'Arithmetic Progression & Percentages', 'Logical Puzzles'] }
-        ],
+        // Pattern, posts and subject shares are computed from the paper catalogue (src/lib/keaPapers.ts).
+        stages: [],
         faqs: [
             { question: 'Which KEA exams are covered?', answer: 'First and Second Division Assistant; Village Administrative Officer and Compulsory Kannada; Civil and KSRP/KSISF/IRB police constables and Police Sub-Inspector; Legislative Council Secretariat posts; posts in departments, boards and corporations such as GTTC, BMTC, KKRTC, KSSCL and the Range Forest Officer; Assistant and Junior Engineers; free coaching entrance tests; and KSET Paper 1. The Exam pattern tab lists every paper by post.' },
             { question: 'Is there negative marking?', answer: 'Yes. KEA recruitment papers carry 1 mark a question and deduct a quarter mark for each wrong answer; unanswered questions score zero. KSET Paper 1 is the exception: 2 marks a question and no negative marking. Practice tests here are scored the same way.' },
