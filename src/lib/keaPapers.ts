@@ -168,3 +168,44 @@ export const keaSubjectNames = (label: string) => KEA_SUBJECTS.find((g) => g.lab
 
 /** Subject group for a table subject name (null for untagged questions). */
 export const keaSubjectOf = (name: string | null) => (name ? KEA_SUBJECTS.find((g) => g.names.includes(name)) ?? null : null);
+
+const KN_MONTHS: Record<string, string> = {
+    Jan: 'ಜನವರಿ', Feb: 'ಫೆಬ್ರವರಿ', Mar: 'ಮಾರ್ಚ್', Apr: 'ಏಪ್ರಿಲ್', May: 'ಮೇ', Jun: 'ಜೂನ್',
+    Jul: 'ಜುಲೈ', Aug: 'ಆಗಸ್ಟ್', Sep: 'ಸೆಪ್ಟೆಂಬರ್', Oct: 'ಅಕ್ಟೋಬರ್', Nov: 'ನವೆಂಬರ್', Dec: 'ಡಿಸೆಂಬರ್',
+};
+/** "22 Feb 2026" → "22 ಫೆಬ್ರವರಿ 2026" in Kannada. */
+export const keaDate = (date: string, lang: string) => (lang === 'kn' ? date.replace(/\b([A-Z][a-z]{2})\b/, (m) => KN_MONTHS[m] ?? m) : date);
+
+// Common words in paper names, in Kannada. Proper names (KRIDL, BMTC, GTTC…) stay as they are.
+const KN_TERMS: [RegExp, string][] = [
+    [/Paper 2 Kannada, English & Computer/g, 'ಪತ್ರಿಕೆ 2 ಕನ್ನಡ, ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಗಣಕಯಂತ್ರ'],
+    [/Kannada, English & Computer/g, 'ಕನ್ನಡ, ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಗಣಕಯಂತ್ರ'],
+    [/Kannada & English/g, 'ಕನ್ನಡ ಮತ್ತು ಇಂಗ್ಲಿಷ್'],
+    [/General Knowledge & Aptitude/g, 'ಸಾಮಾನ್ಯ ಜ್ಞಾನ ಮತ್ತು ಅಭಿರುಚಿ'],
+    [/General Knowledge/g, 'ಸಾಮಾನ್ಯ ಜ್ಞಾನ'],
+    [/General Studies/g, 'ಸಾಮಾನ್ಯ ಅಧ್ಯಯನ'],
+    [/General Paper/g, 'ಸಾಮಾನ್ಯ ಪತ್ರಿಕೆ'],
+    [/Compulsory Kannada/g, 'ಕಡ್ಡಾಯ ಕನ್ನಡ'],
+    [/Communication/g, 'ಸಂವಹನ'],
+    [/Labour Law/g, 'ಕಾರ್ಮಿಕ ಕಾನೂನು'],
+    [/Paper (\d)/g, 'ಪತ್ರಿಕೆ $1'],
+    [/Specific/g, 'ನಿರ್ದಿಷ್ಟ'],
+    [/\(Kalyana Karnataka\)/g, '(ಕಲ್ಯಾಣ ಕರ್ನಾಟಕ)'],
+    [/\(Non-HK\)/g, '(ಉಳಿಕೆ ಮೂಲ ವೃಂದ)'],
+    [/\(2nd sitting\)/g, '(ಎರಡನೇ ಬಾರಿ)'],
+    [/\(post not stated\)/g, '(ಹುದ್ದೆ ತಿಳಿಸಿಲ್ಲ)'],
+    [/\bFDA\b/g, 'ಪ್ರಥಮ ದರ್ಜೆ ಸಹಾಯಕ'],
+    [/\bSDA\b/g, 'ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕ'],
+    [/Civil Police Constable/g, 'ಸಿವಿಲ್ ಪೊಲೀಸ್ ಕಾನ್‌ಸ್ಟೇಬಲ್'],
+    [/Police Constable/g, 'ಪೊಲೀಸ್ ಕಾನ್‌ಸ್ಟೇಬಲ್'],
+    [/Police Sub-Inspector/g, 'ಪೊಲೀಸ್ ಸಬ್-ಇನ್‌ಸ್ಪೆಕ್ಟರ್'],
+    [/Assistant Engineer/g, 'ಸಹಾಯಕ ಎಂಜಿನಿಯರ್'],
+    [/Junior Engineer/g, 'ಕಿರಿಯ ಎಂಜಿನಿಯರ್'],
+    [/Range Forest Officer/g, 'ವಲಯ ಅರಣ್ಯಾಧಿಕಾರಿ'],
+    [/\bVAO\b/g, 'ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ'],
+];
+/** Paper name in the reader's language (common terms translated; proper names kept). */
+export function keaPaperName(label: string, lang: string) {
+    if (lang !== 'kn') return label;
+    return KN_TERMS.reduce((s, [re, kn]) => s.replace(re, kn), label);
+}

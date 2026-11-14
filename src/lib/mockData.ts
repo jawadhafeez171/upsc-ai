@@ -71,7 +71,7 @@ export const EXAMS: Exam[] = [
         name_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ (KEA)',
         category: 'karnataka',
         description: 'Past papers from KEA recruitment exams, 2023–2026: FDA and SDA, VAO, police, Legislative Council, department and corporation posts, engineering, coaching entrance and KSET.',
-        description_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ — ಪ್ರಥಮ & ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕರು, ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ, ಪೊಲೀಸ್ ಹಾಗೂ ಇತರ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳು',
+        description_kn: 'KEA ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳ ಹಿಂದಿನ ಪತ್ರಿಕೆಗಳು, 2023–2026: ಪ್ರಥಮ ಮತ್ತು ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕ, ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ, ಪೊಲೀಸ್, ವಿಧಾನ ಪರಿಷತ್ತು, ಇಲಾಖೆ ಮತ್ತು ನಿಗಮಗಳ ಹುದ್ದೆಗಳು, ಎಂಜಿನಿಯರಿಂಗ್, ಉಚಿತ ತರಬೇತಿ ಪ್ರವೇಶ ಮತ್ತು ಕೆ-ಸೆಟ್.',
         languages: ['en', 'kn'],
         negative_marking: 0.25,
         subjects: [

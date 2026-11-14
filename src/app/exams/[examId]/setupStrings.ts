@@ -103,7 +103,7 @@ const kn: typeof en = {
     negativeShort: (neg: string) => `ಪ್ರತಿ ತಪ್ಪಿಗೆ −${neg}`,
     noNegative: (pos: string) => `ಋಣಾತ್ಮಕ ಅಂಕಗಳಿಲ್ಲ. ಪ್ರತಿ ಪ್ರಶ್ನೆಗೆ ${pos} ಅಂಕಗಳು.`,
     noNegativeShort: 'ಋಣಾತ್ಮಕ ಅಂಕಗಳಿಲ್ಲ',
-    start: (n: number) => `${n} ಪ್ರಶ್ನೆಗಳ ಪರೀಕ್ಷೆ ಪ್ರಾರಂಭಿಸಿ`,
+    start: (n: number) => `ಪ್ರಾರಂಭಿಸಿ · ${n} ಪ್ರಶ್ನೆಗಳು`,
     startShort: 'ಪ್ರಾರಂಭಿಸಿ',
     noMatch: 'ಯಾವುದೇ ಪ್ರಶ್ನೆಗಳು ಹೊಂದುವುದಿಲ್ಲ',
     changeFilters: 'ಬೇರೆ ಹುದ್ದೆ, ವಿಷಯ ಅಥವಾ ವರ್ಷ ಆರಿಸಿ',

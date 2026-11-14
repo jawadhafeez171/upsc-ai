@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAppStore } from '@/lib/store';
 import { BookOpen, Newspaper, Trophy, LogIn, LogOut, Menu, X, Sun, Moon, LayoutDashboard, Flame } from 'lucide-react';
 import { Language } from '@/types';
@@ -27,6 +27,8 @@ export default function Navbar() {
     const router = useRouter();
     const { user, logout, language, setLanguage } = useAppStore();
     const [menuOpen, setMenuOpen] = useState(false);
+    // Screen readers pronounce the page in the language it's shown in (Kannada / Hindi / English).
+    useEffect(() => { document.documentElement.lang = language || 'en'; }, [language]);
     const { theme, toggleTheme } = useTheme();
 
     // Hide general navbar on CBT testing screens

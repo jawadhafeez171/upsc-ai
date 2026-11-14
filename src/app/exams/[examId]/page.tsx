@@ -8,12 +8,12 @@ import { useAppStore } from '@/lib/store';
 import { EXAMS } from '@/lib/mockData';
 import { getMarkingScheme, formatMarks, testDurationSeconds } from '@/lib/marking';
 import { hasExamMindMap } from '@/lib/mindMapIds';
-import { KEA_FAMILIES, KEA_PAPERS, keaPaperCodes, keaFamilyStats, keaPaperTime, keaSubjectNames, keaSubjectOf, keaFamilyName, isKeaFamily, type KeaPaper } from '@/lib/keaPapers';
+import { KEA_FAMILIES, KEA_PAPERS, keaPaperCodes, keaFamilyStats, keaPaperTime, keaSubjectNames, keaSubjectOf, keaFamilyName, isKeaFamily, keaPaperName, keaDate, type KeaPaper } from '@/lib/keaPapers';
 import { setupStrings } from './setupStrings';
 import { getExamInfo, ExamInfo } from '@/data/examDetails';
 import { TestConfig, Language, TestMode } from '@/types';
 import { 
-    ArrowRight, AlertTriangle, BookOpen, Zap, 
+    ArrowRight, AlertTriangle, Info, BookOpen, Zap, 
     Briefcase,
     Compass, ArrowLeft, Check, CalendarDays, Target, Shuffle
 } from 'lucide-react';
@@ -55,11 +55,11 @@ function Chip({ selected, onSelect, meta, muted, disabled, children }: {
     );
 }
 
-function OptionGroup({ label, hint, children }: { label: string; hint?: string; children: ReactNode }) {
+function OptionGroup({ label, hint, hideLabel, children }: { label: string; hint?: string; hideLabel?: boolean; children: ReactNode }) {
     const id = useId();
     return (
         <div className="xd-field">
-            <span id={id} className="xd-label">
+            <span id={id} className={hideLabel ? 'sr-only' : 'xd-label'}>
                 {label}{hint && <span className="xd-label-hint">{hint}</span>}
             </span>
             <div className="xd-chips" role="group" aria-labelledby={id}>{children}</div>
@@ -101,7 +101,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
     // Presets from links such as ?mode=subject&subject=Polity (syllabus map practice links)
     const presetMode = searchParams.get('mode');
-    const [mode, setMode] = useState<TestMode>(presetMode === 'subject' || presetMode === 'yearwise' ? presetMode : 'full');
+    // KEA opens on a real past paper (the closest thing to the exam hall); other exams on a mock.
+    const defaultMode: TestMode = examId === 'kea' || examId.startsWith('kea-') ? 'yearwise' : 'full';
+    const [mode, setMode] = useState<TestMode>(presetMode === 'subject' || presetMode === 'yearwise' || presetMode === 'full' ? presetMode : defaultMode);
     const [subject, setSubject] = useState(presetMode === 'subject' ? (searchParams.get('subject') ?? '') : '');
     const [difficulty, setDifficulty] = useState<'mixed' | 'easy' | 'medium' | 'hard'>('mixed');
     const [year, setYear] = useState<number | 'all'>('all');
@@ -125,26 +127,40 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     const keaSinglePaper = mode === 'yearwise' ? (keaVisiblePapers.find(p => p.code === keaPaperSel) ?? keaVisiblePapers[0]) : undefined;
     const keaCode = mode === 'yearwise' ? (keaSinglePaper?.code ?? 'none') : keaFamily;
     // Subjects as tagged in the chosen post's papers (the exam's hand-written subject list missed ~40% of FDA & SDA).
-    const [keaSubjects, setKeaSubjects] = useState<{ label: string; kn: string; count: number }[] | null>(null);
+    const [keaSubjects, setKeaSubjects] = useState<{ label: string; kn: string; count: number; gen: number; lng: number }[] | null>(null);
     useEffect(() => {
         if (!(examId === 'kea' || examId.startsWith('kea-'))) return;
         let live = true;
         (async () => {
             const codes = keaPaperCodes(keaFamily);
-            const tally = new Map<string, { label: string; kn: string; count: number }>();
+            // Pass 1: every question's subject group, by paper. Pass 2: a paper is a language paper when most of its
+            // questions are communication/language questions (paper names alone miss e.g. "VAO · Paper 2").
+            const LANG_GROUPS = new Set(['Communication: Kannada, English & Computer', 'Language, grammar & comprehension']);
+            const rows: { group: { label: string; kn: string }; code: string }[] = [];
             for (let from = 0; ; from += 1000) {
-                let q = supabase.from('kea_questions').select('subject');
+                let q = supabase.from('kea_questions').select('subject, paper_code');
                 if (codes) q = q.in('paper_code', codes);
                 const { data, error } = await q.order('id').range(from, from + 999);
                 if (error || !data) break;
-                for (const row of data as { subject: string | null }[]) {
+                for (const row of data as { subject: string | null; paper_code: string }[]) {
                     const g = keaSubjectOf(row.subject);
-                    if (!g) continue;
-                    const t = tally.get(g.label) ?? { label: g.label, kn: g.kn, count: 0 };
-                    t.count += 1;
-                    tally.set(g.label, t);
+                    if (g) rows.push({ group: g, code: row.paper_code });
                 }
                 if (data.length < 1000) break;
+            }
+            const perPaper = new Map<string, { lang: number; all: number }>();
+            for (const r of rows) {
+                const c = perPaper.get(r.code) ?? { lang: 0, all: 0 };
+                c.all += 1; if (LANG_GROUPS.has(r.group.label)) c.lang += 1;
+                perPaper.set(r.code, c);
+            }
+            const tally = new Map<string, { label: string; kn: string; count: number; gen: number; lng: number }>();
+            for (const r of rows) {
+                const c = perPaper.get(r.code)!;
+                const t = tally.get(r.group.label) ?? { label: r.group.label, kn: r.group.kn, count: 0, gen: 0, lng: 0 };
+                t.count += 1;
+                if (c.lang / c.all > 0.5) t.lng += 1; else t.gen += 1;
+                tally.set(r.group.label, t);
             }
             if (live) setKeaSubjects([...tally.values()].sort((a, b) => b.count - a.count));
         })();
@@ -449,6 +465,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         setSubject(keaSubjects[0].label);
     }
     const selectKeaFamily = (f: string) => {
+        if (f !== keaFamily) setKeaSubjects(null); // don't show the previous post's counts while these load
         setKeaFamily(f);
         setKeaPaperSel('');
         if (year !== 'all' && !KEA_PAPERS.some(p => (f === 'all' || p.family === f) && p.year === year)) setYear('all');
@@ -460,8 +477,13 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         const p = KEA_PAPERS.find(x => x.code === code);
         if (!p) return;
         setKeaFamily(p.family); setKeaPaperSel(code); setMode('yearwise'); setSubject(''); setActiveTab('practice');
-        writeUrl({ tab: null, post: p.family === 'fda-sda' ? null : p.family, mode: 'yearwise', sit: code });
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        writeUrl({ tab: null, post: p.family === 'fda-sda' ? null : p.family, mode: null, sit: code });
+        // After the Practice tab renders: bring the chosen paper into view and give it focus.
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            const el = document.querySelector<HTMLElement>('.xd-paper[aria-pressed="true"]');
+            el?.scrollIntoView({ block: 'center' });
+            el?.focus({ preventScroll: true });
+        }));
     };
     const keaYears = [...new Set(keaFamilyPapers.map(p => p.year))].sort((x, y) => y - x);
     const showPaperYear = examId !== 'ksp-pc' && !(isKea && keaYears.length === 0) && (mode === 'yearwise' || ['upsc-cse', 'kpsc-kas', 'upsc-capf', 'upsc-epfo', 'ksp-psi'].includes(examId) || isKea);
@@ -557,7 +579,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
         }
     };
 
-    const pickMode = (m: TestMode) => { setMode(m); if (isKea) writeUrl({ mode: m === 'full' ? null : m, subject: null }); };
+    const pickMode = (m: TestMode) => { setMode(m); if (isKea) writeUrl({ mode: m === defaultMode ? null : m, subject: null }); };
     const modes = [
         { id: 'full' as TestMode, title: L.modes.full[0], desc: L.modes.full[1], Icon: Shuffle, onSelect: () => { pickMode('full'); setSubject(''); } },
         { id: 'yearwise' as TestMode, title: L.modes.yearwise[0], desc: L.modes.yearwise[1], Icon: CalendarDays, onSelect: () => { pickMode('yearwise'); setSubject(''); if (examId === 'kpsc-kas' && year === 'all') setYear(2024); } },
@@ -587,9 +609,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     // Summary keys stay English internally; the label shown is translated at render.
     if (examId === 'kea') summaryRows.push(['Post', paperOptions.find(o => o.selected)?.label || '—']);
     else if ((showPaperYear || examId === 'ksp-pc') && paperOptions.length > 0) summaryRows.push(['Paper', paperOptions.find(o => o.selected)?.label || '—']);
-    if (keaSinglePaper) summaryRows.push(['Paper', `${keaSinglePaper.label} (${keaSinglePaper.date})`]);
+    if (keaSinglePaper) summaryRows.push(['Paper', `${keaPaperName(keaSinglePaper.label, language)} (${keaDate(keaSinglePaper.date, language)})`]);
     if (examId === 'ksp-psi') summaryRows.push(['Paper', 'Paper 2 · General Studies']);
-    if (showPaperYear && !keaWholePaper) {
+    if (showPaperYear && !keaWholePaper && !(isKea && keaYears.length < 2)) {
         const monthLabel = examId === 'kpsc-kas' && year === 2024 && month !== 'all' ? (month === 'august' ? ' · August' : ' · December') : '';
         summaryRows.push(['Year', year === 'all' ? `${L.allYears} (${allYearsRange})` : `${year}${monthLabel}`]);
     }
@@ -598,6 +620,12 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
     summaryRows.push(['Language', langNames[testLang] || testLang]);
     summaryRows.push(['Duration', finalCount > 0 ? L.min(durationMin, keaWholePaper) : '—']);
 
+    // Mobile bar: "Paper 1 General Knowledge" first (what tells papers apart), the post beneath.
+    const barPaper = (() => {
+        if (!keaSinglePaper) return { name: '', post: '' };
+        const [post, ...rest] = keaSinglePaper.label.split(' · ');
+        return rest.length ? { name: keaPaperName(rest.join(' · '), language), post: keaPaperName(post, language) } : { name: keaPaperName(post, language), post: '' };
+    })();
     const startLabel = countLoading ? L.checking : countError ? L.retry : finalCount > 0 ? L.start(finalCount) : L.noMatch;
 
     const tabs = [
@@ -694,7 +722,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                             {(showPaperYear || examId === 'ksp-pc') && !(isKea && mode !== 'yearwise' && keaYears.length < 2) && (
                                 <section className="xd-section" aria-labelledby="xd-paper-h">
                                     <h2 id="xd-paper-h" className="xd-section-title">
-                                        {examId === 'ksp-pc' ? L.paper : isKea ? (mode === 'yearwise' ? L.paper : L.year) : paperOptions.length === 0 ? L.year : L.paperAndYear}
+                                        {examId === 'ksp-pc' ? L.paper : isKea ? (mode === 'yearwise' ? L.paperToSit : L.year) : paperOptions.length === 0 ? L.year : L.paperAndYear}
                                     </h2>
                                     <p className="xd-section-sub">
                                         {examId === 'ksp-pc'
@@ -713,7 +741,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                     )}
 
                                     {showPaperYear && !(isKea && mode === 'yearwise') && (
-                                        <OptionGroup label={L.year}>
+                                        <OptionGroup label={L.year} hideLabel={isKea}>
                                             <Chip selected={year === 'all'} onSelect={() => { setYear('all'); setMonth('all'); }} meta={allYearsRange}>{L.allYears}</Chip>
                                             {yearList.map(yr => (
                                                 <Chip
@@ -731,15 +759,15 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
 
                                     {isKea && mode === 'yearwise' && (
                                         <div className="xd-field">
-                                            <span id="xd-paper-l" className="xd-label">{L.paperToSit}<span className="xd-label-hint">{L.papersNewest(keaVisiblePapers.length)}</span></span>
+                                            <span id="xd-paper-l" className="xd-label xd-label-quiet">{L.papersNewest(keaVisiblePapers.length)}</span>
                                             {keaVisiblePapers.length === 0 && <p className="xd-section-sub">{L.noPapers}</p>}
                                             <div className="xd-sittings" role="group" aria-labelledby="xd-paper-l">
                                                 {keaSittings(keaVisiblePapers).map(g => (
                                                     <div key={g.key} className="xd-sitting">
-                                                        <p className="xd-sitting-h">{g.date}{g.post && <span> · {g.post}</span>}</p>
+                                                        <p className="xd-sitting-h">{keaDate(g.date, language)}{g.post && <span> · {keaPaperName(g.post, language)}</span>}</p>
                                                         {g.papers.map(({ paper: p, name }) => (
                                                             <button key={p.code} type="button" className="xd-paper" aria-pressed={keaSinglePaper?.code === p.code} onClick={() => selectKeaPaper(p.code)}>
-                                                                <span className="xd-paper-name">{name}</span>
+                                                                <span className="xd-paper-name">{keaPaperName(name, language)}</span>
                                                                 <span className="xd-paper-meta">{L.questions(p.qs)}</span>
                                                             </button>
                                                         ))}
@@ -846,7 +874,7 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                                 ))}
                             </dl>
                             <p className="xd-rules">
-                                <AlertTriangle size={15} />
+                                {marking.negative > 0 ? <AlertTriangle size={15} /> : <Info size={15} className="xd-rules-info" />}
                                 <span>
                                     {markingText}
                                 </span>
@@ -860,8 +888,9 @@ export default function ExamDetailPage({ params }: { params: Promise<{ examId: s
                         {/* Mobile action bar */}
                         <div className="xd-bar">
                             <div className="xd-bar-info">
-                                <strong>{countLoading ? L.checking : countError ? L.countFailed : keaSinglePaper ? keaSinglePaper.label : L.questions(finalCount)}</strong>
-                                {!countLoading && !countError && finalCount > 0 && `${keaSinglePaper ? `${keaSinglePaper.date} · ` : ''}${L.min(durationMin, keaWholePaper)} · ${markingShort}`}
+                                <strong>{countLoading ? L.checking : countError ? L.countFailed : keaSinglePaper ? barPaper.name : L.questions(finalCount)}</strong>
+                                {!countLoading && !countError && keaSinglePaper && <span className="xd-bar-line">{keaDate(keaSinglePaper.date, language)}{barPaper.post && ` · ${barPaper.post}`}</span>}
+                                {!countLoading && !countError && finalCount > 0 && <span className="xd-bar-line">{L.min(durationMin, keaWholePaper)} · {markingShort}</span>}
                                 {!countLoading && !countError && finalCount === 0 && L.changeFilters}
                             </div>
                             <button type="button" className="xd-start" onClick={countError ? () => setCountNonce(n => n + 1) : handleStart} disabled={!countError && finalCount === 0}>

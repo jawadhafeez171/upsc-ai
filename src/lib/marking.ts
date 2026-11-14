@@ -28,5 +28,7 @@ export function formatMarks(n: number) {
 export function testDurationSeconds(cfg: { exam_id?: string; mode?: string; paper_code?: string } | undefined, questionCount: number) {
     const kea = cfg?.exam_id === 'kea' || cfg?.exam_id?.startsWith('kea-');
     if (kea && cfg?.mode === 'yearwise' && cfg.paper_code && cfg.paper_code.includes('__')) return 120 * 60;
+    // KSET Paper 1 is 50 questions in the same 120 minutes, so a KSET mock runs at that pace.
+    if (cfg?.exam_id === 'kea-kset' || (kea && /kset/i.test(cfg?.paper_code ?? ''))) return Math.round(questionCount * 144);
     return questionCount * (cfg?.exam_id === 'upsc-epfo' ? 60 : 72);
 }

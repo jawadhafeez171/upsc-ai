@@ -92,6 +92,8 @@ export interface ExamInfo {
     faqs: {
         question: string;
         answer: string;
+        question_kn?: string;
+        answer_kn?: string;
     }[];
 }
 
@@ -503,12 +505,13 @@ export const EXAM_DETAILS: Record<string, ExamInfo> = {
         tagline_kn: 'ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಪ್ರಥಮ & ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕರು, ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ, ಪೊಲೀಸ್ ಹಾಗೂ ನಿಗಮ-ಮಂಡಳಿಗಳ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳು.',
         category: 'karnataka',
         overview: 'The Karnataka Examinations Authority (KEA) conducts direct recruitment examinations for Karnataka government departments, boards and corporations. This archive holds 64 of its papers from 2023 to 2026, 6,364 questions in all, each in English and Kannada with explanations in both.',
+        overview_kn: 'ಕರ್ನಾಟಕ ಪರೀಕ್ಷಾ ಪ್ರಾಧಿಕಾರ (KEA) ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಇಲಾಖೆಗಳು, ಮಂಡಳಿಗಳು ಮತ್ತು ನಿಗಮಗಳಿಗೆ ನೇರ ನೇಮಕಾತಿ ಪರೀಕ್ಷೆಗಳನ್ನು ನಡೆಸುತ್ತದೆ. ಈ ಸಂಗ್ರಹದಲ್ಲಿ 2023ರಿಂದ 2026ರವರೆಗಿನ ಅದರ 64 ಪತ್ರಿಕೆಗಳು, ಒಟ್ಟು 6,364 ಪ್ರಶ್ನೆಗಳಿವೆ; ಪ್ರತಿಯೊಂದೂ ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿ, ಎರಡೂ ಭಾಷೆಗಳಲ್ಲಿ ವಿವರಣೆಯೊಂದಿಗೆ.',
         // Pattern, posts and subject shares are computed from the paper catalogue (src/lib/keaPapers.ts).
         stages: [],
         faqs: [
-            { question: 'Which KEA exams are covered?', answer: 'First and Second Division Assistant; Village Administrative Officer and Compulsory Kannada; Civil and KSRP/KSISF/IRB police constables and Police Sub-Inspector; Legislative Council Secretariat posts; posts in departments, boards and corporations such as GTTC, BMTC, KKRTC, KSSCL and the Range Forest Officer; Assistant and Junior Engineers; free coaching entrance tests; and KSET Paper 1. The Exam pattern tab lists every paper by post.' },
-            { question: 'Is there negative marking?', answer: 'Yes. KEA recruitment papers carry 1 mark a question and deduct a quarter mark for each wrong answer; unanswered questions score zero. KSET Paper 1 is the exception: 2 marks a question and no negative marking. Practice tests here are scored the same way.' },
-            { question: 'Can I practise in Kannada?', answer: 'Yes. Every question, its options and its explanation are available in English and Kannada. Choose the question language before you start; you can also switch during the test.' }
+            { question: 'Which KEA exams are covered?', answer: 'First and Second Division Assistant; Village Administrative Officer and Compulsory Kannada; Civil and KSRP/KSISF/IRB police constables and Police Sub-Inspector; Legislative Council Secretariat posts; posts in departments, boards and corporations such as GTTC, BMTC, KKRTC, KSSCL and the Range Forest Officer; Assistant and Junior Engineers; free coaching entrance tests; and KSET Paper 1. The Exam pattern tab lists every paper by post.', question_kn: 'ಯಾವ KEA ಪರೀಕ್ಷೆಗಳು ಇಲ್ಲಿವೆ?', answer_kn: 'ಪ್ರಥಮ ಮತ್ತು ದ್ವಿತೀಯ ದರ್ಜೆ ಸಹಾಯಕ; ಗ್ರಾಮ ಆಡಳಿತಾಧಿಕಾರಿ ಮತ್ತು ಕಡ್ಡಾಯ ಕನ್ನಡ; ಸಿವಿಲ್ ಮತ್ತು KSRP/KSISF/IRB ಪೊಲೀಸ್ ಕಾನ್‌ಸ್ಟೇಬಲ್ ಹಾಗೂ ಪೊಲೀಸ್ ಸಬ್-ಇನ್‌ಸ್ಪೆಕ್ಟರ್; ವಿಧಾನ ಪರಿಷತ್ತು ಸಚಿವಾಲಯದ ಹುದ್ದೆಗಳು; GTTC, BMTC, KKRTC, KSSCL ಮುಂತಾದ ಇಲಾಖೆ ಮತ್ತು ನಿಗಮಗಳ ಹುದ್ದೆಗಳು ಹಾಗೂ ವಲಯ ಅರಣ್ಯಾಧಿಕಾರಿ; ಸಹಾಯಕ ಮತ್ತು ಕಿರಿಯ ಎಂಜಿನಿಯರ್; ಉಚಿತ ತರಬೇತಿ ಪ್ರವೇಶ ಪರೀಕ್ಷೆಗಳು; ಮತ್ತು ಕೆ-ಸೆಟ್ ಪತ್ರಿಕೆ 1. ಪರೀಕ್ಷಾ ಮಾದರಿ ವಿಭಾಗದಲ್ಲಿ ಹುದ್ದೆವಾರು ಎಲ್ಲಾ ಪತ್ರಿಕೆಗಳಿವೆ.' },
+            { question: 'Is there negative marking?', answer: 'Yes. KEA recruitment papers carry 1 mark a question and deduct a quarter mark for each wrong answer; unanswered questions score zero. KSET Paper 1 is the exception: 2 marks a question and no negative marking. Practice tests here are scored the same way.', question_kn: 'ಋಣಾತ್ಮಕ ಅಂಕಗಳಿವೆಯೇ?', answer_kn: 'ಹೌದು. KEA ನೇಮಕಾತಿ ಪತ್ರಿಕೆಗಳಲ್ಲಿ ಪ್ರತಿ ಪ್ರಶ್ನೆಗೆ 1 ಅಂಕ; ಪ್ರತಿ ತಪ್ಪು ಉತ್ತರಕ್ಕೆ ಕಾಲು ಅಂಕ ಕಳೆಯಲಾಗುತ್ತದೆ; ಉತ್ತರಿಸದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಶೂನ್ಯ. ಕೆ-ಸೆಟ್ ಪತ್ರಿಕೆ 1 ಇದಕ್ಕೆ ಹೊರತು: ಪ್ರತಿ ಪ್ರಶ್ನೆಗೆ 2 ಅಂಕಗಳು, ಋಣಾತ್ಮಕ ಅಂಕಗಳಿಲ್ಲ. ಇಲ್ಲಿನ ಅಭ್ಯಾಸ ಪರೀಕ್ಷೆಗಳಿಗೂ ಇದೇ ರೀತಿ ಅಂಕ ನೀಡಲಾಗುತ್ತದೆ.' },
+            { question: 'Can I practise in Kannada?', answer: 'Yes. Every question, its options and its explanation are available in English and Kannada. Choose the question language before you start; you can also switch during the test.', question_kn: 'ಕನ್ನಡದಲ್ಲಿ ಅಭ್ಯಾಸ ಮಾಡಬಹುದೇ?', answer_kn: 'ಹೌದು. ಪ್ರತಿ ಪ್ರಶ್ನೆ, ಅದರ ಆಯ್ಕೆಗಳು ಮತ್ತು ವಿವರಣೆ ಇಂಗ್ಲಿಷ್ ಮತ್ತು ಕನ್ನಡದಲ್ಲಿ ಲಭ್ಯ. ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು ಪ್ರಶ್ನೆಗಳ ಭಾಷೆಯನ್ನು ಆರಿಸಿ; ಪರೀಕ್ಷೆಯ ನಡುವೆಯೂ ಬದಲಾಯಿಸಬಹುದು.' }
         ]
     },
 

@@ -128,6 +128,8 @@ export const useAppStore = create<AppState>()(
                 user: state.user,
                 language: state.language,
                 completedSessions: state.completedSessions,
+                // The test in progress, so a reload mid-paper resumes it (answers and the clock included).
+                activeSession: state.activeSession,
             }),
         }
     )

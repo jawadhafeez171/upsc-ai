@@ -1,7 +1,7 @@
 'use client';
 import { use, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useAppStore } from '@/lib/store';
+import { useAppStore, useStoreHydrated } from '@/lib/store';
 import { supabase } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
 import { Question } from '@/types';
@@ -104,6 +104,14 @@ function cleanPassageKey(rawPassage: string): string {
 }
 
 // Helper functions for question grouping and shuffle preservation
+/** Seconds left on a test, counted from when it started (at least 1, so the clock can expire normally). */
+function secondsLeft(session: { config?: any; started_at?: string }, questionCount: number) {
+    const total = testDurationSeconds(session.config, questionCount);
+    const started = session.started_at ? Date.parse(session.started_at) : NaN;
+    if (Number.isNaN(started)) return total;
+    return Math.max(1, Math.min(total, total - Math.floor((Date.now() - started) / 1000)));
+}
+
 function assignQuestionGroups(rawQuestions: any[]): any[] {
     const passageMap = new Map<string, { groupId: string; count: number; firstQNum: number }>();
 
@@ -189,6 +197,8 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const { testId } = use(params);
     const router = useRouter();
     const { activeSession, addCompletedSession, setActiveSession, user } = useAppStore();
+    // Saved tests come back from storage after the first render: don't treat "not loaded yet" as "no test".
+    const hydrated = useStoreHydrated();
 
     const [questions, setQuestions] = useState<Question[]>([]);
     const [answers, setAnswers] = useState<Record<string, { question_id: string; selected?: string; marked_for_review: boolean; is_correct?: boolean; time_spent: number }>>({});
@@ -216,13 +226,13 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
     const [timeUp, setTimeUp] = useState(false);
     const submittedRef = useRef(false);
 
+    const sessionLang = activeSession?.config?.language;
     useEffect(() => {
-        if (activeSession?.config?.language) {
-            setActiveLang(activeSession.config.language);
-        }
-    }, [activeSession]);
+        if (sessionLang) setActiveLang(sessionLang);
+    }, [sessionLang]);
 
     useEffect(() => {
+        if (!hydrated) return;
         if (!activeSession || activeSession.id !== testId) {
             if (testId === 'demo' || !activeSession) {
                 const fallbackSession: any = {
@@ -792,7 +802,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                     }
                 });
                 setQuestions(formattedQs);
-                setTimeLeft(testDurationSeconds(config, formattedQs.length));
+                setTimeLeft(secondsLeft(activeSession!, formattedQs.length));
                 setActiveSession({ ...activeSession!, questions: formattedQs });
             } else {
                 // Fallback to local QUESTIONS if remote database returns 0 matching rows
@@ -805,15 +815,25 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
                 }
                 const finalFallback = fallback.slice(0, config.question_count || 10);
                 setQuestions(finalFallback);
-                setTimeLeft(testDurationSeconds(config, finalFallback.length));
+                setTimeLeft(secondsLeft(activeSession!, finalFallback.length));
                 setActiveSession({ ...activeSession!, questions: finalFallback });
             }
             setLoading(false);
         }
+        if (activeSession.status === 'completed') { router.replace(`/results/${activeSession.id}`); return; }
         if (activeSession.questions && activeSession.questions.length > 0) {
-            setQuestions(activeSession.questions); setAnswers(activeSession.answers || {}); setTimeLeft(testDurationSeconds(activeSession.config, activeSession.questions.length)); setLoading(false);
+            // Resuming (e.g. after a reload): same questions, saved answers, the clock where it was.
+            setQuestions(activeSession.questions); setAnswers(activeSession.answers || {}); setTimeLeft(secondsLeft(activeSession, activeSession.questions.length)); setLoading(false);
         } else { fetchQuestions(); }
-    }, [testId, activeSession?.id, router]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [testId, activeSession?.id, router, hydrated]);
+
+    // Save answers as they change, so a reload resumes the test where it was.
+    useEffect(() => {
+        if (loading || submittedRef.current) return;
+        const s = useAppStore.getState().activeSession;
+        if (s && s.id === testId && s.answers !== answers) setActiveSession({ ...s, answers });
+    }, [answers, loading, testId, setActiveSession]);
 
     useEffect(() => {
         if (loading || timeUp || timeLeft <= 0) return;
@@ -998,6 +1018,7 @@ export default function TestPage({ params }: { params: Promise<{ testId: string 
         };
         useAppStore.getState().syncProgress(correctCount * 10, sessionUpdate);
         addCompletedSession(sessionUpdate);
+        setActiveSession(sessionUpdate); // marked completed: reopening this test goes to its result
         router.push(`/results/${activeSession!.id}`);
     };
 
